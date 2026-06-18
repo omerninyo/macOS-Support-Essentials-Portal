@@ -8,3 +8,34 @@
   --md-accent-fg-color:         #D2602C;
   --md-accent-fg-color--transparent: rgba(210, 96, 44, 0.1);
 }
+
+/* Force Sidebar to show on tablets (768px to 1219px) in RTL */
+@media screen and (min-width: 768px) and (max-width: 1219px) {
+  /* Hide hamburger menu toggle */
+  .md-header__button.md-icon[for="__drawer"] {
+    display: none !important;
+  }
+
+  /* Show the primary sidebar */
+  .md-sidebar.md-sidebar--primary {
+    display: block !important;
+    position: fixed !important;
+    top: 2.4rem !important;
+    width: 12.1rem !important;
+    height: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 3 !important;
+    padding-top: 1rem;
+  }
+
+  /* Push the main content to the left to make room for the sidebar (RTL) */
+  .md-content {
+    margin-right: 12.1rem !important;
+  }
+  
+  /* Prevent the drawer overlay from blocking clicks */
+  .md-overlay {
+    display: none !important;
+  }
+}
