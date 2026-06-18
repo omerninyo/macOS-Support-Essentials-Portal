@@ -1,8 +1,3 @@
----
-hide:
-  - navigation
-  - toc
----
 
 # ברוכים הבאים לפורטל התלמידים של Wediggit 🎓
 
