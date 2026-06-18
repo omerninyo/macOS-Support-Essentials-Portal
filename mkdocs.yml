@@ -1,0 +1,99 @@
+site_name: "Wediggit's macOS Support Essentials Class"
+site_description: "Student Portal for the macOS Course"
+site_author: "Wediggit"
+
+theme:
+  name: material
+  language: he
+  direction: rtl
+  font:
+    text: Assistant
+    code: Roboto Mono
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.prune
+    - toc.integrate
+    - search.highlight
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+# The nav section will be appended here by sync_assets.py
+
+
+
+
+
+nav:
+  - עמוד הבית: index.md
+  - 'פרק 1: התחלה ואבולוציה':
+      - סיכום שיעור: Chapter_01/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_01/Hands_On_Lab.md
+  - 'פרק 2: משתמשים והרשאות':
+      - סיכום שיעור: Chapter_02/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_02/Hands_On_Lab.md
+  - 'פרק 3: אבטחת מידע':
+      - סיכום שיעור: Chapter_03/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_03/Hands_On_Lab.md
+  - 'פרק 4: הצפנה ומפתחות':
+      - סיכום שיעור: Chapter_04/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_04/Hands_On_Lab.md
+  - 'פרק 5: אפליקציות ותהליכים':
+      - סיכום שיעור: Chapter_05/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_05/Hands_On_Lab.md
+  - 'פרק 6: מערכת הקבצים':
+      - סיכום שיעור: Chapter_06/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_06/Hands_On_Lab.md
+  - 'פרק 7: גיבוי ושחזור':
+      - סיכום שיעור: Chapter_07/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_07/Hands_On_Lab.md
+  - 'פרק 8: שירותי מערכת':
+      - סיכום שיעור: Chapter_08/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_08/Hands_On_Lab.md
+  - 'פרק 9: רשתות':
+      - סיכום שיעור: Chapter_09/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_09/Hands_On_Lab.md
+  - 'פרק 10: שיתוף וגישה מרחוק':
+      - סיכום שיעור: Chapter_10/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_10/Hands_On_Lab.md
+  - 'פרק 11: ציוד היקפי':
+      - סיכום שיעור: Chapter_11/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_11/Hands_On_Lab.md
+  - 'פרק 12: עדכונים ושדרוגים':
+      - סיכום שיעור: Chapter_12/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_12/Hands_On_Lab.md
+  - 'פרק 13: תהליך האתחול':
+      - סיכום שיעור: Chapter_13/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_13/Hands_On_Lab.md
+  - 'פרק 14: סביבת שחזור ומחיקה':
+      - סיכום שיעור: Chapter_14/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_14/Hands_On_Lab.md
+  - 'פרק 15: דיאגנוסטיקה':
+      - סיכום שיעור: Chapter_15/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_15/Hands_On_Lab.md
+  - 'פרק 16: ניתוח לוגים (חדר בריחה)':
+      - סיכום שיעור: Chapter_16/Cheat_Sheet.md
+      - תרגול מעשי: Chapter_16/Hands_On_Lab.md

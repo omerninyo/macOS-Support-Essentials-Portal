@@ -1,0 +1,10 @@
+:root {
+  /* Set Wediggit Orange as the primary color */
+  --md-primary-fg-color:        #D2602C;
+  --md-primary-fg-color--light: #DF8054;
+  --md-primary-fg-color--dark:  #B44F22;
+  
+  /* Set Wediggit Orange as the accent color */
+  --md-accent-fg-color:         #D2602C;
+  --md-accent-fg-color--transparent: rgba(210, 96, 44, 0.1);
+}
