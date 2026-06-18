@@ -59,6 +59,7 @@
   sudo fdesetup enable
   ```
   *(המערכת תבקש סיסמה ותפיק Personal Recovery Key לטרמינל).*
+
 * **ביטול והסרת ההצפנה (פענוח ה-Volume - Decryption):**
   ```bash
   sudo fdesetup disable

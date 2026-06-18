@@ -26,6 +26,7 @@
 הפקודה `networksetup` היא ה"אולר השוויצרי" לניהול רשת במק מהטרמינל. יש להריץ את רוב הפקודות המשנות תצורה עם הרשאות מנהל (`sudo`).
 
 **הצגת מידע (אין חובה ב-sudo):**
+
 * `networksetup -listallnetworkservices`
   > מציג רשימה של כל שירותי הרשת (Wi-Fi, Ethernet וכו'). שירות המופיע עם כוכבית (*) בסמוך אליו הוא שירות מושבת.
 * `networksetup -getinfo "Wi-Fi"`
@@ -40,6 +41,7 @@
   > מציג מהו מיקום הרשת הפעיל כעת.
 
 **שינוי תצורה והגדרות IP/DNS (מחייב הרשאות):**
+
 * `sudo networksetup -setdhcp "Ethernet"`
   > מגדיר את כרטיס ה-Ethernet למשוך כתובת IP באופן אוטומטי משרת ה-DHCP.
 * `sudo networksetup -setmanual "Ethernet" 192.168.1.100 255.255.255.0 192.168.1.1`
@@ -48,6 +50,7 @@
   > מגדיר שרתי DNS באופן ידני (על מנת למחוק את השרתים הידניים ולחזור ל-DHCP, יש להשתמש בערך `empty`).
 
 **ניהול שירותים ומיקומים:**
+
 * `sudo networksetup -setnetworkserviceenabled "Bluetooth PAN" off`
   > מכבה לחלוטין את שירות הרשת שצוין.
 * `sudo networksetup -createlocation "Office" populate`

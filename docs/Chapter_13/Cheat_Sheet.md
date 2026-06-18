@@ -38,6 +38,7 @@
 
 ### `system_profiler` - חקירת סביבת המערכת והאבטחה
 פקודות המציגות נתונים הנגישים גם ב-System Information, בתצורה מהירה ל-CLI.
+
 *   **`system_profiler SPiBridgeDataType`**
     *   **פעולה:** מציג מידע על רכיב האבטחה והאתחול. במחשבי Apple Silicon (או Intel עם T2), יציג תחת `Secure Boot` את רמת האבטחה הנוכחית (Full / Reduced).
 *   **`system_profiler SPSoftwareDataType`**
@@ -69,6 +70,7 @@
 
 ### `csrutil` - ניהול הגנת המערכת (System Integrity Protection)
 מופעלת מ-Terminal במצב שחזור בלבד לביצוע שינויים.
+
 *   **`csrutil status`** - בדיקת סטטוס נוכחי (מופעל/כבוי). מותר להרצה במערכת הפעילה.
 *   **`csrutil disable`** - מבטל כליל את הגנות ה-SIP (לא מומלץ למעט מטרות פיתוח וחקירה קלינית).
 *   **`csrutil enable`** - החזרת ההגנה לפעילות.

@@ -45,6 +45,7 @@
 > **שים לב:** התחביר הישן של `load/unload` כבר פחות מומלץ על ידי אפל, למרות שעוד עובד. התחביר המודרני משתמש ב-`bootstrap/bootout`.
 
 **צפייה בתהליכים:**
+
 * הצגת כל התהליכים שרצים כעת:
   ```bash
   launchctl list
@@ -60,6 +61,7 @@
   ```
 
 **הפעלה ועצירה של שירותי מערכת (LaunchDaemons):**
+
 * טעינת/רישום Daemon למערכת (מחייב `sudo`):
   ```bash
   sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.daemon.plist
@@ -79,6 +81,7 @@
 
 **הפעלה ועצירה של שירותי משתמש (LaunchAgents):**
 *(יש להריץ ללא sudo, ויש לציין את מזהה המשתמש - UID. ניתן למצוא את ה-UID על ידי הפקודה `id -u`)*
+
 * טעינת Agent למשתמש:
   ```bash
   launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.example.agent.plist
@@ -116,6 +119,7 @@
 ### 3. איתור לחץ מעבד וזיכרון דרך הטרמינל
 
 למי שלא רוצה להשתמש ב-Activity Monitor אלא בממשק השורת פקודה:
+
 * צפייה במשאבי המערכת בזמן אמת (מעבד וזיכרון, מתעדכן כל שניה):
   ```bash
   top -u

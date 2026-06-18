@@ -67,11 +67,13 @@
 ## ניהול Sandbox ואיפוס אפליקציות (Sandboxing & App Reset)
 
 **איפה אפליקציות שומרות את המידע שלהן?**
+
 1. **Preferences:** תחת `~/Library/Preferences/com.domain.appname.plist`
 2. **Application Support:** תחת `~/Library/Application Support/AppName/`
 3. **Containers:** אפליקציות מתוך ה-App Store או אפליקציות שמוגדרות מראש כאפליקציות Sandbox (Sandboxed), לא כותבות לתיקיות הכלליות שלמעלה. במקום זאת, כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
 
 **כיצד לאפס אפליקציית Sandbox (איפוס מוחלט):**
+
 1. ודא שהאפליקציה סגורה לחלוטין (`killall` או Force Quit).
 2. מחק את תיקיית ה-Container של האפליקציה בנתיב: `~/Library/Containers/[Bundle ID]`.
 3. מחק את הגדרות המערכת השמורות (אם קיימות מחוץ ל-Sandbox): `defaults delete [Bundle ID]`.

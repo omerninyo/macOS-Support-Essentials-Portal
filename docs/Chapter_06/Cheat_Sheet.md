@@ -25,16 +25,22 @@
 ### פקודות מידע וסטטוס (Information & Verification)
 * `diskutil list`
   הצגת רשימת כל הכוננים (הפיזיים והלוגיים), הקונטיינרים והווליומים המחוברים למערכת.
+
 * `diskutil apfs list`
   הצגת רשימה מפורטת של Containers APFS בלבד, כולל שטח אחסון (Quota/Reserve) ואילו Volumes שייכים לאיזה Container.
+
 * `diskutil info /`
   הצגת מידע מפורט על Volume יעד (במקרה זה, `/` שהוא תיקיית השורש). כולל הגדרות הצפנה, סוג מערכת הקבצים (APFS), ה-UUID המדויק ורמות הרשאה.
+
 * `diskutil info diskX`
   קבלת מידע ספציפי על הדיסק או ה-Volume בעל המזהה `diskX`.
+
 * `diskutil verifyVolume /`
   בדיקת תקינות מערכת הקבצים של Volume יעד (מבלי לתקן אותו).
+
 * `diskutil repairVolume /`
   הרצת תהליך תיקון (First Aid) על Volume ספציפי דרך הטרמינל במקרה של שחיתות נתונים קלה (מומלץ לבצע ממצב התאוששות / Recovery Mode).
+
 * `diskutil apfs listVolumeGroups`
   מציג את קבוצות הווליומים (Volume Groups), מה שמאפשר לראות איזה Volume מערכת ממופה לאיזה Volume נתונים (Data Volume).
 
@@ -61,20 +67,26 @@ diskutil rename disk3s5 "NewName"
 ### ניהול Containers וחלוקת מחיצות (Partitioning)
 * `diskutil apfs resizeContainer disk2 150g`
   שינוי גודל ה-Container (נניח `disk2`) ל-150GB. יפנה מקום פיזי בדיסק לטובת מחיצות אחרות, אך יעבוד רק אם אין נתונים בחלק שנחתך. במחשבי Apple Silicon לא ניתן פשוט להקטין Container מערכת ללא שיקול, עקב פריסת ה-Recovery.
+
 * `diskutil apfs resizeContainer disk2 0`
   הרחבת ה-Container למקסימום השטח הפנוי הזמין במחיצה הפיזית.
+
 * `diskutil apfs create disk1s2`
   יצירת Container חדש לגמרי של APFS מתוך מחיצה ריקה.
+
 * `diskutil apfs deleteContainer disk2`
   מחיקת Container שלם על כל הווליומים שבתוכו, והחזרת המחיצה למצב Mac OS Extended (לפני בנייה מחדש). **אזהרה: מוחק הכל!**
+
 * `diskutil partitionDisk disk1 2 APFS "Container1" 50% APFS "Container2" 50%`
   מחיקת הדיסק הפיזי כולו (`disk1`) ויצירת 2 מחיצות נפרדות מסוג APFS בגודל 50% כל אחת.
 
 ### עבודה עם Snapshots
 * `diskutil apfs listSnapshots /`
   מציג את כל ה-Snapshots השמורים ב-Volume השורש (System/Data). מאפשר לראות גיבויים קפואים ואת ה-UUID שלהם (לדוגמה, כאלו שנוצרו על ידי Time Machine או לפני עדכון מערכת).
+
 * `diskutil apfs deleteSnapshot disk3s1 -uuid <Snapshot-UUID>`
   מחיקה ידנית של Snapshot ספציפית בעזרת מזהה ה-UUID שלה, לטובת פינוי מקום מיידי על הדיסק (במקרים שה-Snapshot שוקל הרבה בגלל שינויים).
+
 * `tmutil localsnapshot`
   יצירה מיידית של Snapshot מקומי לגיבוי מיידי לפני שינוי קריטי במערכת ההפעלה (נפוץ בבדיקות תוכנה או IT).
 

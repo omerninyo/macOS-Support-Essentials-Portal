@@ -29,28 +29,34 @@
 ### חיפוש והורדה:
 * **`softwareupdate -l`** או **`softwareupdate --list`**
   סורק ומציג רשימה של כל עדכוני התוכנה הזמינים כרגע למחשב הספציפי.
+
 * **`softwareupdate -d -a`** או **`softwareupdate --download --all`**
   מוריד את כל העדכונים הזמינים למטמון המערכת, אך **לא** מתקין אותם (מאפשר הכנה מראש לחסכון בזמן).
+
 * **`softwareupdate -d "Name of Update"`**
   מוריד עדכון ספציפי לפי התווית המדויקת שלו כפי שהופיעה בפקודת ה-list.
 
 ### התקנה:
 * **`sudo softwareupdate -i -a`** או **`sudo softwareupdate --install --all`**
   מתקין את כל עדכוני המערכת הזמינים במכה אחת (דורש הרשאות מנהל). במחשבי Apple Silicon ייתכן שיידרש Secure Token כדי לאשר עדכון קרנל.
+
 * **`sudo softwareupdate -i -a -R`**
   מתקין את כל העדכונים הזמינים ומאתחל (Restart) את המחשב באופן אוטומטי בסיום הפעולה.
 
 ### הורדת קבצי התקנה מלאים (Full Installers):
 * **`softwareupdate --fetch-full-installer`**
   מוריד את קובץ ההתקנה המלא (קובץ ה-Install macOS.app בסביבות 12GB+) של הגרסה העדכנית ביותר היישר לתיקיית `/Applications`.
+
 * **`softwareupdate --fetch-full-installer --full-installer-version 14.5`**
   מוריד קובץ התקנה של גרסה ספציפית בעבר, בתנאי שהיא עדיין נתמכת וחתומה דיגיטלית על ידי אפל.
 
 ### ניקוי והיסטוריה:
 * **`softwareupdate --clear-catalog`**
   מאפס את מטמון העדכונים של המערכת (מצוין לפתרון תקלות כשמערכת ה-Software Update נתקעת או לא מציגה עדכונים חדשים).
+
 * **`softwareupdate --history`**
   מדפיס בטרמינל טבלה מסודרת עם היסטוריית כל העדכונים שהותקנו במחשב עד כה, כולל גרסאות ותאריכי התקנה.
+
 * **`softwareupdate --install-rosetta --agree-to-license`**
   מתקין את סביבת התרגום Rosetta 2 בצורה שקטה, ללא הקפצת חלון אישור למשתמש (אידאלי לסקריפטים של פריסה מוקדמת).
 
