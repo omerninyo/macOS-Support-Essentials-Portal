@@ -12,12 +12,12 @@
 ## 2. מושגי יסוד (Terminology)
 
 * **Gatekeeper:** מנגנון האבטחה של macOS שמוודא שרק תוכנות ממקור מהימן (App Store או מפתחים מזוהים) מורשות לרוץ על המק. הוא בודק את חתימת המפתח ואת ה-Notarization.
-* **Notarization (אישור נוטריון):** תהליך אוטומטי של Apple שבו אפליקציות נסרקות לאיתור קוד זדוני ידוע לפני הפצתן, עוד בטרם הגיעו למשתמש. Gatekeeper דורש אישור זה עבור כל תוכנה המורדת מהאינטרנט.
+* **Notarization:** תהליך אוטומטי של Apple שבו אפליקציות נסרקות לאיתור קוד זדוני ידוע לפני הפצתן, עוד בטרם הגיעו למשתמש. Gatekeeper דורש אישור זה עבור כל תוכנה המורדת מהאינטרנט.
 * **XProtect:** מערכת ה-Anti-Virus השקטה והמובנית של macOS. פועלת ברקע, מבוססת חתימות (YARA) וחוסמת הפעלה של תוכנות זדוניות מוכרות בעת ניסיון ההרצה הראשון.
 * **XProtect Remediator:** מנגנון סריקה אקטיבי שרץ ברקע (על ידי LaunchDaemons) ומבצע סריקות תקופתיות לאיתור והסרת נוזקות שכבר הצליחו לחדור למערכת.
 * **Transparency, Consent, and Control (TCC):** מנגנון הפרטיות של macOS, הדורש מהמשתמש לאשר באופן אקטיבי בקשות גישה של אפליקציות למשאבים רגישים (כגון מצלמה, מיקרופון, מיקום, תיקיית מסמכים או דיסק מלא).
-* **Privacy Preferences Policy Control (PPPC):** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור מנהל.
-* **System Integrity Protection (SIP):** מנגנון אבטחה ב-macOS המונע אפילו ממשתמש root לשנות קבצי מערכת רגישים, כולל את מסדי הנתונים של ה-TCC.
+* **Privacy Preferences Policy Control - PPPC:** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור מנהל.
+* **System Integrity Protection - SIP:** מנגנון אבטחה ב-macOS המונע אפילו ממשתמש root לשנות קבצי מערכת רגישים, כולל את מסדי הנתונים של ה-TCC.
 * **Quarantine:** תגית (Extended Attribute) המוצמדת לקבצים שהורדו מהאינטרנט על ידי אפליקציות כמו ספארי, דואר או תוכנות מסרים. תגית זו מפעילה את הבדיקה של Gatekeeper עם פתיחת הקובץ.
 
 ---
@@ -129,14 +129,14 @@
 * **Gatekeeper and runtime protection in macOS:**  
   [https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web)
 
-* **Protecting against malware in macOS (XProtect & XProtect Remediator):**  
+* **Protecting against malware in macOS - XProtect & XProtect Remediator:**  
   [https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web)
 
-* **Control access to your camera on Mac (TCC Privacy basics):**  
+* **Control access to your camera on Mac - TCC Privacy basics:**  
   [https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac)
 
-* **Safely open apps on your Mac (Overview of App Security):**  
+* **Safely open apps on your Mac - Overview of App Security:**  
   [https://support.apple.com/en-us/HT202491](https://support.apple.com/en-us/HT202491)
 
-* **Privacy Preferences Policy Control (PPPC) payloads for MDM:**  
+* **Privacy Preferences Policy Control - PPPC payloads for MDM:**  
   [https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web)

@@ -8,7 +8,7 @@
 *   **4.** **תיבול ארגוני:** התממשקות ל-Single Sign-On ליצירת חיבור אוטומטי לשרתים.
 
 ## 2. פרוטוקול SMB (Server Message Block)
-- **SMB (Server Message Block):** הפרוטוקול העיקרי והסטנדרטי כיום ב-macOS לשיתוף קבצים ברשת (החליף את AFP הישן).
+- **SMB - Server Message Block:** הפרוטוקול העיקרי והסטנדרטי כיום ב-macOS לשיתוף קבצים ברשת (החליף את AFP הישן).
 - **SMB 3.x:** הגרסה המודרנית המציעה הצפנה מקצה לקצה ותמיכה טובה יותר בביצועים וברשתות לא יציבות.
 
 ### פקודות SMB (smbutil)
@@ -42,7 +42,7 @@
 
 ## 6. Enterprise Seasoning: Single Sign-On (SSO)
 - **Kerberos SSO Extension:** תוסף מובנה במערכת macOS המאפשר למשתמשים בארגון להזדהות פעם אחת בלבד מול שרת ה-Active Directory / Identity Provider.
-- **TGT (Ticket-Granting Ticket):** "כרטיס הגישה" הקריפטוגרפי שהרחבת ה-Kerberos מקבלת מהשרת, ומשמש להזדהות מול שירותים אחרים (כמו כונני SMB ואינטראנט) בצורה שקופה ואוטומטית ללא צורך בהזנת סיסמה נוספת.
+- **TGT - Ticket-Granting Ticket:** "כרטיס הגישה" הקריפטוגרפי שהרחבת ה-Kerberos מקבלת מהשרת, ומשמש להזדהות מול שירותים אחרים (כמו כונני SMB ואינטראנט) בצורה שקופה ואוטומטית ללא צורך בהזנת סיסמה נוספת.
 - פרופיל ה-MDM בארגון תומך כיום ב-Extensible SSO payload להגדרת הדומיינים באופן אחיד במחשבי החברה.
 
 ---
@@ -53,4 +53,4 @@
 * **Intro to Kerberos Single Sign-on extension:** [Apple Platform Deployment](https://support.apple.com/guide/deployment/intro-to-kerberos-single-sign-on-extension-dep0e8082f4d/web)
 * **Use AirDrop on your Mac:** [Apple Support](https://support.apple.com/en-us/102522)
 * **Universal Control: Use a single keyboard and mouse between Mac and iPad:** [Apple Support](https://support.apple.com/en-us/102459)
-* **Transfer files between two Mac computers using target disk mode (Mac Sharing Mode):** [Apple Support](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac)
+* **Transfer files between two Mac computers using target disk mode - Mac Sharing Mode:** [Apple Support](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac)

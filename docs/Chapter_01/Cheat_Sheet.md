@@ -10,16 +10,16 @@
 
 ## מילון מונחים (Glossary & Concepts)
 * **Apple Silicon:** ארכיטקטורת המעבדים החדשה של אפל מבוססת ARM (סדרת ה-M).
-* **System on a Chip (SoC):** מערכת על שבב, המרכזת את המעבד (CPU), המאיץ הגרפי (GPU), הזיכרון (Unified Memory) וההצפנה (Secure Enclave) על פיסת סיליקון אחת.
+* **System on a Chip - SoC:** מערכת על שבב, המרכזת את המעבד (CPU), המאיץ הגרפי (GPU), הזיכרון (Unified Memory) וההצפנה (Secure Enclave) על פיסת סיליקון אחת.
 * **Unified Memory:** זיכרון מאוחד ב-Apple Silicon המאפשר ל-CPU ול-GPU לחלוק נתונים ללא העתקה פיזית.
 * **Secure Enclave:** רכיב אבטחה מבודד בחומרה האחראי על שמירת מפתחות ההצפנה וניהול ה-FileVault.
 * **Setup Assistant:** Setup Assistant הראשוני (OOBE) שעולה בהפעלת מק חדש או מאופס.
-* **Local Account (Admin):** החשבון המקומי הראשון שנוצר בסטאפ מקבל באופן אוטומטי הרשאות מנהל ו-Secure Token.
-* **Erase All Content and Settings (EACS):** Erase All Content and Settings (EACS); תהליך המאפס את המחשב בצורה מאובטחת ומיידית.
+* **Local Account - Admin:** החשבון המקומי הראשון שנוצר בסטאפ מקבל באופן אוטומטי הרשאות מנהל ו-Secure Token.
+* **Erase All Content and Settings - EACS:** Erase All Content and Settings (EACS); תהליך המאפס את המחשב בצורה מאובטחת ומיידית.
 * **Finder:** סייר הקבצים והליבה של הממשק הגרפי ב-macOS. פועל כתהליך שאינו נסגר.
 * **System Settings:** מרכז ההגדרות החדש של המערכת (החליף את System Preferences), שבו מנוהלים גם פרופילי התצורה.
 * **Spotlight:** מנוע חיפוש פנימי עוצמתי (מופעל לרוב ב-Cmd+Space) לאיתור אפליקציות, קבצים, וביצוע פעולות.
-* **Automated Device Enrollment (ADE):** שירות Automated Device Enrollment (ADE) המאפשר לארגונים להטמיע מחשבים מרחוק וללא מגע (Zero-Touch Deployment).
+* **Automated Device Enrollment - ADE:** שירות Automated Device Enrollment (ADE) המאפשר לארגונים להטמיע מחשבים מרחוק וללא מגע (Zero-Touch Deployment).
 * **Remote Management:** המסך שמופיע ב-Setup Assistant אם המחשב זוהה כשייך לארגון דרך שרתי אפל, ודורש מהמשתמש להזדהות ולהתקין את פרופיל הניהול.
 
 ## פקודות טרמינל שימושיות (Terminal Commands)

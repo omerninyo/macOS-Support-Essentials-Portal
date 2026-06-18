@@ -10,12 +10,12 @@
 ## מושגי יסוד (Core Concepts)
 
 * **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת (App Review), חתימה קריפטוגרפית ונוטריון (Notarization), ופועלת תחת מגבלות של "Sandbox" (Sandboxing).
-* **Package (PKG):** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.
-* **Disk Image (DMG / ASIF):** "תמונת דיסק" וירטואלית. בגרסאות קודמות נפוצו קבצי UDZO/UDSP, וב-macOS 26 (Tahoe) אפל הציגה את פורמט ה-ASIF (Apple Sparse Image Format) היעיל במיוחד. 
-* **Sandboxing (Sandbox):** מנגנון אבטחה של macOS המגביל את הגישה של אפליקציה (בעיקר צד-שלישי ו-App Store) למשאבי מערכת, זיכרון וקבצים שאינם שייכים לה. המידע נשמר בתוך "Container" .
-* **App Translocation (Gatekeeper Path Randomization):** מנגנון המונע מאפליקציות זדוניות שחולצו מקובץ ZIP למשל, לרוץ מתוך תיקיית ההורדות תוך פנייה לקבצים סמוכים. המערכת מריצה את האפליקציה ממיקום אקראי (Read-Only) בזיכרון.
+* **Package - PKG:** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.
+* **Disk Image - DMG / ASIF:** "תמונת דיסק" וירטואלית. בגרסאות קודמות נפוצו קבצי UDZO/UDSP, וב-macOS 26 (Tahoe) אפל הציגה את פורמט ה-ASIF (Apple Sparse Image Format) היעיל במיוחד. 
+* **Sandboxing - Sandbox:** מנגנון אבטחה של macOS המגביל את הגישה של אפליקציה (בעיקר צד-שלישי ו-App Store) למשאבי מערכת, זיכרון וקבצים שאינם שייכים לה. המידע נשמר בתוך "Container" .
+* **App Translocation - Gatekeeper Path Randomization:** מנגנון המונע מאפליקציות זדוניות שחולצו מקובץ ZIP למשל, לרוץ מתוך תיקיית ההורדות תוך פנייה לקבצים סמוכים. המערכת מריצה את האפליקציה ממיקום אקראי (Read-Only) בזיכרון.
 * **Force Quit:** Force Quit - סגירה אגרסיבית של אפליקציה שאינה מגיבה (Not Responding) מבלי לאפשר לה לשמור נתונים.
-* **Volume Purchase Program (VPP) / Apple Business Manager (ABM):** תוכנית הרכישה הארגונית המאפשרת לארגונים לרכוש רישיונות לאפליקציות באופן מרוכז ולחלק אותן למשתמשים דרך ה-MDM.
+* **Volume Purchase Program - VPP / Apple Business Manager (ABM):** תוכנית הרכישה הארגונית המאפשרת לארגונים לרכוש רישיונות לאפליקציות באופן מרוכז ולחלק אותן למשתמשים דרך ה-MDM.
 * **Self Service:** Self Service, דמוי App Store פרטי של הארגון. משתמשים יכולים להתקין תוכנות ופרופילים המאושרים על ידי הארגון ללא צורך בסיסמת מנהל (Admin).
 
 ---
@@ -67,9 +67,9 @@
 ## ניהול Sandbox ואיפוס אפליקציות (Sandboxing & App Reset)
 
 **איפה אפליקציות שומרות את המידע שלהן?**
-1. **Preferences (העדפות פשוטות):** תחת `~/Library/Preferences/com.domain.appname.plist`
-2. **Application Support (קובצי עזר, מסדי נתונים קטנים):** תחת `~/Library/Application Support/AppName/`
-3. **Containers (בסביבת Sandboxing):** אפליקציות מתוך ה-App Store או אפליקציות שמוגדרות מראש כאפליקציות Sandbox (Sandboxed), לא כותבות לתיקיות הכלליות שלמעלה. במקום זאת, כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
+1. **Preferences:** תחת `~/Library/Preferences/com.domain.appname.plist`
+2. **Application Support:** תחת `~/Library/Application Support/AppName/`
+3. **Containers:** אפליקציות מתוך ה-App Store או אפליקציות שמוגדרות מראש כאפליקציות Sandbox (Sandboxed), לא כותבות לתיקיות הכלליות שלמעלה. במקום זאת, כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
 
 **כיצד לאפס אפליקציית Sandbox (איפוס מוחלט):**
 1. ודא שהאפליקציה סגורה לחלוטין (`killall` או Force Quit).

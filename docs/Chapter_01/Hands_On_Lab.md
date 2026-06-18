@@ -32,7 +32,7 @@
 3. בחרו באפשרות הראשונה: **System Information...** (כאשר לא לוחצים על Option, יהיה כתוב About This Mac).
 4. בחלון שנפתח, תחת קטגוריית **Hardware** הראשי, אתרו ורשמו לעצמכם את שני הנתונים הבאים:
    * **Chip** (או Processor Name).
-   * **Serial Number (system)**.
+   * **Serial Number - system**.
 5. כעת, בתפריט הצדדי, גללו מטה תחת קטגוריית Network ולחצו על **Wi-Fi**.
 6. חפשו בחלון הימני את ה-**MAC Address** (מספר בן 12 תווים מופרד בנקודתיים) ורשמו גם אותו.
 7. צאו מה-System Information, ופתחו את הגדרות המערכת: תפוח -> **System Settings**.
