@@ -107,13 +107,7 @@
 
 ---
 
-## קישורים מומלצים להרחבה (Recommended Reading & Enrichment Links)
-
-למידה נוספת והעמקה טכנית מתוך ספריות המידע הרשמיות והקהילתיות:
-
-* **[View log messages and reports in Console on Mac (Apple Support)](https://support.apple.com/guide/console/welcome/mac)**
-  המדריך הרשמי של Apple לשימוש באפליקציית Console.
-* **[A brief history of logs and Console (The Eclectic Light Company)](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/)**
-  סקירה היסטורית מרתקת על האבולוציה של ה-Unified Logging System והשינויים מאז 2016.
-* **[How to find what you want in the log (The Eclectic Light Company)](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/)**
-  מדריך מתקדם לסינון נכון של לוגים, שימוש ב-Predicates, והיכרות עם כלים חינמיים מתקדמים (כמו Ulbow) לקריאת לוגים ביעילות מעבר ל-Console.app.
+## קישורים מומלצים ולקריאה נוספת
+* [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - המדריך הרשמי לשימוש באפליקציית ה-Console לקריאת לוגים במק.
+* [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - סקירה מעניינת על האבולוציה של הדרך בה נשמרו הלוגים במק מ-2016 ועד היום.
+* [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.

@@ -88,15 +88,8 @@ sudo pwpolicy -u username -setpolicy "newPasswordRequired=1"
 *   `/var/db/dslocal/nodes/Default/users/` - המיקום הפיזי בו נשמרים קובצי ה-plist שמייצגים את הגדרות החשבון המקומי של כל משתמש (תחליף מקומי ל-LDAP).
 *   `/Library/Preferences/com.apple.loginwindow.plist` - קובץ העדפות הקובע הגדרות במסך ההתחברות (למשל, הסתרת רשימת משתמשים).
 
-## 5. קריאה מומלצת והעשרה
-
-להלן קישורים למקורות הרשמיים של Apple להעמקה נוספת, בהתבסס על תיעוד ה-Apple Platform Support ו-Apple Platform Deployment:
-
-*   **הגדרת משתמשים וקבוצות במק (Apple Support):**
-    [Set up users, guests, and groups on Mac](https://support.apple.com/guide/mac-help/set-up-other-users-on-your-mac-mtusr001/mac)
-*   **ניהול הרשאות קבצים במק - POSIX ו-ACL (Apple Support):**
-    [Change permissions for files, folders, or disks on Mac](https://support.apple.com/guide/mac-help/change-permissions-for-files-folders-or-disks-mchlp1203/mac)
-*   **אודות חשבונות אפל מנוהלים בארגון - MAID (Apple Platform Deployment):**
-    [About Managed Apple Accounts in Apple Platform Deployment](https://support.apple.com/guide/deployment/about-managed-apple-accounts-dep0db601c3/web)
-*   **מדריך הטרמינל הרשמי של אפל:**
-    [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac)
+## קישורים מומלצים ולקריאה נוספת
+* [Set up users, guests, and groups on Mac](https://support.apple.com/guide/mac-help/set-up-other-users-on-your-mac-mtusr001/mac) - הסבר בסיסי על ניהול משתמשים דרך הגדרות המערכת.
+* [Change permissions for files, folders, or disks on Mac](https://support.apple.com/guide/mac-help/change-permissions-for-files-folders-or-disks-mchlp1203/mac) - מדריך קצר על ניהול הרשאות קבצים בממשק הגרפי.
+* [About Managed Apple Accounts in Apple Platform Deployment](https://support.apple.com/guide/deployment/about-managed-apple-accounts-dep0db601c3/web) - מסמך טכני על חשבונות אפל מנוהלים לארגונים.
+* [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) - המדריך הרשמי של אפל לעבודה עם הטרמינל.

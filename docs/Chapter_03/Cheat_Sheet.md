@@ -122,21 +122,9 @@
 
 ---
 
-## 5. Recommended Reading & Enrichment Links
-
-להלן רשימה של קישורים למאמרי התמיכה והתיעוד הרשמיים של Apple בנושאי אבטחה, TCC ו-Gatekeeper, לחיזוק והרחבת הלמידה:
-
-* **Gatekeeper and runtime protection in macOS:**  
-  [https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web)
-
-* **Protecting against malware in macOS - XProtect & XProtect Remediator:**  
-  [https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web)
-
-* **Control access to your camera on Mac - TCC Privacy basics:**  
-  [https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac)
-
-* **Safely open apps on your Mac - Overview of App Security:**  
-  [https://support.apple.com/en-us/HT202491](https://support.apple.com/en-us/HT202491)
-
-* **Privacy Preferences Policy Control - PPPC payloads for MDM:**  
-  [https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web)
+## קישורים מומלצים ולקריאה נוספת
+* [Gatekeeper and runtime protection in macOS](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web) - מאמר שחופר לעומק על מנגנון Gatekeeper וחתימת אפליקציות.
+* [Protecting against malware in macOS](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web) - סקירה טכנית של אפל על מערכות האנטי-וירוס הפנימיות במק (XProtect).
+* [Control access to your camera on Mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac) - מדריך פשוט על ניהול הרשאות פרטיות (TCC) למצלמה ולמיקרופון.
+* [Safely open apps on your Mac](https://support.apple.com/en-us/HT202491) - הסבר למשתמש הקצה על הודעות האזהרה כשפותחים אפליקציות חדשות.
+* [Privacy Preferences Policy Control payloads for MDM](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - תיעוד למנהלי מערכת על איך לנהל הרשאות TCC מרחוק.

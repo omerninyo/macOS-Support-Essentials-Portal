@@ -113,15 +113,8 @@
 
 ---
 
-### Recommended Reading & Enrichment Links (קריאת חובה למקצוענים)
-
-להלן קישורים רשמיים של Apple ו-DeepDive להעמקה בתהליכים שהוזכרו בפרק. קריאה זו מומלצת להרחבת הידע בתחום ארכיטקטורת ההצפנה הארגונית:
-
-* **[Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-token-bootstrap-token-and-volume-dep24dbdcf9e/web)**
-  (מתוך מדריך ה-Apple Platform Deployment: מסביר את מנגנון ה-Escrow ואופן פעולת ה-Bootstrap Token מול שרת ה-MDM).
-* **[Intro to FileVault for Mac](https://support.apple.com/guide/security/intro-to-filevault-secd73eaebd1/web)**
-  (מתוך מדריך ה-Apple Platform Security: צלילה טכנית לאופן בו FileVault עובד, בדגש על ארכיטקטורת ההצפנה במחשבי Apple Silicon).
-* **[Manage FileVault with mobile device management](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-depf2a6327b/web)**
-  (אופן ניהול הצפנה ויצירת Configuration Profile – Configuration Profile עבור מפתחות שחזור מוסדיים במערכות ארגוניות).
-* **[Protect data on your Mac with FileVault](https://support.apple.com/en-us/HT204837)**
-  (המדריך הבסיסי למשתמשי קצה אודות הפעלת FileVault דרך ממשק System Settings ושמירת ה-Personal Recovery Key).
+### קישורים מומלצים ולקריאה נוספת
+* [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-token-bootstrap-token-and-volume-dep24dbdcf9e/web) - מאמר טכני למנהלי IT על איך מתבצע אימות הצפנה בארגון.
+* [Intro to FileVault for Mac](https://support.apple.com/guide/security/intro-to-filevault-secd73eaebd1/web) - סקירת עומק טכנית של ארכיטקטורת ההצפנה במעבדי Apple Silicon.
+* [Manage FileVault with mobile device management](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-depf2a6327b/web) - מדריך לניהול מפתחות שחזור ארגוניים ל-FileVault.
+* [Protect data on your Mac with FileVault](https://support.apple.com/en-us/HT204837) - מדריך בסיסי למשתמש איך להדליק את ההצפנה ולהגן על הקבצים.

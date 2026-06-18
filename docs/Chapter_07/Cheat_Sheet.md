@@ -73,23 +73,12 @@
 * **גיבוי ענן כחלופה (Cloud Storage):** שימוש בשירותים מבוססי סנכרון כגון OneDrive, Google Drive או Box מועדף ומפוקח באמצעות פרופילי MDM, כאשר הנתונים תמיד מסונכרנים והשחזור למחשב חלופי מתבצע ברגע שמחברים חשבון MAID.
 * **מגבלות פרופיל ע"י MDM:** ניתן דרך MDM להגביל משתמשים מלבצע שחזורים, לשלוט על יכולות Erase Assistant כדי למנוע מחיקת מחשבים לפני מסירתם למחלקת IT, או לכפות על המערכת שלא להחריג נתיבים רגישים שמנהל הרשת רוצה לגבות בהכרח אם עדיין נעשה שימוש ב-Time Machine או בכונני רשת כגיבוי.
 
-## 6. Recommended Reading & Enrichment Links
-
-רשימה ממוקדת של מאמרי Apple רשמיים ומאמרי תשתית לחיזוק ההבנה הטכנית (באנגלית):
-
-* **Apple Support: Back up your Mac with Time Machine**
-  [https://support.apple.com/en-us/HT201250](https://support.apple.com/en-us/HT201250)
-* **Apple Support: Restore your Mac from a backup**
-  [https://support.apple.com/en-us/HT203981](https://support.apple.com/en-us/HT203981)
-* **Apple Support: About Time Machine local snapshots**
-  [https://support.apple.com/en-us/HT204015](https://support.apple.com/en-us/HT204015)
-* **Apple Platform Support: Mac backups**
-  [https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web)
-* **Apple Platform Deployment: Erase Apple devices**
-  [https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web)
-* **The Eclectic Light Company: A brief history of Time Machine**
-  [https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/)
-* **The Eclectic Light Company: Snapshots aren't backups**
-  [https://eclecticlight.co/2021/02/16/snapshots-arent-backups/](https://eclecticlight.co/2021/02/16/snapshots-arent-backups/)
-* **The Eclectic Light Company: Understand and check Time Machine backups to APFS**
-  [https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/)
+## קישורים מומלצים ולקריאה נוספת
+* [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250) - מדריך בסיסי למשתמש על הפעלת מערכת הגיבויים טיים משין.
+* [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981) - מדריך למשתמש איך לשחזר קבצים מגיבוי קודם.
+* [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015) - הסבר קצר על מנגנון הסנאפשוטים המקומיים כשכונן הגיבוי לא מחובר.
+* [Mac backups (Apple Platform Support)](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web) - מאמר למנהלי מערכת על מדיניות גיבוי בארגון.
+* [Erase Apple devices](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web) - תיעוד ארגוני על מחיקה ואיפוס מאובטח של מחשבים מרחוק.
+* [A brief history of Time Machine](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/) - סקירה היסטורית על התפתחות הטיים משין לאורך השנים.
+* [Snapshots aren't backups](https://eclecticlight.co/2021/02/16/snapshots-arent-backups/) - מאמר דעה טכני שמסביר למה אסור להסתמך על סנאפשוטים כתחליף לגיבוי אמיתי.
+* [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.

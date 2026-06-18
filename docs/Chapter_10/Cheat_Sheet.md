@@ -47,10 +47,10 @@
 
 ---
 
-## Recommended Reading & Enrichment Links
-* **Connect your Mac to shared computers and servers:** [Apple Support (macOS User Guide)](https://support.apple.com/guide/mac-help/connect-mac-shared-computers-servers-mchlp1140/mac)
-* **Set up file sharing on Mac:** [Apple Support (macOS User Guide)](https://support.apple.com/guide/mac-help/set-up-file-sharing-on-mac-mh17131/mac)
-* **Intro to Kerberos Single Sign-on extension:** [Apple Platform Deployment](https://support.apple.com/guide/deployment/intro-to-kerberos-single-sign-on-extension-dep0e8082f4d/web)
-* **Use AirDrop on your Mac:** [Apple Support](https://support.apple.com/en-us/102522)
-* **Universal Control: Use a single keyboard and mouse between Mac and iPad:** [Apple Support](https://support.apple.com/en-us/102459)
-* **Transfer files between two Mac computers using target disk mode - Mac Sharing Mode:** [Apple Support](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac)
+## קישורים מומלצים ולקריאה נוספת
+* [Connect your Mac to shared computers and servers](https://support.apple.com/guide/mac-help/connect-mac-shared-computers-servers-mchlp1140/mac) - מדריך למשתמש איך להתחבר לתיקיות רשת בארגון.
+* [Set up file sharing on Mac](https://support.apple.com/guide/mac-help/set-up-file-sharing-on-mac-mh17131/mac) - מדריך פשוט על הגדרת שיתוף קבצים מהמק שלך לאחרים.
+* [Intro to Kerberos Single Sign-on extension](https://support.apple.com/guide/deployment/intro-to-kerberos-single-sign-on-extension-dep0e8082f4d/web) - מאמר טכני לאנשי IT על ניהול התחברות חכמה (SSO) בסביבת Kerberos.
+* [Use AirDrop on your Mac](https://support.apple.com/en-us/102522) - מדריך בסיסי למשתמש לשיתוף קבצים מהיר דרך AirDrop.
+* [Universal Control: Use a single keyboard and mouse between Mac and iPad](https://support.apple.com/en-us/102459) - מדריך שמסביר איך לעבוד עם עכבר אחד על כמה מכשירי אפל במקביל.
+* [Transfer files using target disk mode / Mac Sharing Mode](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac) - מדריך למשתמש להעברת קבצים על ידי חיבור שני מחשבים בכבל.

@@ -83,15 +83,8 @@
 
 ---
 
-## לקריאה נוספת והעמקה (Recommended Reading & Enrichment Links)
-
-להלן קישורים רשמיים מתוך Apple Platform Support להעמקה בהגדרות הרשת ותצורות מורכבות:
-
-* **Use network locations on Mac:**
-  [https://support.apple.com/en-us/105129](https://support.apple.com/en-us/105129)
-* **Change Firewall settings on Mac:**
-  [https://support.apple.com/guide/mac-help/change-firewall-settings-on-mac-mh34041/mac](https://support.apple.com/guide/mac-help/change-firewall-settings-on-mac-mh34041/mac)
-* **Connect to an 802.1X network on Mac:**
-  [https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac)
-* **Deploy Wi-Fi payload settings for Apple devices:**
-  [https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web)
+## קישורים מומלצים ולקריאה נוספת
+* [Use network locations on Mac](https://support.apple.com/en-us/105129) - הסבר בסיסי איך להגדיר מיקומי רשת שונים למעברים מהירים בין הבית למשרד.
+* [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/change-firewall-settings-on-mac-mh34041/mac) - מדריך פשוט למשתמש על הפעלת חומת האש המובנית.
+* [Connect to an 802.1X network on Mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac) - מדריך להתחברות לרשתות אלחוטיות ארגוניות שדורשות אימות מיוחד.
+* [Deploy Wi-Fi payload settings for Apple devices](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web) - מאמר ארגוני על הפצת הגדרות רשת באמצעות שרת MDM.

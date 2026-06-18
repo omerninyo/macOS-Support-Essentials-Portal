@@ -35,7 +35,7 @@
 * `~/Library/Preferences/com.apple.finder.plist` - קובץ הגדרות המשתמש של ה-Finder.
 * `/System/Library/CoreServices/Setup Assistant.app` - המיקום של אפליקציית סייען ההתקנה.
 
-## Recommended Reading & Enrichment Links
-* **Mac Setup Assistant Support:** [Set up your Mac - Apple Support](https://support.apple.com/guide/mac-help/set-up-your-new-mac-mh26966/mac)
-* **Apple Silicon Fundamentals:** [Mac computers with Apple silicon - Apple Support](https://support.apple.com/en-us/HT211814)
-* **Automated Device Enrollment:** [Automated Device Enrollment in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/automated-device-enrollment-axm306bce837/web)
+## קישורים מומלצים ולקריאה נוספת
+* [Set up your Mac - Apple Support](https://support.apple.com/guide/mac-help/set-up-your-new-mac-mh26966/mac) - מדריך בסיסי של אפל על אשף ההגדרה הראשוני.
+* [Mac computers with Apple silicon](https://support.apple.com/en-us/HT211814) - רשימה של כל דגמי המק שמגיעים עם מעבדי אפל (M1 ומעלה).
+* [Automated Device Enrollment in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/automated-device-enrollment-axm306bce837/web) - מאמר למנהלי רשת על איך עובד שיוך אוטומטי של מחשבים בארגון.

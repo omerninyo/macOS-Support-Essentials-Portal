@@ -84,15 +84,8 @@
 
 ---
 
-## 6. Recommended Reading & Enrichment Links
-
-הקישורים הבאים מובילים לתיעוד הטכני הרשמי של אפל ולמאמרי עומק מאת מומחי התעשייה (באנגלית), כפי שהוגדרו בסילבוס כחומרי עזר חובה:
-
-1. **[Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web)**
-   המדריך הרשמי למנהלי מערכת על אופן פעולת מנגנוני ה-MDM וה-Declarative Device Management בשליטה על עדכונים בארגון.
-2. **[Install software updates for Mac - Apple Support](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac)**
-   תיעוד משתמשי הקצה של תהליך העדכון הסטנדרטי.
-3. **[Transfer to a new Mac with Migration Assistant - Apple Support](https://support.apple.com/en-us/102613)**
-   הסבר רשמי ומפורט שלבי עבודה ודרישות רשת להפעלת אסף ההגירות.
-4. **[Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/)**
-   מאמר "צלילת עומק" של The Eclectic Light Company על חסרונות ותכונות חבויות בכלי ה-CLI המנהל את מערך העדכונים של המק.
+## קישורים מומלצים ולקריאה נוספת
+* [Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) - המדריך הרשמי למנהלי מערכת על שליטה ועיכוב עדכונים בארגון.
+* [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac) - מדריך פשוט למשתמש הקצה לאיך מורידים ומתקינים עדכוני מערכת.
+* [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - מדריך המסביר איך להעביר נתונים ומידע ממק ישן למק חדש בעזרת אשף ההגירות.
+* [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.

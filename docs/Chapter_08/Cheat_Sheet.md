@@ -127,21 +127,9 @@
 
 ---
 
-## 🔗 Recommended Reading & Enrichment Links
-
-להלן רשימה מאוצרת של מקורות קריאה להרחבת הידע ולהעמקה בנושאי רקע, Plists וניטור ביצועים (כולל הפניות למאמרי העומק של Apple ו-The Eclectic Light Company ששולבו בפרק):
-
-1. **[Welcome to Tahoe’s Launch Angels (The Eclectic Light Company)](https://eclecticlight.co/)**  
-   סקירה טכנית עמוקה אודות התיקייה והרכיב החדש שהוצג ב-macOS 26 Tahoe, מיקומו בתוך ה-SSV והסיבות שמפתחים חיצוניים אינם מורשים להשתמש בו.
-
-2. **[Explainer: % CPU in Activity Monitor (The Eclectic Light Company)](https://eclecticlight.co/)**  
-   מאמר המסביר מדוע מדד ה-% CPU לא תמיד משקף במדויק עומס קריטי במעבדי Apple Silicon מרובי הליבות (Performance vs. Efficiency).
-
-3. **[Apple Activity Monitor User Guide: View Memory Usage](https://support.apple.com/guide/activity-monitor/)**  
-   ההסבר הרשמי של אפל לאופן שבו מחושב מדד ה-Memory Pressure (לחץ הזיכרון) ולמה חשוב להסתכל עליו (ירוק, צהוב, אדום) במקום רק לספור כמה ג'יגה-בייט RAM פנויים נותרו.
-
-4. **[Manage Login and Background items (The Eclectic Light Company)](https://eclecticlight.co/)**  
-   צלילה לדרך שבה ה-OS מטפל בפריטי התחברות (Login Items) כחלק ממנגנון ה-LaunchAgents, ואיך מנהלי IT יכולים לעקוב אחריהם.
-
-5. **[A brief history of XML and property lists (The Eclectic Light Company)](https://eclecticlight.co/)**  
-   רקע היסטורי מצוין על הסיבה שאפל משתמשת בקבצי Plist (Property Lists) לניהול תהליכים, וכיצד אלו החליפו מנגנונים ישנים מבוססי טקסט או פורמטים קנייניים אחרים.
+## קישורים מומלצים ולקריאה נוספת
+* [Welcome to Tahoe’s Launch Angels](https://eclecticlight.co/) - מאמר טכני על הרכיב החדש שהוצג ב-macOS 26 לניהול שירותי מערכת.
+* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/) - הסבר לעומק למה אחוזי מעבד במק לפעמים מטעים ואיך לקרוא אותם נכון.
+* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/) - מדריך רשמי קצר שמסביר איך לעקוב אחרי "לחץ זיכרון" בכלי ה-Activity Monitor.
+* [Manage Login and Background items](https://eclecticlight.co/) - צלילה טכנית לאופן בו פריטי רקע ו-LaunchAgents מנוהלים על ידי המערכת.
+* [A brief history of XML and property lists](https://eclecticlight.co/) - סקירה היסטורית מרתקת על הסיבה שאפל משתמשת בקובצי Plist.

@@ -86,10 +86,8 @@
 
 ---
 
-## Recommended Reading & Enrichment Links
-*(לקריאה נוספת והרחבה טכנית)*
-
-1.  **[Startup Disk security policy control for a Mac](https://support.apple.com/guide/security/startup-disk-security-policy-control-secc7b34e5b5/web)** – מסמך ה-Apple Platform Security המפרט את רמות האבטחה (Full, Reduced) ואת משמעותן הטכנית.
-2.  **[Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/boot-process-for-a-mac-with-apple-silicon-sec5d3013d28/web)** – מאמר מעמיק של Apple על שרשרת האתחול (מ-Boot ROM עד ל-Kernel) בארכיטקטורת Apple Silicon.
-3.  **[Booting an M1 Mac from hardware to kexts: 1 Hardware (The Eclectic Light Company)](https://eclecticlight.co/2022/01/04/booting-an-m1-mac-from-hardware-to-kexts-1-hardware/)** – ניתוח מעמיק וסכמות ויזואליות של כל שלבי ה-Boot, מאת הווארד אוקלי (חלק א' – חומרה ו-DFU).
-4.  **[Booting an M1 Mac from hardware to kexts: 2 LLB and iBoot (The Eclectic Light Company)](https://eclecticlight.co/2022/01/05/booting-an-m1-mac-from-hardware-to-kexts-2-llb-and-iboot/)** – המשך הניתוח המפרט איך LLB קורא את ה-LocalPolicy ואיך iBoot פועל לטעינת ה-Kernel.
+## קישורים מומלצים ולקריאה נוספת
+* [Startup Disk security policy control for a Mac](https://support.apple.com/guide/security/startup-disk-security-policy-control-secc7b34e5b5/web) - מאמר טכני המסביר למה ואיך מנמיכים את רמות האבטחה במק כדי לטעון תוספי חומרה (Kexts).
+* [Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/boot-process-for-a-mac-with-apple-silicon-sec5d3013d28/web) - מסמך עומק רשמי על שרשרת ההפעלה (Boot process) של מעבדי Apple Silicon.
+* [Booting an M1 Mac from hardware to kexts: 1 Hardware](https://eclecticlight.co/2022/01/04/booting-an-m1-mac-from-hardware-to-kexts-1-hardware/) - מאמר שחופר על השלבים המוקדמים ביותר של הפעלת החומרה בתהליך האתחול.
+* [Booting an M1 Mac from hardware to kexts: 2 LLB and iBoot](https://eclecticlight.co/2022/01/05/booting-an-m1-mac-from-hardware-to-kexts-2-llb-and-iboot/) - החלק השני במאמר שסוקר את תהליך טעינת מערכת ההפעלה מהאחסון.

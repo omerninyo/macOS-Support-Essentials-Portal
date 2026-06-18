@@ -87,24 +87,9 @@ diskutil rename disk3s5 "NewName"
 
 ---
 
-## Recommended Reading & Enrichment Links
-
-* **Apple Platform Security: Signed System Volume (SSV)**  
-  המאמר הרשמי המסביר כיצד ה-SSV מגן על קבצי המערכת מתקיפות וננעל קריפטוגרפית.  
-  [https://support.apple.com/guide/security/signed-system-volume-security-secd698747c9/web](https://support.apple.com/guide/security/signed-system-volume-security-secd698747c9/web)
-
-* **Apple Platform Security: Volume groups and macOS update security**  
-  מבט מעמיק אל תוך מנגנון Volume Groups והפרדת העדכונים ב-macOS.  
-  [https://support.apple.com/guide/security/volume-groups-and-macos-update-security-secb26c04f5e/web](https://support.apple.com/guide/security/volume-groups-and-macos-update-security-secb26c04f5e/web)
-
-* **Apple Support: Add, delete, or erase APFS volumes in Disk Utility on Mac**  
-  הוראות רשמיות לניהול Containers וווליומים בעזרת כלי ה-GUI של Disk Utility.  
-  [https://support.apple.com/guide/disk-utility/add-erase-or-delete-apfs-volumes-dskua9e6a11a/web](https://support.apple.com/guide/disk-utility/add-erase-or-delete-apfs-volumes-dskua9e6a11a/web)
-
-* **The Eclectic Light Company: What are all those Containers?**  
-  (נמצא גם במסמכי הקורס `DeepDive`) - מאמר טכני מעמיק המנתח את תוכן הקונטיינרים השונים במק מודרני מבוסס Apple Silicon.  
-  [https://eclecticlight.co/2021/01/13/what-are-all-those-containers/](https://eclecticlight.co/2021/01/13/what-are-all-those-containers/)
-
-* **The Eclectic Light Company: How macOS depends on firmlinks**  
-  הסבר מרתק על טכנולוגיית הפירמלינק (Firmlink) המחברת בין Volume המערכת לווליום הנתונים לאשליה של דיסק אחד.  
-  [https://eclecticlight.co/2021/01/22/how-macos-depends-on-firmlinks/](https://eclecticlight.co/2021/01/22/how-macos-depends-on-firmlinks/)
+## קישורים מומלצים ולקריאה נוספת
+* [Signed System Volume (SSV)](https://support.apple.com/guide/security/signed-system-volume-security-secd698747c9/web) - המאמר הרשמי של אפל שמסביר איך מנגנון ה-SSV נועל ומגן על קבצי המערכת.
+* [Volume groups and macOS update security](https://support.apple.com/guide/security/volume-groups-and-macos-update-security-secb26c04f5e/web) - מבט לעומק על איך בנויה קבוצת הכוננים (System ו-Data).
+* [Add, delete, or erase APFS volumes in Disk Utility on Mac](https://support.apple.com/guide/disk-utility/add-erase-or-delete-apfs-volumes-dskua9e6a11a/web) - מדריך בסיסי למשתמש איך להוסיף או למחוק כונני APFS.
+* [What are all those Containers?](https://eclecticlight.co/2021/01/13/what-are-all-those-containers/) - מאמר טכני שחופר על תפקידו של כל קונטיינר ודיסק נסתר במק.
+* [How macOS depends on firmlinks](https://eclecticlight.co/2021/01/22/how-macos-depends-on-firmlinks/) - הסבר טכני מעולה על "הקסם" שמחבר את כונן המערכת לכונן הנתונים ליצירת אשליה של כונן אחד.

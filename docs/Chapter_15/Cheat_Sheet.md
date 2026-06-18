@@ -75,10 +75,9 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 
 ---
 
-## 7. Recommended Reading & Enrichment Links
-
-* [Apple Support: Start up your Mac in safe mode](https://support.apple.com/en-us/116946)
-* [Apple Support: Use Apple Diagnostics to test your Mac](https://support.apple.com/en-us/102550)
-* [Apple Developer: Unified Logging (log command line tool)](https://developer.apple.com/documentation/os/logging)
-* [Apple Support: If your Mac restarts and a message appears (Kernel Panics)](https://support.apple.com/en-us/102566)
-* [Apple Support: Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849)
+## קישורים מומלצים ולקריאה נוספת
+* [Start up your Mac in safe mode](https://support.apple.com/en-us/116946) - מדריך בסיסי למשתמש לאיך להיכנס למצב בטוח (Safe Mode) כדי לבדוק תקלות.
+* [Use Apple Diagnostics to test your Mac](https://support.apple.com/en-us/102550) - מדריך למשתמש איך להפעיל את כלי האבחון המובנה לאיתור תקלות חומרה.
+* [Unified Logging (log command line tool)](https://developer.apple.com/documentation/os/logging) - תיעוד מתקדם על מערכת הלוגים המאוחדת של אפל וקריאתם מהטרמינל.
+* [If your Mac restarts and a message appears (Kernel Panics)](https://support.apple.com/en-us/102566) - מדריך תמיכה שמסביר למה המק קורס ומופעל מחדש ואיך מאתרים את הסיבה.
+* [Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849) - איך להשתמש במידע המערכת כדי לקבל נתונים טכניים על רכיבי המחשב.

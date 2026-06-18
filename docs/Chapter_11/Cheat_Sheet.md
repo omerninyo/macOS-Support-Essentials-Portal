@@ -53,17 +53,9 @@
 * `/var/spool/cups/` - תיקיית התור הזמנית (Spool) בה מערכת CUPS מאחסנת קבצים הממתינים לביצוע הדפסה.
 * `/Library/Managed Preferences/` - הנתיב בו נשמרים פרופילי התצורה (כמו Printing Payload או הגבלות Accessory Security) שנדחפו על ידי מערכת ה-MDM הארגונית.
 
-## Recommended Reading & Enrichment Links
-
-להלן קישורים למאמרי התמיכה וההעמקה המומלצים ביותר לקריאה נוספת, מתוך מאגר Apple Platform Support ומאמרי ה-Deep Dive:
-
-1. **Troubleshoot peripheral connections on Mac** (Apple Platform Support)
-   [https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web](https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web)
-2. **Allow accessories to connect to Mac** (Accessory Security)
-   [https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac](https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac)
-3. **Manage printer profiles in Apple devices** (MDM Payloads)
-   [https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web](https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web)
-4. **Deep Dive: Thunderbolt ports aren’t all the same** (The Eclectic Light Company)
-   [https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/)
-5. **Deep Dive: A brief history of the Chooser and printer support** (The Eclectic Light Company)
-   [https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/)
+## קישורים מומלצים ולקריאה נוספת
+* [Troubleshoot peripheral connections on Mac](https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web) - המדריך הרשמי למנהלי רשת לפתרון בעיות עם ציוד היקפי.
+* [Allow accessories to connect to Mac](https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac) - הסבר למשתמש על מנגנון אבטחת האביזרים החדש שחוסם חיבורי USB לא מוכרים.
+* [Manage printer profiles in Apple devices](https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web) - תיעוד ארגוני על הגדרת מדפסות מרחוק בעזרת MDM.
+* [Thunderbolt ports aren’t all the same](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/) - סקירת עומק טכנית על ההבדלים בין חיבורי Thunderbolt ו-USB-C השונים במחשבי מק.
+* [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - מאמר היסטורי על האבולוציה של הוספת מדפסות בסביבת המק מראשיתה ועד היום.

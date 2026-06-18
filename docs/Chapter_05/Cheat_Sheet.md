@@ -79,11 +79,10 @@
 
 ---
 
-## Recommended Reading & Enrichment Links
-
-* [Apple Platform Support: Check app installation and processes on Mac](https://support.apple.com/guide/apple-platform-support/check-app-installation-and-processes-apda5f8a096c/web)
-* [Apple Platform Support: Learn about App Store security protections](https://support.apple.com/guide/apple-platform-support/learn-about-app-store-security-protections-apd1a7b8e19c/web)
-* [Apple Platform Deployment: Distribute content with mobile device management](https://support.apple.com/guide/deployment/distribute-content-depe210182ce/web)
-* [The Eclectic Light Company: Explainer: the app sandbox](https://eclecticlight.co/2020/09/24/explainer-the-app-sandbox/)
-* [The Eclectic Light Company: Explainer: Disk images](https://eclecticlight.co/2021/11/17/explainer-disk-images/)
-* [The Eclectic Light Company: macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/)
+## קישורים מומלצים ולקריאה נוספת
+* [Check app installation and processes on Mac](https://support.apple.com/guide/apple-platform-support/check-app-installation-and-processes-apda5f8a096c/web) - מדריך של אפל שמסביר איך לבדוק אילו תהליכים ותוכנות רצים ברקע.
+* [Learn about App Store security protections](https://support.apple.com/guide/apple-platform-support/learn-about-app-store-security-protections-apd1a7b8e19c/web) - מאמר על מנגנוני האבטחה וה-Sandbox של חנות האפליקציות.
+* [Distribute content with mobile device management](https://support.apple.com/guide/deployment/distribute-content-depe210182ce/web) - מאמר למנהלים על הפצת תוכנות מרחוק באמצעות MDM.
+* [Explainer: the app sandbox](https://eclecticlight.co/2020/09/24/explainer-the-app-sandbox/) - מאמר טכני מעמיק מבלוג חיצון על איך עובד ארגז החול (Sandbox) שמבודד אפליקציות.
+* [Explainer: Disk images](https://eclecticlight.co/2021/11/17/explainer-disk-images/) - סקירה על ההיסטוריה והמבנה של קובצי DMG.
+* [macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/) - מאמר טכני שמסביר על הפורמט החדש של קובצי התקנה ב-macOS 26.
