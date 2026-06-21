@@ -49,12 +49,15 @@ markdown_extensions:
 
 
 
+
+
+
 nav:
   - עמוד הבית: index.md
-  - 'פרק 1: התחלה ואבולוציה':
+  - 'פרק 1: התקנה, הכרה ויישור קו':
       - סיכום שיעור: Chapter_01/Cheat_Sheet.md
       - תרגול מעשי: Chapter_01/Hands_On_Lab.md
-  - 'פרק 2: משתמשים והרשאות':
+  - 'פרק 2: ניהול משתמשים ואבטחת נתונים':
       - סיכום שיעור: Chapter_02/Cheat_Sheet.md
       - תרגול מעשי: Chapter_02/Hands_On_Lab.md
   - 'פרק 3: אבטחת מידע':
@@ -66,13 +69,13 @@ nav:
   - 'פרק 5: אפליקציות ותהליכים':
       - סיכום שיעור: Chapter_05/Cheat_Sheet.md
       - תרגול מעשי: Chapter_05/Hands_On_Lab.md
-  - 'פרק 6: מערכת הקבצים':
+  - 'פרק 6: מערכת הקבצים (APFS)':
       - סיכום שיעור: Chapter_06/Cheat_Sheet.md
       - תרגול מעשי: Chapter_06/Hands_On_Lab.md
   - 'פרק 7: גיבוי ושחזור':
       - סיכום שיעור: Chapter_07/Cheat_Sheet.md
       - תרגול מעשי: Chapter_07/Hands_On_Lab.md
-  - 'פרק 8: שירותי מערכת':
+  - 'פרק 8: טרמינל ושירותי רקע':
       - סיכום שיעור: Chapter_08/Cheat_Sheet.md
       - תרגול מעשי: Chapter_08/Hands_On_Lab.md
   - 'פרק 9: רשתות':

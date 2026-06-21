@@ -1,95 +1,39 @@
-# סיכום שיעור: משתמשים והרשאות (Users & Permissions)
+# Chapter 02: משתמשים, סודות, והזדהות מודרנית - Asset C: Cheat Sheet
 
-## 1. נושאי השיעור
+## מושגי מפתח (Terminology)
+* **Administrator:** משתמש מנהל המערכת, בעל הרשאות גלובליות לשנות הגדרות ולהתקין תוכנות לכולם.
+* **Standard User:** משתמש רגיל, מוגבל לתיקיית הבית שלו (`~`) ולמרחב האישי שלו.
+* **Guest User:** משתמש אורח, מוחק את כל תוכן התיקיה שלו בניתוק.
+* **Sharing Only:** משתמש נטול תיקיית בית שנועד אך ורק להזדהות מול שיתופי רשת.
+* **Home Folder (`/Users/username`):** תיקיית הבית המבודדת של המשתמש. מוגנת בהרשאות קריאה למשתמש בלבד.
+* **Shared Folder (`/Users/Shared`):** אזור מפורז ציבורי. מוגן באמצעות Sticky Bit.
+* **Sticky Bit:** דגל הרשאה המונע ממשתמשים למחוק קבצים השייכים למשתמשים אחרים באותה תיקיה (כמו בתיקיית Shared).
+* **Keychain:** תשתית מחזיק המפתחות של macOS, מורכבת מ-Login Keychain (אישי) ו-System Keychain (מערכתי).
+* **Passwords app:** האפליקציה המרכזית ב-macOS 15 לניהול סיסמאות, Passkeys, ואימות דו-שלבי.
+* **Passkey (מפתח גישה):** תקן הזדהות (FIDO2) ללא סיסמה. עובד באמצעות צמד מפתחות קריפטוגרפי ומאומת מקומית ב-Secure Enclave.
+* **POSIX:** מודל ההרשאות הסטנדרטי של UNIX (Owner, Group, Everyone).
+* **ACL (Access Control List):** שכבת הרשאות מתקדמת וגרגולרית המתווספת מעל POSIX.
+* **Managed Apple Account (MAID):** חשבון Apple בבעלות הארגון, המגביל שירותים מסוימים (כמו רכישות או iCloud Mail) ומאפשר אימות מול הארגון.
+* **Platform SSO:** תשתית ב-macOS המאפשרת התחברות למחשב המקומי (Login Window) ישירות מול שרת זהויות ענן (IdP) כדוגמת Entra ID, ללא צורך ב-Active Directory ישן.
+* **Federated Authentication:** מצב בו הזנת אימייל ארגוני מעבירה את המשתמש להזדהות מול שרת החברה, מבלי לדרוש סיסמת Apple חדשה.
 
-*   **1.** **סוגי חשבונות מקומיים:** הבנת ההבדלים בין Admin, Standard ו-Guest והשפעתם על אבטחה.
-*   **2.** **היררכיית תיקיות:** ניווט בסביבת ה-Home Folder ובתיקייה המשותפת.
-*   **3.** **אבטחת קבצים:** הבנת מודל ההרשאות הבסיסי ותרגול שינוי הרשאות ממשק.
-*   **4.** **תיבול ארגוני:** היכרות עם Managed Apple Accounts והבדלם מחשבונות פרטיים.
+## פקודות שימושיות (CLI Commands)
+| פקודה | תיאור |
+|---|---|
+| `dscl . -list /Users` | הצגת רשימת כלל המשתמשים במערכת (לוקאליים) |
+| `dscl . -read /Users/username` | קריאת מאפיינים נרחבים של משתמש ספציפי |
+| `ls -la /Users` | הצגת הרשאות קבצים, כולל זיהוי ה-Sticky Bit (`t`) |
+| `ls -le /path` | הצגת הרשאות קבצים, כולל תצוגת רשומות ACL (המסומנות ב-`+`) |
+| `security list-keychains` | הצגת רשימת מחיזיקי המפתחות הפעילים כעת |
+| `applesso` | אבחון מצב שירות ה-Platform SSO בארגון (בסביבה נתמכת) |
+| `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | חיפוש שגיאות התחברות מול שרתי SSO בלוגים |
 
-## 2. מושגי מפתח
-
-*   **Local Account:** חשבון שמוגדר אך ורק במק הספציפי. יכול להיות מסוג מנהל (Admin) עם הרשאות לשינוי System Settings, או סטנדרטי (Standard) שמוגבל לשינויים בתוך ה-Home Folder שלו בלבד.
-*   **מנהל (Administrator):** משתמש בעל הרשאות מורחבות היכול להתקין אפליקציות ברמת המערכת, לשנות הגדרות ב-System Settings, ולנהל משתמשים אחרים.
-*   **תיקיית משתמש (Home Folder - `~`):** המרחב הפרטי של כל משתמש במערכת (לרוב ממוקם תחת `/Users/username`). מכיל את המסמכים, ההורדות וספריית ה-Library האישית.
-*   **תיקייה משותפת (`/Users/Shared`):** תיקייה ייעודית במערכת שכל המשתמשים המקומיים במק יכולים לקרוא ולכתוב אליה. משמשת להעברת קבצים בין חשבונות שונים באותו מחשב.
-*   **הרשאות POSIX:** מערכת ההרשאות הבסיסית של UNIX המגדירה זכויות קריאה (Read - `r`), כתיבה (Write - `w`) והפעלה (Execute - `x`) עבור הבעלים (Owner), הקבוצה (Group) ושאר המשתמשים (Everyone).
-*   **ACL - Access Control Lists:** שכבת הרשאות מתקדמת ב-macOS המאפשרת הגדרת חוקים מדויקים ופרטניים יותר (למשל, מניעת מחיקה) מעבר למגבלות של POSIX.
-*   **Managed Apple Account - MAID:** בעבר נקרא Managed Apple ID. חשבון הנוצר ומנוהל על ידי הארגון דרך Apple Business Manager או Apple School Manager. בניגוד לחשבון אפל פרטי, חשבון זה נתון להגבלות ארגוניות ואינו תומך בחלק משירותי הצרכן (כמו Find My או רכישות ב-App Store).
-*   **UID / GID (User ID / Group ID):** מזהה מספרי ייחודי לכל משתמש וקבוצה במערכת. משתמשים מקומיים שנוצרים מתחילים בדרך כלל מ-501.
-
-## 3. מערך פקודות טרמינל (Terminal Commands סיכום שיעור)
-
-### ניהול משתמשים וקבוצות (Directory Services & Accounts)
-```bash
-# הצגת מידע על המשתמש הנוכחי (כולל UID ו-GID)
-id
-
-# יצירת משתמש סטנדרטי חדש באמצעות sysadminctl (הדרך המודרנית והבטוחה)
-sudo sysadminctl -addUser newuser -fullName "New User" -password "Password123"
-
-# הפיכת משתמש קיים למנהל (Admin)
-sudo sysadminctl -adminStatus on -user newuser
-
-# מחיקת משתמש קיימת (זהירות! יש אפשרות לשמור או למחוק את תיקיית הבית)
-sudo sysadminctl -deleteUser baduser -secure
-
-# הצגת רשימת כל המשתמשים במערכת דרך Directory Service
-dscl . -list /Users
-
-# קריאת כל המידע הקיים ב-dscl על משתמש מסוים
-dscl . -read /Users/username
-
-# הצגת רשימת הקבוצות שהמשתמש חבר בהן
-dseditgroup -o checkmember -m username admin
-```
-
-### ניהול הרשאות תצורה (POSIX & ACL)
-```bash
-# הצגת רשימת קבצים מפורטת כולל הרשאות POSIX (קריאה/כתיבה/הפעלה)
-ls -la
-
-# הצגת רשימת קבצים מפורטת כולל הרשאות מתקדמות (ACL) במידה וקיימות (יסומן ב-+ או @)
-ls -le
-
-# שינוי בעלים של קובץ או תיקייה (Owner:Group)
-sudo chown -R username:staff /path/to/folder
-
-# שינוי הרשאות POSIX במספרים (755 = קריאה/כתיבה/הפעלה לבעלים, קריאה/הפעלה לשאר)
-sudo chmod 755 /path/to/file
-
-# הוספת הרשאת הפעלה לקובץ (הפיכתו לסקריפט או קובץ הרצה)
-sudo chmod +x /path/to/script.sh
-
-# הוספת חוק ACL (הענקת זכות קריאה וכתיבה למשתמש ספציפי על תיקייה)
-sudo chmod +a "username allow read,write" /path/to/folder
-
-# הסרת חוק ACL ספציפי מקובץ
-sudo chmod -a "username allow read,write" /path/to/folder
-
-# איפוס הרשאות על תיקיית הבית (שימושי במקרה של תקלות הרשאות עמוקות)
-diskutil resetUserPermissions / `id -u`
-```
-
-### אבטחה ומדיניות סיסמאות
-```bash
-# הצגת סטטוס ההצפנה ומידע על משתמשים מורשי FileVault
-fdesetup list
-
-# אילוץ המשתמש להחליף סיסמה בהתחברות הבאה
-sudo pwpolicy -u username -setpolicy "newPasswordRequired=1"
-```
-
-## 4. נתיבים קריטיים וקובצי מערכת
-
-*   `/Users/` - התיקייה בה שוכנות כל תיקיות הבית של המשתמשים במק.
-*   `/Users/Shared/` - התיקייה המשותפת, פתוחה לקריאה וכתיבה לכל המשתמשים.
-*   `~/Library/` - ספריית המשתמש המוסתרת (ספריית ה-Library האישית). מכילה העדפות, מטמונים (Caches), ונתוני אפליקציות פרטיים.
-*   `/var/db/dslocal/nodes/Default/users/` - המיקום הפיזי בו נשמרים קובצי ה-plist שמייצגים את הגדרות החשבון המקומי של כל משתמש (תחליף מקומי ל-LDAP).
-*   `/Library/Preferences/com.apple.loginwindow.plist` - קובץ העדפות הקובע הגדרות במסך ההתחברות (למשל, הסתרת רשימת משתמשים).
-
-## קישורים מומלצים ולקריאה נוספת
-* [Set up users, guests, and groups on Mac](https://support.apple.com/guide/mac-help/set-up-other-users-on-your-mac-mtusr001/mac) - הסבר בסיסי על ניהול משתמשים דרך הגדרות המערכת.
-* [Change permissions for files, folders, or disks on Mac](https://support.apple.com/guide/mac-help/change-permissions-for-files-folders-or-disks-mchlp1203/mac) - מדריך קצר על ניהול הרשאות קבצים בממשק הגרפי.
-* [About Managed Apple Accounts in Apple Platform Deployment](https://support.apple.com/guide/deployment/about-managed-apple-accounts-dep0db601c3/web) - מסמך טכני על חשבונות אפל מנוהלים לארגונים.
-* [Apple Terminal User Guide](https://support.apple.com/guide/terminal/welcome/mac) - המדריך הרשמי של אפל לעבודה עם הטרמינל.
+## Recommended Reading & Enrichment Links
+* **Apple Platform Support: Intro to user account types**
+  [https://support.apple.com/guide/platform-support/sup72e8c67c3/web](https://support.apple.com/guide/platform-support/sup72e8c67c3/web)
+* **Apple Platform Deployment: About Managed Apple Accounts**
+  [https://support.apple.com/guide/deployment/depdc4ba8d82/web](https://support.apple.com/guide/deployment/depdc4ba8d82/web)
+* **The Eclectic Light Company: Explainer: Keychain basics**
+  [https://eclecticlight.co/2022/10/15/explainer-keychain-basics/](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/)
+* **The Mac Security Blog: Understanding User Accounts in macOS**
+  [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)

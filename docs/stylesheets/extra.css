@@ -39,3 +39,11 @@
     display: none !important;
   }
 }
+
+/* Wediggit Custom Brand Orange */
+:root {
+  --md-primary-fg-color: #F78200;
+  --md-primary-fg-color--light: #F99C33;
+  --md-primary-fg-color--dark: #C46700;
+  --md-accent-fg-color: #F78200;
+}

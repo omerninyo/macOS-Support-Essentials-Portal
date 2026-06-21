@@ -1,41 +1,33 @@
-# פרק 1: התקנה, הכרה ויישור קו (Setup & Fundamentals) - סיכום שיעור (Asset C)
+# Chapter 01: יסודות macOS, חוויית משתמש והכנה לארגון
+**Asset C: Cheat Sheet**
 
-## 1. נושאי השיעור
+## מושגי מפתח (Key Concepts)
 
-*   **1.** **היסטוריה ופילוסופיה:** רקע לאבולוציה מ-OS X ל-macOS ומעבר ל-Apple Silicon.
-*   **2.** **חוויית פתיחת הקופסה:** היכרות עם תהליך ההגדרה הראשוני (Setup Assistant).
-*   **3.** **היכרות עם המערכת:** ניווט במערכת, Finder, System Settings ומחוות.
-*   **4.** **מעבדה ראשונה:** פתיחת מחשב, זיהוי חומרה והתמצאות ראשונית.
-*   **5.** **תיבול ארגוני:** היכרות עם רישום למערכות ניהול בארגון (ADE/Remote Management).
+* **Apple Silicon:** הארכיטקטורה המודרנית של מחשבי ה-Mac המבוססת על פיתוח פנימי של אפל (מעבדי M-Series בתצורת ARM), המספקת יחס ביצועים לצריכת חשמל חסר תקדים.
+* **System on a Chip (SoC):** תכנון סיליקון שמאגד את המעבד הראשי (CPU), המעבד הגרפי (GPU), זיכרון, ומנגנוני אבטחה לשבב בודד.
+* **Unified Memory:** זיכרון מאוחד. ארכיטקטורה ב-Apple Silicon המאפשרת לכל רכיבי ה-SoC לגשת לאותו מאגר זיכרון ללא צורך בהעתקת נתונים, מה שמשפר משמעותית ביצועים וחיסכון בחשמל.
+* **Secure Enclave:** תת-מערכת חומרתית מבודדת בתוך ה-SoC האחראית על פעולות קריפטוגרפיות, שמירת מפתחות הצפנה ואימות נתונים ביומטריים (Touch ID).
+* **Rosetta 2:** סביבת תרגום שקופה המובנית ב-macOS המאפשרת לאפליקציות שנכתבו עבור מעבדי Intel (x86) לרוץ על מחשבי Apple Silicon. התרגום מבוצע לרוב מראש (Ahead of Time).
+* **Setup Assistant:** התהליך הראשוני שמתבצע בהפעלת מק חדש או אחרי EACS. אחראי על הגדרות רשת, אזור, יצירת Local Account, ועוד.
+* **Automated Device Enrollment (ADE):** טכנולוגיית פריסה וניהול (לשעבר DEP) המאפשרת לארגונים לחבר מחשבי Mac ל-MDM באופן אוטומטי (Zero-Touch Deployment) מרגע החיבור הראשון לרשת, ולהחליף את ה-Setup Assistant הצרכני במסך Remote Management.
+* **Continuity:** אוסף טכנולוגיות המאפשרות רצף עבודה בין מכשירי אפל (כמו Universal Control, Handoff, Continuity Camera). עובד לרוב על בסיס זיהוי קרבה ב-Bluetooth ותקשורת Peer-to-Peer Wi-Fi.
+* **Apple Intelligence:** מערכת בינה מלאכותית המובנית ב-macOS המנצלת את ה-Neural Engine שב-Apple Silicon לעיבוד מודלי שפה באופן מקומי, מתוך דגש על פרטיות.
+* **Background Process:** תהליך מערכת שרץ ברקע ללא חלון משתמש גלוי, לעיתים קרובות מאוחסן כ-LaunchAgent או LaunchDaemon.
 
-## מילון מונחים (Glossary & Concepts)
-* **Apple Silicon:** ארכיטקטורת המעבדים החדשה של אפל מבוססת ARM (סדרת ה-M).
-* **System on a Chip - SoC:** מערכת על שבב, המרכזת את המעבד (CPU), המאיץ הגרפי (GPU), הזיכרון (Unified Memory) וההצפנה (Secure Enclave) על פיסת סיליקון אחת.
-* **Unified Memory:** זיכרון מאוחד ב-Apple Silicon המאפשר ל-CPU ול-GPU לחלוק נתונים ללא העתקה פיזית.
-* **Secure Enclave:** רכיב אבטחה מבודד בחומרה האחראי על שמירת מפתחות ההצפנה וניהול ה-FileVault.
-* **Setup Assistant:** Setup Assistant הראשוני (OOBE) שעולה בהפעלת מק חדש או מאופס.
-* **Local Account - Admin:** החשבון המקומי הראשון שנוצר בסטאפ מקבל באופן אוטומטי הרשאות מנהל ו-Secure Token.
-* **Erase All Content and Settings - EACS:** Erase All Content and Settings (EACS); תהליך המאפס את המחשב בצורה מאובטחת ומיידית.
-* **Finder:** סייר הקבצים והליבה של הממשק הגרפי ב-macOS. פועל כתהליך שאינו נסגר.
-* **System Settings:** מרכז ההגדרות החדש של המערכת (החליף את System Preferences), שבו מנוהלים גם פרופילי התצורה.
-* **Spotlight:** מנוע חיפוש פנימי עוצמתי (מופעל לרוב ב-Cmd+Space) לאיתור אפליקציות, קבצים, וביצוע פעולות.
-* **Automated Device Enrollment - ADE:** שירות Automated Device Enrollment (ADE) המאפשר לארגונים להטמיע מחשבים מרחוק וללא מגע (Zero-Touch Deployment).
-* **Remote Management:** המסך שמופיע ב-Setup Assistant אם המחשב זוהה כשייך לארגון דרך שרתי אפל, ודורש מהמשתמש להזדהות ולהתקין את פרופיל הניהול.
+## פקודות ונתיבים רלוונטיים (Commands & Paths)
 
-## פקודות טרמינל שימושיות (Terminal Commands)
-* `system_profiler SPHardwareDataType` - מציג את דוח החומרה הבסיסי, כולל דגם המחשב והמספר הסידורי (Serial Number).
-* `system_profiler SPNetworkDataType` - מציג את תצורת הרשת, כולל כתובת ה-MAC של מתאם ה-Wi-Fi.
-* `sw_vers` - מדפיס את הגרסה המדויקת של macOS המותקנת יחד עם ה-Build Number.
-* `killall Finder` - הורג ומאתחל מחדש את תהליך ה-Finder במקרה של תקיעה או שינוי הגדרות מוסתרות.
-* `sudo mdutil -E /` - מוחק ובונה מחדש את אינדקס החיפוש של ה-Spotlight.
-* `sudo profiles renew -type enrollment` - מאלץ את המחשב לפנות לשרתי אפל כדי לבדוק מחדש אם הוא משויך לארגון (הפעלת טריגר ל-ADE).
+| נתיב / פקודה | תיאור |
+| :--- | :--- |
+| `uname -m` | פקודת טרמינל המחזירה `arm64` אם המחשב מריץ Apple Silicon, או `x86_64` למעבדי Intel. |
+| `system_profiler SPHardwareDataType` | פקודה המספקת פירוט חומרה מלא של ה-Mac, כולל מספר הליבות והזיכרון. |
+| `/var/db/.AppleSetupDone` | קובץ דגל (Flag). כאשר הוא קיים, מערכת ההפעלה "יודעת" ששלב ה-Setup Assistant הושלם, ומדלגת עליו בהדלקות הבאות. |
+| `sudo profiles show -type enrollment` | פקודה המחזירה את סטטוס ההרשמה של המכשיר לארגון (האם קיימת הרשמת ADE דרך Apple Business Manager). |
+| `log show --predicate 'process == "Setup Assistant"' --info` | שאילתה לשליפת לוגים ספציפיים מתוך התהליך של פתיחת הקופסה. |
 
-## נתיבים חשובים (Paths & Plists)
-* `/private/var/db/.AppleSetupDone` - קובץ מוסתר שאם הוא קיים, המערכת מדלגת על ה-Setup Assistant. מחיקתו תחזיר את סייען ההתקנה בהפעלה הבאה.
-* `~/Library/Preferences/com.apple.finder.plist` - קובץ הגדרות המשתמש של ה-Finder.
-* `/System/Library/CoreServices/Setup Assistant.app` - המיקום של אפליקציית סייען ההתקנה.
-
-## קישורים מומלצים ולקריאה נוספת
-* [Set up your Mac - Apple Support](https://support.apple.com/guide/mac-help/set-up-your-new-mac-mh26966/mac) - מדריך בסיסי של אפל על אשף ההגדרה הראשוני.
-* [Mac computers with Apple silicon](https://support.apple.com/en-us/HT211814) - רשימה של כל דגמי המק שמגיעים עם מעבדי אפל (M1 ומעלה).
-* [Automated Device Enrollment in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/automated-device-enrollment-axm306bce837/web) - מאמר למנהלי רשת על איך עובד שיוך אוטומטי של מחשבים בארגון.
+## Recommended Reading & Enrichment Links
+* **Apple Platform Deployment - Automated Device Enrollment:**
+  [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
+* **Apple Platform Security - Boot process for a Mac with Apple silicon:**
+  [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
+* **Apple Support - Apple Intelligence Overview:**
+  [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
