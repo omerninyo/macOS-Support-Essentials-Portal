@@ -7,7 +7,7 @@
 *   **3.** **אבחון תקיעות (Force Quit):** כלים לאבחון וסגירה מאולצת של אפליקציות שלא מגיבות.
 *   **4.** **תיבול ארגוני:** חלוקת תוכנות המונית ושימוש בקטלוג Self-Service.
 
-## מושגי
+## מושגי יסוד (Core Concepts)
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-App-Store-scaled.png)
@@ -19,7 +19,6 @@
 
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
- יסוד (Core Concepts)
 
 * **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת (App Review), חתימה קריפטוגרפית ונוטריון (Notarization), ופועלת תחת מגבלות של "Sandbox" (Sandboxing).
 * **Package - PKG:** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.

@@ -1,6 +1,6 @@
 # Lesson 06 - Asset C: Learning Guide
 
-## מושגי
+## מושגי מפתח (Key Concepts)
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Copy-scaled.png)
@@ -32,7 +32,6 @@
 
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/How_macOS_depends_on_firmlinks_p1_24.jpeg)
- מפתח (Key Concepts)
 * **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple המחליפה את HFS+. בנויה לביצועים גבוהים על כונני פלאש, הצפנה, שיתוף מקום דינמי והגנה על נתונים.
 * **Container (מכולה):** השכבה הראשית ב-APFS שמנהלת את כל המקום הפנוי בדיסק. מחליפה למעשה את המחיצות (Partitions) הקשיחות של העבר.
 * **Volume (כרך):** יחידת אחסון לוגית בתוך ה-Container. כרכים חולקים את המקום הפנוי עם שאר הכרכים במכולה וגדלים לפי הצורך ללא צורך בהגדרה מראש (Dynamic Space Sharing).

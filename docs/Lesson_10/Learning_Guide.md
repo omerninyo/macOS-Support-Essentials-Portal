@@ -7,7 +7,7 @@
 *   **3.** **שכפול מהיר (Mac Sharing Mode):** ניהול העברות נתונים במצב שיתוף דיסק.
 *   **4.** **תיבול ארגוני:** התממשקות ל-Single Sign-On ליצירת חיבור אוטומטי לשרתים.
 
-## מושגי
+## מושגי מפתח (Key Concepts)
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Time-Machine-scaled.png)
@@ -23,7 +23,6 @@
 
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
- מפתח (Key Concepts)
 
 | מושג | רקע היסטורי מה-DeepDive |
 | :--- | :--- |

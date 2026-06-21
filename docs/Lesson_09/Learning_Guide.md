@@ -19,7 +19,7 @@
 
 גיליון זה מסכם את המושגים, הפקודות והכלים לאבחון וניהול של רשתות, תצורות ומיקומים במערכת macOS.
 
-## מושגי
+## מושגים ומונחי יסוד (Terms & Concepts)
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Connect-to-Server-scaled.png)
@@ -35,7 +35,6 @@
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Wi-Fi-scaled.png)
-ם ומונחי יסוד (Terms & Concepts)
 
 * **מיקום רשת (Network Location):** פרופיל המאגד בתוכו את כלל הגדרות הרשת של המק (שירותי רשת פעילים, כתובות IP, שרתי DNS, ופרוקסי). ניתן ליצור מספר מיקומים כדי לעבור במהירות בין תצורת "בית", "משרד" ועוד.
 * **סדר עדיפויות של שירותים (Service Order):** הסדר שבו המק מחפש ומתחבר לרשתות פנויות. ניתן לגרור שירות (למשל Ethernet מעל Wi-Fi) כדי להבטיח שהמק יעדיף חיבור קווי כשהוא זמין.

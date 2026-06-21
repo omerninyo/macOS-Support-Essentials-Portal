@@ -10,7 +10,7 @@
 * **תיבול ארגוני** - עבודה עם Managed Apple Accounts (MAID) ושילוב Platform SSO לכניסה שקופה בארגון.
 
 
-## מושגי
+## מושגי מפתח (Terminology)
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Fast-User-Menu-scaled.png)
@@ -24,7 +24,6 @@
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Users-Groups-scaled.png)
 
 
- מפתח (Terminology)
 * **Administrator:** משתמש מנהל המערכת, בעל הרשאות גלובליות לשנות הגדרות ולהתקין תוכנות לכולם.
 * **Standard User:** משתמש רגיל, מוגבל לתיקיית הבית שלו (`~`) ולמרחב האישי שלו.
 * **Guest User:** משתמש אורח, מוחק את כל תוכן התיקיה שלו בניתוק.

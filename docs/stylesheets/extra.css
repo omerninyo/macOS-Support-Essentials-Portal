@@ -48,6 +48,15 @@
   --md-accent-fg-color: #F78200;
 }
 
+/* Fix dark navigation footer buttons when in light mode */
+[data-md-color-scheme="default"] {
+  --md-footer-bg-color: #ffffff;
+  --md-footer-bg-color--dark: #f5f5f5;
+  --md-footer-fg-color: #333333;
+  --md-footer-fg-color--light: #666666;
+  --md-footer-fg-color--lighter: #999999;
+}
+
 /* Fix list bullets for RTL */
 .md-typeset ul, .md-typeset ol {
     padding-inline-start: 1.5em !important;
