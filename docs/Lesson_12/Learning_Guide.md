@@ -19,7 +19,7 @@
 * **Rapid Security Response - RSR (Rapid Security Response / RSR):** מנגנון להפצת טלאי אבטחה קריטיים ומהירים ללא צורך בהתקנת עדכון מערכת מלא. עדכונים אלו מזוהים באמצעות אותיות בסוגריים, למשל `macOS 26.2.1 (a)`.
 * **השהיית עדכונים (Deferral):** יכולת ניהולית (באמצעות Configuration Profile של MDM) להשהות הופעה של עדכוני תוכנה או שדרוגים בעיני המשתמשים למשך שיעור זמן של עד 90 יום, לצורך בדיקות תאימות.
 * **Declarative Device Management - DDM:** הדור המודרני של ניהול מכשירים. במקום לשלוח פקודת MDM כפויה לעדכון (שלרוב נכשלת או מתוזמנת גרוע), ה-IT מגדיר "הצהרה" (Declaration) עם תאריך יעד לעדכון, ומערכת ההפעלה מנהלת את ההכנות, ההתראות והתזמון בעצמה.
-* **Migration Assistant:** הכלי המובנה של macOS המשמש להעברת פרופילי משתמשים, מידע, והגדרות בין מחשבי Mac שונים. 
+* **Migration Assistant:** הכלי המובנה של macOS המשמש להעברת פרופילי משתמשים, מידע, והגדרות בין מחשבי Mac שונים.
 
 ---
 
@@ -89,7 +89,7 @@
 
 ## 5. המלצות IT להגירות (Migration Assistant)
 
-שימוש ב-Migration Assistant הוא כלי חזק, אך בסביבות ארגוניות עשוי לגרום להעתקת בעיות ממחשב ישן למחשב חדש. 
+שימוש ב-Migration Assistant הוא כלי חזק, אך בסביבות ארגוניות עשוי לגרום להעתקת בעיות ממחשב ישן למחשב חדש.
 
 * **בידוד המידע להעברה:** מומלץ בחום *שלא* להעביר את תיקיות ה-Applications וה-Other files and folders, אלא רק את חשבון המשתמש (Home Folder). העברת אפליקציות גוררת עמה קבצי תצורה ישנים של MDM, הרחבות ליבה (Kexts) מיושנות, ושגיאות תוכנה מהמחשב הקודם.
 * **חיבור פיזי:** לביצועים המהירים ביותר, יש לחבר את שני המחשבים ישירות עם כבל Thunderbolt ולהפעיל את מצב **Mac Sharing Mode** במחשב הישן (דרך ה-Recovery Mode במחשבי Apple Silicon). אם אין כבל, המערכת תיצור רשת Peer-to-Peer Wi-Fi סגורה ביניהם.
@@ -98,6 +98,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) - המדריך הרשמי למנהלי מערכת על שליטה ועיכוב עדכונים בארגון.
 * [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac) - מדריך פשוט למשתמש הקצה לאיך מורידים ומתקינים עדכוני מערכת.
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - מדריך המסביר איך להעביר נתונים ומידע ממק ישן למק חדש בעזרת אשף ההגירות.
@@ -112,4 +113,4 @@
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Boot-Camp-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Boot-Camp-scaled.png)

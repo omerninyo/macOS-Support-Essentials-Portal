@@ -19,7 +19,7 @@
 
 
 * **Time Machine:** מנגנון הגיבוי המובנה של macOS. שומר עותקים היסטוריים של קבצים, מאפשר שחזור קבצים בודדים או מערכת שלמה.
-* **APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה. 
+* **APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה.
 * **Local Snapshots:** Snapshots הנשמרות על הכונן המקומי עצמו (ה-Data Volume). נוצרות אוטומטית כגיבוי ביניים או לפני עדכוני מערכת. הן נמחקות אוטומטית כשהמקום בדיסק אוזל.
 * **Backup Destination:** הכונן החיצוני (כונן USB, Thunderbolt, NAS, או שרת SMB תואם Time Machine) שמוגדר לאחסון הגיבוי. החל מ-macOS Big Sur, יעדי הגיבוי מפורמטים אוטומטית למערכת הקבצים APFS.
 * **Mobile Time Machine:** התנהגות שבה ה-Mac ממשיך ליצור ולשמור Local Snapshots גם כשהכונן החיצוני מנותק, כדי לשמור על רצף היסטורי שאותו יסנכרן מול כונן היעד ברגע שיחובר.
@@ -33,6 +33,7 @@
 *(שימו לב: חלק מהפקודות המחוללות שינוי דורשות הרשאות `sudo`)*.
 
 ### ניהול בסיסי וסטטוס (Basic Management)
+
 * `tmutil status`
   * מציג את הסטטוס הנוכחי של הגיבוי בזמן אמת (מראה אם גיבוי רץ כרגע, אחוזי ההתקדמות, והנתיב של היעד).
 * `tmutil startbackup`
@@ -47,6 +48,7 @@
   * מציג מידע ונתונים על כל כונני היעד שמוגדרים כעת לגיבוי Time Machine (כולל מזהים של היעדים).
 
 ### החרגות מגיבוי (Exclusions)
+
 * `tmutil addexclusion /path/to/folder_or_file`
   * מחריג באופן קבוע קובץ או תיקייה מגיבוי. הפקודה מטמיעה Extended Attribute שמסמן ל-backupd לדלג על נתיב זה. (כדי להחריג קבצי מערכת חובה להשתמש ב-`sudo`).
 * `tmutil removeexclusion /path/to/folder_or_file`
@@ -55,6 +57,7 @@
   * בודק ומחזיר פלט שמציין האם נתיב ספציפי מוחרג כרגע מגיבוי.
 
 ### Snapshots מקומיות (Local Snapshots)
+
 * `tmutil listlocalsnapshots /`
   * מציג רשימה של כל ה-Local Snapshots השמורים על כונן המערכת הנוכחי (ה-Root - `/`).
 * `tmutil localsnapshot`
@@ -65,6 +68,7 @@
   * אילוץ המערכת לדלל Snapshots כדי לפנות מקום בכונן (דחיפות 4 היא המהירה ביותר לעצירת תהליכים נלווים).
 
 ### אבחון וניתוח נתונים (Diagnostics & Analysis)
+
 * `tmutil calculatedrift /path/to/backup1 /path/to/backup2`
   * מחשב מה השתנה (נוסף, הוסר, השתנה) בין שני גיבויים שונים במטרה להבין מדוע גיבוי אחרון תופס הרבה מקום.
 * `tmutil compare`
@@ -83,6 +87,7 @@
 * **מגבלות פרופיל ע"י MDM:** ניתן דרך MDM להגביל משתמשים מלבצע שחזורים, לשלוט על יכולות Erase Assistant כדי למנוע מחיקת מחשבים לפני מסירתם למחלקת IT, או לכפות על המערכת שלא להחריג נתיבים רגישים שמנהל הרשת רוצה לגבות בהכרח אם עדיין נעשה שימוש ב-Time Machine או בכונני רשת כגיבוי.
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250) - מדריך בסיסי למשתמש על הפעלת מערכת הגיבויים טיים משין.
 * [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981) - מדריך למשתמש איך לשחזר קבצים מגיבוי קודם.
 * [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015) - הסבר קצר על מנגנון הסנאפשוטים המקומיים כשכונן הגיבוי לא מחובר.
@@ -94,5 +99,4 @@
 
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/Snapshots_aren’t_backups_p1_114.jpeg)
-
 

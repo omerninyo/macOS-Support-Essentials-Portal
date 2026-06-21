@@ -14,13 +14,15 @@
 ## מילון מונחים והגדרות יסוד (Terminology & Concepts)
 
 ### ארכיטקטורת האתחול ב-Apple Silicon
+
 *   **Boot ROM - Stage 0:** הקוד הראשון שרץ בהדלקת המק, צרוב בחומרה (Read-Only) ולא ניתן לשינוי. תפקידו לאמת (לפי חתימות חומרה של Apple) ולטעון את השלב הבא (LLB). במקרה של תקלה חמורה, זהו הרכיב שמכניס את המק למצב DFU.
 *   **Low-Level Bootloader / LLB (Stage 1):** מנהל האתחול ברמה הנמוכה. תפקידו העיקרי הוא לחפש ולהבין מאיזה Volume  המק אמור לבצע Boot, ולאמת את ה-LocalPolicy שלו מול ה-Secure Enclave.
-*   **iBoot - Stage 2:** מנהל האתחול ברמה הגבוהה (מה שבעבר כונה "Firmware"). מאמת את ההאשים של ה-SSV (Signed System Volume) ומעלה את ליבת המערכת (Kernel) בצורה בטוחה. 
+*   **iBoot - Stage 2:** מנהל האתחול ברמה הגבוהה (מה שבעבר כונה "Firmware"). מאמת את ההאשים של ה-SSV (Signed System Volume) ומעלה את ליבת המערכת (Kernel) בצורה בטוחה.
 *   **Kernel - XNU:** ליבת מערכת ההפעלה macOS. לוקחת שליטה מ-iBoot, מזהה את החומרה המלאה, מפעילה שירותי מערכת ומערכות קבצים (APFS).
 *   **DFU Mode - Device Firmware Update:** מצב חירום קיצוני (ברמת Boot ROM) המאפשר לחבר מק תקול למק תקין עם כבל USB-C ו-Apple Configurator כדי לשחזר Firmware (Revive / Restore) כשהמק לא מסוגל לאתחל כלל.
 
 ### אבטחת האתחול ומדיניות מקומית
+
 *   **Startup Security Utility:** הממשק הגרפי הזמין רק דרך macOS Recovery. משמש להגדרת מדיניות האבטחה של דיסק ההפעלה.
 *   **Full Security:** רמת האבטחה המלאה (ברירת המחדל). מאפשרת להריץ רק גרסאות macOS שחתומות ומוכרות כבטוחות בזמן ההתקנה.
 *   **Reduced Security:** אבטחה מופחתת. מאפשרת התקנת גרסאות קודמות של macOS, ומהווה תנאי סף כדי לאשר טעינת הרחבות קרנל (Kexts) של חברות צד שלישי (באישור המשתמש או מערכת ה-MDM).
@@ -28,6 +30,7 @@
 *   **LocalPolicy:** אוסף של הגדרות אבטחת האתחול (Secure Boot settings) פר-Volume. זהו קובץ מוצפן וחתום ב-SEP המבטיח שהמערכת עולה עם מדיניות שנקבעה ואושרה ספציפית על ידי מנהל (או MDM).
 
 ### הרחבות וקרנל
+
 *   **Kernel Extensions - Kexts:** תוכנות שרצות במרחב הליבה של המערכת (Ring 0 / Kernel Space). אפל מסיימת את תמיכתה בהן בהדרגה, מאחר וקריסה של Kext מפילה את כל המחשב (Kernel Panic). טעינתן מחייבת מעבר ל-Reduced Security.
 *   **System Extensions:** המחליף המודרני ל-Kexts. הרחבות אלו רצות כ-User Space Processes (בתוך "Sandbox"), ולכן הן בטוחות בהרבה. אם הן קורסות, המק ממשיך לעבוד. (סוגים נפוצים: Network Extensions ל-VPN/Firewall, Endpoint Security לאנטי וירוס).
 *   **RecoveryOS Password:** בעבר (ב-Intel) השתמשנו ב-Firmware Password. ב-Apple Silicon, ניתן דרך מערכת MDM (פקודת `SetRecoveryLock`) לנעול את היכולת להיכנס למצב השחזור (Recovery / Startup Options) ללא ססמה מרחוק.
@@ -47,6 +50,7 @@
     *   **פעולה:** מציג את מצב ההפעלה הכללי. כאן תוכלו לראות את ה-`Boot Mode` (Normal או Safe) ואת הסטטוס של ה-`System Integrity Protection` (Enabled או Disabled).
 
 ### `bputil` - ניהול מדיניות אתחול (Boot Policy) מתקדם
+
 > **אזהרה:** פקודת `bputil` פועלת מתוך macOS Recovery בלבד (או כ-root במערכת פעילה להצגת מידע) ומאפשרת שינוי קרביים עמוקים של ה-LocalPolicy מבלי להיעזר בממשק הגרפי. שימוש שגוי עלול להפוך את המק ללא זמין לאתחול (Unbootable).
 
 *   **`sudo bputil -d`** או **`bputil --display-policy`**
@@ -65,6 +69,7 @@
 *(הערה: פקודות שינוי ב-`bputil` דורשות לרוב מתן ססמת אדמין או בחירת דיסק מדויקת, ע"י ציון UUID בעזרת פקודת `diskutil apfs listVolumeGroups`)*.
 
 ### `kmutil` - ניהול הרחבות קרנל (Kernel Management Utility)
+
 *   **`kmutil showloaded`**
     *   **פעולה:** מציג רשימה מלאה של כל הרחבות הליבה שנטענו בפועל בזמן הריצה (מחליף את הפקודה המיושנת `kextstat`).
 *   **`kmutil trigger-panic-medic`**
@@ -91,22 +96,20 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Startup Disk security policy control for a Mac](https://support.apple.com/guide/security/startup-disk-security-policy-control-secc7b34e5b5/web) - מאמר טכני המסביר למה ואיך מנמיכים את רמות האבטחה במק כדי לטעון תוספי חומרה (Kexts).
 * [Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/boot-process-for-a-mac-with-apple-silicon-sec5d3013d28/web) - מסמך עומק רשמי על שרשרת ההפעלה (Boot process) של מעבדי Apple Silicon.
 * [Booting an M1 Mac from hardware to kexts: 1 Hardware](https://eclecticlight.co/2022/01/04/booting-an-m1-mac-from-hardware-to-kexts-1-hardware/) - מאמר שחופר על השלבים המוקדמים ביותר של הפעלת החומרה בתהליך האתחול.
 * [Booting an M1 Mac from hardware to kexts: 2 LLB and iBoot](https://eclecticlight.co/2022/01/05/booting-an-m1-mac-from-hardware-to-kexts-2-llb-and-iboot/) - החלק השני במאמר שסוקר את תהליך טעינת מערכת ההפעלה מהאחסון.
 
 
-
+> **Tahoe UI Reference:**
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Automator-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Automator-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Script-Editor-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Script-Editor-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Shortcuts-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Shortcuts-scaled.png)

@@ -3,6 +3,7 @@
 **מדריך עזר (Learning Guide)**
 
 ## נושאי השיעור
+
 * **מבוא לטרמינל (Terminal)** - למה ה-CLI קריטי לטכנאים, קיצורי מקלדת, ויישור קו לפני עבודה מתקדמת.
 * **הלב של המערכת** - תהליך `launchd` (הבדל בין LaunchDaemons ל-Agents).
 * **אבחון עמוק** - קריאת זיכרון ב-Activity Monitor, וקריאה/אבחון של קבצי Plist (XML).
@@ -40,18 +41,21 @@
 * `ps -ax`: הדפסת רשימת כל התהליכים שרצים כעת במערכת.
 
 ### פקודת העל `launchctl`
+
 * `launchctl list`: רשימת התהליכים תחת מנהל התהליכים הנוכחי.
 * `sudo launchctl print system`: הדפסת מצב כל שירותי המערכת (Daemons).
 * `sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist`: טעינת/הפעלת שירות מערכת מקובץ plist ספציפי.
 * `sudo launchctl bootout system /Library/LaunchDaemons/com.example.plist`: פריקת/השעיית שירות מערכת.
 
 ### קריאה וניהול של Plists (`plutil`)
+
 * `plutil -lint /path/to/file.plist`: בדיקת תקינות הקובץ (Syntax Check) בחיפוש אחר שגיאות תחביר או תגיות חסרות.
 * `plutil -p /path/to/file.plist`: הדפסה פשוטה (Human Readable) של התוכן, עוקף קבצים בינאריים.
 * `sudo plutil -convert xml1 /path/to/file.plist`: המרת קובץ plist מפורמט בינארי ל-XML כדי לאפשר עריכה.
 * `sudo plutil -convert binary1 /path/to/file.plist`: החזרת הקובץ לפורמט בינארי לאחר עריכה.
 
-### אבחון ה-MDM 
+### אבחון ה-MDM
+
 * `log stream --predicate 'process == "mdmclient"' --info`: פקודה המציגה בזמן אמת כל פעולה וסנכרון שסוכן ה-MDM המובנה מבצע. חובה לאיתור שגיאות רשת וחיבורים חסומים.
 * `sudo profiles renew -type enrollment`: כפיית סנכרון מיידי אל מול שרת ה-MDM מצידו של הלקוח.
 
@@ -63,6 +67,7 @@
 * `~/Library/LaunchAgents/`: ספרייה המיועדת לסוכנים ברמת משתמש הספציפי שנטענים עם ביצוע ה-Login.
 
 ---
+
 ## Recommended Reading & Enrichment Links
 
 * [Explainer: % CPU in Activity Monitor (Eclectic Light Company)](https://eclecticlight.co/) - הסבר לעומק למה אחוזי מעבד במק לפעמים מטעים ואיך לקרוא אותם נכון (התייחסות ל-Performance vs Efficiency Cores).
@@ -70,31 +75,29 @@
 * [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת "לחץ זיכרון" בכלי ה-Activity Monitor.
 
 
-
-
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-General-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-General-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Spotlight-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Spotlight-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Spotlight-Action-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Spotlight-Action-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Notification-Center-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Notification-Center-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Control-Center-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Control-Center-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Control-Center-Edit-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Control-Center-Edit-scaled.png)

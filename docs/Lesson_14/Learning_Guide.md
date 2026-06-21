@@ -12,19 +12,19 @@
 ## מושגי
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Activity-Monitor-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Activity-Monitor-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Force-Quit-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Force-Quit-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Disk-Utility-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Disk-Utility-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Console-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Console-scaled.png)
 
 
 > **Visual Aid from DeepDive:**
@@ -76,10 +76,12 @@
 - `diskutil cs createVolume LVG_UUID jhfs+ "Macintosh HD" 100%`: השלב האחרון בבנייה הידנית – יצירת ה-Volume הלוגי בפועל מתוך שטח ה-LVG.
 
 ### שחזור ואיפוס סיסמאות מתוך Recovery
+
 - `resetpassword`: פקודה פשוטה בטרמינל המזנקת את האשף הגרפי (Reset Password Assistant) לאיפוס סיסמת ה-Admin, בהנחה שיש לכם Apple Account שמקושר למחשב או Recovery Key.
 - `resetpassword -eraseMac`: טריק לזמני חירום. פותחת חלון קטן המאפשר לכם "להשמיד" את המק ולעשות לו Wipe גם אם אין לכם שום הרשאה, סיסמה או גישה למשתמש Admin. **שימו לב:** זה ינעל את המחשב עם Activation Lock אם היה מופעל.
 
 ### תקינות רשת (לחילוץ והתקנה)
+
 - `networksetup -listallhardwareports`: מראה אילו ממשקי רשת (Wi-Fi, Ethernet) קיימים ופעילים כרגע בסביבת השחזור.
 - `ping -c 4 8.8.8.8`: וידוא שיש תקשורת חיצונית. 1TR זקוק לאינטרנט כדי לוודא זכאות (Activation Lock) ולהוריד את מערכת ההפעלה.
 
@@ -94,6 +96,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac) - מדריך פשוט למשתמש על הכניסה והשימוש בסביבת השחזור (Recovery).
 * [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac) - מאמר טכני על איך להציל מק "מת" בעזרת כבל חיבור למק שני (DFU Mode).
 * [Activation Lock for Mac](https://support.apple.com/en-us/102541) - הסבר קצר על מנגנון נעילת הפעלה (Activation Lock) המונע גניבות.

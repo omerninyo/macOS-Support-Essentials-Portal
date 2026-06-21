@@ -3,27 +3,27 @@
 ## מושגי
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Copy-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Copy-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Get-Info-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Get-Info-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Go-To-Folder-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Go-To-Folder-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Customize-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Customize-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Desktop-Stacks-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Desktop-Stacks-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Stacks-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Stacks-scaled.png)
 
 
 > **Visual Aid from DeepDive:**
@@ -102,6 +102,7 @@ mdimport -t -d3 /path/to/specific/file.pdf
 ```
 
 ## Recommended Reading & Enrichment Links
+
 * **Apple Platform Support:** Use Disk Utility - [Link](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web)
 * **The Eclectic Light Company:** A brief history of APFS in honour of its fifth birthday - [Link](https://eclecticlight.co/2022/04/01/a-brief-history-of-apfs-in-honour-of-its-fifth-birthday/)
 * **The Eclectic Light Company:** How macOS depends on firmlinks - [Link](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/)

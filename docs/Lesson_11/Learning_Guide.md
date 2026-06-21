@@ -45,6 +45,7 @@
 * `system_profiler SPBluetoothDataType` - הצגת סטטוס התקני Bluetooth, כולל רמות סוללה וכתובות MAC.
 
 ### רשת ושירותים
+
 * `networksetup -listallhardwareports` - הצגת כל ממשקי הרשת במק. לעיתים מדפסות רשת מוגדרות עם ממשק וירטואלי משלהן, או שחשוב לוודא שמתאם רשת חיצוני (USB to Ethernet) מזוהה כראוי על ידי המערכת ברמת החומרה.
 
 ## נתיבים וקבצים רלוונטיים (Paths)
@@ -55,6 +56,7 @@
 * `/Library/Managed Preferences/` - הנתיב בו נשמרים פרופילי התצורה (כמו Printing Payload או הגבלות Accessory Security) שנדחפו על ידי מערכת ה-MDM הארגונית.
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Troubleshoot peripheral connections on Mac](https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web) - המדריך הרשמי למנהלי רשת לפתרון בעיות עם ציוד היקפי.
 * [Allow accessories to connect to Mac](https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac) - הסבר למשתמש על מנגנון אבטחת האביזרים החדש שחוסם חיבורי USB לא מוכרים.
 * [Manage printer profiles in Apple devices](https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web) - תיעוד ארגוני על הגדרת מדפסות מרחוק בעזרת MDM.
@@ -65,15 +67,13 @@
 > ![DeepDive Diagram](../assets/images/DeepDive/How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 
 
+> **Tahoe UI Reference:**
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Bluetooth-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Bluetooth-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Print-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Print-scaled.png)

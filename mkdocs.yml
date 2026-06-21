@@ -6,6 +6,7 @@ site_url: "https://omerninyo.github.io/macOS-Support-Essentials-Portal/"
 theme:
   name: material
   logo: assets/images/Wediggit_Logo_Black.png
+  favicon: assets/images/Wediggit_Logo_Black.png
   language: he
   direction: rtl
   font:

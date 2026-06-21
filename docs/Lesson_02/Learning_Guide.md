@@ -3,6 +3,7 @@
 **מדריך עזר (Learning Guide)**
 
 ## נושאי השיעור
+
 * **משתמשים ותיקיות** - סוגי חשבונות מקומיים, היררכיית ה-Home Folder ותיקיית Shared.
 * **ניהול סודות** - אבולוציית הסיסמאות, Keychain, ואפליקציית Passwords החדשה.
 * **העידן ללא סיסמה ואבטחה** - מבוא ל-Passkeys והרשאות קבצים (POSIX/ACL). מעבדה: יצירת Passkey באתר https://webauthn.io/.
@@ -12,17 +13,15 @@
 ## מושגי
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Fast-User-Menu-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Fast-User-Menu-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Fast-User-Lockscreen-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Fast-User-Lockscreen-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Users-Groups-scaled.png)
-
-
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Users-Groups-scaled.png)
 
 
  מפתח (Terminology)
@@ -56,6 +55,7 @@
 | `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | חיפוש שגיאות התחברות מול שרתי SSO בלוגים |
 
 ## Recommended Reading & Enrichment Links
+
 * **Apple Platform Support: Intro to user account types**
   [https://support.apple.com/guide/platform-support/sup72e8c67c3/web](https://support.apple.com/guide/platform-support/sup72e8c67c3/web)
 * **Apple Platform Deployment: About Managed Apple Accounts**

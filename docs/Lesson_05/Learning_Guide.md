@@ -10,7 +10,7 @@
 ## מושגי
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-App-Store-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-App-Store-scaled.png)
 
 
 > **Visual Aid from DeepDive:**
@@ -23,7 +23,7 @@
 
 * **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת (App Review), חתימה קריפטוגרפית ונוטריון (Notarization), ופועלת תחת מגבלות של "Sandbox" (Sandboxing).
 * **Package - PKG:** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.
-* **Disk Image - DMG / ASIF:** "תמונת דיסק" וירטואלית. בגרסאות קודמות נפוצו קבצי UDZO/UDSP, וב-macOS 26 (Tahoe) אפל הציגה את פורמט ה-ASIF (Apple Sparse Image Format) היעיל במיוחד. 
+* **Disk Image - DMG / ASIF:** "תמונת דיסק" וירטואלית. בגרסאות קודמות נפוצו קבצי UDZO/UDSP, וב-macOS 26 (Tahoe) אפל הציגה את פורמט ה-ASIF (Apple Sparse Image Format) היעיל במיוחד.
 * **Sandboxing - Sandbox:** מנגנון אבטחה של macOS המגביל את הגישה של אפליקציה (בעיקר צד-שלישי ו-App Store) למשאבי מערכת, זיכרון וקבצים שאינם שייכים לה. המידע נשמר בתוך "Container" .
 * **Group Containers (DeepDive):** תיקייה ייעודית (תחת `~/Library/Group Containers`) המשמשת לאפליקציות שונות מאותו מפתח (לדוגמה: תוכנות חבילת Office) כדי לשתף מידע בארגז החול ביניהן.
 * **Packages vs Bundles (DeepDive):** היסטורית ישנה הבחנה דקה: Bundle הוא לרוב אפליקציה שמכילה קוד הרצה, בעוד Package היא תיקייה שמוצגת כקובץ יחיד אך אינה מכילה בהכרח קוד (כמו מסמך RTFD או Pages).
@@ -37,6 +37,7 @@
 ## פקודות טרמינל מרכזיות (Terminal Commands)
 
 ### כלי התקנות ודיסקים (installer & hdiutil)
+
 * **`sudo installer -pkg /path/to/package.pkg -target /`**
   התקנת חבילת PKG במצב "שקט" (Silent) ישירות לשורש הכונן. הפקודה הבסיסית ביותר להתקנת תוכנות ארגוניות מהטרמינל או דרך סקריפטים של ה-MDM.
 
@@ -53,6 +54,7 @@
   יצירת תמונת דיסק ריקה בפורמט החדש של Tahoe - ASIF.
 
 ### ניהול תהליכים ויציאה מאולצת (killall & kill)
+
 * **`killall "App Name"`**
   סגירת אפליקציה (שליחת פקודת Termination עדינה) לפי שם התהליך. לדוגמה: `killall Safari`.
 
@@ -63,6 +65,7 @@
   הצגת נתונים בזמן אמת של כל התהליכים הרצים במערכת והמשאבים שהם דורשים (CPU/RAM). לחיצה על `q` תצא מהתצוגה.
 
 ### הגדרות אפליקציה מוסתרות (defaults)
+
 * **`defaults read com.apple.Safari`**
   קריאת כלל קובץ ההגדרות (Plist) של אפליקציית ספארי השמור בתיקיית ה-Preferences.
 
@@ -73,6 +76,7 @@
   מחיקת קובץ ההגדרות לחלוטין. פעולה זו מחזירה את הגדרות האפליקציה למצב יצרן (שלב קריטי באיפוס אפליקציה מלא).
 
 ### עדכוני מערכת וכלים (softwareupdate)
+
 * **`softwareupdate --install-rosetta --agree-to-license`**
   התקנה מהירה ושקטה של סביבת התרגום Rosetta 2 למחשבי Apple Silicon (נדרש רבות עבור תוכנות התקנה ישנות).
 
@@ -96,6 +100,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Check app installation and processes on Mac](https://support.apple.com/guide/apple-platform-support/check-app-installation-and-processes-apda5f8a096c/web) - מדריך של אפל שמסביר איך לבדוק אילו תהליכים ותוכנות רצים ברקע.
 * [Learn about App Store security protections](https://support.apple.com/guide/apple-platform-support/learn-about-app-store-security-protections-apd1a7b8e19c/web) - מאמר על מנגנוני האבטחה וה-Sandbox של חנות האפליקציות.
 * [Distribute content with mobile device management](https://support.apple.com/guide/deployment/distribute-content-depe210182ce/web) - מאמר למנהלים על הפצת תוכנות מרחוק באמצעות MDM.

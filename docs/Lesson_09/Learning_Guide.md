@@ -3,6 +3,7 @@
 **מדריך עזר (Learning Guide)**
 
 ## נושאי השיעור
+
 * **ממשקים וסדרי עדיפויות** - ניהול מיקומי רשת (Network Locations) ו-Service Order.
 * **כלי אבחון** - Ping, Traceroute והיכרות עם פקודת העל `networksetup`.
 * **חומת האש** - ה-Firewall המובנה של macOS וכיצד הוא פועל.
@@ -21,19 +22,19 @@
 ## מושגי
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Connect-to-Server-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Connect-to-Server-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Finder-Network-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Network-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Network-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Network-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Wi-Fi-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Wi-Fi-scaled.png)
 ם ומונחי יסוד (Terms & Concepts)
 
 * **מיקום רשת (Network Location):** פרופיל המאגד בתוכו את כלל הגדרות הרשת של המק (שירותי רשת פעילים, כתובות IP, שרתי DNS, ופרוקסי). ניתן ליצור מספר מיקומים כדי לעבור במהירות בין תצורת "בית", "משרד" ועוד.
@@ -113,6 +114,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Use network locations on Mac](https://support.apple.com/en-us/105129) - הסבר בסיסי איך להגדיר מיקומי רשת שונים למעברים מהירים בין הבית למשרד.
 * [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/change-firewall-settings-on-mac-mh34041/mac) - מדריך פשוט למשתמש על הפעלת חומת האש המובנית.
 * [Connect to an 802.1X network on Mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac) - מדריך להתחברות לרשתות אלחוטיות ארגוניות שדורשות אימות מיוחד.

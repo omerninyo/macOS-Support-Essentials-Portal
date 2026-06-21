@@ -150,6 +150,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Gatekeeper and runtime protection in macOS](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web) - מאמר שחופר לעומק על מנגנון Gatekeeper וחתימת אפליקציות.
 * [Protecting against malware in macOS](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web) - סקירה טכנית של אפל על מערכות האנטי-וירוס הפנימיות במק (XProtect).
 * [Control access to your camera on Mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac) - מדריך פשוט על ניהול הרשאות פרטיות (TCC) למצלמה ולמיקרופון.
@@ -165,4 +166,4 @@
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Privacy-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Privacy-scaled.png)

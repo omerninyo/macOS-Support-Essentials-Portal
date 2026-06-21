@@ -2,6 +2,7 @@
 **מדריך עזר (Learning Guide)**
 
 ## נושאי השיעור
+
 * **היסטוריה ופילוסופיה** - אבולוציה מ-OS X ל-macOS, ליין ה-Mac המעודכן לחברות, והמעבר ל-Apple Silicon.
 * **חוויית פתיחת הקופסה (OOBE)** - צלילה ל-Setup Assistant.
 * **המערכת, חדשנות ונגישות** - ניווט, מחוות Multi-Touch, אקוסיסטם ה-Continuity, סקירת Apple Intelligence, שקוף מסך, ונגישות (סרטונים: Universal Control, Continuity Camera, ו-"The Greatest").
@@ -45,6 +46,7 @@
 | `log show --predicate 'process == "Setup Assistant"' --info` | שאילתה לשליפת לוגים ספציפיים מתוך התהליך של פתיחת הקופסה. |
 
 ## Recommended Reading & Enrichment Links
+
 * **Apple Platform Deployment - Automated Device Enrollment:**
 
   [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)

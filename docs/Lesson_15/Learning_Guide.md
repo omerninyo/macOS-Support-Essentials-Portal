@@ -71,12 +71,14 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * `klist -v` - מציג את כל המידע המורחב (Verbose) על הכרטיס, כולל תאריכי התחלה, תאריכי תפוגה וסוג ההצפנה, כדי לאתר תוקף שפג.
 
 ## 5. פקודות תקשורת נוספות לאבחון ובידוד
+
 * `ping -c 4 8.8.8.8` - שליחת 4 חבילות מידע לשרתי Google לבדיקת חיבוריות בסיסית לאינטרנט וזמני תגובה.
 * `traceroute google.com` - מציג את נתיב ניתוב החבילות (Hops) מה-Mac ועד לשרת היעד, מאפשר לאתר היכן נתקעת התקשורת בתוך הרשת הארגונית.
 * `ifconfig` - מציג מידע טכני נמוך על כרטיסי הרשת הפיזיים (ה-MAC Addresses).
 * `networksetup -listallhardwareports` - הדרך הקלה והקריאה ביותר לזהות את כתובות ה-MAC הפיזיות לכל סוגי החיבורים במערכת.
 
 ## 6. התיבול הארגוני (Enterprise Diagnostics)
+
 * **אבחון עם MDM Profiles:** לא פעם, הגדרות אבטחה של MDM מתנגשות עם פעולת תקינה (לדוגמה, חסימת USB, מגבלת Wi-Fi). אם תקלה לא נפתרת, טכנאי IT ישקול להסיר זמנית את הפרופיל הספציפי דרך System Settings > Privacy & Security > Profiles (בתנאי שלא סומן כבלתי ניתן להסרה) כדי לבודד אם הוא גורם לבעיה.
 * **מעקפי Network Filtering:** בארגונים המשתמשים בסוכני סינון תעבורה (Content Filters / Proxies), בידוד התקלה יעשה לרוב על ידי חיבור ה-Mac לרשת סלולרית חיצונית, כדי לבחון האם הסינון הארגוני חוסם את התעבורה לאפל.
 * **הסרת סוכנים (Agents):** נטרול כלי אבטחה של צד-שלישי (כגון Antivirus או DLP) שעלולים לקרוס ולגרום ל-Kernel Panics או האטות מערכת מורגשות.
@@ -84,6 +86,7 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [Start up your Mac in safe mode](https://support.apple.com/en-us/116946) - מדריך בסיסי למשתמש לאיך להיכנס למצב בטוח (Safe Mode) כדי לבדוק תקלות.
 * [Use Apple Diagnostics to test your Mac](https://support.apple.com/en-us/102550) - מדריך למשתמש איך להפעיל את כלי האבחון המובנה לאיתור תקלות חומרה.
 * [Unified Logging (log command line tool)](https://developer.apple.com/documentation/os/logging) - תיעוד מתקדם על מערכת הלוגים המאוחדת של אפל וקריאתם מהטרמינל.
@@ -91,14 +94,13 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * [Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849) - איך להשתמש במידע המערכת כדי לקבל נתונים טכניים על רכיבי המחשב.
 
 
-
 > **Visual Aid from DeepDive:**
 > ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-System-Information-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-System-Information-scaled.png)
 
 
 > **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../../assets/images/Tahoe/26-Tahoe-Settings-Battery-scaled.png)
+> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Battery-scaled.png)

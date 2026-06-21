@@ -28,6 +28,7 @@
 הפקודה `log` היא כלי העבודה המרכזי לתחקור היסטורי של ה-Unified Logging System, מכיוון ש-Console.app כברירת מחדל לא מציגה היסטוריה מלאה.
 
 ### צפייה בסיסית וסינון זמנים
+
 * **`log show`**
   מציג את כל הלוגים השמורים בדיסק (פקודה זו עשויה להציג מיליוני שורות ולתקוע את המסוף אם לא תסונן).
 
@@ -54,6 +55,7 @@
   איתור כל הלוגים שנוצרו על ידי תהליך ה-MDM הארגוני (מצוין לזיהוי בעיות סנכרון פרופילים).
 
 ### ניהול ארכיונים
+
 * **`sudo log collect --last 1h`**
   איסוף לוגים מהשעה האחרונה אל תוך קובץ `.logarchive` שניתן לפתוח ולנתח במחשב אחר בעזרת Console.app.
 
@@ -130,6 +132,7 @@
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+
 * [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - המדריך הרשמי לשימוש באפליקציית ה-Console לקריאת לוגים במק.
 * [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - סקירה מעניינת על האבולוציה של הדרך בה נשמרו הלוגים במק מ-2016 ועד היום.
 * [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.
