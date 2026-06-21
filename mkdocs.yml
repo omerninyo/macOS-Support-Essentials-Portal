@@ -58,50 +58,50 @@ markdown_extensions:
 nav:
   - עמוד הבית: index.md
   - 'שיעור 1: התקנה, הכרה ויישור קו':
-      - סיכום שיעור: Lesson_01/Cheat_Sheet.md
+      - מדריך עזר: Lesson_01/Learning_Guide.md
       - תרגול מעשי: Lesson_01/Hands_On_Lab.md
   - 'שיעור 2: ניהול משתמשים ואבטחת נתונים':
-      - סיכום שיעור: Lesson_02/Cheat_Sheet.md
+      - מדריך עזר: Lesson_02/Learning_Guide.md
       - תרגול מעשי: Lesson_02/Hands_On_Lab.md
   - 'שיעור 3: אבטחת מידע':
-      - סיכום שיעור: Lesson_03/Cheat_Sheet.md
+      - מדריך עזר: Lesson_03/Learning_Guide.md
       - תרגול מעשי: Lesson_03/Hands_On_Lab.md
   - 'שיעור 4: הצפנה ומפתחות':
-      - סיכום שיעור: Lesson_04/Cheat_Sheet.md
+      - מדריך עזר: Lesson_04/Learning_Guide.md
       - תרגול מעשי: Lesson_04/Hands_On_Lab.md
   - 'שיעור 5: אפליקציות ותהליכים':
-      - סיכום שיעור: Lesson_05/Cheat_Sheet.md
+      - מדריך עזר: Lesson_05/Learning_Guide.md
       - תרגול מעשי: Lesson_05/Hands_On_Lab.md
   - 'שיעור 6: מערכת הקבצים (APFS)':
-      - סיכום שיעור: Lesson_06/Cheat_Sheet.md
+      - מדריך עזר: Lesson_06/Learning_Guide.md
       - תרגול מעשי: Lesson_06/Hands_On_Lab.md
   - 'שיעור 7: גיבוי ושחזור':
-      - סיכום שיעור: Lesson_07/Cheat_Sheet.md
+      - מדריך עזר: Lesson_07/Learning_Guide.md
       - תרגול מעשי: Lesson_07/Hands_On_Lab.md
   - 'שיעור 8: טרמינל ושירותי רקע':
-      - סיכום שיעור: Lesson_08/Cheat_Sheet.md
+      - מדריך עזר: Lesson_08/Learning_Guide.md
       - תרגול מעשי: Lesson_08/Hands_On_Lab.md
   - 'שיעור 9: רשתות':
-      - סיכום שיעור: Lesson_09/Cheat_Sheet.md
+      - מדריך עזר: Lesson_09/Learning_Guide.md
       - תרגול מעשי: Lesson_09/Hands_On_Lab.md
   - 'שיעור 10: שיתוף וגישה מרחוק':
-      - סיכום שיעור: Lesson_10/Cheat_Sheet.md
+      - מדריך עזר: Lesson_10/Learning_Guide.md
       - תרגול מעשי: Lesson_10/Hands_On_Lab.md
   - 'שיעור 11: ציוד היקפי':
-      - סיכום שיעור: Lesson_11/Cheat_Sheet.md
+      - מדריך עזר: Lesson_11/Learning_Guide.md
       - תרגול מעשי: Lesson_11/Hands_On_Lab.md
   - 'שיעור 12: עדכונים ושדרוגים':
-      - סיכום שיעור: Lesson_12/Cheat_Sheet.md
+      - מדריך עזר: Lesson_12/Learning_Guide.md
       - תרגול מעשי: Lesson_12/Hands_On_Lab.md
   - 'שיעור 13: תהליך האתחול':
-      - סיכום שיעור: Lesson_13/Cheat_Sheet.md
+      - מדריך עזר: Lesson_13/Learning_Guide.md
       - תרגול מעשי: Lesson_13/Hands_On_Lab.md
   - 'שיעור 14: סביבת שחזור ומחיקה':
-      - סיכום שיעור: Lesson_14/Cheat_Sheet.md
+      - מדריך עזר: Lesson_14/Learning_Guide.md
       - תרגול מעשי: Lesson_14/Hands_On_Lab.md
   - 'שיעור 15: דיאגנוסטיקה':
-      - סיכום שיעור: Lesson_15/Cheat_Sheet.md
+      - מדריך עזר: Lesson_15/Learning_Guide.md
       - תרגול מעשי: Lesson_15/Hands_On_Lab.md
   - 'שיעור 16: ניתוח לוגים (חדר בריחה)':
-      - סיכום שיעור: Lesson_16/Cheat_Sheet.md
+      - מדריך עזר: Lesson_16/Learning_Guide.md
       - תרגול מעשי: Lesson_16/Hands_On_Lab.md
