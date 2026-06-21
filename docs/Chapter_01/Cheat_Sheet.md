@@ -1,16 +1,11 @@
 # Chapter 01: יסודות macOS, חוויית משתמש והכנה לארגון
-**Asset C: Cheat Sheet**
+**סיכום שיעור**
 
-## סקירת הפרק (Overview)
+## סקירה
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
     <iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/af52e01d-b33a-446f-a66f-327035288ecb/"></iframe>
-</div>
-
-<!-- סרטון סיכום מתוך YouTube -->
-<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DntsxnSMwvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## מושגי מפתח (Key Concepts)
@@ -46,3 +41,10 @@
 * **Apple Support - Apple Intelligence Overview:**
 
   [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DntsxnSMwvI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
