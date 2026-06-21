@@ -47,3 +47,12 @@
   --md-primary-fg-color--dark: #C46700;
   --md-accent-fg-color: #F78200;
 }
+
+/* Fix list bullets for RTL */
+.md-typeset ul, .md-typeset ol {
+    padding-inline-start: 1.5em !important;
+    margin-inline-start: 0 !important;
+}
+.md-typeset li {
+    margin-bottom: 0.5em;
+}

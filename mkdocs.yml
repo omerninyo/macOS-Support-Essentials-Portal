@@ -1,7 +1,7 @@
 site_name: "Wediggit's macOS Support Essentials Class"
 site_description: "Student Portal for the macOS Course"
 site_author: "Wediggit"
-site_url: ""
+site_url: "https://omerninyo.github.io/macOS-Support-Essentials-Portal/"
 
 theme:
   name: material
