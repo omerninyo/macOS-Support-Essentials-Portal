@@ -31,6 +31,8 @@ theme:
     - navigation.sections
     - toc.integrate
     - search.highlight
+    - navigation.footer
+    - navigation.top
 
 extra_css:
   - stylesheets/extra.css
