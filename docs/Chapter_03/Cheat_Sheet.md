@@ -28,21 +28,25 @@
 הכלי `spctl` (SecAssessment system policy security) משמש לניהול ובדיקת מערכת ה-Gatekeeper.
 
 * **בדיקת הסטטוס של Gatekeeper (האם הוא פעיל):**
+
   ```bash
   spctl --status
   ```
 * **בדיקת אפליקציה - הערכת Gatekeeper (האם היא מאושרת ותרוץ):**
+
   ```bash
   spctl -a -vv /Applications/AppName.app
   ```
   *(הדגל `-a` מבצע Assessment, `-vv` מציג פלט מפורט כולל מידע על ה-Notarization וזהות המפתח).*
 
 * **עקיפה נקודתית של Gatekeeper עבור אפליקציה ספציפית:**
+
   ```bash
   sudo spctl --add /path/to/AppName.app
   ```
 
 * **הסרת תגית ההסגר (Quarantine) מקובץ שהורד מהאינטרנט (עוקף את אזהרת ההפעלה הראשונית):**
+
   ```bash
   xattr -d com.apple.quarantine /path/to/AppName.app
   ```
@@ -51,26 +55,32 @@
 הכלי `tccutil` מאפשר לאפס הרשאות פרטיות שהוענקו, מה שמכריח את המערכת לבקש אותן שוב בפעם הבאה שהאפליקציה תיפתח. (שים לב: לא ניתן להעניק הרשאות דרך `tccutil`, אלא רק לאפס אותן לאחור).
 
 * **איפוס כל הרשאות ה-TCC עבור כל האפליקציות (חזרה למצב "מפעל" מבחינת פרטיות):**
+
   ```bash
   tccutil reset All
   ```
 * **איפוס הרשאת מצלמה בלבד (לכל האפליקציות שביקשו עד כה):**
+
   ```bash
   tccutil reset Camera
   ```
 * **איפוס הרשאת מיקרופון בלבד:**
+
   ```bash
   tccutil reset Microphone
   ```
 * **איפוס הרשאת גישה לכל הדיסק (Full Disk Access):**
+
   ```bash
   tccutil reset SystemPolicyAllFiles
   ```
 * **איפוס הרשאת צפייה במסך (Screen Recording):**
+
   ```bash
   tccutil reset ScreenCapture
   ```
 * **איפוס הרשאת מצלמה עבור אפליקציה ספציפית (לדוגמה, Terminal או Zoom), על ידי Bundle ID:**
+
   ```bash
   tccutil reset Camera com.apple.Terminal
   tccutil reset Camera us.zoom.xos
@@ -84,10 +94,12 @@
 מערכת ה-TCC שומרת את ההרשאות בתוך מסדי נתונים מסוג SQLite. מסדים אלו מוגנים על ידי System Integrity Protection (SIP) ולא ניתן לערוך או למחוק אותם ידנית, אלא אם מבטלים SIP.
 
 * **מסד הנתונים ברמת המשתמש (ניהול הרשאות כמו מצלמה, מיקרופון, אנשי קשר ותיקיות מקומיות):**
+
   ```text
   ~/Library/Application Support/com.apple.TCC/TCC.db
   ```
 * **מסד הנתונים ברמת המערכת (ניהול הרשאות קריטיות כמו Full Disk Access):**
+
   ```text
   /Library/Application Support/com.apple.TCC/TCC.db
   ```
@@ -95,11 +107,14 @@
 ### XProtect & Remediator
 מיקומי קבצי החתימות וכלי הסריקה של המנגנון השקט:
 
+
 * **קובץ החתימות המסורתי של XProtect (רשימת ה-YARA/Blocklist שמתעדכנת ברקע):**
+
   ```text
   /Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/XProtect.plist
   ```
 * **האפליקציה המריצה את ה-XProtect Remediator (כלי הסריקות התקופתיות והרמדיאציה):**
+
   ```text
   /Library/Apple/System/Library/CoreServices/XProtect.app
   ```
@@ -107,15 +122,19 @@
 ### שאילתות לוגים (Unified Logging) דרך הטרמינל
 למעקב אחר פעילות של המנגנונים בסביבת הטרמינל:
 
+
 * **מעקב אחר פעילות Gatekeeper (חקירת חסימות אפליקציות):**
+
   ```bash
   log show --predicate 'subsystem == "com.apple.syspolicy"' --info --last 1h
   ```
 * **מעקב אחר חסימות של מערכת ה-TCC (מי ניסה לגשת למה ומתי נחסם):**
+
   ```bash
   log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
   ```
 * **צפייה בתוצאות הסריקה של XProtect Remediator (האם זוהתה נוזקה במערכת):**
+
   ```bash
   log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info
   ```

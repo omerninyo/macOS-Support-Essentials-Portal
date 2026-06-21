@@ -2,6 +2,7 @@
 
 > [!NOTE]
 > **מטרת התרגול:**
+
 > תרגול מעשי של פריסה, התקנה ואבחון של אפליקציות ב-macOS תוך שימוש בממשק המשתמש הגרפי. במהלך התרגול תתנסו במגוון שיטות התקנה (App Store, חבילות PKG, וגרירה של קבצי DMG), תבחנו כיצד מערכת Gatekeeper מגינה על המחשב, ותלמדו כיצד לאפס אפליקציות Sandboxed ולנהל תהליכים שנתקעו דרך ה-Activity Monitor.
 
 ## דרישות קדם (Prerequisites)
@@ -128,6 +129,7 @@
 > חלק זה מיועד למשתמשים מתקדמים המעוניינים לראות כיצד מבוצעות הפעולות מהתרגול ישירות משורת הפקודה (Terminal). אין צורך לבצע אותן כדי להשלים את התרגול המרכזית.
 
 **בדיקת חתימה של קובץ PKG בטרמינל:**
+
 במקום ללחוץ על המנעול הגרפי באסף ההתקנות, ניתן לבדוק את מהימנות חבילת ה-PKG דרך ה-Terminal באמצעות הפקודה `pkgutil`:
 ```bash
 pkgutil --check-signature /path/to/installer.pkg
@@ -135,6 +137,7 @@ pkgutil --check-signature /path/to/installer.pkg
 *(פקודה זו מחזירה את סטטוס החתימה ושרשרת תעודות האמון שאישרו אותה).*
 
 **בדיקת Notarization לתוכנת .app:**
+
 כדי לאמת שאפליקציה עברה בהצלחה סריקת אבטחה של אפל (Notarization), משתמשים בכלי `codesign`:
 ```bash
 codesign --test-requirement="=notarized" --verify --verbose /Applications/BBEdit.app
@@ -142,6 +145,7 @@ codesign --test-requirement="=notarized" --verify --verbose /Applications/BBEdit
 *(אם האפליקציה מאושרת, הפלט יציין 'explicit requirement satisfied').*
 
 **חיסול תהליכים מהיר באמצעות killall:**
+
 במקום לפתוח את Activity Monitor, ה-Terminal מאפשר לחסל תהליכים קורסים או תקועים במהירות לפי שמם:
 ```bash
 killall Safari

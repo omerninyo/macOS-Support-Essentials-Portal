@@ -26,8 +26,11 @@
 
 ## Recommended Reading & Enrichment Links
 * **Apple Platform Deployment - Automated Device Enrollment:**
+
   [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
 * **Apple Platform Security - Boot process for a Mac with Apple silicon:**
+
   [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
 * **Apple Support - Apple Intelligence Overview:**
+
   [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)

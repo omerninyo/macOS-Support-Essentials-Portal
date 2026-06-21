@@ -41,5 +41,6 @@
    ```
 3. המערכת תדרוש מכם להזין את סיסמת ה-Local Account שלכם (סיסמת מנהל). הזינו אותה (הטקסט לא ייראה על המסך) ולחצו Enter.
 4. נתחו את הפלט:
+
    - אם מופיע הטקסט `Error fetching Device Enrollment configuration: (34000) Client is not DEP enabled.`, המחשב אינו רשום ב-Apple Business Manager ואינו כפוף ל-Remote Management.
    - אם הפלט מציג פרטים על שרת (כגון URL של שרת MDM ארגוני), המחשב נרשם כראוי בהפעלתו הראשונה.

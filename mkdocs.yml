@@ -1,9 +1,11 @@
 site_name: "Wediggit's macOS Support Essentials Class"
 site_description: "Student Portal for the macOS Course"
 site_author: "Wediggit"
+site_url: ""
 
 theme:
   name: material
+  logo: assets/images/Wediggit_Logo_Black.png
   language: he
   direction: rtl
   font:
@@ -40,6 +42,7 @@ markdown_extensions:
       permalink: true
 
 # The nav section will be appended here by sync_assets.py
+
 
 
 

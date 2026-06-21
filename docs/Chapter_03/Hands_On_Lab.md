@@ -92,19 +92,23 @@
 
 לאנשי תמיכה מתקדמים, הנה כמה פקודות Terminal שמבצעות את הפעולות שראינו ב-GUI בצורה מהירה ומעמיקה יותר:
 
+
 1. **בדיקת מצב Gatekeeper ואימות אפליקציה:**
+
    במקום לפתוח System Information, ניתן לבדוק הערכת Gatekeeper מלאה על אפליקציה:
    ```bash
    spctl --assess --verbose /Applications/Safari.app
    ```
 
 2. **איפוס מסד נתונים TCC:**
+
    במקום ללחוץ על סימן המינוס (-) בהגדרות, ניתן לאפס לחלוטין את הרשאת המיקרופון לכל המערכת בשורת פקודה אחת:
    ```bash
    tccutil reset Microphone
    ```
 
 3. **חקר XProtect Remediator:**
+
    במקום להסתכל על קבצי plist ב-Finder, כך שואבים את דיווחי הסריקה השקטים של XProtect מתוך לוג המערכת של 24 השעות האחרונות:
    ```bash
    log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h

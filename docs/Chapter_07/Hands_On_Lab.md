@@ -74,18 +74,21 @@
 למרות שראינו כיצד לנהל Snapshots מתוך ה-Disk Utility ב-GUI, מנהלי מערכת (SysAdmins) מרבים להשתמש בשורת הפקודה (Terminal) לביצוע פעולות אלו במהירות רבה יותר או באמצעות סקריפטים. הכלי המרכזי לניהול מנוע הגיבוי בשורת הפקודה הוא `tmutil`.
 
 *   **יצירת Snapshot ידני:**
+
     ```bash
     sudo tmutil localsnapshot
     ```
     פקודה זו מאלצת את המערכת לקחת Snapshot מיידית של כונן הנתונים (מצוין לפני ביצוע שינויים מסוכנים במערכת או בדיקות תוכנה).
 
 *   **הצגת רשימת תמונות המצב:**
+
     ```bash
     tmutil listlocalsnapshots /
     ```
     מציג את כל ה-Snapshots הקיימים עבור הכונן הראשי (בדיוק אותה רשימה שראינו ב-Disk Utility).
 
 *   **מחיקה גורפת (סקריפט קצר):**
+
     ```bash
     for d in $(tmutil listlocalsnapshots | grep "com.apple.TimeMachine" | awk -F '.' '{print $4}'); do sudo tmutil deletelocalsnapshots $d; done
     ```

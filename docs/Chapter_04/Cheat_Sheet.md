@@ -32,10 +32,12 @@
 #### ניהול אסימוני אבטחה (Secure Token) באמצעות `sysadminctl`
 
 * **בדיקת סטטוס Secure Token למשתמש נוכחי:**
+
   ```bash
   sysadminctl -secureTokenStatus $USER
   ```
 * **בדיקת סטטוס למשתמש ספציפי (לדוגמה `johndoe`):**
+
   ```bash
   sysadminctl -secureTokenStatus johndoe
   ```
@@ -51,36 +53,44 @@
 #### ניהול FileVault באמצעות `fdesetup`
 
 * **בדיקת סטטוס FileVault (האם פעיל או לא ומי מצפין את ה-Volume):**
+
   ```bash
   fdesetup status
   ```
 * **הפעלת FileVault דרך הטרמינל (עבור המשתמש הנוכחי):**
+
   ```bash
   sudo fdesetup enable
   ```
   *(המערכת תבקש סיסמה ותפיק Personal Recovery Key לטרמינל).*
 
 * **ביטול והסרת ההצפנה (פענוח ה-Volume - Decryption):**
+
   ```bash
   sudo fdesetup disable
   ```
 * **הצגת רשימת המשתמשים המורשים לשחרר את ההצפנה בשלב הבוט:**
+
   ```bash
   sudo fdesetup list
   ```
 * **הסרת משתמש ספציפי (לדוגמה `johndoe`) ממורשי שחרור הדיסק:**
+
   ```bash
   sudo fdesetup remove -user johndoe
   ```
 * **החלפת מפתח השחזור האישי (PRK) ויצירת מפתח חדש:**
+
   ```bash
   sudo fdesetup changerecovery -personal
   ```
 * **סנכרון מיידי של ה-FileVault (בדיקה אם נדרש רענון למפתחות או סיסמאות שהשתנו):**
+
   ```bash
   sudo fdesetup sync
   ```
 * **הפעלת מנגנון הצפנה עם קובץ Plist שקט (אידיאלי להפצה בתהליכי MDM - דורש הרשאות אדמין והגדרת XML):**
+
   ```bash
   sudo fdesetup enable -inputplist < /path/to/fdesetup.plist
   ```
@@ -88,12 +98,14 @@
 #### אבחון קריפטוגרפי מתקדם עם `diskutil` ו-`profiles`
 
 * **הצגת כל המשתמשים הקריפטוגרפיים (Cryptographic Users) עבור Container הנתונים ב-APFS:**
+
   ```bash
   diskutil apfs listcryptousers /
   ```
   *(מציג את ה-UUID של כל ישות קריפטוגרפית שיכולה לפענח את Volume הנתונים, כולל משתמשים עם אסימון, PRK או IRK).*
 
 * **בדיקת הסטטוס של אסימון האתחול (Bootstrap Token) מול שרת ה-MDM:**
+
   ```bash
   profiles status -type bootstraptoken
   ```

@@ -97,6 +97,7 @@
 ### שלב 3: איתור שורת "האקדח המעשן"
 1. סרקו את התוצאות עד שתאתרו את השגיאה המדויקת של מערכת הרשת (לרוב תחת ה-subsystem של `com.apple.mdmclient` או `NSURLErrorDomain`).
 2. חפשו פלט הדומה לאחת מהאפשרויות הבאות:
+
    * `NSURLErrorDomain error -1001 (The request timed out)`
    * `Failed to connect to MDM server: Host is down`
    * `APNs connection dropped / failed to establish`
@@ -109,6 +110,7 @@
 כפי שלמדנו, בקורס זה אנו מתמקדים בשימוש בכלי ה-GUI של המערכת. עם זאת, עבור מנהלי מערכת מתקדמים שמתחברים לעמדות קצה מרחוק דרך SSH, ניתן לבצע פעולות אלו גם ישירות משורת הפקודה (CLI). 
 
 **1. חקירת לוגים מתוך הטרמינל (במקום שימוש ב-Console):**
+
 הפקודה `log show` מאפשרת לדלות מידע ולסנן אותו באמצעות "Predicates" (התואמים למסננים הגרפיים):
 ```bash
 log show --predicate 'process == "mdmclient" AND eventType == error' --info --last 2h
@@ -116,6 +118,7 @@ log show --predicate 'process == "mdmclient" AND eventType == error' --info --la
 *הסבר: הפקודה תציג שגיאות של תהליך ה-MDM מהשעתיים האחרונות עם פירוט מורחב.*
 
 **2. הפקת Sysdiagnose באמצעות פקודה (במקום מתוך Activity Monitor):**
+
 אם נדרש להפיק דיאגנוסטיקה באופן מרוחק ללא ממשק גרפי, מריצים את הפקודה הבאה שמנתבת את קובץ הארכיון לשולחן העבודה:
 ```bash
 sudo sysdiagnose -f ~/Desktop/
