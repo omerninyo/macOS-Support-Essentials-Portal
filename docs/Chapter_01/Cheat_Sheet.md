@@ -1,6 +1,13 @@
 # Chapter 01: יסודות macOS, חוויית משתמש והכנה לארגון
 **סיכום שיעור**
 
+## נושאי השיעור
+* **היסטוריה ופילוסופיה** - אבולוציה מ-OS X ל-macOS, ליין ה-Mac המעודכן לחברות, והמעבר ל-Apple Silicon.
+* **חוויית פתיחת הקופסה (OOBE)** - צלילה ל-Setup Assistant.
+* **המערכת, חדשנות ונגישות** - ניווט, מחוות Multi-Touch, אקוסיסטם ה-Continuity, סקירת Apple Intelligence, שקוף מסך, ונגישות (סרטונים: Universal Control, Continuity Camera, ו-"The Greatest").
+* **תיבול ארגוני** - מה קורה כשמסך ה-Remote Management (MDM / ADE) קוטע את תהליך ההגדרה.
+
+
 ## סקירה
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
