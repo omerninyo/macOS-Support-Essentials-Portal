@@ -86,3 +86,11 @@
 * [Erase All Content and Settings does what it says](https://eclecticlight.co) - הסבר טכני איך המק מסוגל למחוק את כל המידע עליו תוך שניות ספורות בלחיצת כפתור.
 * [How to recover Recovery](https://eclecticlight.co) - מאמר טכני למתקדמים על שחזור של מחיצת שחזור תקולה ב-macOS.
 * [A short history of Recovery in macOS](https://eclecticlight.co) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Passwords-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Privacy-scaled.png)

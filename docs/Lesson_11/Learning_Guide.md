@@ -66,3 +66,11 @@
 
 
 
+
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Users-Groups-scaled.png)

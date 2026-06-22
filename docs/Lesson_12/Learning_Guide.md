@@ -117,3 +117,4 @@
 ![Upgrading to macOS Tahoe](../assets/images/Updates_Keynote/Slide12_image13.png)
 ![Apple School & Business Manager](../assets/images/Updates_Keynote/Slide14_image21.png)
 ![Automated Device Enrollment](../assets/images/Updates_Keynote/Slide15_image25.png)
+![DeepDive Diagram](../assets/images/DeepDive/How_Software_Update_works_in_Ventura_p5_37.jpeg)

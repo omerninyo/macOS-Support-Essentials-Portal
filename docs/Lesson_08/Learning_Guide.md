@@ -81,3 +81,12 @@
 
 
 
+
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Automator-scaled.png)

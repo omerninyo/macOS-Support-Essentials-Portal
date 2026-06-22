@@ -105,5 +105,4 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
-![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
 ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)

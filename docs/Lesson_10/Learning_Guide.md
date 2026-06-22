@@ -75,3 +75,11 @@
 * [Use AirDrop on your Mac](https://support.apple.com/en-us/102522) - מדריך בסיסי למשתמש לשיתוף קבצים מהיר דרך AirDrop.
 * [Universal Control: Use a single keyboard and mouse between Mac and iPad](https://support.apple.com/en-us/102459) - מדריך שמסביר איך לעבוד עם עכבר אחד על כמה מכשירי אפל במקביל.
 * [Transfer files using target disk mode / Mac Sharing Mode](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac) - מדריך למשתמש להעברת קבצים על ידי חיבור שני מחשבים בכבל.
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Print-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
