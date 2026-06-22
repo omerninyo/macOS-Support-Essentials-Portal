@@ -114,3 +114,15 @@
 
 > **Tahoe UI Reference:**
 > ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Boot-Camp-scaled.png)
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+חולצו מתוך מצגת **Deploying macOS Tahoe 26**:
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על שדרוג לעומת מחיקה, ותהליך ה-Deployment הארגוני.
+
+### 20% Enterprise Seasoning (MDM & Automated Device Enrollment)
+![Upgrading to macOS Tahoe](../assets/images/Updates_Keynote/Slide12_image13.png)
+![Apple School & Business Manager](../assets/images/Updates_Keynote/Slide14_image21.png)
+![Automated Device Enrollment](../assets/images/Updates_Keynote/Slide15_image25.png)
