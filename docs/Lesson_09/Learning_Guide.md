@@ -21,20 +21,8 @@
 
 ## מושגים ומונחי יסוד (Terms & Concepts)
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Connect-to-Server-scaled.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Finder-Network-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Network-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Wi-Fi-scaled.png)
 
 * **מיקום רשת (Network Location):** פרופיל המאגד בתוכו את כלל הגדרות הרשת של המק (שירותי רשת פעילים, כתובות IP, שרתי DNS, ופרוקסי). ניתן ליצור מספר מיקומים כדי לעבור במהירות בין תצורת "בית", "משרד" ועוד.
 * **סדר עדיפויות של שירותים (Service Order):** הסדר שבו המק מחפש ומתחבר לרשתות פנויות. ניתן לגרור שירות (למשל Ethernet מעל Wi-Fi) כדי להבטיח שהמק יעדיף חיבור קווי כשהוא זמין.
@@ -118,3 +106,12 @@
 * [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/change-firewall-settings-on-mac-mh34041/mac) - מדריך פשוט למשתמש על הפעלת חומת האש המובנית.
 * [Connect to an 802.1X network on Mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac) - מדריך להתחברות לרשתות אלחוטיות ארגוניות שדורשות אימות מיוחד.
 * [Deploy Wi-Fi payload settings for Apple devices](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web) - מאמר ארגוני על הפצת הגדרות רשת באמצעות שרת MDM.
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![../assets/images/Tahoe_UI/26-Tahoe-Settings-Network](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
+![../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
+![../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)

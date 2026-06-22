@@ -9,20 +9,8 @@
 
 ## מושגי מפתח (Key Concepts)
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Time-Machine-scaled.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Time-Machine-Menu-scaled.png)
-
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
-
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
 
 | מושג | רקע היסטורי מה-DeepDive |
 | :--- | :--- |

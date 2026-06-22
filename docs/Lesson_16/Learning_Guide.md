@@ -137,9 +137,4 @@
 * [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - סקירה מעניינת על האבולוציה של הדרך בה נשמרו הלוגים במק מ-2016 ועד היום.
 * [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.
 
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_your_Mac_can’t_get_to_the_login_wi_p2_65.jpeg)
 
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)

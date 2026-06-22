@@ -63,17 +63,6 @@
 * [Thunderbolt ports aren’t all the same](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/) - סקירת עומק טכנית על ההבדלים בין חיבורי Thunderbolt ו-USB-C השונים במחשבי מק.
 * [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - מאמר היסטורי על האבולוציה של הוספת מדפסות בסביבת המק מראשיתה ועד היום.
 
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Bluetooth-scaled.png)
 
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Print-scaled.png)

@@ -104,16 +104,7 @@
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - מדריך המסביר איך להעביר נתונים ומידע ממק ישן למק חדש בעזרת אשף ההגירות.
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.
 
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/How_Software_Update_works_in_Ventura_p5_37.jpeg)
 
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Boot-Camp-scaled.png)
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 

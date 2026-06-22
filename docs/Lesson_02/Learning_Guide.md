@@ -12,16 +12,7 @@
 
 ## מושגי מפתח (Terminology)
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Fast-User-Menu-scaled.png)
 
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Fast-User-Lockscreen-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Users-Groups-scaled.png)
 
 
 * **Administrator:** משתמש מנהל המערכת, בעל הרשאות גלובליות לשנות הגדרות ולהתקין תוכנות לכולם.

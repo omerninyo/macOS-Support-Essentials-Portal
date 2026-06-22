@@ -97,6 +97,12 @@
 * [Snapshots aren't backups](https://eclecticlight.co/2021/02/16/snapshots-arent-backups/) - מאמר דעה טכני שמסביר למה אסור להסתמך על סנאפשוטים כתחליף לגיבוי אמיתי.
 * [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.
 
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Snapshots_aren’t_backups_p1_114.jpeg)
 
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![../assets/images/Tahoe_UI/26-Tahoe-Time-Machine](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-scaled.png)
+![../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu-scaled.png)

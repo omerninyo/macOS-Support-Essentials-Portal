@@ -11,28 +11,10 @@
 
 ## מושגי יסוד באדריכלות שחזור (Core Recovery Concepts)
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Activity-Monitor-scaled.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Force-Quit-scaled.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Disk-Utility-scaled.png)
-
-
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Console-scaled.png)
-
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
-
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Explainer_Recovery_p1_41.jpeg)
 
 - **Single User Mode (SUM):** המנגנון ההיסטורי לשחזור מבוסס פקודות בלבד ששימש טכנאים ב-27 השנים הראשונות של ה-Mac, בטרם הוצגה מחיצת ה-Recovery ב-Lion (2011).
 - **1TR - One True Recovery:** במחשבי Apple Silicon, סביבת ההתאוששות (RecoveryOS) מופרדת לחלוטין ממערכת ההפעלה הרגילה (macOS) ומאוחסנת בקונטיינר ייעודי. היא תוכננה להיות "חסינה" – גם אם מחקתם את הדיסק במלואו (כולל מחיצות מערכת), ה-1TR שורד ומאפשר להוריד ולהתקין את המערכת מחדש, מבלי להזדקק ל-Internet Recovery קלאסי (כפי שהיה באינטל).

@@ -9,16 +9,7 @@
 
 ## מושגי יסוד (Core Concepts)
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-App-Store-scaled.png)
 
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
-
-
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
 
 * **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת (App Review), חתימה קריפטוגרפית ונוטריון (Notarization), ופועלת תחת מגבלות של "Sandbox" (Sandboxing).
 * **Package - PKG:** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.
@@ -106,3 +97,11 @@
 * [Explainer: the app sandbox](https://eclecticlight.co/2020/09/24/explainer-the-app-sandbox/) - מאמר טכני מעמיק מבלוג חיצון על איך עובד ארגז החול (Sandbox) שמבודד אפליקציות.
 * [Explainer: Disk images](https://eclecticlight.co/2021/11/17/explainer-disk-images/) - סקירה על ההיסטוריה והמבנה של קובצי DMG.
 * [macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/) - מאמר טכני שמסביר על הפורמט החדש של קובצי התקנה ב-macOS 26.
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![../assets/images/Tahoe_UI/26-Tahoe-App-Store](../assets/images/Tahoe_UI/26-Tahoe-App-Store-scaled.png)
+![../assets/images/Tahoe_UI/26-Tahoe-Force-Quit](../assets/images/Tahoe_UI/26-Tahoe-Force-Quit-scaled.png)

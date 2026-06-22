@@ -94,13 +94,16 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * [Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849) - איך להשתמש במידע המערכת כדי לקבל נתונים טכניים על רכיבי המחשב.
 
 
-> **Visual Aid from DeepDive:**
-> ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-System-Information-scaled.png)
 
 
-> **Tahoe UI Reference:**
-> ![Tahoe UI Reference](../assets/images/Tahoe/26-Tahoe-Settings-Battery-scaled.png)
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!TIP]
+> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+
+![../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor](../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor-scaled.png)
+![../assets/images/Tahoe_UI/26-Tahoe-System-Information](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
+![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
+![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
