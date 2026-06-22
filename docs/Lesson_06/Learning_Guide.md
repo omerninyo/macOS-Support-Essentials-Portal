@@ -1,4 +1,11 @@
-# שיעור 06 - חלק ג\': מדריך עזר לתלמיד
+# שיעור 06: מערכת הקבצים (APFS)
+**מדריך עזר (מדריך עזר לתלמיד)**
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגי מפתח (Key Concepts)
 
@@ -84,6 +91,14 @@ mdimport -t -d3 /path/to/specific/file.pdf
 * **The Eclectic Light Company:** How macOS depends on firmlinks - [Link](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/)
 * **The Eclectic Light Company:** Using and troubleshooting Spotlight in Sequoia: summary - [Link](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/)
 
+
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 

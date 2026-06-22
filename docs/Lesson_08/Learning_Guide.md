@@ -1,5 +1,4 @@
-# שיעור 08: Terminal, launchd & Background Processes - Learning Guide (Asset C)
-
+# שיעור 08: טרמינל ושירותי רקע
 **מדריך עזר (מדריך עזר לתלמיד)**
 
 ## נושאי השיעור
@@ -75,6 +74,14 @@
 * [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת "לחץ זיכרון" בכלי ה-Activity Monitor.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -84,3 +91,9 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Script-Editor-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Shortcuts-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

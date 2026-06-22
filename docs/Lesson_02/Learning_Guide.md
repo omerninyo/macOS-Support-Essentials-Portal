@@ -1,5 +1,4 @@
-# שיעור 02: משתמשים, סודות, והזדהות מודרנית
-
+# שיעור 02: ניהול משתמשים ואבטחת נתונים
 **מדריך עזר (מדריך עזר לתלמיד)**
 
 ## נושאי השיעור
@@ -9,6 +8,12 @@
 * **העידן ללא סיסמה ואבטחה** - מבוא ל-Passkeys והרשאות קבצים (POSIX/ACL). מעבדה: יצירת Passkey באתר https://webauthn.io/.
 * **תיבול ארגוני** - עבודה עם Managed Apple Accounts (MAID) ושילוב Platform SSO לכניסה שקופה בארגון.
 
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגי מפתח (Terminology)
 
@@ -55,6 +60,14 @@
 * **The Mac Security Blog: Understanding User Accounts in macOS**
   [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
 
+
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 

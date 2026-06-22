@@ -1,4 +1,5 @@
-# שיעור 07 חלק ג\': מדריך עזר לתלמיד (Time Machine & Snapshots)
+# שיעור 07: גיבוי ושחזור
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -98,6 +99,14 @@
 * [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -108,3 +117,9 @@
 ![DeepDive Diagram](../assets/images/DeepDive/Snapshots_aren’t_backups_p1_114.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

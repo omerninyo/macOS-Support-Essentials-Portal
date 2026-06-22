@@ -1,5 +1,4 @@
-# שיעור 09: Network Configuration - גיליון עזר (סיכום שיעור)
-
+# שיעור 09: רשתות
 **מדריך עזר (מדריך עזר לתלמיד)**
 
 ## נושאי השיעור
@@ -108,6 +107,14 @@
 * [Deploy Wi-Fi payload settings for Apple devices](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web) - מאמר ארגוני על הפצת הגדרות רשת באמצעות שרת MDM.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -117,3 +124,9 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Network-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

@@ -1,4 +1,5 @@
-# סיכום שיעור: שיעור 11 - חיבוריות וציוד היקפי (Peripherals & Printing)
+# שיעור 11: ציוד היקפי
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -64,6 +65,14 @@
 * [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - מאמר היסטורי על האבולוציה של הוספת מדפסות בסביבת המק מראשיתה ועד היום.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -73,3 +82,9 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Bluetooth-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

@@ -1,4 +1,5 @@
-# חלק ג\': מדריך עזר לתלמיד - שיעור 15 (מתודולוגיות אבחון - Advanced Troubleshooting)
+# שיעור 15: דיאגנוסטיקה
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -94,6 +95,14 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * [Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849) - איך להשתמש במידע המערכת כדי לקבל נתונים טכניים על רכיבי המחשב.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -102,3 +111,9 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

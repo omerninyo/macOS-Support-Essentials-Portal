@@ -1,4 +1,5 @@
-# שיעור 14: התאוששות ופרמוט (macOS Recovery) - סיכום שיעור
+# שיעור 14: סביבת שחזור ומחיקה
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -88,6 +89,14 @@
 * [A short history of Recovery in macOS](https://eclecticlight.co) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -97,3 +106,9 @@
 ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_your_Mac_can’t_get_to_the_login_wi_p2_65.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
 ![DeepDive Diagram](../assets/images/DeepDive/Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

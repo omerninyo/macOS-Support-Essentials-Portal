@@ -1,4 +1,5 @@
-# חלק ג\': מדריך עזר לתלמיד - עדכונים, שדרוגים והגירות (שיעור 12)
+# שיעור 12: עדכונים ושדרוגים
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -105,6 +106,14 @@
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -112,3 +121,9 @@
 
 ![DeepDive Diagram](../assets/images/DeepDive/How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

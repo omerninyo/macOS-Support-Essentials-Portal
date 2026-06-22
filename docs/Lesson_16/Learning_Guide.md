@@ -1,4 +1,5 @@
-# חלק ג\': מדריך עזר לתלמיד - שיעור 16 (Logs & Sysdiagnose)
+# שיעור 16: ניתוח לוגים
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -138,9 +139,23 @@
 * [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

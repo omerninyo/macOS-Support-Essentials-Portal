@@ -1,4 +1,5 @@
-# חלק ג\': מדריך עזר לתלמיד - שיעור 3 (Security & TCC)
+# שיעור 03: אבטחת מידע
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## 1. נושאי השיעור
 
@@ -158,6 +159,14 @@
 * [Privacy Preferences Policy Control payloads for MDM](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - תיעוד למנהלי מערכת על איך לנהל הרשאות TCC מרחוק.
 
 
+
+## סרטון סיכום
+
+<!-- סרטון סיכום מתוך YouTube -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -167,3 +176,9 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Passwords-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p1_21.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)
+
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
