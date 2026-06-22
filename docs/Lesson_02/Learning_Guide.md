@@ -57,6 +57,9 @@
 * **The Mac Security Blog: Understanding User Accounts in macOS**
   [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
 
+## קישורים מומלצים ולקריאה נוספת
+
+
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->

@@ -75,10 +75,10 @@
 * [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac) - מאמר טכני על איך להציל מק "מת" בעזרת כבל חיבור למק שני (DFU Mode).
 * [Activation Lock for Mac](https://support.apple.com/en-us/102541) - הסבר קצר על מנגנון נעילת הפעלה (Activation Lock) המונע גניבות.
 * [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web) - מדריך ארגוני איך לפתוח Activation Lock מרחוק כשהעובד עזב.
-* [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co) - מדריך ויזואלי שחופר על תהליכי השחזור ואיך הם נראים מאחורי הקלעים.
-* [Erase All Content and Settings does what it says](https://eclecticlight.co) - הסבר טכני איך המק מסוגל למחוק את כל המידע עליו תוך שניות ספורות בלחיצת כפתור.
-* [How to recover Recovery](https://eclecticlight.co) - מאמר טכני למתקדמים על שחזור של מחיצת שחזור תקולה ב-macOS.
-* [A short history of Recovery in macOS](https://eclecticlight.co) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
+* [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/) - מדריך ויזואלי שחופר על תהליכי השחזור ואיך הם נראים מאחורי הקלעים.
+* [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings) - הסבר טכני איך המק מסוגל למחוק את כל המידע עליו תוך שניות ספורות בלחיצת כפתור.
+* [How to recover Recovery](https://eclecticlight.co/2024/03/21/how-to-recover-recovery/) - מאמר טכני למתקדמים על שחזור של מחיצת שחזור תקולה ב-macOS.
+* [A short history of Recovery in macOS](https://eclecticlight.co/2023/11/25/a-short-history-of-recovery-in-macos/) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
 
 ## סרטון סיכום
 

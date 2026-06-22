@@ -134,7 +134,7 @@
 
 ---
 
-### קישורים מומלצים ולקריאה נוספת
+## קישורים מומלצים ולקריאה נוספת
 
 * [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-token-bootstrap-token-and-volume-dep24dbdcf9e/web) - מאמר טכני למנהלי IT על איך מתבצע אימות הצפנה בארגון.
 * [Intro to FileVault for Mac](https://support.apple.com/guide/security/intro-to-filevault-secd73eaebd1/web) - סקירת עומק טכנית של ארכיטקטורת ההצפנה במעבדי Apple Silicon.

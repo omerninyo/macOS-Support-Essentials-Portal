@@ -85,6 +85,11 @@ mdimport -t -d3 /path/to/specific/file.pdf
 * **The Eclectic Light Company:** How macOS depends on firmlinks - [Link](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/)
 * **The Eclectic Light Company:** Using and troubleshooting Spotlight in Sequoia: summary - [Link](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/)
 
+## קישורים מומלצים ולקריאה נוספת
+
+* [Reading the Finder's Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - מדריך קריאה והבנה של חלון המידע במק.
+* [Get more from Get Info and the Finder's contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - מאמר המפרט על התפריטים המהירים וחלון ה-Get Info.
+
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->

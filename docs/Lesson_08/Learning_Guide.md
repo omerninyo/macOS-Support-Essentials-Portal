@@ -75,9 +75,12 @@
 
 ## Recommended Reading & Enrichment Links
 
-* [Explainer: % CPU in Activity Monitor (Eclectic Light Company)](https://eclecticlight.co/) - הסבר לעומק למה אחוזי מעבד במק לפעמים מטעים ואיך לקרוא אותם נכון (התייחסות ל-Performance vs Efficiency Cores).
-* [A brief history of XML and property lists (Eclectic Light Company)](https://eclecticlight.co/) - רקע היסטורי מעניין המסביר מדוע אפל נשענת כל כך חזק על קבצי Plist מבוססי XML ופורמטים בינאריים לכל הגדרות המערכת.
+* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - הסבר לעומק למה אחוזי מעבד במק לפעמים מטעים ואיך לקרוא אותם נכון (התייחסות ל-Performance vs Efficiency Cores).
+* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - רקע היסטורי מעניין המסביר מדוע אפל נשענת כל כך חזק על קבצי Plist מבוססי XML ופורמטים בינאריים לכל הגדרות המערכת.
 * [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת "לחץ זיכרון" בכלי ה-Activity Monitor.
+
+## קישורים מומלצים ולקריאה נוספת
+
 
 ## סרטון סיכום
 

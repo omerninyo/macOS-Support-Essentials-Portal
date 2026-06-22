@@ -85,6 +85,7 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
+* [What can you do when an app uses too much memory](https://eclecticlight.co/2026/06/19/what-can-you-do-when-an-app-uses-too-much-memory/) - מדריך אבחון וטיפול באפליקציות שזוללות זיכרון (Memory Leaks).
 
 * [Start up your Mac in safe mode](https://support.apple.com/en-us/116946) - מדריך בסיסי למשתמש לאיך להיכנס למצב בטוח (Safe Mode) כדי לבדוק תקלות.
 * [Use Apple Diagnostics to test your Mac](https://support.apple.com/en-us/102550) - מדריך למשתמש איך להפעיל את כלי האבחון המובנה לאיתור תקלות חומרה.

@@ -50,6 +50,10 @@
 
   [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
 
+## קישורים מומלצים ולקריאה נוספת
+
+* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - מאמר עומק המסביר את אופן ניהול הזיכרון במערכת ההפעלה.
+
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
