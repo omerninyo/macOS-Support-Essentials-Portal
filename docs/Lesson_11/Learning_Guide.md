@@ -1,14 +1,11 @@
 # שיעור 11: ציוד היקפי
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **ניהול ציוד חיצוני:** הבדלים בין חיבורי Thunderbolt, USB-C ו-Bluetooth.
-*   **2.** **אבטחת אביזרים (Accessory Security):** מנגנוני אישור אביזרים וחיבורי USB חדשים.
-*   **3.** **הדפסה ב-macOS:** ניהול והגדרת מדפסות רשת ומקומיות דרך הממשק (CUPS).
-*   **4.** **תיבול ארגוני:** נעילת יציאות USB והפצת מדפסות באופן אוטומטי.
+## סקירה
 
-מסמך זה מרכז את כל המושגים, הפקודות והכלים החשובים לניהול ואבחון ציוד היקפי, חיבורים ומדפסות בסביבת macOS מודרנית ובסביבה ארגונית (MDM).
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מונחי ליבה ומושגים
 
@@ -64,8 +61,6 @@
 * [Thunderbolt ports aren’t all the same](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/) - סקירת עומק טכנית על ההבדלים בין חיבורי Thunderbolt ו-USB-C השונים במחשבי מק.
 * [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - מאמר היסטורי על האבולוציה של הוספת מדפסות בסביבת המק מראשיתה ועד היום.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -83,8 +78,7 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Bluetooth-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_12/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

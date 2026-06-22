@@ -1,12 +1,11 @@
 # שיעור 04: הצפנה ומפתחות
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **אסימוני אבטחה (Secure Token):** הבנת תפקיד אסימון האבטחה בפתיחת הצפנה.
-*   **2.** **הצפנת APFS (FileVault):** אופן פעולת מנגנון ההצפנה ללא פגיעה בביצועים.
-*   **3.** **מפתחות שחזור:** הכרת חלופות שחזור: מפתח אישי לעומת iCloud.
-*   **4.** **תיבול ארגוני:** אוטומציה של ניהול מפתחות שחזור דרך Bootstrap Token.
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## בעלות מערכת והצפנה (System Ownership & FileVault)
 
@@ -142,8 +141,6 @@
 * [Manage FileVault with mobile device management](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-depf2a6327b/web) - מדריך לניהול מפתחות שחזור ארגוניים ל-FileVault.
 * [Protect data on your Mac with FileVault](https://support.apple.com/en-us/HT204837) - מדריך בסיסי למשתמש איך להדליק את ההצפנה ולהגן על הקבצים.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -158,8 +155,7 @@
 
 ![DeepDive Diagram](../assets/images/DeepDive/Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_05/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

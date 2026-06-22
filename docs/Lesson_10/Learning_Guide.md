@@ -1,13 +1,6 @@
 # שיעור 10: שיתוף וגישה מרחוק
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
-
-*   **1.** **חיבור לשרתים:** שימוש בפרוטוקול SMB לגישה לתיקיות רשת.
-*   **2.** **שיתוף מקומי:** העברת מידע מהירה עם AirDrop, Screen Sharing ו-Universal Control.
-*   **3.** **שכפול מהיר (Mac Sharing Mode):** ניהול העברות נתונים במצב שיתוף דיסק.
-*   **4.** **תיבול ארגוני:** התממשקות ל-Single Sign-On ליצירת חיבור אוטומטי לשרתים.
-
 
 ## סקירה
 
@@ -15,9 +8,6 @@
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגי מפתח (Key Concepts)
-
-
-
 
 | מושג | רקע היסטורי מה-DeepDive |
 | :--- | :--- |
@@ -83,10 +73,14 @@
 * [Universal Control: Use a single keyboard and mouse between Mac and iPad](https://support.apple.com/en-us/102459) - מדריך שמסביר איך לעבוד עם עכבר אחד על כמה מכשירי אפל במקביל.
 * [Transfer files using target disk mode / Mac Sharing Mode](https://support.apple.com/guide/mac-help/transfer-files-mac-computers-target-disk-mode-mchlp1443/mac) - מדריך למשתמש להעברת קבצים על ידי חיבור שני מחשבים בכבל.
 
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_11/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>

@@ -1,14 +1,11 @@
 # שיעור 03: אבטחת מידע
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **הגן הסגור (Gatekeeper):** הבנה כיצד macOS מוודאת שתוכנות בטוחות להפעלה (Notarization).
-*   **2.** **האנטי-וירוס השקט (XProtect):** היכרות עם סורק הקוד הזדוני המובנה במערכת.
-*   **3.** **ניהול פרטיות (TCC):** הבנת המנגנון שמגביל גישת אפליקציות למצלמה ולמידע רגיש.
-*   **4.** **תיבול ארגוני:** ניהול TCC ומתן אישורים אוטומטיים דרך פרופילים של ה-IT.
+## סקירה
 
-מסמך זה מרכז את כל הפקודות, המושגים, הנתיבים וכלי האבחון שנלמדו בשיעור השלישי, העוסק באבטחת המערכת, מנגנוני הגנה מובנים (Gatekeeper, XProtect) ומערכת ה-TCC.
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## 2. מושגי יסוד (Terminology)
 
@@ -116,7 +113,6 @@
 ### XProtect & Remediator
 מיקומי קבצי החתימות וכלי הסריקה של המנגנון השקט:
 
-
 * **קובץ החתימות המסורתי של XProtect (רשימת ה-YARA/Blocklist שמתעדכנת ברקע):**
 
   ```text
@@ -130,7 +126,6 @@
 
 ### שאילתות לוגים (Unified Logging) דרך הטרמינל
 למעקב אחר פעילות של המנגנונים בסביבת הטרמינל:
-
 
 * **מעקב אחר פעילות Gatekeeper (חקירת חסימות אפליקציות):**
 
@@ -158,8 +153,6 @@
 * [Safely open apps on your Mac](https://support.apple.com/en-us/HT202491) - הסבר למשתמש הקצה על הודעות האזהרה כשפותחים אפליקציות חדשות.
 * [Privacy Preferences Policy Control payloads for MDM](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - תיעוד למנהלי מערכת על איך לנהל הרשאות TCC מרחוק.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -177,8 +170,7 @@
 ![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p1_21.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_04/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

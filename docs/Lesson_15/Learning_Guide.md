@@ -1,14 +1,11 @@
 # שיעור 15: דיאגנוסטיקה
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **עיקרון הבידוד (Isolation):** שיטת עבודה נכונה לאבחון תקלות מורכבות.
-*   **2.** **כוחו של ה-Safe Mode:** אבחון וניקוי תקלות תוכנה שקופות על ידי הדלקה במצב בטוח.
-*   **3.** **System Information:** צפייה ושמירת נתוני חומרה ותוכנה מתקדמים לאבחון.
-*   **4.** **תיבול ארגוני:** בידוד תקלות בסביבה מנוהלת ומורכבת עם המון פרופילים.
+## סקירה
 
-מסמך זה מרכז את כל המושגים, הכלים והפקודות החיוניות לאבחון ופתרון תקלות מורכבות במערכת macOS 26.
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## 2. מושגי יסוד ומתודולוגיות (Core Concepts)
 
@@ -94,8 +91,6 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * [If your Mac restarts and a message appears (Kernel Panics)](https://support.apple.com/en-us/102566) - מדריך תמיכה שמסביר למה המק קורס ומופעל מחדש ואיך מאתרים את הסיבה.
 * [Identify your Mac hardware (System Information)](https://support.apple.com/en-us/102849) - איך להשתמש במידע המערכת כדי לקבל נתונים טכניים על רכיבי המחשב.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -112,8 +107,7 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_16/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

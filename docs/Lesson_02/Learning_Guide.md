@@ -17,9 +17,6 @@
 
 ## מושגי מפתח (Terminology)
 
-
-
-
 * **Administrator:** משתמש מנהל המערכת, בעל הרשאות גלובליות לשנות הגדרות ולהתקין תוכנות לכולם.
 * **Standard User:** משתמש רגיל, מוגבל לתיקיית הבית שלו (`~`) ולמרחב האישי שלו.
 * **Guest User:** משתמש אורח, מוחק את כל תוכן התיקיה שלו בניתוק.
@@ -60,8 +57,6 @@
 * **The Mac Security Blog: Understanding User Accounts in macOS**
   [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -79,3 +74,8 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Fast-User-Lockscreen-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Touch-ID-scaled.png)
+
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_03/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

@@ -1,21 +1,13 @@
 # שיעור 14: סביבת שחזור ומחיקה
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **סביבת ההתאוששות (1TR):** המבנה החדש של Recovery OS ב-Apple Silicon.
-*   **2.** **כלים גרפיים בשחזור:** דיאגנוסטיקה ואבחון מתקדם של הכונן מתוך Recovery.
-*   **3.** **מחיקה מאובטחת (EACS):** איפוס המק מהר ובטוח מתוך הממשק המערכתי.
-*   **4.** **ניהול ארגוני:** מחיקה מרחוק (Remote Wipe) והגנות Activation Lock.
+## סקירה
 
-> מסמך זה מרכז את המושגים הקריטיים, פקודות ה-Terminal לניהול דיסקים במצב שחזור, וההיבטים הארגוניים של Activation Lock ו-EACS.
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגי יסוד באדריכלות שחזור (Core Recovery Concepts)
-
-
-
-
-
 
 - **Single User Mode (SUM):** המנגנון ההיסטורי לשחזור מבוסס פקודות בלבד ששימש טכנאים ב-27 השנים הראשונות של ה-Mac, בטרם הוצגה מחיצת ה-Recovery ב-Lion (2011).
 - **1TR - One True Recovery:** במחשבי Apple Silicon, סביבת ההתאוששות (RecoveryOS) מופרדת לחלוטין ממערכת ההפעלה הרגילה (macOS) ומאוחסנת בקונטיינר ייעודי. היא תוכננה להיות "חסינה" – גם אם מחקתם את הדיסק במלואו (כולל מחיצות מערכת), ה-1TR שורד ומאפשר להוריד ולהתקין את המערכת מחדש, מבלי להזדקק ל-Internet Recovery קלאסי (כפי שהיה באינטל).
@@ -88,8 +80,6 @@
 * [How to recover Recovery](https://eclecticlight.co) - מאמר טכני למתקדמים על שחזור של מחיצת שחזור תקולה ב-macOS.
 * [A short history of Recovery in macOS](https://eclecticlight.co) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -107,8 +97,7 @@
 ![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
 ![DeepDive Diagram](../assets/images/DeepDive/Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_15/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

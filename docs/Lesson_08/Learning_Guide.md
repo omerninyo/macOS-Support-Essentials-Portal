@@ -9,6 +9,12 @@
 * **תיבול ארגוני** - איתור ה-Agent של מערכת ה-MDM, הבנת ססטוס הסנכרון שלו ומה עושים כשהוא קורס.
 
 
+
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+
 ## 1. מושגי יסוד וטרמינולוגיה
 
 * **CLI (Command Line Interface):** ממשק שורת פקודה. כלי הגישה הישיר למערכת ההפעלה שמעקף את הממשק הגרפי (GUI). ב-macOS הכלי המובנה הוא Terminal (אשר הגיע בירושה ממערכת NeXTSTEP ב-2001).
@@ -73,8 +79,6 @@
 * [A brief history of XML and property lists (Eclectic Light Company)](https://eclecticlight.co/) - רקע היסטורי מעניין המסביר מדוע אפל נשענת כל כך חזק על קבצי Plist מבוססי XML ופורמטים בינאריים לכל הגדרות המערכת.
 * [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת "לחץ זיכרון" בכלי ה-Activity Monitor.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -92,8 +96,7 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Shortcuts-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_09/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

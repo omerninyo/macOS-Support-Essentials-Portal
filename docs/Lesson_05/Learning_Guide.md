@@ -1,16 +1,13 @@
 # שיעור 05: אפליקציות ותהליכים
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **סוגי התקנות:** ערוצי התקנה מרכזיים: PKG, DMG וה-App Store.
-*   **2.** **ארגזי חול (Sandboxing):** היכן אפליקציות שומרות מידע וכיצד מאפסים אותן.
-*   **3.** **אבחון תקיעות (Force Quit):** כלים לאבחון וסגירה מאולצת של אפליקציות שלא מגיבות.
-*   **4.** **תיבול ארגוני:** חלוקת תוכנות המונית ושימוש בקטלוג Self-Service.
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגי יסוד (Core Concepts)
-
-
 
 * **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת (App Review), חתימה קריפטוגרפית ונוטריון (Notarization), ופועלת תחת מגבלות של "Sandbox" (Sandboxing).
 * **Package - PKG:** קובץ התקנה המכיל אוגדן של קבצים והוראות (Scripts) לפיזורם במערכת הקבצים. משמש לרוב להתקנות מורכבות של תוכנות ארגוניות ולכלי שורת הפקודה.
@@ -99,8 +96,6 @@
 * [Explainer: Disk images](https://eclecticlight.co/2021/11/17/explainer-disk-images/) - סקירה על ההיסטוריה והמבנה של קובצי DMG.
 * [macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/) - מאמר טכני שמסביר על הפורמט החדש של קובצי התקנה ב-macOS 26.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -116,8 +111,7 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-App-Store-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Force-Quit-scaled.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_06/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

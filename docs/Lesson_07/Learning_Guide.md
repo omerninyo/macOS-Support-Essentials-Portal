@@ -1,12 +1,11 @@
 # שיעור 07: גיבוי ושחזור
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **תמונות מצב (Snapshots):** גיבוי מקומי ב-APFS וחזרה מהירה לנקודות זמן קודמות.
-*   **2.** **Time Machine:** לוגיקת הגיבוי והארכיטקטורה מול כוננים חיצוניים.
-*   **3.** **שחזור קבצים:** תרגול חילוץ מידע מגיבוי קיים במקרי אסון (Disaster Recovery).
-*   **4.** **תיבול ארגוני:** האם נדרש Time Machine בסביבה עננית מודרנית?
+## סקירה
+
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## 2. מושגי יסוד (Core Concepts)
 
@@ -17,7 +16,6 @@
 | **מערכת קבצים ביעד** | HFS+ | APFS |
 | **יעילות העתקה** | יצירת מיליוני קישורים קשיחים לקבצים שלא השתנו | מסתמך על Delta-copying ברמת הבלוק (מהיר וחוסך מקום) |
 | **אמינות לטווח ארוך** | קריסה שכיחה תחת עומס ה-Hard Links | יציבות גבוהה בזכות תמונות מצב טבעיות של המערכת |
-
 
 * **Time Machine:** מנגנון הגיבוי המובנה של macOS. שומר עותקים היסטוריים של קבצים, מאפשר שחזור קבצים בודדים או מערכת שלמה.
 * **APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה.
@@ -98,8 +96,6 @@
 * [Snapshots aren't backups](https://eclecticlight.co/2021/02/16/snapshots-arent-backups/) - מאמר דעה טכני שמסביר למה אסור להסתמך על סנאפשוטים כתחליף לגיבוי אמיתי.
 * [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -118,8 +114,7 @@
 ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_08/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

@@ -1,16 +1,11 @@
 # שיעור 12: עדכונים ושדרוגים
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **עדכונים ושדרוגים:** טרמינולוגיית אפל לעדכוני תוכנה ומערכת הפעלה.
-*   **2.** **מנגנון RSR:** עדכוני אבטחה חמים ומהירים ללא השבתה ארוכה.
-*   **3.** **Migration Assistant:** העברת נתונים בין מקים וההשפעות שלה.
-*   **4.** **תיבול ארגוני:** ניהול מדיניות עדכונים וכפיית שדרוגים בארגון.
+## סקירה
 
-מסמך זה מרכז את כל פקודות הטרמינל, המושגים, ונתיבי המערכת המרכזיים לשיעור עדכוני התוכנה והגירות ב-macOS. המסמך נועד לשמש ככלי עזר מהיר לאנשי תמיכה טכנית ומנהלי מערכות (IT) בניהול ושליטה על מחזור החיים של מערכת ההפעלה.
-
----
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## 2. מושגי יסוד: טרמינולוגיה ואסטרטגיה
 
@@ -105,8 +100,6 @@
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - מדריך המסביר איך להעביר נתונים ומידע ממק ישן למק חדש בעזרת אשף ההגירות.
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -122,8 +115,7 @@
 ![DeepDive Diagram](../assets/images/DeepDive/How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_13/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

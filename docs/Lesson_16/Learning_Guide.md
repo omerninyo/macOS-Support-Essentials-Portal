@@ -1,16 +1,11 @@
 # שיעור 16: ניתוח לוגים
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **מערכת הלוגים (Unified Logging):** היכרות עם גישת הלוגים החדשה ב-macOS.
-*   **2.** **אפליקציית Console:** סינון רעשים ואיתור שגיאות בזמן אמת.
-*   **3.** **הפקת Sysdiagnose:** איסוף לוגים ודיאגנוסטיקה מלאה בממשק.
-*   **4.** **חדר הבריחה:** תרגול מעשי באיתור שורת לוג מוסתרת לפתרון בעיות.
+## סקירה
 
-מסמך זה מרכז את כל המושגים, הפקודות ושיטות האבחון המתקדמות לניתוח הלוגים המודרניים ב-macOS 26 (Tahoe) ויצירת דוחות Sysdiagnose לפתרון תקלות מורכבות בסביבה הביתית והארגונית.
-
----
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מילון מושגים (Glossary)
 
@@ -41,7 +36,6 @@
 
 ### סינון מתקדם באמצעות Predicates
 הכוח האמיתי של `log show` הוא היכולת לסנן לפי תהליך, תת-מערכת או תוכן ספציפי:
-
 
 * **`log show --predicate 'process == "kernel"'`**
   הצגת לוגים שנוצרו אך ורק על ידי הקרנל.
@@ -138,8 +132,6 @@
 * [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - סקירה מעניינת על האבולוציה של הדרך בה נשמרו הלוגים במק מ-2016 ועד היום.
 * [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -153,9 +145,3 @@
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
-
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>

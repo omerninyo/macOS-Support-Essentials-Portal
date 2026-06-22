@@ -9,19 +9,13 @@
 * **תיבול ארגוני** - אבחון פרופילי Wi-Fi מסוג 802.1X ארגוני וחיבורי VPN פרוקסי פרוסים מרחוק.
 
 
-## 1. נושאי השיעור
 
-*   **1.** **ממשקים וסדרי עדיפויות:** ניהול מיקומי רשת (Locations) וסדר עדיפויות של חיבורים.
-*   **2.** **כלי אבחון (Wireless Diagnostics):** ניטור תעבורה ואיתור תקלות Wi-Fi בממשק.
-*   **3.** **חומת האש המובנית:** מטרת ה-Firewall ב-macOS וכיצד הוא פועל.
-*   **4.** **תיבול ארגוני:** אבחון תקלות בפרוטוקולי אבטחה כגון 802.1X, Proxy ו-VPN.
+## סקירה
 
-גיליון זה מסכם את המושגים, הפקודות והכלים לאבחון וניהול של רשתות, תצורות ומיקומים במערכת macOS.
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מושגים ומונחי יסוד (Terms & Concepts)
-
-
-
 
 * **מיקום רשת (Network Location):** פרופיל המאגד בתוכו את כלל הגדרות הרשת של המק (שירותי רשת פעילים, כתובות IP, שרתי DNS, ופרוקסי). ניתן ליצור מספר מיקומים כדי לעבור במהירות בין תצורת "בית", "משרד" ועוד.
 * **סדר עדיפויות של שירותים (Service Order):** הסדר שבו המק מחפש ומתחבר לרשתות פנויות. ניתן לגרור שירות (למשל Ethernet מעל Wi-Fi) כדי להבטיח שהמק יעדיף חיבור קווי כשהוא זמין.
@@ -106,8 +100,6 @@
 * [Connect to an 802.1X network on Mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac) - מדריך להתחברות לרשתות אלחוטיות ארגוניות שדורשות אימות מיוחד.
 * [Deploy Wi-Fi payload settings for Apple devices](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web) - מאמר ארגוני על הפצת הגדרות רשת באמצעות שרת MDM.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -125,8 +117,7 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Network-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_10/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

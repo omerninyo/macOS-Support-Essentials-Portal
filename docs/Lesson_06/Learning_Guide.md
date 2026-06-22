@@ -9,13 +9,6 @@
 
 ## מושגי מפתח (Key Concepts)
 
-
-
-
-
-
-
-
 * **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple המחליפה את HFS+. בנויה לביצועים גבוהים על כונני פלאש, הצפנה, שיתוף מקום דינמי והגנה על נתונים.
 * **Container (מכולה):** השכבה הראשית ב-APFS שמנהלת את כל המקום הפנוי בדיסק. מחליפה למעשה את המחיצות (Partitions) הקשיחות של העבר.
 * **Volume (כרך):** יחידת אחסון לוגית בתוך ה-Container. כרכים חולקים את המקום הפנוי עם שאר הכרכים במכולה וגדלים לפי הצורך ללא צורך בהגדרה מראש (Dynamic Space Sharing).
@@ -91,8 +84,6 @@ mdimport -t -d3 /path/to/specific/file.pdf
 * **The Eclectic Light Company:** How macOS depends on firmlinks - [Link](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/)
 * **The Eclectic Light Company:** Using and troubleshooting Spotlight in Sequoia: summary - [Link](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/)
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -111,3 +102,8 @@ mdimport -t -d3 /path/to/specific/file.pdf
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Get-Info-scaled.png)
 ![DeepDive Diagram](../assets/images/DeepDive/How_macOS_depends_on_firmlinks_p1_24.jpeg)
 ![DeepDive Diagram](../assets/images/DeepDive/How_macOS_depends_on_firmlinks_p1_25.jpeg)
+
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_07/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>

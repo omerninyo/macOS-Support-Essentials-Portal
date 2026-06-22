@@ -1,16 +1,11 @@
 # שיעור 13: תהליך האתחול
 **מדריך עזר (מדריך עזר לתלמיד)**
 
-## 1. נושאי השיעור
 
-*   **1.** **שרשרת האתחול (Boot):** השלבים מאחורי הפעלת מק Apple Silicon.
-*   **2.** **Startup Security Utility:** שליטה ברמות האבטחה במערכת (Full vs Reduced).
-*   **3.** **הרחבות קרנל (Kexts):** הבנת המעבר מ-Kernel ל-System Extensions.
-*   **4.** **תיבול ארגוני:** הגנת ה-Firmware ומניעת שינויי אבטחה של משתמשים.
+## סקירה
 
-מסמך זה מרכז את כלל המונחים הטכניים, השלבים בתהליך האתחול של Apple Silicon, ופקודות ה-CLI לאבחון וניהול של מדיניות האבטחה (Secure Boot) והרחבות הליבה (Kexts).
-
----
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
 ## מילון מונחים והגדרות יסוד (Terminology & Concepts)
 
@@ -103,8 +98,6 @@
 * [Booting an M1 Mac from hardware to kexts: 1 Hardware](https://eclecticlight.co/2022/01/04/booting-an-m1-mac-from-hardware-to-kexts-1-hardware/) - מאמר שחופר על השלבים המוקדמים ביותר של הפעלת החומרה בתהליך האתחול.
 * [Booting an M1 Mac from hardware to kexts: 2 LLB and iBoot](https://eclecticlight.co/2022/01/05/booting-an-m1-mac-from-hardware-to-kexts-2-llb-and-iboot/) - החלק השני במאמר שסוקר את תהליך טעינת מערכת ההפעלה מהאחסון.
 
-
-
 ## סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
@@ -119,8 +112,7 @@
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Boot-Camp-scaled.png)
 
-
-## סקירה
-
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
+---
+<div dir="rtl" style="text-align: left;">
+  <a href="../../Lesson_14/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
+</div>
