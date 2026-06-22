@@ -148,8 +148,6 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Fast-User-Lockscreen-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Touch-ID-scaled.png)

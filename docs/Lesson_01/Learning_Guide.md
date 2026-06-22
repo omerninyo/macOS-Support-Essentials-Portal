@@ -61,8 +61,18 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
 ![DeepDive Diagram](../assets/images/DeepDive/macOS Versions.png)
 
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-General-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Control-Center-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Control-Center-Edit-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Customize-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Desktop-Stacks-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Stacks-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Notification-Center-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Battery-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Copy-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Go-To-Folder-scaled.png)

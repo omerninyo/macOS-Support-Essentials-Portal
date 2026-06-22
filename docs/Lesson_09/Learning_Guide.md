@@ -109,9 +109,10 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Network-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)

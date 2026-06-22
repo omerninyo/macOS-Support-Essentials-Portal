@@ -110,8 +110,8 @@
 
 חולצו מתוך מצגת **Deploying macOS Tahoe 26**:
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על שדרוג לעומת מחיקה, ותהליך ה-Deployment הארגוני.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על שדרוג לעומת מחיקה, ותהליך ה-Deployment הארגוני.
 
 ### 20% Enterprise Seasoning (MDM & Automated Device Enrollment)
 ![Upgrading to macOS Tahoe](../assets/images/Updates_Keynote/Slide12_image13.png)

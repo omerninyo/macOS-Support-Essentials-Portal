@@ -87,9 +87,10 @@ mdimport -t -d3 /path/to/specific/file.pdf
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Disk-Utility-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Spotlight-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Spotlight-Action-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Get-Info-scaled.png)

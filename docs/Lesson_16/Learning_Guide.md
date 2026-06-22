@@ -142,7 +142,8 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
 ![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)

@@ -100,9 +100,9 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-> [!TIP]
-> **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "שימוש למדריך"
+    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
+![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
-![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
