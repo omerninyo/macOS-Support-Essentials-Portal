@@ -1,7 +1,7 @@
 # שיעור 09: רשתות
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
-## נושאי השיעור
+## מטרות השיעור
 
 * **ממשקים וסדרי עדיפויות** - ניהול מיקומי רשת (Network Locations) ו-Service Order.
 * **כלי אבחון** - Ping, Traceroute והיכרות עם פקודת העל `networksetup`.
@@ -121,3 +121,24 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_10/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide18_image28.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide23_image41.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide74_image14.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide74_image15.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide88_image99.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide88_image100.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image103.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image108.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image31.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image30.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide131_image45.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide131_image161.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide132_image163.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide132_image162.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide133_image45.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide133_image161.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide134_image164.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide134_image165.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide135_image166.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide135_image167.png)

@@ -1,5 +1,5 @@
 # שיעור 07: גיבוי ושחזור
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -7,7 +7,7 @@
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
-## 2. מושגי יסוד (Core Concepts)
+## מושגי יסוד (Core Concepts)
 
 **השוואה: אבולוציית הגיבוי של Time Machine**
 | תכונה | Time Machine קלאסי (HFS+) | Time Machine מודרני (APFS) |
@@ -26,7 +26,7 @@
 * **Migration Assistant:** כלי שירות להעברת נתונים, חשבונות משתמשים והגדרות מ-Mac ישן, מגיבוי Time Machine, או מ-PC (במהלך OOBE או לאחריו).
 * **Erase Assistant / Erase All Content and Settings (EACS):** כלי מובנה ב-System Settings (תחת General -> Transfer or Reset) שמאפשר למחוק את ה-Data Volume ואת המפתחות הקריפטוגרפיים במהירות כדי להחזיר את ה-Mac למצב יצרן - ללא צורך בהתקנה מחדש של ה-OS.
 
-## 3. מילון פקודות טרמינל מתקדם (`tmutil`)
+## מילון פקודות טרמינל מתקדם (`tmutil`)
 
 כלי שורת הפקודה `tmutil` (Time Machine Utility) הוא דרך רבת-עוצמה לניהול, אבחון ושליטה על גיבויי Time Machine ותמונות מצב של APFS.
 *(שימו לב: חלק מהפקודות המחוללות שינוי דורשות הרשאות `sudo`)*.
@@ -73,13 +73,13 @@
 * `tmutil compare`
   * מבצע השוואה מלאה בין המצב הנוכחי של המערכת (הדיסק) לבין הגיבוי האחרון שבוצע.
 
-## 4. כלים ותהליכי רקע רלוונטיים במערכת (Daemons & Tools)
+## כלים ותהליכי רקע רלוונטיים במערכת (Daemons & Tools)
 
 * `backupd`: תהליך הרקע המרכזי והפנימי של Time Machine שמנהל את פעולות ההעתקה והניהול מול יעדי הגיבוי.
 * `diskutil apfs listSnapshots /`: פקודת `diskutil` המשמשת ככלי אבחון ברמת ה-APFS להצגת Snapshots על הדיסק ברמה הטכנית והעמוקה ביותר.
 * `System Settings -> General -> Time Machine`: ממשק המשתמש הגרפי (GUI) להגדרת התדירות, הוספת החרגות וניהול כוננים בארגון פשוט.
 
-## 5. זווית ארגונית (Enterprise Seasoning)
+## זווית ארגונית (Enterprise Seasoning)
 
 * **הימנעות מגיבויים מקומיים:** בארגונים מודרניים קיימת נטייה לוותר על Time Machine למשתמשי קצה בגלל עלויות חומרה והקושי לאבטח כוננים ניידים שעלולים להיאבד או להיגנב.
 * **גיבוי ענן כחלופה (Cloud Storage):** שימוש בשירותים מבוססי סנכרון כגון OneDrive, Google Drive או Box מועדף ומפוקח באמצעות פרופילי MDM, כאשר הנתונים תמיד מסונכרנים והשחזור למחשב חלופי מתבצע ברגע שמחברים חשבון MAID.
@@ -118,3 +118,9 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_08/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide67_image80.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide120_image42.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide122_image44.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide122_image43.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide136_image168.png)

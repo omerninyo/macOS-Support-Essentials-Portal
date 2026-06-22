@@ -1,5 +1,5 @@
 # שיעור 12: עדכונים ושדרוגים
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -7,7 +7,7 @@
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
-## 2. מושגי יסוד: טרמינולוגיה ואסטרטגיה
+## מושגי יסוד: טרמינולוגיה ואסטרטגיה
 
 * **עדכון (Update):** עדכון משני (Minor Update) או טלאי תוכנה שמשחררת אפל לגרסה הנוכחית של מערכת ההפעלה (למשל, מעבר מ-macOS 26.1 ל-macOS 26.2).
 * **שדרוג (Upgrade):** שדרוג של גרסה ראשית (Major Upgrade) למערכת הפעלה חדשה לחלוטין (למשל, מעבר מ-macOS 25 ל-macOS 26).
@@ -19,7 +19,7 @@
 
 ---
 
-## 3. מאגר פקודות הטרמינל: שליטה בעדכונים (`softwareupdate`)
+## מאגר פקודות הטרמינל: שליטה בעדכונים (`softwareupdate`)
 
 כלי ה-CLI המרכזי ב-macOS לניהול, הורדה, והתקנה של עדכוני מערכת הוא פקודת ה-`softwareupdate`. כלי זה חיוני לאיש ה-IT לטיפול בתקלות או ביצוע אוטומציות.
 
@@ -63,7 +63,7 @@
 
 ---
 
-## 4. ארכיטקטורה, תהליכי רקע ולוגים
+## ארכיטקטורה, תהליכי רקע ולוגים
 
 כדי לדבג בעיות בעדכונים, יש להכיר את שחקני הרקע של המערכת.
 
@@ -83,7 +83,7 @@
 
 ---
 
-## 5. המלצות IT להגירות (Migration Assistant)
+## המלצות IT להגירות (Migration Assistant)
 
 שימוש ב-Migration Assistant הוא כלי חזק, אך בסביבות ארגוניות עשוי לגרום להעתקת בעיות ממחשב ישן למחשב חדש.
 
@@ -119,3 +119,13 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_13/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide1_image2.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide5_image5.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide76_image44.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide76_image91.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide76_image90.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide76_image92.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide76_image16.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide77_image17.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/12_Updates/Slide77_image18.tif)

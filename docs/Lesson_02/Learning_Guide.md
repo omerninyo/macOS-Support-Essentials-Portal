@@ -1,7 +1,7 @@
 # שיעור 02: ניהול משתמשים ואבטחת נתונים
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
-## נושאי השיעור
+## מטרות השיעור
 
 * **משתמשים ותיקיות** - סוגי חשבונות מקומיים, היררכיית ה-Home Folder ותיקיית Shared.
 * **ניהול סודות** - אבולוציית הסיסמאות, Keychain, ואפליקציית Passwords החדשה.
@@ -79,3 +79,34 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_03/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide2_image3.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide48_image8.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide53_image64.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide53_image65.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide53_image67.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide53_image66.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide53_image23.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide87_image22.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide87_image23.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide89_image24.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide89_image22.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide90_image23.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide90_image25.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide91_image27.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide91_image26.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide95_image28.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide96_image105.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide96_image104.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide97_image107.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide97_image106.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide98_image29.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide127_image151.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide127_image153.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide127_image156.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide127_image154.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide127_image155.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide143_image178.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide143_image179.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide143_image180.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/02_Users_Permissions/Slide143_image50.jpeg)

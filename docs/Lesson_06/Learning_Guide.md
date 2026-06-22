@@ -1,5 +1,5 @@
 # שיעור 06: מערכת הקבצים (APFS)
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -19,6 +19,7 @@
 * **Firmlinks:** קישורים אקטיביים דו-כיווניים (מעין "חורי תולעת") שמחברים ספריות בכונן ה-System לספריות בכונן ה-Data, כך שעבור המשתמש נראה שמדובר במחיצה אחת.
 * **Spotlight Index:** מסד נתונים סמוי (`.Spotlight-V100`) שמכיל את התוכן של רוב הקבצים בדיסק כדי לאפשר חיפוש מיידי וגלובלי.
 * **mdworker / mds / mds_stores:** התהליכים ברקע שאחראים על כריית הנתונים מהקבצים ועדכון האינדקס של Spotlight.
+* **Get Info ו-Contextual Menu:** ממשק המידע והאפשרויות של ה-Finder. חלון ה-Get Info (Cmd+I) מאפשר לאבחן נתונים קריטיים על קבצים (למשל, האם הם יושבים במיקום הלוגי או הפיזי ב-Firmlinks, והרשאות מערכת). שימוש בתפריט ההקשר (קליק ימני) בשילוב מקש ה-Option במקלדת חושף אפשרויות ניהול מתקדמות (כגון חשיפת נתיבים מלאים להעתקה). [קריאה מומלצת 1](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) | [קריאה מומלצת 2](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/)
 * **User Domain:** המרחב האישי של המשתמש (Home Directory), מזוהה לרוב עם סימן הטילדה (`~`). המשתמש רשאי לשנות ולמחוק קבצים במרחב זה ללא צורך בהרשאות מנהל.
 * **Local Domain:** המרחב המשותף לכלל המשתמשים במחשב (למשל תיקיית `/Applications`). שינוי קבצים כאן דורש סיסמת מנהל.
 * **System Domain:** מרחב קבצי הליבה של מערכת ההפעלה. סגור לחלוטין לכתיבה.
@@ -107,3 +108,39 @@ mdimport -t -d3 /path/to/specific/file.pdf
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_07/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide3_image4.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide68_image13.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide68_image81.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide83_image20.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide83_image21.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide107_image34.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide107_image35.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide108_image118.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide108_image117.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide108_image35.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide109_image37.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide109_image36.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide110_image119.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide111_image120.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide112_image46.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide112_image47.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide112_image45.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide112_image122.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide112_image121.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image128.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image129.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image123.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image124.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image125.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image127.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide113_image126.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide115_image39.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide115_image38.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide116_image40.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide116_image41.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide118_image133.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide129_image160.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/06_FileSystem/Slide129_image159.png)
+![DeepDive Screenshot](../assets/images/DeepDive/DeepDive_GetInfo_Window.jpg)
+![DeepDive Screenshot](../assets/images/DeepDive/DeepDive_ContextualMenu_Options.jpg)

@@ -1,5 +1,5 @@
 # שיעור 04: הצפנה ומפתחות
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -159,3 +159,12 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_05/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide70_image84.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide70_image85.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide94_image103.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide94_image102.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide100_image110.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide100_image109.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide101_image111.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/04_Encryption/Slide101_image112.png)

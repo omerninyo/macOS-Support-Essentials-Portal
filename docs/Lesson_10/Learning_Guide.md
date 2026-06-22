@@ -1,5 +1,5 @@
 # שיעור 10: שיתוף וגישה מרחוק
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -16,7 +16,7 @@
 | **Chooser** | אפליקציה היסטורית ממערכת System 7 (1991) ששימשה לגילוי שרתים ומדפסות (AppleShare) לפני עידן ה-Zero-Configuration (כמו AirDrop ו-Bonjour). |
 | **Recovery / 1TR** | מחיצת ההתאוששות הוצגה לראשונה רק ב-2011. כיום במעבדי Apple Silicon (1 True Recovery) היא סביבה מאובטחת המשמשת גם בסיס ל-Mac Sharing Mode. |
 
-## 2. פרוטוקול SMB (Server Message Block)
+## פרוטוקול SMB (Server Message Block)
 
 - **SMB - Server Message Block:** הפרוטוקול העיקרי והסטנדרטי כיום ב-macOS לשיתוף קבצים ברשת (החליף את AFP הישן).
 - **SMB 3.x:** הגרסה המודרנית המציעה הצפנה מקצה לקצה ותמיכה טובה יותר בביצועים וברשתות לא יציבות.
@@ -27,7 +27,7 @@
 - `smbutil lookup <hostname>`: ביצוע שאילתה לפתרון שם (Name Resolution) לכתובת IP בסביבת NetBIOS/SMB.
 - `smbutil view //user@server`: מציג את רשימת תיקיות השיתוף הזמינות בשרת ספציפי עבור המשתמש.
 
-## 3. שירותי שיתוף (Sharing Services)
+## שירותי שיתוף (Sharing Services)
 
 - **File Sharing:** מאפשר גישה מרחוק לקבצים על המק דרך פרוטוקול SMB.
 - **Screen Sharing:** שיתוף מסך למשתמשים אחרים או גישה מרחוק, מבוסס על שדרוג של פרוטוקול VNC.
@@ -40,7 +40,7 @@
 - `sudo sharing -r <share_point_name>`: מסיר תיקייה מרשימת השיתוף.
 - `sudo sharing -e <share_point_name> -s <flags>`: עריכת ההרשאות או דגלים ספציפיים לתיקייה משותפת קיימת.
 
-## 4. גילוי שירותים ברשת (Bonjour & dns-sd)
+## גילוי שירותים ברשת (Bonjour & dns-sd)
 
 - **Bonjour / mDNS:** מנגנון ה-Zero-configuration של אפל, המאפשר למחשבים ולשירותים (כמו מדפסות, תיקיות משותפות) להכריז על עצמם ברשת המקומית ללא צורך בשרת DNS מרכזי (Multicast DNS).
 
@@ -51,12 +51,12 @@
 - `dns-sd -B _ipp._tcp`: סריקה של מדפסות רשת (Internet Printing Protocol).
 - `dns-sd -L <Name> _smb._tcp`: פתרון שם (Lookup) לשרת ספציפי שגילינו בסריקה כדי לקבל את כתובת ה-IP והפורט המדויקים שלו.
 
-## 5. Continuity וקישוריות אלחוטית
+## Continuity וקישוריות אלחוטית
 
 - **AirDrop:** טכנולוגיה לשיתוף קבצים מהיר בין מכשירי Apple בסביבה הקרובה באמצעות Bluetooth (ליצירת "לחיצת יד" ואיתור) ו-Wi-Fi Direct P2P (להעברת הנתונים עצמם ללא תלות בראוטר מרכזי).
 - **Universal Control:** תכונה המאפשרת להשתמש בעכבר ומקלדת של מק אחד ולשלוט בעזרתם על מכשירי מק או אייפד אחרים סמוכים באופן חלק. המכשירים מתקשרים על גבי רשת Wi-Fi ו-Bluetooth זהים.
 
-## 6. Enterprise Seasoning: Single Sign-On (SSO)
+## Enterprise Seasoning: Single Sign-On (SSO)
 
 - **Kerberos SSO Extension:** תוסף מובנה במערכת macOS המאפשר למשתמשים בארגון להזדהות פעם אחת בלבד מול שרת ה-Active Directory / Identity Provider.
 - **TGT - Ticket-Granting Ticket:** "כרטיס הגישה" הקריפטוגרפי שהרחבת ה-Kerberos מקבלת מהשרת, ומשמש להזדהות מול שירותים אחרים (כמו כונני SMB ואינטראנט) בצורה שקופה ואוטומטית ללא צורך בהזנת סיסמה נוספת.
@@ -84,3 +84,12 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_11/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Legacy Slide](../assets/images/Legacy_Presentation/10_RemoteAccess/Slide71_image86.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/10_RemoteAccess/Slide71_image87.png)

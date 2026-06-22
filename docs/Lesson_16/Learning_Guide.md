@@ -1,5 +1,5 @@
 # שיעור 16: ניתוח לוגים
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -145,3 +145,6 @@
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
+
+![Legacy Slide](../assets/images/Legacy_Presentation/16_Logs/Slide69_image83.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/16_Logs/Slide69_image82.png)

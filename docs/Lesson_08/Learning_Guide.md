@@ -1,7 +1,7 @@
 # שיעור 08: טרמינל ושירותי רקע
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
-## נושאי השיעור
+## מטרות השיעור
 
 * **מבוא לטרמינל (Terminal)** - למה ה-CLI קריטי לטכנאים, קיצורי מקלדת, ויישור קו לפני עבודה מתקדמת.
 * **הלב של המערכת** - תהליך `launchd` (הבדל בין LaunchDaemons ל-Agents).
@@ -15,7 +15,7 @@
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
-## 1. מושגי יסוד וטרמינולוגיה
+## מושגי יסוד וטרמינולוגיה
 
 * **CLI (Command Line Interface):** ממשק שורת פקודה. כלי הגישה הישיר למערכת ההפעלה שמעקף את הממשק הגרפי (GUI). ב-macOS הכלי המובנה הוא Terminal (אשר הגיע בירושה ממערכת NeXTSTEP ב-2001).
 * **Zsh (Z Shell):** מעטפת פקודות מודרנית המהווה את ברירת המחדל ב-macOS החל מגרסת Catalina, מחליפה את Bash הישן. מספקת יכולות אוטומציה וסקריפטים מתקדמות יותר.
@@ -30,7 +30,7 @@
 * **mdmclient:** תהליך מערכת (Daemon) מובנה של אפל, האחראי על קבלת פקודות שרת ה-MDM דרך APNs והחלת הפרופילים במערכת ההפעלה.
 * **TCC (Transparency, Consent, and Control):** מנגנון אבטחה ב-macOS החוסם גישה של תוכנות וסקריפטים לאזורים רגישים (כגון קבצי משתמש) ללא אישור מפורש מהמשתמש או מפרופיל ארגוני (PPPC).
 
-## 2. קיצורי מקלדת בטרמינל (Terminal Shortcuts)
+## קיצורי מקלדת בטרמינל (Terminal Shortcuts)
 
 * `Ctrl + C`: עצירת ריצה של פקודה או תהליך נוכחי (Interrupt).
 * `Ctrl + L`: ניקוי המסך (שקול לפקודת `clear`).
@@ -38,7 +38,7 @@
 * `Ctrl + E`: קפיצה לסוף השורה.
 * `Tab`: השלמה אוטומטית של שם קובץ, נתיב או פקודה.
 
-## 3. פקודות מערכת חשובות
+## פקודות מערכת חשובות
 
 * `sudo`: הרצת פקודה יחידה עם הרשאות מנהל רשת/Root. דורש הזנת סיסמת אדמין.
 * `kill -9 <PID>`: "חיסול" מיידי ואלים של תהליך שנתקע לפי המזהה שלו, ללא המתנה לסגירה מסודרת.
@@ -64,7 +64,7 @@
 * `log stream --predicate 'process == "mdmclient"' --info`: פקודה המציגה בזמן אמת כל פעולה וסנכרון שסוכן ה-MDM המובנה מבצע. חובה לאיתור שגיאות רשת וחיבורים חסומים.
 * `sudo profiles renew -type enrollment`: כפיית סנכרון מיידי אל מול שרת ה-MDM מצידו של הלקוח.
 
-## 4. נתיבים קריטיים
+## נתיבים קריטיים
 
 * `~/Library/Preferences/`: התיקייה בה נשמרים קבצי ה-Plist האישיים של משתמש.
 * `/System/Library/LaunchDaemons/`: ספריית שירותי הליבה של macOS, מוגנת תחת ה-SSV ולא ניתנת לשינוי.
@@ -100,3 +100,6 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_09/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/08_SystemServices/Slide81_image95.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/08_SystemServices/Slide81_image94.png)

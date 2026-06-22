@@ -1,5 +1,5 @@
 # שיעור 15: דיאגנוסטיקה
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -7,7 +7,7 @@
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
-## 2. מושגי יסוד ומתודולוגיות (Core Concepts)
+## מושגי יסוד ומתודולוגיות (Core Concepts)
 
 * **Isolation:** אסטרטגיית הליבה של Apple לפתרון תקלות, שמטרתה לחצות את הבעיה לשניים בכל שלב כדי לבודד את המקור:
 
@@ -17,8 +17,9 @@
 * **Apple Diagnostics:** כלי אבחון חומרה המובנה בקושחה (Firmware) שנועד לבדוק רכיבים פיזיים כגון זיכרון (RAM), מאווררים, סוללה וחיישנים. במחשבי Apple Silicon מפעילים אותו מתוך תפריט האפשרויות (לחיצה ארוכה על כפתור ההדלקה) ולחיצה על `Command + D`.
 * **Verbose Mode:** מצב הפעלה (רלוונטי יותר במחשבי Intel עם מקשי `Command + V`) המציג טקסט של תהליך האתחול במקום לוגו התפוח. כיום במחשבי Apple Silicon מוחלף בעיקר בבדיקת לוגים עמוקה לאחר עליית המערכת.
 * **Activity Monitor & Console (היסטוריה קצרה):** אפליקציית Activity Monitor החלה את דרכה ב-2003 (Mac OS X Panther) כאיחוד של הכלים Process Viewer ו-CPU Monitor. בעבר, ה-Console עבד מול קבצי טקסט פשוטים, אך החל מ-macOS Sierra ב-2016 המערכת עברה ל-Unified Logging System - מערכת לוגים בינארית ואחידה המציגה אלפי אירועים בשנייה.
+* **App Memory Leaks (דליפות זיכרון באפליקציות):** מצב שבו אפליקציה צורכת עוד ועוד זיכרון ללא הרף ולא משחררת אותו חזרה למערכת. הדבר גורם לאיטיות רבה במק (תופעת ה-Beachball), אך לרוב ללא רעש מאווררים מוגבר (המאפיין עומס על המעבד). הפתרון הוא לעקוב אחרי צריכת הזיכרון בלשונית Memory ב-Activity Monitor, ולכבות את האפליקציה לחלוטין (Quit). לעומת זאת, דליפות בזיכרון הליבה (Kernel Memory Leaks) הן נדירות וחמורות בהרבה, ויובילו לקריסת מערכת מוחלטת (Kernel Panic). [לקריאה נוספת מהמאמר של Eclectic Light](https://eclecticlight.co/2026/06/19/what-can-you-do-when-an-app-uses-too-much-memory/)
 
-## 3. Safe Mode
+## Safe Mode
 
 Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרובות בעיות בעצם הפעלתו בלבד, כיוון שהוא מנקה ומאפס רכיבי מערכת.
 
@@ -36,7 +37,7 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * **Apple Silicon:** כיבוי ה-Mac. לחיצה ממושכת על כפתור ההדלקה עד להופעת "Loading startup options". בחירת כונן ההפעלה הרצוי, לחיצה ארוכה על מקש `Shift`, ולחיצה על "Continue in Safe Mode".
 * **Intel:** הדלקת ה-Mac ולחיצה מיידית וממושכת על מקש `Shift` עד להופעת חלון ההתחברות.
 
-## 4. ארגז הכלים ב-Terminal (CLI Diagnostics)
+## ארגז הכלים ב-Terminal (CLI Diagnostics)
 
 רשימת פקודות שימושית לטכנאים לחקירה ואבחון מתקדם של המערכת.
 
@@ -68,14 +69,14 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 * `klist` - מציג את רשימת כרטיסי ה-Kerberos הפעילים של המשתמש. אם הרשימה ריקה, למשתמש אין הרשאות שקופות.
 * `klist -v` - מציג את כל המידע המורחב (Verbose) על הכרטיס, כולל תאריכי התחלה, תאריכי תפוגה וסוג ההצפנה, כדי לאתר תוקף שפג.
 
-## 5. פקודות תקשורת נוספות לאבחון ובידוד
+## פקודות תקשורת נוספות לאבחון ובידוד
 
 * `ping -c 4 8.8.8.8` - שליחת 4 חבילות מידע לשרתי Google לבדיקת חיבוריות בסיסית לאינטרנט וזמני תגובה.
 * `traceroute google.com` - מציג את נתיב ניתוב החבילות (Hops) מה-Mac ועד לשרת היעד, מאפשר לאתר היכן נתקעת התקשורת בתוך הרשת הארגונית.
 * `ifconfig` - מציג מידע טכני נמוך על כרטיסי הרשת הפיזיים (ה-MAC Addresses).
 * `networksetup -listallhardwareports` - הדרך הקלה והקריאה ביותר לזהות את כתובות ה-MAC הפיזיות לכל סוגי החיבורים במערכת.
 
-## 6. התיבול הארגוני (Enterprise Diagnostics)
+## התיבול הארגוני (Enterprise Diagnostics)
 
 * **אבחון עם MDM Profiles:** לא פעם, הגדרות אבטחה של MDM מתנגשות עם פעולת תקינה (לדוגמה, חסימת USB, מגבלת Wi-Fi). אם תקלה לא נפתרת, טכנאי IT ישקול להסיר זמנית את הפרופיל הספציפי דרך System Settings > Privacy & Security > Profiles (בתנאי שלא סומן כבלתי ניתן להסרה) כדי לבודד אם הוא גורם לבעיה.
 * **מעקפי Network Filtering:** בארגונים המשתמשים בסוכני סינון תעבורה (Content Filters / Proxies), בידוד התקלה יעשה לרוב על ידי חיבור ה-Mac לרשת סלולרית חיצונית, כדי לבחון האם הסינון הארגוני חוסם את התעבורה לאפל.
@@ -111,3 +112,4 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_16/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+![DeepDive Screenshot](../assets/images/DeepDive/DeepDive_ActivityMonitor_Memory.jpg)

@@ -1,5 +1,5 @@
 # שיעור 03: אבטחת מידע
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -7,7 +7,7 @@
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/332582b3-c603-4af5-a4a2-81be768b38a6/"></iframe></div>
 
-## 2. מושגי יסוד (Terminology)
+## מושגי יסוד (Terminology)
 
 * **Gatekeeper:** מנגנון האבטחה של macOS שמוודא שרק תוכנות ממקור מהימן (App Store או מפתחים מזוהים) מורשות לרוץ על המק. הוא בודק את חתימת המפתח ואת ה-Notarization.
 * **Notarization:** תהליך אוטומטי של Apple שבו אפליקציות נסרקות לאיתור קוד זדוני ידוע לפני הפצתן, עוד בטרם הגיעו למשתמש. Gatekeeper דורש אישור זה עבור כל תוכנה המורדת מהאינטרנט.
@@ -28,7 +28,7 @@
 
 ---
 
-## 3. פקודות טרמינל (CLI Commands)
+## פקודות טרמינל (CLI Commands)
 
 ### חקירה וניהול של Gatekeeper (`spctl`)
 הכלי `spctl` (SecAssessment system policy security) משמש לניהול ובדיקת מערכת ה-Gatekeeper.
@@ -94,7 +94,7 @@
 
 ---
 
-## 4. נתיבים קריטיים, לוגים ומסדי נתונים (Paths & Plists)
+## נתיבים קריטיים, לוגים ומסדי נתונים (Paths & Plists)
 
 ### מיקומי מסדי הנתונים של TCC
 מערכת ה-TCC שומרת את ההרשאות בתוך מסדי נתונים מסוג SQLite. מסדים אלו מוגנים על ידי System Integrity Protection (SIP) ולא ניתן לערוך או למחוק אותם ידנית, אלא אם מבטלים SIP.

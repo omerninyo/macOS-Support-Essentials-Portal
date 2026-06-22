@@ -1,5 +1,5 @@
 # שיעור 13: תהליך האתחול
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -116,3 +116,16 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_14/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide80_image19.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide80_image93.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide138_image169.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide138_image49.jpeg)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide141_image170.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image175.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image174.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image176.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image177.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image173.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image172.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/13_BootProcess/Slide142_image171.png)

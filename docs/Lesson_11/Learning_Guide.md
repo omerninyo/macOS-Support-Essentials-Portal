@@ -1,5 +1,5 @@
 # שיעור 11: ציוד היקפי
-**מדריך עזר (מדריך עזר לתלמיד)**
+**מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -82,3 +82,15 @@
 <div dir="rtl" style="text-align: left;">
   <a href="../../Lesson_12/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
 </div>
+
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide19_image30.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide19_image29.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide31_image50.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide31_image51.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide34_image53.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide34_image52.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide41_image53.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide139_image47.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide139_image46.tif)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide140_image169.png)
+![Legacy Slide](../assets/images/Legacy_Presentation/11_Peripherals/Slide140_image49.jpeg)
