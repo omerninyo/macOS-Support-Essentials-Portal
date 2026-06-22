@@ -158,15 +158,12 @@
 * [Privacy Preferences Policy Control payloads for MDM](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - תיעוד למנהלי מערכת על איך לנהל הרשאות TCC מרחוק.
 
 
-
-
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p1_21.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Privacy-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Passwords-scaled.png)
+![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p1_21.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)

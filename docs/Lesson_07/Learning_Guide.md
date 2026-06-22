@@ -98,11 +98,13 @@
 * [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.
 
 
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu-scaled.png)
+![DeepDive Diagram](../assets/images/DeepDive/Snapshots_aren’t_backups_p1_114.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)

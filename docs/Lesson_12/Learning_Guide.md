@@ -105,16 +105,10 @@
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.
 
 
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-חולצו מתוך מצגת **Deploying macOS Tahoe 26**:
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על שדרוג לעומת מחיקה, ותהליך ה-Deployment הארגוני.
-
-### 20% Enterprise Seasoning (MDM & Automated Device Enrollment)
-![Upgrading to macOS Tahoe](../assets/images/Updates_Keynote/Slide12_image13.png)
-![Apple School & Business Manager](../assets/images/Updates_Keynote/Slide14_image21.png)
-![Automated Device Enrollment](../assets/images/Updates_Keynote/Slide15_image25.png)
 ![DeepDive Diagram](../assets/images/DeepDive/How_Software_Update_works_in_Ventura_p5_37.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)

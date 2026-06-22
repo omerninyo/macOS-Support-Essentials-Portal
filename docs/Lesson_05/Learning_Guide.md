@@ -98,10 +98,11 @@
 * [Explainer: Disk images](https://eclecticlight.co/2021/11/17/explainer-disk-images/) - סקירה על ההיסטוריה והמבנה של קובצי DMG.
 * [macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/) - מאמר טכני שמסביר על הפורמט החדש של קובצי התקנה ב-macOS 26.
 
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-App-Store-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Force-Quit-scaled.png)

@@ -87,8 +87,13 @@
 * [How to recover Recovery](https://eclecticlight.co) - מאמר טכני למתקדמים על שחזור של מחיצת שחזור תקולה ב-macOS.
 * [A short history of Recovery in macOS](https://eclecticlight.co) - סקירה היסטורית על התפתחות סביבת השחזור מראשית הדרך.
 
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
+![DeepDive Diagram](../assets/images/DeepDive/Explainer_Recovery_p1_41.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_your_Mac_can’t_get_to_the_login_wi_p2_65.jpeg)
+![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
+![DeepDive Diagram](../assets/images/DeepDive/Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)

@@ -58,8 +58,8 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Users-Groups-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Fast-User-Menu-scaled.png)

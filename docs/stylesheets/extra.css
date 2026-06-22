@@ -9,8 +9,8 @@
   --md-accent-fg-color--transparent: rgba(210, 96, 44, 0.1);
 }
 
-/* Force Sidebar to show on tablets (768px to 1219px) in RTL */
-@media screen and (min-width: 768px) and (max-width: 1219px) {
+/* Force Sidebar to show on iPad Landscape (1024px to 1219px) in RTL */
+@media screen and (min-width: 1024px) and (max-width: 1219px) {
   /* Hide hamburger menu toggle */
   .md-header__button.md-icon[for="__drawer"] {
     display: none !important;

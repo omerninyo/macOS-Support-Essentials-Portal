@@ -64,15 +64,12 @@
 * [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - מאמר היסטורי על האבולוציה של הוספת מדפסות בסביבת המק מראשיתה ועד היום.
 
 
-
-
-
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Print-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Bluetooth-scaled.png)
+![DeepDive Diagram](../assets/images/DeepDive/How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)

@@ -61,10 +61,8 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
-
-![DeepDive Diagram](../assets/images/DeepDive/macOS Versions.png)
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-General-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Control-Center-scaled.png)
@@ -76,3 +74,7 @@
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Battery-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Copy-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Go-To-Folder-scaled.png)
+![DeepDive Diagram](../assets/images/DeepDive/macOS Versions.png)
+![M-Series Performance Comparison](../assets/images/Evolution_Keynote/image17.jpeg)
+![Mac mini Evolution](../assets/images/Evolution_Keynote/Slide2_image3.jpeg)
+![Apple Silicon Architecture](../assets/images/Evolution_Keynote/Slide3_image4.jpeg)

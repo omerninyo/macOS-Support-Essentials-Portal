@@ -107,10 +107,11 @@
 * [Connect to an 802.1X network on Mac](https://support.apple.com/guide/mac-help/connect-to-an-8021x-network-on-mac-mchlp1094/mac) - מדריך להתחברות לרשתות אלחוטיות ארגוניות שדורשות אימות מיוחד.
 * [Deploy Wi-Fi payload settings for Apple devices](https://support.apple.com/guide/deployment/wi-fi-payload-settings-dep40eb424c/web) - מאמר ארגוני על הפצת הגדרות רשת באמצעות שרת MDM.
 
+
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)

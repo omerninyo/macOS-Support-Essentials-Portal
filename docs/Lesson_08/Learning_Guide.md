@@ -75,19 +75,12 @@
 * [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת "לחץ זיכרון" בכלי ה-Activity Monitor.
 
 
-
-
-
-
-
-
-
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Automator-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Script-Editor-scaled.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Shortcuts-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)

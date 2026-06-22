@@ -103,17 +103,9 @@
 * [Booting an M1 Mac from hardware to kexts: 2 LLB and iBoot](https://eclecticlight.co/2022/01/05/booting-an-m1-mac-from-hardware-to-kexts-2-llb-and-iboot/) - החלק השני במאמר שסוקר את תהליך טעינת מערכת ההפעלה מהאחסון.
 
 
-
-
-
-
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! tip "שימוש למדריך"
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-![DeepDive Diagram](../assets/images/DeepDive/Explainer_Recovery_p1_41.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_your_Mac_can’t_get_to_the_login_wi_p2_65.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
-![DeepDive Diagram](../assets/images/DeepDive/Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
 ![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Boot-Camp-scaled.png)
