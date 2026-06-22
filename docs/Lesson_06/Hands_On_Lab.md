@@ -1,4 +1,4 @@
-# Lesson 06 - Asset D: Hands-on Lab
+# שיעור 06 - חלק ד\': תרגול מעשי לתלמיד
 
 ## מעבדה: ניהול APFS, פתרון תקלות ב-Spotlight וחקר Clones
 

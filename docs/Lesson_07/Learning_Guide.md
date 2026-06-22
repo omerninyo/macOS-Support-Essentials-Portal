@@ -1,4 +1,4 @@
-# Lesson 07 Asset C: סיכום שיעור (Time Machine & Snapshots)
+# שיעור 07 חלק ג\': מדריך עזר לתלמיד (Time Machine & Snapshots)
 
 ## 1. נושאי השיעור
 

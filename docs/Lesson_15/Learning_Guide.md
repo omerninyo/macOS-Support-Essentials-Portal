@@ -1,4 +1,4 @@
-# Asset C: סיכום שיעור - Lesson 15 (מתודולוגיות אבחון - Advanced Troubleshooting)
+# חלק ג\': מדריך עזר לתלמיד - שיעור 15 (מתודולוגיות אבחון - Advanced Troubleshooting)
 
 ## 1. נושאי השיעור
 

@@ -1,6 +1,6 @@
-# Lesson 09: Network Configuration - גיליון עזר (סיכום שיעור)
+# שיעור 09: Network Configuration - גיליון עזר (סיכום שיעור)
 
-**מדריך עזר (Learning Guide)**
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## נושאי השיעור
 

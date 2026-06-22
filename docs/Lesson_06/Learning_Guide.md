@@ -1,4 +1,4 @@
-# Lesson 06 - Asset C: Learning Guide
+# שיעור 06 - חלק ג\': מדריך עזר לתלמיד
 
 ## מושגי מפתח (Key Concepts)
 

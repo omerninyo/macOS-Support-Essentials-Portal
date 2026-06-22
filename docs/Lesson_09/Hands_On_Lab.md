@@ -1,4 +1,4 @@
-# Asset D: Hands-on Lab – Network Configuration
+# חלק ד\': תרגול מעשי לתלמיד – Network Configuration
 
 ## מטרת התרגול (Objective)
 במעבדה זו נתרגל ניהול של תצורות רשת (Network Configuration) באופן ויזואלי ומעשי. נלמד כיצד להגדיר מיקומי רשת (Network Locations) ולנהל עדיפויות של ממשקי רשת (Service Order) מתוך הגדרות המערכת. בחלק השני, נשתמש בכלים גרפיים מובנים כמו Activity Monitor ואשף האלחוט לביצוע אבחון רשת, ובחלק השלישי נבחן את חומת האש המובנית (Firewall) ונעקוב אחרי פעילותה באמצעות אפליקציית Console.

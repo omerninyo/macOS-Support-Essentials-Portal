@@ -1,6 +1,6 @@
-# Lesson 08: Terminal, launchd & Background Processes - Learning Guide (Asset C)
+# שיעור 08: Terminal, launchd & Background Processes - Learning Guide (Asset C)
 
-**מדריך עזר (Learning Guide)**
+**מדריך עזר (מדריך עזר לתלמיד)**
 
 ## נושאי השיעור
 
