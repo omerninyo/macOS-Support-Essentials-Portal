@@ -29,6 +29,7 @@ theme:
         name: Switch to light mode
   features:
     - navigation.sections
+    - navigation.path
     - toc.integrate
     - search.highlight
     - navigation.footer

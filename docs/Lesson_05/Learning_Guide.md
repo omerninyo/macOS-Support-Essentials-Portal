@@ -103,5 +103,5 @@
 > [!TIP]
 > **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-![../assets/images/Tahoe_UI/26-Tahoe-App-Store](../assets/images/Tahoe_UI/26-Tahoe-App-Store-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Force-Quit](../assets/images/Tahoe_UI/26-Tahoe-Force-Quit-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-App-Store-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Force-Quit-scaled.png)

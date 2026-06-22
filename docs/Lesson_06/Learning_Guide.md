@@ -90,6 +90,6 @@ mdimport -t -d3 /path/to/specific/file.pdf
 > [!TIP]
 > **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-![../assets/images/Tahoe_UI/26-Tahoe-Disk-Utility](../assets/images/Tahoe_UI/26-Tahoe-Disk-Utility-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Spotlight](../assets/images/Tahoe_UI/26-Tahoe-Spotlight-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Finder-Get-Info](../assets/images/Tahoe_UI/26-Tahoe-Finder-Get-Info-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Disk-Utility-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Spotlight-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Get-Info-scaled.png)

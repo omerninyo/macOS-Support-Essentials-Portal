@@ -112,6 +112,6 @@
 > [!TIP]
 > **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-![../assets/images/Tahoe_UI/26-Tahoe-Settings-Network](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)

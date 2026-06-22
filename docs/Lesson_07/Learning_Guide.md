@@ -104,5 +104,5 @@
 > [!TIP]
 > **שימוש למדריך:** תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-![../assets/images/Tahoe_UI/26-Tahoe-Time-Machine](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-scaled.png)
-![../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-scaled.png)
+![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu-scaled.png)
