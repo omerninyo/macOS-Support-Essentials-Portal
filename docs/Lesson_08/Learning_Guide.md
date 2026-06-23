@@ -91,18 +91,12 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![Slide81 image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
+![Slide81 image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
+![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
+![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
+![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
+![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Automator-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Script-Editor-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Shortcuts-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Console-scaled.png)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_09/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>
-
-![Legacy Slide](../assets/images/Legacy_Presentation/08_SystemServices/Slide81_image95.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/08_SystemServices/Slide81_image94.png)

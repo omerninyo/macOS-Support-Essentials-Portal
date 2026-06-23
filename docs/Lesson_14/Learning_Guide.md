@@ -89,15 +89,10 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![An illustrated guide to Recovery on Apple silicon  p2 61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
+![Explainer Recovery p1 41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
+![Getting more from Recovery on Apple silicon Macs p0 9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
+![What to do when your Mac can t get to the login wi p2 65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![DeepDive Diagram](../assets/images/DeepDive/Explainer_Recovery_p1_41.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_your_Mac_can’t_get_to_the_login_wi_p2_65.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
-![DeepDive Diagram](../assets/images/DeepDive/Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_15/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>

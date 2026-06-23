@@ -102,15 +102,10 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![ActivityMonitor Memory](../assets/images/Lesson_15/L15_DeepDive_ActivityMonitor_Memory.jpg)
+![What to do when an app uses too much memory p1 41](../assets/images/Lesson_15/L15_DeepDive_What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
+![26-Tahoe-Activity-Monitor-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-Activity-Monitor-scaled.png)
+![26-Tahoe-System-Information-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-System-Information-scaled.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Activity-Monitor-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-System-Information-scaled.png)
-![DeepDive Diagram](../assets/images/DeepDive/What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_16/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>
-![DeepDive Screenshot](../assets/images/DeepDive/DeepDive_ActivityMonitor_Memory.jpg)

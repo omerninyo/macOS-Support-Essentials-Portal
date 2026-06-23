@@ -141,10 +141,9 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![Save and read the panic log p1 41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
+![Slide69 image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
+![Slide69 image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![DeepDive Diagram](../assets/images/DeepDive/Save_and_read_the_panic_log_p1_41.png)
-
-![Legacy Slide](../assets/images/Legacy_Presentation/16_Logs/Slide69_image83.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/16_Logs/Slide69_image82.png)

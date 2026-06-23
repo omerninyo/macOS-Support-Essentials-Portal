@@ -162,15 +162,10 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![What is a Background Security Improvement  and how p1 21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
+![What is a Background Security Improvement  and how p3 21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p3_21.jpeg)
+![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
+![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Privacy-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Passwords-scaled.png)
-![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p1_21.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/What_is_a_Background_Security_Improvement,_and_how_p3_21.jpeg)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_04/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>

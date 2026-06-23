@@ -109,36 +109,30 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![Slide131 image161](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image161.png)
+![Slide131 image45](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image45.tif)
+![Slide132 image162](../assets/images/Lesson_09/L09_LegacySlide_Slide132_image162.png)
+![Slide132 image163](../assets/images/Lesson_09/L09_LegacySlide_Slide132_image163.png)
+![Slide133 image161](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image161.png)
+![Slide133 image45](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image45.tif)
+![Slide134 image164](../assets/images/Lesson_09/L09_LegacySlide_Slide134_image164.png)
+![Slide134 image165](../assets/images/Lesson_09/L09_LegacySlide_Slide134_image165.png)
+![Slide135 image166](../assets/images/Lesson_09/L09_LegacySlide_Slide135_image166.png)
+![Slide135 image167](../assets/images/Lesson_09/L09_LegacySlide_Slide135_image167.png)
+![Slide18 image28](../assets/images/Lesson_09/L09_LegacySlide_Slide18_image28.png)
+![Slide23 image41](../assets/images/Lesson_09/L09_LegacySlide_Slide23_image41.png)
+![Slide74 image14](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image14.tif)
+![Slide74 image15](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image15.tif)
+![Slide88 image100](../assets/images/Lesson_09/L09_LegacySlide_Slide88_image100.png)
+![Slide88 image99](../assets/images/Lesson_09/L09_LegacySlide_Slide88_image99.png)
+![Slide99 image103](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image103.png)
+![Slide99 image108](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image108.png)
+![Slide99 image30](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image30.tif)
+![Slide99 image31](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image31.tif)
+![26-Tahoe-Finder-Connect-to-Server-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Connect-to-Server-scaled.png)
+![26-Tahoe-Finder-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Network-scaled.png)
+![26-Tahoe-Settings-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Network-scaled.png)
+![26-Tahoe-Settings-Wi-Fi-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Wi-Fi-scaled.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Network-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Settings-Wi-Fi-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Network-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Finder-Connect-to-Server-scaled.png)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_10/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>
-
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide18_image28.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide23_image41.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide74_image14.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide74_image15.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide88_image99.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide88_image100.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image103.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image108.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image31.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide99_image30.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide131_image45.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide131_image161.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide132_image163.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide132_image162.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide133_image45.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide133_image161.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide134_image164.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide134_image165.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide135_image166.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/09_Networking/Slide135_image167.png)

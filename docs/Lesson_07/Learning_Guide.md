@@ -105,22 +105,16 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+![Snapshots aren t backups p1 114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
+![Time Machine backing up different file systems p4 133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
+![Time Machine backing up different file systems p5 133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
+![Slide120 image42](../assets/images/Lesson_07/L07_LegacySlide_Slide120_image42.tif)
+![Slide122 image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.tif)
+![Slide122 image44](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image44.tif)
+![Slide136 image168](../assets/images/Lesson_07/L07_LegacySlide_Slide136_image168.png)
+![Slide67 image80](../assets/images/Lesson_07/L07_LegacySlide_Slide67_image80.png)
+![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
+![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-scaled.png)
-![Tahoe UI](../assets/images/Tahoe_UI/26-Tahoe-Time-Machine-Menu-scaled.png)
-![DeepDive Diagram](../assets/images/DeepDive/Snapshots_aren’t_backups_p1_114.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
-![DeepDive Diagram](../assets/images/DeepDive/Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
-
----
-<div dir="rtl" style="text-align: left;">
-  <a href="../../Lesson_08/LearningGuide/" style="font-size: 0.95em; color: gray; text-decoration: none;">⏭️ דלג לאותו שלב בשיעור הבא</a>
-</div>
-
-![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide67_image80.png)
-![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide120_image42.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide122_image44.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide122_image43.tif)
-![Legacy Slide](../assets/images/Legacy_Presentation/07_Backup/Slide136_image168.png)
