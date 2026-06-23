@@ -29,7 +29,6 @@ theme:
         name: Switch to light mode
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.path
     - toc.integrate
     - search.highlight
@@ -37,7 +36,7 @@ theme:
     - navigation.top
 
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/custom_theme.css
 
 markdown_extensions:
   - admonition
