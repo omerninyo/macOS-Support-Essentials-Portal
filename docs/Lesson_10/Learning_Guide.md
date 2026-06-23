@@ -80,10 +80,16 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Slide71 image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
 ![Slide71 image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Slide71 image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
+![Slide71 image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
+

@@ -100,12 +100,20 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![ActivityMonitor Memory](../assets/images/Lesson_15/L15_DeepDive_ActivityMonitor_Memory.jpg)
 ![What to do when an app uses too much memory p1 41](../assets/images/Lesson_15/L15_DeepDive_What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 ![26-Tahoe-Activity-Monitor-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-Activity-Monitor-scaled.png)
 ![26-Tahoe-System-Information-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-System-Information-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![ActivityMonitor Memory](../assets/images/Lesson_15/L15_DeepDive_ActivityMonitor_Memory.jpg)
+![What to do when an app uses too much memory p1 41](../assets/images/Lesson_15/L15_DeepDive_What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
+![26-Tahoe-Activity-Monitor-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-Activity-Monitor-scaled.png)
+![26-Tahoe-System-Information-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-System-Information-scaled.png)
+

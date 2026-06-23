@@ -68,7 +68,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![How Thunderbolt 5 can be faster or not p1 9](../assets/images/Lesson_11/L11_DeepDive_How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 ![Slide139 image46](../assets/images/Lesson_11/L11_LegacySlide_Slide139_image46.tif)
@@ -86,5 +85,25 @@
 ![26-Tahoe-Settings-Bluetooth-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Bluetooth-scaled.png)
 ![26-Tahoe-Settings-Printers-and-Scanners-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![How Thunderbolt 5 can be faster or not p1 9](../assets/images/Lesson_11/L11_DeepDive_How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
+![Slide139 image46](../assets/images/Lesson_11/L11_LegacySlide_Slide139_image46.tif)
+![Slide139 image47](../assets/images/Lesson_11/L11_LegacySlide_Slide139_image47.tif)
+![Slide140 image169](../assets/images/Lesson_11/L11_LegacySlide_Slide140_image169.png)
+![Slide140 image49](../assets/images/Lesson_11/L11_LegacySlide_Slide140_image49.jpeg)
+![Slide19 image29](../assets/images/Lesson_11/L11_LegacySlide_Slide19_image29.png)
+![Slide19 image30](../assets/images/Lesson_11/L11_LegacySlide_Slide19_image30.png)
+![Slide31 image50](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image50.png)
+![Slide31 image51](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image51.png)
+![Slide34 image52](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image52.png)
+![Slide34 image53](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image53.png)
+![Slide41 image53](../assets/images/Lesson_11/L11_LegacySlide_Slide41_image53.png)
+![26-Tahoe-Print-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Print-scaled.png)
+![26-Tahoe-Settings-Bluetooth-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Bluetooth-scaled.png)
+![26-Tahoe-Settings-Printers-and-Scanners-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
+

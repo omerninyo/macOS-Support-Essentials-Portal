@@ -157,7 +157,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Disk image performance the cost of encryption rise p2 28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
 ![Slide100 image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
@@ -169,5 +168,19 @@
 ![Slide94 image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
 ![Slide94 image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Disk image performance the cost of encryption rise p2 28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
+![Slide100 image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
+![Slide100 image110](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image110.png)
+![Slide101 image111](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image111.png)
+![Slide101 image112](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image112.png)
+![Slide70 image84](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image84.png)
+![Slide70 image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
+![Slide94 image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
+![Slide94 image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)
+

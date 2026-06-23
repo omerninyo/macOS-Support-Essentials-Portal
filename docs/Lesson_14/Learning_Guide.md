@@ -87,12 +87,20 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![An illustrated guide to Recovery on Apple silicon  p2 61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
 ![Explainer Recovery p1 41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
 ![Getting more from Recovery on Apple silicon Macs p0 9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
 ![What to do when your Mac can t get to the login wi p2 65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![An illustrated guide to Recovery on Apple silicon  p2 61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.png)
+![Explainer Recovery p1 41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
+![Getting more from Recovery on Apple silicon Macs p0 9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
+![What to do when your Mac can t get to the login wi p2 65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+

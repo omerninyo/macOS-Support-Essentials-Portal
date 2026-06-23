@@ -105,7 +105,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Slide138 image169](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image169.png)
 ![Slide138 image49](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image49.jpeg)
@@ -121,5 +120,23 @@
 ![Slide80 image93](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image93.png)
 ![26-Tahoe-Boot-Camp-scaled](../assets/images/Lesson_13/L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Slide138 image169](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image169.png)
+![Slide138 image49](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image49.jpeg)
+![Slide141 image170](../assets/images/Lesson_13/L13_LegacySlide_Slide141_image170.png)
+![Slide142 image171](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image171.png)
+![Slide142 image172](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image172.png)
+![Slide142 image173](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image173.png)
+![Slide142 image174](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image174.png)
+![Slide142 image175](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image175.png)
+![Slide142 image176](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image176.png)
+![Slide142 image177](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image177.png)
+![Slide80 image19](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image19.tif)
+![Slide80 image93](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image93.png)
+![26-Tahoe-Boot-Camp-scaled](../assets/images/Lesson_13/L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png)
+

@@ -107,7 +107,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Slide131 image161](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image161.png)
 ![Slide131 image45](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image45.tif)
@@ -125,5 +124,25 @@
 ![26-Tahoe-Settings-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Network-scaled.png)
 ![26-Tahoe-Settings-Wi-Fi-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Wi-Fi-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Slide131 image161](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image161.png)
+![Slide131 image45](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image45.tif)
+![Slide133 image161](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image161.png)
+![Slide133 image45](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image45.tif)
+![Slide134 image164](../assets/images/Lesson_09/L09_LegacySlide_Slide134_image164.png)
+![Slide23 image41](../assets/images/Lesson_09/L09_LegacySlide_Slide23_image41.png)
+![Slide74 image14](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image14.tif)
+![Slide74 image15](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image15.tif)
+![Slide99 image103](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image103.png)
+![Slide99 image30](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image30.tif)
+![Slide99 image31](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image31.tif)
+![26-Tahoe-Finder-Connect-to-Server-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Connect-to-Server-scaled.png)
+![26-Tahoe-Finder-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Network-scaled.png)
+![26-Tahoe-Settings-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Network-scaled.png)
+![26-Tahoe-Settings-Wi-Fi-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Wi-Fi-scaled.png)
+

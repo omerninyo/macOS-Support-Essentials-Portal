@@ -112,7 +112,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Slide102 image32](../assets/images/Lesson_05/L05_LegacySlide_Slide102_image32.tif)
 ![Slide103 image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.tif)
@@ -130,5 +129,25 @@
 ![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
 ![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Slide102 image32](../assets/images/Lesson_05/L05_LegacySlide_Slide102_image32.tif)
+![Slide103 image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.tif)
+![Slide121 image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.png)
+![Slide12 image13](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image13.png)
+![Slide12 image14](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image14.png)
+![Slide12 image17](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image17.png)
+![Slide32 image51](../assets/images/Lesson_05/L05_LegacySlide_Slide32_image51.png)
+![Slide39 image52](../assets/images/Lesson_05/L05_LegacySlide_Slide39_image52.png)
+![Slide51 image9](../assets/images/Lesson_05/L05_LegacySlide_Slide51_image9.tif)
+![Slide59 image10](../assets/images/Lesson_05/L05_LegacySlide_Slide59_image10.tif)
+![Slide66 image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.tif)
+![Slide66 image12](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image12.tif)
+![Slide75 image89](../assets/images/Lesson_05/L05_LegacySlide_Slide75_image89.png)
+![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
+![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
+

@@ -139,11 +139,18 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Save and read the panic log p1 41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
 ![Slide69 image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
 ![Slide69 image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Save and read the panic log p1 41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
+![Slide69 image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
+![Slide69 image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
+

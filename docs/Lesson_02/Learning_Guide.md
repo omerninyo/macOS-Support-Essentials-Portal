@@ -67,7 +67,6 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![Slide2 image3](../assets/images/Lesson_02/L02_LegacySlide_Slide2_image3.jpeg)
 ![Slide48 image8](../assets/images/Lesson_02/L02_LegacySlide_Slide48_image8.tif)
@@ -85,5 +84,25 @@
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
 ![26-Tahoe-Settings-Users-Groups-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Users-Groups-scaled.png)
 
+
+
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Slide2 image3](../assets/images/Lesson_02/L02_LegacySlide_Slide2_image3.jpeg)
+![Slide48 image8](../assets/images/Lesson_02/L02_LegacySlide_Slide48_image8.tif)
+![Slide53 image67](../assets/images/Lesson_02/L02_LegacySlide_Slide53_image67.png)
+![Slide87 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.tif)
+![Slide87 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.tif)
+![Slide89 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image22.tif)
+![Slide89 image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.tif)
+![Slide90 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image23.tif)
+![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.tif)
+![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.tif)
+![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
+![26-Tahoe-Fast-User-Menu-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Menu-scaled.png)
+![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
+![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
+![26-Tahoe-Settings-Users-Groups-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Users-Groups-scaled.png)
+
