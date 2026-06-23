@@ -9,51 +9,7 @@
   --md-accent-fg-color--transparent: rgba(210, 96, 44, 0.1);
 }
 
-/* Force Sidebar to show on iPad Landscape (1024px to 1219px) in RTL */
-@media screen and (min-width: 1024px) and (max-width: 1219px) {
-  /* Hide hamburger menu toggle */
-  .md-header__button.md-icon[for="__drawer"] {
-    display: none !important;
-  }
 
-  /* Revert the main container to desktop flex behavior */
-  .md-main__inner {
-    display: flex !important;
-  }
-
-  /* Show the primary sidebar naturally in the flex flow */
-  .md-sidebar.md-sidebar--primary {
-    display: block !important;
-    position: static !important;
-    width: 12.1rem !important;
-    flex: 0 0 12.1rem !important;
-    height: auto !important;
-    transform: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    z-index: auto !important;
-  }
-
-  /* Ensure the nav inside is sticky like desktop */
-  .md-nav--primary {
-    display: block !important;
-  }
-
-  /* Content area adjustment */
-  .md-content {
-    margin-right: 1.5rem !important;
-    margin-left: 0 !important;
-    flex: 1 !important;
-    min-width: 0 !important;
-  }
-  
-  /* Prevent the drawer overlay from blocking clicks */
-  .md-overlay {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-}
 
 /* Wediggit Custom Brand Orange */
 :root {
