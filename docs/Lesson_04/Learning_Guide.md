@@ -2,6 +2,15 @@
 **מדריך עזר לתלמיד**
 
 
+## מטרות השיעור
+
+* הצפנת נתונים
+* ניהול הרשאות מודרני
+* פתרונות לארגונים
+**[Image Recommendation]:** A super minimalist abstract vector diagram showing a data vault with a digital key overlay.
+**Presenter Notes:**
+
+
 ## סקירה
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->

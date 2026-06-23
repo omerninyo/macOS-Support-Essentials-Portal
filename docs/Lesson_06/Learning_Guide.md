@@ -2,6 +2,15 @@
 **מדריך עזר לתלמיד**
 
 
+## מטרות השיעור
+
+* APFS Architecture
+* System Volume Group (SVG)
+* Firmlinks
+* Spotlight Indexing
+**[Image Recommendation]:** A super minimalist abstract vector diagram showing a glowing data core (representing APFS) splitting into two interconnected hemispheres (System and Data).
+
+
 ## סקירה
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
