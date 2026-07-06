@@ -44,6 +44,26 @@ plugins:
         - locale: en
           name: English
           build: true
+          nav_translations:
+            עמוד הבית: Home
+            מדריך עזר: Learning Guide
+            תרגול מעשי: Hands-On Lab
+            'שיעור 1: התקנה, הכרה ויישור קו': 'Lesson 1: Installation, Orientation and Baseline'
+            'שיעור 2: ניהול משתמשים ואבטחת נתונים': 'Lesson 2: User Management and Data Security'
+            'שיעור 3: אבטחת מידע': 'Lesson 3: Security'
+            'שיעור 4: הצפנה ומפתחות': 'Lesson 4: Encryption and Keys'
+            'שיעור 5: אפליקציות ותהליכים': 'Lesson 5: Applications and Processes'
+            'שיעור 6: מערכת הקבצים (APFS)': 'Lesson 6: File System (APFS)'
+            'שיעור 7: גיבוי ושחזור': 'Lesson 7: Backup and Restore'
+            'שיעור 8: טרמינל ושירותי רקע': 'Lesson 8: Terminal and Background Services'
+            'שיעור 9: רשתות': 'Lesson 9: Networking'
+            'שיעור 10: שיתוף וגישה מרחוק': 'Lesson 10: Sharing and Remote Access'
+            'שיעור 11: ציוד היקפי': 'Lesson 11: Peripherals'
+            'שיעור 12: עדכונים ושדרוגים': 'Lesson 12: Updates and Upgrades'
+            'שיעור 13: תהליך האתחול': 'Lesson 13: The Boot Process'
+            'שיעור 14: סביבת שחזור ומחיקה': 'Lesson 14: Recovery Environment and Erase'
+            'שיעור 15: דיאגנוסטיקה': 'Lesson 15: Diagnostics'
+            'שיעור 16: ניתוח לוגים (חדר בריחה)': 'Lesson 16: Log Analysis (Escape Room)'
 
 extra_css:
   - stylesheets/custom_theme.css
