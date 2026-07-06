@@ -35,6 +35,18 @@ theme:
     - navigation.footer
     - navigation.top
 
+plugins:
+  - search
+  - i18n:
+      default_language: he
+      languages:
+        he:
+          name: עברית
+          build: true
+        en:
+          name: English
+          build: true
+
 extra_css:
   - stylesheets/custom_theme.css
 

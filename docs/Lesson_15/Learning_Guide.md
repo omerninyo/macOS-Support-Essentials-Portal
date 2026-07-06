@@ -17,6 +17,12 @@
 * **Apple Diagnostics:** כלי אבחון חומרה המובנה בקושחה (Firmware) שנועד לבדוק רכיבים פיזיים כגון זיכרון (RAM), מאווררים, סוללה וחיישנים. במחשבי Apple Silicon מפעילים אותו מתוך תפריט האפשרויות (לחיצה ארוכה על כפתור ההדלקה) ולחיצה על `Command + D`.
 * **Verbose Mode:** מצב הפעלה (רלוונטי יותר במחשבי Intel עם מקשי `Command + V`) המציג טקסט של תהליך האתחול במקום לוגו התפוח. כיום במחשבי Apple Silicon מוחלף בעיקר בבדיקת לוגים עמוקה לאחר עליית המערכת.
 * **Activity Monitor & Console (היסטוריה קצרה):** אפליקציית Activity Monitor החלה את דרכה ב-2003 (Mac OS X Panther) כאיחוד של הכלים Process Viewer ו-CPU Monitor. בעבר, ה-Console עבד מול קבצי טקסט פשוטים, אך החל מ-macOS Sierra ב-2016 המערכת עברה ל-Unified Logging System - מערכת לוגים בינארית ואחידה המציגה אלפי אירועים בשנייה.
+
+!!! tip "Deep Dive 🤿: מה Activity Monitor באמת מודד?"
+    במחשבי Apple Silicon, הנתונים ב-Activity Monitor לעיתים מטעים ואינם מייצגים נתוני חומרה מוחלטים:
+    * **CPU %:** יכול לחצות את ה-100% (כל ליבה נספרת כ-100%), אך המדידה לא משקפת עומס מדויק בגלל הארכיטקטורה הא-סימטרית (E-cores ו-P-cores).
+    * **Energy Impact:** זהו ציון (Score) יחסי המבוסס על אלגוריתם, ולא נתון פיזי בוואט (Watts).
+    * **מסקנה לתומכים:** השתמשו במספרים אלו רק כדי לאתר תהליכים "סוררים" (Runaway Processes), ולא למדידת ביצועים כירורגית. [למאמר המלא של Eclectic Light](https://eclecticlight.co/2026/06/29/what-does-activity-monitor-measure/)
 * **App Memory Leaks (דליפות זיכרון באפליקציות):** מצב שבו אפליקציה צורכת עוד ועוד זיכרון ללא הרף ולא משחררת אותו חזרה למערכת. הדבר גורם לאיטיות רבה במק (תופעת ה-Beachball), אך לרוב ללא רעש מאווררים מוגבר (המאפיין עומס על המעבד). הפתרון הוא לעקוב אחרי צריכת הזיכרון בלשונית Memory ב-Activity Monitor, ולכבות את האפליקציה לחלוטין (Quit). לעומת זאת, דליפות בזיכרון הליבה (Kernel Memory Leaks) הן נדירות וחמורות בהרבה, ויובילו לקריסת מערכת מוחלטת (Kernel Panic). [לקריאה נוספת מהמאמר של Eclectic Light](https://eclecticlight.co/2026/06/19/what-can-you-do-when-an-app-uses-too-much-memory/)
 
 ## Safe Mode
