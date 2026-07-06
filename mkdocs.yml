@@ -38,12 +38,12 @@ theme:
 plugins:
   - search
   - i18n:
-      default_language: he
       languages:
-        he:
+        - locale: he
+          default: true
           name: עברית
           build: true
-        en:
+        - locale: en
           name: English
           build: true
 
