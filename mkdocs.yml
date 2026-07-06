@@ -7,8 +7,6 @@ theme:
   name: material
   logo: assets/images/Wediggit_Logo_Black.png
   favicon: assets/images/Wediggit_Logo_Black.png
-  language: he
-  direction: rtl
   font:
     text: Assistant
     code: Roboto Mono
