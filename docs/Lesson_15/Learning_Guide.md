@@ -20,6 +20,7 @@
 
 !!! tip "Deep Dive 🤿: מה Activity Monitor באמת מודד?"
     במחשבי Apple Silicon, הנתונים ב-Activity Monitor לעיתים מטעים ואינם מייצגים נתוני חומרה מוחלטים:
+
     * **CPU %:** יכול לחצות את ה-100% (כל ליבה נספרת כ-100%), אך המדידה לא משקפת עומס מדויק בגלל הארכיטקטורה הא-סימטרית (E-cores ו-P-cores).
     * **Energy Impact:** זהו ציון (Score) יחסי המבוסס על אלגוריתם, ולא נתון פיזי בוואט (Watts).
     * **מסקנה לתומכים:** השתמשו במספרים אלו רק כדי לאתר תהליכים "סוררים" (Runaway Processes), ולא למדידת ביצועים כירורגית. [למאמר המלא של Eclectic Light](https://eclecticlight.co/2026/06/29/what-does-activity-monitor-measure/)

@@ -29,6 +29,7 @@
 > [!TIP]
 > **Pro Tip: הגדרות שפה ובינה מלאכותית בישראל**
 > כדי ש-Apple Intelligence יעבוד כשורה, חובה לוודא ששפת המערכת (Primary Language) תואמת בדיוק לשפה של Siri (למשל English US). חוסר התאמה יוביל לכך שחלק מתכונות ה-AI יושבתו. אם בחרתם להשתמש בממשק אנגלי כדי לקבל את תכונות ה-AI, קחו בחשבון שהכתבה קולית (Dictation) ל-Siri בעברית תהיה בעייתית. בנוסף, אם ברשותכם מספר שפות מקלדת, כדאי לשקול ביטול מעבר שפות דרך מקש הגלובוס (🌐) כדי למנוע מצבים נדירים של הקלדת סיסמה שגויה במסך ההתחברות עקב פריסת מקלדת לא נכונה.
+
 * **Background Process:** תהליך מערכת שרץ ברקע ללא חלון משתמש גלוי, לעיתים קרובות מאוחסן כ-LaunchAgent או LaunchDaemon.
 
 ## פקודות ונתיבים רלוונטיים (Commands & Paths)
@@ -46,9 +47,11 @@
 * **Apple Platform Deployment - Automated Device Enrollment:**
 
   [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
+
 * **Apple Platform Security - Boot process for a Mac with Apple silicon:**
 
   [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
+
 * **Apple Support - Apple Intelligence Overview:**
 
   [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)

@@ -47,6 +47,7 @@
   ```bash
   spctl --status
   ```
+
 * **בדיקת אפליקציה - הערכת Gatekeeper (האם היא מאושרת ותרוץ):**
 
   ```bash
@@ -74,26 +75,31 @@
   ```bash
   tccutil reset All
   ```
+
 * **איפוס הרשאת מצלמה בלבד (לכל האפליקציות שביקשו עד כה):**
 
   ```bash
   tccutil reset Camera
   ```
+
 * **איפוס הרשאת מיקרופון בלבד:**
 
   ```bash
   tccutil reset Microphone
   ```
+
 * **איפוס הרשאת גישה לכל הדיסק (Full Disk Access):**
 
   ```bash
   tccutil reset SystemPolicyAllFiles
   ```
+
 * **איפוס הרשאת צפייה במסך (Screen Recording):**
 
   ```bash
   tccutil reset ScreenCapture
   ```
+
 * **איפוס הרשאת מצלמה עבור אפליקציה ספציפית (לדוגמה, Terminal או Zoom), על ידי Bundle ID:**
 
   ```bash
@@ -113,6 +119,7 @@
   ```text
   ~/Library/Application Support/com.apple.TCC/TCC.db
   ```
+
 * **מסד הנתונים ברמת המערכת (ניהול הרשאות קריטיות כמו Full Disk Access):**
 
   ```text
@@ -127,6 +134,7 @@
   ```text
   /Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/XProtect.plist
   ```
+
 * **האפליקציה המריצה את ה-XProtect Remediator (כלי הסריקות התקופתיות והרמדיאציה):**
 
   ```text
@@ -141,11 +149,13 @@
   ```bash
   log show --predicate 'subsystem == "com.apple.syspolicy"' --info --last 1h
   ```
+
 * **מעקב אחר חסימות של מערכת ה-TCC (מי ניסה לגשת למה ומתי נחסם):**
 
   ```bash
   log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
   ```
+
 * **צפייה בתוצאות הסריקה של XProtect Remediator (האם זוהתה נוזקה במערכת):**
 
   ```bash

@@ -53,15 +53,18 @@
   ```bash
   sysadminctl -secureTokenStatus $USER
   ```
+
 * **בדיקת סטטוס למשתמש ספציפי (לדוגמה `johndoe`):**
 
   ```bash
   sysadminctl -secureTokenStatus johndoe
   ```
+
 * **הענקת Secure Token למשתמש אחר:** (דורש משתמש אדמין שכבר יש לו Secure Token)
   ```bash
   sysadminctl -secureTokenOn newuser -password newuserpass -adminUser adminname -adminPassword adminpass
   ```
+
 * **הסרת Secure Token ממשתמש:** (זהירות - מחיקת האסימון לכלל המשתמשים עלולה לנעול את המחשב מהרשאות קריטיות!)
   ```bash
   sysadminctl -secureTokenOff otheruser -password userpass -adminUser adminname -adminPassword adminpass
@@ -74,6 +77,7 @@
   ```bash
   fdesetup status
   ```
+
 * **הפעלת FileVault דרך הטרמינל (עבור המשתמש הנוכחי):**
 
   ```bash
@@ -86,26 +90,31 @@
   ```bash
   sudo fdesetup disable
   ```
+
 * **הצגת רשימת המשתמשים המורשים לשחרר את ההצפנה בשלב הבוט:**
 
   ```bash
   sudo fdesetup list
   ```
+
 * **הסרת משתמש ספציפי (לדוגמה `johndoe`) ממורשי שחרור הדיסק:**
 
   ```bash
   sudo fdesetup remove -user johndoe
   ```
+
 * **החלפת מפתח השחזור האישי (PRK) ויצירת מפתח חדש:**
 
   ```bash
   sudo fdesetup changerecovery -personal
   ```
+
 * **סנכרון מיידי של ה-FileVault (בדיקה אם נדרש רענון למפתחות או סיסמאות שהשתנו):**
 
   ```bash
   sudo fdesetup sync
   ```
+
 * **הפעלת מנגנון הצפנה עם קובץ Plist שקט (אידיאלי להפצה בתהליכי MDM - דורש הרשאות אדמין והגדרת XML):**
 
   ```bash

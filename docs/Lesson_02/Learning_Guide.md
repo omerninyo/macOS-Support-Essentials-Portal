@@ -50,10 +50,13 @@
 
 * **Apple Platform Support: Intro to user account types**
   [https://support.apple.com/guide/platform-support/sup72e8c67c3/web](https://support.apple.com/guide/platform-support/sup72e8c67c3/web)
+
 * **Apple Platform Deployment: About Managed Apple Accounts**
   [https://support.apple.com/guide/deployment/depdc4ba8d82/web](https://support.apple.com/guide/deployment/depdc4ba8d82/web)
+
 * **The Eclectic Light Company: Explainer: Keychain basics**
   [https://eclecticlight.co/2022/10/15/explainer-keychain-basics/](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/)
+
 * **The Mac Security Blog: Understanding User Accounts in macOS**
   [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
 

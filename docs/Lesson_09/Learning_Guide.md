@@ -36,14 +36,19 @@
 
 * `networksetup -listallnetworkservices`
   > מציג רשימה של כל שירותי הרשת (Wi-Fi, Ethernet וכו'). שירות המופיע עם כוכבית (*) בסמוך אליו הוא שירות מושבת.
+
 * `networksetup -getinfo "Wi-Fi"`
   > מציג את הגדרות ה-IP, ה-Subnet וה-Router הנוכחיות עבור השירות שצוין.
+
 * `networksetup -getmacaddress "Ethernet"`
   > מאחזר את כתובת ה-MAC הפיזית (Hardware Address) של כרטיס הרשת המסוים.
+
 * `networksetup -getdnsservers "Wi-Fi"`
   > מציג את רשימת שרתי ה-DNS המוגדרים כעת ידנית עבור שירות ה-Wi-Fi.
+
 * `networksetup -listlocations`
   > מציג את כל מיקומי הרשת (Network Locations) שקיימים כרגע במערכת.
+
 * `networksetup -getcurrentlocation`
   > מציג מהו מיקום הרשת הפעיל כעת.
 
@@ -51,8 +56,10 @@
 
 * `sudo networksetup -setdhcp "Ethernet"`
   > מגדיר את כרטיס ה-Ethernet למשוך כתובת IP באופן אוטומטי משרת ה-DHCP.
+
 * `sudo networksetup -setmanual "Ethernet" 192.168.1.100 255.255.255.0 192.168.1.1`
   > מגדיר כתובת IP סטטית, יחד עם Subnet Mask ו-Router.
+
 * `sudo networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4`
   > מגדיר שרתי DNS באופן ידני (על מנת למחוק את השרתים הידניים ולחזור ל-DHCP, יש להשתמש בערך `empty`).
 
@@ -60,8 +67,10 @@
 
 * `sudo networksetup -setnetworkserviceenabled "Bluetooth PAN" off`
   > מכבה לחלוטין את שירות הרשת שצוין.
+
 * `sudo networksetup -createlocation "Office" populate`
   > יוצר מיקום רשת חדש בשם "Office" ומאכלס אותו אוטומטית בשירותי החומרה הקיימים במק.
+
 * `sudo networksetup -switchtolocation "Office"`
   > מחליף את המערכת למיקום רשת אחר ומחיל את כל הגדרות הרשת הרלוונטיות של אותו המיקום באופן מיידי.
 
@@ -69,16 +78,22 @@
 
 * `ping -c 4 apple.com`
   > שולח 4 בקשות אקו (ICMP Echo Request) לשרת כדי לבדוק האם הוא זמין ומה זמן התגובה (Latency). הפקודה תעצור אוטומטית לאחר 4 נסיונות.
+
 * `traceroute google.com`
   > מציג את כל ה"תחנות" (הראוטרים/Hops) שהמידע עובר דרכן עד הגעתו ליעד. כלי מעולה לאבחון היכן בדיוק מתרחש ניתוק ברשת.
+
 * `nslookup apple.com`
   > מבצע שאילתת DNS פשוטה ומציג לאיזו כתובת IP השרת מתרגם את שם המתחם.
+
 * `dig apple.com`
   > כלי מקצועי ומפורט יותר לבדיקת רשומות DNS, המציג את זמני המענה מהשרת ואת סוגי הרשומות המדויקים.
+
 * `ifconfig`
   > פקודת UNIX וותיקה המציגה מידע ברמת הליבה (Interface Level) על כל כרטיסי הרשת והרשתות הווירטואליות. מיועדת יותר לחקירת המצב הפיזי או סביבות Containers.
+
 * `netstat -rn`
   > מציג את טבלת הניתוב (Routing Table) הפנימית של המק.
+
 * `lsof -i :80`
   > מציג אילו תהליכים ואפליקציות פתוחים כרגע במק ומאזינים או מקושרים לפורט ספציפי (בדוגמה זו - פורט 80).
 
@@ -88,6 +103,7 @@
 
 * `/Library/Preferences/SystemConfiguration/preferences.plist`
   > קובץ התצורה הראשי המכיל את כל הגדרות ממשקי הרשת והמיקומים של המק. אדמיניסטרטורים לעיתים מוחקים קובץ זה כדי לאפס לחלוטין את הרשת במערכת במקרה של תקלות חמורות.
+
 * `/Library/Preferences/com.apple.alf.plist`
   > קובץ התצורה של חומת האש (ALF).
 

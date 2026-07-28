@@ -75,6 +75,7 @@
   ```bash
   log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info
   ```
+
 * **בדיקת היסטוריית התקנות מורחבת:**
 
   ```bash
