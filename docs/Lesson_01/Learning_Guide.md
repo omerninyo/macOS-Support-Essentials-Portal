@@ -1,44 +1,47 @@
-# Lesson 01: Installation, Orientation, and Alignment
-**Student Learning Guide**
+# שיעור 01: התקנה, הכרה ויישור קו
+**מדריך עזר לתלמיד**
 
-## Lesson Objectives
+## מטרות השיעור
 
-* **History and Philosophy** - Evolution from OS X to macOS, the updated Mac lineup for enterprise, and the transition to Apple Silicon.
-* **Out-of-Box Experience (OOBE)** - Deep dive into the Setup Assistant.
-* **The System, Innovation, and Accessibility** - Navigation, Multi-Touch gestures, the Continuity ecosystem, Apple Intelligence overview, Screen Mirroring, and Accessibility (Videos: Universal Control, Continuity Camera, and "The Greatest").
-* **Enterprise Flavor** - What happens when the Remote Management (MDM / ADE) screen interrupts the setup process.
+* **היסטוריה ופילוסופיה** - אבולוציה מ-OS X ל-macOS, ליין ה-Mac המעודכן לחברות, והמעבר ל-Apple Silicon.
+* **חוויית פתיחת הקופסה (OOBE)** - צלילה ל-Setup Assistant.
+* **המערכת, חדשנות ונגישות** - ניווט, מחוות Multi-Touch, אקוסיסטם ה-Continuity, סקירת Apple Intelligence, שקוף מסך, ונגישות (סרטונים: Universal Control, Continuity Camera, ו-"The Greatest").
+* **תיבול ארגוני** - מה קורה כשמסך ה-Remote Management (MDM / ADE) קוטע את תהליך ההגדרה.
 
 
 
-## Overview
+## סקירה
 
-<!-- Captivate NotebookLM Podcast -->
+<!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/128517f1-2471-4e85-a0f5-7611f6c30dcb/"></iframe></div>
 
-## Key Concepts
+## מושגי מפתח (Key Concepts)
 
-* **Apple Silicon:** The modern architecture of Mac computers based on Apple's in-house development (M-Series processors with ARM architecture), delivering unprecedented performance-per-watt.
-* **System on a Chip (SoC):** A silicon design that integrates the central processing unit (CPU), graphics processing unit (GPU), memory, and security enclaves onto a single chip.
-* **Unified Memory:** An innovative architecture in Apple Silicon that integrates both system memory (RAM) and video memory (VRAM) directly onto the chip package. This allows all SoC components to access the same memory pool without copying data back and forth. It eliminates bottlenecks, improves performance, and saves power, but at the cost of non-upgradability (memory is soldered). [Further reading by Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
-* **Secure Enclave:** An isolated hardware subsystem within the SoC responsible for cryptographic operations, managing encryption keys, and verifying biometric data (Touch ID).
-* **Rosetta 2:** A transparent translation environment built into macOS that allows applications written for Intel processors (x86) to run on Apple Silicon Macs. The translation is mostly done Ahead of Time.
-* **Setup Assistant:** The initial process that runs when booting a new Mac or after an EACS (Erase All Content and Settings). It handles network configuration, region selection, creating a Local Account, and more.
-* **Automated Device Enrollment (ADE):** A deployment and management technology (formerly DEP) that allows organizations to automatically enroll Mac computers into MDM (Zero-Touch Deployment) upon first connecting to the internet, replacing the consumer Setup Assistant with a Remote Management screen.
-* **Continuity:** A suite of technologies that allows seamless workflows across Apple devices (e.g., Universal Control, Handoff, Continuity Camera). Mostly relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi.
-* **Apple Intelligence:** An artificial intelligence system integrated into macOS that utilizes the Neural Engine in Apple Silicon to process language models locally, with a strong emphasis on privacy.
-* **Background Process:** A system process running in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
+* **Apple Silicon:** הארכיטקטורה המודרנית של מחשבי ה-Mac המבוססת על פיתוח פנימי של אפל (מעבדי M-Series בתצורת ARM), המספקת יחס ביצועים לצריכת חשמל חסר תקדים.
+* **System on a Chip (SoC):** תכנון סיליקון שמאגד את המעבד הראשי (CPU), המעבד הגרפי (GPU), זיכרון, ומנגנוני אבטחה לשבב בודד.
+* **Unified Memory:** זיכרון מאוחד. ארכיטקטורה חדשנית ב-Apple Silicon המשלבת את הזיכרון הראשי (RAM) וזיכרון המסך (VRAM) אל תוך תושבת השבב עצמה. הדבר מאפשר לכל רכיבי ה-SoC לגשת לאותו מאגר זיכרון ללא צורך בהעתקת נתונים הלוך ושוב. הארכיטקטורה מבטלת צווארי בקבוק, משפרת ביצועים וחוסכת חשמל, אך במחיר של חוסר יכולת לשדרג את הזיכרון לאחר הרכישה (הזיכרון מולחם). [לקריאה נוספת מאת Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
+* **Secure Enclave:** תת-מערכת חומרתית מבודדת בתוך ה-SoC האחראית על פעולות קריפטוגרפיות, שמירת מפתחות הצפנה ואימות נתונים ביומטריים (Touch ID).
+* **Rosetta 2:** סביבת תרגום שקופה המובנית ב-macOS המאפשרת לאפליקציות שנכתבו עבור מעבדי Intel (x86) לרוץ על מחשבי Apple Silicon. התרגום מבוצע לרוב מראש (Ahead of Time).
+* **Setup Assistant:** התהליך הראשוני שמתבצע בהפעלת מק חדש או אחרי EACS. אחראי על הגדרות רשת, אזור, יצירת Local Account, ועוד.
+* **Automated Device Enrollment (ADE):** טכנולוגיית פריסה וניהול (לשעבר DEP) המאפשרת לארגונים לחבר מחשבי Mac ל-MDM באופן אוטומטי (Zero-Touch Deployment) מרגע החיבור הראשון לרשת, ולהחליף את ה-Setup Assistant הצרכני במסך Remote Management.
+* **Continuity:** אוסף טכנולוגיות המאפשרות רצף עבודה בין מכשירי אפל (כמו Universal Control, Handoff, Continuity Camera). עובד לרוב על בסיס זיהוי קרבה ב-Bluetooth ותקשורת Peer-to-Peer Wi-Fi.
+* **Apple Intelligence:** מערכת בינה מלאכותית המובנית ב-macOS המנצלת את ה-Neural Engine שב-Apple Silicon לעיבוד מודלי שפה באופן מקומי, מתוך דגש על פרטיות.
+> [!TIP]
+> **Pro Tip: הגדרות שפה ובינה מלאכותית בישראל**
+> כדי ש-Apple Intelligence יעבוד כשורה, חובה לוודא ששפת המערכת (Primary Language) תואמת בדיוק לשפה של Siri (למשל English US). חוסר התאמה יוביל לכך שחלק מתכונות ה-AI יושבתו. אם בחרתם להשתמש בממשק אנגלי כדי לקבל את תכונות ה-AI, קחו בחשבון שהכתבה קולית (Dictation) ל-Siri בעברית תהיה בעייתית. בנוסף, אם ברשותכם מספר שפות מקלדת, כדאי לשקול ביטול מעבר שפות דרך מקש הגלובוס (🌐) כדי למנוע מצבים נדירים של הקלדת סיסמה שגויה במסך ההתחברות עקב פריסת מקלדת לא נכונה.
+* **Background Process:** תהליך מערכת שרץ ברקע ללא חלון משתמש גלוי, לעיתים קרובות מאוחסן כ-LaunchAgent או LaunchDaemon.
 
-## Relevant Commands & Paths
+## פקודות ונתיבים רלוונטיים (Commands & Paths)
 
-| Path / Command | Description |
+| נתיב / פקודה | תיאור |
 | :--- | :--- |
-| `uname -m` | Terminal command that returns `arm64` if the Mac is running Apple Silicon, or `x86_64` for Intel processors. |
-| `system_profiler SPHardwareDataType` | Command that provides a full hardware overview of the Mac, including core count and memory size. |
-| `/var/db/.AppleSetupDone` | A flag file. When present, the operating system "knows" the Setup Assistant phase is complete and skips it on subsequent bootups. |
-| `sudo profiles show -type enrollment` | Command that returns the device's organizational enrollment status (whether it has an active ADE enrollment via Apple Business Manager). |
-| `log show --predicate 'process == "Setup Assistant"' --info` | A query to extract specific logs generated by the Out-of-Box setup process. |
+| `uname -m` | פקודת טרמינל המחזירה `arm64` אם המחשב מריץ Apple Silicon, או `x86_64` למעבדי Intel. |
+| `system_profiler SPHardwareDataType` | פקודה המספקת פירוט חומרה מלא של ה-Mac, כולל מספר הליבות והזיכרון. |
+| `/var/db/.AppleSetupDone` | קובץ דגל (Flag). כאשר הוא קיים, מערכת ההפעלה "יודעת" ששלב ה-Setup Assistant הושלם, ומדלגת עליו בהדלקות הבאות. |
+| `sudo profiles show -type enrollment` | פקודה המחזירה את סטטוס ההרשמה של המכשיר לארגון (האם קיימת הרשמת ADE דרך Apple Business Manager). |
+| `log show --predicate 'process == "Setup Assistant"' --info` | שאילתה לשליפת לוגים ספציפיים מתוך התהליך של פתיחת הקופסה. |
 
-## Recommended Links & Further Reading
+## Recommended Reading & Enrichment Links
 
 * **Apple Platform Deployment - Automated Device Enrollment:**
 
@@ -50,38 +53,16 @@
 
   [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
 
-## Deep Dive Reading
+## קישורים מומלצים ולקריאה נוספת
 
-* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - An in-depth article explaining memory management in macOS.
+* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - מאמר עומק המסביר את אופן ניהול הזיכרון במערכת ההפעלה.
 
-## Summary Video
+## סרטון סיכום
 
-<!-- YouTube Summary Video -->
+<!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-
-![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
-![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
-![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.tif)
-![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.tif)
-![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
-![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
-![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)
-![26-Tahoe-Finder-Customize-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Customize-scaled.png)
-![26-Tahoe-Finder-Desktop-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Desktop-Stacks-scaled.png)
-![26-Tahoe-Finder-Go-To-Folder-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Go-To-Folder-scaled.png)
-![26-Tahoe-Finder-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Stacks-scaled.png)
-![26-Tahoe-Notification-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Notification-Center-scaled.png)
-![26-Tahoe-Settings-Battery-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-Battery-scaled.png)
-![26-Tahoe-Settings-General-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-General-scaled.png)
-
-
-
-!!! tip "Visual Aid (Student Reference)"
-    These images illustrate the interface or mechanisms relevant to this lesson's topic.
 
 
 ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
@@ -99,3 +80,26 @@
 ![26-Tahoe-Notification-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Notification-Center-scaled.png)
 ![26-Tahoe-Settings-Battery-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-Battery-scaled.png)
 ![26-Tahoe-Settings-General-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-General-scaled.png)
+
+
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+
+![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
+![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
+![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
+![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.tif)
+![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.tif)
+![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
+![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
+![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)
+![26-Tahoe-Finder-Customize-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Customize-scaled.png)
+![26-Tahoe-Finder-Desktop-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Desktop-Stacks-scaled.png)
+![26-Tahoe-Finder-Go-To-Folder-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Go-To-Folder-scaled.png)
+![26-Tahoe-Finder-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Stacks-scaled.png)
+![26-Tahoe-Notification-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Notification-Center-scaled.png)
+![26-Tahoe-Settings-Battery-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-Battery-scaled.png)
+![26-Tahoe-Settings-General-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-General-scaled.png)
+

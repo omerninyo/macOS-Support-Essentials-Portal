@@ -3,10 +3,12 @@
 
 ## Lesson Objectives
 
-*   **History and Philosophy** - Evolution from OS X to macOS, the updated Mac lineup for enterprise, and the transition to Apple Silicon.
-*   **Out-of-Box Experience (OOBE)** - Deep dive into the Setup Assistant.
-*   **The System, Innovation, and Accessibility** - Navigation, Multi-Touch gestures, the Continuity ecosystem, Apple Intelligence overview, Screen Mirroring, and Accessibility (Videos: Universal Control, Continuity Camera, and "The Greatest").
-*   **Enterprise Flavor** - What happens when the Remote Management (MDM / ADE) screen interrupts the setup process.
+* **History and Philosophy** - Evolution from OS X to macOS, the updated Mac lineup for enterprise, and the transition to Apple Silicon.
+* **Out-of-Box Experience (OOBE)** - Deep dive into the Setup Assistant.
+* **The System, Innovation, and Accessibility** - Navigation, Multi-Touch gestures, the Continuity ecosystem, Apple Intelligence overview, Screen Mirroring, and Accessibility (Videos: Universal Control, Continuity Camera, and "The Greatest").
+* **Enterprise Flavor** - What happens when the Remote Management (MDM / ADE) screen interrupts the setup process.
+
+
 
 ## Overview
 
@@ -15,16 +17,16 @@
 
 ## Key Concepts
 
-*   **Apple Silicon:** The modern architecture of Mac computers based on Apple's in-house development (M-Series processors with ARM architecture), delivering unprecedented performance-per-watt.
-*   **System on a Chip (SoC):** A silicon design that integrates the central processing unit (CPU), graphics processing unit (GPU), memory, and security enclaves onto a single chip.
-*   **Unified Memory:** An innovative architecture in Apple Silicon that integrates both system memory (RAM) and video memory (VRAM) directly onto the chip package. This allows all SoC components to access the same memory pool without copying data back and forth. It eliminates bottlenecks, improves performance, and saves power, but at the cost of non-upgradability (memory is soldered). [Further reading by Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
-*   **Secure Enclave:** An isolated hardware subsystem within the SoC responsible for cryptographic operations, managing encryption keys, and verifying biometric data (Touch ID).
-*   **Rosetta 2:** A transparent translation environment built into macOS that allows applications written for Intel processors (x86) to run on Apple Silicon Macs. The translation is mostly done Ahead of Time.
-*   **Setup Assistant:** The initial process that runs when booting a new Mac or after an EACS (Erase All Content and Settings). It handles network configuration, region selection, creating a Local Account, and more.
-*   **Automated Device Enrollment (ADE):** A deployment and management technology (formerly DEP) that allows organizations to automatically enroll Mac computers into MDM (Zero-Touch Deployment) upon first connecting to the internet, replacing the consumer Setup Assistant with a Remote Management screen.
-*   **Continuity:** A suite of technologies that allows seamless workflows across Apple devices (e.g., Universal Control, Handoff, Continuity Camera). Mostly relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi.
-*   **Apple Intelligence:** An artificial intelligence system integrated into macOS that utilizes the Neural Engine in Apple Silicon to process language models locally, with a strong emphasis on privacy.
-*   **Background Process:** A system process running in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
+* **Apple Silicon:** The modern architecture of Mac computers based on Apple's in-house development (M-Series processors with ARM architecture), delivering unprecedented performance-per-watt.
+* **System on a Chip (SoC):** A silicon design that integrates the central processing unit (CPU), graphics processing unit (GPU), memory, and security enclaves onto a single chip.
+* **Unified Memory:** An innovative architecture in Apple Silicon that integrates both system memory (RAM) and video memory (VRAM) directly onto the chip package. This allows all SoC components to access the same memory pool without copying data back and forth. It eliminates bottlenecks, improves performance, and saves power, but at the cost of non-upgradability (memory is soldered). [Further reading by Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
+* **Secure Enclave:** An isolated hardware subsystem within the SoC responsible for cryptographic operations, managing encryption keys, and verifying biometric data (Touch ID).
+* **Rosetta 2:** A transparent translation environment built into macOS that allows applications written for Intel processors (x86) to run on Apple Silicon Macs. The translation is mostly done Ahead of Time.
+* **Setup Assistant:** The initial process that runs when booting a new Mac or after an EACS (Erase All Content and Settings). It handles network configuration, region selection, creating a Local Account, and more.
+* **Automated Device Enrollment (ADE):** A deployment and management technology (formerly DEP) that allows organizations to automatically enroll Mac computers into MDM (Zero-Touch Deployment) upon first connecting to the internet, replacing the consumer Setup Assistant with a Remote Management screen.
+* **Continuity:** A suite of technologies that allows seamless workflows across Apple devices (e.g., Universal Control, Handoff, Continuity Camera). Mostly relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi.
+* **Apple Intelligence:** An artificial intelligence system integrated into macOS that utilizes the Neural Engine in Apple Silicon to process language models locally, with a strong emphasis on privacy.
+* **Background Process:** A system process running in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
 
 ## Relevant Commands & Paths
 
@@ -38,19 +40,19 @@
 
 ## Recommended Links & Further Reading
 
-*   **Apple Platform Deployment - Automated Device Enrollment:**
+* **Apple Platform Deployment - Automated Device Enrollment:**
 
-    [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
-*   **Apple Platform Security - Boot process for a Mac with Apple silicon:**
+  [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
+* **Apple Platform Security - Boot process for a Mac with Apple silicon:**
 
-    [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
-*   **Apple Support - Apple Intelligence Overview:**
+  [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
+* **Apple Support - Apple Intelligence Overview:**
 
-    [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
+  [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
 
 ## Deep Dive Reading
 
-*   [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - An in-depth article explaining memory management in macOS.
+* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - An in-depth article explaining memory management in macOS.
 
 ## Summary Video
 
@@ -59,6 +61,7 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+
 ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
 ![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
 ![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
@@ -74,10 +77,13 @@
 ![26-Tahoe-Notification-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Notification-Center-scaled.png)
 ![26-Tahoe-Settings-Battery-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-Battery-scaled.png)
 ![26-Tahoe-Settings-General-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-General-scaled.png)
+
+
 
 !!! tip "Visual Aid (Student Reference)"
     These images illustrate the interface or mechanisms relevant to this lesson's topic.
 
+
 ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
 ![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
 ![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
@@ -86,12 +92,10 @@
 ![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
 ![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
 ![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)
-![26-Tahoe-Finder-Customize-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Customize-scaled.png)
+![26-Tahoe-Finder-Customize-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Customize-scaled.png)
 ![26-Tahoe-Finder-Desktop-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Desktop-Stacks-scaled.png)
 ![26-Tahoe-Finder-Go-To-Folder-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Go-To-Folder-scaled.png)
 ![26-Tahoe-Finder-Stacks-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Stacks-scaled.png)
 ![26-Tahoe-Notification-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Notification-Center-scaled.png)
 ![26-Tahoe-Settings-Battery-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-Battery-scaled.png)
 ![26-Tahoe-Settings-General-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Settings-General-scaled.png)
-
-<!-- src_hash: 27055c31f3426812c170df9c063f0419f4181fd86143357adce78f347d052a3b -->
