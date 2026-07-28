@@ -79,6 +79,10 @@
 
 ## Recommended Links and Further Reading
 
+* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - In-depth explanation of CPU percentage readings on Performance vs Efficiency cores.
+* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - Historical background on XML and binary Property Lists in macOS system configuration.
+* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - Official Apple Support guide to reading Memory Pressure in Activity Monitor.
+
 ## Summary Video
 
 <!-- סרטון סיכום מתוך YouTube -->

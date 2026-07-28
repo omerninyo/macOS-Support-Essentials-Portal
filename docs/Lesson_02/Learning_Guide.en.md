@@ -57,6 +57,10 @@
 
 ## Recommended Links and Further Reading
 
+* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - Official Apple Support guide to user account types and permissions in macOS.
+* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - Official Apple Deployment guide for managing Managed Apple IDs in the enterprise.
+* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - In-depth article detailing Keychains and credential storage in macOS.
+* [Understanding User Accounts in macOS](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/) - Comprehensive review of user account types and filesystem permissions.
 
 ## Summary Video
 

@@ -94,8 +94,12 @@ mdimport -t -d3 /path/to/specific/file.pdf
 
 ## Recommended Links and Further Reading
 
-*   [Reading the Finder's Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - A guide to reading and understanding the Get Info window on Mac.
-*   [Get more from Get Info and the Finder's contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - An article detailing the quick menus and the Get Info window.
+* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) - Official guide for using Disk Utility First Aid to inspect and repair storage.
+* [A brief history of APFS in honour of its fifth birthday](https://eclecticlight.co/2022/04/01/a-brief-history-of-apfs-in-honour-of-its-fifth-birthday/) - Historical and architectural deep-dive into the Apple File System.
+* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) - In-depth article explaining how macOS uses Firmlinks to link System and Data volumes.
+* [Using and troubleshooting Spotlight in Sequoia: summary](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) - Troubleshooting guide for Spotlight indexing and metadata search.
+* [Reading the Finder Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - Guide to reading and understanding Get Info window metadata in macOS.
+* [Get more from Get Info and the Finder contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - Deep dive into Finder contextual menus and advanced Get Info features.
 
 ## Summary Video
 
