@@ -87,17 +87,14 @@ mdimport -L
 mdimport -t -d3 /path/to/specific/file.pdf
 ```
 
-## Recommended Reading & Enrichment Links
-
-* **Apple Platform Support:** Use Disk Utility - [Link](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web)
-* **The Eclectic Light Company:** A brief history of APFS in honour of its fifth birthday - [Link](https://eclecticlight.co/2022/04/01/a-brief-history-of-apfs-in-honour-of-its-fifth-birthday/)
-* **The Eclectic Light Company:** How macOS depends on firmlinks - [Link](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/)
-* **The Eclectic Light Company:** Using and troubleshooting Spotlight in Sequoia: summary - [Link](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/)
-
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Reading the Finder's Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - מדריך קריאה והבנה של חלון המידע במק.
-* [Get more from Get Info and the Finder's contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - מאמר המפרט על התפריטים המהירים וחלון ה-Get Info.
+* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) - מדריך רשמי לשימוש בכלי דיסק בדיקה ותיקון (First Aid).
+* [A brief history of APFS in honour of its fifth birthday](https://eclecticlight.co/2022/04/01/a-brief-history-of-apfs-in-honour-of-its-fifth-birthday/) - סקירה היסטורית וארכיטקטונית על מנגנון APFS.
+* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) - מאמר עומק המפרט כיצד מערכת ההפעלה משתמשת ב-Firmlinks לחיבור נפח המערכת והמידע.
+* [Using and troubleshooting Spotlight in Sequoia: summary](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) - סיכום ופתרון תקלות במנגנון החיפוש והאינדקס Spotlight.
+* [Reading the Finder Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - מדריך קריאה והבנה של חלון המידע במק.
+* [Get more from Get Info and the Finder contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - מאמר המפרט על התפריטים המהירים וחלון ה-Get Info.
 
 ## סרטון סיכום
 

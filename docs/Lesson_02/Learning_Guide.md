@@ -46,22 +46,12 @@
 | `applesso` | אבחון מצב שירות ה-Platform SSO בארגון (בסביבה נתמכת) |
 | `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | חיפוש שגיאות התחברות מול שרתי SSO בלוגים |
 
-## Recommended Reading & Enrichment Links
-
-* **Apple Platform Support: Intro to user account types**
-  [https://support.apple.com/guide/platform-support/sup72e8c67c3/web](https://support.apple.com/guide/platform-support/sup72e8c67c3/web)
-
-* **Apple Platform Deployment: About Managed Apple Accounts**
-  [https://support.apple.com/guide/deployment/depdc4ba8d82/web](https://support.apple.com/guide/deployment/depdc4ba8d82/web)
-
-* **The Eclectic Light Company: Explainer: Keychain basics**
-  [https://eclecticlight.co/2022/10/15/explainer-keychain-basics/](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/)
-
-* **The Mac Security Blog: Understanding User Accounts in macOS**
-  [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
-
 ## קישורים מומלצים ולקריאה נוספת
 
+* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - מדריך תמיכה רשמי של אפל לסוגי משתמשים והרשאות ב-macOS.
+* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - מדריך פריסה רשמי לניהול חשבונות Apple ID מנוהלים בארגון.
+* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - מאמר עומק המפרט את מנגנון Keychain ומחזיקי המפתחות ב-macOS.
+* [Understanding User Accounts in macOS](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/) - סקירה מקיפה על סוגי חשבונות המשתמש והרשאות מערכת הקבצים.
 
 ## סרטון סיכום
 

@@ -42,22 +42,11 @@
 | `sudo profiles show -type enrollment` | פקודה המחזירה את סטטוס ההרשמה של המכשיר לארגון (האם קיימת הרשמת ADE דרך Apple Business Manager). |
 | `log show --predicate 'process == "Setup Assistant"' --info` | שאילתה לשליפת לוגים ספציפיים מתוך התהליך של פתיחת הקופסה. |
 
-## Recommended Reading & Enrichment Links
-
-* **Apple Platform Deployment - Automated Device Enrollment:**
-
-  [https://support.apple.com/guide/deployment/dep24b435f66/web](https://support.apple.com/guide/deployment/dep24b435f66/web)
-
-* **Apple Platform Security - Boot process for a Mac with Apple silicon:**
-
-  [https://support.apple.com/guide/security/secc7b34e5b5/web](https://support.apple.com/guide/security/secc7b34e5b5/web)
-
-* **Apple Support - Apple Intelligence Overview:**
-
-  [https://support.apple.com/apple-intelligence](https://support.apple.com/apple-intelligence)
-
 ## קישורים מומלצים ולקריאה נוספת
 
+* [Automated Device Enrollment](https://support.apple.com/guide/deployment/dep24b435f66/web) - מדריך פריסה רשמי של אפל לרישום אוטומטי של מכשירים בארגון (ADE / ABM).
+* [Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/secc7b34e5b5/web) - מסמך אבטחה רשמי המפרט את תהליך האתחול של מעבדי Apple Silicon.
+* [Apple Intelligence Overview](https://support.apple.com/apple-intelligence) - סקירת היכולות והאבטחה של תכונות ה-AI ב-macOS.
 * [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - מאמר עומק המסביר את אופן ניהול הזיכרון במערכת ההפעלה.
 
 ## סרטון סיכום
