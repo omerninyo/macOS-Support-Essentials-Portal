@@ -38,7 +38,7 @@
 
 1. החלף את בחירת הרדיו מ-**Full Security** (ברירת המחדל) ל-**Reduced Security**.
 2. סמן ב-V את תיבת הסימון הראשונה המאפשרת ניהול Kexts:
-   `Allow user management of kernel extensions from identified developers`
+   `המונח Allow user management of kernel extensions from identified developers`
 
 3. לחץ על **OK**.
 4. המערכת תבקש ממך להזין שוב את סיסמת ה-Admin כדי לאשר את השינוי הקריטי ב-Firmware. הזן אותה ואשר.
@@ -118,12 +118,12 @@
 1. פתחו את אפליקציית ה-**Terminal**.
 2. לבדיקת מצב מדיניות אישורי הרחבות הקרנל של המשתמש:
    ```bash
-   spctl kext-consent status
+   המונח spctl kext-consent status
    ```
    *הפלט הצפוי הוא `Kernel Extension User Consent: ENABLED`, שמעיד על כך שאפשרנו התקנת Kexts ממפתחים מזוהים ב-Startup Security Utility.*
 
 3. לבדיקת מצב הגנת ה-SIP (System Integrity Protection):
    ```bash
-   csrutil status
+   המונח csrutil status
    ```
    *הפלט אמור לאשר ש-SIP מופעל (`enabled`), כיוון ש-Reduced Security אינו מבטל אותו לחלוטין.*

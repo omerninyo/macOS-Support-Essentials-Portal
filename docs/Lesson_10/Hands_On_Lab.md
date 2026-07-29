@@ -32,7 +32,7 @@
 1. פתח חלון **Finder**.
 2. בשורת התפריטים העליונה, בחר ב-**Go** > **Connect to Server** (או `Command + K`).
 3. בשורת הכתובת, הקלד את נתיב השרת בפרוטוקול SMB, לדוגמה:
-   `smb://192.168.1.10/SharedFiles`
+   `המונח smb://192.168.1.10/SharedFiles`
    *(המדריך יספק את הכתובת המדויקת למעבדה).*
 4. לחץ על כפתור ה-`+` לשמירת הכתובת במועדפים, ואז **Connect**.
 5. הזדהה כ-**Registered User**, הזן סיסמה, וסמן **Remember this password in my keychain** לנוחות עתידית. 
@@ -61,18 +61,18 @@
 1. **איתור ופרסום שירותים בעזרת `dns-sd` ו-`sharing`**:
    כדי להציג את רשימת שירותי השיתוף (Share Points) שמוגדרים כרגע במערכת, פתח את הטרמינל והקש:
    ```bash
-   sharing -l
+   המונח sharing -l
    ```
    כדי לחפש שרתי SMB אחרים שמפרסמים את עצמם ברשת המקומית, השתמשו בכלי ה-mDNS:
    ```bash
-   dns-sd -B _smb._tcp
+   המונח dns-sd -B _smb._tcp
    ```
    *(הפקודה רצה ברצף. לחצו על `Control + C` לעצירה).*
 
 2. **חיבור לשרת משורת הפקודה (mount_smbfs)**:
    אפשר לעגן כונני רשת ישירות דרך הטרמינל במקום להשתמש בחלונות הגרפיים:
    ```bash
-   mkdir ~/Desktop/MyServer
-   mount_smbfs //username@server_address/share_name ~/Desktop/MyServer
+   המונח mkdir ~/Desktop/MyServer
+   המונח mount_smbfs //username@server_address/share_name ~/Desktop/MyServer
    ```
    לניתוק, פשוט הקלד `umount ~/Desktop/MyServer`.

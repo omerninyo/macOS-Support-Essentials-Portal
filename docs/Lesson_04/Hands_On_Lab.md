@@ -73,14 +73,14 @@
 * **בדיקת מצב Secure Token:**
 
   במקום לנבור ב-Directory Utility, ניתן לבקש מהמערכת לספק תשובה ישירה לגבי בעלות המערכת:
-  `sysadminctl -secureTokenStatus username` (החלף את `username` בשם המשתמש המקוצר שלך). אם המערכת תחזיר `ENABLED`, משמעות הדבר היא שיש לך בעלות מערכת.
+  `המונח sysadminctl -secureTokenStatus username` (החלף את `username` בשם המשתמש המקוצר שלך). אם המערכת תחזיר `ENABLED`, משמעות הדבר היא שיש לך בעלות מערכת.
 
 * **בדיקת מצב FileVault:**
 
   ניתן לבדוק את מצב ההצפנה המערכתית בפקודה אחת מהירה:
-  `fdesetup status`
+  `המונח fdesetup status`
 
 * **בדיקת סטטוס Bootstrap Token:**
 
   כדי לבדוק האם המק תקשר עם שרת ניהול (MDM) והפקיד (Escrow) Bootstrap Token שמאפשר הענקת Secure Tokens אוטומטית לעובדים חדשים, ניתן להשתמש בפקודה:
-  `sudo profiles status -type bootstraptoken` (פעולה זו תדרוש הקלדת סיסמת מנהל).
+  `המונח sudo profiles status -type bootstraptoken` (פעולה זו תדרוש הקלדת סיסמת מנהל).

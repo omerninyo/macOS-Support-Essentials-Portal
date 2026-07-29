@@ -118,14 +118,14 @@
 
 **בדיקת חתימה של PKG:**
 ```bash
-pkgutil --check-signature /path/to/installer.pkg
+המונח pkgutil --check-signature /path/to/installer.pkg
 ```
 **אימות הנוטריזציה לאפליקציה:**
 ```bash
-codesign --test-requirement="=notarized" --verify --verbose /Applications/BBEdit.app
+המונח codesign --test-requirement="=notarized" --verify --verbose /Applications/BBEdit.app
 ```
 **חיסול תהליך וניקוי מטמון (לצורך איפוס Sandbox):**
 ```bash
-killall Safari
-killall cfprefsd
+המונח killall Safari
+המונח killall cfprefsd
 ```

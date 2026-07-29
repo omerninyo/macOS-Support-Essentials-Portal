@@ -139,13 +139,13 @@
 
    במקום להשתמש ב-System Information, ניתן להריץ את הפקודה הבאה ב-Terminal כדי לשלוף רק את המידע על רשתות, ולשמור אותו ישירות לקובץ טקסט בשולחן העבודה:
    ```bash
-   system_profiler SPNetworkDataType > ~/Desktop/NetworkInfo.txt
+   המונח system_profiler SPNetworkDataType > ~/Desktop/NetworkInfo.txt
    ```
 
 2. **איתור פרופילים דרך הטרמינל (`profiles`):**
 
    במקום לנווט ל-System Settings, ניתן להציג את כל ה-Configuration Profiles המותקנים במק ישירות במסוף:
    ```bash
-   sudo profiles show -type configuration
+   המונח sudo profiles show -type configuration
    ```
    כלי זה מציג גם פרופילים שעשויים להיות מוסתרים ממשתמש הקצה, ומאפשר לאנשי IT לאתר ולבודד הגדרות מתנגשות במהירות.

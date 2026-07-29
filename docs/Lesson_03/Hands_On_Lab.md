@@ -102,29 +102,29 @@
    
    במקום לחפש ב-System Information, ניתן להשתמש בכלי המובנה לניהול עדכוני XProtect:
    ```bash
-   xprotect version
-   sudo xprotect update
+   המונח xprotect version
+   המונח sudo xprotect update
    ```
 
 2. **בדיקת מצב Gatekeeper ואימות אפליקציה:**
 
    במקום לפתוח System Information, ניתן לבדוק הערכת Gatekeeper מלאה על אפליקציה:
    ```bash
-   spctl -a -vv /Applications/Safari.app
+   המונח spctl -a -vv /Applications/Safari.app
    ```
 
 3. **איפוס מסד נתונים TCC:**
 
    במקום ללחוץ על סימן המינוס (-) בהגדרות, ניתן לאפס לחלוטין את הרשאת המיקרופון לכל המערכת בשורת פקודה אחת:
    ```bash
-   tccutil reset Microphone
+   המונח tccutil reset Microphone
    ```
 
 4. **חקר XProtect Remediator:**
 
    במקום להסתכל על קבצי plist ב-Finder, כך שואבים את דיווחי הסריקה השקטים של XProtect מתוך לוג המערכת של 24 השעות האחרונות:
    ```bash
-   log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
+   המונח log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
    ```
 
 </div>

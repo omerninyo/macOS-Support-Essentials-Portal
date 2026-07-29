@@ -24,40 +24,40 @@
 | **יעילות העתקה** | יצירת מיליוני קישורים קשיחים לקבצים שלא השתנו | מסתמך על Delta-copying ברמת הבלוק (מהיר וחוסך מקום) |
 | **אמינות לטווח ארוך** | קריסה שכיחה תחת עומס ה-Hard Links | יציבות גבוהה בזכות תמונות מצב טבעיות של המערכת |
 
-* **Time Machine:** מנגנון הגיבוי המובנה של macOS. שומר עותקים היסטוריים של קבצים, מאפשר שחזור קבצים בודדים או מערכת שלמה.
-* **APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה.
-* **Local Snapshots:** Snapshots הנשמרות על הכונן המקומי עצמו (ה-Data Volume). נוצרות אוטומטית כגיבוי ביניים או לפני עדכוני מערכת. הן נמחקות אוטומטית כשהמקום בדיסק אוזל.
-* **Synthetic Snapshots:** תמונות המצב שנבנות בסוף תהליך הגיבוי על הכונן החיצוני, כחיבור של הבלוקים שהשתנו.
-* **Migration Assistant:** כלי שירות להעברת נתונים, חשבונות משתמשים והגדרות מ-Mac ישן, מגיבוי Time Machine (באמצעות Synthetic Snapshot), או מ-PC.
-* **FileProvider Framework:** מנגנון המערכת (API) המאפשר לשירותי ענן כמו OneDrive להציג קבצים שקיימים רק בענן ("Dataless files") ולהורידם רק בעת הצורך.
+* **כלי Time Machine:** מנגנון הגיבוי המובנה של macOS. שומר עותקים היסטוריים של קבצים, מאפשר שחזור קבצים בודדים או מערכת שלמה.
+* **מערכת הקבצים APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה.
+* **המונח Local Snapshots:** Snapshots הנשמרות על הכונן המקומי עצמו (ה-Data Volume). נוצרות אוטומטית כגיבוי ביניים או לפני עדכוני מערכת. הן נמחקות אוטומטית כשהמקום בדיסק אוזל.
+* **המונח Synthetic Snapshots:** תמונות המצב שנבנות בסוף תהליך הגיבוי על הכונן החיצוני, כחיבור של הבלוקים שהשתנו.
+* **המונח Migration Assistant:** כלי שירות להעברת נתונים, חשבונות משתמשים והגדרות מ-Mac ישן, מגיבוי Time Machine (באמצעות Synthetic Snapshot), או מ-PC.
+* **המונח FileProvider Framework:** מנגנון המערכת (API) המאפשר לשירותי ענן כמו OneDrive להציג קבצים שקיימים רק בענן ("Dataless files") ולהורידם רק בעת הצורך.
 
 ## מילון פקודות טרמינל מתקדם (`tmutil`)
 
 כלי שורת הפקודה `tmutil` (Time Machine Utility) הוא דרך רבת-עוצמה לניהול, אבחון ושליטה על גיבויי Time Machine ותמונות מצב של APFS. *(שימו לב: חלק מהפקודות דורשות הרשאות `sudo`)*.
 
 ### ניהול בסיסי וסטטוס (Basic Management)
-* `tmutil status`: מציג את הסטטוס הנוכחי של הגיבוי בזמן אמת.
-* `tmutil startbackup --block`: מתחיל מיד גיבוי ומשהה (Blocks) את הטרמינל עד להשלמתו.
-* `tmutil listbackups`: מדפיס רשימה מסודרת של כל הגיבויים הקיימים המוכרים למערכת ביעד.
-* `tmutil destinationinfo`: מציג מידע ונתונים על כונני היעד המוגדרים כעת.
+* `המונח tmutil status`: מציג את הסטטוס הנוכחי של הגיבוי בזמן אמת.
+* `המונח tmutil startbackup --block`: מתחיל מיד גיבוי ומשהה (Blocks) את הטרמינל עד להשלמתו.
+* `המונח tmutil listbackups`: מדפיס רשימה מסודרת של כל הגיבויים הקיימים המוכרים למערכת ביעד.
+* `המונח tmutil destinationinfo`: מציג מידע ונתונים על כונני היעד המוגדרים כעת.
 
 ### החרגות מגיבוי (Exclusions)
-* `tmutil addexclusion /path/to/folder_or_file`: מחריג באופן קבוע קובץ או תיקייה מגיבוי.
-* `tmutil removeexclusion /path/to/folder_or_file`: מסיר את תגית ההחרגה כך שהקובץ יגובה שוב.
+* `המונח tmutil addexclusion /path/to/folder_or_file`: מחריג באופן קבוע קובץ או תיקייה מגיבוי.
+* `המונח tmutil removeexclusion /path/to/folder_or_file`: מסיר את תגית ההחרגה כך שהקובץ יגובה שוב.
 
-### Snapshots מקומיות (Local Snapshots)
-* `tmutil listlocalsnapshots /`: מציג רשימה של כל ה-Local Snapshots השמורים על כונן המערכת הנוכחי.
-* `tmutil localsnapshot`: יוצר Snapshot מקומית באופן מיידי (שימושי לפני שינוי מהותי במערכת).
-* `tmutil thinlocalsnapshots / 10000000000 4`: אילוץ המערכת לדלל Snapshots כדי לפנות מקום בכונן (דוגמה זו מפנה כ-10GB בדחיפות 4 המהירה ביותר).
+### המונח Snapshots מקומיות (Local Snapshots)
+* `המונח tmutil listlocalsnapshots /`: מציג רשימה של כל ה-Local Snapshots השמורים על כונן המערכת הנוכחי.
+* `המונח tmutil localsnapshot`: יוצר Snapshot מקומית באופן מיידי (שימושי לפני שינוי מהותי במערכת).
+* `המונח tmutil thinlocalsnapshots / 10000000000 4`: אילוץ המערכת לדלל Snapshots כדי לפנות מקום בכונן (דוגמה זו מפנה כ-10GB בדחיפות 4 המהירה ביותר).
 
 ### אבחון וניתוח (Diagnostics)
-* `log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h`: מחלץ לוגים מדויקים כדי להבין עיכובים כמו Deep Traversal Scans.
+* `המונח log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h`: מחלץ לוגים מדויקים כדי להבין עיכובים כמו Deep Traversal Scans.
 
 ## כלים ותהליכי רקע רלוונטיים במערכת (Daemons & Tools)
 
-* `backupd`: תהליך הרקע המרכזי של Time Machine המנהל את העתקות הדלתא והגיבויים.
-* `diskutil apfs listSnapshots /`: פקודת `diskutil` המשמשת כאבחון ברמת ה-APFS להצגת Snapshots ברמה נמוכה.
-* **System Settings -> General -> Time Machine**: ממשק המשתמש הגרפי להגדרת גיבויים.
+* `המונח backupd`: תהליך הרקע המרכזי של Time Machine המנהל את העתקות הדלתא והגיבויים.
+* `המונח diskutil apfs listSnapshots /`: פקודת `diskutil` המשמשת כאבחון ברמת ה-APFS להצגת Snapshots ברמה נמוכה.
+* **מערכת System Settings -> General -> Time Machine**: ממשק המשתמש הגרפי להגדרת גיבויים.
 
 ## זווית ארגונית (Enterprise Seasoning)
 

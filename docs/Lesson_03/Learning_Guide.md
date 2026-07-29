@@ -6,10 +6,10 @@
 
 ## מטרות השיעור
 
-* Gatekeeper
-* XProtect
-* TCC
-* PPPC
+* המונח Gatekeeper
+* המונח XProtect
+* המונח TCC
+* המונח PPPC
 **[Image Recommendation]:** A minimalist vector icon of a lock or shield on a dark background.
 
 
@@ -20,14 +20,14 @@
 
 ## מושגי יסוד (Terminology)
 
-* **Gatekeeper:** מנגנון האבטחה של macOS שמוודא שרק תוכנות ממקור מהימן (App Store או מפתחים מזוהים) מורשות לרוץ על המק. הוא בודק את חתימת המפתח ואת ה-Notarization.
-* **Notarization:** תהליך אוטומטי של Apple שבו אפליקציות נסרקות לאיתור קוד זדוני ידוע לפני הפצתן, עוד בטרם הגיעו למשתמש. Gatekeeper דורש אישור זה עבור כל תוכנה המורדת מהאינטרנט.
-* **XProtect:** מערכת ה-Anti-Virus השקטה והמובנית של macOS. פועלת ברקע, מבוססת חתימות (YARA) וחוסמת הפעלה של תוכנות זדוניות מוכרות בעת ניסיון ההרצה הראשון.
-* **XProtect Remediator:** מנגנון סריקה אקטיבי שרץ ברקע (על ידי LaunchDaemons) ומבצע סריקות תקופתיות לאיתור והסרת נוזקות שכבר הצליחו לחדור למערכת.
-* **Transparency, Consent, and Control (TCC):** מנגנון הפרטיות של macOS, הדורש מהמשתמש לאשר באופן אקטיבי בקשות גישה של אפליקציות למשאבים רגישים (כגון מצלמה, מיקרופון, מיקום, תיקיית מסמכים או דיסק מלא).
-* **Privacy Preferences Policy Control - PPPC:** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור.
-* **System Integrity Protection - SIP:** מנגנון אבטחה ב-macOS המונע אפילו ממשתמש root לשנות קבצי מערכת רגישים, כולל את מסדי הנתונים של ה-TCC.
-* **Quarantine:** תגית (Extended Attribute) המוצמדת לקבצים שהורדו מהאינטרנט על ידי אפליקציות כמו ספארי, דואר או תוכנות מסרים. תגית זו מפעילה את הבדיקה של Gatekeeper עם פתיחת הקובץ.
+* **המונח Gatekeeper:** מנגנון האבטחה של macOS שמוודא שרק תוכנות ממקור מהימן (App Store או מפתחים מזוהים) מורשות לרוץ על המק. הוא בודק את חתימת המפתח ואת ה-Notarization.
+* **המונח Notarization:** תהליך אוטומטי של Apple שבו אפליקציות נסרקות לאיתור קוד זדוני ידוע לפני הפצתן, עוד בטרם הגיעו למשתמש. Gatekeeper דורש אישור זה עבור כל תוכנה המורדת מהאינטרנט.
+* **המונח XProtect:** מערכת ה-Anti-Virus השקטה והמובנית של macOS. פועלת ברקע, מבוססת חתימות (YARA) וחוסמת הפעלה של תוכנות זדוניות מוכרות בעת ניסיון ההרצה הראשון.
+* **המונח XProtect Remediator:** מנגנון סריקה אקטיבי שרץ ברקע (על ידי LaunchDaemons) ומבצע סריקות תקופתיות לאיתור והסרת נוזקות שכבר הצליחו לחדור למערכת.
+* **המונח Transparency, Consent, and Control (TCC):** מנגנון הפרטיות של macOS, הדורש מהמשתמש לאשר באופן אקטיבי בקשות גישה של אפליקציות למשאבים רגישים (כגון מצלמה, מיקרופון, מיקום, תיקיית מסמכים או דיסק מלא).
+* **המונח Privacy Preferences Policy Control - PPPC:** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור.
+* **מערכת System Integrity Protection - SIP:** מנגנון אבטחה ב-macOS המונע אפילו ממשתמש root לשנות קבצי מערכת רגישים, כולל את מסדי הנתונים של ה-TCC.
+* **המונח Quarantine:** תגית (Extended Attribute) המוצמדת לקבצים שהורדו מהאינטרנט על ידי אפליקציות כמו ספארי, דואר או תוכנות מסרים. תגית זו מפעילה את הבדיקה של Gatekeeper עם פתיחת הקובץ.
 
 ### אבני דרך היסטוריות באבטחת macOS
 | שנה | טכנולוגיה | הערה היסטורית / אנקדוטה |
@@ -47,14 +47,14 @@
 * **בדיקת אפליקציה - הערכת Gatekeeper (האם היא מאושרת ותרוץ):**
 
   ```bash
-  spctl -a -vv /Applications/AppName.app
+  המונח spctl -a -vv /Applications/AppName.app
   ```
   *(הדגל `-a` מבצע Assessment, `-vv` מציג פלט מפורט כולל מידע על ה-Notarization וזהות המפתח).*
 
 * **הסרת תגית ההסגר (Quarantine) מקובץ שהורד מהאינטרנט (עוקף את אזהרת ההפעלה הראשונית):**
 
   ```bash
-  xattr -d com.apple.quarantine /path/to/AppName.app
+  המונח xattr -d com.apple.quarantine /path/to/AppName.app
   ```
 
 ### חקירה וניהול של XProtect (`xprotect`)
@@ -63,13 +63,13 @@
 * **בדיקת הגרסה המותקנת כעת של XProtect:**
 
   ```bash
-  xprotect version
+  המונח xprotect version
   ```
 
 * **כפיית התקנה של העדכון האחרון מ-iCloud:**
 
   ```bash
-  sudo xprotect update
+  המונח sudo xprotect update
   ```
 
 ### ניהול ואיפוס הרשאות TCC (`tccutil`)
@@ -78,20 +78,20 @@
 * **איפוס כל הרשאות ה-TCC עבור כל האפליקציות (חזרה למצב "מפעל" מבחינת פרטיות):**
 
   ```bash
-  tccutil reset All
+  המונח tccutil reset All
   ```
 
 * **איפוס הרשאת מצלמה בלבד (לכל האפליקציות שביקשו עד כה):**
 
   ```bash
-  tccutil reset Camera
+  המונח tccutil reset Camera
   ```
 
 * **איפוס הרשאת מצלמה עבור אפליקציה ספציפית (לדוגמה, Terminal או Zoom), על ידי Bundle ID:**
 
   ```bash
-  tccutil reset Camera com.apple.Terminal
-  tccutil reset Camera us.zoom.xos
+  המונח tccutil reset Camera com.apple.Terminal
+  המונח tccutil reset Camera us.zoom.xos
   ```
 
 ---
@@ -113,7 +113,7 @@
   /Library/Application Support/com.apple.TCC/TCC.db
   ```
 
-### XProtect & Remediator
+### המונח XProtect & Remediator
 מיקומי קבצי החתימות וכלי הסריקה של המנגנון השקט:
 
 * **מיקום העדכונים העדכני של XProtect (החל מ-Tahoe):**
@@ -134,19 +134,19 @@
 * **מעקב אחר פעילות Gatekeeper (חקירת חסימות אפליקציות):**
 
   ```bash
-  log show --predicate 'subsystem == "com.apple.syspolicy"' --info --last 1h
+  המונח log show --predicate 'subsystem == "com.apple.syspolicy"' --info --last 1h
   ```
 
 * **מעקב אחר חסימות של מערכת ה-TCC (מי ניסה לגשת למה ומתי נחסם):**
 
   ```bash
-  log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
+  המונח log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
   ```
 
 * **צפייה בתוצאות הסריקה של XProtect Remediator במהלך 24 השעות האחרונות (האם זוהתה נוזקה במערכת):**
 
   ```bash
-  log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
+  המונח log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
   ```
 
 ---

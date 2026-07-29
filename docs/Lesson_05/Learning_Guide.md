@@ -13,45 +13,45 @@
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/57c8a1df-bbc5-4e2e-9986-b6e4b0e04f4e/"></iframe></div>
 
 ## מושגי יסוד (Core Concepts)
-* **App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת, נוטריזציה ופועלת תחת מגבלות של ארגז חול (Sandbox).
-* **Package (PKG):** קובץ התקנה המכיל חבילת קבצים וסקריפטים לפיזור במערכת. משמש לרוב להתקנות תוכנות ארגוניות מורכבות.
-* **Disk Image (DMG / ASIF):** כונן וירטואלי. ב-macOS 26 (Tahoe), אפל הציגה את פורמט ASIF (Apple Sparse Image Format) היעיל במיוחד.
-* **Sandboxing:** מנגנון אבטחה של macOS המגביל את גישת האפליקציה למשאבי מערכת, זיכרון וקבצים בלתי קשורים. המידע נשמר בתוך "Container" מבודד.
-* **Code Signing & CDHash (DeepDive):** התשתית הקריפטוגרפית של מערכת ההפעלה. המערכת מוודאת בזמן אמת כל דף זיכרון מול ה-Code Directory Hash (CDHash) כדי לוודא שלא בוצעו שינויים זדוניים.
-* **App Translocation (DeepDive):** מנגנון (Gatekeeper Path Randomization) המונע מאפליקציות זדוניות שחולצו מקובץ ZIP/DMG לטעון קבצים סמוכים, על ידי הרצתן ממיקום אקראי ולקריאה-בלבד עד שיועברו לתיקיית היישומים.
-* **Preemptive Multitasking & WindowServer (DeepDive):** הקרנל מנהל תהליכים בצורה כפויה. אם חוט הממשק הראשי נתקע, ה-WindowServer מציג אוטומטית את "כדור הים".
-* **Force Quit:** יציאה מאולצת ואגרסיבית לאפליקציה תקועה (שליחת פקודת `SIGKILL`), שאינה מאפשרת שמירת נתונים.
-* **Volume Purchase Program (VPP) / Apple Business Manager (ABM):** תוכנית הרכישה הארגונית המאפשרת לארגונים לרכוש רישיונות ולחלקם לעובדים דרך MDM ללא צורך ב-Apple ID אישי.
-* **Self Service:** חנות האפליקציות הפרטית של הארגון המאפשרת למשתמשים סטנדרטיים להתקין תוכנות מאושרות ללא סיסמת Admin.
+* **המונח App Store:** החנות הרשמית של אפל לאפליקציות. כל אפליקציה כאן עוברת ביקורת, נוטריזציה ופועלת תחת מגבלות של ארגז חול (Sandbox).
+* **המונח Package (PKG):** קובץ התקנה המכיל חבילת קבצים וסקריפטים לפיזור במערכת. משמש לרוב להתקנות תוכנות ארגוניות מורכבות.
+* **כונן Disk Image (DMG / ASIF):** כונן וירטואלי. ב-macOS 26 (Tahoe), אפל הציגה את פורמט ASIF (Apple Sparse Image Format) היעיל במיוחד.
+* **המונח Sandboxing:** מנגנון אבטחה של macOS המגביל את גישת האפליקציה למשאבי מערכת, זיכרון וקבצים בלתי קשורים. המידע נשמר בתוך "Container" מבודד.
+* **המונח Code Signing & CDHash (DeepDive):** התשתית הקריפטוגרפית של מערכת ההפעלה. המערכת מוודאת בזמן אמת כל דף זיכרון מול ה-Code Directory Hash (CDHash) כדי לוודא שלא בוצעו שינויים זדוניים.
+* **המונח App Translocation (DeepDive):** מנגנון (Gatekeeper Path Randomization) המונע מאפליקציות זדוניות שחולצו מקובץ ZIP/DMG לטעון קבצים סמוכים, על ידי הרצתן ממיקום אקראי ולקריאה-בלבד עד שיועברו לתיקיית היישומים.
+* **המונח Preemptive Multitasking & WindowServer (DeepDive):** הקרנל מנהל תהליכים בצורה כפויה. אם חוט הממשק הראשי נתקע, ה-WindowServer מציג אוטומטית את "כדור הים".
+* **המונח Force Quit:** יציאה מאולצת ואגרסיבית לאפליקציה תקועה (שליחת פקודת `SIGKILL`), שאינה מאפשרת שמירת נתונים.
+* **מחיצת Volume Purchase Program (VPP) / Apple Business Manager (ABM):** תוכנית הרכישה הארגונית המאפשרת לארגונים לרכוש רישיונות ולחלקם לעובדים דרך MDM ללא צורך ב-Apple ID אישי.
+* **המונח Self Service:** חנות האפליקציות הפרטית של הארגון המאפשרת למשתמשים סטנדרטיים להתקין תוכנות מאושרות ללא סיסמת Admin.
 
 ---
 
 ## פקודות טרמינל מרכזיות
 
 ### מתקינים ודיסקים (`installer` & `hdiutil`)
-* **`sudo installer -pkg /path/to/package.pkg -target /`**
+* **`המונח sudo installer -pkg /path/to/package.pkg -target /`**
   התקנה שקטה של PKG לכונן הראשי. הפקודה הבסיסית לסקריפטים של MDM.
-* **`hdiutil attach /path/to/image.dmg`**
+* **`המונח hdiutil attach /path/to/image.dmg`**
   עגינת (Mount) כונן וירטואלי.
-* **`hdiutil detach /Volumes/ImageName`**
+* **`המונח hdiutil detach /Volumes/ImageName`**
   ניתוק כונן וירטואלי בצורה בטוחה.
 
 ### ניהול תהליכים ויציאה מאולצת (`killall` & `kill`)
-* **`killall "App Name"`**
+* **`המונח killall "App Name"`**
   סגירת אפליקציה בצורה עדינה לפי שמה (שולח `SIGTERM`).
-* **`kill -9 [PID]`**
+* **`המונח kill -9 [PID]`**
   אילוץ קריסה מיידית דרך מזהה תהליך, זהה לפעולת ה-Force Quit הגרפית (שולח `SIGKILL`).
-* **`killall cfprefsd`**
+* **`המונח killall cfprefsd`**
   חיסול תהליך התצורה, מאלץ את המערכת לרוקן את המטמון של קבצי העדפות. קריטי בעת איפוס ארגזי חול (Sandboxes) ידני.
 
 ### הגדרות אפליקציה נסתרות (`defaults`)
-* **`defaults read com.apple.Safari`**
+* **`המונח defaults read com.apple.Safari`**
   קורא את כלל קובץ ההגדרות (plist) עבור Safari.
-* **`defaults delete com.apple.Safari`**
+* **`המונח defaults delete com.apple.Safari`**
   מוחק את קובץ ההגדרות לחלוטין, ומחזיר את האפליקציה למצב יצרן.
 
 ### עדכוני מערכת ורוזטה (`softwareupdate`)
-* **`softwareupdate --install-rosetta --agree-to-license`**
+* **`המונח softwareupdate --install-rosetta --agree-to-license`**
   התקנה מהירה ושקטה של סביבת התרגום רוזטה 2 במחשבי Apple Silicon.
 
 ---
@@ -60,8 +60,8 @@
 
 **היכן אפליקציות שומרות את המידע שלהן?**
 1. **העדפות (Preferences):** תחת `~/Library/Preferences/com.domain.appname.plist`
-2. **Application Support:** תחת `~/Library/Application Support/AppName/`
-3. **Containers:** אפליקציות מה-App Store או אפליקציות Sandbox אינן כותבות לתיקיות הכלליות. כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
+2. **המונח Application Support:** תחת `~/Library/Application Support/AppName/`
+3. **המונח Containers:** אפליקציות מה-App Store או אפליקציות Sandbox אינן כותבות לתיקיות הכלליות. כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
 
 **כיצד לאפס אפליקציית Sandbox (איפוס מוחלט):**
 1. ודא שהאפליקציה סגורה לחלוטין (Quit או Force Quit).

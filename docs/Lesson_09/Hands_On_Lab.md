@@ -107,7 +107,7 @@
 1. **שינוי מהיר של DNS לממשק ה-Wi-Fi (`networksetup`):**
 
    ```bash
-   sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
+   המונח sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
    ```
    *פקודה זו מחילה בדיוק את אותם שרתי ה-DNS של גוגל שהגדרנו מוקדם יותר ידנית דרך הממשק. כדי לאפס חזרה ל-DNS של הראוטר המקומי, משתמשים במילה `Empty` במקום הכתובות.*
 

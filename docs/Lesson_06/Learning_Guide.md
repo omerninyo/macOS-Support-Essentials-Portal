@@ -6,10 +6,10 @@
 
 ## מטרות השיעור
 
-* APFS Architecture & Dynamic Space Sharing
-* System Volume Group (SVG) & Orphaned Volumes
-* Firmlinks
-* Spotlight Indexing & Live Text
+* מערכת הקבצים APFS Architecture & Dynamic Space Sharing
+* מערכת System Volume Group (SVG) & Orphaned Volumes
+* המונח Firmlinks
+* המונח Spotlight Indexing & Live Text
 **[Image Recommendation]:** A super minimalist abstract vector diagram showing a glowing data core (representing APFS) splitting into two interconnected hemispheres (System and Data).
 
 
@@ -20,17 +20,17 @@
 
 ## מושגי מפתח (Key Concepts)
 
-* **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple. בנויה לביצועים גבוהים, חלוקת מקום דינמית, והגנה על נתונים.
-* **Container (מכולה):** מאגר האחסון הראשי ב-APFS שמנהל את השטח הפנוי עבור כל הכרכים שבתוכו (מחליף מחיצות קשיחות).
-* **Volume (כרך):** יחידת אחסון לוגית. כרכים חולקים מקום פנוי באופן דינמי ללא צורך להגדיר גודל מראש (Dynamic Space Sharing).
-* **Copy-on-Write (CoW):** מנגנון המונע שחיתות נתונים על ידי כתיבת שינויים לבלוקים חדשים לפני עדכון המצביע למידע.
-* **Clones (שכפולים):** יצירת עותקים מדויקים באותו כרך בשבריר שנייה **ללא תפיסת מקום נוסף** (Zero-storage overhead) עד לביצוע שינוי. Finder מבצע זאת אוטומטית.
-* **SVG (System Volume Group):** מעטפת המאחדת את כונן המערכת וכונן המידע לקבוצה אחת שמוצגת ככונן אחיד למשתמש.
-* **SSV (Signed System Volume):** מחיצת ה-System הנעולה והחתומה קריפטוגרפית. המערכת עולה מתוך Snapshot מאומת. שום תוכנה או אדמין לא יכולים לשנות בה קבצים.
-* **Firmlinks:** "חורי תולעת" (קישורים דו-כיווניים) המחברים ספריות מה-System אל ה-Data לחוויית שימוש רציפה.
-* **Orphaned Data Volume:** מקרה קצה בו נוצר נתק בין ה-System ל-Data (לעיתים לאחר שחזור לקוי), ומשאיר כונן `Macintosh HD - Data` שמבזבז מקום.
-* **Spotlight Index & Live Text:** מסד נתונים סמוי (`.Spotlight-V100`) לחיפוש גלובלי. בגרסאות עדכניות, התהליך כולל אנליזת תמונות מורכבת (OCR באמצעות `photoanalysisd`), מה שעשוי לגרום לעיבוד ממושך ברקע (Runaway Indexing).
-* **User, Local, Network, System Domains:** חלוקת המערכת למרחבים שמגדירים מיקום נתונים והרשאות. הבנתם חיונית לפתרון תקלות של הגדרות ומשאבים (כמו פונטים) בסביבה מרובת משתמשים.
+* **מערכת הקבצים APFS (Apple File System):** מערכת הקבצים המודרנית של Apple. בנויה לביצועים גבוהים, חלוקת מקום דינמית, והגנה על נתונים.
+* **המונח Container (מכולה):** מאגר האחסון הראשי ב-APFS שמנהל את השטח הפנוי עבור כל הכרכים שבתוכו (מחליף מחיצות קשיחות).
+* **מחיצת Volume (כרך):** יחידת אחסון לוגית. כרכים חולקים מקום פנוי באופן דינמי ללא צורך להגדיר גודל מראש (Dynamic Space Sharing).
+* **המונח Copy-on-Write (CoW):** מנגנון המונע שחיתות נתונים על ידי כתיבת שינויים לבלוקים חדשים לפני עדכון המצביע למידע.
+* **המונח Clones (שכפולים):** יצירת עותקים מדויקים באותו כרך בשבריר שנייה **ללא תפיסת מקום נוסף** (Zero-storage overhead) עד לביצוע שינוי. Finder מבצע זאת אוטומטית.
+* **המונח SVG (System Volume Group):** מעטפת המאחדת את כונן המערכת וכונן המידע לקבוצה אחת שמוצגת ככונן אחיד למשתמש.
+* **המונח SSV (Signed System Volume):** מחיצת ה-System הנעולה והחתומה קריפטוגרפית. המערכת עולה מתוך Snapshot מאומת. שום תוכנה או אדמין לא יכולים לשנות בה קבצים.
+* **המונח Firmlinks:** "חורי תולעת" (קישורים דו-כיווניים) המחברים ספריות מה-System אל ה-Data לחוויית שימוש רציפה.
+* **המונח Orphaned Data Volume:** מקרה קצה בו נוצר נתק בין ה-System ל-Data (לעיתים לאחר שחזור לקוי), ומשאיר כונן `Macintosh HD - Data` שמבזבז מקום.
+* **המונח Spotlight Index & Live Text:** מסד נתונים סמוי (`.Spotlight-V100`) לחיפוש גלובלי. בגרסאות עדכניות, התהליך כולל אנליזת תמונות מורכבת (OCR באמצעות `photoanalysisd`), מה שעשוי לגרום לעיבוד ממושך ברקע (Runaway Indexing).
+* **המונח User, Local, Network, System Domains:** חלוקת המערכת למרחבים שמגדירים מיקום נתונים והרשאות. הבנתם חיונית לפתרון תקלות של הגדרות ומשאבים (כמו פונטים) בסביבה מרובת משתמשים.
 * **אבטחה ארגונית (Enterprise Security):** לאור ה-SSV, אין צורך שתוכנות אנטי-וירוס יסרקו את כונן המערכת (הוא גם כך מוגן). חשוב להחריג נתיבי מערכת כדי למנוע לולאות אינסופיות עקב Firmlinks, מה שעלול לגרום לקריסות במק.
 
 ## פקודות שימושיות (Cheat Commands)
@@ -38,39 +38,39 @@
 ### אבחון APFS ו-Volumes
 ```bash
 # הצגת היררכיית APFS במערכת
-diskutil list
-diskutil apfs list
+המונח diskutil list
+המונח diskutil apfs list
 
 # הוספת כרך חדש עם מכסה (Quota) לתוך Container
-diskutil apfs addVolume diskX APFS "NewVolumeName" -quota 50g
+המונח diskutil apfs addVolume diskX APFS "NewVolumeName" -quota 50g
 
 # יצירת Clone ידני ללא תפיסת מקום
-cp -c /path/to/original /path/to/clone
+המונח cp -c /path/to/original /path/to/clone
 ```
 
 ### ניווט ואימות מערכת
 ```bash
 # הצגת ה-Firmlinks במערכת
-cat /usr/share/firmlinks
+המונח cat /usr/share/firmlinks
 
 # אימות שה-SSV מוגן וחתום קריפטוגרפית (חשוב ל-IT)
-csrutil authenticated-root status
+המונח csrutil authenticated-root status
 
 # ניווט מהיר ל-User Domain לעומת ה-Local Domain
-cd ~/Library
-cd /Library
+המונח cd ~/Library
+המונח cd /Library
 ```
 
 ### פתרון תקלות ב-Spotlight
 ```bash
 # בדיקת סטטוס והפעלה של אינדקס
-sudo mdutil -s /
+המונח sudo mdutil -s /
 
 # איפוס ובנייה מחדש של אינדקס למקרה של נתוני שטח פנוי פגומים
-sudo mdutil -E /
+המונח sudo mdutil -E /
 
 # בדיקת מטא-דאטה לקובץ ספציפי
-mdimport -t -d3 /path/to/file.pdf
+המונח mdimport -t -d3 /path/to/file.pdf
 ```
 
 ## קישורים מומלצים ולקריאה נוספת

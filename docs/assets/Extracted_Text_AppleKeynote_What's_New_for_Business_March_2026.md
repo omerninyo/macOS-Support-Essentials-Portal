@@ -1,496 +1,496 @@
-# Extracted Text: AppleKeynote_What's_New_for_Business_March_2026
+# המונח Extracted Text: AppleKeynote_What's_New_for_Business_March_2026
 
-## Slide 1
-- Presenter Name
-- Title
-- Date
-- What’s New for Business
-- March 2026
+## המונח Slide 1
+- המונח Presenter Name
+- המונח Title
+- המונח Date
+- המונח What’s New for Business
+- המונח March 2026
 
-## Slide 2
+## המונח Slide 2
 
-## Slide 3
+## המונח Slide 3
 
-## Slide 4
-- MacBook Neo
+## המונח Slide 4
+- המונח MacBook Neo
 - $599
 
-## Slide 5
+## המונח Slide 5
 
-## Slide 6
-- Run go-to apps and AI tools
-- with the A18 Pro chip
+## המונח Slide 6
+- המונח Run go-to apps and AI tools
+- המונח with the A18 Pro chip
 
-## Slide 7
-- Testing conducted by Apple in January 2026 using pre‑production MacBook Neo systems with Apple A18 Pro, 6‑core CPU, 5‑core GPU, 8GB of unified memory and 256GB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi‑Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi‑Fi. All systems tested with display brightness set to 8 clicks from bottom and keyboard backlight off. Battery life varies by use and configuration. See apple.com/uk/batteries for more information.
-- Up to 16 hours of battery life
+## המונח Slide 7
+- המונח Testing conducted by Apple in January 2026 using pre‑production MacBook Neo systems with Apple A18 Pro, 6‑core CPU, 5‑core GPU, 8GB of unified memory and 256GB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi‑Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi‑Fi. All systems tested with display brightness set to 8 clicks from bottom and keyboard backlight off. Battery life varies by use and configuration. See apple.com/uk/batteries for more information.
+- המונח Up to 16 hours of battery life
 
-## Slide 8
+## המונח Slide 8
 - 13″ Liquid Retina display
-- sRGB colour
+- המונח sRGB colour
 - 1 billion colours
-- Up to 500 nits brightness
+- המונח Up to 500 nits brightness
 
-## Slide 9
+## המונח Slide 9
 - 1080p FaceTime HD camera
 
-## Slide 10
+## המונח Slide 10
 - 1080p FaceTime HD
-- camera
-- Durable aluminium
-- Magic Keyboard &
-- Multi-Touch trackpad
+- המונח camera
+- המונח Durable aluminium
+- המונח Magic Keyboard &
+- המונח Multi-Touch trackpad
 - 13” Liquid Retina display
 - 1
-- Dual speaker system
+- המונח Dual speaker system
 - 5
-- macOS Tahoe
-- Up to 16 hours
-- battery life
+- מערכת macOS Tahoe
+- המונח Up to 16 hours
+- המונח battery life
 - 4
 - 2x USB-C and
-- headphone jack
-- Better together
+- המונח headphone jack
+- המונח Better together
 - 8GB
-- unified memory
-- Wi-Fi 6E
+- המונח unified memory
+- המונח Wi-Fi 6E
 - 3
-- Touch ID
-- option
-- MacBook Neo
-- A18 Pro chip
-- Up to
+- המונח Touch ID
+- המונח option
+- המונח MacBook Neo
+- המונח A18 Pro chip
+- המונח Up to
 - 512GB
-- SSD
+- המונח SSD
 - 2
 
-## Slide 11
+## המונח Slide 11
 - 1080p FaceTime HD
-- camera
-- Durable aluminium
-- Magic Keyboard &
-- Multi-Touch trackpad
+- המונח camera
+- המונח Durable aluminium
+- המונח Magic Keyboard &
+- המונח Multi-Touch trackpad
 - 13” Liquid Retina display
 - 1
-- Dual speaker system
-- macOS Tahoe
-- Up to 16 hours
-- battery life
+- המונח Dual speaker system
+- מערכת macOS Tahoe
+- המונח Up to 16 hours
+- המונח battery life
 - 4
 - 2x USB-C and
-- headphone jack
-- Better together
-- Up to
+- המונח headphone jack
+- המונח Better together
+- המונח Up to
 - 512GB
-- SSD
+- המונח SSD
 - 2
 - 8GB
-- unified memory
-- Wi-Fi 6E
+- המונח unified memory
+- המונח Wi-Fi 6E
 - 3
-- Touch ID
-- option
-- MacBook Neo
-- A18 Pro chip
+- המונח Touch ID
+- המונח option
+- המונח MacBook Neo
+- המונח A18 Pro chip
 
-## Slide 12
-- MacBook Air
+## המונח Slide 12
+- המונח MacBook Air
 
-## Slide 13
+## המונח Slide 13
 
-## Slide 14
-- World’s fastest CPU core
-- Next-generation GPU architecture
-- Up to 32GB of unified memory
-- Starting with 512GB of storage
-- Up to 18 hours of battery life
+## המונח Slide 14
+- המונח World’s fastest CPU core
+- המונח Next-generation GPU architecture
+- המונח Up to 32GB of unified memory
+- המונח Starting with 512GB of storage
+- המונח Up to 18 hours of battery life
 
-## Slide 15
-- Testing conducted by Apple in February 2026 using preproduction 15-inch MacBook Air systems with Apple M5, 10-core CPU, 10-core GPU, 16GB of unified memory, and 512GB SSD, as well as production Intel Core Ultra X7 300H Series-based PC systems with Intel Arc Graphics, 32GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Jupyter Notebook v7.5.3 code execution tested with Python 3.14.3. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air.
+## המונח Slide 15
+- המונח Testing conducted by Apple in February 2026 using preproduction 15-inch MacBook Air systems with Apple M5, 10-core CPU, 10-core GPU, 16GB of unified memory, and 512GB SSD, as well as production Intel Core Ultra X7 300H Series-based PC systems with Intel Arc Graphics, 32GB of RAM, 1TB SSD, and the latest version of Windows 11 available at the time of testing. Jupyter Notebook v7.5.3 code execution tested with Python 3.14.3. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Air.
 - 2x
-- Performance of PC laptop with Intel Core Ultra X7
+- המונח Performance of PC laptop with Intel Core Ultra X7
 
-## Slide 16
+## המונח Slide 16
 
-## Slide 17
-- MacBook Air
-- macOS Tahoe
+## המונח Slide 17
+- המונח MacBook Air
+- מערכת macOS Tahoe
 - 12MP Center Stage camera
-- Supports up to
-- two external displays
-- Wi-Fi 7
+- המונח Supports up to
+- המונח two external displays
+- המונח Wi-Fi 7
 - 3
-- Bluetooth 6
-- Silent design
+- המונח Bluetooth 6
+- המונח Silent design
 - 🤫
-- Up to
+- המונח Up to
 - 4x
-- faster
-- than M4
+- המונח faster
+- המונח than M4
 - 2
-- Up to
+- המונח Up to
 - 9.5x
-- faster
-- than M1
+- המונח faster
+- המונח than M1
 - 1
-- Four gorgeous colours
+- המונח Four gorgeous colours
 - 6
-- Neural Accelerators
-- in the GPU
-- Up to 18 hours
-- battery life
+- המונח Neural Accelerators
+- המונח in the GPU
+- המונח Up to 18 hours
+- המונח battery life
 - 4
-- Up to
+- המונח Up to
 - 2x
-- faster storage
-- Touch ID
-- Up to
+- המונח faster storage
+- המונח Touch ID
+- המונח Up to
 - 32GB
-- unified memory
-- Up to
+- המונח unified memory
+- המונח Up to
 - 4TB
-- storage capacity
+- המונח storage capacity
 - 5
 
-## Slide 18
-- MacBook Air
-- macOS Tahoe
+## המונח Slide 18
+- המונח MacBook Air
+- מערכת macOS Tahoe
 - 12MP Center Stage camera
-- Supports up to
-- two external displays
-- Wi-Fi 7
+- המונח Supports up to
+- המונח two external displays
+- המונח Wi-Fi 7
 - 3
-- Bluetooth 6
-- Silent design
+- המונח Bluetooth 6
+- המונח Silent design
 - 🤫
-- Up to
+- המונח Up to
 - 4x
-- faster
-- than M4
+- המונח faster
+- המונח than M4
 - 2
-- Up to
+- המונח Up to
 - 9.5x
-- faster
-- than M1
+- המונח faster
+- המונח than M1
 - 1
-- Four gorgeous colours
-- Neural Accelerators
-- in the GPU
-- Up to 18 hours
-- battery life
+- המונח Four gorgeous colours
+- המונח Neural Accelerators
+- המונח in the GPU
+- המונח Up to 18 hours
+- המונח battery life
 - 4
-- Up to
+- המונח Up to
 - 2x
-- faster storage
-- Touch ID
-- Up to
+- המונח faster storage
+- המונח Touch ID
+- המונח Up to
 - 32GB
-- unified memory
-- Up to
+- המונח unified memory
+- המונח Up to
 - 4TB
-- storage capacity
+- המונח storage capacity
 - 5
 
-## Slide 19
-- MacBook Pro
+## המונח Slide 19
+- המונח MacBook Pro
 
-## Slide 20
+## המונח Slide 20
 
-## Slide 21
-- Massive leap in AI performance
+## המונח Slide 21
+- המונח Massive leap in AI performance
 
-## Slide 22
+## המונח Slide 22
 - 18-core CPU with 6 super cores
-- Up to 20-core GPU with
-- Neural Accelerators
-- Up to 64GB unified memory
-- Storage capacity starting at 1TB
+- המונח Up to 20-core GPU with
+- המונח Neural Accelerators
+- המונח Up to 64GB unified memory
+- המונח Storage capacity starting at 1TB
 
-## Slide 23
+## המונח Slide 23
 - 18-core CPU with 6 super cores
-- Up to 40-core GPU with
-- Neural Accelerators
-- Up to 128GB unified memory
-- Storage capacity starting at 2TB
+- המונח Up to 40-core GPU with
+- המונח Neural Accelerators
+- המונח Up to 128GB unified memory
+- המונח Storage capacity starting at 2TB
 
-## Slide 24
-- Testing conducted by Apple in January and February 2026 using preproduction 16-inch MacBook Pro systems with Apple M5 Max, 18-core CPU, 40-core GPU, 128GB of unified memory, as well as production
+## המונח Slide 24
+- המונח Testing conducted by Apple in January and February 2026 using preproduction 16-inch MacBook Pro systems with Apple M5 Max, 18-core CPU, 40-core GPU, 128GB of unified memory, as well as production
 - 16-inch MacBook Pro systems with Apple M4 Max, 16-core CPU, 40-core GPU, and 128GB of unified memory and production 16-inch MacBook Pro systems with Apple M1 Max, 10-core CPU, 32-core GPU and 64GB of unified memory, all configured with 8TB SSD. Time to first token measured with a 16K-token prompt using an 14-billion parameter model with 4-bit weights and FP16 activations, mlx-lm and MLX framework. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.
-- LLM Prompt Processing
-- Faster time to first token performance
+- המונח LLM Prompt Processing
+- המונח Faster time to first token performance
 - 16-inch MacBook Pro
-- with M5 Max
+- המונח with M5 Max
 - 16-inch MacBook Pro
-- with M4 Max
+- המונח with M4 Max
 - 6.6x
 - 16-inch MacBook Pro
-- with M1 Max (baseline)
+- המונח with M1 Max (baseline)
 - 1.6x
 
-## Slide 25
-- Up to 22 hours
-- of video playback (14-inch MacBook Pro)
-- Up to 24 hours
-- of video playback (16-inch MacBook Pro)
-- Testing conducted by Apple in January and February 2026 using preproduction 14-inch MacBook Pro systems with Apple M5 Pro, 18-core CPU, 20-core GPU, 24GB of unified memory and 2TB SSD; preproduction 16-inch MacBook Pro systems with Apple M5 Pro, 18-core CPU, 20-core GPU, 48GB of unified memory and 1TB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi‑Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi‑Fi. Display brightness set to 8 clicks from the bottom and keyboard backlight was off. Battery life varies by use and configuration. See apple.com/uk/batteries for more information.
+## המונח Slide 25
+- המונח Up to 22 hours
+- המונח of video playback (14-inch MacBook Pro)
+- המונח Up to 24 hours
+- המונח of video playback (16-inch MacBook Pro)
+- המונח Testing conducted by Apple in January and February 2026 using preproduction 14-inch MacBook Pro systems with Apple M5 Pro, 18-core CPU, 20-core GPU, 24GB of unified memory and 2TB SSD; preproduction 16-inch MacBook Pro systems with Apple M5 Pro, 18-core CPU, 20-core GPU, 48GB of unified memory and 1TB SSD. Wireless web battery life tested by browsing 25 popular websites while connected to Wi‑Fi. Video streaming battery life tested with 1080p content in Safari while connected to Wi‑Fi. Display brightness set to 8 clicks from the bottom and keyboard backlight was off. Battery life varies by use and configuration. See apple.com/uk/batteries for more information.
 
-## Slide 26
-- Wi-Fi 7
-- Bluetooth 6
-- with M5 Pro and M5 Max MacBook Pro
-- Wi‑Fi 7 available in countries and regions where supported.
+## המונח Slide 26
+- המונח Wi-Fi 7
+- המונח Bluetooth 6
+- המונח with M5 Pro and M5 Max MacBook Pro
+- המונח Wi‑Fi 7 available in countries and regions where supported.
 
-## Slide 27
-- SDXC
-- HDMI
-- Thunderbolt 4 or 5
-- MagSafe 3
-- Headphone jack
-- Thunderbolt 4 or 5
+## המונח Slide 27
+- המונח SDXC
+- המונח HDMI
+- המונח Thunderbolt 4 or 5
+- המונח MagSafe 3
+- המונח Headphone jack
+- המונח Thunderbolt 4 or 5
 
-## Slide 28
-- Enhanced external display support
+## המונח Slide 28
+- המונח Enhanced external display support
 
-## Slide 29
-- MacBook Pro
-- Up to 24 hours
-- battery life
+## המונח Slide 29
+- המונח MacBook Pro
+- המונח Up to 24 hours
+- המונח battery life
 - 2
-- Magic Keyboard
-- Thunderbolt 4 or 5
-- HDMI
-- SD
-- MagSafe 3
-- Up to
+- המונח Magic Keyboard
+- המונח Thunderbolt 4 or 5
+- המונח HDMI
+- המונח SD
+- המונח MagSafe 3
+- המונח Up to
 - 8x faster
-- than M1 Max MacBook Pro
+- המונח than M1 Max MacBook Pro
 - 4
-- Up to
+- המונח Up to
 - 614GB/s
-- unified memory bandwidth
-- Up to
+- המונח unified memory bandwidth
+- המונח Up to
 - 8TB
-- storage
+- המונח storage
 - 1
-- Up to
+- המונח Up to
 - 128GB
-- memory
+- המונח memory
 - 1
-- Up to
+- המונח Up to
 - 40-core
-- GPU
-- Up to
+- המונח GPU
+- המונח Up to
 - 18-core
-- CPU
-- Neural Accelerators
-- in the GPU
-- Up to
+- המונח CPU
+- המונח Neural Accelerators
+- המונח in the GPU
+- המונח Up to
 - 14.5GB/s
-- SSD speeds
-- macOS Tahoe
-- Wi-Fi 7
+- המונח SSD speeds
+- מערכת macOS Tahoe
+- המונח Wi-Fi 7
 - 3
-- Bluetooth 6
-- with M5 Pro and M5 Max
+- המונח Bluetooth 6
+- המונח with M5 Pro and M5 Max
 
-## Slide 30
-- MacBook Pro
-- Up to 24 hours
-- battery life
+## המונח Slide 30
+- המונח MacBook Pro
+- המונח Up to 24 hours
+- המונח battery life
 - 2
-- Magic Keyboard
-- Thunderbolt 4 or 5
-- HDMI
-- SD
-- MagSafe 3
-- Up to
+- המונח Magic Keyboard
+- המונח Thunderbolt 4 or 5
+- המונח HDMI
+- המונח SD
+- המונח MagSafe 3
+- המונח Up to
 - 8x faster
-- than M1 Max MacBook Pro
+- המונח than M1 Max MacBook Pro
 - 4
-- Up to
+- המונח Up to
 - 614GB/s
-- unified memory bandwidth
-- Up to
+- המונח unified memory bandwidth
+- המונח Up to
 - 8TB
-- storage
+- המונח storage
 - 1
-- Up to
+- המונח Up to
 - 128GB
-- memory
+- המונח memory
 - 1
-- Up to
+- המונח Up to
 - 40-core
-- GPU
-- Up to
+- המונח GPU
+- המונח Up to
 - 18-core
-- CPU
-- Neural Accelerators
-- in the GPU
-- Up to
+- המונח CPU
+- המונח Neural Accelerators
+- המונח in the GPU
+- המונח Up to
 - 14.5GB/s
-- SSD speeds
-- macOS Tahoe
-- Wi-Fi 7
+- המונח SSD speeds
+- מערכת macOS Tahoe
+- המונח Wi-Fi 7
 - 3
-- and Bluetooth 6
-- with M5 Pro and M5 Max
+- המונח and Bluetooth 6
+- המונח with M5 Pro and M5 Max
 
-## Slide 31
-- Displays
+## המונח Slide 31
+- המונח Displays
 
-## Slide 32
+## המונח Slide 32
 
-## Slide 33
-- Studio Display
+## המונח Slide 33
+- המונח Studio Display
 - 27-inch 5K Retina display
 - 60Hz refresh rate
 - 600 nits brightness
-- P3 wide colour gamut
+- המונח P3 wide colour gamut
 - 12MP Center Stage camera with Desk View
-- Three-mic array, six-speaker sound system with Spatial Audio
-- Two Thunderbolt 5 ports
-- Two USB-C ports
+- המונח Three-mic array, six-speaker sound system with Spatial Audio
+- המונח Two Thunderbolt 5 ports
+- המונח Two USB-C ports
 
-## Slide 34
-- Studio Display XDR
+## המונח Slide 34
+- המונח Studio Display XDR
 - 27-inch 5K Retina XDR display
-- mini-LED backlight with 2304 dimming zones
-- Up to 1000 nits SDR brightness and
+- המונח mini-LED backlight with 2304 dimming zones
+- המונח Up to 1000 nits SDR brightness and
 - 2000 nits peak HDR brightness*
-- P3 + Adobe RGB wide colour gamut
+- המונח P3 + Adobe RGB wide colour gamut
 - 120Hz refresh rate and Adaptive Sync
 - 12MP Center Stage camera with Desk View
-- Three-mic array, six-speaker sound system with Spatial Audio
-- Two Thunderbolt 5 and two USB-C ports
+- המונח Three-mic array, six-speaker sound system with Spatial Audio
+- המונח Two Thunderbolt 5 and two USB-C ports
 
-## Slide 35
-- There’s a Mac for every job
+## המונח Slide 35
+- המונח There’s a Mac for every job
 
-## Slide 36
+## המונח Slide 36
 
-## Slide 37
+## המונח Slide 37
 - 2.3x faster than the iPad Air with M1
 - 3x faster Neural Engine
-- Designed for Apple Intelligence
-- Testing conducted by Apple in January and February 2026 using preproduction iPad Air 13-inch (M4) units with 8-core CPU and 9-core GPU, as well as production iPad Air (5th generation) units with 8-core CPU and 8-core GPU. Performance measured using selected industry‑standard benchmarks. Performance tests are conducted using specific iPad units and reflect the approximate performance of iPad Air. Testing conducted by Apple in January and February 2026 using preproduction iPad Air 13-inch (M4) units with 8-core CPU and 9-core GPU, as well as production iPad Air (M3) units with 8-core CPU and 9-core GPU. Performance measured using selected industry‑standard benchmarks. Performance tests are conducted using specific iPad units and reflect the approximate performance of iPad Air.
+- המונח Designed for Apple Intelligence
+- המונח Testing conducted by Apple in January and February 2026 using preproduction iPad Air 13-inch (M4) units with 8-core CPU and 9-core GPU, as well as production iPad Air (5th generation) units with 8-core CPU and 8-core GPU. Performance measured using selected industry‑standard benchmarks. Performance tests are conducted using specific iPad units and reflect the approximate performance of iPad Air. Testing conducted by Apple in January and February 2026 using preproduction iPad Air 13-inch (M4) units with 8-core CPU and 9-core GPU, as well as production iPad Air (M3) units with 8-core CPU and 9-core GPU. Performance measured using selected industry‑standard benchmarks. Performance tests are conducted using specific iPad units and reflect the approximate performance of iPad Air.
 
-## Slide 38
+## המונח Slide 38
 
-## Slide 39
+## המונח Slide 39
 - 5G (sub 6)
-- Wi-Fi 7
-- Bluetooth 6
-- Thread
+- המונח Wi-Fi 7
+- המונח Bluetooth 6
+- המונח Thread
 
-## Slide 40
-- Testing conducted by Apple in January and February 2026 using preproduction iPad Air 11-inch (M4) and iPad Air 13-inch (M4) units. Testing consisted of full battery discharge while performing each of the following tasks: video playback and internet browsing using Wi‑Fi or mobile data network (cellular models subscribed to LTE and 5G provider networks). Video content was a repeated 2-hour 23-minute movie purchased from the iTunes Store. Internet over Wi‑Fi and mobile data network tested by browsing 20 popular web pages. All settings were default except: Wi‑Fi was associated with a network (except for internet browsing over mobile data network); the Wi‑Fi feature Ask to Join Networks and Auto‑Brightness were turned off; Brightness was set to 50%; and WPA2 encryption was enabled. Battery life depends on device settings, usage, network and many other factors. Battery tests are conducted using specific iPad units; actual results may vary.
+## המונח Slide 40
+- המונח Testing conducted by Apple in January and February 2026 using preproduction iPad Air 11-inch (M4) and iPad Air 13-inch (M4) units. Testing consisted of full battery discharge while performing each of the following tasks: video playback and internet browsing using Wi‑Fi or mobile data network (cellular models subscribed to LTE and 5G provider networks). Video content was a repeated 2-hour 23-minute movie purchased from the iTunes Store. Internet over Wi‑Fi and mobile data network tested by browsing 20 popular web pages. All settings were default except: Wi‑Fi was associated with a network (except for internet browsing over mobile data network); the Wi‑Fi feature Ask to Join Networks and Auto‑Brightness were turned off; Brightness was set to 50%; and WPA2 encryption was enabled. Battery life depends on device settings, usage, network and many other factors. Battery tests are conducted using specific iPad units; actual results may vary.
 - 10-hour battery life
 
-## Slide 41
-- Built for AI
+## המונח Slide 41
+- המונח Built for AI
 
-## Slide 42
-- Magic Keyboard for iPad Air
-- Apple Pencil Pro support
-- Accessories sold separately.
+## המונח Slide 42
+- המונח Magic Keyboard for iPad Air
+- חברת Apple Pencil Pro support
+- המונח Accessories sold separately.
 
-## Slide 43
-- Magic Keyboard
-- Wi-Fi 7
+## המונח Slide 43
+- המונח Magic Keyboard
+- המונח Wi-Fi 7
 - 12MP Center Stage
-- camera
+- המונח camera
 - 12MP camera
 - 12GB
-- Unified System Memory
-- Apple Pencil
-- iPad Air
-- Landscape Stereo
-- Speakers
+- המונח Unified System Memory
+- חברת Apple Pencil
+- המונח iPad Air
+- המונח Landscape Stereo
+- המונח Speakers
 - 5G Cellular
 - 4 colours
-- Storage
+- המונח Storage
 - 1TB
-- Up to
+- המונח Up to
 - 128GB
-- Starting Storage
-- Touch ID
-- Liquid Retina Display
+- המונח Starting Storage
+- המונח Touch ID
+- המונח Liquid Retina Display
 
-## Slide 44
-- Wi-Fi 7
+## המונח Slide 44
+- המונח Wi-Fi 7
 - 12MP Center Stage
-- camera
+- המונח camera
 - 12MP camera
 - 12GB
-- Unified System Memory
-- Apple Pencil
-- Landscape Stereo
-- Speakers
+- המונח Unified System Memory
+- חברת Apple Pencil
+- המונח Landscape Stereo
+- המונח Speakers
 - 5G Cellular
-- Storage
+- המונח Storage
 - 1TB
-- Up to
+- המונח Up to
 - 128GB
-- Starting Storage
-- Touch ID
-- Magic Keyboard
+- המונח Starting Storage
+- המונח Touch ID
+- המונח Magic Keyboard
 - 4 colours
-- Liquid Retina Display
-- iPad Air
+- המונח Liquid Retina Display
+- המונח iPad Air
 
-## Slide 45
+## המונח Slide 45
 
-## Slide 46
+## המונח Slide 46
 
-## Slide 47
-- A19 Chip
-- Built for Apple Intelligence
+## המונח Slide 47
+- המונח A19 Chip
+- המונח Built for Apple Intelligence
 - 1.5x faster CPU from iPhone SE (3rd gen)
 - 2x faster CPU from iPhone 11
 
-## Slide 48
-- All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharging cycles and may eventually need to be replaced. Battery life and charging cycles vary by use and settings. See apple.com/uk/iPhone-17e and apple.com/uk/iphone/battery.html for more information.
-- Up to 26 hours of video playback
+## המונח Slide 48
+- המונח All battery claims depend on network configuration and many other factors; actual results will vary. Battery has limited recharging cycles and may eventually need to be replaced. Battery life and charging cycles vary by use and settings. See apple.com/uk/iPhone-17e and apple.com/uk/iphone/battery.html for more information.
+- המונח Up to 26 hours of video playback
 
-## Slide 49
-- Apple Intelligence
-- Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.
+## המונח Slide 49
+- חברת Apple Intelligence
+- חברת Apple Intelligence is available in beta. Some features may not be available in all regions or languages. For feature and language availability and system requirements, see support.apple.com/121115.
 
-## Slide 50
-- Up to 2x faster than C1
+## המונח Slide 50
+- המונח Up to 2x faster than C1
 
-## Slide 51
+## המונח Slide 51
 
-## Slide 52
+## המונח Slide 52
 - 3x better scratch resistance
-- Compared with previous‑generation iPhone.
+- המונח Compared with previous‑generation iPhone.
 
-## Slide 53
-- Powerful & fast processing
-- All-day battery life
-- Superfast connectivity
-- Durable design
+## המונח Slide 53
+- המונח Powerful & fast processing
+- המונח All-day battery life
+- המונח Superfast connectivity
+- המונח Durable design
 
-## Slide 54
+## המונח Slide 54
 
-## Slide 55
-- For geo without Apple Intelligence – we can change it to 4K60 Dolby Vision Video
-- For geo without Satellite features – we can change it to C1X
+## המונח Slide 55
+- המונח For geo without Apple Intelligence – we can change it to 4K60 Dolby Vision Video
+- המונח For geo without Satellite features – we can change it to C1X
 - 4K60 Dolby Vision Video
 
-## Slide 56
+## המונח Slide 56
 
-## Slide 57
-- Future-proof your business
-- with powerful devices for AI
+## המונח Slide 57
+- המונח Future-proof your business
+- המונח with powerful devices for AI
 
-## Slide 58
-- Best
-- for users
-- Best
-- for IT
-- Best
-- for business
+## המונח Slide 58
+- המונח Best
+- המונח for users
+- המונח Best
+- המונח for IT
+- המונח Best
+- המונח for business
 
-## Slide 59
+## המונח Slide 59
 

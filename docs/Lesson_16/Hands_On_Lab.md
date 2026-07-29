@@ -111,10 +111,10 @@
 1. סרקו את התוצאות עד שתאתרו את השגיאה המדויקת של מערכת הרשת (לרוב תחת ה-subsystem של `com.apple.apsd` או `com.apple.mdmclient`).
 2. חפשו פלט הדומה לאחת מהאפשרויות הבאות:
 
-   * `NSURLErrorDomain error -1001 (The request timed out)`
-   * `Failed to connect to MDM server: Host is down`
-   * `Certificate trust failed`
-   * `APNs connection dropped / failed to establish`
+   * `המונח NSURLErrorDomain error -1001 (The request timed out)`
+   * `המונח Failed to connect to MDM server: Host is down`
+   * `המונח Certificate trust failed`
+   * `המונח APNs connection dropped / failed to establish`
 3. העתיקו את שורת הלוג הזו. **זהו פתרון חדר הבריחה**. שורה זו מהווה את ההוכחה הנדרשת לצוות התקשורת הארגוני לכך שהמק מנסה לפנות החוצה, אך ה-Firewall שמט את החבילה (Dropped) או ביצע חסימת הצפנה (SSL Inspection).
 
 ---
@@ -127,7 +127,7 @@
 
 הפקודה `log show` מאפשרת לדלות מידע ולסנן אותו באמצעות "Predicates" (התואמים למסננים הגרפיים):
 ```bash
-log show --predicate 'process == "apsd" AND eventType == error' --info --last 2h
+המונח log show --predicate 'process == "apsd" AND eventType == error' --info --last 2h
 ```
 *הסבר: הפקודה תציג שגיאות של תהליך ה-APNs מהשעתיים האחרונות עם פירוט מורחב.*
 
@@ -135,5 +135,5 @@ log show --predicate 'process == "apsd" AND eventType == error' --info --last 2h
 
 אם נדרש להפיק דיאגנוסטיקה באופן מרוחק ללא ממשק גרפי, מריצים את הפקודה הבאה שמנתבת את קובץ הארכיון לשולחן העבודה:
 ```bash
-sudo sysdiagnose -f ~/Desktop/
+המונח sudo sysdiagnose -f ~/Desktop/
 ```
