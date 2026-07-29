@@ -110,14 +110,14 @@ Using Migration Assistant is a powerful tool, but in organizational environments
 
 ![How Software Update works in Ventura p5 37](../assets/images/Lesson_12/L12_DeepDive_How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![What should you do when an update goes wrong p1 41](../assets/images/Lesson_12/L12_DeepDive_What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
-![Slide1 image2](../assets/images/Lesson_12/L12_LegacySlide_Slide1_image2.jpeg)
-![Slide5 image5](../assets/images/Lesson_12/L12_LegacySlide_Slide5_image5.jpeg)
-![Slide76 image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.tif)
+![Slide1 image2](../assets/images/Lesson_12/L12_LegacySlide_Slide1_image2.jpg)
+![Slide5 image5](../assets/images/Lesson_12/L12_LegacySlide_Slide5_image5.jpg)
+![Slide76 image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.jpg)
 ![Slide76 image44](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image44.jpeg)
 ![Slide76 image90](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image90.png)
 ![Slide76 image91](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image91.png)
 ![Slide76 image92](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image92.png)
-![Slide77 image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.tif)
+![Slide77 image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.jpg)
 ![Slide77 image18](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image18.tif)
 
 
@@ -128,14 +128,14 @@ Using Migration Assistant is a powerful tool, but in organizational environments
 
 ![How Software Update works in Ventura p5 37](../assets/images/Lesson_12/L12_DeepDive_How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![What should you do when an update goes wrong p1 41](../assets/images/Lesson_12/L12_DeepDive_What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
-![Slide1 image2](../assets/images/Lesson_12/L12_LegacySlide_Slide1_image2.jpeg)
-![Slide5 image5](../assets/images/Lesson_12/L12_LegacySlide_Slide5_image5.jpeg)
-![Slide76 image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.tif)
+![Slide1 image2](../assets/images/Lesson_12/L12_LegacySlide_Slide1_image2.jpg)
+![Slide5 image5](../assets/images/Lesson_12/L12_LegacySlide_Slide5_image5.jpg)
+![Slide76 image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.jpg)
 ![Slide76 image44](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image44.jpeg)
 ![Slide76 image90](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image90.png)
 ![Slide76 image91](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image91.png)
 ![Slide76 image92](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image92.png)
-![Slide77 image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.tif)
+![Slide77 image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.jpg)
 ![Slide77 image18](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image18.tif)
 
 <!-- src_hash: 2f435d75583553d5df9c67165c8cda23c2ca80a87361d529f07c1246ebc7f872 -->

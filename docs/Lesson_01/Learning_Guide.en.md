@@ -54,10 +54,10 @@
 
 
 ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
-![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
-![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.tif)
-![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.tif)
+![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.jpg)
+![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.jpg)
+![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.jpg)
 ![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
 ![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
 ![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)
@@ -76,10 +76,10 @@
 
 
 ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.png)
-![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.tif)
-![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.tif)
-![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.tif)
+![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Slide11 image4](../assets/images/Lesson_01/L01_LegacySlide_Slide11_image4.jpg)
+![Slide43 image7](../assets/images/Lesson_01/L01_LegacySlide_Slide43_image7.jpg)
+![Slide7 image2](../assets/images/Lesson_01/L01_LegacySlide_Slide7_image2.jpg)
 ![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
 ![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
 ![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)
