@@ -8,7 +8,7 @@
 * ניהול הרשאות מודרני
 * פתרונות לארגונים
 **[Image Recommendation]:** A super minimalist abstract vector diagram showing a data vault with a digital key overlay.
-**המונח Presenter Notes:**
+**Presenter Notes:**
 
 
 ## סקירה
@@ -24,16 +24,16 @@
 
 ### מילון מושגים ומונחי ליבה
 
-* **המונח Secure Token:** שרשרת קריפטוגרפית (עטופה בסיסמת המשתמש) המאפשרת לחשבון המקומי במק לקבל "בעלות" קריפטוגרפית על Volume הנתונים, ולאשר משימות קריטיות כמו הפעלת FileVault או עדכוני תוכנה במחשבי Apple Silicon. המשתמש הראשון שנוצר דרך Setup Assistant מקבל אותו אוטומטית.
-* **המונח FileVault:** ההצפנה המובנית ב-macOS המצפינה את Volume הנתונים (Data Volume) באופן מלא באמצעות XTS-AES-128. במחשבי Apple Silicon, הנתונים מוצפנים מובנית ברמת החומרה תמיד, והפעלת FileVault למעשה "עוטפת" את המפתח הקיים בסיסמת המשתמש ללא פגיעה בביצועים.
-* **מחיצת Volume Ownership:** מנגנון במחשבי Apple Silicon שדורש הרשאות מיוחדות כדי לבצע משימות ברמת המערכת כמו מחיקת מק, שינוי הגדרות אתחול או שדרוג מערכת ההפעלה. נגזר ישירות ממשתמשים שיש להם Secure Token.
-* **המונח Bootstrap Token:** "מפתח מאסטר" זמני וארגוני הנדחף לשרת ה-MDM בשלב הרישום למערכת (Enrollment). האסימון נשמר ב-MDM (בתהליך Escrow) ויכול להעניק אוטומטית Secure Token למשתמשים קבועים או לחשבונות ענן (כמו Managed Apple Account - MAID) שמתחברים מאוחר יותר, מבלי להזדקק לסיסמה של המשתמש המקורי.
-* **סביבת Recovery Key - Recovery Key - PRK/IRK:** כאשר מדליקים את מנגנון ההצפנה FileVault, נוצר מפתח גיבוי למקרה שאבדה סיסמת ההתחברות.
-* **המונח PRK - Personal Recovery Key:** מפתח אלפאנומרי שמוצג למשתמש כדי לשמור בבטחה, או לחלופין, נשמר בחשבון ה-iCloud (ב-Tahoe לרוב יופעל גיבוי iCloud אוטומטית למשתמשים ביתיים).
-  * **המונח IRK - Institutional Recovery Key:** מפתח המשמש ארגונים באמצעות MDM, כך שרק מנהלי הארגון יוכלו לשחרר כוננים נעולים באמצעות Payload מיוחד. כיום הסטנדרט הוא להשתמש ב-PRK אישי שמגובה ב-MDM.
-* **המונח VEK (Volume Encryption Key) & KEK (Key Encryption Key):** VEK הוא מפתח הצפנת החומרה השמור ב-Secure Enclave. KEK הוא המפתח הנגזר מסיסמת המשתמש שלך, המשמש כדי "לעטוף" את ה-VEK ולשחרר את הנעילה שלו באתחול.
+* **Secure Token:** שרשרת קריפטוגרפית (עטופה בסיסמת המשתמש) המאפשרת לחשבון המקומי במק לקבל "בעלות" קריפטוגרפית על Volume הנתונים, ולאשר משימות קריטיות כמו הפעלת FileVault או עדכוני תוכנה במחשבי Apple Silicon. המשתמש הראשון שנוצר דרך Setup Assistant מקבל אותו אוטומטית.
+* **FileVault:** ההצפנה המובנית ב-macOS המצפינה את Volume הנתונים (Data Volume) באופן מלא באמצעות XTS-AES-128. במחשבי Apple Silicon, הנתונים מוצפנים מובנית ברמת החומרה תמיד, והפעלת FileVault למעשה "עוטפת" את המפתח הקיים בסיסמת המשתמש ללא פגיעה בביצועים.
+* **Volume Ownership:** מנגנון במחשבי Apple Silicon שדורש הרשאות מיוחדות כדי לבצע משימות ברמת המערכת כמו מחיקת מק, שינוי הגדרות אתחול או שדרוג מערכת ההפעלה. נגזר ישירות ממשתמשים שיש להם Secure Token.
+* **Bootstrap Token:** "מפתח מאסטר" זמני וארגוני הנדחף לשרת ה-MDM בשלב הרישום למערכת (Enrollment). האסימון נשמר ב-MDM (בתהליך Escrow) ויכול להעניק אוטומטית Secure Token למשתמשים קבועים או לחשבונות ענן (כמו Managed Apple Account - MAID) שמתחברים מאוחר יותר, מבלי להזדקק לסיסמה של המשתמש המקורי.
+* **סביבת השחזור (Recovery) Key - Recovery Key - PRK/IRK:** כאשר מדליקים את מנגנון ההצפנה FileVault, נוצר מפתח גיבוי למקרה שאבדה סיסמת ההתחברות.
+* **PRK - Personal Recovery Key:** מפתח אלפאנומרי שמוצג למשתמש כדי לשמור בבטחה, או לחלופין, נשמר בחשבון ה-iCloud (ב-Tahoe לרוב יופעל גיבוי iCloud אוטומטית למשתמשים ביתיים).
+  * **IRK - Institutional Recovery Key:** מפתח המשמש ארגונים באמצעות MDM, כך שרק מנהלי הארגון יוכלו לשחרר כוננים נעולים באמצעות Payload מיוחד. כיום הסטנדרט הוא להשתמש ב-PRK אישי שמגובה ב-MDM.
+* **VEK (Volume Encryption Key) & KEK (Key Encryption Key):** VEK הוא מפתח הצפנת החומרה השמור ב-Secure Enclave. KEK הוא המפתח הנגזר מסיסמת המשתמש שלך, המשמש כדי "לעטוף" את ה-VEK ולשחרר את הנעילה שלו באתחול.
 * **וירטואליזציה (Exclaves):** ב-macOS 26 Tahoe, הצפנת FileVault נתמכת גם במכונות וירטואליות בזכות טכנולוגיית Exclave המדמה Secure Enclave.
-* **המונח SSH Pre-boot:** ב-macOS 26 Tahoe נוספה היכולת להתחבר מרחוק ב-SSH לשרתים נטולי-מסך בשלב ה-Pre-boot כדי לשחרר את FileVault.
+* **SSH Pre-boot:** ב-macOS 26 Tahoe נוספה היכולת להתחבר מרחוק ב-SSH לשרתים נטולי-מסך בשלב ה-Pre-boot כדי לשחרר את FileVault.
 
 **היסטוריית גרסאות FileVault בקצרה:**
 
@@ -54,23 +54,23 @@
 * **בדיקת סטטוס Secure Token למשתמש נוכחי:**
 
   ```bash
-  המונח sysadminctl -secureTokenStatus $USER
+  sysadminctl -secureTokenStatus $USER
   ```
 
 * **בדיקת סטטוס למשתמש ספציפי (לדוגמה `johndoe`):**
 
   ```bash
-  המונח sysadminctl -secureTokenStatus johndoe
+  sysadminctl -secureTokenStatus johndoe
   ```
 
 * **הענקת Secure Token למשתמש אחר:** (דורש משתמש אדמין שכבר יש לו Secure Token)
   ```bash
-  המונח sysadminctl -secureTokenOn newuser -password newuserpass -adminUser adminname -adminPassword adminpass
+  sysadminctl -secureTokenOn newuser -password newuserpass -adminUser adminname -adminPassword adminpass
   ```
 
 * **הסרת Secure Token ממשתמש:** (זהירות - מחיקת האסימון לכלל המשתמשים עלולה לנעול את המחשב מהרשאות קריטיות!)
   ```bash
-  המונח sysadminctl -secureTokenOff otheruser -password userpass -adminUser adminname -adminPassword adminpass
+  sysadminctl -secureTokenOff otheruser -password userpass -adminUser adminname -adminPassword adminpass
   ```
 
 #### ניהול FileVault באמצעות `fdesetup`
@@ -78,50 +78,50 @@
 * **בדיקת סטטוס FileVault (האם פעיל או לא ומי מצפין את ה-Volume):**
 
   ```bash
-  המונח fdesetup status
+  fdesetup status
   ```
 
 * **הפעלת FileVault דרך הטרמינל (עבור המשתמש הנוכחי):**
 
   ```bash
-  המונח sudo fdesetup enable
+  sudo fdesetup enable
   ```
   *(המערכת תבקש סיסמה ותפיק Personal Recovery Key לטרמינל).*
 
 * **ביטול והסרת ההצפנה (פענוח ה-Volume - Decryption):**
 
   ```bash
-  המונח sudo fdesetup disable
+  sudo fdesetup disable
   ```
 
 * **הצגת רשימת המשתמשים המורשים לשחרר את ההצפנה בשלב הבוט:**
 
   ```bash
-  המונח sudo fdesetup list
+  sudo fdesetup list
   ```
 
 * **הסרת משתמש ספציפי (לדוגמה `johndoe`) ממורשי שחרור הדיסק:**
 
   ```bash
-  המונח sudo fdesetup remove -user johndoe
+  sudo fdesetup remove -user johndoe
   ```
 
 * **החלפת מפתח השחזור האישי (PRK) ויצירת מפתח חדש:**
 
   ```bash
-  המונח sudo fdesetup changerecovery -personal
+  sudo fdesetup changerecovery -personal
   ```
 
 * **סנכרון מיידי של ה-FileVault (בדיקה אם נדרש רענון למפתחות או סיסמאות שהשתנו):**
 
   ```bash
-  המונח sudo fdesetup sync
+  sudo fdesetup sync
   ```
 
 * **הפעלת מנגנון הצפנה עם קובץ Plist שקט (אידיאלי להפצה בתהליכי MDM - דורש הרשאות אדמין והגדרת XML):**
 
   ```bash
-  המונח sudo fdesetup enable -inputplist < /path/to/fdesetup.plist
+  sudo fdesetup enable -inputplist < /path/to/fdesetup.plist
   ```
 
 #### אבחון קריפטוגרפי מתקדם עם `diskutil` ו-`profiles`
@@ -129,20 +129,20 @@
 * **הצגת כל המשתמשים הקריפטוגרפיים (Cryptographic Users) עבור Container הנתונים ב-APFS:**
 
   ```bash
-  המונח diskutil apfs listcryptousers /
+  diskutil apfs listcryptousers /
   ```
   *(מציג את ה-UUID של כל ישות קריפטוגרפית שיכולה לפענח את Volume הנתונים, כולל משתמשים עם אסימון, PRK או IRK).*
 
 * **בדיקת הסטטוס של אסימון האתחול (Bootstrap Token) מול שרת ה-MDM:**
 
   ```bash
-  המונח sudo profiles status -type bootstraptoken
+  sudo profiles status -type bootstraptoken
   ```
   *(תשובה חיובית, למשל `profiles: Bootstrap Token supported on server` או `escrowed to server`, מעידה שהאסימון נשמר בהצלחה בשרת ומחכה למשוך אסימוני אבטחה עתידיים).*
 
 * **דחיפה יזומה לשרת הניהול:**
   ```bash
-  המונח sudo profiles install -type bootstraptoken
+  sudo profiles install -type bootstraptoken
   ```
 
 ---

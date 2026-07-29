@@ -14,7 +14,7 @@
 3. פתחו את אפליקציית ה-**Terminal** (ניתן להשתמש בקיצור המקלדת `Cmd + Space` ולחפש בעזרת Spotlight).
 4. הקלידו את הפקודה הבאה לשליפה מהירה של השם השיווקי של המעבד במחשב:
    ```bash
-   המונח sysctl -n machdep.cpu.brand_string
+   sysctl -n machdep.cpu.brand_string
    ```
 
 5. פתחו את תוכנת ה-**Activity Monitor**.
@@ -43,7 +43,7 @@
 1. פתחו את ה-**Terminal** (דרך Spotlight או בנתיב `/Applications/Utilities/Terminal.app`).
 2. הקלידו את הפקודה הבאה ולחצו Enter:
    ```bash
-   המונח sudo profiles show -type enrollment
+   sudo profiles show -type enrollment
    ```
 
 3. המערכת תדרוש מכם להזין את סיסמת ה-Local Account שלכם (סיסמת מנהל). הזינו אותה (הטקסט לא ייראה על המסך) ולחצו Enter.

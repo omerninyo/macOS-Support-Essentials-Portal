@@ -6,7 +6,7 @@
 
 ## דרישות קדם (Prerequisites)
 
-* מחשב Mac מעודכן ל-macOS 26 (Tahoe).
+* Mac מעודכן ל-macOS 26 (Tahoe).
 * משתמש בעל הרשאות Admin.
 * גישה לממשק ה-System Settings.
 * חיבור פעיל לרשת (Wi-Fi או כבל).
@@ -107,7 +107,7 @@
 1. **שינוי מהיר של DNS לממשק ה-Wi-Fi (`networksetup`):**
 
    ```bash
-   המונח sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
+   sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
    ```
    *פקודה זו מחילה בדיוק את אותם שרתי ה-DNS של גוגל שהגדרנו מוקדם יותר ידנית דרך הממשק. כדי לאפס חזרה ל-DNS של הראוטר המקומי, משתמשים במילה `Empty` במקום הכתובות.*
 

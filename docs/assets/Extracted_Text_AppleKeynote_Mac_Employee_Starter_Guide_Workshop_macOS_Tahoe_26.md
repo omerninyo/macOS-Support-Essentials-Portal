@@ -1,454 +1,454 @@
-# המונח Extracted Text: AppleKeynote_Mac_Employee_Starter_Guide_Workshop_macOS_Tahoe_26
+# Extracted Text: AppleKeynote_Mac_Employee_Starter_Guide_Workshop_macOS_Tahoe_26
 
-## המונח Slide 1
-- חברת Apple at Work
-- מחשב Mac Employee Starter Guide Workshop
-- מערכת macOS Tahoe 26
-- המונח January 2026
+## Slide 1
+- Apple at Work
+- Mac Employee Starter Guide Workshop
+- macOS Tahoe 26
+- January 2026
 
-## המונח Slide 2
-- המונח This slide deck is designed to help you familiarise your employees with macOS, so that they feel confident and productive when switching to a Mac at work. In this workshop, you’ll show employees how to navigate and customise their Mac, use built-in macOS productivity features and find additional support resources.
-- המונח To deliver a great demo, here are some helpful suggestions:
-- המונח Set up a Mac using the latest macOS. If possible, use the standard desktop background so that employees can easily follow along.
-- המונח To bring the Stacks scenario to life, gather different types of files to demo. And to demonstrate the Downloads folder, download some example files.
-- המונח To provide the best experience, set up some widgets for the Notification Centre demo; Calendar, Stocks and Weather are excellent options.
-- המונח The speaker notes are formatted to include your talk track, set up instructions and actions.
-- המונח Spoken presenter notes are in black text and not italicised.
-- המונח Instructions for the presenter to set up for a demo are in black italicised text.
-- המונח Bold blue text is for presenter actions (i.e. CLICK ON FINDER).
-- המונח Overview for presenter
+## Slide 2
+- This slide deck is designed to help you familiarise your employees with macOS, so that they feel confident and productive when switching to a Mac at work. In this workshop, you’ll show employees how to navigate and customise their Mac, use built-in macOS productivity features and find additional support resources.
+- To deliver a great demo, here are some helpful suggestions:
+- Set up a Mac using the latest macOS. If possible, use the standard desktop background so that employees can easily follow along.
+- To bring the Stacks scenario to life, gather different types of files to demo. And to demonstrate the Downloads folder, download some example files.
+- To provide the best experience, set up some widgets for the Notification Centre demo; Calendar, Stocks and Weather are excellent options.
+- The speaker notes are formatted to include your talk track, set up instructions and actions.
+- Spoken presenter notes are in black text and not italicised.
+- Instructions for the presenter to set up for a demo are in black italicised text.
+- Bold blue text is for presenter actions (i.e. CLICK ON FINDER).
+- Overview for presenter
 
-## המונח Slide 3
-- המונח Getting started
-- המונח with Mac basics
+## Slide 3
+- Getting started
+- with Mac basics
 
-## המונח Slide 4
-- המונח Thunderbolt/USB 4 ports
-- המונח MagSafe 3 port
-- המונח Spotlight Search
-- המונח Headphone jack
-- המונח Touch ID (power button)
-- המונח FaceTime HD camera
-- המונח Dictation
-- המונח Do Not Disturb
-- המונח Force Touch trackpad
-- המונח Hardware overview
+## Slide 4
+- Thunderbolt/USB 4 ports
+- MagSafe 3 port
+- Spotlight Search
+- Headphone jack
+- Touch ID (power button)
+- FaceTime HD camera
+- Dictation
+- Do Not Disturb
+- Force Touch trackpad
+- Hardware overview
 
-## המונח Slide 5
-- המונח Minimise
+## Slide 5
+- Minimise
 - (Command + M)
-- המונח Show/Hide
-- המונח Spotlight Search
+- Show/Hide
+- Spotlight Search
 - (Command + Space bar)*
-- המונח Switch apps
+- Switch apps
 - (Command + Tab)
-- המונח Take a screenshot/screen recording
+- Take a screenshot/screen recording
 - (Shift + Command + 5)
-- המונח Find
+- Find
 - (Command + F)
-- המונח Select All
+- Select All
 - (Command + A)
-- המונח Print
+- Print
 - (Command + P)
-- המונח Hide
+- Hide
 - (Command + H)
-- המונח Cut
+- Cut
 - (Command + X)
-- המונח Copy
+- Copy
 - (Command + C)
-- המונח Paste
+- Paste
 - (Command + V)
-- המונח Undo
+- Undo
 - (Command + Z)
-- המונח Redo
+- Redo
 - (Shift + Command + Z)
-- המונח Save
+- Save
 - (Command + S)
-- *המונח If you use
-- המונח multiple input sources
-- המונח to type in different languages, this shortcut changes input sources instead of showing Spotlight Search. Learn how to
-- המונח change a conflicting keyboard shortcut
+- *If you use
+- multiple input sources
+- to type in different languages, this shortcut changes input sources instead of showing Spotlight Search. Learn how to
+- change a conflicting keyboard shortcut
 - .
-- המונח Common keyboard shortcuts
+- Common keyboard shortcuts
 
-## המונח Slide 6
-- המונח Desktop
-- המונח Menu bar
-- המונח Dock
-- המונח Notification Centre
-- המונח Control Centre
-- המונח Spotlight Search
-- המונח Wi-Fi
-- חברת Apple menu
-- המונח App menus
-- יישום ה-Finder app window
+## Slide 6
+- Desktop
+- Menu bar
+- Dock
+- Notification Centre
+- Control Centre
+- Spotlight Search
+- Wi-Fi
+- Apple menu
+- App menus
+- סייר הקבצים (Finder) app window
 - יישום ה-Finder
-- המונח Apps
+- Apps
 - דפדפן Safari
-- המונח Bin
-- מערכת System Settings
-- המונח Downloads folder
-- המונח Files
-- המונח Folders
-- המונח Close
-- המונח Minimise
-- המונח Full screen
-- המונח Choose your view
-- המונח Software overview
-- מערכת macOS is the operating system that powers every Mac
+- Bin
+- System Settings
+- Downloads folder
+- Files
+- Folders
+- Close
+- Minimise
+- Full screen
+- Choose your view
+- Software overview
+- macOS is the operating system that powers every Mac
 
-## המונח Slide 7
-- המונח Organise your Desktop files
-- המונח Keep your Desktop organised with Stacks
+## Slide 7
+- Organise your Desktop files
+- Keep your Desktop organised with Stacks
 
-## המונח Slide 8
-- המונח Add widgets to your Desktop
-- המונח Personalise your Desktop with interactive widgets
+## Slide 8
+- Add widgets to your Desktop
+- Personalise your Desktop with interactive widgets
 
-## המונח Slide 9
-- חברת Apple menu
-- המונח App menus
-- המונח Wi-Fi
-- המונח Spotlight Search
-- המונח Control Centre
-- המונח Notification Centre
-- המונח Menu Bar
-- המונח Easily perform tasks and choose commands
+## Slide 9
+- Apple menu
+- App menus
+- Wi-Fi
+- Spotlight Search
+- Control Centre
+- Notification Centre
+- Menu Bar
+- Easily perform tasks and choose commands
 
-## המונח Slide 10
-- חברת Apple menu
-- חברת Apple menu
-- המונח Commands for things you do frequently
+## Slide 10
+- Apple menu
+- Apple menu
+- Commands for things you do frequently
 
-## המונח Slide 11
-- המונח App menus
-- המונח App menus
-- המונח Everything you need for the app you’re currently using
+## Slide 11
+- App menus
+- App menus
+- Everything you need for the app you’re currently using
 
-## המונח Slide 12
-- המונח Help menu
-- המונח Use built-in help on your Mac to easily find information or features
-- המונח Help Menu
+## Slide 12
+- Help menu
+- Use built-in help on your Mac to easily find information or features
+- Help Menu
 
-## המונח Slide 13
-- המונח Spotlight
-- המונח Spotlight
-- המונח Quickly search for apps, documents, photos and much more
+## Slide 13
+- Spotlight
+- Spotlight
+- Quickly search for apps, documents, photos and much more
 
-## המונח Slide 14
-- המונח Fast access to key features and information
-- המונח Control Centre
-- המונח Control Centre
+## Slide 14
+- Fast access to key features and information
+- Control Centre
+- Control Centre
 
-## המונח Slide 15
-- המונח Notification Centre
-- המונח Edit Widgets
-- המונח Notification Centre
-- המונח Keep on track with what’s happening throughout the day
+## Slide 15
+- Notification Centre
+- Edit Widgets
+- Notification Centre
+- Keep on track with what’s happening throughout the day
 
-## המונח Slide 16
-- המונח Siri
-- המונח Make everyday tasks easier
-- המונח Siri
+## Slide 16
+- Siri
+- Make everyday tasks easier
+- Siri
 
-## המונח Slide 17
-- המונח Apps
-- המונח Dock
-- המונח A convenient place to access apps and features
-- המונח Downloads folder
-- המונח Bin
+## Slide 17
+- Apps
+- Dock
+- A convenient place to access apps and features
+- Downloads folder
+- Bin
 
-## המונח Slide 18
-- המונח Sidebar
-- יישום ה-Finder app window
-- המונח Files
-- המונח Folders
-- המונח Close
-- המונח Minimise
-- המונח Full screen
-- המונח Choose your view
+## Slide 18
+- Sidebar
+- סייר הקבצים (Finder) app window
+- Files
+- Folders
+- Close
+- Minimise
+- Full screen
+- Choose your view
 - יישום ה-Finder
-- המונח Find and organise your documents, apps, media, folders and other files
+- Find and organise your documents, apps, media, folders and other files
 - יישום ה-Finder
 
-## המונח Slide 19
-- המונח Apps
-- המונח Apps
-- המונח Open, find and organise all your apps
+## Slide 19
+- Apps
+- Apps
+- Open, find and organise all your apps
 
-## המונח Slide 20
-- המונח Downloads
-- המונח folder
-- המונח Downloads folder
-- המונח Easily access the items you download, receive or accept
+## Slide 20
+- Downloads
+- folder
+- Downloads folder
+- Easily access the items you download, receive or accept
 
-## המונח Slide 21
-- מערכת System Settings
-- המונח Appearance
-- מערכת System Settings
-- המונח Personalise your Mac
+## Slide 21
+- System Settings
+- Appearance
+- System Settings
+- Personalise your Mac
 
-## המונח Slide 22
-- המונח Touch ID and Password
-- המונח Touch ID
-- המונח Unlock your Mac with just your fingerprint
-- מערכת System Settings
+## Slide 22
+- Touch ID and Password
+- Touch ID
+- Unlock your Mac with just your fingerprint
+- System Settings
 
-## המונח Slide 23
-- המונח Trackpad
-- המונח Multi-Touch gestures
-- המונח Perform useful actions with your mouse and trackpad
-- מערכת System Settings
+## Slide 23
+- Trackpad
+- Multi-Touch gestures
+- Perform useful actions with your mouse and trackpad
+- System Settings
 
-## המונח Slide 24
-- המונח Accessibility
-- המונח Accessibility
-- המונח Built-in features that work the way you do
-- מערכת System Settings
+## Slide 24
+- Accessibility
+- Accessibility
+- Built-in features that work the way you do
+- System Settings
 
-## המונח Slide 25
-- המונח Using productivity
-- המונח features and apps
+## Slide 25
+- Using productivity
+- features and apps
 
-## המונח Slide 26
-- המונח Screenshot
-- המונח Record or take a screenshot of what’s happening on your screen.
+## Slide 26
+- Screenshot
+- Record or take a screenshot of what’s happening on your screen.
 
-## המונח Slide 27
-- המונח Mission Control
-- המונח View all your open windows and desktop spaces
+## Slide 27
+- Mission Control
+- View all your open windows and desktop spaces
 
-## המונח Slide 28
-- המונח Window Tiling
-- המונח Work with two apps side by side
+## Slide 28
+- Window Tiling
+- Work with two apps side by side
 
-## המונח Slide 29
-- המונח Stage Manager
-- המונח Stage Manager
-- המונח Organise your Desktop and stay focused on the task at hand
-- המונח Control Centre
+## Slide 29
+- Stage Manager
+- Stage Manager
+- Organise your Desktop and stay focused on the task at hand
+- Control Centre
 
-## המונח Slide 30
-- המונח Show/hide sidebar
-- המונח Pinned tab
-- המונח Bookmarks
-- המונח Reading List
-- המונח Show tab overview
-- המונח New tab
-- המונח Share
+## Slide 30
+- Show/hide sidebar
+- Pinned tab
+- Bookmarks
+- Reading List
+- Show tab overview
+- New tab
+- Share
 - דפדפן Safari
 - דפדפן Safari
-- המונח Find what you’re looking for
+- Find what you’re looking for
 
-## המונח Slide 31
+## Slide 31
 - דפדפן Safari
-- המונח Get the gist of an article with Safari Highlights
+- Get the gist of an article with Safari Highlights
 - דפדפן Safari
-- דפדפן Safari Highlights
+- Safari Highlights
 
-## המונח Slide 32
+## Slide 32
 - דפדפן Safari
-- המונח Customise your web browsing with profiles, bookmarks and more
-- המונח Create Profile
+- Customise your web browsing with profiles, bookmarks and more
+- Create Profile
 - דפדפן Safari
 
-## המונח Slide 33
-- דפדפן Safari Web Apps
-- המונח Use any website like an app
-- המונח Web App added to Dock
+## Slide 33
+- Safari Web Apps
+- Use any website like an app
+- Web App added to Dock
 
-## המונח Slide 34
-- חברת Apple iWork
-- המונח Use built-in apps for creating all your work documents
-- המונח Pages
-- המונח Keynote
-- המונח Numbers
+## Slide 34
+- Apple iWork
+- Use built-in apps for creating all your work documents
+- Pages
+- Keynote
+- Numbers
 
-## המונח Slide 35
-- המונח Microsoft 365
-- המונח Use the same Microsoft 365 apps for work on your Mac
-- המונח Word
-- המונח Excel
-- המונח PowerPoint
+## Slide 35
+- Microsoft 365
+- Use the same Microsoft 365 apps for work on your Mac
+- Word
+- Excel
+- PowerPoint
 
-## המונח Slide 36
-- המונח Preview
-- המונח Preview
-- המונח Fill in and sign forms, password-protect PDFs and combine PDFs
-- המונח Markup Toolbar
+## Slide 36
+- Preview
+- Preview
+- Fill in and sign forms, password-protect PDFs and combine PDFs
+- Markup Toolbar
 
-## המונח Slide 37
-- המונח Add sticky note
-- המונח Freeform
-- המונח Whiteboard your ideas
-- המונח Add media or file
-- המונח Add text
-- המונח Add shape
-- המונח Freeform
+## Slide 37
+- Add sticky note
+- Freeform
+- Whiteboard your ideas
+- Add media or file
+- Add text
+- Add shape
+- Freeform
 
-## המונח Slide 38
-- המונח Create a new note
-- המונח Text formatting
-- המונח Make a checklist
-- המונח Add a table
-- המונח Notes
-- המונח Notes
-- המונח Jot notes, create checklists or brainstorm ideas
+## Slide 38
+- Create a new note
+- Text formatting
+- Make a checklist
+- Add a table
+- Notes
+- Notes
+- Jot notes, create checklists or brainstorm ideas
 
-## המונח Slide 39
-- המונח Calendar
-- המונח Calendar
-- המונח Keep track of all your calendar accounts in one place
+## Slide 39
+- Calendar
+- Calendar
+- Keep track of all your calendar accounts in one place
 
-## המונח Slide 40
-- המונח Keep track of all the things you need to do
-- המונח Add a new list
-- המונח Reminders
-- המונח Reminders
-- המונח Add a new reminder
+## Slide 40
+- Keep track of all the things you need to do
+- Add a new list
+- Reminders
+- Reminders
+- Add a new reminder
 
-## המונח Slide 41
-- המונח Add text, photos and files or mark up attachments
+## Slide 41
+- Add text, photos and files or mark up attachments
 - אפליקציית Mail
 - אפליקציית Mail
-- המונח Send and receive emails through the built-in app
+- Send and receive emails through the built-in app
 
-## המונח Slide 42
-- המונח New Contact
-- המונח or New List
-- המונח Contacts
-- המונח Contacts
-- המונח Access all your contacts in one place
+## Slide 42
+- New Contact
+- or New List
+- Contacts
+- Contacts
+- Access all your contacts in one place
 
-## המונח Slide 43
-- המונח Messages
-- המונח Messages
-- המונח Send text, images, audio and video messages
+## Slide 43
+- Messages
+- Messages
+- Send text, images, audio and video messages
 
-## המונח Slide 44
-- המונח Mute or Unmute
-- המונח Turn video on/off
-- המונח Use Presenter Overlay or add Video Effects
-- המונח FaceTime
-- המונח FaceTime
-- המונח Make video or audio-only calls to one or more people
+## Slide 44
+- Mute or Unmute
+- Turn video on/off
+- Use Presenter Overlay or add Video Effects
+- FaceTime
+- FaceTime
+- Make video or audio-only calls to one or more people
 
-## המונח Slide 45
-- המונח Presenter Overlay
-- המונח Keep yourself part of the conversation while sharing your screen
-- המונח Zoom video conferencing
+## Slide 45
+- Presenter Overlay
+- Keep yourself part of the conversation while sharing your screen
+- Zoom video conferencing
 
-## המונח Slide 46
-- המונח App Store
-- המונח App Store
-- המונח Discover third-party apps to support your workflows
+## Slide 46
+- App Store
+- App Store
+- Discover third-party apps to support your workflows
 
-## המונח Slide 47
-- המונח Shortcuts
-- המונח Shortcuts
-- המונח Automate everyday tasks
+## Slide 47
+- Shortcuts
+- Shortcuts
+- Automate everyday tasks
 
-## המונח Slide 48
-- המונח Working smarter with
-- חברת Apple Intelligence
+## Slide 48
+- Working smarter with
+- Apple Intelligence
 
-## המונח Slide 49
-- המונח Writing Tools
-- המונח Summarise, proofread and rewrite text almost anywhere you write
+## Slide 49
+- Writing Tools
+- Summarise, proofread and rewrite text almost anywhere you write
 
-## המונח Slide 50
-- חברת Apple Intelligence in Mail
-- המונח Stay on top of email with Summarise, Priority Messages and Smart Reply
+## Slide 50
+- Apple Intelligence in Mail
+- Stay on top of email with Summarise, Priority Messages and Smart Reply
 
-## המונח Slide 51
-- המונח Siri on Mac
-- המונח Accelerate everyday tasks with the built-in intelligent assistant
-- המונח Siri
+## Slide 51
+- Siri on Mac
+- Accelerate everyday tasks with the built-in intelligent assistant
+- Siri
 
-## המונח Slide 52
-- המונח Web page summaries
-- המונח Generate summaries of web pages in Safari
+## Slide 52
+- Web page summaries
+- Generate summaries of web pages in Safari
 
-## המונח Slide 53
-- המונח Summarise audio recordings
-- המונח Generate a summary of the transcript of an important meeting
+## Slide 53
+- Summarise audio recordings
+- Generate a summary of the transcript of an important meeting
 
-## המונח Slide 54
-- המונח Create more powerful shortcuts with Apple Intelligence
-- המונח Accelerate your workflows with intelligent actions in Shortcuts
+## Slide 54
+- Create more powerful shortcuts with Apple Intelligence
+- Accelerate your workflows with intelligent actions in Shortcuts
 
-## המונח Slide 55
-- המונח Working across
-- חברת Apple devices
+## Slide 55
+- Working across
+- Apple devices
 
-## המונח Slide 56
-- המונח iCloud
-- המונח Work seamlessly across all your Apple devices
+## Slide 56
+- iCloud
+- Work seamlessly across all your Apple devices
 
-## המונח Slide 57
-- המונח AirDrop
-- המונח Send files wirelessly to other nearby Apple devices
+## Slide 57
+- AirDrop
+- Send files wirelessly to other nearby Apple devices
 - יישום ה-Finder
-- המונח AirDrop
+- AirDrop
 
-## המונח Slide 58
-- המונח Control Centre,
-- המונח Screen Mirroring
-- המונח AirPlay Mirroring
-- המונח Share what’s on your Mac to an HDTV
+## Slide 58
+- Control Centre,
+- Screen Mirroring
+- AirPlay Mirroring
+- Share what’s on your Mac to an HDTV
 
-## המונח Slide 59
-- המונח Make and take calls from Mac
-- המונח Conveniently access synced phone content
-- המונח Phone App
+## Slide 59
+- Make and take calls from Mac
+- Conveniently access synced phone content
+- Phone App
 
-## המונח Slide 60
-- המונח iPhone Mirroring
-- המונח Interact with your iPhone wirelessly from your Mac
-- המונח iPhone Mirroring
+## Slide 60
+- iPhone Mirroring
+- Interact with your iPhone wirelessly from your Mac
+- iPhone Mirroring
 
-## המונח Slide 61
-- המונח Handoff
-- המונח Continue work on a nearby Apple device
+## Slide 61
+- Handoff
+- Continue work on a nearby Apple device
 - אפליקציית Mail
-- המונח Handoff
+- Handoff
 
-## המונח Slide 62
-- המונח Continuity Camera
-- המונח Use your iPhone as a webcam
+## Slide 62
+- Continuity Camera
+- Use your iPhone as a webcam
 
-## המונח Slide 63
-- המונח Continuity Camera
-- המונח Scan documents with your iPhone and see them instantly on your Mac
+## Slide 63
+- Continuity Camera
+- Scan documents with your iPhone and see them instantly on your Mac
 
-## המונח Slide 64
-- המונח Universal Clipboard
-- המונח Copy and paste content between your Apple devices
+## Slide 64
+- Universal Clipboard
+- Copy and paste content between your Apple devices
 
-## המונח Slide 65
-- המונח Continuity Markup and Sketch
-- המונח Annotate files and insert sketches from your iPhone or iPad
+## Slide 65
+- Continuity Markup and Sketch
+- Annotate files and insert sketches from your iPhone or iPad
 
-## המונח Slide 66
-- המונח Sidecar
-- המונח Use your iPad as a second display
+## Slide 66
+- Sidecar
+- Use your iPad as a second display
 
-## המונח Slide 67
-- המונח Universal Control
-- המונח Control your Mac and iPad with a single mouse and keyboard
+## Slide 67
+- Universal Control
+- Control your Mac and iPad with a single mouse and keyboard
 
-## המונח Slide 68
-- המונח Auto Unlock
-- המונח Unlock your Mac with your Apple Watch
+## Slide 68
+- Auto Unlock
+- Unlock your Mac with your Apple Watch
 
-## המונח Slide 69
-- המונח Additional resources
-- מערכת macOS User Guide
-- מחשב Mac Employee Starter Guide PDF
-- מערכת macOS Tahoe features
-- מחשב Mac tips for Windows switchers
-- המונח What’s it called on my Mac?
-- מחשב Mac keyboard shortcuts
+## Slide 69
+- Additional resources
+- macOS User Guide
+- Mac Employee Starter Guide PDF
+- macOS Tahoe features
+- Mac tips for Windows switchers
+- What’s it called on my Mac?
+- Mac keyboard shortcuts
 
-## המונח Slide 70
+## Slide 70
 

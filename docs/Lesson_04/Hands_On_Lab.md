@@ -9,7 +9,7 @@
 
 ## ציוד ודרישות (Prerequisites)
 
-* מחשב Mac מבוסס Apple Silicon.
+* Mac מבוסס Apple Silicon.
 * משתמש מסוג Local Account ברמת מנהל (Admin).
 * מומלץ חיבור לחשמל במחשבים ניידים במהלך שינויי הצפנה.
 * *הערה: בהתאם לכללי הקורס, מעבדות הרסניות (פרמוט וכו') יבוצעו על כונן ה-USB החיצוני שסופק לכם. עם זאת, הפעלת FileVault על כונן המערכת מותרת לצורך תרגול זה מכיוון שאינה פוגעת בנתונים.*
@@ -74,14 +74,14 @@
 * **בדיקת מצב Secure Token:**
 
   במקום לנבור ב-Directory Utility, ניתן לבקש מהמערכת לספק תשובה ישירה לגבי בעלות המערכת:
-  `המונח sysadminctl -secureTokenStatus username` (החלף את `username` בשם המשתמש המקוצר שלך). אם המערכת תחזיר `ENABLED`, משמעות הדבר היא שיש לך בעלות מערכת.
+  `sysadminctl -secureTokenStatus username` (החלף את `username` בשם המשתמש המקוצר שלך). אם המערכת תחזיר `ENABLED`, משמעות הדבר היא שיש לך בעלות מערכת.
 
 * **בדיקת מצב FileVault:**
 
   ניתן לבדוק את מצב ההצפנה המערכתית בפקודה אחת מהירה:
-  `המונח fdesetup status`
+  `fdesetup status`
 
 * **בדיקת סטטוס Bootstrap Token:**
 
   כדי לבדוק האם המק תקשר עם שרת ניהול (MDM) והפקיד (Escrow) Bootstrap Token שמאפשר הענקת Secure Tokens אוטומטית לעובדים חדשים, ניתן להשתמש בפקודה:
-  `המונח sudo profiles status -type bootstraptoken` (פעולה זו תדרוש הקלדת סיסמת מנהל).
+  `sudo profiles status -type bootstraptoken` (פעולה זו תדרוש הקלדת סיסמת מנהל).

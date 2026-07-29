@@ -35,19 +35,19 @@
 
 1. נסו ליצור קובץ ריק בכונן המערכת בטרמינל (כדי לראות את חסימת ה-SSV):
    ```bash
-   המונח sudo touch /System/test.txt
+   sudo touch /System/test.txt
    ```
    *(שגיאת `Read-only file system` מוכיחה שה-SSV חתום וסגור)*
 
 2. הריצו את הפקודה שמאשרת את חתימת האבטחה הקריפטוגרפית (טוב להרגעת מנהלי אבטחה לפני התקנת AV):
    ```bash
-   המונח csrutil authenticated-root status
+   csrutil authenticated-root status
    ```
    *(הסטטוס `enabled` אומר שאין צורך לסרוק את מחיצת המערכת נגד וירוסים)*
 
 3. בדקו היכן ממוקמים ה-Firmlinks שמגשרים מעל ההגבלות הללו:
    ```bash
-   המונח cat /usr/share/firmlinks
+   cat /usr/share/firmlinks
    ```
    *(שימו לב לנתיב `/Applications` המאחד בין קבצי קריאה-בלבד לנתוני המשתמש)*
 
@@ -68,7 +68,7 @@
 3. השכפול קורה **בשבריר שנייה**! ה-Finder השתמש אוטומטית במנגנון ה-Clone.
 4. **הוכחת Zero-storage:** בטרמינל, הריצו:
    ```bash
-   המונח du -h /Volumes/StudentDrive/*
+   du -h /Volumes/StudentDrive/*
    ```
    *הקובץ המקורי ישקול את משקלו המלא, אך המשוכפל ישקול **0B**!*
 

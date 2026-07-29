@@ -12,10 +12,10 @@
 * **עדכון (Update):** עדכון משני (Minor Update) או טלאי תוכנה לגרסה הנוכחית של מערכת ההפעלה (למשל, מ-macOS 26.1 ל-macOS 26.2).
 * **שדרוג (Upgrade):** שדרוג לגרסה ראשית (Major Upgrade) של מערכת הפעלה חדשה לחלוטין (למשל, מ-macOS 25 ל-macOS 26 Tahoe).
 * **עדכון קומבו (Combo Update - היסטורי):** מונח עבר המתאר קובץ שכלל את כל השינויים מאז הגרסה המרכזית האחרונה. הוחלף כיום לחלוטין על ידי ארכיטקטורת ה-SSV וה-Cryptex.
-* **המונח Rapid Security Response - RSR (או BSI):** טלאי אבטחה קריטיים ומהירים שמולבשים על המערכת באמצעות Cryptex, ללא צורך בעדכון מערכת מלא. מזוהים באותיות בסוגריים, כגון `macOS 26.3.1 (a)`.
+* **Rapid Security Response - RSR (או BSI):** טלאי אבטחה קריטיים ומהירים שמולבשים על המערכת באמצעות Cryptex, ללא צורך בעדכון מערכת מלא. מזוהים באותיות בסוגריים, כגון `macOS 26.3.1 (a)`.
 * **השהיית עדכונים (Deferral):** יכולת ניהולית ב-MDM להשהות הופעה של עדכוני תוכנה (עד 90 יום לשדרוג גדול) לצורך בדיקות תאימות.
-* **המונח Declarative Device Management - DDM:** התשתית המודרנית של ניהול המכשירים. אכיפת העדכונים מתבצעת על ידי שליחת "הצהרה" עם תאריך יעד (Deadline), וה-Mac מנהל לוקאלית את ההתראות והכפייה.
-* **המונח Migration Assistant:** הכלי המובנה להעברת מידע בין מקים. אינו מעתיק את מערכת ההפעלה עצמה.
+* **Declarative Device Management - DDM:** התשתית המודרנית של ניהול המכשירים. אכיפת העדכונים מתבצעת על ידי שליחת "הצהרה" עם תאריך יעד (Deadline), וה-Mac מנהל לוקאלית את ההתראות והכפייה.
+* **Migration Assistant:** הכלי המובנה להעברת מידע בין מקים. אינו מעתיק את מערכת ההפעלה עצמה.
 
 ---
 
@@ -25,47 +25,47 @@
 
 ### חיפוש והורדה:
 
-* **`המונח softwareupdate -l`** או **`softwareupdate --list`**
+* **`softwareupdate -l`** או **`softwareupdate --list`**
   מציג רשימה של כל עדכוני התוכנה הזמינים.
 
-* **`המונח softwareupdate -d -a`**
+* **`softwareupdate -d -a`**
   מוריד את כל העדכונים הזמינים למטמון אך לא מתקין אותם.
 
 ### התקנה:
 
-* **`המונח sudo softwareupdate -i -a`**
+* **`sudo softwareupdate -i -a`**
   מתקין את כל העדכונים.
 
-* **`המונח sudo softwareupdate -i -a -R`**
+* **`sudo softwareupdate -i -a -R`**
   מתקין ומאתחל אוטומטית.
 
 ### הורדת קבצי התקנה מלאים (Full Installers):
 
-* **`המונח softwareupdate --fetch-full-installer --full-installer-version 26.0`**
+* **`softwareupdate --fetch-full-installer --full-installer-version 26.0`**
   מוריד את קובץ ההתקנה המלא (Install macOS.app) של הגרסה היישר לתיקיית Applications.
 
 ### ניקוי והיסטוריה:
 
-* **`המונח softwareupdate --clear-deferrals`**
+* **`softwareupdate --clear-deferrals`**
   מנקה לוקאלית את השהיות העדכונים (אם ה-MDM מתיר זאת).
 
-* **`המונח softwareupdate --history`**
+* **`softwareupdate --history`**
   מדפיס היסטוריית עדכונים שהותקנו.
 
-* **`המונח softwareupdate --install-rosetta --agree-to-license`**
+* **`softwareupdate --install-rosetta --agree-to-license`**
   מתקין את סביבת ההרצה Rosetta 2 בצורה שקטה.
 
 ---
 
 ## ארכיטקטורה, תהליכי רקע ולוגים
 
-* **`המונח softwareupdated`**: תהליך הרקע המרכזי שאחראי על חיפוש העדכונים וחישוב שטח הדיסק הדרוש (`CalculatePrepareSize`).
-* **`המונח UpdateBrainService`**: השירות בפועל שאחראי על פריסת הקבצים ברקע ובניית ה-Snapshot וה-SSV.
+* **`softwareupdated`**: תהליך הרקע המרכזי שאחראי על חיפוש העדכונים וחישוב שטח הדיסק הדרוש (`CalculatePrepareSize`).
+* **`UpdateBrainService`**: השירות בפועל שאחראי על פריסת הקבצים ברקע ובניית ה-Snapshot וה-SSV.
 * **`/Library/Preferences/com.apple.SoftwareUpdate.plist`**: קובץ התצורה ברמת המערכת.
 
 * **חיפוש שגיאות ב-Unified Logging System:**
   ```bash
-  המונח log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info --debug
+  log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info --debug
   ```
 
 ---

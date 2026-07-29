@@ -23,7 +23,7 @@
 * **מצב "חמקן" (Stealth Mode):** מצב בתוך הגדרות חומת האש שמונע מהמק להגיב לבקשות סריקה ברשת (כגון ICMP Ping או נסיונות גילוי), מה שהופך אותו ל"רואה ואינו נראה" עבור מחשבים אחרים.
 * **פרופיל 802.1X:** מנגנון הזדהות מתקדם ברמת הרשת (Network Authentication). לרוב, בסביבות ארגוניות יסופק Configuration Profile המגדיר אוטומטית את אישורי ההתחברות (Credentials) והתעודות (Certificates) כדי לאפשר למק להתחבר מאובטחות לרשת הארגונית בצורה שקופה.
 * **פרוקסי (Proxy) ו-VPN:** כלי תקשורת המשמשים לניתוב או הצפנת התעבורה דרך שרת ארגוני. במק מנוהל (MDM), לרוב הגדרות אלו יהיו נעולות ונפרסות מרחוק (למשל Global HTTP Proxy).
-* **המונח ifconfig לעומת ip:** בעוד שפקודת `ifconfig` נחשבת כיום למיושנת (Legacy) ברוב הפצות הלינוקס המודרניות שחצו אל עבר פקודת ה-`ip`, ב-macOS הפקודה נותרה כלי נתמך, שמיש לחלוטין ויעיל מאוד לאבחון רשתות ברמת הליבה.
+* **ifconfig לעומת ip:** בעוד שפקודת `ifconfig` נחשבת כיום למיושנת (Legacy) ברוב הפצות הלינוקס המודרניות שחצו אל עבר פקודת ה-`ip`, ב-macOS הפקודה נותרה כלי נתמך, שמיש לחלוטין ויעיל מאוד לאבחון רשתות ברמת הליבה.
 
 ---
 
@@ -34,67 +34,67 @@
 
 **הצגת מידע (אין חובה ב-sudo):**
 
-* `המונח networksetup -listallnetworkservices`
+* `networksetup -listallnetworkservices`
   > מציג רשימה של כל שירותי הרשת (Wi-Fi, Ethernet וכו'). שירות המופיע עם כוכבית (*) בסמוך אליו הוא שירות מושבת.
 
-* `המונח networksetup -getinfo "Wi-Fi"`
+* `networksetup -getinfo "Wi-Fi"`
   > מציג את הגדרות ה-IP, ה-Subnet וה-Router הנוכחיות עבור השירות שצוין.
 
-* `המונח networksetup -getmacaddress "Ethernet"`
+* `networksetup -getmacaddress "Ethernet"`
   > מאחזר את כתובת ה-MAC הפיזית (Hardware Address) של כרטיס הרשת המסוים.
 
-* `המונח networksetup -getdnsservers "Wi-Fi"`
+* `networksetup -getdnsservers "Wi-Fi"`
   > מציג את רשימת שרתי ה-DNS המוגדרים כעת ידנית עבור שירות ה-Wi-Fi.
 
-* `המונח networksetup -listlocations`
+* `networksetup -listlocations`
   > מציג את כל מיקומי הרשת (Network Locations) שקיימים כרגע במערכת.
 
-* `המונח networksetup -getcurrentlocation`
+* `networksetup -getcurrentlocation`
   > מציג מהו מיקום הרשת הפעיל כעת.
 
 **שינוי תצורה והגדרות IP/DNS (מחייב הרשאות):**
 
-* `המונח sudo networksetup -setdhcp "Ethernet"`
+* `sudo networksetup -setdhcp "Ethernet"`
   > מגדיר את כרטיס ה-Ethernet למשוך כתובת IP באופן אוטומטי משרת ה-DHCP.
 
-* `המונח sudo networksetup -setmanual "Ethernet" 192.168.1.100 255.255.255.0 192.168.1.1`
+* `sudo networksetup -setmanual "Ethernet" 192.168.1.100 255.255.255.0 192.168.1.1`
   > מגדיר כתובת IP סטטית, יחד עם Subnet Mask ו-Router.
 
-* `המונח sudo networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4`
+* `sudo networksetup -setdnsservers "Wi-Fi" 8.8.8.8 8.8.4.4`
   > מגדיר שרתי DNS באופן ידני (על מנת למחוק את השרתים הידניים ולחזור ל-DHCP, יש להשתמש בערך `empty`).
 
 **ניהול שירותים ומיקומים:**
 
-* `המונח sudo networksetup -setnetworkserviceenabled "Bluetooth PAN" off`
+* `sudo networksetup -setnetworkserviceenabled "Bluetooth PAN" off`
   > מכבה לחלוטין את שירות הרשת שצוין.
 
-* `המונח sudo networksetup -createlocation "Office" populate`
+* `sudo networksetup -createlocation "Office" populate`
   > יוצר מיקום רשת חדש בשם "Office" ומאכלס אותו אוטומטית בשירותי החומרה הקיימים במק.
 
-* `המונח sudo networksetup -switchtolocation "Office"`
+* `sudo networksetup -switchtolocation "Office"`
   > מחליף את המערכת למיקום רשת אחר ומחיל את כל הגדרות הרשת הרלוונטיות של אותו המיקום באופן מיידי.
 
 ### כלי אבחון ובדיקה כלליים (Diagnostics)
 
-* `המונח ping -c 4 apple.com`
+* `ping -c 4 apple.com`
   > שולח 4 בקשות אקו (ICMP Echo Request) לשרת כדי לבדוק האם הוא זמין ומה זמן התגובה (Latency). הפקודה תעצור אוטומטית לאחר 4 נסיונות.
 
-* `המונח traceroute google.com`
+* `traceroute google.com`
   > מציג את כל ה"תחנות" (הראוטרים/Hops) שהמידע עובר דרכן עד הגעתו ליעד. כלי מעולה לאבחון היכן בדיוק מתרחש ניתוק ברשת.
 
-* `המונח nslookup apple.com`
+* `nslookup apple.com`
   > מבצע שאילתת DNS פשוטה ומציג לאיזו כתובת IP השרת מתרגם את שם המתחם.
 
-* `המונח dig apple.com`
+* `dig apple.com`
   > כלי מקצועי ומפורט יותר לבדיקת רשומות DNS, המציג את זמני המענה מהשרת ואת סוגי הרשומות המדויקים.
 
-* `המונח ifconfig`
+* `ifconfig`
   > פקודת UNIX וותיקה המציגה מידע ברמת הליבה (Interface Level) על כל כרטיסי הרשת והרשתות הווירטואליות. מיועדת יותר לחקירת המצב הפיזי או סביבות Containers.
 
-* `המונח netstat -rn`
+* `netstat -rn`
   > מציג את טבלת הניתוב (Routing Table) הפנימית של המק.
 
-* `המונח lsof -i :80`
+* `lsof -i :80`
   > מציג אילו תהליכים ואפליקציות פתוחים כרגע במק ומאזינים או מקושרים לפורט ספציפי (בדוגמה זו - פורט 80).
 
 ---
