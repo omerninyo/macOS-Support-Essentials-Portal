@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # שיעור 03: אבטחת מידע
 **מדריך עזר לתלמיד**
 
@@ -23,7 +25,7 @@
 * **XProtect:** מערכת ה-Anti-Virus השקטה והמובנית של macOS. פועלת ברקע, מבוססת חתימות (YARA) וחוסמת הפעלה של תוכנות זדוניות מוכרות בעת ניסיון ההרצה הראשון.
 * **XProtect Remediator:** מנגנון סריקה אקטיבי שרץ ברקע (על ידי LaunchDaemons) ומבצע סריקות תקופתיות לאיתור והסרת נוזקות שכבר הצליחו לחדור למערכת.
 * **Transparency, Consent, and Control (TCC):** מנגנון הפרטיות של macOS, הדורש מהמשתמש לאשר באופן אקטיבי בקשות גישה של אפליקציות למשאבים רגישים (כגון מצלמה, מיקרופון, מיקום, תיקיית מסמכים או דיסק מלא).
-* **Privacy Preferences Policy Control - PPPC:** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור מנהל.
+* **Privacy Preferences Policy Control - PPPC:** Configuration Profile (Payload) ארגוני המופץ על ידי מערכת ה-MDM ומאפשר למנהלי ה-IT להעניק מראש (או למנוע) הרשאות TCC עבור אפליקציות, ובכך למנוע מהמשתמשים לקבל חלוניות קופצות (Pop-ups) הדורשות אישור.
 * **System Integrity Protection - SIP:** מנגנון אבטחה ב-macOS המונע אפילו ממשתמש root לשנות קבצי מערכת רגישים, כולל את מסדי הנתונים של ה-TCC.
 * **Quarantine:** תגית (Extended Attribute) המוצמדת לקבצים שהורדו מהאינטרנט על ידי אפליקציות כמו ספארי, דואר או תוכנות מסרים. תגית זו מפעילה את הבדיקה של Gatekeeper עם פתיחת הקובץ.
 
@@ -42,12 +44,6 @@
 ### חקירה וניהול של Gatekeeper (`spctl`)
 הכלי `spctl` (SecAssessment system policy security) משמש לניהול ובדיקת מערכת ה-Gatekeeper.
 
-* **בדיקת הסטטוס של Gatekeeper (האם הוא פעיל):**
-
-  ```bash
-  spctl --status
-  ```
-
 * **בדיקת אפליקציה - הערכת Gatekeeper (האם היא מאושרת ותרוץ):**
 
   ```bash
@@ -55,16 +51,25 @@
   ```
   *(הדגל `-a` מבצע Assessment, `-vv` מציג פלט מפורט כולל מידע על ה-Notarization וזהות המפתח).*
 
-* **עקיפה נקודתית של Gatekeeper עבור אפליקציה ספציפית:**
-
-  ```bash
-  sudo spctl --add /path/to/AppName.app
-  ```
-
 * **הסרת תגית ההסגר (Quarantine) מקובץ שהורד מהאינטרנט (עוקף את אזהרת ההפעלה הראשונית):**
 
   ```bash
   xattr -d com.apple.quarantine /path/to/AppName.app
+  ```
+
+### חקירה וניהול של XProtect (`xprotect`)
+הכלי `xprotect` מאפשר בדיקה ושליטה על עדכוני החתימות.
+
+* **בדיקת הגרסה המותקנת כעת של XProtect:**
+
+  ```bash
+  xprotect version
+  ```
+
+* **כפיית התקנה של העדכון האחרון מ-iCloud:**
+
+  ```bash
+  sudo xprotect update
   ```
 
 ### ניהול ואיפוס הרשאות TCC (`tccutil`)
@@ -80,24 +85,6 @@
 
   ```bash
   tccutil reset Camera
-  ```
-
-* **איפוס הרשאת מיקרופון בלבד:**
-
-  ```bash
-  tccutil reset Microphone
-  ```
-
-* **איפוס הרשאת גישה לכל הדיסק (Full Disk Access):**
-
-  ```bash
-  tccutil reset SystemPolicyAllFiles
-  ```
-
-* **איפוס הרשאת צפייה במסך (Screen Recording):**
-
-  ```bash
-  tccutil reset ScreenCapture
   ```
 
 * **איפוס הרשאת מצלמה עבור אפליקציה ספציפית (לדוגמה, Terminal או Zoom), על ידי Bundle ID:**
@@ -129,10 +116,10 @@
 ### XProtect & Remediator
 מיקומי קבצי החתימות וכלי הסריקה של המנגנון השקט:
 
-* **קובץ החתימות המסורתי של XProtect (רשימת ה-YARA/Blocklist שמתעדכנת ברקע):**
+* **מיקום העדכונים העדכני של XProtect (החל מ-Tahoe):**
 
   ```text
-  /Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/XProtect.plist
+  /var/protected/xprotect/XProtect.bundle
   ```
 
 * **האפליקציה המריצה את ה-XProtect Remediator (כלי הסריקות התקופתיות והרמדיאציה):**
@@ -156,10 +143,10 @@
   log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
   ```
 
-* **צפייה בתוצאות הסריקה של XProtect Remediator (האם זוהתה נוזקה במערכת):**
+* **צפייה בתוצאות הסריקה של XProtect Remediator במהלך 24 השעות האחרונות (האם זוהתה נוזקה במערכת):**
 
   ```bash
-  log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info
+  log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
   ```
 
 ---
@@ -179,10 +166,11 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/D28yJofP3fU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![What_is_a_Background_Security_Improvement__and_how_p1_21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
 ![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
 ![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
+
+</div>

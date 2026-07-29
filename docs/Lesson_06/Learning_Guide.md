@@ -1,13 +1,15 @@
+<div dir="rtl">
+
 # שיעור 06: מערכת הקבצים (APFS)
 **מדריך עזר לתלמיד**
 
 
 ## מטרות השיעור
 
-* APFS Architecture
-* System Volume Group (SVG)
+* APFS Architecture & Dynamic Space Sharing
+* System Volume Group (SVG) & Orphaned Volumes
 * Firmlinks
-* Spotlight Indexing
+* Spotlight Indexing & Live Text
 **[Image Recommendation]:** A super minimalist abstract vector diagram showing a glowing data core (representing APFS) splitting into two interconnected hemispheres (System and Data).
 
 
@@ -18,83 +20,64 @@
 
 ## מושגי מפתח (Key Concepts)
 
-* **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple המחליפה את HFS+. בנויה לביצועים גבוהים על כונני פלאש, הצפנה, שיתוף מקום דינמי והגנה על נתונים.
-* **Container (מכולה):** השכבה הראשית ב-APFS שמנהלת את כל המקום הפנוי בדיסק. מחליפה למעשה את המחיצות (Partitions) הקשיחות של העבר.
-* **Volume (כרך):** יחידת אחסון לוגית בתוך ה-Container. כרכים חולקים את המקום הפנוי עם שאר הכרכים במכולה וגדלים לפי הצורך ללא צורך בהגדרה מראש (Dynamic Space Sharing).
-* **Copy-on-Write (CoW):** מנגנון קריטי ב-APFS המונע שחיתות נתונים בכך שמידע חדש נכתב לבלוקים ריקים לפני שהמצביע מתעדכן. מונע מצב של חצי-כתיבה.
-* **Clones (שכפולים):** תכונה בולטת של APFS המאפשרת יצירת עותקים מדויקים של קבצים ותיקיות בתוך אותו כרך באופן מיידי. עותקים אלו (Clones) חולקים את אותם הבלוקים הפיזיים ולכן **אינם תופסים מקום נוסף בדיסק** עד שאחד מהם משתנה. Finder מבצע זאת אוטומטית. ניתן לכפות זאת עם הפקודה `cp -c`.
-* **SVG (System Volume Group):** שילוב לוגי של כונן המערכת וכונן המידע לקבוצה אחת שמתנהגת ככונן רגיל וקלאסי (כמו Macintosh HD).
-* **SSV (Signed System Volume):** מחיצת המערכת (System) שנעולה לקריאה בלבד וחתומה קריפטוגרפית להגנה מוחלטת מפני שינויים זדוניים או שגויים.
-* **Firmlinks:** קישורים אקטיביים דו-כיווניים (מעין "חורי תולעת") שמחברים ספריות בכונן ה-System לספריות בכונן ה-Data, כך שעבור המשתמש נראה שמדובר במחיצה אחת.
-* **Spotlight Index:** מסד נתונים סמוי (`.Spotlight-V100`) שמכיל את התוכן של רוב הקבצים בדיסק כדי לאפשר חיפוש מיידי וגלובלי.
-* **mdworker / mds / mds_stores:** התהליכים ברקע שאחראים על כריית הנתונים מהקבצים ועדכון האינדקס של Spotlight.
-* **Get Info ו-Contextual Menu:** ממשק המידע והאפשרויות של ה-Finder. חלון ה-Get Info (Cmd+I) מאפשר לאבחן נתונים קריטיים על קבצים (למשל, האם הם יושבים במיקום הלוגי או הפיזי ב-Firmlinks, והרשאות מערכת). שימוש בתפריט ההקשר (קליק ימני) בשילוב מקש ה-Option במקלדת חושף אפשרויות ניהול מתקדמות (כגון חשיפת נתיבים מלאים להעתקה). [קריאה מומלצת 1](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) | [קריאה מומלצת 2](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/)
-* **User Domain:** המרחב האישי של המשתמש (Home Directory), מזוהה לרוב עם סימן הטילדה (`~`). המשתמש רשאי לשנות ולמחוק קבצים במרחב זה ללא צורך בהרשאות מנהל.
-* **Local Domain:** המרחב המשותף לכלל המשתמשים במחשב (למשל תיקיית `/Applications`). שינוי קבצים כאן דורש סיסמת מנהל.
-* **System Domain:** מרחב קבצי הליבה של מערכת ההפעלה. סגור לחלוטין לכתיבה.
+* **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple. בנויה לביצועים גבוהים, חלוקת מקום דינמית, והגנה על נתונים.
+* **Container (מכולה):** מאגר האחסון הראשי ב-APFS שמנהל את השטח הפנוי עבור כל הכרכים שבתוכו (מחליף מחיצות קשיחות).
+* **Volume (כרך):** יחידת אחסון לוגית. כרכים חולקים מקום פנוי באופן דינמי ללא צורך להגדיר גודל מראש (Dynamic Space Sharing).
+* **Copy-on-Write (CoW):** מנגנון המונע שחיתות נתונים על ידי כתיבת שינויים לבלוקים חדשים לפני עדכון המצביע למידע.
+* **Clones (שכפולים):** יצירת עותקים מדויקים באותו כרך בשבריר שנייה **ללא תפיסת מקום נוסף** (Zero-storage overhead) עד לביצוע שינוי. Finder מבצע זאת אוטומטית.
+* **SVG (System Volume Group):** מעטפת המאחדת את כונן המערכת וכונן המידע לקבוצה אחת שמוצגת ככונן אחיד למשתמש.
+* **SSV (Signed System Volume):** מחיצת ה-System הנעולה והחתומה קריפטוגרפית. המערכת עולה מתוך Snapshot מאומת. שום תוכנה או אדמין לא יכולים לשנות בה קבצים.
+* **Firmlinks:** "חורי תולעת" (קישורים דו-כיווניים) המחברים ספריות מה-System אל ה-Data לחוויית שימוש רציפה.
+* **Orphaned Data Volume:** מקרה קצה בו נוצר נתק בין ה-System ל-Data (לעיתים לאחר שחזור לקוי), ומשאיר כונן `Macintosh HD - Data` שמבזבז מקום.
+* **Spotlight Index & Live Text:** מסד נתונים סמוי (`.Spotlight-V100`) לחיפוש גלובלי. בגרסאות עדכניות, התהליך כולל אנליזת תמונות מורכבת (OCR באמצעות `photoanalysisd`), מה שעשוי לגרום לעיבוד ממושך ברקע (Runaway Indexing).
+* **User, Local, Network, System Domains:** חלוקת המערכת למרחבים שמגדירים מיקום נתונים והרשאות. הבנתם חיונית לפתרון תקלות של הגדרות ומשאבים (כמו פונטים) בסביבה מרובת משתמשים.
+* **אבטחה ארגונית (Enterprise Security):** לאור ה-SSV, אין צורך שתוכנות אנטי-וירוס יסרקו את כונן המערכת (הוא גם כך מוגן). חשוב להחריג נתיבי מערכת כדי למנוע לולאות אינסופיות עקב Firmlinks, מה שעלול לגרום לקריסות במק.
 
 ## פקודות שימושיות (Cheat Commands)
 
-### ניווט במרחבי המערכת (Domains Navigation)
-```bash
-# חזרה מהירה לתיקיית הבית (User Domain) מכל מקום במערכת
-cd ~
-
-# מעבר לתיקיית הספריה המשותפת לכלל המשתמשים (Local Domain)
-cd /Library
-
-# מעבר לתיקיית הספריה האישית המוסתרת (User Domain)
-cd ~/Library
-```
-
 ### אבחון APFS ו-Volumes
 ```bash
-# הצגת רשימת הדיסקים, המכולות והכרכים במערכת
+# הצגת היררכיית APFS במערכת
 diskutil list
-
-# הצגה מעמיקה של תצורת APFS (קבוצות כרכים, סטטוס הצפנה, תפקיד הכרך)
 diskutil apfs list
 
-# הוספת כרך חדש (Volume) בצורה דינמית מבלי לפרמט
-diskutil apfs addVolume diskX APFS "NewVolumeName"
+# הוספת כרך חדש עם מכסה (Quota) לתוך Container
+diskutil apfs addVolume diskX APFS "NewVolumeName" -quota 50g
 
-# שכפול קובץ כ-Clone באופן מיידי ללא תפיסת מקום (APFS Clone)
+# יצירת Clone ידני ללא תפיסת מקום
 cp -c /path/to/original /path/to/clone
-
-# השוואת הגודל "הלוגי" של הקבצים מול המקום "הפיזי" שהם תופסים באמת
-ls -lh /path/to/clone
-du -h /path/to/clone
-
-# הצגת נתיבי ה-Firmlinks במערכת
-cat /usr/share/firmlinks
-
-# בדיקת סטאטוס חתימת מחיצת המערכת המאומתת
-csrutil authenticated-root status
 ```
 
-### ניהול ואבחון Spotlight
+### ניווט ואימות מערכת
 ```bash
-# בדיקה האם Spotlight מופעל על כונן ה-Root
+# הצגת ה-Firmlinks במערכת
+cat /usr/share/firmlinks
+
+# אימות שה-SSV מוגן וחתום קריפטוגרפית (חשוב ל-IT)
+csrutil authenticated-root status
+
+# ניווט מהיר ל-User Domain לעומת ה-Local Domain
+cd ~/Library
+cd /Library
+```
+
+### פתרון תקלות ב-Spotlight
+```bash
+# בדיקת סטטוס והפעלה של אינדקס
 sudo mdutil -s /
 
-# מחיקה ובנייה מחדש של אינדקס ה-Spotlight (לפתרון תקלות "System Data" חריג)
+# איפוס ובנייה מחדש של אינדקס למקרה של נתוני שטח פנוי פגומים
 sudo mdutil -E /
 
-# רשימת כל הפלאגינים (MDImporters) המותקנים במערכת
-mdimport -L
-
-# סריקה ופליטת נתוני המטא-דאטה של קובץ ספציפי (לאיתור באגים בחיפוש)
-mdimport -t -d3 /path/to/specific/file.pdf
+# בדיקת מטא-דאטה לקובץ ספציפי
+mdimport -t -d3 /path/to/file.pdf
 ```
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) - מדריך רשמי לשימוש בכלי דיסק בדיקה ותיקון (First Aid).
-* [A brief history of APFS in honour of its fifth birthday](https://eclecticlight.co/2022/04/01/a-brief-history-of-apfs-in-honour-of-its-fifth-birthday/) - סקירה היסטורית וארכיטקטונית על מנגנון APFS.
-* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) - מאמר עומק המפרט כיצד מערכת ההפעלה משתמשת ב-Firmlinks לחיבור נפח המערכת והמידע.
-* [Using and troubleshooting Spotlight in Sequoia: summary](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) - סיכום ופתרון תקלות במנגנון החיפוש והאינדקס Spotlight.
-* [Reading the Finder Get Info dialog](https://eclecticlight.co/2026/06/09/reading-the-finders-get-info-dialog/) - מדריך קריאה והבנה של חלון המידע במק.
-* [Get more from Get Info and the Finder contextual menu](https://eclecticlight.co/2026/06/05/get-more-from-get-info-and-the-finders-contextual-menu/) - מאמר המפרט על התפריטים המהירים וחלון ה-Get Info.
+* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) - מדריך רשמי לבדיקה ותיקון.
+* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) - מאמר עומק על Firmlinks.
+* [Using and troubleshooting Spotlight in Sequoia: summary](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) - סיכום פתרון תקלות ב-Spotlight.
 
 ## סרטון סיכום
 
@@ -103,6 +86,7 @@ mdimport -t -d3 /path/to/specific/file.pdf
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/cBSnmMtt9ho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
@@ -119,3 +103,5 @@ mdimport -t -d3 /path/to/specific/file.pdf
 ![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
 ![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
 ![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
+
+</div>

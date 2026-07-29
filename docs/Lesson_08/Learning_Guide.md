@@ -1,10 +1,12 @@
+<div dir="rtl">
+
 # שיעור 08: טרמינל ושירותי רקע
-**מדריך עזר לתלמיד**
+**מדריך עזר לתלמיד (גרסת vEXP מורחבת)**
 
 ## מטרות השיעור
 
 * **מבוא לטרמינל (Terminal)** - למה ה-CLI קריטי לטכנאים, קיצורי מקלדת, ויישור קו לפני עבודה מתקדמת.
-* **הלב של המערכת** - תהליך `launchd` (הבדל בין LaunchDaemons ל-Agents).
+* **הלב של המערכת** - תהליך `launchd` (הבדל בין LaunchDaemons, Agents ו-LaunchAngels).
 * **אבחון עמוק** - קריאת זיכרון ב-Activity Monitor, וקריאה/אבחון של קבצי Plist (XML).
 * **תיבול ארגוני** - איתור ה-Agent של מערכת ה-MDM, הבנת ססטוס הסנכרון שלו ומה עושים כשהוא קורס.
 
@@ -23,12 +25,14 @@
 * **launchd:** "מנהל התהליכים" העליון (תמיד מקבל PID 1). אחראי להעלות את המערכת, לנהל שירותי רקע ולהפעיל אפליקציות לפי דרישה. מחליף מנגנוני Unix ישנים כמו `init` ו-`cron` (פותח ב-2005 ומאוחר יותר הורחב עם מערכות DAS ו-CTS לתזמון משימות גמיש).
 * **LaunchDaemon:** שירות מערכת (Daemon) שרץ ברקע תחת הרשאות משתמש העל (`root`), ללא תלות באף משתמש מחובר. סוכני MDM, תוכנות אנטיווירוס ארגוניות ושירותי מערכת קריטיים רצים בצורה זו.
 * **LaunchAgent:** שירות משתמש שרץ ברקע עם ההרשאות של המשתמש שהתחבר למערכת. נטען רק לאחר תהליך ה-Login.
-* **Plist (Property List):** פורמט לשמירת קבצי תצורה ב-macOS, מבוסס XML או בינארי. משמש לשמירת העדפות של אפליקציות ולהגדרת הפעולות של Daemons ו-Agents. התבסס במקור על שפת SGML מ-1969, והפורמט הבינארי שלו התווסף ב-2002 כדי לייעל קריאה ולחסוך במקום.
+* **LaunchAngel (מ-Tahoe 26):** סיווג חדש של שירותי מערכת פנימיים המנוהלים ישירות על ידי אפל באמצעות מנגנון ה-`RunningBoard`. קבצים אלו נעולים במחיצת ה-SSV.
+* **Plist (Property List):** פורמט לשמירת קבצי תצורה ב-macOS, מבוסס XML או בינארי. משמש לשמירת העדפות של אפליקציות ולהגדרת הפעולות של Daemons ו-Agents.
 * **Activity Monitor:** תוכנת הניטור המובנית המציגה עומסי מעבד, שימוש בזיכרון, פעילות כונן ותעבורת רשת. נוצרה בשנת 2003 מאיחוד התוכנות הישנות Process Viewer ו-CPU Monitor.
 * **Memory Pressure:** מדד הזיכרון החשוב ביותר ב-Activity Monitor. מייצג את "מאמץ" המערכת בניהול הזיכרון הפיזי וכולל דחיסת זיכרון (Compression) ושימוש ב-Swap (כתיבה לכונן).
 * **Swap:** מנגנון מערכתי שבו כאשר נגמר הזיכרון הפיזי (RAM), המערכת מעבירה מידע פחות שימושי לכונן ה-SSD. שימוש יתר ב-Swap יגרום לירידה דרסטית בביצועים.
 * **mdmclient:** תהליך מערכת (Daemon) מובנה של אפל, האחראי על קבלת פקודות שרת ה-MDM דרך APNs והחלת הפרופילים במערכת ההפעלה.
-* **TCC (Transparency, Consent, and Control):** מנגנון אבטחה ב-macOS החוסם גישה של תוכנות וסקריפטים לאזורים רגישים (כגון קבצי משתמש) ללא אישור מפורש מהמשתמש או מפרופיל ארגוני (PPPC).
+* **TCC (Transparency, Consent, and Control):** מנגנון אבטחה ב-macOS החוסם גישה של תוכנות וסקריפטים לאזורים רגישים ללא אישור מפורש מהמשתמש או מפרופיל ארגוני (PPPC).
+* **BTM (Background Task Management):** מנגנון המאפשר למשתמשים לשלוט באילו שירותי רקע מורשים לרוץ (דרך System Settings). ניתן לנהל באופן מתקדם באמצעות פקודת ה-`sfltool`.
 
 ## קיצורי מקלדת בטרמינל (Terminal Shortcuts)
 
@@ -41,7 +45,7 @@
 ## פקודות מערכת חשובות
 
 * `sudo`: הרצת פקודה יחידה עם הרשאות מנהל רשת/Root. דורש הזנת סיסמת אדמין.
-* `kill -9 <PID>`: "חיסול" מיידי ואלים של תהליך שנתקע לפי המזהה שלו, ללא המתנה לסגירה מסודרת.
+* `kill -9 <PID>`: "חיסול" מיידי ואלים של תהליך שנתקע לפי המזהה שלו.
 * `top -u`: צפייה בזמן אמת בצריכת משאבי המערכת עם מיון לפי שימוש במעבד (CPU). לחץ על `q` ליציאה.
 * `ps -ax`: הדפסת רשימת כל התהליכים שרצים כעת במערכת.
 
@@ -49,26 +53,31 @@
 
 * `launchctl list`: רשימת התהליכים תחת מנהל התהליכים הנוכחי.
 * `sudo launchctl print system`: הדפסת מצב כל שירותי המערכת (Daemons).
-* `sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist`: טעינת/הפעלת שירות מערכת מקובץ plist ספציפי.
+* `sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist`: טעינת/הפעלת שירות מערכת.
 * `sudo launchctl bootout system /Library/LaunchDaemons/com.example.plist`: פריקת/השעיית שירות מערכת.
+
+### ניהול BTM (sfltool) - למערכות Tahoe ומעלה
+* `sudo sfltool dumpbtm > ~/Documents/btmdump.txt`: שאיבת בסיס הנתונים של Background Task Management.
+* `sudo sfltool resetbtm`: איפוס בסיס הנתונים של ה-BTM.
 
 ### קריאה וניהול של Plists (`plutil`)
 
 * `plutil -lint /path/to/file.plist`: בדיקת תקינות הקובץ (Syntax Check) בחיפוש אחר שגיאות תחביר או תגיות חסרות.
-* `plutil -p /path/to/file.plist`: הדפסה פשוטה (Human Readable) של התוכן, עוקף קבצים בינאריים.
-* `sudo plutil -convert xml1 /path/to/file.plist`: המרת קובץ plist מפורמט בינארי ל-XML כדי לאפשר עריכה.
+* `plutil -p /path/to/file.plist`: הדפסה פשוטה של התוכן, עוקף קבצים בינאריים.
+* `sudo plutil -convert xml1 /path/to/file.plist`: המרת קובץ מבינארי ל-XML כדי לאפשר עריכה.
 * `sudo plutil -convert binary1 /path/to/file.plist`: החזרת הקובץ לפורמט בינארי לאחר עריכה.
 
 ### אבחון ה-MDM
 
-* `log stream --predicate 'process == "mdmclient"' --info`: פקודה המציגה בזמן אמת כל פעולה וסנכרון שסוכן ה-MDM המובנה מבצע. חובה לאיתור שגיאות רשת וחיבורים חסומים.
+* `log stream --predicate 'process == "mdmclient"' --info`: פקודה המציגה בזמן אמת כל פעולה וסנכרון שסוכן ה-MDM מתקשר עם השרת.
 * `sudo profiles renew -type enrollment`: כפיית סנכרון מיידי אל מול שרת ה-MDM מצידו של הלקוח.
 
 ## נתיבים קריטיים
 
 * `~/Library/Preferences/`: התיקייה בה נשמרים קבצי ה-Plist האישיים של משתמש.
-* `/System/Library/LaunchDaemons/`: ספריית שירותי הליבה של macOS, מוגנת תחת ה-SSV ולא ניתנת לשינוי.
-* `/Library/LaunchDaemons/`: ספרייה המיועדת לסוכני מערכת (Daemons) של צד שלישי (אנטי-וירוס, MDM). דורשת הרשאות מנהל לעריכה.
+* `/System/Library/LaunchDaemons/`: ספריית שירותי הליבה של macOS, מוגנת תחת ה-SSV.
+* `/System/Library/LaunchAngels/`: (החל מ-Tahoe) שירותי מערכת ייעודיים של אפל תחת ניהול RunningBoard, נעולים ב-SSV.
+* `/Library/LaunchDaemons/`: ספרייה המיועדת לסוכני מערכת (Daemons) של צד שלישי (אנטי-וירוס, MDM).
 * `~/Library/LaunchAgents/`: ספרייה המיועדת לסוכנים ברמת משתמש הספציפי שנטענים עם ביצוע ה-Login.
 
 ---
@@ -96,3 +105,5 @@
 ![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
 ![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
 ![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
+
+</div>

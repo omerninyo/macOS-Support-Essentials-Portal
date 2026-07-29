@@ -1,153 +1,148 @@
 # Lesson 16: Log Analysis
-**Student Guide**
+**Learning Guide**
 
 ## Overview
 
-<!-- פודקאסט NotebookLM מתוך Captivate -->
+<!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/8c719c94-f488-4b97-8408-77cc77048926/"></iframe></div>
 
 ## Glossary
 
-*   **Unified Logging System:** Apple's modern logging system, replacing older text-based syslog files. The system stores data in a compressed binary format in memory and on disk, requiring dedicated tools (Console.app or `log`) to read them. (First introduced in 2016 with macOS Sierra to address issues of log file flooding and system slowdowns).
-*   **Console.app:** The built-in graphical application in macOS for viewing logs. Primarily intended for real-time viewing (Live Streaming) or opening log archive files (`.logarchive`). Many users consider it a tool that has been "taken away" from them, as it no longer allows efficient searching backward through log history.
-*   **Subsystem:** A category or sub-system of an application that generates the log (for example: `com.apple.mdm` or `com.apple.TimeMachine`). Essential for filtering noise when searching logs.
-*   **Process:** The process (executable file or Daemon) that actually generated the log entry. Often represented by the executable file name.
-*   **Sysdiagnose:** A system diagnostic process that collects hundreds of log files, configurations, and local profiles into a single archive file (tar.gz) for in-depth analysis of critical issues (or for opening a support ticket with Apple/MDM vendor).
-*   **Predicates:** Advanced filtering syntax that allows retrieving only specific logs from the thousands of lines written every second.
-*   **Volatile / Non-Volatile Logs:** Regular logs stored in RAM (Volatile) and deleted upon reboot, versus logs written to the hard disk (Non-Volatile) for longer-term storage.
+* **Unified Logging System:** Apple's modern logging system that replaces old text files (syslog). It stores data in a compressed binary format in memory and on disk, requiring dedicated tools (Console.app or `log`) to read them. (Introduced in 2016 with macOS Sierra to solve issues with log bloat and system slowdowns).
+* **Console.app:** The built-in graphical application in macOS for viewing logs. Primarily used for Live Streaming or opening log archive files (`.logarchive`). Many advanced users consider it a tool that was "abducted" from them because it no longer allows efficient historical log search.
+* **Subsystem:** A category or subsystem of an application that generates the log (e.g., `com.apple.mdm` or `com.apple.TimeMachine`). Essential for filtering noise during log searches.
+* **Process:** The process (executable file or Daemon) that actually generated the log line. Usually represented by the executable file name.
+* **Sysdiagnose:** A system diagnostic process that collects hundreds of log files, configurations, and local profiles into a single archive file (`.tar.gz`) for deep analysis of critical issues (or for opening a support ticket with Apple/MDM vendor).
+* **Predicates:** Advanced filtering syntax that allows retrieving specific logs from the thousands of lines written every second.
+* **Volatile / Non-Volatile Logs:** Regular logs kept in RAM (Volatile) and deleted upon reboot, versus logs written to the hard drive (Non-Volatile) for longer-term storage.
 
 ---
 
 ## Terminal Commands for Log Management and Diagnostics (The `log` Command)
 
-The `log` command is the primary tool for historical investigation of the Unified Logging System, as Console.app by default does not display full history.
+The `log` command is the main tool for historical investigation of the Unified Logging System, since Console.app by default does not show full history.
 
 ### Basic Viewing and Time Filtering
 
-*   **`log show`**
-    Displays all logs stored on disk (this command may display millions of lines and freeze the terminal if not filtered).
+* **`log show`**
+  Displays all logs stored on disk (this command may output millions of lines and freeze the terminal if not filtered).
 
-*   **`log show --last 10m`**
-    Displays all logs written in the last 10 minutes. (You can use `h` for hours or `d` for days).
+* **`log show --last 10m`**
+  Show all logs written in the last 10 minutes. (You can use `h` for hours or `d` for days).
 
-*   **`log show --start "2026-06-18 09:00:00" --end "2026-06-18 09:30:00"`**
-    Displays logs from a specific, precise time window.
+* **`log show --start "2026-06-18 09:00:00" --end "2026-06-18 09:30:00"`**
+  Show logs from a specific time window accurately.
 
 ### Advanced Filtering using Predicates
 The true power of `log show` is the ability to filter by process, subsystem, or specific content:
 
-*   **`log show --predicate 'process == "kernel"'`**
-    Displays logs generated exclusively by the kernel.
+* **`log show --predicate 'process == "kernel"'`**
+  Display logs generated exclusively by the kernel.
 
-*   **`log show --predicate 'subsystem == "com.apple.TimeMachine"' --info`**
-    Displays Time Machine backup processes, including Info-level messages.
+* **`log show --predicate 'subsystem == "com.apple.TimeMachine"' --info`**
+  Display Time Machine backup processes, including Info level messages.
 
-*   **`log show --predicate 'eventMessage CONTAINS "error"'`**
-    Searches for the word "error" within the log message body.
+* **`log show --predicate 'eventMessage CONTAINS "error"'`**
+  Search for the word "error" inside the body of the log message.
 
-*   **`log show --predicate 'processImagePath CONTAINS "mdmclient"'`**
-    Locates all logs generated by the enterprise MDM process (excellent for identifying profile synchronization issues).
+* **`log show --predicate 'processImagePath CONTAINS "mdmclient"'`**
+  Locate all logs generated by the corporate MDM process (excellent for identifying profile synchronization issues).
 
 ### Archive Management
 
-*   **`sudo log collect --last 1h`**
-    Collects logs from the last hour into a `.logarchive` file that can be opened and analyzed on another computer using Console.app.
+* **`sudo log collect --last 1h`**
+  Collect logs from the last hour into a `.logarchive` file that can be opened and analyzed on another Mac using Console.app.
 
-*   **`log erase`**
-    Deletes all historical logs stored on disk (requires root privileges).
-
----
-
-## Creating and Analyzing Sysdiagnose
-
-When dealing with deep system issues (Kernel crashes, random network disconnections, or unresolved MDM installation failures), generating a Sysdiagnose is the first step in escalation.
-
-*   **Creating Sysdiagnose via Terminal:**
-
-    `sudo sysdiagnose -f ~/Desktop`
-    Generates a full Sysdiagnose report and saves it directly to the desktop. The process takes several minutes.
-
-*   **Creating Sysdiagnose using Keyboard (without Terminal):**
-
-    Pressing the `Shift-Control-Option-Command-Period (.)` combination triggers Sysdiagnose creation in the background. The screen will flash briefly as confirmation. The file will be saved to the path: `/var/tmp/`.
-
-*   **Creating Sysdiagnose within macOS Recovery:**
-
-    If the computer does not boot, you can enter Recovery, open Terminal, and type `sysdiagnose`. The file will be saved to a connected USB device or to the Data volume if accessible.
-
-*   **Getting Help and Additional Settings:**
-
-    `sysdiagnose -h`
-    Displays the full help menu, where you can find flags for collecting specific information (e.g., only network or Wi-Fi related information).
+* **`log erase`**
+  Erase all historical logs saved on disk (requires root privileges).
 
 ---
 
-## Diagnostic and Resource Monitoring Commands (Activity & System Monitoring)
+## Generating and Analyzing a Sysdiagnose
 
-While the graphical Activity Monitor is excellent for most users, support personnel use advanced command-line tools to monitor real-time activity, especially when the graphical interface freezes.
+When dealing with deep system issues (Kernel panics, random network disconnects, or MDM installation failures that are unresolved), generating a Sysdiagnose is the first step in escalation.
+
+* **Generating Sysdiagnose via Terminal:**
+
+  `sudo sysdiagnose -f ~/Desktop`
+  Generates a full Sysdiagnose report and saves it directly to the Desktop. The process takes several minutes.
+
+* **Generating Sysdiagnose via Keyboard (Without Terminal):**
+
+  Pressing the combination `Shift-Control-Option-Command-Period (.)` starts Sysdiagnose generation in the background. The screen will flash briefly to confirm. The file will be saved in the path: `/var/tmp/`.
+
+* **Generating Sysdiagnose in macOS Recovery:**
+
+  If the computer cannot boot, you can enter Recovery, open the Terminal, and type `sysdiagnose`. The file will be saved to a connected USB drive or the Data volume if accessible.
+
+* **Getting Help and Additional Settings:**
+
+  `sysdiagnose -h`
+  Displays the full help menu, where you can find flags to collect specific information (e.g., only network or Wi-Fi related info).
+
+---
+
+## Activity & System Monitoring Commands
+
+While the graphical Activity Monitor is excellent for most users, support professionals use advanced command-line tools to monitor activity in real-time, especially when the graphical interface freezes.
 
 ### CPU and Memory Monitoring (`top`)
 The `top` command provides a live, updating view of resource utilization.
 
-*   **`top`**
-    Displays the process table and overall resource utilization (CPU, memory, system load).
+* **`top`**
+  Displays the process table and overall resource utilization (CPU, memory, system load).
 
-*   **`top -u`**
-    Sorts processes by their CPU consumption from highest to lowest (excellent for identifying "battery hogs" or processes stuck in an infinite loop).
+* **`top -u`**
+  Sorts processes by CPU consumption from highest to lowest (excellent for finding "battery drainers" or processes stuck in an infinite loop).
 
-*   **`top -o mem`**
-    Sorts processes by memory usage (Memory Pressure).
+* **`top -o mem`**
+  Sorts processes by memory usage (Memory Pressure).
 
-*   *(Note: To exit the live `top` view, press the `q` key).*
+* *(Note: To exit the live view of `top`, press the letter `q`).*
 
-### File System Tracking (`fs_usage`)
-A particularly powerful tool that displays real-time system calls to disk. Excellent for cases where an application performs multiple write operations causing slowdowns (like enterprise antivirus software).
+### File System Tracing (`fs_usage`)
+An incredibly powerful tool that shows real-time system calls to the disk. Excellent for cases where an application performs excessive write operations causing slowdowns (like corporate antiviruses).
 
-*   **`sudo fs_usage`**
-    Displays all file system activity in real-time (caution - displays a lot of running information).
+* **`sudo fs_usage`**
+  Displays all file system activity in real-time (Warning - displays a massive stream of information).
 
-*   **`sudo fs_usage -w`**
-    Expands the display so that paths are shown in full beyond the window width limit.
+* **`sudo fs_usage -w`**
+  Expands the view so paths are shown fully beyond the window width limit.
 
-*   **`sudo fs_usage -f filesys ProcessName`**
-    Filters activity and displays only disk calls for a specific process (replace `ProcessName` with the process name, e.g., `mdmclient`).
+* **`sudo fs_usage -f filesys ProcessName`**
+  Filters activity to show only disk calls for a specific process (replace `ProcessName` with the process name, e.g., `mdmclient`).
 
 ---
 
-## Enterprise Flavor: Identifying MDM Issues in Console
-When the MDM server pushes a configuration profile (e.g., 802.1x settings for enterprise WiFi) and the process fails, a simple error search in Console.app requires focus.
+## Enterprise Seasoning: Identifying MDM Issues in Console
+When the MDM server pushes a configuration profile (e.g., 802.1x settings for corporate WiFi) and the process fails, a simple error search in Console.app requires focus.
 
-1.  Open **Console.app**.
-2.  Click **Start** (live log collection).
-3.  In the Search bar, type `mdmclient` and press Enter (ensure it is set to **Process** or **Any**).
-4.  Resend the installation command from the MDM.
-5.  All actions of the local MDM agent will appear. Look for lines marked in yellow (Fault) or red (Error) indicating a certificate trust error or a firewall block preventing server access.
+1. Open **Console.app**.
+2. Click **Start** (live log collection).
+3. In the Search bar, type `apsd` or `mdmclient` and press Enter (make sure it's set to **Process** or **Any**).
+4. Resend the installation command from the MDM.
+5. All actions of the local MDM agent will appear. Look for lines marked in yellow (Fault) or red (Error) indicating a Certificate Trust error or firewall block preventing access to the server (Apple's APNs on port 5223 or the MDM on port 443).
 
 ---
 
 ## Recommended Links and Further Reading
 
-*   [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - The official guide for using the Console app to read logs on Mac.
-*   [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - An interesting overview of the evolution of how logs have been stored on Mac from 2016 to the present.
-*   [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - A professional guide for advanced users explaining how to truly find what you're looking for within the sea of operating system logs.
+* [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - The official guide for using the Console app to read logs on a Mac.
+* [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - An interesting overview of the evolution of how logs are saved on a Mac from 2016 to today.
+* [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - A professional guide for advanced users explaining how to truly find what you're looking for in the OS's sea of logs.
 
 ## Summary Video
 
-<!-- סרטון סיכום מתוך YouTube -->
+<!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 
-!!! tip "Visual Illustration (Student Aid)"
-    These images illustrate the interface or mechanism relevant to the lesson topic.
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-
-<!-- src_hash: b3e433391a9ba879aa144b3b0a1473495fd4a335536ea5eb77ebe2a7c63f0e7d -->
-
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
+> [!TIP] המחשה ויזואלית (עזר לתלמיד)
+> תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
 ![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)

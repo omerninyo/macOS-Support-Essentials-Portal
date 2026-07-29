@@ -9,88 +9,74 @@
 
 ## מושגי יסוד: טרמינולוגיה ואסטרטגיה
 
-* **עדכון (Update):** עדכון משני (Minor Update) או טלאי תוכנה שמשחררת אפל לגרסה הנוכחית של מערכת ההפעלה (למשל, מעבר מ-macOS 26.1 ל-macOS 26.2).
-* **שדרוג (Upgrade):** שדרוג של גרסה ראשית (Major Upgrade) למערכת הפעלה חדשה לחלוטין (למשל, מעבר מ-macOS 25 ל-macOS 26).
-* **עדכון קומבו (Combo Update - היסטורי):** מונח מן העבר (עד ל-Big Sur) שתיאר קובץ עדכון גדול המכיל את כל השינויים מגרסת הבסיס, ששימש כדי לעקוף בעיות של התקנות חלקיות. הוחלף כיום על ידי מנגנון ה-SSV.
-* **Rapid Security Response - RSR (Rapid Security Response / RSR):** מנגנון להפצת טלאי אבטחה קריטיים ומהירים ללא צורך בהתקנת עדכון מערכת מלא. עדכונים אלו מזוהים באמצעות אותיות בסוגריים, למשל `macOS 26.2.1 (a)`.
-* **השהיית עדכונים (Deferral):** יכולת ניהולית (באמצעות Configuration Profile של MDM) להשהות הופעה של עדכוני תוכנה או שדרוגים בעיני המשתמשים למשך שיעור זמן של עד 90 יום, לצורך בדיקות תאימות.
-* **Declarative Device Management - DDM:** הדור המודרני של ניהול מכשירים. במקום לשלוח פקודת MDM כפויה לעדכון (שלרוב נכשלת או מתוזמנת גרוע), ה-IT מגדיר "הצהרה" (Declaration) עם תאריך יעד לעדכון, ומערכת ההפעלה מנהלת את ההכנות, ההתראות והתזמון בעצמה.
-* **Migration Assistant:** הכלי המובנה של macOS המשמש להעברת פרופילי משתמשים, מידע, והגדרות בין מחשבי Mac שונים.
+* **עדכון (Update):** עדכון משני (Minor Update) או טלאי תוכנה לגרסה הנוכחית של מערכת ההפעלה (למשל, מ-macOS 26.1 ל-macOS 26.2).
+* **שדרוג (Upgrade):** שדרוג לגרסה ראשית (Major Upgrade) של מערכת הפעלה חדשה לחלוטין (למשל, מ-macOS 25 ל-macOS 26 Tahoe).
+* **עדכון קומבו (Combo Update - היסטורי):** מונח עבר המתאר קובץ שכלל את כל השינויים מאז הגרסה המרכזית האחרונה. הוחלף כיום לחלוטין על ידי ארכיטקטורת ה-SSV וה-Cryptex.
+* **Rapid Security Response - RSR (או BSI):** טלאי אבטחה קריטיים ומהירים שמולבשים על המערכת באמצעות Cryptex, ללא צורך בעדכון מערכת מלא. מזוהים באותיות בסוגריים, כגון `macOS 26.3.1 (a)`.
+* **השהיית עדכונים (Deferral):** יכולת ניהולית ב-MDM להשהות הופעה של עדכוני תוכנה (עד 90 יום לשדרוג גדול) לצורך בדיקות תאימות.
+* **Declarative Device Management - DDM:** התשתית המודרנית של ניהול המכשירים. אכיפת העדכונים מתבצעת על ידי שליחת "הצהרה" עם תאריך יעד (Deadline), וה-Mac מנהל לוקאלית את ההתראות והכפייה.
+* **Migration Assistant:** הכלי המובנה להעברת מידע בין מקים. אינו מעתיק את מערכת ההפעלה עצמה.
 
 ---
 
 ## מאגר פקודות הטרמינל: שליטה בעדכונים (`softwareupdate`)
 
-כלי ה-CLI המרכזי ב-macOS לניהול, הורדה, והתקנה של עדכוני מערכת הוא פקודת ה-`softwareupdate`. כלי זה חיוני לאיש ה-IT לטיפול בתקלות או ביצוע אוטומציות.
+כלי ה-CLI המרכזי לניהול, הורדה, והתקנה של עדכוני מערכת הוא `softwareupdate`.
 
 ### חיפוש והורדה:
 
 * **`softwareupdate -l`** או **`softwareupdate --list`**
-  סורק ומציג רשימה של כל עדכוני התוכנה הזמינים כרגע למחשב הספציפי.
+  מציג רשימה של כל עדכוני התוכנה הזמינים.
 
-* **`softwareupdate -d -a`** או **`softwareupdate --download --all`**
-  מוריד את כל העדכונים הזמינים למטמון המערכת, אך **לא** מתקין אותם (מאפשר הכנה מראש לחסכון בזמן).
-
-* **`softwareupdate -d "Name of Update"`**
-  מוריד עדכון ספציפי לפי התווית המדויקת שלו כפי שהופיעה בפקודת ה-list.
+* **`softwareupdate -d -a`**
+  מוריד את כל העדכונים הזמינים למטמון אך לא מתקין אותם.
 
 ### התקנה:
 
-* **`sudo softwareupdate -i -a`** או **`sudo softwareupdate --install --all`**
-  מתקין את כל עדכוני המערכת הזמינים במכה אחת (דורש הרשאות מנהל). במחשבי Apple Silicon ייתכן שיידרש Secure Token כדי לאשר עדכון קרנל.
+* **`sudo softwareupdate -i -a`**
+  מתקין את כל העדכונים.
 
 * **`sudo softwareupdate -i -a -R`**
-  מתקין את כל העדכונים הזמינים ומאתחל (Restart) את המחשב באופן אוטומטי בסיום הפעולה.
+  מתקין ומאתחל אוטומטית.
 
 ### הורדת קבצי התקנה מלאים (Full Installers):
 
-* **`softwareupdate --fetch-full-installer`**
-  מוריד את קובץ ההתקנה המלא (קובץ ה-Install macOS.app בסביבות 12GB+) של הגרסה העדכנית ביותר היישר לתיקיית `/Applications`.
-
-* **`softwareupdate --fetch-full-installer --full-installer-version 14.5`**
-  מוריד קובץ התקנה של גרסה ספציפית בעבר, בתנאי שהיא עדיין נתמכת וחתומה דיגיטלית על ידי אפל.
+* **`softwareupdate --fetch-full-installer --full-installer-version 26.0`**
+  מוריד את קובץ ההתקנה המלא (Install macOS.app) של הגרסה היישר לתיקיית Applications.
 
 ### ניקוי והיסטוריה:
 
-* **`softwareupdate --clear-catalog`**
-  מאפס את מטמון העדכונים של המערכת (מצוין לפתרון תקלות כשמערכת ה-Software Update נתקעת או לא מציגה עדכונים חדשים).
+* **`softwareupdate --clear-deferrals`**
+  מנקה לוקאלית את השהיות העדכונים (אם ה-MDM מתיר זאת).
 
 * **`softwareupdate --history`**
-  מדפיס בטרמינל טבלה מסודרת עם היסטוריית כל העדכונים שהותקנו במחשב עד כה, כולל גרסאות ותאריכי התקנה.
+  מדפיס היסטוריית עדכונים שהותקנו.
 
 * **`softwareupdate --install-rosetta --agree-to-license`**
-  מתקין את סביבת התרגום Rosetta 2 בצורה שקטה, ללא הקפצת חלון אישור למשתמש (אידאלי לסקריפטים של פריסה מוקדמת).
+  מתקין את סביבת ההרצה Rosetta 2 בצורה שקטה.
 
 ---
 
 ## ארכיטקטורה, תהליכי רקע ולוגים
 
-כדי לדבג בעיות בעדכונים, יש להכיר את שחקני הרקע של המערכת.
+* **`softwareupdated`**: תהליך הרקע המרכזי שאחראי על חיפוש העדכונים וחישוב שטח הדיסק הדרוש (`CalculatePrepareSize`).
+* **`UpdateBrainService`**: השירות בפועל שאחראי על פריסת הקבצים ברקע ובניית ה-Snapshot וה-SSV.
+* **`/Library/Preferences/com.apple.SoftwareUpdate.plist`**: קובץ התצורה ברמת המערכת.
 
-* **`softwareupdated`**: תהליך הרקע (Daemon) הראשי שאחראי על חיפוש, אימות מול שרתי אפל, והתקנת העדכונים.
-* **`/Library/Preferences/com.apple.SoftwareUpdate.plist`**: קובץ התצורה ברמת המערכת השומר את הגדרות התזמון של העדכונים האוטומטיים והתנהגות המנגנון.
-* **חיפוש שגיאות עדכון בלוג המאוחד (Unified Logging System):**
-
-  כדי למצוא למה עדכון נכשל בסביבת אנטרפרייז (למשל, בעיות רשת או חסימת שרתים), ניתן לשאוב נתונים חיים מה-Console:
+* **חיפוש שגיאות ב-Unified Logging System:**
   ```bash
-  log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info
-  ```
-
-* **בדיקת היסטוריית התקנות מורחבת:**
-
-  ```bash
-  system_profiler SPInstallHistoryDataType
+  log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info --debug
   ```
 
 ---
 
 ## המלצות IT להגירות (Migration Assistant)
 
-שימוש ב-Migration Assistant הוא כלי חזק, אך בסביבות ארגוניות עשוי לגרום להעתקת בעיות ממחשב ישן למחשב חדש.
+בסביבות ארגוניות, Migration Assistant עלול לייבא בעיות ממחשבים ישנים.
 
-* **בידוד המידע להעברה:** מומלץ בחום *שלא* להעביר את תיקיות ה-Applications וה-Other files and folders, אלא רק את חשבון המשתמש (Home Folder). העברת אפליקציות גוררת עמה קבצי תצורה ישנים של MDM, הרחבות ליבה (Kexts) מיושנות, ושגיאות תוכנה מהמחשב הקודם.
-* **חיבור פיזי:** לביצועים המהירים ביותר, יש לחבר את שני המחשבים ישירות עם כבל Thunderbolt ולהפעיל את מצב **Mac Sharing Mode** במחשב הישן (דרך ה-Recovery Mode במחשבי Apple Silicon). אם אין כבל, המערכת תיצור רשת Peer-to-Peer Wi-Fi סגורה ביניהם.
-* **חפיפת משתמשים:** אין לייבא משתמש למק חדש אם כבר יצרתם בו משתמש באותו השם המדויק. ה-Migration Assistant יעצור אתכם וידרוש לשנות את שם החשבון המיובא או להחליף את הקיים (מה שעלול להרוס הרשאות אדמין שניתנו מה-MDM).
+* **בידוד המידע להעברה:** מומלץ להעביר *רק* את חשבון המשתמש (Home Folder) ולא את `Applications`. העברת אפליקציות גוררת קבצי קונפיגורציה של MDM ישן, אפליקציות אינטל (Rosetta), והרחבות ליבה שאינן נתמכות.
+* **חיבור פיזי:** ב-Apple Silicon משתמשים ב-Mac Sharing Mode (מתוך ה-Recovery) יחד עם כבל Thunderbolt להעברה מהירה.
+* **חפיפת משתמשים:** אין לייבא משתמש אם כבר יצרתם משתמש בעל שם זהה ב-Mac החדש. תיווצר התנגשות UID שתחייב דריסה או יצירת כפילויות. עדיף להריץ את ה-Migration ישירות ממסך ההפעלה הראשון (OOBE).
 
 ---
 
@@ -99,7 +85,7 @@
 * [Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) - המדריך הרשמי למנהלי מערכת על שליטה ועיכוב עדכונים בארגון.
 * [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac) - מדריך פשוט למשתמש הקצה לאיך מורידים ומתקינים עדכוני מערכת.
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - מדריך המסביר איך להעביר נתונים ומידע ממק ישן למק חדש בעזרת אשף ההגירות.
-* [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לשימוש מתקדם בפקודת העדכונים של המערכת.
+* [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל.
 
 ## סרטון סיכום
 
@@ -108,9 +94,7 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 ![How_Software_Update_works_in_Ventura_p5_37](../assets/images/Lesson_12/L12_DeepDive_How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![What_should_you_do_when_an_update_goes_wrong_p1_41](../assets/images/Lesson_12/L12_DeepDive_What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)

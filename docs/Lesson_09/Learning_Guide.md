@@ -1,5 +1,5 @@
 # שיעור 09: רשתות
-**מדריך עזר לתלמיד**
+**מדריך עזר לתלמיד (vEXP)**
 
 ## מטרות השיעור
 
@@ -123,6 +123,7 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

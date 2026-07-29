@@ -1,43 +1,43 @@
 # Lesson 02: User Management and Data Security
-**Hands-On Lab (Student Exercise)**
+**Hands-On Lab (Student Practice)**
 
-## Lab 1: Passwordless Security (Passkeys) and Introduction to the Passwords App
+## Lab 1: Passwordless Security (Passkeys) and the Passwords App
 
 **Lab Objective:**
-
-Hands-on experience creating a completely new Passkey against a remote server, understanding the authentication process using the Secure Enclave, and reviewing the result within macOS's secrets management app.
+Hands-on experience creating a Passkey against a remote server, understanding the authentication process using the Secure Enclave, and reviewing the outcome in the macOS secrets management app.
 
 **Prerequisites:**
-
-* A Mac computer running macOS 15 or later.
-* Touch ID configured, or the alternative computer password.
+* A Mac computer running macOS 26 (Tahoe) or later.
+* A configured fingerprint reader (Touch ID), or use of the computer password.
 
 **Lab Steps:**
 
 ### Part A: Creating the Passkey
-
-1. Open the Safari browser on your computer.
-2. Navigate to the lab site (a public testing environment by FIDO developers): [https://webauthn.io/](https://webauthn.io/).
-3. In the **Username** box, choose a unique username (for example, your name combined with a random number: `OmerAppleClass123`).
-4. Ensure the Attestation type is set to `None` (for demonstration purposes) and click the **Register** button.
-5. macOS will detect the registration request and pop up a dialog box. The dialog will ask if you want to create a Passkey for this user.
-6. Authenticate your identity using **Touch ID** (or entering the local computer password).
-7. After authentication, you will see a successful login message on the site. In the background, your Mac's Secure Enclave generated a cryptographic key pair and saved the private key in iCloud Keychain without exposing it to the network.
+1. Open the Safari browser on your Mac.
+2. Navigate to the lab website: [https://webauthn.io/](https://webauthn.io/).
+3. In the **Username** box, choose a unique username (e.g., `OmerAppleClass123`).
+4. Ensure the Attestation type is set to `None` and click **Register**.
+5. macOS will detect the registration request and pop up a prompt.
+6. Verify your identity by touching **Touch ID** (or entering the computer password).
+7. Upon successful authentication, the Secure Enclave generates a cryptographic key pair and securely stores the private key.
 
 ### Part B: Passwordless Authentication
-
-1. Now, on the same [webauthn.io](https://webauthn.io/) page, scroll back up and click the **Authenticate** button (after making sure your username is still registered in the box).
+1. Now, back on the [webauthn.io](https://webauthn.io/) page, scroll up and click the **Authenticate** button.
 2. A Safari window will pop up asking "Do you want to use your Passkey?".
 3. Touch **Touch ID** again.
-4. You have immediately logged into the site, without typing a password and without the possibility of forgetting it (Passwordless Sign-In).
+4. You have successfully logged in without needing to type a password!
 
 ### Part C: Viewing Secrets in the Passwords App
-
-1. Open Spotlight (Command + Space shortcut) and type **Passwords**. Press Enter to open the app.
-2. Authenticate your identity with Touch ID to unlock the built-in secrets manager.
-3. In the Sidebar, select the **Passkeys** category.
+1. Open Spotlight (Command + Space) and type **Passwords**. Press Enter.
+2. Authenticate with Touch ID to open it.
+3. In the sidebar, select the **Passkeys** category.
 4. In the list, find the entry for `webauthn.io`.
-5. Click on it. Note that there is no visible "password" (because it does not exist as plain, exposed text), but it explicitly indicates that it is a Passkey along with its creation date.
+5. Click on it. Notice that there is no textual password displayed; instead, it explicitly states that this is a hardware-based Passkey.
 
-<!-- src_hash: a279ee5cc7d6745b4f210a02b7244164447a9e5a4488292ff8d887470bc3a3dd -->
-
+### Part D: Privacy Security with TCC (Bonus Lab)
+**Lab Objective:** To see the Transparency, Consent, and Control mechanism in action.
+1. Open the **Terminal** app.
+2. Type the command `ls ~/Desktop` and press Enter.
+3. An OS prompt will likely pop up asking you to allow Terminal to access files in your Desktop folder.
+4. If you click **Don't Allow**, you will see an `Operation not permitted` error in Terminal - even though in terms of POSIX permissions, you own the folder!
+5. To fix this, go to **System Settings** -> **Privacy & Security** -> **Files and Folders** (or **Full Disk Access**) and grant Terminal the required permission.

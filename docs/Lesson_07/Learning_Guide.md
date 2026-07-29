@@ -1,6 +1,5 @@
 # שיעור 07: גיבוי ושחזור
-**מדריך עזר לתלמיד**
-
+**מדריך עזר לתלמיד (vEXP)**
 
 ## מטרות השיעור
 
@@ -9,7 +8,6 @@
 * שחזור קבצים והתאוששות
 * גיבוי בסביבה ארגונית
 **[Image Recommendation]:** A minimalist vector clock face rotating backwards with a hard drive symbol in the background.
-
 
 ## סקירה
 
@@ -29,81 +27,52 @@
 * **Time Machine:** מנגנון הגיבוי המובנה של macOS. שומר עותקים היסטוריים של קבצים, מאפשר שחזור קבצים בודדים או מערכת שלמה.
 * **APFS Snapshots:** הקפאה של מצב מערכת הקבצים בנקודת זמן מסוימת ב-APFS. מאפשר שחזור מיידי (Rollback) ללא צורך בהעתקת נתונים ארוכה.
 * **Local Snapshots:** Snapshots הנשמרות על הכונן המקומי עצמו (ה-Data Volume). נוצרות אוטומטית כגיבוי ביניים או לפני עדכוני מערכת. הן נמחקות אוטומטית כשהמקום בדיסק אוזל.
-* **Backup Destination:** הכונן החיצוני (כונן USB, Thunderbolt, NAS, או שרת SMB תואם Time Machine) שמוגדר לאחסון הגיבוי. החל מ-macOS Big Sur, יעדי הגיבוי מפורמטים אוטומטית למערכת הקבצים APFS.
-* **Mobile Time Machine:** התנהגות שבה ה-Mac ממשיך ליצור ולשמור Local Snapshots גם כשהכונן החיצוני מנותק, כדי לשמור על רצף היסטורי שאותו יסנכרן מול כונן היעד ברגע שיחובר.
-* **Rollback:** פעולת החזרה אחורה בזמן ל-Snapshot קודם. במערכת APFS הפעולה קורית כמעט במיידית בגלל תכונות שיתוף הבלוקים של המערכת (Copy-on-Write).
-* **Migration Assistant:** כלי שירות להעברת נתונים, חשבונות משתמשים והגדרות מ-Mac ישן, מגיבוי Time Machine, או מ-PC (במהלך OOBE או לאחריו).
-* **Erase Assistant / Erase All Content and Settings (EACS):** כלי מובנה ב-System Settings (תחת General -> Transfer or Reset) שמאפשר למחוק את ה-Data Volume ואת המפתחות הקריפטוגרפיים במהירות כדי להחזיר את ה-Mac למצב יצרן - ללא צורך בהתקנה מחדש של ה-OS.
+* **Synthetic Snapshots:** תמונות המצב שנבנות בסוף תהליך הגיבוי על הכונן החיצוני, כחיבור של הבלוקים שהשתנו.
+* **Migration Assistant:** כלי שירות להעברת נתונים, חשבונות משתמשים והגדרות מ-Mac ישן, מגיבוי Time Machine (באמצעות Synthetic Snapshot), או מ-PC.
+* **FileProvider Framework:** מנגנון המערכת (API) המאפשר לשירותי ענן כמו OneDrive להציג קבצים שקיימים רק בענן ("Dataless files") ולהורידם רק בעת הצורך.
 
 ## מילון פקודות טרמינל מתקדם (`tmutil`)
 
-כלי שורת הפקודה `tmutil` (Time Machine Utility) הוא דרך רבת-עוצמה לניהול, אבחון ושליטה על גיבויי Time Machine ותמונות מצב של APFS.
-*(שימו לב: חלק מהפקודות המחוללות שינוי דורשות הרשאות `sudo`)*.
+כלי שורת הפקודה `tmutil` (Time Machine Utility) הוא דרך רבת-עוצמה לניהול, אבחון ושליטה על גיבויי Time Machine ותמונות מצב של APFS. *(שימו לב: חלק מהפקודות דורשות הרשאות `sudo`)*.
 
 ### ניהול בסיסי וסטטוס (Basic Management)
-
-* `tmutil status`
-  * מציג את הסטטוס הנוכחי של הגיבוי בזמן אמת (מראה אם גיבוי רץ כרגע, אחוזי ההתקדמות, והנתיב של היעד).
-* `tmutil startbackup`
-  * מתחיל מיד גיבוי Time Machine ליעד המוגדר. הוספת דגל `--block` תריץ את הגיבוי בחזית והפקודה תסתיים רק כאשר הגיבוי יושלם. הדגל `--auto` ידמה הפעלה אוטומטית של המערכת (שכוללת גם דלדול Snapshots לפי הצורך).
-* `tmutil stopbackup`
-  * עוצר גיבוי שנמצא כרגע בתהליך ריצה.
-* `tmutil listbackups`
-  * מדפיס רשימה מסודרת של כל הגיבויים הקיימים והמוכרים למערכת (שמורים ביעד הגיבוי).
-* `tmutil latestbackup`
-  * מדפיס את הנתיב המלא של הגיבוי האחרון שהסתיים בהצלחה.
-* `tmutil destinationinfo`
-  * מציג מידע ונתונים על כל כונני היעד שמוגדרים כעת לגיבוי Time Machine (כולל מזהים של היעדים).
+* `tmutil status`: מציג את הסטטוס הנוכחי של הגיבוי בזמן אמת.
+* `tmutil startbackup --block`: מתחיל מיד גיבוי ומשהה (Blocks) את הטרמינל עד להשלמתו.
+* `tmutil listbackups`: מדפיס רשימה מסודרת של כל הגיבויים הקיימים המוכרים למערכת ביעד.
+* `tmutil destinationinfo`: מציג מידע ונתונים על כונני היעד המוגדרים כעת.
 
 ### החרגות מגיבוי (Exclusions)
-
-* `tmutil addexclusion /path/to/folder_or_file`
-  * מחריג באופן קבוע קובץ או תיקייה מגיבוי. הפקודה מטמיעה Extended Attribute שמסמן ל-backupd לדלג על נתיב זה. (כדי להחריג קבצי מערכת חובה להשתמש ב-`sudo`).
-* `tmutil removeexclusion /path/to/folder_or_file`
-  * מסיר את תגית ההחרגה של הקובץ או התיקייה, כך שהם יגובו שוב בגיבוי הבא.
-* `tmutil isexcluded /path/to/folder_or_file`
-  * בודק ומחזיר פלט שמציין האם נתיב ספציפי מוחרג כרגע מגיבוי.
+* `tmutil addexclusion /path/to/folder_or_file`: מחריג באופן קבוע קובץ או תיקייה מגיבוי.
+* `tmutil removeexclusion /path/to/folder_or_file`: מסיר את תגית ההחרגה כך שהקובץ יגובה שוב.
 
 ### Snapshots מקומיות (Local Snapshots)
+* `tmutil listlocalsnapshots /`: מציג רשימה של כל ה-Local Snapshots השמורים על כונן המערכת הנוכחי.
+* `tmutil localsnapshot`: יוצר Snapshot מקומית באופן מיידי (שימושי לפני שינוי מהותי במערכת).
+* `tmutil thinlocalsnapshots / 10000000000 4`: אילוץ המערכת לדלל Snapshots כדי לפנות מקום בכונן (דוגמה זו מפנה כ-10GB בדחיפות 4 המהירה ביותר).
 
-* `tmutil listlocalsnapshots /`
-  * מציג רשימה של כל ה-Local Snapshots השמורים על כונן המערכת הנוכחי (ה-Root - `/`).
-* `tmutil localsnapshot`
-  * יוצר Snapshot מקומית באופן מיידי (שימושי לפני ביצוע שינוי מהותי במערכת כרשת ביטחון).
-* `sudo tmutil deletelocalsnapshots <date>`
-  * מוחק Snapshot ספציפית על בסיס תאריך שהתקבל בפקודת הרשימה (לדוגמה `2026-05-10-153020`).
-* `tmutil thinlocalsnapshots / <purge_amount_bytes> <urgency_1_to_4>`
-  * אילוץ המערכת לדלל Snapshots כדי לפנות מקום בכונן (דחיפות 4 היא המהירה ביותר לעצירת תהליכים נלווים).
-
-### אבחון וניתוח נתונים (Diagnostics & Analysis)
-
-* `tmutil calculatedrift /path/to/backup1 /path/to/backup2`
-  * מחשב מה השתנה (נוסף, הוסר, השתנה) בין שני גיבויים שונים במטרה להבין מדוע גיבוי אחרון תופס הרבה מקום.
-* `tmutil compare`
-  * מבצע השוואה מלאה בין המצב הנוכחי של המערכת (הדיסק) לבין הגיבוי האחרון שבוצע.
+### אבחון וניתוח (Diagnostics)
+* `log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h`: מחלץ לוגים מדויקים כדי להבין עיכובים כמו Deep Traversal Scans.
 
 ## כלים ותהליכי רקע רלוונטיים במערכת (Daemons & Tools)
 
-* `backupd`: תהליך הרקע המרכזי והפנימי של Time Machine שמנהל את פעולות ההעתקה והניהול מול יעדי הגיבוי.
-* `diskutil apfs listSnapshots /`: פקודת `diskutil` המשמשת ככלי אבחון ברמת ה-APFS להצגת Snapshots על הדיסק ברמה הטכנית והעמוקה ביותר.
-* `System Settings -> General -> Time Machine`: ממשק המשתמש הגרפי (GUI) להגדרת התדירות, הוספת החרגות וניהול כוננים בארגון פשוט.
+* `backupd`: תהליך הרקע המרכזי של Time Machine המנהל את העתקות הדלתא והגיבויים.
+* `diskutil apfs listSnapshots /`: פקודת `diskutil` המשמשת כאבחון ברמת ה-APFS להצגת Snapshots ברמה נמוכה.
+* **System Settings -> General -> Time Machine**: ממשק המשתמש הגרפי להגדרת גיבויים.
 
 ## זווית ארגונית (Enterprise Seasoning)
 
-* **הימנעות מגיבויים מקומיים:** בארגונים מודרניים קיימת נטייה לוותר על Time Machine למשתמשי קצה בגלל עלויות חומרה והקושי לאבטח כוננים ניידים שעלולים להיאבד או להיגנב.
-* **גיבוי ענן כחלופה (Cloud Storage):** שימוש בשירותים מבוססי סנכרון כגון OneDrive, Google Drive או Box מועדף ומפוקח באמצעות פרופילי MDM, כאשר הנתונים תמיד מסונכרנים והשחזור למחשב חלופי מתבצע ברגע שמחברים חשבון MAID.
-* **מגבלות פרופיל ע"י MDM:** ניתן דרך MDM להגביל משתמשים מלבצע שחזורים, לשלוט על יכולות Erase Assistant כדי למנוע מחיקת מחשבים לפני מסירתם למחלקת IT, או לכפות על המערכת שלא להחריג נתיבים רגישים שמנהל הרשת רוצה לגבות בהכרח אם עדיין נעשה שימוש ב-Time Machine או בכונני רשת כגיבוי.
+* **המחשב בר-החלוף (Ephemeral Device):** בארגונים מודרניים תחת Zero-Trust, נמנעים מכוננים ניידים ועוברים לשימוש מוחלט בשירותי סנכרון ענן (OneDrive, Google Drive). הגישה היא גיבוי בענן והתקנה מרחוק (Zero-Touch) אם המחשב נהרס.
+* **ההתנגשות (FileProvider Clash):** קבצים בענן (Dataless) עלולים ליצור עומס קריטי אם Time Machine ינסה לגבות אותם ויכריח את ה-Mac להוריד טרה-בייטים של נתונים מהענן.
+* **הגבלות MDM:** מנהלי רשת לרוב פורסים פרופיל עם הערך `restrictTimeMachine` כדי לנטרל את היכולת לגבות מקומית, או לחלופין כופים בעזרת `forceEncryptedTimeMachineBackups` שהגיבויים יבוצעו להצפנה בלבד עבור משתמשים כבדים שחייבים אותם.
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250) - מדריך בסיסי למשתמש על הפעלת מערכת הגיבויים טיים משין.
-* [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981) - מדריך למשתמש איך לשחזר קבצים מגיבוי קודם.
-* [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015) - הסבר קצר על מנגנון הסנאפשוטים המקומיים כשכונן הגיבוי לא מחובר.
-* [Mac backups (Apple Platform Support)](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web) - מאמר למנהלי מערכת על מדיניות גיבוי בארגון.
-* [Erase Apple devices](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web) - תיעוד ארגוני על מחיקה ואיפוס מאובטח של מחשבים מרחוק.
-* [A brief history of Time Machine](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/) - סקירה היסטורית על התפתחות הטיים משין לאורך השנים.
-* [Snapshots aren't backups](https://eclecticlight.co/2021/02/16/snapshots-arent-backups/) - מאמר דעה טכני שמסביר למה אסור להסתמך על סנאפשוטים כתחליף לגיבוי אמיתי.
-* [Understand and check Time Machine backups to APFS](https://eclecticlight.co/2021/03/25/understand-and-check-time-machine-backups-to-apfs/) - מאמר עומק טכני על איך טיים משין מנצל את מנגנוני APFS לגיבוי מהיר.
+* [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
+* [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981)
+* [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015)
+* [Mac backups (Apple Platform Support)](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web)
+* [Erase Apple devices](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web)
+* [A brief history of Time Machine](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/)
 
 ## סרטון סיכום
 
@@ -111,7 +80,6 @@
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/OXYBpCK91Lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

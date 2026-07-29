@@ -29,8 +29,11 @@
 * **Volume Ownership:** מנגנון במחשבי Apple Silicon שדורש הרשאות מיוחדות כדי לבצע משימות ברמת המערכת כמו מחיקת מק, שינוי הגדרות אתחול או שדרוג מערכת ההפעלה. נגזר ישירות ממשתמשים שיש להם Secure Token.
 * **Bootstrap Token:** "מפתח מאסטר" זמני וארגוני הנדחף לשרת ה-MDM בשלב הרישום למערכת (Enrollment). האסימון נשמר ב-MDM (בתהליך Escrow) ויכול להעניק אוטומטית Secure Token למשתמשים קבועים או לחשבונות ענן (כמו Managed Apple Account - MAID) שמתחברים מאוחר יותר, מבלי להזדקק לסיסמה של המשתמש המקורי.
 * **Recovery Key - Recovery Key - PRK/IRK:** כאשר מדליקים את מנגנון ההצפנה FileVault, נוצר מפתח גיבוי למקרה שאבדה סיסמת ההתחברות.
-* **PRK - Personal Recovery Key:** מפתח אלפאנומרי שמוצג למשתמש כדי לשמור בבטחה, או לחלופין, נשמר בחשבון ה-iCloud.
-  * **IRK - Institutional Recovery Key:** מפתח המשמש ארגונים באמצעות MDM, כך שרק מנהלי הארגון יוכלו לשחרר כוננים נעולים באמצעות Payload מיוחד (Configuration Profile - Configuration Profile).
+* **PRK - Personal Recovery Key:** מפתח אלפאנומרי שמוצג למשתמש כדי לשמור בבטחה, או לחלופין, נשמר בחשבון ה-iCloud (ב-Tahoe לרוב יופעל גיבוי iCloud אוטומטית למשתמשים ביתיים).
+  * **IRK - Institutional Recovery Key:** מפתח המשמש ארגונים באמצעות MDM, כך שרק מנהלי הארגון יוכלו לשחרר כוננים נעולים באמצעות Payload מיוחד. כיום הסטנדרט הוא להשתמש ב-PRK אישי שמגובה ב-MDM.
+* **VEK (Volume Encryption Key) & KEK (Key Encryption Key):** VEK הוא מפתח הצפנת החומרה השמור ב-Secure Enclave. KEK הוא המפתח הנגזר מסיסמת המשתמש שלך, המשמש כדי "לעטוף" את ה-VEK ולשחרר את הנעילה שלו באתחול.
+* **וירטואליזציה (Exclaves):** ב-macOS 26 Tahoe, הצפנת FileVault נתמכת גם במכונות וירטואליות בזכות טכנולוגיית Exclave המדמה Secure Enclave.
+* **SSH Pre-boot:** ב-macOS 26 Tahoe נוספה היכולת להתחבר מרחוק ב-SSH לשרתים נטולי-מסך בשלב ה-Pre-boot כדי לשחרר את FileVault.
 
 **היסטוריית גרסאות FileVault בקצרה:**
 
@@ -133,9 +136,14 @@
 * **בדיקת הסטטוס של אסימון האתחול (Bootstrap Token) מול שרת ה-MDM:**
 
   ```bash
-  profiles status -type bootstraptoken
+  sudo profiles status -type bootstraptoken
   ```
   *(תשובה חיובית, למשל `profiles: Bootstrap Token supported on server` או `escrowed to server`, מעידה שהאסימון נשמר בהצלחה בשרת ומחכה למשוך אסימוני אבטחה עתידיים).*
+
+* **דחיפה יזומה לשרת הניהול:**
+  ```bash
+  sudo profiles install -type bootstraptoken
+  ```
 
 ---
 
@@ -149,6 +157,9 @@
 
 3. **בעיה:** FileVault נדלק ופועל, אך משתמש חדש שיצרנו מקומית (בסביבה שאינה מנוהלת MDM עם Bootstrap Token) לא מופיע במסך הלוגין מיד לאחר הפעלה מחדש.
    * **הפתרון:** רק למשתמשים עם Secure Token שמופיעים ברשימת ה-`fdesetup list` יש יכולת לעבור את מנגנון ה-Preboot Authentication שרץ על החומרה עוד לפני שהמערכת עולה. התחברו עם המשתמש הראשי, הוסיפו את המשתמש בעזרת `sysadminctl` וודאו שנוסף לרשימה הקריפטוגרפית.
+
+4. **בעיה:** סיסמה שונתה מחוץ למק, וכעת נדרשת הסיסמה הישנה לפתיחת ה-FileVault.
+   * **הפתרון:** ה-KEK עדיין מוגן על ידי הסיסמה הישנה. המשתמש צריך לעדכן את הסיסמה בצורה מוסדרת דרך הגדרות המערכת (System Settings) כדי לסנכרן את המפתח ב-Secure Enclave מחדש.
 
 ---
 

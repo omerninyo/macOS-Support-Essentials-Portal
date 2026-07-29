@@ -1,67 +1,63 @@
-# Lesson 01: Installation, Orientation, and Alignment
-**Student Learning Guide**
+# Lesson 01: Installation, Familiarization, and Baseline
+**Learning Guide (vEXP)**
 
 ## Lesson Objectives
 
-* **History and Philosophy** - Evolution from OS X to macOS, the updated Mac lineup for enterprise, and the transition to Apple Silicon.
-* **Out-of-Box Experience (OOBE)** - Deep dive into the Setup Assistant.
-* **The System, Innovation, and Accessibility** - Navigation, Multi-Touch gestures, the Continuity ecosystem, Apple Intelligence overview, Screen Mirroring, and Accessibility (Videos: Universal Control, Continuity Camera, and "The Greatest").
-* **Enterprise Flavor** - What happens when the Remote Management (MDM / ADE) screen interrupts the setup process.
-
-
+* **History & Philosophy** - Evolution from OS X to macOS, the updated Mac lineup for enterprise, and the transition to Apple Silicon (noting macOS 26 Tahoe is the final release supporting Intel).
+* **Out of Box Experience (OOBE)** - Deep dive into the Setup Assistant.
+* **System, Innovation & Accessibility** - Navigation, Multi-Touch gestures, Continuity ecosystem, overview of Apple Intelligence (macOS 26 Tahoe), screen mirroring, and accessibility features (videos: Universal Control, Continuity Camera, and "The Greatest").
+* **Enterprise Flavoring** - What happens when the Remote Management screen (MDM / ADE) interrupts the setup process.
 
 ## Overview
 
-<!-- Captivate NotebookLM Podcast -->
+<!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/128517f1-2471-4e85-a0f5-7611f6c30dcb/"></iframe></div>
 
 ## Key Concepts
 
-* **Apple Silicon:** The modern architecture of Mac computers based on Apple's in-house development (M-Series processors with ARM architecture), delivering unprecedented performance-per-watt.
-* **System on a Chip (SoC):** A silicon design that integrates the central processing unit (CPU), graphics processing unit (GPU), memory, and security enclaves onto a single chip.
-* **Unified Memory:** An innovative architecture in Apple Silicon that integrates both system memory (RAM) and video memory (VRAM) directly onto the chip package. This allows all SoC components to access the same memory pool without copying data back and forth. It eliminates bottlenecks, improves performance, and saves power, but at the cost of non-upgradability (memory is soldered). [Further reading by Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
+* **Apple Silicon:** The modern architecture of Mac computers based on Apple's internal development (M-Series processors with ARM architecture), providing an unprecedented performance-to-power ratio.
+* **System on a Chip (SoC):** A silicon design that integrates the central processing unit (CPU), graphics processing unit (GPU), memory, and security mechanisms onto a single chip.
+* **Unified Memory:** An innovative architecture in Apple Silicon that integrates main memory (RAM) and video memory (VRAM) into the chip package itself. This allows all SoC components to access the same memory pool without copying data back and forth. It eliminates bottlenecks, improves performance, and saves power, but at the cost of not being able to upgrade memory after purchase (it is soldered). [Read more by Howard Oakley](https://eclecticlight.co/2026/06/20/explainer-memory/)
 * **Secure Enclave:** An isolated hardware subsystem within the SoC responsible for cryptographic operations, managing encryption keys, and verifying biometric data (Touch ID).
-* **Rosetta 2:** A transparent translation environment built into macOS that allows applications written for Intel processors (x86) to run on Apple Silicon Macs. The translation is mostly done Ahead of Time.
-* **Setup Assistant:** The initial process that runs when booting a new Mac or after an EACS (Erase All Content and Settings). It handles network configuration, region selection, creating a Local Account, and more.
-* **Automated Device Enrollment (ADE):** A deployment and management technology (formerly DEP) that allows organizations to automatically enroll Mac computers into MDM (Zero-Touch Deployment) upon first connecting to the internet, replacing the consumer Setup Assistant with a Remote Management screen.
-* **Continuity:** A suite of technologies that allows seamless workflows across Apple devices (e.g., Universal Control, Handoff, Continuity Camera). Mostly relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi.
-* **Apple Intelligence:** An artificial intelligence system integrated into macOS that utilizes the Neural Engine in Apple Silicon to process language models locally, with a strong emphasis on privacy.
-* **Background Process:** A system process running in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
+* **Rosetta 2:** A transparent translation environment built into macOS that allows applications written for Intel (x86) processors to run on Apple Silicon Macs. The translation is mostly done Ahead of Time (AOT).
+* **Setup Assistant:** The initial process that runs when booting a new Mac or after EACS. Responsible for network settings, region, creating the Local Account, and more. macOS 26 Tahoe also uses this stage to securely download Apple Intelligence models.
+* **Automated Device Enrollment (ADE):** Deployment and management technology (formerly DEP) that allows organizations to automatically connect Macs to an MDM (Zero-Touch Deployment) from the first network connection, replacing the consumer Setup Assistant with a Remote Management screen.
+* **Continuity:** A collection of technologies allowing a seamless workflow across Apple devices (like Universal Control, Handoff, Continuity Camera). Mostly relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi.
+* **Apple Intelligence:** An AI system built into macOS 26 Tahoe that utilizes the Neural Engine in Apple Silicon for local language model processing with a strong emphasis on privacy. Uses Private Cloud Compute for complex tasks.
+> [!TIP]
+> **Pro Tip: Language, Locale, and AI in Israel**
+> For Apple Intelligence to function properly, the system's Primary Language must match Siri's language (e.g., English US). A mismatch will disable some AI features. If you use an English interface to access AI features, note that voice Dictation to Siri in Hebrew will be problematic due to this collision. Additionally, if you have multiple keyboard languages, consider disabling language switching via the Globe key (🌐) to prevent rare password typing issues at the login screen due to an incorrect layout.
 
-## Relevant Commands & Paths
+* **Liquid Glass:** The new design language introduced in macOS 26 Tahoe, emphasizing transparency, depth, and a modern, reflective aesthetic that leverages M-series GPUs.
+* **Background Process:** A system process that runs in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
+
+## Commands & Paths
 
 | Path / Command | Description |
 | :--- | :--- |
 | `uname -m` | Terminal command that returns `arm64` if the Mac is running Apple Silicon, or `x86_64` for Intel processors. |
-| `system_profiler SPHardwareDataType` | Command that provides a full hardware overview of the Mac, including core count and memory size. |
-| `Setup Assistant` | A one-way initial setup process for configuring system settings and user creation (full resets and Volume Ownership are covered in Lessons 4 and 14). |
-| `sudo profiles show -type enrollment` | Command that returns the device's organizational enrollment status (whether it has an active ADE enrollment via Apple Business Manager). |
-| `log show --predicate 'process == "Setup Assistant"' --info` | A query to extract specific logs generated by the Out-of-Box setup process. |
+| `system_profiler SPHardwareDataType` | Command that provides full hardware details of the Mac, including core count and memory. |
+| `sysctl -n machdep.cpu.brand_string` | Command to quickly fetch the CPU marketing name. |
+| `Setup Assistant` | One-way initial startup process guiding the user through system setup and account creation. |
+| `sudo profiles show -type enrollment` | Command that returns the device's organizational enrollment status (whether an ADE enrollment exists via Apple Business Manager). |
+| `log show --predicate 'process == "Setup Assistant"' --info` | Query to retrieve specific logs from the Out of Box Experience process. |
 
-## Recommended Links and Further Reading
+## Recommended Reading & Links
 
-* [Automated Device Enrollment](https://support.apple.com/guide/deployment/dep24b435f66/web) - Official Apple Deployment guide for Automated Device Enrollment (ADE / ABM).
-* [Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/secc7b34e5b5/web) - Official Apple Security document detailing the boot chain of Apple Silicon processors.
-* [Apple Intelligence Overview](https://support.apple.com/apple-intelligence) - Technical overview of AI features and security architecture in macOS.
-* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - An in-depth article explaining unified memory management in macOS.
+* [Automated Device Enrollment](https://support.apple.com/guide/deployment/dep24b435f66/web) - Official Apple deployment guide for automatic device enrollment in organizations (ADE / ABM).
+* [Boot process for a Mac with Apple silicon](https://support.apple.com/guide/security/secc7b34e5b5/web) - Official security document detailing the boot process for Apple Silicon.
+* [Apple Intelligence Overview](https://support.apple.com/apple-intelligence) - Overview of AI capabilities and security in macOS.
+* [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - In-depth article explaining how memory management works in the operating system.
 
 ## Summary Video
 
-<!-- YouTube Summary Video -->
+<!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/oYxR-HrD0FU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
-
-
 !!! tip "Visual Aid (Student Reference)"
-    These images illustrate the interface or mechanisms relevant to this lesson's topic.
-
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
+    These images illustrate the interface or mechanism relevant to the lesson topic.
 
 ![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
 ![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)

@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # שיעור 03: אבטחת מידע
 **מעבדה מעשית (תרגול לתלמיד)**
 
@@ -18,7 +20,7 @@
 #### שלב 1: הגדרות Gatekeeper ב-System Settings
 
 1. פתח את ה-**System Settings**.
-2. נווט אל **Privacy & Security**.
+2. נווט אל **Privacy & Security** (לעיתים נדרש להרחיב ל-**Advanced**).
 3. גלול מטה עד לאזור **Security**.
 4. ודא שתחת "Allow applications downloaded from:" מסומנת האפשרות "App Store and known developers". זהו הסטטוס התקין והמומלץ המעיד שה-Gatekeeper פעיל.
 
@@ -41,7 +43,7 @@
 1. חזור לחלון ה-**System Information** (או פתח אותו מחדש דרך תפריט התפוח + `Option`).
 2. תחת קטגוריית **Software**, לחץ על **Installations**.
 3. לחץ על כותרת העמודה "Software Name" כדי לסדר את הרשימה לפי הא"ב.
-4. גלול עד לסוף הרשימה וחפש את הפריטים **XProtectPayloads** או **XProtectPlistConfigData**.
+4. גלול עד לסוף הרשימה וחפש את הפריטים **XProtectPlistConfigData** או **XProtectPayloads**.
 5. הסתכל על עמודת ה-**Version** ועל תאריך ההתקנה (Install Date) כדי לראות מתי המערכת קיבלה את עדכון האבטחה השקט האחרון מאפל.
 
 #### שלב 2: חקירת קבצי ה-XProtect ב-Finder
@@ -49,10 +51,10 @@
 1. פתח חלון **Finder** חדש.
 2. בתפריט העליון, לחץ על **Go** ואז בחר ב-**Go to Folder...** (או השתמש בקיצור `Cmd+Shift+G`).
 3. הקלד את הנתיב הבא ולחץ Enter:
-   `/Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/`
-
-4. בתיקייה שתיפתח, אתר את הקובץ `XProtect.meta.plist`.
-5. בחר אותו ולחץ על מקש הרווח (Spacebar) כדי להפעיל את ה-Quick Look. כאן תוכל לראות את מספר הגרסה הפנימית של מנוע האבטחה בתבנית XML.
+   `/var/protected/xprotect/XProtect.bundle` 
+   *(הערה: אם התיקייה ריקה לאחר התקנה חדשה, בדוק בנתיב הישן: `/Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/`)*
+4. בתיקייה שתיפתח, חפש קבצי מידע כגון `XProtect.meta.plist` או קבצי הגדרות אחרים (בהתאם לזמינות ב-Tahoe).
+5. בחר קובץ זמין ולחץ על מקש הרווח (Spacebar) כדי להפעיל את ה-Quick Look ולראות את התוכן הפנימי של מנוע האבטחה.
 
 ---
 
@@ -96,25 +98,33 @@
 
 לאנשי תמיכה מתקדמים, הנה כמה פקודות Terminal שמבצעות את הפעולות שראינו ב-GUI בצורה מהירה ומעמיקה יותר:
 
+1. **ניהול מנוע ה-XProtect העדכני:**
+   
+   במקום לחפש ב-System Information, ניתן להשתמש בכלי המובנה לניהול עדכוני XProtect:
+   ```bash
+   xprotect version
+   sudo xprotect update
+   ```
 
-1. **בדיקת מצב Gatekeeper ואימות אפליקציה:**
+2. **בדיקת מצב Gatekeeper ואימות אפליקציה:**
 
    במקום לפתוח System Information, ניתן לבדוק הערכת Gatekeeper מלאה על אפליקציה:
    ```bash
-   spctl --assess --verbose /Applications/Safari.app
+   spctl -a -vv /Applications/Safari.app
    ```
 
-2. **איפוס מסד נתונים TCC:**
+3. **איפוס מסד נתונים TCC:**
 
    במקום ללחוץ על סימן המינוס (-) בהגדרות, ניתן לאפס לחלוטין את הרשאת המיקרופון לכל המערכת בשורת פקודה אחת:
    ```bash
    tccutil reset Microphone
    ```
 
-3. **חקר XProtect Remediator:**
+4. **חקר XProtect Remediator:**
 
    במקום להסתכל על קבצי plist ב-Finder, כך שואבים את דיווחי הסריקה השקטים של XProtect מתוך לוג המערכת של 24 השעות האחרונות:
    ```bash
    log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
    ```
 
+</div>

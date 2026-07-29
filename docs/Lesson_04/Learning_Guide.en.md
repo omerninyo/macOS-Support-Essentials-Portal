@@ -1,7 +1,6 @@
 # Lesson 04: Encryption and Keys
 **Student Learning Guide**
 
-
 ## Lesson Objectives
 
 * Data Encryption
@@ -16,45 +15,46 @@
 <!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/f51cfe24-e5d0-4d6c-ab56-8bbb41c1cc26/"></iframe></div>
 
-## System Ownership & FileVault
+## System Ownership and Encryption (System Ownership & FileVault)
 
-This document summarizes all the concepts, commands, and tools relevant to Lesson 4, which deals with Secure Tokens, the FileVault encryption mechanism, and Bootstrap Token mechanisms in management and deployment environments.
+This document summarizes all the concepts, commands, and tools relevant to Lesson 4, which deals with Secure Tokens, the FileVault encryption mechanism, and the Bootstrap Token mechanism in deployment and management environments.
 
 ---
 
 ### Glossary and Core Concepts
 
-* **Secure Token:** A cryptographic chain (wrapped in the user's password) that allows a local account on the Mac to gain cryptographic "ownership" over the Data Volume, and authorize critical tasks such as enabling FileVault or software updates on Apple Silicon Macs. The first user created through Setup Assistant receives it automatically.
-* **FileVault:** macOS's built-in encryption that fully encrypts the Data Volume using XTS-AES-128. On Apple Silicon Macs, data is always natively encrypted at the hardware level, and turning on FileVault essentially "wraps" the existing key with the user's password without affecting performance.
-* **Volume Ownership:** A mechanism on Apple Silicon Macs that requires special permissions to perform system-level tasks like erasing a Mac, changing startup settings, or upgrading the OS. It is derived directly from users who possess a Secure Token.
-* **Bootstrap Token:** A temporary and organizational "master key" pushed to the MDM server during enrollment. The token is stored in the MDM (via the Escrow process) and can automatically grant a Secure Token to regular users or cloud accounts (like Managed Apple Account - MAID) who log in later, without needing the password of the original user.
-* **Recovery Key - PRK/IRK:** When turning on FileVault encryption, a backup key is generated in case the login password is lost.
-* **PRK - Personal Recovery Key:** An alphanumeric key presented to the user to store safely, or alternatively, saved to their iCloud account.
-  * **IRK - Institutional Recovery Key:** A key used by organizations via MDM, so that only organizational administrators can unlock drives using a special Payload (Configuration Profile).
+* **Secure Token:** A cryptographic chain (wrapped with the user's password) that allows a local Mac account to gain cryptographic "ownership" over the Data Volume, and authorize critical tasks like enabling FileVault or updating software on Apple Silicon Macs. The first user created through Setup Assistant receives it automatically.
+* **FileVault:** macOS's built-in encryption that fully encrypts the Data Volume using XTS-AES-128. On Apple Silicon Macs, data is natively hardware-encrypted at all times, and enabling FileVault actually just "wraps" the existing key with the user's password without performance impact.
+* **Volume Ownership:** A mechanism on Apple Silicon Macs that requires special privileges to perform system-level tasks like erasing the Mac, changing boot settings, or upgrading the OS. Derived directly from users who have a Secure Token.
+* **Bootstrap Token:** A temporary, enterprise "master key" pushed to the MDM server during enrollment. The token is escrowed to the MDM and can automatically grant a Secure Token to permanent users or cloud accounts (like Managed Apple Accounts - MAID) who log in later, without needing the original user's password.
+* **Recovery Key - PRK/IRK:** When FileVault is enabled, a backup key is created in case the login password is lost.
+* **PRK - Personal Recovery Key:** An alphanumeric key displayed to the user to safely store, or alternatively, saved in their iCloud account (in Tahoe, iCloud recovery is often enabled automatically for consumers).
+  * **IRK - Institutional Recovery Key:** A legacy key used by organizations via MDM. Modern organizations prefer escrowing individual PRKs instead of using one global IRK.
+* **VEK (Volume Encryption Key) & KEK (Key Encryption Key):** VEK is the hardware key in the Secure Enclave encrypting the data. KEK is generated from your password to "wrap" and unlock the VEK.
+* **Virtual Machine (VM) exclaves:** In macOS 26 Tahoe, FileVault is fully supported in macOS VMs using Secure Enclave virtualization (exclaves).
+* **SSH Pre-boot:** In macOS 26 Tahoe, headless servers can be unlocked remotely via SSH during the pre-boot phase.
 
-**Brief History of FileVault Versions:**
+**FileVault Version History Brief:**
 
 | FileVault Version | Release Year (OS) | Encryption Method | Notable Features |
 |---|---|---|---|
-| FileVault 1 | 2003 (Panther 10.3) | Disk Image (DMG) | Encrypted only the home folder, considered fragile and easy to crack (a tool called VileFault demonstrated this). |
-| FileVault 2 | 2011 (Lion 10.7) | Software via CPU | Whole-disk encryption, created a slight load and slightly degraded performance. |
-| Modern | 2017+ (T2 / Apple Silicon) | Hardware (AES Engine & Secure Enclave) | Zero performance impact, built-in chip-level encryption using key wrapping. |
+| FileVault 1 | 2003 (Panther 10.3) | Disk Image (DMG) | Encrypted only the home folder; considered fragile and easily hacked (VileFault tool demonstrated this). |
+| FileVault 2 | 2011 (Lion 10.7) | Software via CPU | Full disk encryption, created light overhead and slightly impacted performance. |
+| Modern | 2017+ (T2 / Apple Silicon) | Hardware (AES Engine & Secure Enclave) | Zero performance hit, chip-level encryption working via key wrapping. |
 
 ---
 
-### Massive CLI Commands List for Encryption and Token Management
+### Massive CLI Command List for Encryption and Tokens
 
-Managing the Secure Token and FileVault arrays is primarily done using the `sysadminctl` and `fdesetup` commands. These are core commands every macOS support technician or network administrator must know thoroughly.
+Managing Secure Tokens and FileVault relies heavily on `sysadminctl` and `fdesetup`. These are core commands every macOS support tech or network admin must know deeply.
 
-#### Managing Secure Tokens using `sysadminctl`
+#### Managing Secure Tokens with `sysadminctl`
 
-* **Check Secure Token status for the current user:**
-
+* **Check Secure Token status for current user:**
   ```bash
   sysadminctl -secureTokenStatus $USER
   ```
-* **Check status for a specific user (e.g., `johndoe`):**
-
+* **Check status for specific user (e.g., `johndoe`):**
   ```bash
   sysadminctl -secureTokenStatus johndoe
   ```
@@ -62,115 +62,98 @@ Managing the Secure Token and FileVault arrays is primarily done using the `sysa
   ```bash
   sysadminctl -secureTokenOn newuser -password newuserpass -adminUser adminname -adminPassword adminpass
   ```
-* **Remove Secure Token from a user:** (Caution - removing the token for all users might lock the Mac out of critical permissions!)
+* **Remove Secure Token from a user:** (Caution - removing the token from all users can lock out critical privileges!)
   ```bash
   sysadminctl -secureTokenOff otheruser -password userpass -adminUser adminname -adminPassword adminpass
   ```
 
-#### Managing FileVault using `fdesetup`
+#### Managing FileVault with `fdesetup`
 
-* **Check FileVault status (whether it's on/off and who is encrypting the Volume):**
-
+* **Check FileVault status (is it active and who encrypts the volume):**
   ```bash
   fdesetup status
   ```
-* **Enable FileVault via Terminal (for the current user):**
-
+* **Enable FileVault via Terminal (for current user):**
   ```bash
   sudo fdesetup enable
   ```
-  *(The system will prompt for a password and output a Personal Recovery Key to the terminal).*
-
-* **Disable and remove encryption (Decryption of the Volume):**
-
+  *(System will ask for password and output a Personal Recovery Key to the terminal).*
+* **Disable and remove encryption (Volume Decryption):**
   ```bash
   sudo fdesetup disable
   ```
-* **List users authorized to unlock encryption during boot:**
-
+* **Show list of users authorized to unlock the disk at boot:**
   ```bash
   sudo fdesetup list
   ```
 * **Remove a specific user (e.g., `johndoe`) from authorized disk unlockers:**
-
   ```bash
   sudo fdesetup remove -user johndoe
   ```
-* **Change the Personal Recovery Key (PRK) and create a new one:**
-
+* **Rotate the Personal Recovery Key (PRK) and create a new one:**
   ```bash
   sudo fdesetup changerecovery -personal
   ```
-* **Immediate FileVault sync (check if a refresh is needed for changed keys or passwords):**
-
+* **Immediate FileVault sync (check if refresh needed for changed keys or passwords):**
   ```bash
   sudo fdesetup sync
   ```
-* **Enable encryption mechanism with a silent Plist file (ideal for distribution in MDM workflows - requires admin privileges and XML config):**
-
+* **Enable encryption with a silent Plist file (Ideal for MDM deployment):**
   ```bash
   sudo fdesetup enable -inputplist < /path/to/fdesetup.plist
   ```
 
 #### Advanced Cryptographic Diagnostics with `diskutil` and `profiles`
 
-* **List all Cryptographic Users for the Data Container in APFS:**
-
+* **List all Cryptographic Users for the APFS Data Container:**
   ```bash
   diskutil apfs listcryptousers /
   ```
-  *(Displays the UUID of every cryptographic entity that can decrypt the Data Volume, including users with a token, PRK, or IRK).*
-
-* **Check the status of the Bootstrap Token with the MDM server:**
-
+  *(Shows UUIDs of every crypto entity that can decrypt the Data Volume).*
+* **Check Bootstrap Token status with the MDM server:**
   ```bash
-  profiles status -type bootstraptoken
+  sudo profiles status -type bootstraptoken
   ```
-  *(A positive response, e.g., `profiles: Bootstrap Token supported on server` or `escrowed to server`, indicates the token was successfully saved to the server and is waiting to fetch future Secure Tokens).*
+  *(Positive response, e.g., `profiles: Bootstrap Token supported on server` or `escrowed to server`, means the token is safely stored on the server waiting to grant future tokens).*
+* **Manually trigger Bootstrap Token Escrow:**
+  ```bash
+  sudo profiles install -type bootstraptoken
+  ```
 
 ---
 
-### Troubleshooting and Quick Fixes (Cheat Codes)
+### Troubleshooting and Cheat Codes
 
-1. **Problem:** "User is missing permissions" – You created an additional Local Account (Admin), but it cannot approve OS updates on an Apple Silicon Mac, or disable FileVault.
-   * **Solution:** The user lacks a Secure Token and consequently lacks "Volume Ownership". Check using `sysadminctl -secureTokenStatus`. If missing, use the original Admin account (which went through Setup Assistant) to grant a Secure Token using the `sysadminctl -secureTokenOn` command.
+1. **Problem:** "Missing User Privileges" – You created an additional Local Account (Admin), but they can't authorize OS updates on an Apple Silicon Mac, or disable FileVault.
+   * **Solution:** The user lacks a Secure Token and consequently Volume Ownership. Check with `sysadminctl -secureTokenStatus`. If missing, use the original Admin account (that ran Setup Assistant) to grant the token via `sysadminctl -secureTokenOn`.
 
-2. **Problem:** You need to rotate (change) a Recovery Key that is known to have leaked in the organization.
-   * **Solution:** Use `sudo fdesetup changerecovery -personal` (for a personal key), or verify through the MDM system that you ran a new `Escrow` command to force the creation of a new PRK against the management catalog.
+2. **Problem:** You need to rotate a Recovery Key known to have leaked.
+   * **Solution:** Use `sudo fdesetup changerecovery -personal`, or ensure via the MDM system you ran an `Escrow` command to force new PRK generation.
 
-3. **Problem:** FileVault is enabled and running, but a new locally created user (in a non-MDM managed environment with no Bootstrap Token) does not appear on the login screen immediately after a reboot.
-   * **Solution:** Only users with a Secure Token who appear in the `fdesetup list` can pass the hardware-level Preboot Authentication before the OS loads. Log in with the main user, add the user via `sysadminctl`, and verify they are added to the cryptographic list.
+3. **Problem:** FileVault is on, but a new locally created user doesn't appear on the login screen immediately after reboot.
+   * **Solution:** Only users with a Secure Token listed in `fdesetup list` can pass Pre-boot Authentication. Log in with the main user, add the new user via `sysadminctl`, and ensure they are added to the cryptographic list.
+
+4. **Problem:** Password changed via external directory sync, and user needs old password to unlock FileVault.
+   * **Solution:** The FileVault KEK hasn't updated. Have the user change their password securely through macOS System Settings, which properly resyncs the KEK with the Secure Enclave.
 
 ---
 
-## Recommended Links and Further Reading
+## Recommended Reading and Links
 
-* [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-token-bootstrap-token-and-volume-dep24dbdcf9e/web) - Technical article for IT admins on how encryption authentication is performed in the enterprise.
-* [Intro to FileVault for Mac](https://support.apple.com/guide/security/intro-to-filevault-secd73eaebd1/web) - In-depth technical overview of encryption architecture on Apple Silicon processors.
-* [Manage FileVault with mobile device management](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-depf2a6327b/web) - Guide for managing organizational recovery keys for FileVault.
-* [Protect data on your Mac with FileVault](https://support.apple.com/en-us/HT204837) - Basic end-user guide on how to turn on encryption and protect files.
+* [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-token-bootstrap-token-and-volume-dep24dbdcf9e/web)
+* [Intro to FileVault for Mac](https://support.apple.com/guide/security/intro-to-filevault-secd73eaebd1/web)
+* [Manage FileVault with mobile device management](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-depf2a6327b/web)
+* [Protect data on your Mac with FileVault](https://support.apple.com/en-us/HT204837)
 
 ## Summary Video
 
-<!-- Summary Video from YouTube -->
+<!-- YouTube Summary Video -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/i7byyZYgNUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
-
-
-
-!!! tip "Visual Aid (Student Reference)"
-    These images illustrate the relevant interface or mechanism for the lesson topic.
-
-
-
-<!-- src_hash: ec3425e45d98a697010571ca97af0d09b82fd166707206d1f6e714f5a68ab878 -->
-
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
+!!! tip "Presentation Visuals"
+    These images illustrate the relevant interface or mechanism for the lesson.
 
 ![Disk_image_performance_the_cost_of_encryption_rise_p2_28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
 ![Slide100_image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)

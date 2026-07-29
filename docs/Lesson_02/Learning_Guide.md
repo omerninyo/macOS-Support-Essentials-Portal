@@ -4,11 +4,9 @@
 ## מטרות השיעור
 
 * **משתמשים ותיקיות** - סוגי חשבונות מקומיים, היררכיית ה-Home Folder ותיקיית Shared.
-* **ניהול סודות** - אבולוציית הסיסמאות, Keychain, ואפליקציית Passwords החדשה.
-* **העידן ללא סיסמה ואבטחה** - מבוא ל-Passkeys והרשאות קבצים (POSIX/ACL). מעבדה: יצירת Passkey באתר https://webauthn.io/.
+* **ניהול סודות** - אבולוציית הסיסמאות, Keychain, ואפליקציית Passwords מ-macOS Sequoia ו-Tahoe.
+* **העידן ללא סיסמה ואבטחה** - Passkeys והרשאות קבצים (POSIX/ACL), מערכת TCC ו-SIP.
 * **תיבול ארגוני** - עבודה עם Managed Apple Accounts (MAID) ושילוב Platform SSO לכניסה שקופה בארגון.
-
-
 
 ## סקירה
 
@@ -21,19 +19,19 @@
 * **Standard User:** משתמש רגיל, מוגבל לתיקיית הבית שלו (`~`) ולמרחב האישי שלו.
 * **Guest User:** משתמש אורח, מוחק את כל תוכן התיקיה שלו בניתוק.
 * **Sharing Only:** משתמש נטול תיקיית בית שנועד אך ורק להזדהות מול שיתופי רשת.
-* **Home Folder (`/Users/username`):** תיקיית הבית המבודדת של המשתמש. מוגנת בהרשאות קריאה למשתמש בלבד.
+* **Home Folder (`/Users/username`):** תיקיית הבית המבודדת של המשתמש.
 * **Shared Folder (`/Users/Shared`):** אזור מפורז ציבורי. מוגן באמצעות Sticky Bit.
-* **Sticky Bit:** דגל הרשאה המונע ממשתמשים למחוק קבצים השייכים למשתמשים אחרים באותה תיקיה (כמו בתיקיית Shared).
-* **Keychain:** תשתית מחזיק המפתחות של macOS, מורכבת מ-Login Keychain (אישי) ו-System Keychain (מערכתי).
-* **Passwords app:** האפליקציה המרכזית ב-macOS 15 לניהול סיסמאות, Passkeys, ואימות דו-שלבי.
-* **Passkey (מפתח גישה):** תקן הזדהות (FIDO2) ללא סיסמה. עובד באמצעות צמד מפתחות קריפטוגרפי ומאומת מקומית ב-Secure Enclave.
-* **היסטוריית ה-Keychain:** הושק ב-1993, ה-API המודרני נכתב ב-2002, והסנכרון לענן (Data Protection) הצטרף ב-2013 מ-iOS ל-Mac.
-* **היסטוריית ה-Secure Enclave:** מנגנון בידוד הנתונים הוקם ב-2013 למכשירי אייפון, ונחת במחשבי ה-Mac עם שבב ה-T2 בשנת 2017.
+* **Sticky Bit:** דגל הרשאה המונע ממשתמשים למחוק קבצים השייכים למשתמשים אחרים באותה תיקיה.
+* **Keychain:** תשתית מחזיק המפתחות של macOS, מורכבת מ-Login Keychain ו-System Keychain.
+* **Passwords app:** האפליקציה המרכזית (מ-macOS 15 ומשופרת ב-macOS 26 Tahoe) לניהול סיסמאות, Passkeys וקודי 2FA.
+* **Passkey (מפתח גישה):** תקן הזדהות (FIDO2) ללא סיסמה באמצעות צמד מפתחות קריפטוגרפי ב-Secure Enclave.
 * **POSIX:** מודל ההרשאות הסטנדרטי של UNIX (Owner, Group, Everyone).
 * **ACL (Access Control List):** שכבת הרשאות מתקדמת וגרגולרית המתווספת מעל POSIX.
-* **Managed Apple Account (MAID):** חשבון Apple בבעלות הארגון, המגביל שירותים מסוימים (כמו רכישות או iCloud Mail) ומאפשר אימות מול הארגון.
-* **Platform SSO:** תשתית ב-macOS המאפשרת התחברות למחשב המקומי (Login Window) ישירות מול שרת זהויות ענן (IdP) כדוגמת Entra ID, ללא צורך ב-Active Directory ישן.
-* **Federated Authentication:** מצב בו הזנת אימייל ארגוני מעבירה את המשתמש להזדהות מול שרת החברה, מבלי לדרוש סיסמת Apple חדשה.
+* **TCC (Transparency, Consent, and Control):** מנגנון פרטיות החוסם גישה של אפליקציות לקבצים אישיים ולחומרה (כמו מצלמה) אלא אם המשתמש נתן אישור מפורש.
+* **SIP (System Integrity Protection):** מגן על קבצי ליבה של המערכת מפני שינויים, אפילו עקרונית על ידי ה-root.
+* **Managed Apple Account (MAID):** חשבון Apple בבעלות הארגון.
+* **Platform SSO:** תשתית ב-macOS המאפשרת התחברות למחשב ישירות מול שרת זהויות ענן (IdP) כדוגמת Entra ID או Okta.
+* **Federated Authentication:** מצב בו הזנת אימייל ארגוני מעבירה את המשתמש להזדהות מול שרת החברה, מבלי לדרוש סיסמת Apple.
 
 ## פקודות שימושיות (CLI Commands)
 | פקודה | תיאור |
@@ -41,17 +39,15 @@
 | `dscl . -list /Users` | הצגת רשימת כלל המשתמשים במערכת (לוקאליים) |
 | `dscl . -read /Users/username` | קריאת מאפיינים נרחבים של משתמש ספציפי |
 | `ls -la /Users` | הצגת הרשאות קבצים, כולל זיהוי ה-Sticky Bit (`t`) |
-| `ls -le /path` | הצגת הרשאות קבצים, כולל תצוגת רשומות ACL (המסומנות ב-`+`) |
-| `security list-keychains` | הצגת רשימת מחיזיקי המפתחות הפעילים כעת |
-| `applesso` | אבחון מצב שירות ה-Platform SSO בארגון (בסביבה נתמכת) |
+| `ls -le /path` | הצגת הרשאות קבצים, כולל תצוגת רשומות ACL (`+`) |
+| `security list-keychains` | הצגת רשימת מחזיקי המפתחות הפעילים כעת |
 | `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | חיפוש שגיאות התחברות מול שרתי SSO בלוגים |
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - מדריך תמיכה רשמי של אפל לסוגי משתמשים והרשאות ב-macOS.
-* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - מדריך פריסה רשמי לניהול חשבונות Apple ID מנוהלים בארגון.
-* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - מאמר עומק המפרט את מנגנון Keychain ומחזיקי המפתחות ב-macOS.
-* [Understanding User Accounts in macOS](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/) - סקירה מקיפה על סוגי חשבונות המשתמש והרשאות מערכת הקבצים.
+* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - מדריך תמיכה רשמי של אפל.
+* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - ניהול MAID בארגון.
+* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - מאמר עומק על Keychain.
 
 ## סרטון סיכום
 
@@ -60,6 +56,10 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/S1n1JS-mWTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+> [!NOTE]
+> תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

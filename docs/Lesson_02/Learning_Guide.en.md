@@ -1,88 +1,68 @@
 # Lesson 02: User Management and Data Security
-**Student Reference Guide**
+**Student Learning Guide**
 
 ## Lesson Objectives
 
 * **Users and Folders** - Local account types, Home Folder hierarchy, and the Shared folder.
-* **Secrets Management** - Password evolution, Keychain, and the new Passwords app.
-* **The Passwordless Era and Security** - Introduction to Passkeys and file permissions (POSIX/ACL). Lab: Creating a Passkey at https://webauthn.io/.
-* **Enterprise Flavor** - Working with Managed Apple Accounts (MAID) and Platform SSO integration for transparent login in the enterprise.
+* **Secrets Management** - Password evolution, Keychain, and the modern Passwords app in macOS Sequoia and Tahoe.
+* **The Passwordless Era and Security** - Passkeys and file permissions (POSIX/ACL), TCC, and SIP mechanisms.
+* **Enterprise Seasoning** - Working with Managed Apple Accounts (MAID) and integrating Platform SSO for seamless enterprise login.
 
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/4a1fe7a9-1ab4-4499-aada-0e9c8b5d8aec/"></iframe></div>
 
-## Key Concepts (Terminology)
+## Terminology (Key Concepts)
 
-* **Administrator:** System administrator user, with global permissions to change settings and install software for everyone.
-* **Standard User:** Regular user, restricted to their home folder (`~`) and personal space.
-* **Guest User:** Guest user, deletes all its folder contents upon logout.
-* **Sharing Only:** A user without a home folder designed solely for authenticating to network shares.
-* **Home Folder (`/Users/username`):** The user's isolated home folder. Protected with read permissions for the user only.
-* **Shared Folder (`/Users/Shared`):** A public demilitarized zone. Protected using the Sticky Bit.
-* **Sticky Bit:** A permission flag that prevents users from deleting files belonging to other users in the same directory (like in the Shared folder).
-* **Keychain:** macOS's keychain infrastructure, consisting of the Login Keychain (personal) and System Keychain (system-wide).
-* **Passwords app:** The central app in macOS 15 for managing passwords, Passkeys, and two-factor authentication.
-* **Passkey:** A passwordless authentication standard (FIDO2). Works using a cryptographic key pair and is verified locally in the Secure Enclave.
-* **Keychain History:** Launched in 1993, the modern API was written in 2002, and cloud synchronization (Data Protection) joined in 2013 from iOS to Mac.
-* **Secure Enclave History:** The data isolation mechanism was established in 2013 for iPhones, and landed on Mac computers with the T2 chip in 2017.
+* **Administrator:** The system administrator, with global permissions to change settings and install software for everyone.
+* **Standard User:** A regular user, limited to their home folder (`~`) and personal space.
+* **Guest User:** A guest user whose entire folder contents are deleted upon logging out.
+* **Sharing Only:** A user with no home folder intended solely for network share authentication.
+* **Home Folder (`/Users/username`):** The user's isolated home directory.
+* **Shared Folder (`/Users/Shared`):** A public demilitarized zone. Protected by a Sticky Bit.
+* **Sticky Bit:** A permission flag preventing users from deleting files belonging to other users in the same directory.
+* **Keychain:** The macOS keychain infrastructure, consisting of the Login Keychain and System Keychain.
+* **Passwords app:** The central app (from macOS 15, enhanced in macOS 26 Tahoe) for managing passwords, Passkeys, and 2FA codes.
+* **Passkey:** A passwordless authentication standard (FIDO2) using a cryptographic key pair in the Secure Enclave.
 * **POSIX:** The standard UNIX permissions model (Owner, Group, Everyone).
-* **ACL (Access Control List):** An advanced and granular permissions layer added on top of POSIX.
-* **Managed Apple Account (MAID):** An Apple account owned by the organization, restricting certain services (like purchases or iCloud Mail) and allowing authentication with the organization.
-* **Platform SSO:** Infrastructure in macOS allowing login to the local computer (Login Window) directly with a cloud Identity Provider (IdP) such as Entra ID, without needing legacy Active Directory.
-* **Federated Authentication:** A state where entering an organizational email redirects the user to authenticate against the company's server, without requiring a new Apple password.
+* **ACL (Access Control List):** An advanced, granular permissions layer added on top of POSIX.
+* **TCC (Transparency, Consent, and Control):** A privacy mechanism blocking app access to personal files and hardware (like the camera) unless explicitly approved by the user.
+* **SIP (System Integrity Protection):** Protects core system files from modifications, even by the root user.
+* **Managed Apple Account (MAID):** An Apple Account owned by the organization.
+* **Platform SSO:** macOS infrastructure enabling Mac login directly against a cloud identity provider (IdP) like Entra ID or Okta.
+* **Federated Authentication:** A state where entering an enterprise email redirects the user to authenticate against the company's server without requiring an Apple password.
 
-## Useful Commands (CLI Commands)
+## Useful CLI Commands
 | Command | Description |
 |---|---|
-| `dscl . -list /Users` | Display the list of all users in the system (local) |
-| `dscl . -read /Users/username` | Read extensive properties of a specific user |
-| `ls -la /Users` | Display file permissions, including identification of the Sticky Bit (`t`) |
-| `ls -le /path` | Display file permissions, including ACL records display (marked with `+`) |
-| `security list-keychains` | Display the list of currently active keychains |
-| `applesso` | Diagnose the status of the Platform SSO service in the organization (in a supported environment) |
-| `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | Search for login errors against SSO servers in logs |
+| `dscl . -list /Users` | Display a list of all system (local) users |
+| `dscl . -read /Users/username` | Read extensive attributes of a specific user |
+| `ls -la /Users` | View file permissions, including identifying the Sticky Bit (`t`) |
+| `ls -le /path` | View file permissions, including displaying ACL records (`+`) |
+| `security list-keychains` | Display a list of currently active keychains |
+| `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | Search logs for SSO server connection errors |
 
-## Recommended Reading & Enrichment Links
+## Recommended Reading and Links
 
-* **Apple Platform Support: Intro to user account types**
-  [https://support.apple.com/guide/platform-support/sup72e8c67c3/web](https://support.apple.com/guide/platform-support/sup72e8c67c3/web)
-* **Apple Platform Deployment: About Managed Apple Accounts**
-  [https://support.apple.com/guide/deployment/depdc4ba8d82/web](https://support.apple.com/guide/deployment/depdc4ba8d82/web)
-* **The Eclectic Light Company: Explainer: Keychain basics**
-  [https://eclecticlight.co/2022/10/15/explainer-keychain-basics/](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/)
-* **The Mac Security Blog: Understanding User Accounts in macOS**
-  [https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/)
-
-## Recommended Links and Further Reading
-
-* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - Official Apple Support guide to user account types and permissions in macOS.
-* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - Official Apple Deployment guide for managing Managed Apple IDs in the enterprise.
-* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - In-depth article detailing Keychains and credential storage in macOS.
-* [Understanding User Accounts in macOS](https://www.intego.com/mac-security-blog/understanding-user-accounts-in-macos/) - Comprehensive review of user account types and filesystem permissions.
+* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - Official Apple support guide.
+* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - Managing MAIDs in the enterprise.
+* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - In-depth article about Keychain.
 
 ## Summary Video
 
-<!-- Summary video from YouTube -->
+<!-- YouTube Summary Video -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/S1n1JS-mWTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
+> [!NOTE]
+> תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
 
-
-
-!!! tip "Visual Illustration (Student Reference)"
-    These images illustrate the interface or mechanism relevant to the lesson topic.
-
-
-
-<!-- src_hash: bd6527f6d1fbd66b6e94a67dc2de7e3a7fb5e602a6e7755878180387e93ede71 -->
-
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![Slide87_image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
 ![Slide87_image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
