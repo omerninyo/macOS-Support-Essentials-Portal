@@ -85,16 +85,3 @@ Behind the scenes of the user interface we just explored, there are several powe
 
 <!-- src_hash: 5a60911f6cdfe3374a246e96cae7e2da44c1dc7f7c7da51da76cdf0053337e06 -->
 
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
-
-![Disk_image_performance_the_cost_of_encryption_rise_p2_28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
-![Slide100_image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
-![Slide100_image110](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image110.png)
-![Slide101_image111](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image111.png)
-![Slide101_image112](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image112.png)
-![Slide70_image84](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image84.png)
-![Slide70_image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
-![Slide94_image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
-![Slide94_image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)

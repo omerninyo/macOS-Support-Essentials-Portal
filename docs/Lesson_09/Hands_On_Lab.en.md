@@ -120,22 +120,3 @@ As System or IT Support personnel, we sometimes want to perform network operatio
 
 <!-- src_hash: d6933b33de53199cdbca3000074e2dffeb4abfff24b02615c1650a5ab843cb51 -->
 
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
-
-![Slide131_image161](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image161.png)
-![Slide131_image45](../assets/images/Lesson_09/L09_LegacySlide_Slide131_image45.jpg)
-![Slide133_image161](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image161.png)
-![Slide133_image45](../assets/images/Lesson_09/L09_LegacySlide_Slide133_image45.jpg)
-![Slide134_image164](../assets/images/Lesson_09/L09_LegacySlide_Slide134_image164.png)
-![Slide23_image41](../assets/images/Lesson_09/L09_LegacySlide_Slide23_image41.jpg)
-![Slide74_image14](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image14.jpg)
-![Slide74_image15](../assets/images/Lesson_09/L09_LegacySlide_Slide74_image15.jpg)
-![Slide99_image103](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image103.png)
-![Slide99_image30](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image30.jpg)
-![Slide99_image31](../assets/images/Lesson_09/L09_LegacySlide_Slide99_image31.jpg)
-![26-Tahoe-Finder-Connect-to-Server-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Connect-to-Server-scaled.png)
-![26-Tahoe-Finder-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Network-scaled.png)
-![26-Tahoe-Settings-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Network-scaled.png)
-![26-Tahoe-Settings-Wi-Fi-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Wi-Fi-scaled.png)

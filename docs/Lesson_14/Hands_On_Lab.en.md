@@ -102,11 +102,3 @@ In the output, you will notice that the Recovery environment loads a minimal fil
 
 <!-- src_hash: 14bd3e12fe5c318ffee393a1d106156e7c7884e12f2af7e4e5f1481955121aee -->
 
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
-
-![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
-![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
-![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
-![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)

@@ -83,9 +83,3 @@ As IT professionals, we may sometimes want to discover network services or conne
 
 <!-- src_hash: c28294f8e4072fd2dbae6fdd5bed9a53ed8b0e16913c984ae35da0edb359ed3e -->
 
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
-
-![Slide71_image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
-![Slide71_image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)

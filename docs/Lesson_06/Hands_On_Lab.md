@@ -72,19 +72,3 @@
 7. נסו כעת להעתיק את הקובץ המשוכפל אל תוך כרך ה-**SharedPool** (ה-Volume השני שיצרתם על ה-USB). גם פעולה זו אמורה להיות מיידית! מנגנון ה-Clone עובד בין Volumes שונים, כל עוד הם באותו Container.
 8. לסיום, מחקו את הקבצים לפח המחזור ורוקנו אותו כדי לפנות מחדש את ה-USB.
 
-
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![GetInfo_Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
-![How_macOS_depends_on_firmlinks_p1_24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
-![How_macOS_depends_on_firmlinks_p1_25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
-![Slide107_image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
-![Slide115_image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
-![Slide115_image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
-![Slide116_image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
-![Slide116_image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
-![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
-![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
-![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
-![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)

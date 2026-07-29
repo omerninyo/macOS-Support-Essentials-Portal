@@ -63,13 +63,3 @@
 6. הסתכלו בחלון ה-Console. שימו לב לשורות החדשות שקופצות ברקע בזמן אמת, המעידות על איסוף מידע או ניסיון תקשורת. במקרה של בעיות רשת בארגון, כאן נאתר שגיאות התחברות (למשל תעודות SSL חסומות או ניסיון חיבור שנכשל).
 7. סגרו את כל האפליקציות. המעבדה הושלמה!
 
-
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
-![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)

@@ -139,10 +139,3 @@ sudo sysdiagnose -f ~/Desktop/
 
 <!-- src_hash: e30e14c72eb580582505cf3f268cd8093fe7046ddf31f0d91f4eae9dcf54ca09 -->
 
-
-!!! tip "Visual Aids (Student Guide)"
-    These images illustrate the relevant interface or mechanism for this lesson.
-
-![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
-![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
-![Slide69_image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
