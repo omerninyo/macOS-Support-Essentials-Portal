@@ -70,14 +70,6 @@
 </div>
 
 
-![Slide87 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
-![Slide87 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
-![Slide89 image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.jpg)
-![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
-![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
-![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
-![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
-![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
 
 
 
@@ -87,3 +79,16 @@
 
 
 <!-- src_hash: bd6527f6d1fbd66b6e94a67dc2de7e3a7fb5e602a6e7755878180387e93ede71 -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+    ![Slide87 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
+    ![Slide87 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
+    ![Slide89 image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.jpg)
+    ![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
+    ![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
+    ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
+    ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
+    ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)

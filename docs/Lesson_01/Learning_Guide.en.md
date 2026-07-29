@@ -53,8 +53,6 @@
 </div>
 
 
-![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
 
 
 
@@ -62,3 +60,8 @@
     These images illustrate the interface or mechanisms relevant to this lesson's topic.
 
 
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+    ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
+    ![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)

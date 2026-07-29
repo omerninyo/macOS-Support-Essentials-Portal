@@ -104,23 +104,18 @@ mdimport -t -d3 /path/to/specific/file.pdf
 </div>
 
 
-![GetInfo Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
-![How macOS depends on firmlinks p1 24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
-![How macOS depends on firmlinks p1 25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
-![Slide107 image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
-![Slide115 image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
-![Slide115 image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
-![Slide116 image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
-![Slide116 image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
-![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
-![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
-![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
-![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
-
-
-
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-
-
+    ![GetInfo Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
+    ![How macOS depends on firmlinks p1 24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
+    ![How macOS depends on firmlinks p1 25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
+    ![Slide107 image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
+    ![Slide115 image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
+    ![Slide115 image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
+    ![Slide116 image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
+    ![Slide116 image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
+    ![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
+    ![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
+    ![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
+    ![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)

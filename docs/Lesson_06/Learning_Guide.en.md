@@ -108,21 +108,26 @@ mdimport -t -d3 /path/to/specific/file.pdf
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-![GetInfo Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
-![How macOS depends on firmlinks p1 24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
-![How macOS depends on firmlinks p1 25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
-![Slide107 image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
-![Slide115 image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
-![Slide115 image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
-![Slide116 image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
-![Slide116 image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
-![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
-![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
-![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
-![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
 
 !!! tip "Visual Illustration (Student Aid)"
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 
 <!-- src_hash: e4750e9796b2c2656b621b2305fa12c72cb5ec3c4074abe033c80cb32362a90c -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+    ![GetInfo Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
+    ![How macOS depends on firmlinks p1 24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
+    ![How macOS depends on firmlinks p1 25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
+    ![Slide107 image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
+    ![Slide115 image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
+    ![Slide115 image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
+    ![Slide116 image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
+    ![Slide116 image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
+    ![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
+    ![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
+    ![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
+    ![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
