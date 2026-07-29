@@ -113,12 +113,9 @@
 </div>
 
 
-![Slide102 image32](../assets/images/Lesson_05/L05_LegacySlide_Slide102_image32.jpg)
 ![Slide103 image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
 ![Slide121 image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
 ![Slide66 image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
-![Slide66 image12](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image12.jpg)
-![Slide75 image89](../assets/images/Lesson_05/L05_LegacySlide_Slide75_image89.jpg)
 ![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
 ![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
 
@@ -128,12 +125,9 @@
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 
-![Slide102 image32](../assets/images/Lesson_05/L05_LegacySlide_Slide102_image32.jpg)
 ![Slide103 image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
 ![Slide121 image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
 ![Slide66 image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
-![Slide66 image12](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image12.jpg)
-![Slide75 image89](../assets/images/Lesson_05/L05_LegacySlide_Slide75_image89.jpg)
 ![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
 ![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
 

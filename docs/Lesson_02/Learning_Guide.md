@@ -61,14 +61,9 @@
 </div>
 
 
-![Slide2 image3](../assets/images/Lesson_02/L02_LegacySlide_Slide2_image3.jpg)
-![Slide48 image8](../assets/images/Lesson_02/L02_LegacySlide_Slide48_image8.jpg)
-![Slide53 image67](../assets/images/Lesson_02/L02_LegacySlide_Slide53_image67.jpg)
 ![Slide87 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
 ![Slide87 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
-![Slide89 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image22.jpg)
 ![Slide89 image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.jpg)
-![Slide90 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image23.jpg)
 ![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
 ![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
@@ -81,14 +76,9 @@
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 
-![Slide2 image3](../assets/images/Lesson_02/L02_LegacySlide_Slide2_image3.jpg)
-![Slide48 image8](../assets/images/Lesson_02/L02_LegacySlide_Slide48_image8.jpg)
-![Slide53 image67](../assets/images/Lesson_02/L02_LegacySlide_Slide53_image67.jpg)
 ![Slide87 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
 ![Slide87 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
-![Slide89 image22](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image22.jpg)
 ![Slide89 image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.jpg)
-![Slide90 image23](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image23.jpg)
 ![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
 ![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
