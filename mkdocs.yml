@@ -69,6 +69,7 @@ extra_css:
   - stylesheets/custom_theme.css
 
 markdown_extensions:
+  - md_in_html
   - admonition
   - pymdownx.details
   - pymdownx.superfences
