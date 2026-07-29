@@ -1,4 +1,3 @@
-<div dir="rtl">
 
 # שיעור 03: אבטחת מידע
 **מדריך עזר לתלמיד**
@@ -164,7 +163,6 @@
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/D28yJofP3fU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
@@ -173,4 +171,3 @@
 ![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
 ![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
 
-</div>

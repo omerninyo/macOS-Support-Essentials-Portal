@@ -1,4 +1,3 @@
-<div dir="rtl">
 
 # שיעור 06: מערכת הקבצים (APFS)
 **מדריך עזר לתלמיד**
@@ -84,7 +83,6 @@ mdimport -t -d3 /path/to/file.pdf
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/cBSnmMtt9ho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
@@ -104,4 +102,3 @@ mdimport -t -d3 /path/to/file.pdf
 ![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
 ![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
 
-</div>

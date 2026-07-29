@@ -1,4 +1,3 @@
-<div dir="rtl">
 
 # שיעור 03: אבטחת מידע
 **מעבדה מעשית (תרגול לתלמיד)**
@@ -128,4 +127,3 @@
    log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
    ```
 
-</div>

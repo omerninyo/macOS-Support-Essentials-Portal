@@ -1,4 +1,3 @@
-<div dir="rtl">
 
 # שיעור 08: טרמינל ושירותי רקע
 **מדריך עזר לתלמיד (גרסת vEXP מורחבת)**
@@ -93,7 +92,6 @@
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/UPIUNoYIGPo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
 
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
@@ -106,4 +104,3 @@
 ![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
 ![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
 
-</div>
