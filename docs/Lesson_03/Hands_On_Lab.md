@@ -53,6 +53,7 @@
 3. הקלד את הנתיב הבא ולחץ Enter:
    `/var/protected/xprotect/XProtect.bundle` 
    *(הערה: אם התיקייה ריקה לאחר התקנה חדשה, בדוק בנתיב הישן: `/Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/`)*
+
 4. בתיקייה שתיפתח, חפש קבצי מידע כגון `XProtect.meta.plist` או קבצי הגדרות אחרים (בהתאם לזמינות ב-Tahoe).
 5. בחר קובץ זמין ולחץ על מקש הרווח (Spacebar) כדי להפעיל את ה-Quick Look ולראות את התוכן הפנימי של מנוע האבטחה.
 

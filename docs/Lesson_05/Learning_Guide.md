@@ -31,22 +31,27 @@
 ### מתקינים ודיסקים (`installer` & `hdiutil`)
 * **`המונח sudo installer -pkg /path/to/package.pkg -target /`**
   התקנה שקטה של PKG לכונן הראשי. הפקודה הבסיסית לסקריפטים של MDM.
+
 * **`המונח hdiutil attach /path/to/image.dmg`**
   עגינת (Mount) כונן וירטואלי.
+
 * **`המונח hdiutil detach /Volumes/ImageName`**
   ניתוק כונן וירטואלי בצורה בטוחה.
 
 ### ניהול תהליכים ויציאה מאולצת (`killall` & `kill`)
 * **`המונח killall "App Name"`**
   סגירת אפליקציה בצורה עדינה לפי שמה (שולח `SIGTERM`).
+
 * **`המונח kill -9 [PID]`**
   אילוץ קריסה מיידית דרך מזהה תהליך, זהה לפעולת ה-Force Quit הגרפית (שולח `SIGKILL`).
+
 * **`המונח killall cfprefsd`**
   חיסול תהליך התצורה, מאלץ את המערכת לרוקן את המטמון של קבצי העדפות. קריטי בעת איפוס ארגזי חול (Sandboxes) ידני.
 
 ### הגדרות אפליקציה נסתרות (`defaults`)
 * **`המונח defaults read com.apple.Safari`**
   קורא את כלל קובץ ההגדרות (plist) עבור Safari.
+
 * **`המונח defaults delete com.apple.Safari`**
   מוחק את קובץ ההגדרות לחלוטין, ומחזיר את האפליקציה למצב יצרן.
 
@@ -59,11 +64,13 @@
 ## ניהול Sandboxes ואיפוס אפליקציות
 
 **היכן אפליקציות שומרות את המידע שלהן?**
+
 1. **העדפות (Preferences):** תחת `~/Library/Preferences/com.domain.appname.plist`
 2. **המונח Application Support:** תחת `~/Library/Application Support/AppName/`
 3. **המונח Containers:** אפליקציות מה-App Store או אפליקציות Sandbox אינן כותבות לתיקיות הכלליות. כל הגישה שלהן מנותבת אל: `~/Library/Containers/[Bundle ID]`.
 
 **כיצד לאפס אפליקציית Sandbox (איפוס מוחלט):**
+
 1. ודא שהאפליקציה סגורה לחלוטין (Quit או Force Quit).
 2. מחק את תיקיית ה-Container של האפליקציה בנתיב: `~/Library/Containers/[Bundle ID]`.
 3. מחק את הגדרות המערכת השמורות (אם קיימות מחוץ ל-Sandbox): `defaults delete [Bundle ID]`.

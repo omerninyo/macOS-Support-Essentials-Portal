@@ -38,11 +38,13 @@
    המונח sudo touch /System/test.txt
    ```
    *(שגיאת `Read-only file system` מוכיחה שה-SSV חתום וסגור)*
+
 2. הריצו את הפקודה שמאשרת את חתימת האבטחה הקריפטוגרפית (טוב להרגעת מנהלי אבטחה לפני התקנת AV):
    ```bash
    המונח csrutil authenticated-root status
    ```
    *(הסטטוס `enabled` אומר שאין צורך לסרוק את מחיצת המערכת נגד וירוסים)*
+
 3. בדקו היכן ממוקמים ה-Firmlinks שמגשרים מעל ההגבלות הללו:
    ```bash
    המונח cat /usr/share/firmlinks

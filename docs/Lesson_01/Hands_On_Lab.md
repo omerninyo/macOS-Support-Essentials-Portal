@@ -16,6 +16,7 @@
    ```bash
    המונח sysctl -n machdep.cpu.brand_string
    ```
+
 5. פתחו את תוכנת ה-**Activity Monitor**.
 6. בסרגל העליון של Activity Monitor, ודאו שאתם בלשונית **CPU**.
 7. הסתכלו על עמודת ה-**Kind** (סוג).
@@ -44,6 +45,7 @@
    ```bash
    המונח sudo profiles show -type enrollment
    ```
+
 3. המערכת תדרוש מכם להזין את סיסמת ה-Local Account שלכם (סיסמת מנהל). הזינו אותה (הטקסט לא ייראה על המסך) ולחצו Enter.
 4. נתחו את הפלט:
 

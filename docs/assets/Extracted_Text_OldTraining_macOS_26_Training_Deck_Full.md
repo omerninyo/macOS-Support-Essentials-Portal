@@ -102,10 +102,13 @@
 - המונח Up to 16-core CPU
 - 10-core GPU
 המונח Neural Accelerators
+
 - המונח Up to 20-core GPU
 —
+
 - המונח Up to 40-core GPU
 —
+
 - 16-core Neural Engine
 - 16-core Neural Engine
 - 16-core Neural Engine
@@ -120,11 +123,13 @@
 1 המונח video encode engine
 1 המונח ProRes encode and decode engine 
 המונח AV1 decode
+
 - המונח Media Engine
 1 המונח video decode engine
 1 המונח video encode engine
 1 המונח ProRes encode and decode engine
 המונח AV1 decode
+
 - המונח Enhanced Media Engine
 1 המונח video decode engine
 2 המונח video encode engines
@@ -332,6 +337,7 @@
 - [16]
 - 10.8.5 (12F2560)
 (August 13, 2015)
+
 - מערכת OS X 10.9
 - המונח Mavericks
 - המונח June 10, 2013
@@ -339,6 +345,7 @@
 - המונח October 22, 2013
 - 10.9.5 (13F1911)
 (July 18, 2016)
+
 - מערכת OS X 10.10
 - המונח Yosemite
 - המונח June 2, 2014
@@ -346,6 +353,7 @@
 - המונח October 16, 2014
 - 10.10.5 (14F2511)
 (July 19, 2017)
+
 - מערכת OS X 10.11
 - המונח El Capitan
 - המונח June 8, 2015
@@ -353,6 +361,7 @@
 - המונח September 30, 2015
 - 10.11.6 (15G22010)
 (July 9, 2018)
+
 - מערכת macOS 10.12
 - המונח Sierra
 - המונח June 13, 2016
@@ -360,54 +369,63 @@
 - המונח September 20, 2016
 - 10.12.6 (16G2136)
 (September 26, 2019)
+
 - מערכת macOS 10.13
 - המונח High Sierra
 - המונח June 5, 2017
 - המונח September 25, 2017
 - 10.13.6 (17G14042)
 (November 12, 2020)
+
 - מערכת macOS 10.14
 - המונח Mojave
 - המונח June 4, 2018
 - המונח September 24, 2018
 - 10.14.6 (18G9323)
 (July 21, 2021)
+
 - מערכת macOS 10.15
 - המונח Catalina
 - המונח June 3, 2019
 - המונח October 7, 2019
 - 10.15.7 (19H2026)
 (July 20, 2022)
+
 - מערכת macOS 11
 - המונח Big Sur
 - המונח June 22, 2020
 - המונח November 12, 2020
 - 11.7.10 (20G1427)
 (September 11, 2023)
+
 - מערכת macOS 12
 - המונח Monterey
 - המונח June 7, 2021
 - המונח October 25, 2021
 - 12.7.6 (21H1320)
 (July 17, 2024)
+
 - מערכת macOS 13
 - המונח Ventura
 - המונח June 6, 2022
 - המונח October 24, 2022
 - 13.7.8
 (August 20, 2025)
+
 - מערכת macOS 14
 - המונח Sonoma
 - המונח June 5, 2023
 - המונח September 26, 2023
 - 14.8.3
 (December 12, 2025)
+
 - מערכת macOS 15
 - המונח Sequoia
 - המונח June 10, 2024
 - המונח September 16, 2024
 - 15.7.3
 (December 12, 2025)
+
 - מערכת macOS 26
 - המונח Tahoe
 - המונח June 9, 2025

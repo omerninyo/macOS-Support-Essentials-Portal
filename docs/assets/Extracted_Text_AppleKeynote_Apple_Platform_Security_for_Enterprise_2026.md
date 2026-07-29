@@ -270,37 +270,47 @@
 - המונח iOS 14  iPadOS 14
 - מערכת macOS
 המונח Big Sur 11
+
 - המונח iOS 15  iPadOS 15
 - המונח iOS 16
 המונח iPadOS 16
+
 - מערכת macOS
 המונח Ventura 13
+
 - המונח iOS 17
 המונח iPadOS 17
+
 - מערכת macOS
 המונח Sonoma 14
+
 - המונח iOS 18
 המונח iPadOS 18
+
 - מערכת macOS
 המונח Sequoia 15
+
 - המונח Additional compliance claims
 - המונח MDM
 המונח WLAN
 המונח VPN
 דפדפן Safari
 המונח Contacts
+
 - המונח FileVault
 - המונח MDM
 המונח WLAN
 המונח VPN
 דפדפן Safari
 המונח Contacts
+
 - המונח MDM
 המונח WLAN
 המונח VPN
 המונח TLS
 המונח Bluetooth
 המונח Biometrics
+
 - המונח FileVault
 - המונח MDM
 המונח WLAN
@@ -308,6 +318,7 @@
 המונח TLS
 המונח Bluetooth
 המונח Biometrics
+
 - המונח FileVault
 - המונח MDM
 המונח WLAN
@@ -315,6 +326,7 @@
 המונח TLS
 המונח Bluetooth
 המונח Biometrics
+
 - המונח FileVault
 - המונח Common Criteria certification
 - המונח Evaluation being finalised
