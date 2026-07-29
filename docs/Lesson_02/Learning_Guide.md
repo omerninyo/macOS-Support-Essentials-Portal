@@ -72,10 +72,8 @@
 ![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
 ![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
-![26-Tahoe-Fast-User-Menu-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Menu-scaled.png)
 ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
-![26-Tahoe-Settings-Users-Groups-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Users-Groups-scaled.png)
 
 
 
@@ -94,8 +92,6 @@
 ![Slide90 image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
 ![Slide91 image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
-![26-Tahoe-Fast-User-Menu-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Menu-scaled.png)
 ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
-![26-Tahoe-Settings-Users-Groups-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Users-Groups-scaled.png)
 
