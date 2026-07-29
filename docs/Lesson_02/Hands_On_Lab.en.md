@@ -40,3 +40,16 @@ Hands-on experience creating a completely new Passkey against a remote server, u
 5. Click on it. Note that there is no visible "password" (because it does not exist as plain, exposed text), but it explicitly indicates that it is a Passkey along with its creation date.
 
 <!-- src_hash: a279ee5cc7d6745b4f210a02b7244164447a9e5a4488292ff8d887470bc3a3dd -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![Slide87_image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
+![Slide87_image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
+![Slide89_image24](../assets/images/Lesson_02/L02_LegacySlide_Slide89_image24.jpg)
+![Slide90_image25](../assets/images/Lesson_02/L02_LegacySlide_Slide90_image25.jpg)
+![Slide91_image26](../assets/images/Lesson_02/L02_LegacySlide_Slide91_image26.jpg)
+![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
+![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
+![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)

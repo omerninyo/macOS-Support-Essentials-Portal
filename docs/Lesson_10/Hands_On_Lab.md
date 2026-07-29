@@ -80,3 +80,10 @@
    mount_smbfs //username@server_address/share_name ~/NetworkShare
    ```
    *בסיום העבודה, ניתן לנתק את השרת באמצעות `umount ~/NetworkShare`.*
+
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Slide71_image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
+![Slide71_image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)

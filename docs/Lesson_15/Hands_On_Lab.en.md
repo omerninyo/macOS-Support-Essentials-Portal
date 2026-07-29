@@ -150,3 +150,12 @@ Although macOS GUI interfaces provide most of the necessary information for diag
     This tool also displays profiles that might be hidden from the end-user, allowing IT professionals to quickly locate and isolate conflicting settings.
 
 <!-- src_hash: 19926c30ded6dbb0cf817e6a443bf04bb76be4f11bf5e437d24d7723c531af9c -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![ActivityMonitor_Memory](../assets/images/Lesson_15/L15_DeepDive_ActivityMonitor_Memory.jpg)
+![What_to_do_when_an_app_uses_too_much_memory_p1_41](../assets/images/Lesson_15/L15_DeepDive_What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
+![26-Tahoe-Activity-Monitor-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-Activity-Monitor-scaled.png)
+![26-Tahoe-System-Information-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-System-Information-scaled.png)

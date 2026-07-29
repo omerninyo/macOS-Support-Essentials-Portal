@@ -95,5 +95,5 @@
 !!! tip "Visual Aids (Student Guide)"
     These images illustrate the relevant interface or mechanism for this lesson.
 
-    ![Slide71 image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
-    ![Slide71 image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
+![Slide71_image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
+![Slide71_image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)

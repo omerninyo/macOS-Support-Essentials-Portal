@@ -82,3 +82,17 @@
 
   כדי לבדוק האם המק תקשר עם שרת ניהול (MDM) והפקיד (Escrow) Bootstrap Token שמאפשר הענקת Secure Tokens אוטומטית לעובדים חדשים, ניתן להשתמש בפקודה:
   `sudo profiles status -type bootstraptoken` (פעולה זו תדרוש הקלדת סיסמת מנהל).
+
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Disk_image_performance_the_cost_of_encryption_rise_p2_28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
+![Slide100_image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
+![Slide100_image110](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image110.png)
+![Slide101_image111](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image111.png)
+![Slide101_image112](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image112.png)
+![Slide70_image84](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image84.png)
+![Slide70_image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
+![Slide94_image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
+![Slide94_image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)

@@ -117,3 +117,11 @@
    ```bash
    log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
    ```
+
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![What_is_a_Background_Security_Improvement__and_how_p1_21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
+![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
+![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)

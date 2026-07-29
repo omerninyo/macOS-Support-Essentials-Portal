@@ -60,5 +60,6 @@
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-    ![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-    ![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
+![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)

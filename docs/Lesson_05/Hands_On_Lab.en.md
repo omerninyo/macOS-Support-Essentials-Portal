@@ -155,3 +155,13 @@ killall Safari
 *(This command performs an immediate process termination for all Safari processes running under the user).*
 
 <!-- src_hash: 7580ecfd9bbeff886a06f6b4833547fb1f8e6b9c6e4fed2d9501d9009d2240d5 -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![Slide103_image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
+![Slide121_image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
+![Slide66_image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
+![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
+![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)

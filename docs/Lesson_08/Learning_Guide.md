@@ -90,9 +90,9 @@
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-    ![Slide81 image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
-    ![Slide81 image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-    ![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-    ![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-    ![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-    ![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
+![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
+![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
+![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
+![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
+![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
+![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)

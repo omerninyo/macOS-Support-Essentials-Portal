@@ -103,7 +103,7 @@ In recovery mode, the Terminal is a powerful tool for diagnostics, troubleshooti
 !!! tip "Visual Aids (Student Guide)"
     These images illustrate the relevant interface or mechanism for this lesson.
 
-    ![An illustrated guide to Recovery on Apple silicon  p2 61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
-    ![Explainer Recovery p1 41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
-    ![Getting more from Recovery on Apple silicon Macs p0 9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
-    ![What to do when your Mac can t get to the login wi p2 65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
+![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
+![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
+![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)

@@ -119,3 +119,11 @@ For advanced support staff, here are a few Terminal commands that perform the ac
    ```
 
 <!-- src_hash: d219a474bedcf096eedd121a14f4b8c840dc3f9ed5ea32e9f010d140836a2fa1 -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![What_is_a_Background_Security_Improvement__and_how_p1_21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
+![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
+![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)

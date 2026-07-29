@@ -149,6 +149,6 @@ When the MDM server pushes a configuration profile (e.g., 802.1x settings for en
 !!! tip "Visual Aids (Student Guide)"
     These images illustrate the relevant interface or mechanism for this lesson.
 
-    ![Save and read the panic log p1 41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
-    ![Slide69 image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
-    ![Slide69 image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
+![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
+![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
+![Slide69_image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)

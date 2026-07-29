@@ -102,3 +102,19 @@ As we have seen, we can manage and download system updates through the System Se
     *This action is essential for system administrators who want to package or create USB drives of a specific version via the command line.*
 
 <!-- src_hash: 6455a124efcc94dda196c63e5a77c8f34452fb542390ee858b80c431cb64f7da -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![How_Software_Update_works_in_Ventura_p5_37](../assets/images/Lesson_12/L12_DeepDive_How_Software_Update_works_in_Ventura_p5_37.jpeg)
+![What_should_you_do_when_an_update_goes_wrong_p1_41](../assets/images/Lesson_12/L12_DeepDive_What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
+![Slide1_image2](../assets/images/Lesson_12/L12_LegacySlide_Slide1_image2.jpg)
+![Slide5_image5](../assets/images/Lesson_12/L12_LegacySlide_Slide5_image5.jpg)
+![Slide76_image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.jpg)
+![Slide76_image44](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image44.jpeg)
+![Slide76_image90](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image90.png)
+![Slide76_image91](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image91.png)
+![Slide76_image92](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image92.png)
+![Slide77_image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.jpg)
+![Slide77_image18](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image18.tif)

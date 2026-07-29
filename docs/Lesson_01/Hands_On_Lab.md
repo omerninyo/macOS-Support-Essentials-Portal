@@ -44,3 +44,11 @@
 
    - אם מופיע הטקסט `Error fetching Device Enrollment configuration: (34000) Client is not DEP enabled.`, המחשב אינו רשום ב-Apple Business Manager ואינו כפוף ל-Remote Management.
    - אם הפלט מציג פרטים על שרת (כגון URL של שרת MDM ארגוני), המחשב נרשם כראוי בהפעלתו הראשונה.
+
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
+![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)

@@ -65,3 +65,14 @@ In this part, we will see how `launchd` manages processes in the system using th
 
 
 <!-- src_hash: f47155635ead8efe8ee672235087522c2535e38a51892de8c69f772e4a5dccb8 -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
+![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
+![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
+![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
+![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
+![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)

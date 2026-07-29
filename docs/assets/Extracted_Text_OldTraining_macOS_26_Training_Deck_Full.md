@@ -400,17 +400,20 @@ AV1 decode
 - Sonoma
 - June 5, 2023
 - September 26, 2023
-- 14.8.3 (December 12, 2025)
+- 14.8.3
+(December 12, 2025)
 - macOS 15
 - Sequoia
 - June 10, 2024
 - September 16, 2024
-- 15.7.3 (December 12, 2025)
+- 15.7.3
+(December 12, 2025)
 - macOS 26
 - Tahoe
 - June 9, 2025
 - September 15, 2025
-- 26.2  (December 12, 2025)
+- 26.2 
+(December 12, 2025)
 
 ## Slide 45
 - Monterey New Feat.
@@ -1207,4 +1210,3 @@ AV1 decode
 ## Slide 147
 - System Management - Troubleshooting
 - Discussion and Extra - All Recovery options in Apple Silicon
-

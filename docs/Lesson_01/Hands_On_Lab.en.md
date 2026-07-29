@@ -46,3 +46,11 @@ This lab serves as an "Equalizer" for technicians and users transitioning to mac
    - If the output displays server details (such as an organizational MDM server URL), the computer was properly enrolled during its initial setup.
 
 <!-- src_hash: f636e65b224b5496e9857e5ac1f96036158176ef7decfa4f70c42ef8600b18c6 -->
+
+
+!!! tip "Visual Aids (Student Guide)"
+    These images illustrate the relevant interface or mechanism for this lesson.
+
+![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
+![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
+![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)

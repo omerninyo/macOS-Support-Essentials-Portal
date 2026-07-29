@@ -116,13 +116,13 @@
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
-    ![Snapshots aren t backups p1 114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
-    ![Time Machine backing up different file systems p4 133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
-    ![Time Machine backing up different file systems p5 133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
-    ![Slide120 image42](../assets/images/Lesson_07/L07_LegacySlide_Slide120_image42.jpg)
-    ![Slide122 image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.jpg)
-    ![Slide122 image44](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image44.jpg)
-    ![Slide136 image168](../assets/images/Lesson_07/L07_LegacySlide_Slide136_image168.png)
-    ![Slide67 image80](../assets/images/Lesson_07/L07_LegacySlide_Slide67_image80.png)
-    ![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
-    ![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)
+![Snapshots_aren_t_backups_p1_114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
+![Time_Machine_backing_up_different_file_systems_p4_133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
+![Time_Machine_backing_up_different_file_systems_p5_133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p5_133.jpeg)
+![Slide120_image42](../assets/images/Lesson_07/L07_LegacySlide_Slide120_image42.jpg)
+![Slide122_image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.jpg)
+![Slide122_image44](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image44.jpg)
+![Slide136_image168](../assets/images/Lesson_07/L07_LegacySlide_Slide136_image168.png)
+![Slide67_image80](../assets/images/Lesson_07/L07_LegacySlide_Slide67_image80.png)
+![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
+![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)

@@ -172,12 +172,12 @@ Managing the Secure Token and FileVault arrays is primarily done using the `sysa
 !!! tip "Visual Aids (Student Guide)"
     These images illustrate the relevant interface or mechanism for this lesson.
 
-    ![Disk image performance the cost of encryption rise p2 28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
-    ![Slide100 image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
-    ![Slide100 image110](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image110.png)
-    ![Slide101 image111](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image111.png)
-    ![Slide101 image112](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image112.png)
-    ![Slide70 image84](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image84.png)
-    ![Slide70 image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
-    ![Slide94 image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
-    ![Slide94 image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)
+![Disk_image_performance_the_cost_of_encryption_rise_p2_28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
+![Slide100_image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)
+![Slide100_image110](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image110.png)
+![Slide101_image111](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image111.png)
+![Slide101_image112](../assets/images/Lesson_04/L04_LegacySlide_Slide101_image112.png)
+![Slide70_image84](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image84.png)
+![Slide70_image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
+![Slide94_image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
+![Slide94_image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)
