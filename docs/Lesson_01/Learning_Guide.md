@@ -66,6 +66,4 @@
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 
-![Explainer Memory AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
 

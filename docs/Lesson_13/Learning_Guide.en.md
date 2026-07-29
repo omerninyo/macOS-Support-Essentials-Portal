@@ -126,19 +126,6 @@ Run from Terminal in recovery mode only to make changes.
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 
-![Slide138 image169](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image169.png)
-![Slide138 image49](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image49.jpeg)
-![Slide141 image170](../assets/images/Lesson_13/L13_LegacySlide_Slide141_image170.jpg)
-![Slide142 image171](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image171.png)
-![Slide142 image172](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image172.png)
-![Slide142 image173](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image173.png)
-![Slide142 image174](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image174.png)
-![Slide142 image175](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image175.png)
-![Slide142 image176](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image176.png)
-![Slide142 image177](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image177.jpg)
-![Slide80 image19](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image19.jpg)
-![Slide80 image93](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image93.png)
-![26-Tahoe-Boot-Camp-scaled](../assets/images/Lesson_13/L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png)
 
 
 <!-- src_hash: 61b575ed0cf0bc53e1c3ab93bf5ec4c3e58067cb0a055d9937c63684445b9590 -->

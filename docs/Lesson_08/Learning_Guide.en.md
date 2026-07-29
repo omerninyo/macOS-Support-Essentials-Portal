@@ -100,11 +100,5 @@
 !!! tip "Visual Illustration (Student Aid)"
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
-![Slide81 image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
-![Slide81 image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
 
 <!-- src_hash: aaa3ec38092739167278fa4a41032deabc19edd40ab00e4ba5c8ee6a5e359c4d -->

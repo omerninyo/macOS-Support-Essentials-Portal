@@ -90,7 +90,5 @@
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 
-![Slide71 image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
-![Slide71 image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
 
 <!-- src_hash: 3d28fbdb7671d3cc9f4242c69599e411ab8050f023b37387df84c6c8a2c4d573 -->

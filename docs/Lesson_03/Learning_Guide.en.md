@@ -180,8 +180,5 @@ To monitor the activity of mechanisms in the terminal environment:
     These images illustrate the relevant interface or mechanism for the lesson topic.
 
 
-![What is a Background Security Improvement  and how p1 21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
-![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
-![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
 
 <!-- src_hash: ae9dda194a82790646b60dd1b911c0c7fffb3ded379a23af6fb897a67a4225b1 -->

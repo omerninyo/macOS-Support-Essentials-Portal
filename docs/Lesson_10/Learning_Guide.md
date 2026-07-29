@@ -90,6 +90,4 @@
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 
-![Slide71 image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
-![Slide71 image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
 
