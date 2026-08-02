@@ -72,3 +72,7 @@
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
 ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
+![Slide96_image104](../assets/images/Lesson_02/L02_LegacySlide_Slide96_image104.png)
+![Slide96_image105](../assets/images/Lesson_02/L02_LegacySlide_Slide96_image105.png)
+![Slide97_image106](../assets/images/Lesson_02/L02_LegacySlide_Slide97_image106.png)
+![Slide97_image107](../assets/images/Lesson_02/L02_LegacySlide_Slide97_image107.png)
