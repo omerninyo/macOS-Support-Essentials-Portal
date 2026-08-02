@@ -1,68 +1,71 @@
-# Lesson 14: Recovery Environment and Erasure
-**Learning Guide**
+# Lesson 14: Recovery Environment and Erasing
+**Student Reference Guide**
 
 ## Overview
 
-<!-- NotebookLM Podcast from Captivate -->
+<!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/0b72cae7-af65-4c30-bf48-1086a4744e98/"></iframe></div>
 
 ## Core Recovery Concepts
 
-- **1TR (One True Recovery):** On Apple Silicon, the RecoveryOS is completely separated from the main macOS and stored in a dedicated container. It is designed to be indestructible - even if you completely erase the disk, 1TR survives to allow reinstalling macOS.
-- **Fallback Recovery (frOS):** A backup plan on Apple Silicon. If 1TR fails, the Mac boots a recovery environment from the previous OS update. Activated by a rapid double-press and hold ("di-dah") of the power button.
-- **Device Recovery Assistant (DRA) [Tahoe Exclusive]:** An automated triage tool marked by a first-aid symbol (⊕) that intercepts boot failures. It automatically unlocks FileVault and attempts file system repairs without human intervention.
-- **DFU Mode (Device Firmware Update):** The lowest-level hardware recovery mode. Used when the Mac is completely unresponsive. Requires another Mac, a USB-C cable, and Apple Configurator to "Revive" or "Restore" the firmware.
-- **EACS (Erase All Content and Settings):** A built-in tool for secure and instant erasure (Crypto-shredding). It destroys the encryption keys protecting the Data Volume, instantly turning data into mathematical noise and formatting the Mac in seconds.
-- **Activation Lock:** A theft-deterrent system. When Find My is enabled, the Mac is tied to an Apple Account on Apple's servers. Even if erased, the Mac cannot be activated without the account password or a bypass code.
-- **Recovery Assistant:** The first GUI you see in Recovery Mode. Its job is to authenticate the user. You must enter an Admin password to unlock the encrypted volume before using Disk Utility or changing security settings.
-- **Share Disk:** Replaces Target Disk Mode on Apple Silicon. Shares the Mac's drive over the network or Thunderbolt via the SMB protocol.
+-   **1TR (One True Recovery):** On Apple Silicon Macs, the RecoveryOS environment is completely separate from the regular operating system and stored in a dedicated container. It is designed to be resilient – even if you erase the entire disk, the 1TR survives and allows for reinstallation.
+-   **Fallback Recovery (frOS):** A "backup plan" mechanism on Apple Silicon. If the 1TR fails, the Mac will boot into a more minimal recovery environment. Activated by a quick double-press and hold (Di-dah) of the power button.
+-   **Device Recovery Assistant (DRA) [New in Tahoe]:** An automatic tool identified by a rescue symbol (⊕) that launches independently during boot failures. It performs FileVault unlocking and file system repairs completely automatically.
+-   **DFU Mode (Device Firmware Update):** The lowest-level hardware recovery mode for complete system failures. Requires an additional working Mac, a USB-C cable, and Apple Configurator to perform a Revive or Restore.
+-   **EACS (Erase All Content and Settings):** A tool for secure and immediate erasure via "crypto-shredding." Destroying the VEK key in the Secure Enclave renders the data unreadable noise in seconds, without overwriting cells.
+-   **Activation Lock:** An anti-theft locking mechanism (Find My). Links the Mac to an Apple Account. After erasure, the Mac cannot be activated without verification of the original account or a Bypass Code.
+-   **Recovery Assistant:** The first interface encountered in Recovery. Its role is to authenticate your identity with the Secure Enclave (user password) to unlock the data volume.
+-   **Share Disk:** Replaces Target Disk Mode in Apple Silicon architecture. Allows sharing the Mac's drive over the network or via a physical cable using the SMB protocol.
 
 ---
 
 ## Terminal Commands in Recovery
 
-In Recovery mode, Terminal is a powerful tool for diagnostics and actions that cannot be performed from the GUI.
+In Recovery mode, the Terminal is a powerful diagnostic tool.
 
 ### Disk and File System Management – `diskutil`
-- `diskutil list`: Displays all physical and logical drives, including hidden partitions.
-- `diskutil apfs list`: Shows a deep breakdown of APFS containers, volumes, encryption status, and snapshots.
+-   `diskutil list`: Displays all physical and logical drives on the system, including hidden partitions like the 1TR.
+-   `diskutil apfs list`: Displays detailed information about APFS containers, including volumes and encryption status.
 
-### Password Reset and Diagnostics
-- `resetpassword`: Launches the Reset Password Assistant GUI.
-- `recoverydiagnose`: (macOS 26 Tahoe) Executes a comprehensive diagnostic sweep of hardware sensors, boot logs, and APFS health metrics, compiling an archive to a USB drive for offline analysis.
+### Diagnostics and Passwords
+-   `resetpassword`: Launches the graphical wizard for resetting passwords.
+-   `recoverydiagnose`: (New in macOS 26 Tahoe) A command that generates a comprehensive diagnostics archive (logs, hardware, APFS) to an external USB drive for further analysis.
 
-### Network Status
-- `ping -c 4 8.8.8.8`: Verifies external network connectivity, which is required for Activation Lock verification and OS downloads.
-
----
-
-## Activation Lock and Enterprise Context (MDM)
-
-- **Activation Lock Bypass Code:** For devices enrolled in MDM via Apple Business Manager, the organization stores a bypass code on the MDM server. If a locked Mac needs resetting, IT can enter this code in the Recovery Assistant by selecting "Activate with MDM key".
-- **MDM Remote Wipe (`EraseDevice`):** An IT admin can send a remote wipe command through MDM. This silently triggers the EACS crypto-shredding mechanism, instantly destroying the data.
-- **Recovery Lock:** Replaces the old Intel Firmware Password. It's a 14-character code deployed via MDM that prevents unauthorized access to the 1TR recovery environment.
+### Network Health
+-   `ping -c 4 8.8.8.8`: Verifies external communication, which is required for removing Activation Lock and downloading a signed operating system (SSV).
 
 ---
 
-## Recommended Reading
-* [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
-* [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
-* [Activation Lock for Mac](https://support.apple.com/en-us/102541)
-* [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
-* [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
-* [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
+## Activation Lock and Enterprise Aspects (Enterprise & MDM Context)
+
+-   **Activation Lock Bypass Code:** In organizations (MDM), a special bypass code is generated on the server during enrollment. If an employee leaves with a locked Mac, an IT professional can enter the code in the Recovery Assistant under "Activate with MDM Key" to release the device on Apple's servers.
+-   **MDM Remote Wipe (`EraseDevice`):** An IT administrator can remotely send an erase command that silently triggers crypto-shredding (EACS), without user intervention.
+-   **Recovery Lock:** An MDM profile that sets a password (14 characters) at the Secure Enclave level, blocking entry into Recovery mode itself (replaces firmware password on Intel).
+
+---
+
+## Recommended Links and Further Reading
+
+*   [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
+*   [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
+*   [Activation Lock for Mac](https://support.apple.com/en-us/102541)
+*   [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
+*   [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
+*   [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
 
 ## Summary Video
 
-<!-- Summary Video from YouTube -->
+<!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-!!! tip "Presentation Visuals (Student Aid)"
+!!! tip "Visual Illustration (Student Aid)"
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 ![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
 ![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
 ![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
 ![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+
+<!-- src_hash: 219089c560bb414c60ca6175c8cf19661ff7171137dac1965b3b4f4936b6747d -->

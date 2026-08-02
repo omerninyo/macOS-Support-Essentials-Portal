@@ -1,99 +1,96 @@
 # Lesson 12: Updates and Upgrades
-**Student Learning Guide**
+**Student Reference Guide**
 
 ## Overview
 
-<!-- NotebookLM Podcast from Captivate -->
+<!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d74f76f7-4640-4f79-beb9-48a4b3de0ed3/"></iframe></div>
 
-## Core Concepts: Terminology & Strategy
+## Core Concepts: Terminology and Strategy
 
-* **Update:** A minor update or software patch released by Apple for the current operating system version (e.g., macOS 26.1 to macOS 26.2).
-* **Upgrade:** A major upgrade to a completely new operating system (e.g., macOS 25 to macOS 26).
-* **Combo Update (Historical):** A term from the past (prior to Big Sur) describing a large update file containing all changes from the base version. Replaced today by the SSV (Signed System Volume) mechanism.
-* **Rapid Security Response (RSR / BSI):** A mechanism for distributing critical security patches without requiring a full system update, utilizing Cryptex architecture. Identified by a letter in parentheses, e.g., `macOS 26.3.1 (a)`.
-* **Deferral:** An administrative capability (via MDM Configuration Profile) to delay the appearance of software updates or upgrades for users for up to 90 days for compatibility testing.
-* **Declarative Device Management (DDM):** The modern device management generation. Instead of sending a forced MDM command to update, IT defines a "Declaration" with a target deadline, and the OS manages preparations, alerts, and timing autonomously.
-* **Migration Assistant:** macOS's built-in tool for transferring user profiles, data, and settings between Macs. Does not copy the OS itself.
+*   **Update:** A minor update or software patch for the current operating system version (e.g., from macOS 26.1 to macOS 26.2).
+*   **Upgrade:** A major upgrade to an entirely new operating system version (e.g., from macOS 25 to macOS 26 Tahoe).
+*   **Combo Update (Historical):** An older term describing a file that included all changes since the last major version. It has now been completely replaced by the SSV and Cryptex architecture.
+*   **Rapid Security Response - RSR (or BSI):** Critical and rapid security patches applied to the system via Cryptex, without requiring a full system update. Identified by letters in parentheses, such as `macOS 26.3.1 (a)`.
+*   **Deferral:** A management capability in MDM to defer the appearance of software updates (up to 90 days for a major upgrade) for compatibility testing.
+*   **Declarative Device Management - DDM:** The modern infrastructure for device management. Update enforcement is performed by sending a "declaration" with a deadline, and the Mac locally manages notifications and enforcement.
+*   **Migration Assistant:** The built-in tool for transferring information between Macs. It does not copy the operating system itself.
 
 ---
 
-## Terminal Command Repository: Managing Updates (`softwareupdate`)
+## Terminal Command Repository: Controlling Updates (`softwareupdate`)
 
-The primary CLI tool in macOS for managing, downloading, and installing system updates is `softwareupdate`.
+The primary CLI tool for managing, downloading, and installing system updates is `softwareupdate`.
 
 ### Search and Download:
 
-* **`softwareupdate -l`** or **`softwareupdate --list`**
-  Scans and displays a list of all currently available software updates.
+*   **`softwareupdate -l`** or **`softwareupdate --list`**
+    Lists all available software updates.
 
-* **`softwareupdate -d -a`** or **`softwareupdate --download --all`**
-  Downloads all available updates to the system cache but does **not** install them.
-
-* **`softwareupdate -d "Name of Update"`**
-  Downloads a specific update by its exact label.
+*   **`softwareupdate -d -a`**
+    Downloads all available updates to the cache but does not install them.
 
 ### Installation:
 
-* **`sudo softwareupdate -i -a`**
-  Installs all available system updates.
-  
-* **`sudo softwareupdate -i -a -R`**
-  Installs all updates and automatically Restarts the computer upon completion.
+*   **`sudo softwareupdate -i -a`**
+    Installs all updates.
+
+*   **`sudo softwareupdate -i -a -R`**
+    Installs and automatically restarts.
 
 ### Downloading Full Installers:
 
-* **`softwareupdate --fetch-full-installer --full-installer-version 26.0`**
-  Downloads the full installer app for a specific macOS version directly to the `/Applications` folder.
+*   **`softwareupdate --fetch-full-installer --full-installer-version 26.0`**
+    Downloads the full installer file (Install macOS.app) of the specified version directly to the Applications folder.
 
 ### Cleanup and History:
 
-* **`softwareupdate --clear-deferrals`**
-  Clears local MDM update deferrals (if permitted).
+*   **`softwareupdate --clear-deferrals`**
+    Locally clears update deferrals (if allowed by the MDM).
 
-* **`softwareupdate --history`**
-  Prints a neat table with the history of all updates installed on the computer.
+*   **`softwareupdate --history`**
+    Prints a history of installed updates.
 
-* **`softwareupdate --install-rosetta --agree-to-license`**
-  Silently installs the Rosetta 2 translation environment.
+*   **`softwareupdate --install-rosetta --agree-to-license`**
+    Installs the Rosetta 2 runtime environment silently.
 
 ---
 
 ## Architecture, Background Processes, and Logs
 
-* **`softwareupdated`**: The main background daemon responsible for searching, verifying with Apple servers, and installing updates. Runs `CalculatePrepareSize` to check for required space.
-* **`UpdateBrainService`**: The service that takes over the actual streaming decompression, snapshot building, and sealing.
-* **`/Library/Preferences/com.apple.SoftwareUpdate.plist`**: The system-level configuration file storing update behaviors.
+*   **`softwareupdated`**: The main background process responsible for checking for updates and calculating required disk space (`CalculatePrepareSize`).
+*   **`UpdateBrainService`**: The actual service responsible for deploying files in the background and building the Snapshot and SSV.
+*   **`/Library/Preferences/com.apple.SoftwareUpdate.plist`**: The system-level configuration file.
 
-* **Searching for Update Errors in Unified Logging:**
-  ```bash
-  log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info --debug
-  ```
+*   **Searching for errors in the Unified Logging System:**
+    ```bash
+    log show --predicate 'subsystem == "com.apple.SoftwareUpdate"' --info --debug
+    ```
 
 ---
 
 ## IT Recommendations for Migrations (Migration Assistant)
 
-Using Migration Assistant in enterprise environments can carry over past issues.
+In enterprise environments, Migration Assistant can import issues from older computers.
 
-* **Isolate Data to Transfer:** It is highly recommended *not* to transfer `Applications` or `Other files and folders`, but only the User Account (Home Folder). Transferring apps drags old MDM configs and unsupported Kexts (especially moving from Intel to Apple Silicon).
-* **Physical Connection:** For fastest performance on Apple Silicon, use Mac Sharing Mode via Recovery with a Thunderbolt cable.
-* **Account Overlap (UID Conflict):** Do not import a user to a new Mac if you've already created a local account with the exact same name. Migration Assistant will demand you either rename or replace the existing account.
+*   **Isolating Data for Transfer:** It is recommended to transfer *only* the user account (Home Folder) and not `Applications`. Transferring applications can bring old MDM configuration files, Intel applications (Rosetta), and unsupported kernel extensions.
+*   **Physical Connection:** On Apple Silicon, use Mac Sharing Mode (from Recovery) with a Thunderbolt cable for fast transfer.
+*   **User Overlap:** Do not import a user if you have already created a user with the same name on the new Mac. This will create a UID conflict requiring an overwrite or duplication. It is preferable to run Migration directly from the Out-Of-Box Experience (OOBE) screen.
 
 ---
 
-## Recommended Links & Further Reading
+## Recommended Links and Further Reading
 
-* [Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) - The official guide for system administrators.
-* [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac) - A simple guide for end users.
-* [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - Guide explaining data transfer.
-* [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - A deep dive into CLI updates management.
+*   [Manage software updates in Apple Platform Deployment](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) - The official guide for system administrators on controlling and deferring updates in an organization.
+*   [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac) - A simple guide for end-users on how to download and install system updates.
+*   [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613) - A guide explaining how to transfer data and information from an old Mac to a new Mac using Migration Assistant.
+*   [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - A deep dive into the terminal.
 
 ## Summary Video
 
-<!-- Summary Video from YouTube -->
+<!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/RFZYlrmn08Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## 💡 Presentation Visuals
@@ -109,3 +106,5 @@ Using Migration Assistant in enterprise environments can carry over past issues.
 ![Slide76_image92](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image92.png)
 ![Slide77_image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.jpg)
 ![Slide77_image18](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image18.tif)
+
+<!-- src_hash: 1227eac81664e86205b25732d417832d45fc961e7bc54aa08e6df4b44af2ea3d -->
