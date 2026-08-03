@@ -8,44 +8,44 @@
 
 ## Key Concepts
 
-| Concept | Historical Background & Meaning from DeepDive |
+| Concept | Historical Context & Significance (DeepDive) |
 | :--- | :--- |
-| **AFP (Apple Filing Protocol)** | Protocol first introduced in 1988 and the default until OS X 10.8. Officially deprecated today. |
-| **SMB (Server Message Block)** | Originally developed by IBM and adopted by Microsoft. Replaced AFP as the standard today, even for Macs. (Note: does not preserve APFS Sparse file space savings). |
-| **Chooser** | A mythological app from System 7 (1991) for discovering servers and printers (AppleShare) - reminding us how Zero-Configuration (like AirDrop and Bonjour) is modern magic. |
-| **Mac Sharing Mode / 1TR** | Replaces the historical Target Disk Mode. On Apple Silicon, the Mac acts as an SMB (file) server rather than a Block Device. Based on the Recovery environment (which only appeared in 2011). |
+| **AFP (Apple Filing Protocol)** | Protocol introduced in 1988 and served as default until OS X 10.8. Officially deprecated today. |
+| **SMB (Server Message Block)** | Originally developed by IBM and adopted by Microsoft. Replaced AFP and serves as the current standard, even for Macs. (Note: Does not preserve space savings for APFS Sparse files). |
+| **Chooser** | Mythical app from System 7 (1991) for discovering servers and printers (AppleShare)—reminding us how modern Zero-Configuration (like AirDrop and Bonjour) is modern magic. |
+| **Mac Sharing Mode / 1TR** | Replaces historical Target Disk Mode. On Apple Silicon, the Mac acts as an SMB file server rather than a Block Device. Based on the Recovery environment (introduced in 2011). |
 
 ## SMB Protocol (Server Message Block)
 
-- **The Absolute Standard:** The built-in protocol for network file sharing today. Connect via Finder using the `smb://` prefix.
-- **Network Environment Sluggishness (DS_Store):** If SMB connection is very slow while navigating large folders on a Windows server, it stems from the Mac attempting to create `.DS_Store` files. Network admins can prevent this with a Terminal command:
+- **The Absolute Standard:** The built-in protocol for network file sharing today. Connected in Finder using the `smb://` prefix.
+- **Network Sluggishness (.DS_Store):** If SMB connection feels sluggish when browsing large directories on a Windows server, this stems from the Mac attempting to create `.DS_Store` files. Network administrators can prevent this via Terminal command:
   `defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE`
 
-### Network Diagnostic Commands
-- `smbutil statshares -a`: Displays active SMB connections, their encryption level, and protocol version (e.g., SMB 3.1.1).
-- `mount_smbfs`: To mount SMB drives directly from the Terminal.
+### Diagnostic and Network Troubleshooting Commands
+- `smbutil statshares -a`: Displays active SMB connections, encryption levels, and protocol versions (e.g., SMB 3.1.1).
+- `mount_smbfs`: For mounting SMB shares directly from Terminal.
 - `ping -c 5 [server]` or `netstat -an`: Basic network traffic diagnostics.
 
-## Sharing Services & Connectivity
+## Sharing Services and Connectivity
 
-- **AirDrop:** Local file sharing without a router, using Bluetooth for discovery and Wi-Fi Direct (AWDL protocol) for high-speed data transfer. If discovery fails, turning Wi-Fi off and on helps reset the `awdl0` interface.
-- **Screen Sharing:** Screen sharing based on an encrypted VNC mechanism. **Note:** The operating system (TCC) requires giving Screen Recording permission to the application, otherwise it shows an error or a black screen.
-- **Universal Control:** Seamlessly use one keyboard/mouse across multiple nearby Macs or iPads on the same Apple ID (using Wi-Fi, Bluetooth, and the Rapportd service).
+- **AirDrop:** Local peer-to-peer file sharing without a router, using Bluetooth for discovery and Wi-Fi Direct (AWDL protocol) for high-speed data transfer. In case of discovery issues, toggling Wi-Fi helps reset the `awdl0` interface.
+- **Screen Sharing:** Screen sharing based on VNC wrapped in security layer. **Note:** Operating system security (TCC) requires granting Screen Recording permissions to the application; otherwise, an error or black screen will occur.
+- **Universal Control:** Seamless operation using a single keyboard/mouse across adjacent Macs/iPads signed into the same Apple ID (utilizing Wi-Fi, Bluetooth, and the `rapportd` service).
 
-### Discovery & Sharing Commands
-- `sharing -l`: Shows services and shared folders available via CLI (replacing System Settings navigation).
-- `dns-sd -B _smb._tcp`: Browse and listen for SMB servers announcing themselves on the local network via Bonjour / mDNS technology.
+### Discovery and Sharing Commands
+- `sharing -l`: Displays active sharing services and share points via CLI (replacing System Settings navigation).
+- `dns-sd -B _smb._tcp`: Searches for and listens to SMB servers advertising themselves on the local network via Bonjour / mDNS technology.
 
 ## Mac Sharing Mode
 
-- On Apple Silicon computers, activate this mode via Recovery Mode (Utilities > Share Disk).
-- **IT Attention (First Aid):** Unlike in the past, the host computer cannot run `fsck` or Disk Utility to repair the faulty computer's drive. The disk is shared as a network folder (SMB) rather than a hardware block. Disk repair requires running First Aid from the faulty computer's own Recovery.
+- On Apple Silicon Macs, this mode is invoked via Recovery Mode (Utilities > Share Disk).
+- **IT Pro Warning (First Aid):** Unlike legacy modes, the host computer cannot execute `fsck` or Disk Utility repair commands on the target Mac's drive. The drive is shared as a network share (SMB), not a block storage device. Disk repair requires running First Aid directly from the target Mac's own Recovery mode.
 
 ## Enterprise Seasoning: Single Sign-On (SSO)
 
-- **Kerberos SSO Extension:** A built-in macOS extension allowing passwordless authentication against the Active Directory using a TGT (Ticket-Granting Ticket).
-- The `klist` command displays the cryptographic tickets cached on the Mac.
-- **Enterprise Restrictions (MDM):** It's important to know organizations can restrict sharing (like AirDrop) via Managed Open In technology, which recognizes AirDrop as an "Unmanaged" environment and blocks sensitive documents from transferring there.
+- **Kerberos SSO Extension:** Built-in macOS extension allowing single sign-on (passwordless) authentication against Active Directory using TGT (Ticket-Granting Ticket).
+- The `klist` command displays cached cryptographic tickets on the Mac.
+- **Enterprise Restrictions (MDM):** It is important to note that organizations can restrict file sharing (such as AirDrop) via Managed Open In technology, which identifies AirDrop as an "Unmanaged" destination and blocks transfer of sensitive enterprise documents.
 
 ---
 
@@ -60,13 +60,15 @@
 
 <!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/p1hW4lTaHOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 Presentation Visuals
+## 💡 Visual Presentation Aids (Presentation Visuals)
 
-!!! tip "Visual Aid (Student Aid)"
+!!! tip "Visual Demonstration (Student Auxiliary)"
     These images illustrate the interface or mechanism relevant to the lesson topic.
 
 ![Slide71_image86](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image86.png)
 ![Slide71_image87](../assets/images/Lesson_10/L10_LegacySlide_Slide71_image87.png)
+
+<!-- src_hash: 5f20867470ad57b74562bac4aade57277422c3b0d02529f7200ed8bc06d5d669 -->

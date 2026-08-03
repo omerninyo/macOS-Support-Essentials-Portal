@@ -1,130 +1,139 @@
-# Lesson 05: Applications & Processes
-**Hands-On Lab (vEXP)**
+# Lesson 05: Applications and Processes
+**Hands-On Lab (Student Exercise) (vEXP)**
 
 > [!NOTE]
 > **Lab Objective:**
-> Practical exercise in deploying, installing, and troubleshooting macOS applications using the Graphical User Interface. You will experience various installation methods (App Store, PKG, DMG), test Gatekeeper's strict Tahoe policies, and learn how to reset Sandboxed apps and manage stuck processes via Activity Monitor.
+> Practical exercise in deploying, installing, and diagnosing applications on macOS using the Graphical User Interface (GUI). During this lab, you will experience various installation methods (App Store, PKG packages, and dragging DMG files), examine how the Gatekeeper mechanism protects the Mac (especially in macOS Tahoe), and learn how to reset Sandboxed applications and manage hung processes via Activity Monitor.
 
 ## Prerequisites
 * A Mac running macOS 26 (Tahoe).
-* A user with Administrator rights (Local Admin).
-* A Standard User for testing – e.g., `John Appleseed`.
-* Active internet connection and Apple ID.
-* Access to `Course_Assets_and_Demos` folder.
+* A user account with Administrative privileges (Local Admin).
+* A Standard User account for testing purposes – e.g., `John Appleseed`.
+* Active Internet connection and access to an Apple ID.
+* Access to the `Course_Assets_and_Demos` folder (or downloading demo applications from the Internet).
 
 ---
 
-## Exercise 5.1: Installing from the App Store
-Installing from the App Store is the safest method, as apps are Sandboxed, Notarized, and reviewed by Apple.
+## Exercise 5.1: Installing an Application from the App Store
+Installing from the official store is the safest method on Mac, as all applications run within a Sandbox and have undergone review (Notarization).
 
-**Steps:**
-1. Log in to your Standard User account (`John Appleseed`).
-2. Open the **App Store** from Launchpad or Applications.
-3. If it's the first time, accept the Welcome screen.
-4. Click **Sign In** at the bottom left and enter your Apple ID and password. Complete 2FA if prompted.
-5. Search for `Apple Configurator` and press Return.
-6. Click **Get** (or the cloud icon).
+**Execution Steps:**
+
+1. Log in to your Standard User account (e.g., `John Appleseed`).
+2. Open the **App Store** app via Launchpad or the Applications folder.
+3. If this is your first sign-in, confirm the Welcome screen.
+4. At the bottom of the sidebar, click **Sign In** and enter your Apple ID and password. Complete two-factor authentication (2FA) if prompted.
+5. In the top search bar, type `Apple Configurator` and press Return.
+6. Locate the free app and click the **Get** button (or the cloud icon).
 7. Click **Install**.
-8. Wait for the download, then click **Open** to ensure the app works. Accept terms if prompted.
-9. Quit the app gracefully using **Command-Q**.
+8. Wait for the download to complete, then click **Open** to verify the app opens and functions properly. Accept terms of service if displayed.
+9. Gracefully close the app using the keyboard shortcut **Command-Q**.
 
 ---
 
-## Exercise 5.2: Installing via PKG and Checking Security Signatures
-Enterprise software is distributed as PKG files, requiring Admin permissions to install system-wide files.
+## Exercise 5.2: Installing via Installer Package (PKG) and Examining Graphical Signatures
+Enterprise software is distributed as installer packages (Packages), which require Admin privileges to deploy system files.
 
-**Steps:**
-1. Open a `.pkg` file provided by the instructor (e.g., `Zoom.pkg` or `Trust Me.pkg` from the demos folder).
-2. The Installer opens automatically.
-3. **Check the Security Signature:** Look at the top right corner of the Installer window for a Lock icon.
-4. Click the Lock to view the security certificate.
-5. Ensure the package is signed by an approved "Developer ID Installer".
-6. **Inspect Package Contents:** Before clicking continue, go to the Menu Bar, click **File** > **Show Files**.
-7. Review the list of files to be installed and their target paths (e.g., `/Library/Application Support`). Close the window.
-8. Click **Continue** and complete the installation. Enter the Administrator password when prompted.
-9. Navigate to the Applications folder and launch the new software to verify.
+**Execution Steps:**
 
----
-
-## Exercise 5.3: DMG Drag-and-Drop and the Tahoe Gatekeeper Challenge
-This is the most common installation method outside the App Store. The DMG acts as a virtual removable volume.
-
-**Steps:**
-1. Open Safari and download a DMG installer (e.g., VLC).
-2. Once downloaded, Safari transparently applies a Quarantine flag indicating it came from the internet.
-3. Open Finder, go to Downloads, and double-click the DMG to Mount it.
-4. In the new window, drag the app icon to the Applications shortcut to copy it.
-5. In the Finder Sidebar under Locations, click the **Eject** symbol next to the DMG name.
-6. Go to the Applications folder and open the app you just copied.
-7. **Gatekeeper Intervention:** A warning appears stating the app was downloaded from the internet.
-8. Click **Open**. (Note: If this was an unsigned app, the "Open" button would not exist, and Right-Click > Open no longer bypasses Gatekeeper in macOS Tahoe).
-9. **Tahoe Specific (Unsigned App Challenge):** If you attempt to open an unsigned test app, macOS Tahoe will flatly refuse. You must go to **System Settings > Privacy & Security**, scroll down to Security, and explicitly click **Open Anyway**.
+1. Open an installer package file (`.pkg` extension) provided by your instructor (e.g., `Zoom.pkg` or `Trust Me.pkg` from the demo folder).
+2. The system Installer application will open automatically.
+3. **Checking Security Signatures:** Look at the top right corner of the installer window. You should see a Lock icon.
+4. Click the lock icon to open the certificate inspector window.
+5. Verify that it states the package is signed by an approved developer (Developer ID Installer).
+6. **Inspecting Package Content:** Before clicking Continue, navigate to the Menu Bar, click **File**, and then **Show Files**.
+7. Review the file list to see the target installation paths (e.g., `/Library/Application Support`). Close the window.
+8. Click **Continue** and complete the installation. Enter Administrator credentials when prompted.
+9. Navigate to the Applications folder and open the newly installed application to verify installation.
 
 ---
 
-## Exercise 5.4: Sandboxing and Resetting App Preferences
-Modern macOS apps run Sandboxed. They save their data in a specific "Container". Deleting this Container via Finder is the proper way to "factory reset" a malfunctioning app.
+## Exercise 5.3: Drag-and-Drop Installation (DMG) and Challenging Gatekeeper in Tahoe
+The most common installation method outside the App Store. The DMG file acts as a virtual volume.
 
-**Steps:**
-1. Open **Apple Configurator** (or another simple app like Notes).
-2. Go to the app's Settings and change any preference so it saves data.
-3. Completely quit the app (Command-Q).
-4. Open **Finder**. In the top menu bar, click **Go**.
-5. Hold the `Option` (⌥) key on the keyboard. A hidden **Library** folder will appear. Click it.
+**Execution Steps:**
+
+1. Open Safari and download an installer in DMG format (e.g., VLC).
+2. Upon download completion, Safari attaches a Quarantine attribute indicating the file originated from the Internet.
+3. In Finder, navigate to the Downloads folder and double-click the DMG file to mount it.
+4. In the window that opens, drag the application icon to the Applications folder shortcut to copy it.
+5. In the Sidebar under Locations, click the **Eject** icon next to the DMG name to unmount it.
+6. In the Applications folder, open the copied application.
+7. **Gatekeeper Protection:** A pop-up warning will appear stating that the app was downloaded from the Internet.
+8. Click **Open**.
+9. **The Tahoe Twist (Challenging an Unsigned App):** If you attempt to launch an unsigned app, macOS Tahoe will block it completely. Right-clicking and selecting Open will no longer work! You will need to go to **System Settings > Privacy & Security**, scroll down, and explicitly click **Open Anyway**.
+
+---
+
+## Exercise 5.4: Sandboxing and Resetting Application Preferences
+Modern applications store their data inside a Container. Deleting the Container constitutes a "Factory Reset".
+
+**Execution Steps:**
+
+1. Open **Apple Configurator** (or a simple app like Notes).
+2. Go to settings and change any setting to force the application to save data.
+3. Completely quit the application (Command-Q).
+4. Open **Finder**. In the top Menu Bar, click **Go**.
+5. Hold down the `Option` (⌥) key and click the **Library** folder that appears.
 6. Locate and enter the `Containers` folder.
-7. Find the folder for your app (e.g., `Apple Configurator` or `com.apple.configurator`).
-8. Right-click this folder and select **Move to Trash**. Empty the trash.
-9. *Pro Tip (To clear memory cache):* Open Terminal and run `killall cfprefsd` to prevent the system from restoring zombie plists.
-10. Reopen the app from the Applications folder. It will launch as if it's the very first time (Welcome screen/reset settings) because a fresh Container was automatically generated.
+7. Search for the application's folder (e.g., `Apple Configurator` or `com.apple.configurator`).
+8. Right-click and select **Move to Trash**. Empty the Trash.
+9. *Pro Tip (Flushing Memory Cache):* Open Terminal and run `killall cfprefsd` to prevent the OS from restoring "zombie plists".
+10. Relaunch the application. It will launch as if newly installed, as a new Container is automatically generated.
 
 ---
 
-## Exercise 5.5: Troubleshooting and Force Quitting Stuck Processes
-When an app hangs, it enters a *(Not Responding)* state. You can terminate problematic processes via the GUI.
+## Exercise 5.5: Diagnosing and Force Quitting Unresponsive Processes
+When an application hangs (Not Responding), we must terminate it forcibly.
 
-**Steps:**
-1. Open Safari and Calendar for this exercise.
+**Execution Steps:**
+
+1. Open Safari and Calendar.
 2. **Method 1: Quick Force Quit Mechanism**
    * Press `Option-Command-Escape`.
    * In the "Force Quit Applications" window, select Safari and click **Force Quit**.
-   * Confirm the warning. Watch the app instantly close.
-3. Reopen Safari.
+   * Confirm the warning and observe the app closing immediately.
+3. Relaunch Safari.
 4. **Method 2: Advanced Management via Activity Monitor**
-   * Open **Activity Monitor** (in `Applications > Utilities`).
-   * Ensure you are in the CPU or Memory tab.
-   * Search for `Safari` in the top right.
-   * Select the Safari process and click the `X` (Stop) button at the top.
-   * Choose between 'Quit' (soft close) and 'Force Quit' (hard kill). Click **Force Quit**.
-5. Verify the process is completely removed from the list.
+   * Open **Activity Monitor** (located in `Applications > Utilities`).
+   * Ensure you are on the CPU or Memory tab.
+   * Search for `Safari` in the search bar.
+   * Select the process and click the `X` (Stop) button at the top of the window.
+   * Select **Force Quit** in the pop-up dialog.
+5. Verify the process is completely removed.
 
 ---
 
-## Exercise 5.6: (Demo & Discussion) Enterprise VPP and Self Service
-In a managed organization, standard users cannot enter Admin passwords. IT provides a Self Service catalog.
+## Exercise 5.6: (Demonstration & Discussion) Installing Apps in a Managed Enterprise Environment (Self Service & VPP)
+In an enterprise environment, IT provides a catalog for installations without requiring Admin privileges.
 
 **Scenario Steps:**
-1. The instructor will display an enterprise store app (e.g., Jamf Self Service) on the demo station.
-2. Observe how the catalog provides approved software.
-3. When the user clicks **Install**, the MDM executes the installation in the background with System privileges (no password prompt).
-4. App Store apps are pre-purchased via VPP and pushed seamlessly without requiring a personal Apple ID.
-5. **Tip:** If an enterprise app suddenly prompts for an Apple ID, it often indicates the MDM's VPP license assignment failed or the token expired.
+
+1. The instructor will display a Self Service application (e.g., Jamf Self Service) on the demonstration station.
+2. The standard user can browse the approved software catalog.
+3. Upon clicking **Install**, the MDM agent installs the software in the background using System privileges without prompting for credentials.
+4. Licenses (VPP) are pushed transparently without requiring a personal Apple ID.
+5. **Tip:** If an app prompts for an Apple ID in an enterprise environment, the VPP license from MDM likely failed or expired.
 
 ---
 
-## Extra / Technical Tip
-> [!CAUTION]
-> For advanced users who want to see terminal equivalents. Not required for the core lab.
+## IT Pro Bonus Exercise: Command Line (Terminal)
 
-**Check PKG Signature:**
+> [!CAUTION]
+> For advanced users wanting to explore command-line utilities. Optional for the main lab.
+
+**Checking PKG Signature:**
 ```bash
 pkgutil --check-signature /path/to/installer.pkg
 ```
-**Verify App Notarization:**
+**Verifying Application Notarization:**
 ```bash
 codesign --test-requirement="=notarized" --verify --verbose /Applications/BBEdit.app
 ```
-**Kill App and Flush Plist Cache:**
+**Process Termination & Cache Flush (for Sandbox Reset):**
 ```bash
 killall Safari
 killall cfprefsd
 ```
+
+<!-- src_hash: 871e9419ea2fa0470c8efd25fcc538132f2d0affac4b8fac523e89b753f56d1e -->
