@@ -1,68 +1,67 @@
 # Lesson 11: Peripherals
-**Hands-On Lab (Student Exercise) (vEXP Version)**
+**Hands-On Lab (Student Exercise) (vEXP)**
 
 ## Lab Objective
-Mastering advanced management of the macOS printing architecture, managing print queues, and peripheral security. In this lab, we will learn how to configure and maintain printers via the Graphical User Interface (GUI), inspect print system logs using Console app, and troubleshoot critical issues using the built-in reset mechanism. Additionally, we will examine the Accessory Security mechanism.
+Practice advanced control over the macOS printing system, print queue management, and peripheral security. In this lab, we will learn how to configure and maintain printers via the graphical user interface (GUI), investigate print system logs using the Console app, and resolve critical issues through the built-in reset mechanism. We will also examine the Accessory Security mechanism.
 
 ---
 
 ## Part A: Managing and Monitoring the Printing System via GUI
 
 ### Technical Background
-The printing system in macOS is built upon **CUPS** (Common UNIX Printing System). This engine manages all print queues and drivers behind the scenes. System Settings provides an accessible, elegant window to control this complex architecture without requiring command-line tools.
+The macOS printing system is based on **CUPS** (Common UNIX Printing System). This engine manages all print queues and drivers behind the scenes. The System Settings app provides us with an accessible and elegant window to control this complex mechanism without needing the command line.
 
 ### Step 1: Manually Adding a Network Printer
 
-1. Open **System Settings**.
+1. Open the **System Settings** app.
 2. In the sidebar, navigate to **Printers & Scanners**.
-3. Click the **Add Printer, Scanner, or Fax...** button.
-4. In the dialog window, switch to the **IP** tab (Globe icon).
-5. Configure a "virtual" printer for lab practice:
+3. Click on the **Add Printer, Scanner, or Fax...** button.
+4. In the window that opens, switch to the **IP** tab (the globe icon).
+5. We will configure a "dummy" printer for practice purposes:
 
-   * **Address:** Type `10.0.0.99` (fictitious address).
+   * **Address:** Type `10.0.0.99` (a fictitious address).
    * **Protocol:** Select **Line Printer Daemon - LPD**.
-   * **Name:** Change name to `Lab Virtual Printer`.
-   * **Use:** Verify set to **Generic PostScript Printer** or **Generic PCL Printer**.
+   * **Name:** Change the name to `Lab Virtual Printer`.
+   * **Use:** Ensure **Generic PostScript Printer** or **Generic PCL Printer** is selected.
 6. Click **Add**.
-7. If a warning appears stating the printer is unavailable (Unable to verify the printer on your network), click **Continue** to add it anyway.
+7. If a warning appears stating that the printer is unavailable (Unable to verify the printer on your network), click **Continue** to add it anyway.
 
 ### Step 2: Managing the Print Queue
 
-1. Once the printer is added, click on it in the **Printers & Scanners** list.
-2. Click **Printer Queue...**.
-3. The print queue window will open. This window represents the job manager for that printer from the CUPS engine.
-4. In the top Menu Bar of your Mac (with the print queue window selected), click **Printer** and select **Print Test Page**.
-5. The print job will appear in the queue. Since the IP address does not exist, the job will attempt to send and pause.
+1. After the printer is added, click on it in the list under **Printers & Scanners**.
+2. Click on the **Printer Queue...** button.
+3. The printer's queue window will open. This window represents the task manager for that specific printer from within the CUPS engine.
+4. In the Mac's top Menu Bar (while the queue window is selected), click on **Printer** and then select **Print Test Page**.
+5. The print job will appear in the queue. Since the address does not really exist, the job will attempt to send and then pause.
 6. Select the print job and click the **X** button to delete it from the queue.
-7. Click the **Pause** button (pause icon) at the top of the window to temporarily halt printer activity, then click **Resume** to restart it.
+7. Click the **Pause** button at the top of the window to temporarily stop the printer's activity, and then click **Resume** to restart it.
 
 ### Step 3: Investigating Print Activity via Console
-To understand what occurs behind the scenes in the CUPS engine in real time, we will use the built-in Console application.
+To understand what happens behind the scenes in the CUPS engine in real-time, we will use the built-in Console app.
 
-1. Open **Console** (located in `/Applications/Utilities` or using Spotlight).
-2. On the left pane under Mac Analytics or Log Reports, ensure you are viewing system records. Alternatively, click **Start** at the top to begin streaming live messages.
-3. In the search bar at the top right corner, type `cupsd` or `Print` and press Enter.
-4. Return to the Printer Queue window and try sending a test page again (**Print Test Page**).
-5. Observe the Console application to see how the system automatically logs print attempts and communication failure errors resulting from the fictitious address. This is an exceptional tool for resolving complex printing issues.
+1. Open the **Console** app (from `/Applications/Utilities` or using Spotlight).
+2. On the left side of the window, under Mac Analytics or Log Reports, ensure you are viewing the system logs. Instead, you can click **Start** at the top to begin monitoring live messages.
+3. In the search bar at the top right corner, type the word `cupsd` or `Print` and press Enter.
+4. Return to the Printer Queue window and try to send another Test Page.
+5. Observe the Console app and see how the system automatically logs print attempts and errors resulting from communication attempts with the fictitious address. This is an excellent tool for troubleshooting complex printing issues.
 
 ---
 
 ## Part B: Full Reset of the Printing System (Reset Printing System)
 
 ### Technical Background
-When users encounter chronic printing issues (jobs stuck in queue, printers offline without justification, or corrupted CUPS configuration files), the fastest and most effective GUI action is "Reset Printing System".
+When users encounter chronic printing issues (jobs stuck in the queue, printers randomly going offline, or corrupted CUPS configuration files), the fastest and most effective action in the GUI is "Reset Printing System".
+This action completely deletes all printers, clears the queue (Print Jobs), and resets the system settings back to "factory defaults".
 
-This operation completely deletes all printers, clears the print queue (Print Jobs), and resets system printing preferences back to factory defaults.
-
-### Reset Process:
+### The Reset Process:
 
 1. Return to **System Settings > Printers & Scanners**.
-2. Locate the virtual printer created in the list (or right-click any blank area below the printers list).
+2. Locate the dummy printer we created in the list (or any empty area under the printer list).
 3. Right-click (or `Control + Click`) in the printers list.
-4. A contextual menu will pop up with the option: **Reset Printing System...**. Click it.
-5. The system will display a warning dialog: "Are you sure you want to reset the printing system?". Click **Reset**.
-6. Enter Administrator credentials or use Touch ID when prompted.
-7. The printers list will be completely emptied, and configuration residual files cleared.
+4. A pop-up menu will appear with the option: **Reset Printing System...**. Click it.
+5. The system will prompt a warning: "Are you sure you want to reset the printing system?". Click **Reset**.
+6. Enter your Administrator (Admin) password or use Touch ID when prompted.
+7. The printer list will be completely emptied, and the system will be cleared of any residual settings.
 
 ---
 
@@ -71,34 +70,31 @@ This operation completely deletes all printers, clears the print queue (Print Jo
 ### Technical Background
 On Apple Silicon Macs, Apple introduced an OS-level security mechanism designed to prevent potential hardware attacks (such as malicious USB devices) while the Mac is locked. This feature is called **Accessory Security**.
 
-### Checking and Modifying Connection Policy:
+### Checking and Changing Connection Policies:
 
 1. In **System Settings**, navigate to **Privacy & Security**.
-2. Scroll down to the section under **Security**.
-3. Locate the setting: **Allow accessories to connect**.
-4. Click the pop-up menu and inspect available options:
+2. Scroll down to the section under the **Security** heading.
+3. Look for the setting: **Allow accessories to connect**.
+4. Click on the dropdown menu and examine the available options:
 
-   * **Ask Every Time:** Most restrictive security; every physical USB or Thunderbolt connection prompts for explicit approval.
-   * **Ask for New Accessories:** (Default) Previously approved accessories connect automatically, but new devices require approval.
-   * **Automatically When Unlocked:** Accessories connect automatically as long as the Mac is unlocked and not on the Lock Screen.
-   * **Always:** Lowest security level, allowing automatic connection even when the Mac is locked.
-5. **(Enterprise Seasoning):** Note that in MDM-managed environments, this setting may be grayed out because a Configuration Profile enforces a strict policy to prevent data exfiltration. Additionally, modern macOS versions leverage Declarative Device Management (**DDM**) based on Storage Management to completely block or restrict external storage devices to Read-Only.
+   * **Ask Every Time:** The strictest security; every physical USB or Thunderbolt connection will pop up an explicit approval request.
+   * **Ask for New Accessories:** (Default) An accessory that was previously approved will be recognized automatically, but a new device will require approval.
+   * **Automatically When Unlocked:** Accessories will connect without asking as long as the Mac is unlocked and not on the Lock Screen.
+   * **Always:** The lowest security level, allowing automatic connection at all times even when the Mac is locked.
+5. **(Enterprise Seasoning):** Note that in organizations managed via MDM, this option might be grayed out because a Configuration Profile enforces a strict policy to prevent data exfiltration. Additionally, new macOS versions utilize **Declarative Device Management (DDM)** Storage Management to explicitly enforce Read-Only or Disallowed access to external storage.
 
 ---
 
-## IT Pro Bonus Exercise: Command Line (Terminal)
+## Extra Exercise / Technical Tip of the Iceberg
 
-The CUPS printing system operates behind the scenes as the macOS print engine. CUPS includes a Web Interface, which is disabled by default for security reasons. Advanced administrators can enable it temporarily via Terminal to access advanced print settings unavailable in System Settings.
+The CUPS system we mentioned operates behind the scenes as the Mac's printing engine. CUPS actually has its own Web Interface, which is blocked by default for security reasons. Advanced system administrators can temporarily enable it via the Terminal to access advanced printing settings that do not exist in System Settings.
 
-1. Open **Terminal** and type the following command to enable the CUPS Web Interface:
+1. Open **Terminal** and type the following command to enable the CUPS management interface:
    ```bash
    cupsctl WebInterface=yes
    ```
-
-2. Open a web browser and navigate to `http://localhost:631`. You can browse the Printers tab to explore the native print engine interface.
-3. When finished, it is strongly recommended to disable the Web Interface to maintain security:
+2. Open your web browser and navigate to the address `http://localhost:631`. You can browse the Printers tab and see the true interface of the printing engine.
+3. When you are finished, it is highly recommended to turn the web interface back off to maintain computer security:
    ```bash
    cupsctl WebInterface=no
    ```
-
-<!-- src_hash: ed049bd9d219add5337be1a6ec87f48764a808e3166bd49c6f06f554613657c1 -->
