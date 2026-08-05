@@ -2,15 +2,12 @@
 # שיעור 06: מערכת הקבצים (APFS)
 **מדריך עזר לתלמיד**
 
-
 ## מטרות השיעור
 
 * APFS Architecture & Dynamic Space Sharing
 * System Volume Group (SVG) & Orphaned Volumes
 * Firmlinks
 * Spotlight Indexing & Live Text
-**[Image Recommendation]:** A super minimalist abstract vector diagram showing a glowing data core (representing APFS) splitting into two interconnected hemispheres (System and Data).
-
 
 ## סקירה
 

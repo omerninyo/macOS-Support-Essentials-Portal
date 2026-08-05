@@ -1,15 +1,11 @@
 # שיעור 04: הצפנה ומפתחות
 **מדריך עזר לתלמיד**
 
-
 ## מטרות השיעור
 
 * הצפנת נתונים
 * ניהול הרשאות מודרני
 * פתרונות לארגונים
-**[Image Recommendation]:** A super minimalist abstract vector diagram showing a data vault with a digital key overlay.
-**Presenter Notes:**
-
 
 ## סקירה
 
@@ -193,7 +189,6 @@
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/i7byyZYgNUY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

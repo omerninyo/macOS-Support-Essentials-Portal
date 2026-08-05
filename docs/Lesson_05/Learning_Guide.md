@@ -6,7 +6,6 @@
 * ארגזי חול (Sandboxing)
 * אבחון וטיפול בתקיעות
 * הפצה ארגונית (VPP)
-**[Image Recommendation]:** A minimalist vector icon of the App Store "A" logo and an open cardboard box representing packages.
 
 ## סקירה
 <!-- פודקאסט NotebookLM מתוך Captivate -->

@@ -2,15 +2,12 @@
 # שיעור 03: אבטחת מידע
 **מדריך עזר לתלמיד**
 
-
 ## מטרות השיעור
 
 * Gatekeeper
 * XProtect
 * TCC
 * PPPC
-**[Image Recommendation]:** A minimalist vector icon of a lock or shield on a dark background.
-
 
 ## סקירה
 

@@ -7,7 +7,6 @@
 * גיבוי Time Machine
 * שחזור קבצים והתאוששות
 * גיבוי בסביבה ארגונית
-**[Image Recommendation]:** A minimalist vector clock face rotating backwards with a hard drive symbol in the background.
 
 ## סקירה
 
