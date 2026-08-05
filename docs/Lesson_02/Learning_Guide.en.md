@@ -4,9 +4,9 @@
 ## Lesson Objectives
 
 * **Users and Folders** - Local account types, Home Folder hierarchy, and the Shared folder.
-* **Secrets Management** - Password evolution, Keychain, and the modern Passwords app in macOS Sequoia and Tahoe.
-* **The Passwordless Era and Security** - Passkeys and file permissions (POSIX/ACL), TCC, and SIP mechanisms.
-* **Enterprise Seasoning** - Working with Managed Apple Accounts (MAID) and integrating Platform SSO for seamless enterprise login.
+* **Secrets Management** - Password evolution, Keychain, and the Passwords app in macOS Sequoia and Tahoe.
+* **The Passwordless Era and Security** - Passkeys, file permissions (POSIX/ACL), TCC framework, and SIP.
+* **Enterprise Integration** - Working with Managed Apple Accounts (MAID) and integrating Platform SSO for seamless enterprise login.
 
 ## Overview
 
@@ -15,39 +15,49 @@
 
 ## Terminology (Key Concepts)
 
-* **Administrator:** The system administrator, with global permissions to change settings and install software for everyone.
-* **Standard User:** A regular user, limited to their home folder (`~`) and personal space.
-* **Guest User:** A guest user whose entire folder contents are deleted upon logging out.
-* **Sharing Only:** A user with no home folder intended solely for network share authentication.
+* **Administrator:** The system administrator, with global permissions to modify settings and install software for all users.
+* **Standard User:** A regular user, limited to their home directory (`~`) and personal space.
+* **Guest User:** A guest user whose home folder contents are completely erased upon logout.
+* **Sharing Only:** A user account without a home directory, designed solely for network share authentication.
 * **Home Folder (`/Users/username`):** The user's isolated home directory.
-* **Shared Folder (`/Users/Shared`):** A public demilitarized zone. Protected by a Sticky Bit.
-* **Sticky Bit:** A permission flag preventing users from deleting files belonging to other users in the same directory.
+* **Shared Folder (`/Users/Shared`):** A public demilitarized zone. Protected via a Sticky Bit.
+* **Sticky Bit:** A permission flag preventing users from deleting files belonging to other users within the same directory.
 * **Keychain:** The macOS keychain infrastructure, consisting of the Login Keychain and System Keychain.
-* **Passwords app:** The central app (from macOS 15, enhanced in macOS 26 Tahoe) for managing passwords, Passkeys, and 2FA codes.
-* **Passkey:** A passwordless authentication standard (FIDO2) using a cryptographic key pair in the Secure Enclave.
+* **Passwords app:** The centralized application (introduced in macOS 15 and enhanced in macOS 26 Tahoe) for managing passwords, Passkeys, and 2FA codes.
+* **Passkey:** A passwordless authentication standard (FIDO2) utilizing a cryptographic key pair generated within the Secure Enclave.
+
+!!! info "5-Stage Enterprise Passkeys Deployment Model (Enterprise Passkeys Framework)"
+    When an organization transitions from traditional passwords to secure passwordless authentication (Passkeys), deployment follows 5 structured stages:
+    
+    1. **Assessment & Planning:** Mapping IT systems, organizational security, and compliance requirements.
+    2. **Solution Selection:** Selecting a password manager / Identity Provider (IdP) supporting FIDO2/WebAuthn standards.
+    3. **Pilot & Testing:** Controlled trial with a selected group of IT staff and end users.
+    4. **Full Deployment:** Expanding deployment to all enterprise employees and enforcing policies via MDM.
+    5. **Monitoring & Optimization:** Auditing logs, phasing out text passwords, and reducing phishing incidents.
+
 * **POSIX:** The standard UNIX permissions model (Owner, Group, Everyone).
-* **ACL (Access Control List):** An advanced, granular permissions layer added on top of POSIX.
-* **TCC (Transparency, Consent, and Control):** A privacy mechanism blocking app access to personal files and hardware (like the camera) unless explicitly approved by the user.
-* **SIP (System Integrity Protection):** Protects core system files from modifications, even by the root user.
-* **Managed Apple Account (MAID):** An Apple Account owned by the organization.
-* **Platform SSO:** macOS infrastructure enabling Mac login directly against a cloud identity provider (IdP) like Entra ID or Okta.
-* **Federated Authentication:** A state where entering an enterprise email redirects the user to authenticate against the company's server without requiring an Apple password.
+* **ACL (Access Control List):** An advanced, granular permissions layer layered on top of POSIX.
+* **TCC (Transparency, Consent, and Control):** A privacy framework that blocks application access to personal files and hardware peripherals (such as the camera) unless explicitly approved by the user.
+* **SIP (System Integrity Protection):** Safeguards system core files against modifications, even by the root user.
+* **Managed Apple Account (MAID):** An organizationally owned Apple Account.
+* **Platform SSO:** A macOS infrastructure framework enabling Mac login authentication directly against a cloud Identity Provider (IdP) such as Entra ID or Okta.
+* **Federated Authentication:** A configuration where entering an enterprise email redirects the user to authenticate against the company's identity server, bypassing the requirement for a separate Apple password.
 
 ## Useful CLI Commands
 | Command | Description |
 |---|---|
-| `dscl . -list /Users` | Display a list of all system (local) users |
-| `dscl . -read /Users/username` | Read extensive attributes of a specific user |
-| `ls -la /Users` | View file permissions, including identifying the Sticky Bit (`t`) |
-| `ls -le /path` | View file permissions, including displaying ACL records (`+`) |
-| `security list-keychains` | Display a list of currently active keychains |
-| `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | Search logs for SSO server connection errors |
+| `dscl . -list /Users` | Display a list of all local system users |
+| `dscl . -read /Users/username` | Inspect detailed attributes of a specific user account |
+| `ls -la /Users` | Display file permissions, including identifying the Sticky Bit (`t`) |
+| `ls -le /path` | Display file permissions, including ACL entries (`+`) |
+| `security list-keychains` | Display the list of currently active keychains |
+| `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | Query system logs for Platform SSO authentication errors |
 
 ## Recommended Reading and Links
 
-* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - Official Apple support guide.
-* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - Managing MAIDs in the enterprise.
-* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - In-depth article about Keychain.
+* [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - Official Apple Support guide.
+* [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - Enterprise MAID management.
+* [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - In-depth article on Keychain architecture.
 
 ## Summary Video
 
@@ -56,13 +66,13 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/S1n1JS-mWTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+## 💡 Presentation Visuals
 
 > [!NOTE]
-> תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
+> These images can be projected in class during lecture discussions or incorporated into presentation decks.
 
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+!!! tip "Visual Demonstration (Student Reference)"
+    These images illustrate the interface or mechanism relevant to the lesson topic.
 
 ![Slide87_image22](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image22.jpg)
 ![Slide87_image23](../assets/images/Lesson_02/L02_LegacySlide_Slide87_image23.jpg)
@@ -72,3 +82,9 @@
 ![26-Tahoe-Fast-User-Lockscreen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Fast-User-Lockscreen-scaled.png)
 ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
+![Slide96_image104](../assets/images/Lesson_02/L02_LegacySlide_Slide96_image104.png)
+![Slide96_image105](../assets/images/Lesson_02/L02_LegacySlide_Slide96_image105.png)
+![Slide97_image106](../assets/images/Lesson_02/L02_LegacySlide_Slide97_image106.png)
+![Slide97_image107](../assets/images/Lesson_02/L02_LegacySlide_Slide97_image107.png)
+
+<!-- src_hash: 4a9f8712568197e9f35b1cbd8c846c374280b4d19ae8cf5e165c68c33999af5a -->
