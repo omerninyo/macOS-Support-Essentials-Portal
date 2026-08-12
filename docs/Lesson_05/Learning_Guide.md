@@ -83,13 +83,14 @@ App Store:  לחפש, ללחוץ הורד — הכל אוטומטי
 
 ## חלק 3 — Force Quit
 
-### שלוש הדרכים
+### 4 הדרכים
 
 | דרך | איך |
 |---|---|
 | **הכי מהיר** | `Cmd + Option + Esc` |
 | **Dock** | קליק ימני על האייקון + החזק `Option` → Force Quit |
-| **הכי מפורט** | Activity Monitor → בחר תהליך → לחץ `X` → Force Quit |
+| **אבחון וסגירה** | Activity Monitor → בדיקת משאבי CPU/RAM ו-Open Files לפני לחיצה על `X` |
+| **טרמינל (CLI)** | פקודת `killall AppName` לסגירה מיידית מרחוק או כשהעכבר קפוא |
 
 ### Quit מול Force Quit
 

@@ -1,18 +1,18 @@
 # Lesson 05 — Applications and Processes
-## Student Learning Guide
+## Learning Guide (Student Summary)
 
 ---
 
-## Lesson Objectives
+## Objective
 
-- Understand the three macOS installation channels (App Store, DMG, PKG)
-- Understand the Sandbox mechanism — where applications store their data
-- Master tools for diagnosing and force-quitting unresponsive processes
-- Understand the VPP and Self Service mechanisms in an enterprise environment
+- Understand the three macOS installation channels (App Store, DMG, PKG).
+- Comprehend the Sandbox mechanism — where applications store their data.
+- Master GUI tools for diagnosing and force-quitting hung processes.
+- Learn the Enterprise VPP (Volume Purchase Program) and Self Service deployment flow.
 
 ---
 
-## 🎧 Audio Summary — Before or After Class
+## 🎧 Audio Summary — Listen Before or After Class
 
 <!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/57c8a1df-bbc5-4e2e-9986-b6e4b0e04f4e/"></iframe></div>
@@ -21,44 +21,44 @@
 
 ## Core Concepts
 
-| Concept | Explanation |
+| Term | Explanation |
 |---|---|
-| **App Store** | Apple's official storefront. Every app undergoes review, notarization, and operates within a strict Sandbox. |
-| **DMG (Disk Image)** | A virtual drive. Double-click = Mount. Drag to Applications = Install. Eject = Mandatory after installation. |
-| **PKG (Package)** | A system-level installer. It disperses files into protected paths → will always require an Admin password. |
-| **Gatekeeper** | The macOS security bouncer — verifies that every application is signed and approved by Apple. |
-| **Notarization** | An automated malware scanning process performed by Apple before an app is allowed to launch. |
-| **Sandbox** | An isolation bubble — an app cannot access files outside of its container without explicit permission. |
-| **Container** | The home directory for a Sandboxed app. Located at `~/Library/Containers/[Bundle ID]`. |
-| **Force Quit** | Terminating an unresponsive process without saving (sending a `SIGKILL` signal). |
-| **VPP / ABM** | Volume Purchase Program via Apple Business Manager. Licenses are owned by the organization, not the user. |
-| **Self Service** | The organization's private app store — enables deployment without Admin rights or a personal Apple Account. |
+| **App Store** | Apple's official storefront. Every application passes strict review, notarization, and operates within a strict Sandbox. |
+| **DMG (Disk Image)** | A virtual drive. Double-click to Mount. Drag the app to Applications to install. Ejecting when done is mandatory. |
+| **PKG (Package)** | A system-level installer. Scatters files to protected paths → always requires an Admin password. |
+| **Gatekeeper** | The macOS security enforcer — verifies that every application is signed and approved by Apple. |
+| **Notarization** | Apple's automated malware scanning process for apps before they are allowed to run. |
+| **Sandbox** | An isolation bubble — sandboxed apps cannot access files outside their container without explicit user permission. |
+| **Container** | The home directory for a Sandboxed application. Located at `~/Library/Containers/[Bundle ID]`. |
+| **Force Quit** | Terminating a hung process without saving state (sending a `SIGKILL` signal). |
+| **VPP / ABM** | Enterprise licensing mechanism (Volume Purchase Program via Apple Business Manager). The license belongs to the organization, not the user. |
+| **Self Service** | The organization's private App Store — enables seamless installation without Admin rights or personal Apple IDs. |
 
 ---
 
 ## Part 1 — Installation Types
 
-### Where to Find it in Finder
+### Locating in Finder
 
 ```text
-DMG File:  Downloads → Double-click → Volume in Sidebar → Drag to Applications
-PKG File:  Double-click → Installer wizard → Admin password required
-App Store: Search, click Get — completely automated
+DMG File:  Downloads folder → Double-click → Volume appears in Sidebar → Drag to Applications
+PKG File:  Double-click → Installation Wizard launches → Admin credentials required
+App Store: Search, click Download — Everything is handled automatically
 ```
 
-### Important Change in Tahoe
+### Crucial Change in macOS Tahoe
 
 > [!IMPORTANT]
-> Unapproved applications — **Right-click → Open no longer works in Tahoe**.
-> The only authorized bypass method: `System Settings → Privacy & Security → Scroll down → Open Anyway`
+> Unapproved Applications — **Right-click → Open is deprecated in Tahoe**.
+> The only valid GUI path: `System Settings → Privacy & Security → Scroll down → Open Anyway`.
 
 ---
 
-## Part 2 — Sandboxing and App Reset
+## Part 2 — Sandbox and App Reset
 
-### Critical Paths
+### Important Paths
 
-*(Reminder from Lesson 2: The Library folder in your Home directory (`~/`) is the user's personal space. Traditionally, this is where apps store settings and data. We will dive deeper into system architecture domains in the next lesson).*
+*(Reminder from Lesson 2: The `Library` folder in your Home directory (`~/`) is your personal space. Traditionally, this is where apps save their configurations and data. We will dive deeper into macOS filesystem architecture in the next lesson).*
 
 | What | Path |
 |---|---|
@@ -66,36 +66,37 @@ App Store: Search, click Get — completely automated
 | Application Support | `~/Library/Application Support/AppName/` |
 | Container (Sandbox) | `~/Library/Containers/[Bundle ID]/` |
 
-### Proper App Reset Sequence
+### Correct Sequence for App Reset
 
-1. Quit completely: `Cmd+Q`
-2. Open Finder → Go → Hold `Option` → **Library**
-3. Navigate to `Containers/` → Find the application's folder
-4. Move it to Trash and empty the Trash
-5. Relaunch the app → Seeing the "Welcome" screen = Successful Reset
+1. Fully quit the app: `Cmd+Q`
+2. Open Finder → Click **Go** in the menu bar → Hold `Option` → Select **Library**
+3. Navigate to `Containers/` → Locate the application's folder
+4. Move the folder to Trash and empty it
+5. Relaunch the app → Seeing the "Welcome" screen confirms a successful reset
 
 > [!NOTE]
-> Deleting an app from `/Applications/` **does not** delete its Container!
-> The Container must be deleted separately to achieve a true reset.
+> Deleting an application from `/Applications/` **does not** delete its Container!
+> The Container must be explicitly deleted to perform a reset.
 
 ---
 
 ## Part 3 — Force Quit
 
-### The Three Methods
+### 4 Methods
 
-| Method | How-to |
+| Method | How |
 |---|---|
-| **Fastest** | `Cmd + Option + Esc` |
-| **Dock** | Right-click the app icon + Hold `Option` → Force Quit |
-| **Most Detailed** | Activity Monitor → Select process → Click `X` → Force Quit |
+| **Fastest (Keyboard)** | `Cmd + Option + Esc` |
+| **Dock** | Right-click the icon + Hold `Option` → Force Quit |
+| **Diagnostic (GUI First)** | Activity Monitor → Review CPU/RAM usage and Open Files before clicking the `X` button |
+| **Terminal (CLI)** | `killall AppName` to instantly kill remotely or when the GUI is completely frozen |
 
 ### Quit vs. Force Quit
 
 | Action | Signal Sent | Result |
 |---|---|---|
-| Standard Quit | `SIGTERM` | The app saves state and shuts down gracefully |
-| Force Quit | `SIGKILL` | The kernel terminates the app instantly — **without saving** |
+| Standard Quit | `SIGTERM` | The app saves data and terminates gracefully |
+| Force Quit | `SIGKILL` | The kernel kills the process immediately — **no data is saved** |
 
 ---
 
@@ -106,42 +107,42 @@ App Store: Search, click Get — completely automated
 ```text
 Apple Business Manager (ABM)
         ↓ Licenses
-    Enterprise MDM Server
+   Corporate MDM Server
         ↓ Silent Install
-      Employee Mac
+    Employee's Mac
         ↓ 
-  Self Service (Private App Catalog)
+  Self Service (Private Corporate Catalog)
 ```
 
-**The Result:** The employee clicks "Install" — MDM deploys the app silently in the background — **zero Admin prompts, zero personal Apple Account requirement.**
+**The Outcome:** The employee clicks "Install" — the MDM installs it silently in the background — **without Admin rights, and without a personal Apple ID.**
 
 ---
 
 ## Terminal Commands — Appendix
 
 > [!NOTE]
-> The Terminal is not required for this lesson's labs. These commands are provided as an advanced reference for IT administrators.
+> The Terminal is not required for the lab exercises. These commands are provided as an Enterprise IT extension for those interested.
 
 ```bash
 # Manually mount a DMG
 hdiutil attach /path/to/image.dmg
 
-# Unmount a DMG
+# Eject a DMG
 hdiutil detach /Volumes/ImageName
 
-# Silent PKG installation (for IT deployment scripts)
+# Silent PKG installation (Standard IT Scripting)
 sudo installer -pkg /path/to/file.pkg -target /
 
-# Reset app settings (Preferences only, not the full Container)
+# Reset App Preferences (Preferences only, ignores Sandbox Containers)
 defaults delete com.apple.Safari
 
-# Flush preferences cache (after deleting a Container)
+# Clear Preferences Cache (Run after deleting a Container)
 killall cfprefsd
 
 # Verify PKG signature
 pkgutil --check-signature /path/to/file.pkg
 
-# Silent Rosetta 2 installation
+# Silent Rosetta 2 installation for Apple Silicon
 softwareupdate --install-rosetta --agree-to-license
 ```
 
@@ -156,7 +157,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## 🎬 Summary Video
+## 🎬 Video Summary
 
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/z_52E-9epcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -164,10 +165,10 @@ softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## Presentation Visuals
+## 💡 Presentation Visuals
 
-!!! tip "Presentation Visuals"
-    These images illustrate the interfaces covered in the lesson.
+!!! tip "Visual Aids"
+    These images illustrate the interfaces discussed in this lesson.
 
 ![Installation Types Comparison](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
 ![ABM and MDM Diagram](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
