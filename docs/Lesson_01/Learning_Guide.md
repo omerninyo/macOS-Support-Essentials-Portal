@@ -1,5 +1,9 @@
 # שיעור 01: התקנה, הכרה ויישור קו
-**מדריך עזר לתלמיד (גרסת הרחבה)**
+**מדריך עזר לתלמיד · גרסת PILOT**
+
+> **📌 פיילוט בלבד** — הקובץ המקורי שמור ללא שינוי: `Lesson_01_Asset_C_LearningGuide_HE.md`
+
+---
 
 ## מטרות השיעור
 
@@ -8,12 +12,14 @@
 * **המערכת, חדשנות ונגישות** - ניווט, מחוות Multi-Touch, אקוסיסטם ה-Continuity, סקירת Apple Intelligence (ב-Tahoe 26), שקוף מסך, ונגישות (סרטונים: Universal Control, Continuity Camera, ו-"The Greatest").
 * **תיבול ארגוני** - מה קורה כשמסך ה-Remote Management (MDM / ADE) קוטע את תהליך ההגדרה.
 
+---
 
-
-## סקירה
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/128517f1-2471-4e85-a0f5-7611f6c30dcb/"></iframe></div>
+
+---
 
 ## מושגי מפתח (Key Concepts)
 
@@ -26,6 +32,7 @@
 * **Automated Device Enrollment (ADE):** טכנולוגיית פריסה וניהול (לשעבר DEP) המאפשרת לארגונים לחבר מחשבי Mac ל-MDM באופן אוטומטי (Zero-Touch Deployment) מרגע החיבור הראשון לרשת, ולהחליף את ה-Setup Assistant הצרכני במסך Remote Management.
 * **Continuity:** אוסף טכנולוגיות המאפשרות רצף עבודה בין מכשירי אפל (כמו Universal Control, Handoff, Continuity Camera). עובד לרוב על בסיס זיהוי קרבה ב-Bluetooth ותקשורת Peer-to-Peer Wi-Fi.
 * **Apple Intelligence:** מערכת בינה מלאכותית המובנית ב-macOS 26 Tahoe המנצלת את ה-Neural Engine שב-Apple Silicon לעיבוד מודלי שפה באופן מקומי, מתוך דגש על פרטיות. משתמשת ב-Private Cloud Compute עבור משימות מורכבות.
+
 > [!TIP]
 > **Pro Tip: הגדרות שפה, אזור ובינה מלאכותית בישראל**
 > כדי ש-Apple Intelligence יעבוד כשורה, חובה לוודא ששפת המערכת (Primary Language) תואמת בדיוק לשפה של Siri (למשל English US). חוסר התאמה יוביל לכך שחלק מתכונות ה-AI יושבתו. אם בחרתם להשתמש בממשק אנגלי כדי לקבל את תכונות ה-AI, קחו בחשבון שהכתבה קולית (Dictation) ל-Siri בעברית תהיה בעייתית בשל התנגשות זו. בנוסף, אם ברשותכם מספר שפות מקלדת, כדאי לשקול ביטול מעבר שפות דרך מקש הגלובוס (🌐) כדי למנוע מצבים נדירים של הקלדת סיסמה שגויה במסך ההתחברות עקב פריסת מקלדת לא נכונה.
@@ -33,7 +40,13 @@
 * **Liquid Glass:** שפת העיצוב החדשה שהוצגה ב-macOS 26 Tahoe, המדגישה שקיפות, עומק, ואסתטיקה מודרנית ומשתקפת המנצלת את העוצמה הגרפית של מעבדי M-series.
 * **Background Process:** תהליך מערכת שרץ ברקע ללא חלון משתמש גלוי, לעיתים קרובות מאוחסן כ-LaunchAgent או LaunchDaemon.
 
+---
+
 ## פקודות ונתיבים רלוונטיים (Commands & Paths)
+
+> [!NOTE]
+> **שימוש בטרמינל (שורת הפקודה)**
+> מופיעות כאן פקודות טרמינל שאנו מדגימים בשיעור הראשון. אין צורך לזכור את התחביר שלהן בעל פה כעת! ניתן פשוט לבצע העתק-הדבק במעבדה כדי לקבל את התוצאה. הלימוד המעמיק של הטרמינל יתבצע באופן מסודר בשיעור 08, ולאחר מכן נלמד על מערכת הלוגים בשיעור 16. בינתיים, השתמשו בזה ככלי בדיקה מהיר בלבד.
 
 | נתיב / פקודה | תיאור |
 | :--- | :--- |
@@ -44,6 +57,8 @@
 | `sudo profiles show -type enrollment` | פקודה המחזירה את סטטוס ההרשמה של המכשיר לארגון (האם קיימת הרשמת ADE דרך Apple Business Manager). |
 | `log show --predicate 'process == "Setup Assistant"' --info` | שאילתה לשליפת לוגים ספציפיים מתוך התהליך של פתיחת הקופסה. |
 
+---
+
 ## קישורים מומלצים ולקריאה נוספת
 
 * [Automated Device Enrollment](https://support.apple.com/guide/deployment/dep24b435f66/web) - מדריך פריסה רשמי של אפל לרישום אוטומטי של מכשירים בארגון (ADE / ABM).
@@ -51,13 +66,18 @@
 * [Apple Intelligence Overview](https://support.apple.com/apple-intelligence) - סקירת היכולות והאבטחה של תכונות ה-AI ב-macOS.
 * [Explainer: Memory](https://eclecticlight.co/2026/06/20/explainer-memory/) - מאמר עומק המסביר את אופן ניהול הזיכרון במערכת ההפעלה.
 
-## סרטון סיכום
+---
+
+## 🎬 סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/oYxR-HrD0FU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+---
+
+## עזרים ויזואליים
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
