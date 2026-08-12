@@ -61,11 +61,10 @@ App Store:  לחפש, ללחוץ הורד — הכל אוטומטי
 
 *(תזכורת משיעור 2: תיקיית ה-Library בתיקיית הבית שלכם (`~/`) היא המרחב האישי של המשתמש. באופן מסורתי, כאן האפליקציות שומרות את ההגדרות והמידע שלכן. אנו נלמד לעומק על ארכיטקטורת המרחבים במערכת בשיעור הבא).*
 
-| מה | נתיב |
-|---|---|
-| הגדרות (Preferences) | `~/Library/Preferences/com.domain.app.plist` |
-| Application Support | `~/Library/Application Support/AppName/` |
-| Container (Sandbox) | `~/Library/Containers/[Bundle ID]/` |
+| סוג אפליקציה | היכן נשמרות ההגדרות והמידע? | האם יש גישה חופשית למחשב? |
+|---|---|---|
+| **אפליקציה "רגילה" (ללא Sandbox)** | `~/Library/Preferences/` וגם `~/Library/Application Support/` | **כן** (סכנת אבטחה אם האפליקציה נפרצת) |
+| **אפליקציית Sandbox** | נכלאת בתוך `~/Library/Containers/[Bundle ID]/` | **לא** (דורשת אישור מפורש מ-Powerbox/TCC) |
 
 ### סדר נכון לאיפוס אפליקציה
 

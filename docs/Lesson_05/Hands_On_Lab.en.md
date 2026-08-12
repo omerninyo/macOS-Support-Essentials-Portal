@@ -2,151 +2,151 @@
 ## Hands-On Lab
 
 > [!NOTE]
-> **Objective:**
-> Hands-on practice with deploying, installing, and diagnosing macOS applications using a GUI-first approach.
-> You will experiment with installation packages (PKG and DMG), challenge Gatekeeper's strict policies in Tahoe, reset sandboxed applications by manipulating their Containers, and execute forceful process terminations.
+> **Lab Objective:**
+> Practical experience in deploying, installing, and diagnosing macOS applications via the graphical user interface.
+> You will experience different installation types (PKG and DMG), navigate Gatekeeper restrictions in Tahoe, reset applications via their Container, and execute Force Quits.
 >
-> *Note: In Enterprise environments, App Store distributions are centrally managed via MDM/VPP — see Exercise 5.*
+> *Note: In an enterprise environment, App Store deployment is managed via MDM/VPP — see Exercise 5.*
 
 ---
 
 ## Prerequisites
 
 - A Mac running macOS 26 (Tahoe)
-- A local user account with Admin privileges
-- `installer.pkg` and `.dmg` files from the Course Assets folder (provided by your instructor)
+- A user account with local Admin privileges
+- `installer.pkg` and `.dmg` files from the Course Assets folder (provided by the instructor)
 
 > [!TIP]
 > **Missing a file?** You can download VLC from [videolan.org](https://www.videolan.org/) as a DMG, and Zoom from [zoom.us/download](https://zoom.us/download) as a PKG.
 
 ---
 
-## Exercise 1 — PKG Installation and Signature Validation
+## Exercise 1 — PKG Installation and Signature Verification
 
-> **Learning Goal:** PKG = System Installer. Always requires Admin credentials because it writes to protected system paths.
+> **What we're learning:** PKG = System-level installer. It will always require Admin rights because it writes to protected system paths.
 
-1. Open the `.pkg` file provided by your instructor (double-click).
-2. The installation wizard will launch. Look at the top right corner for a padlock icon 🔒.
-3. Click the padlock → Verify that the certificate reads **"Developer ID Installer"** (an approved Apple Developer).
-4. In the menu bar: Select **File → Show Files** — observe which system paths the payload will be extracted to.
-5. Close the file list. Click **Continue** and complete the installation wizard.
+1. Double-click the `.pkg` file provided by your instructor.
+2. The installation wizard will launch. Look at the top right corner — the padlock icon 🔒.
+3. Click the padlock → Verify that it states **"Developer ID Installer"** (an approved developer).
+4. In the menu bar: **File → Show Files** — review which paths the files will be written to.
+5. Close the file list. Click **Continue** and complete the installation.
 6. Enter your Admin password when prompted.
-7. Navigate to `/Applications/` and launch the application to confirm a successful installation.
+7. Navigate to `/Applications/` and launch the software to verify it works.
 
 > [!NOTE]
-> If the installer prompts for a Restart — you may postpone it until all lab exercises are completed.
+> If the installer prompts for a Restart — you can postpone this until the end of all exercises.
 
 ---
 
 ## Exercise 2 — DMG Installation and Challenging Gatekeeper in Tahoe
 
-> **Learning Goal:** DMG = Virtual Volume. Drag to Applications + Eject. In macOS Tahoe, Gatekeeper enforces stricter security policies.
+> **What we're learning:** DMG = Virtual Volume. Drag to Applications + Eject. In Tahoe, Gatekeeper is far stricter.
 
 1. Open Safari and download a DMG file (e.g., VLC from [videolan.org](https://www.videolan.org/)).
-2. Once downloaded, double-click the file in your Downloads folder.
-3. The DMG window will open. Drag the application icon to the **Applications** folder shortcut.
+2. Once downloaded, double-click the file in Downloads.
+3. The DMG window will open. Drag the application icon to the **Applications** shortcut.
 
-    > 💡 A copy progress window will appear — wait until it completes.
+    > 💡 You will see a copy progress window — wait until it completes.
 
 4. In the Finder sidebar (under **Locations**) — click the **Eject ⏏** icon next to the DMG name.
-5. Go to `/Applications/` and open the newly installed application.
-6. A standard Gatekeeper warning will appear (this is expected) → click **Open**.
+5. Navigate to `/Applications/` and launch the application.
+6. A Gatekeeper warning will appear (this is expected) → click **Open**.
 
-**The Tahoe Challenge — Unsigned Applications:**
+**The Tahoe Challenge — Unsigned Application:**
 
 > [!IMPORTANT]
-> If you are given an unsigned file for testing:
-> - Try: Right-click → Open → **Notice this bypass option has been removed in Tahoe.**
-> - The Enterprise Path: Go to `System Settings → Privacy & Security` → Scroll down → click **"Open Anyway"**.
+> If you are provided with an unsigned file for testing:
+> - Try this: Right-click → Open → **Notice that this option no longer exists in Tahoe.**
+> - The correct method: `System Settings → Privacy & Security` → Scroll down → Click **"Open Anyway"**
 
 ---
 
 ## Exercise 3 — Sandboxing and Container Reset
 
-> **Learning Goal:** Deleting an application from the Applications folder does not remove its configuration data. Targeting the Container is the correct procedure for sandboxed apps.
+> **What we're learning:** Deleting an application from Applications does not delete its settings. The Container is the actual target.
 
-1. Open a built-in application (e.g., **Notes**).
-2. Modify a setting or preference (color, font, or any visible change).
-3. Quit the application entirely: Press **`Cmd + Q`** (do not just click the X button).
+1. Launch a built-in application (e.g., **Notes**).
+2. Change a setting (color, font, any configuration change you prefer).
+3. Quit completely: **`Cmd + Q`** (Do not just click the X).
 
 **Locating the Container:**
 
-4. Open **Finder** → Go to the top menu bar → Select **Go**.
-5. Hold down the `Option (⌥)` key — **Library** will magically appear in the list → click it.
-6. Navigate into the **`Containers`** folder.
-7. Locate the application's container folder (e.g., `com.apple.Notes`).
+4. Open **Finder** → Top menu bar → **Go**.
+5. Hold the `Option (⌥)` key — **Library** will appear in the list → Click it.
+6. Navigate into the **`Containers`** directory.
+7. Locate the application's folder (e.g., `com.apple.Notes`).
 
-    > 💡 Can't find it? Notes doesn't always populate a Container immediately. Try Keynote instead: `com.apple.iWork.Keynote`.
+    > 💡 Can't find it? Notes doesn't always show a straightforward Container. Try Keynote: `com.apple.iWork.Keynote`
 
-**The Reset Procedure:**
+**The Reset:**
 
-8. Right-click the Container folder → select **Move to Trash**.
+8. Right-click the Container folder → **Move to Trash**.
 9. Empty the Trash (**Finder → Empty Trash**).
-10. Relaunch the application → Seeing the "Welcome" screen confirms **the reset was successful** ✅.
+10. Relaunch the application → Seeing the "Welcome" screen indicates **the reset was successful** ✅.
 
 > [!CAUTION]
-> **Do not run** `killall cfprefsd` while other applications are open — it will abruptly flush the preference cache for all active processes.
+> **Do not execute** `killall cfprefsd` while other applications are running — it will affect the preferences of all active processes.
 
 ---
 
 ## Exercise 4 — Force Quit: The Three Methods
 
-> **Learning Goal:** Spinning Beachball = Application Not Responding. Master three ways to terminate a hung process—choosing the fastest method based on the scenario.
+> **What we're learning:** The spinning beachball = Not Responding. Three ways to terminate — choose the fastest one for your scenario.
 
-Launch both **Safari** and **Calendar**.
+Open **Safari** and **Calendar**.
 
-**Method 1 — The Fastest (Keyboard):**
+**Method 1 — The Fastest:**
 1. Press `Option + Command + Escape`.
-2. In the Force Quit Applications window: Select **Safari** → click **Force Quit**.
+2. In the window that appears: Select **Safari** → Click **Force Quit**.
 3. Confirm the warning dialog.
 
 Relaunch Safari.
 
 **Method 2 — Via the Dock:**
 1. Right-click the Safari icon in the Dock.
-2. **While the context menu is open** — hold down the `Option` key.
-3. Watch "Quit" dynamically change to **"Force Quit"** → click it.
+2. **While the menu is open** — hold `Option`.
+3. Watch how "Quit" transforms into **"Force Quit"** → Click it.
 
 Relaunch Safari.
 
-**Method 3 — Activity Monitor (Detailed Diagnostics):**
-1. Open **Activity Monitor** (via Spotlight: `Cmd+Space` → type "Activity Monitor").
-2. Search for "Safari" using the search bar at the top right.
-3. Select the Safari process → click the **`X`** (the Stop button in the top toolbar).
-4. Choose **Force Quit** in the confirmation dialog.
+**Method 3 — Activity Monitor (The most detailed):**
+1. Launch **Activity Monitor** (via Spotlight: `Cmd+Space` → "Activity Monitor").
+2. Search for "Safari" in the search bar.
+3. Select the process → Click the **`X`** (the circular button in the top toolbar).
+4. Select **Force Quit** in the dialog.
 
-    > 💡 Pay attention to the **% CPU** column — it provides visibility into which process is consuming excessive resources.
+    > 💡 Pay attention to the **% CPU** column — this reveals what is consuming system resources.
 
 ---
 
-## Exercise 5 — (Demo & Discussion) Self Service and VPP
+## Exercise 5 — (Demo and Discussion) Self Service and VPP
 
-> **Learning Goal:** In an Enterprise environment, the MDM facilitates zero-touch deployment—no Admin credentials, no personal Apple IDs required.
+> **What we're learning:** In an enterprise environment — MDM enables installations without Admin privileges and without personal Apple IDs.
 
-This is a demonstration exercise — your instructor will project this from the master console.
+This is a demonstration exercise — the instructor will present from the main console.
 
-1. The instructor will launch the **Self Service** application (automatically deployed by the MDM).
-2. Review the catalog of corporate-approved software.
-3. The instructor will click "Install" → Notice: **No Admin prompt, no Apple ID request.**
-4. The application seamlessly installs directly into `/Applications/` in the background.
+1. The instructor will launch **Self Service** (automatically deployed by the MDM).
+2. Review the catalog of approved enterprise software.
+3. The instructor will click "Install" → Notice: **No Admin prompt, no Apple ID prompt.**
+4. The application is installed directly to `/Applications/` in the background.
 
 > [!TIP]
-> **VPP Troubleshooting in the Field:** If a corporate application deployed via MDM unexpectedly prompts for a personal Apple ID, this is the classic symptom of an expired VPP Token in ABM. The token must be renewed in the MDM portal.
+> **A sign of a VPP issue in the field:** If an enterprise application prompts for an Apple ID → This is a sign that the VPP Token has expired in ABM. It must be renewed in the portal.
 
 ---
 
 ## Bonus Exercise — Terminal for Advanced Users
 
 > [!CAUTION]
-> For advanced power users only. This is not required for the core lab exercises.
+> For advanced users only. Not required for the core exercise.
 
 ```bash
-# Verify a PKG signature
+# Verify PKG signature
 pkgutil --check-signature /path/to/installer.pkg
 
-# Validate an application's notarization ticket
+# Validate application notarization
 codesign --test-requirement="=notarized" --verify --verbose /Applications/VLC.app
 
-# Flush the preference cache (typically executed after a Container reset via CLI)
+# Flush preferences cache (after a Container reset)
 killall cfprefsd
 ```
