@@ -47,7 +47,8 @@
 
 ### `bputil` - ניהול מדיניות אתחול (Boot Policy) מתקדם
 
-> **אזהרה:** פקודת `bputil` פועלת מתוך macOS Recovery בלבד (או כ-root במערכת פעילה להצגת מידע) ומאפשרת שינוי קרביים עמוקים של ה-LocalPolicy מבלי להיעזר בממשק הגרפי. שימוש שגוי עלול להפוך את המק ללא זמין לאתחול (Unbootable).
+> [!WARNING]
+> פקודת `bputil` פועלת מתוך macOS Recovery בלבד (או כ-root במערכת פעילה להצגת מידע) ומאפשרת שינוי קרביים עמוקים של ה-LocalPolicy מבלי להיעזר בממשק הגרפי. שימוש שגוי עלול להפוך את המק ללא זמין לאתחול (Unbootable).
 
 *   **`sudo bputil -d`** או **`bputil --display-policy`**
     *   **פעולה:** מציג את תוכן ה-LocalPolicy (הצפנות, סטטוס Kexts, אישור MDM וכו') של דיסק ההפעלה המקומי.
@@ -107,18 +108,17 @@
 
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Slide138_image169](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image169.png)
-![Slide138_image49](../assets/images/Lesson_13/L13_LegacySlide_Slide138_image49.jpeg)
-![Slide141_image170](../assets/images/Lesson_13/L13_LegacySlide_Slide141_image170.jpg)
-![Slide142_image171](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image171.png)
-![Slide142_image172](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image172.png)
-![Slide142_image173](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image173.png)
-![Slide142_image174](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image174.png)
-![Slide142_image175](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image175.png)
-![Slide142_image176](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image176.png)
-![Slide142_image177](../assets/images/Lesson_13/L13_LegacySlide_Slide142_image177.jpg)
-![Slide80_image19](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image19.jpg)
-![Slide80_image93](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image93.png)
-![26-Tahoe-Boot-Camp-scaled](../assets/images/Lesson_13/L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png)
+    ניתן להיעזר בתמונות הבאות מתוך חוברת הקורס (Asset A) ללימוד הנושא:
+    * `L13_LegacySlide_Slide138_image169.png`
+    * `L13_LegacySlide_Slide138_image49.jpeg`
+    * `L13_LegacySlide_Slide141_image170.jpg`
+    * `L13_LegacySlide_Slide142_image171.png`
+    * `L13_LegacySlide_Slide142_image172.png`
+    * `L13_LegacySlide_Slide142_image173.png`
+    * `L13_LegacySlide_Slide142_image174.png`
+    * `L13_LegacySlide_Slide142_image175.png`
+    * `L13_LegacySlide_Slide142_image176.png`
+    * `L13_LegacySlide_Slide142_image177.jpg`
+    * `L13_LegacySlide_Slide80_image19.jpg`
+    * `L13_LegacySlide_Slide80_image93.png`
+    * `L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png`
