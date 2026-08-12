@@ -1,82 +1,112 @@
 # Lesson 04: Encryption and Keys
-**Hands-On Lab (Student Practice)**
+**Hands-On Lab (Student Exercise)**
 
 ## Objective
-Practical experience in managing System Ownership and Secure Tokens via the graphical interface, understanding their connection to the FileVault encryption mechanism, enabling FileVault, and creating/managing a Recovery Key.
+Gain practical, hands-on experience managing System Ownership and Secure Tokens via the Graphical User Interface (GUI). You will understand their relationship to the FileVault encryption framework, actively provision FileVault, and generate and manage a Personal Recovery Key (PRK).
 
 ## Scenario
-As part of the enterprise IT department, you must ensure that users on the computer have received System Ownership via a Secure Token. Afterward, you must enable encryption on the Data Volume and generate a Personal Recovery Key (PRK) to prevent data loss in case of a forgotten password. Everything will be done using macOS's built-in graphical tools.
+As a systems engineer in the enterprise IT department, you must verify that the local user has successfully acquired System Ownership via a Secure Token. Next, you are tasked with enabling FileVault encryption on the Data Volume and generating a Personal Recovery Key (PRK) to prevent catastrophic data loss in the event of a forgotten password. All workflows will be executed utilizing macOS's built-in GUI utilities.
 
 ## Prerequisites
 
 * An Apple Silicon-based Mac.
 * A Local Account with Administrator privileges.
-* It is recommended to connect laptops to a power source during encryption changes.
-* *Note: As per course rules, any destructive or formatting labs must be performed on the provided external USB Drive, but enabling FileVault on the primary drive is permitted for this exercise as it does not destroy data.*
+* It is highly recommended to connect portable Macs to a power source during encryption changes.
+
+> [!CAUTION]
+> As per the course guidelines, destructive labs must be performed on your provisioned external USB drive. However, this specific exercise for enabling FileVault is safe to execute on your internal system drive, as it does not compromise data integrity.
 
 ---
 
-### Part 1: Checking System Ownership (Secure Token Status) via GUI
-Before FileVault can be enabled, the system requires verification that the user has a Secure Token. The Directory Utility allows us to check this visually.
+## Exercise 1: Verifying System Ownership (Secure Token Status) via GUI
 
-1. Open the **Directory Utility** (find it via Spotlight, or navigate to `/System/Library/CoreServices/Applications/`).
-2. Click the lock icon in the corner and enter your administrator password to allow changes.
-3. In the top toolbar, switch to the **Directory Editor** tab.
-4. Ensure the "Viewing" dropdown is set to **Users** and that you are reading from the local node.
-5. Find your username in the left list and click it.
+> **Key Takeaway:** Confirming whether our account holds the cryptographic "master key" (Secure Token) required to manage disk encryption.
+
+Before FileVault can be enabled, macOS requires verification that the user possesses a Secure Token. The Directory Utility provides a visual method to audit this status.
+
+1. Launch the **Directory Utility** application (Search via Spotlight, or navigate directly to `/System/Library/CoreServices/Applications/`).
+2. Click the padlock icon in the corner and authenticate with your administrator password to unlock changes.
+3. On the top toolbar, select the **Directory Editor** tab.
+4. Ensure the `Viewing` dropdown menu is set to **Users** and that you are querying the local node (`Local`).
+5. Locate your specific username in the left-hand column and select it.
 6. In the Attributes list on the right, look for an attribute named **AuthenticationAuthority**.
-7. Inside its Value field, look for the string `SecureToken`. Its presence indicates that this user holds a security token and can manage encryption.
+7. Within its Value field, identify the `SecureToken` string. Its presence mathematically guarantees that this user holds a security token and is authorized to manage encryption.
 
-### Part 2: Checking Hardware Encryption Status
-On Apple Silicon Macs, the hardware AES engine encrypts data 24/7 even before FileVault is enabled. Let's verify this.
+---
+
+## Exercise 2: Auditing Hardware-Level Encryption Status
+
+> **Key Takeaway:** Proving via Disk Utility that our data is encrypted at the bare-metal hardware level, even when the FileVault mechanism appears "Off" in System Settings!
+
+On Apple Silicon Macs, the hardware AES engine continuously encrypts data 24/7, prior to FileVault even being enabled. Let's verify this architecture.
 
 1. Open the **Disk Utility** application (from the Utilities folder or via Spotlight).
-2. In the sidebar, select your Mac's Data Volume (usually named `Macintosh HD - Data`).
-3. Look below the Volume name in the main pane.
-4. Note that the format displayed is `APFS (Encrypted)`. This means the volume is already hardware-encrypted and ready to be wrapped by FileVault without waiting for data encryption.
+2. In the sidebar, select your Mac's Data Volume (typically named `Macintosh HD - Data`).
+3. Inspect the information directly under the Volume name in the center pane.
+4. Note that the displayed format is `APFS (Encrypted)`. This confirms that the volume is already hardware-encrypted and primed to be "wrapped" by FileVault, requiring zero wait time for actual data encryption.
 
-### Part 3: Enabling FileVault via System Settings
-Now we will officially enable data protection.
+---
+
+## Exercise 3: Enabling FileVault via the User Interface (System Settings)
+
+> **Key Takeaway:** Fully provisioning the enterprise encryption framework and generating the mission-critical recovery key.
+
+We will now officially activate the data protection mechanism.
 
 1. Open **System Settings** and navigate to **Privacy & Security**.
 2. Scroll down to the **FileVault** section.
 3. Click the **Turn On** button.
-4. You will be prompted to enter an administrator password to confirm.
-5. In the pop-up window, you will be asked how you want to recover access if you forget your password. Choose the option to create a local recovery key (Create a recovery key and do not use my iCloud account).
-   *Note: In macOS Tahoe, if you are signed in with an Apple Account and iCloud Keychain is active, the system might default to iCloud recovery automatically. For this lab, make sure to select the local PRK option.*
-6. The system will present you with the Personal Recovery Key (PRK). You must copy or write it down carefully in a secure external location. **Do not save the recovery key in a text file on this computer!**
-7. Click **Continue**. Encryption will be configured and activated almost instantly.
+4. Authenticate with your administrator password when prompted.
+5. A dialog will ask how you wish to unlock your disk if you forget your password. Select the option to generate a local PRK (Create a recovery key and do not use my iCloud account).
 
-### Part 4: Managing Authorized Users for Decryption
-After enabling FileVault, you must check which users can unlock the disk at boot.
+   > [!NOTE]
+   > In macOS Tahoe, if you are signed in to an Apple Account with iCloud Keychain enabled, the system might automatically default to iCloud escrow. For the purpose of this enterprise lab, ensure you strictly select the local PRK generation option.
 
-1. Stay in the **FileVault** window under `Privacy & Security`.
-2. If there are other users on the computer who are not currently authorized, an **Options** button or a list of users will appear under the status.
-3. Clicking this button will show you the users on the system for whom you can enable disk unlock capabilities (which requires entering the password of a user with a Secure Token).
-
-### Part 5: Using the Recovery Key (Simulation Scenario)
-In this part, we will test whether the PRK we created allows us to recover data in an emergency.
-
-1. Restart your Mac.
-2. At the Login Window, which now acts as the Pre-boot decryption screen for the encrypted Data Volume, enter an incorrect password 3 consecutive times, or click the question mark (?) icon next to the password field.
-3. The system will offer you to unlock the encryption using a Recovery Key. Click the option to enter a key.
-4. Type the Personal Recovery Key (PRK) you generated in Part 3. Ensure absolute accuracy (including letters and dashes).
-5. If entered correctly, FileVault will unlock, and you will be given the option to reset your local account password or just continue directly into the system.
+6. The system will display your Personal Recovery Key (PRK). You must carefully transcribe or copy it to a secure, external location. **Never save the recovery key in a plaintext file on the local machine!**
+7. Click **Continue**. The encryption framework will be provisioned and activated almost instantaneously.
 
 ---
 
-## Extra / Technical Deep Dive
+## Exercise 4: Managing Authorized Decryption Users
 
-Behind the scenes of the graphical interface we just explored, there are several powerful Command Line Interface (CLI) tools used by network administrators, MDM servers, and automation scripts. Open the **Terminal** app and try running these commands:
+> **Key Takeaway:** Understanding how granting decryption authorization to another user requires authentication from a user who already possesses a Secure Token.
 
-* **Checking Secure Token Status:**
-  Instead of digging through Directory Utility, you can ask the system for a direct answer regarding System Ownership:
-  `sysadminctl -secureTokenStatus username` (Replace `username` with your short name). If it returns `ENABLED`, it means you have System Ownership.
+Following FileVault activation, it's crucial to audit which users are authorized to unlock the disk at boot.
 
-* **Checking FileVault Status:**
-  You can check the system encryption status with one quick command:
+1. Remain in the **FileVault** pane under `Privacy & Security`.
+2. If there are other users on the Mac who are not currently authorized, an **Options** button or a list of users will be visible below the FileVault status.
+3. Clicking this button will display the system users who can be granted the capability to unlock the drive (this action will prompt for the password of the user holding the Secure Token).
+
+---
+
+## Exercise 5: Utilizing the Recovery Key (Simulation Scenario)
+
+> **Key Takeaway:** Simulating an emergency lockout and executing a practical recovery using the PRK generated earlier.
+
+In this phase, we will validate whether our generated PRK successfully allows data extraction in a crisis scenario.
+
+1. Execute a Restart on your Mac.
+2. At the Login Window, which now acts as the Pre-boot decryption screen for the encrypted Data Volume, intentionally enter an incorrect password 3 consecutive times, or click the question mark (?) icon next to the password field.
+3. The system will prompt you to unlock the encryption using a Recovery Key. Select the option to enter the key.
+4. Input the Personal Recovery Key (PRK) you generated in Exercise 3. Ensure absolute precision (including case sensitivity and hyphens).
+5. Upon successful validation, the FileVault encryption will be unlocked, and you will be presented with the option to reset your local account password or seamlessly bypass it to enter the OS.
+
+---
+
+## IT Pro Bonus Lab: The Command Line (Terminal)
+
+> [!NOTE]
+> **No Need to Memorize!**
+> Behind the scenes of the GUI we just explored, robust command-line binaries operate—the same tools leveraged by automated MDM servers. Feel free to copy and paste these into the Terminal application for hands-on experimentation, but note that we will formally master the CLI in Lesson 08.
+
+* **Audit Secure Token Status:**
+  Instead of digging through Directory Utility, you can query the system for a direct response regarding System Ownership:
+  `sysadminctl -secureTokenStatus username` (replace `username` with your short name). An `ENABLED` response confirms you hold System Ownership.
+
+* **Audit FileVault Status:**
+  You can instantly check the system encryption status with a single command:
   `fdesetup status`
 
-* **Checking Bootstrap Token Status:**
-  To see if the Mac communicated with an MDM server and escrowed a Bootstrap Token (which allows automatic granting of Secure Tokens to new employees), use:
-  `sudo profiles status -type bootstraptoken` (This requires your admin password).
+* **Audit Bootstrap Token Status:**
+  To verify if the Mac has communicated with an MDM server and escrowed a Bootstrap Token (which enables automated Secure Token grants for newly provisioned employees), execute:
+  `sudo profiles status -type bootstraptoken` (This action requires administrator authentication).

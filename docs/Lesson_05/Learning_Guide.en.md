@@ -1,95 +1,176 @@
-# Lesson 05: Applications & Processes
-**Learning Guide (vEXP)**
+# Lesson 05 — Applications and Processes
+## Student Learning Guide
+
+---
 
 ## Lesson Objectives
-* Installation Processes
-* Sandboxing
-* Troubleshooting and Freezes
-* Enterprise Deployment (VPP)
-**[Image Recommendation]:** A minimalist vector icon of the App Store "A" logo and an open cardboard box representing packages.
 
-## Overview
-<!-- Captivate NotebookLM Podcast -->
+- Understand the three macOS installation channels (App Store, DMG, PKG)
+- Understand the Sandbox mechanism — where applications store their data
+- Master tools for diagnosing and force-quitting unresponsive processes
+- Understand the VPP and Self Service mechanisms in an enterprise environment
+
+---
+
+## 🎧 Audio Summary — Before or After Class
+
+<!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/57c8a1df-bbc5-4e2e-9986-b6e4b0e04f4e/"></iframe></div>
 
+---
+
 ## Core Concepts
-* **App Store:** Apple's official app marketplace. Apps undergo App Review, Notarization, and run under strict Sandboxing.
-* **Package (PKG):** An installation file containing a payload and scripts to distribute files across the system. Used for complex enterprise software.
-* **Disk Image (DMG / ASIF):** A virtual disk. In macOS 26 (Tahoe), Apple introduced the highly efficient ASIF (Apple Sparse Image Format).
-* **Sandboxing:** A macOS security mechanism that restricts an app's access to system resources, memory, and unrelated files. Data is stored in a isolated "Container".
-* **Code Signing & CDHash (DeepDive):** The cryptographic foundation of macOS security. macOS uses lazy checking of memory pages against the Code Directory Hash (CDHash) to ensure apps haven't been tampered with.
-* **App Translocation (DeepDive):** Gatekeeper Path Randomization prevents malicious apps extracted from ZIPs/DMGs from loading adjacent files by running them from a randomized, read-only location until properly moved to Applications.
-* **Preemptive Multitasking & WindowServer (DeepDive):** The kernel manages threads forcefully. If an app's main UI thread hangs for a few seconds, WindowServer displays the spinning beachball cursor.
-* **Force Quit:** Aggressively terminates an unresponsive app (sending a `SIGKILL` signal) without allowing it to save data.
-* **Volume Purchase Program (VPP) / Apple Business Manager (ABM):** The enterprise purchase program allowing organizations to buy app licenses in bulk and distribute them via MDM without needing personal Apple IDs.
-* **Self Service:** The organization's private app store, allowing standard users to install approved software without an Admin password.
+
+| Concept | Explanation |
+|---|---|
+| **App Store** | Apple's official storefront. Every app undergoes review, notarization, and operates within a strict Sandbox. |
+| **DMG (Disk Image)** | A virtual drive. Double-click = Mount. Drag to Applications = Install. Eject = Mandatory after installation. |
+| **PKG (Package)** | A system-level installer. It disperses files into protected paths → will always require an Admin password. |
+| **Gatekeeper** | The macOS security bouncer — verifies that every application is signed and approved by Apple. |
+| **Notarization** | An automated malware scanning process performed by Apple before an app is allowed to launch. |
+| **Sandbox** | An isolation bubble — an app cannot access files outside of its container without explicit permission. |
+| **Container** | The home directory for a Sandboxed app. Located at `~/Library/Containers/[Bundle ID]`. |
+| **Force Quit** | Terminating an unresponsive process without saving (sending a `SIGKILL` signal). |
+| **VPP / ABM** | Volume Purchase Program via Apple Business Manager. Licenses are owned by the organization, not the user. |
+| **Self Service** | The organization's private app store — enables deployment without Admin rights or a personal Apple Account. |
 
 ---
 
-## Key Terminal Commands
+## Part 1 — Installation Types
 
-### Installers and Disks (`installer` & `hdiutil`)
-* **`sudo installer -pkg /path/to/package.pkg -target /`**
-  Silent installation of a PKG to the root drive. The fundamental command for MDM scripts.
-* **`hdiutil attach /path/to/image.dmg`**
-  Mounts a virtual disk image.
-* **`hdiutil detach /Volumes/ImageName`**
-  Safely unmounts a virtual disk.
+### Where to Find it in Finder
 
-### Process Management & Force Quit (`killall` & `kill`)
-* **`killall "App Name"`**
-  Gracefully quits an application by process name (sends `SIGTERM`).
-* **`kill -9 [PID]`**
-  Instantly forces a process to quit by its Process ID, identical to the graphical Force Quit (sends `SIGKILL`).
-* **`killall cfprefsd`**
-  Kills the configuration daemon, forcing macOS to flush the memory cache of preference files. Crucial when manually resetting app sandboxes.
+```text
+DMG File:  Downloads → Double-click → Volume in Sidebar → Drag to Applications
+PKG File:  Double-click → Installer wizard → Admin password required
+App Store: Search, click Get — completely automated
+```
 
-### Hidden App Settings (`defaults`)
-* **`defaults read com.apple.Safari`**
-  Reads the entire preferences plist for Safari.
-* **`defaults delete com.apple.Safari`**
-  Deletes the preferences file entirely, returning the app to factory settings.
+### Important Change in Tahoe
 
-### System Updates & Rosetta (`softwareupdate`)
-* **`softwareupdate --install-rosetta --agree-to-license`**
-  Silently installs the Rosetta 2 translation environment for Apple Silicon Macs.
+> [!IMPORTANT]
+> Unapproved applications — **Right-click → Open no longer works in Tahoe**.
+> The only authorized bypass method: `System Settings → Privacy & Security → Scroll down → Open Anyway`
 
 ---
 
-## Managing Sandboxes and App Resets
+## Part 2 — Sandboxing and App Reset
 
-**Where do apps save their data?**
-1. **Preferences:** Under `~/Library/Preferences/com.domain.appname.plist`
-2. **Application Support:** Under `~/Library/Application Support/AppName/`
-3. **Containers:** App Store apps and Sandboxed apps do not write to the general folders above. Instead, all their access is routed to: `~/Library/Containers/[Bundle ID]`.
+### Critical Paths
 
-**How to reset a Sandboxed app (Complete Reset):**
-1. Ensure the app is completely closed (Quit or Force Quit).
-2. Delete the app's Container folder at: `~/Library/Containers/[Bundle ID]`.
-3. Clear system cached settings (if they exist outside the Sandbox): `defaults delete [Bundle ID]`.
-4. Clear the memory cache by running `killall cfprefsd` in Terminal.
-5. Reopen the app - it will be recreated from scratch as if launched for the first time.
+*(Reminder from Lesson 2: The Library folder in your Home directory (`~/`) is the user's personal space. Traditionally, this is where apps store settings and data. We will dive deeper into system architecture domains in the next lesson).*
+
+| What | Path |
+|---|---|
+| Preferences | `~/Library/Preferences/com.domain.app.plist` |
+| Application Support | `~/Library/Application Support/AppName/` |
+| Container (Sandbox) | `~/Library/Containers/[Bundle ID]/` |
+
+### Proper App Reset Sequence
+
+1. Quit completely: `Cmd+Q`
+2. Open Finder → Go → Hold `Option` → **Library**
+3. Navigate to `Containers/` → Find the application's folder
+4. Move it to Trash and empty the Trash
+5. Relaunch the app → Seeing the "Welcome" screen = Successful Reset
+
+> [!NOTE]
+> Deleting an app from `/Applications/` **does not** delete its Container!
+> The Container must be deleted separately to achieve a true reset.
 
 ---
 
-## Recommended Reading
-* [Check app installation and processes on Mac](https://support.apple.com/guide/apple-platform-support/check-app-installation-and-processes-apda5f8a096c/web)
-* [Learn about App Store security protections](https://support.apple.com/guide/apple-platform-support/learn-about-app-store-security-protections-apd1a7b8e19c/web)
-* [Distribute content with mobile device management](https://support.apple.com/guide/deployment/distribute-content-depe210182ce/web)
-* [Explainer: the app sandbox](https://eclecticlight.co/2020/09/24/explainer-the-app-sandbox/)
-* [macOS Tahoe brings a new disk image format](https://eclecticlight.co/2024/09/16/macos-tahoe-brings-a-new-disk-image-format/)
+## Part 3 — Force Quit
 
-## Summary Video
-<!-- YouTube Summary Video -->
+### The Three Methods
+
+| Method | How-to |
+|---|---|
+| **Fastest** | `Cmd + Option + Esc` |
+| **Dock** | Right-click the app icon + Hold `Option` → Force Quit |
+| **Most Detailed** | Activity Monitor → Select process → Click `X` → Force Quit |
+
+### Quit vs. Force Quit
+
+| Action | Signal Sent | Result |
+|---|---|---|
+| Standard Quit | `SIGTERM` | The app saves state and shuts down gracefully |
+| Force Quit | `SIGKILL` | The kernel terminates the app instantly — **without saving** |
+
+---
+
+## Part 4 — VPP and Self Service
+
+### The Enterprise Workflow
+
+```text
+Apple Business Manager (ABM)
+        ↓ Licenses
+    Enterprise MDM Server
+        ↓ Silent Install
+      Employee Mac
+        ↓ 
+  Self Service (Private App Catalog)
+```
+
+**The Result:** The employee clicks "Install" — MDM deploys the app silently in the background — **zero Admin prompts, zero personal Apple Account requirement.**
+
+---
+
+## Terminal Commands — Appendix
+
+> [!NOTE]
+> The Terminal is not required for this lesson's labs. These commands are provided as an advanced reference for IT administrators.
+
+```bash
+# Manually mount a DMG
+hdiutil attach /path/to/image.dmg
+
+# Unmount a DMG
+hdiutil detach /Volumes/ImageName
+
+# Silent PKG installation (for IT deployment scripts)
+sudo installer -pkg /path/to/file.pkg -target /
+
+# Reset app settings (Preferences only, not the full Container)
+defaults delete com.apple.Safari
+
+# Flush preferences cache (after deleting a Container)
+killall cfprefsd
+
+# Verify PKG signature
+pkgutil --check-signature /path/to/file.pkg
+
+# Silent Rosetta 2 installation
+softwareupdate --install-rosetta --agree-to-license
+```
+
+---
+
+## Links and Further Reading
+
+- [Check app installation and processes on Mac — Apple Support](https://support.apple.com/guide/apple-platform-support/check-app-installation-and-processes-apda5f8a096c/web)
+- [Learn about App Store security protections](https://support.apple.com/guide/apple-platform-support/learn-about-app-store-security-protections-apd1a7b8e19c/web)
+- [Distribute content with mobile device management](https://support.apple.com/guide/deployment/distribute-content-depe210182ce/web)
+- [Explainer: the app sandbox — Eclectic Light](https://eclecticlight.co/2020/09/24/explainer-the-app-sandbox/)
+
+---
+
+## 🎬 Summary Video
+
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/z_52E-9epcY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-!!! tip "Visual Aids"
-    These images illustrate the interfaces or mechanisms relevant to the lesson.
+---
 
-![Slide103_image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
-![Slide121_image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
-![Slide66_image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
-![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
-![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
+## Presentation Visuals
+
+!!! tip "Presentation Visuals"
+    These images illustrate the interfaces covered in the lesson.
+
+![Installation Types Comparison](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
+![ABM and MDM Diagram](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
+![Self Service Interface](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
+![App Store in Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
+![Force Quit in Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)

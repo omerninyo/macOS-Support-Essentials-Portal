@@ -1,5 +1,5 @@
 # שיעור 13: תהליך האתחול
-**חלק ג': מדריך עזר לתלמיד (vEXP)**
+**חלק ג': מדריך עזר לתלמיד**
 
 
 ## סקירה
@@ -14,6 +14,9 @@
 *   **Boot ROM - Stage 0:** הקוד הראשון שרץ בהדלקת המק, צרוב בחומרה (Read-Only) ולא ניתן לשינוי. תפקידו לאמת (לפי חתימות חומרה של Apple) ולטעון את השלב הבא (LLB). במקרה של תקלה חמורה, זהו הרכיב שמכניס את המק למצב DFU.
 *   **Low-Level Bootloader / LLB (Stage 1):** מנהל האתחול ברמה הנמוכה. תפקידו העיקרי הוא לחפש ולהבין מאיזה Volume  המק אמור לבצע Boot, ולאמת את ה-LocalPolicy שלו מול ה-Secure Enclave.
 *   **iBoot - Stage 2:** מנהל האתחול ברמה הגבוהה (מה שבעבר כונה "Firmware"). מאמת את ההאשים של ה-SSV (Signed System Volume) ומעלה את ליבת המערכת (Kernel) בצורה בטוחה.
+
+> *→ SSV נלמד לעומק בשיעור 06 (FileSystem) — כאן iBoot שומר עליו כשומר גדר על החתימה לפני עליית הקרנל.*
+
 *   **Kernel - XNU:** ליבת מערכת ההפעלה macOS. לוקחת שליטה מ-iBoot, מזהה את החומרה המלאה, מפעילה שירותי מערכת ומערכות קבצים (APFS).
 *   **DFU Mode - Device Firmware Update:** מצב חירום קיצוני (ברמת Boot ROM) המאפשר לחבר מק תקול למק תקין עם כבל USB-C ו-Apple Configurator כדי לשחזר Firmware (Revive / Restore) כשהמק לא מסוגל לאתחל כלל.
 
@@ -29,6 +32,9 @@
 
 *   **Kernel Extensions - Kexts:** תוכנות שרצות במרחב הליבה של המערכת (Ring 0 / Kernel Space). אפל מסיימת את תמיכתה בהן בהדרגה, מאחר וקריסה של Kext מפילה את כל המחשב (Kernel Panic). טעינתן מחייבת מעבר ל-Reduced Security.
 *   **System Extensions:** המחליף המודרני ל-Kexts. הרחבות אלו רצות כ-User Space Processes (בתוך "Sandbox"), ולכן הן בטוחות בהרבה. אם הן קורסות, המק ממשיך לעבוד. (סוגים נפוצים: Network Extensions ל-VPN/Firewall, Endpoint Security לאנטי וירוס).
+
+> [!IMPORTANT]
+> **חשוב לארגון:** סוכני אבטחה (AV/EDR) כמו CrowdStrike ו-SentinelOne עברו כבר ל-System Extensions. אם יצרן כלי אבטחה עדיין דורש Kext — זהו סימן אדום לכלי ישן. דרשו מהיצרן גרסה מעודכנת לפני פריסה בארגון.
 *   **סביבת השחזור (Recovery)OS Password:** בעבר (ב-Intel) השתמשנו ב-Firmware Password. ב-Apple Silicon, ניתן דרך מערכת MDM (פקודת `SetRecoveryLock`) לנעול את היכולת להיכנס למצב השחזור (Recovery / Startup Options) ללא ססמה מרחוק.
 *   **1TR (One True Recovery):** סביבת השחזור הייעודית והאחידה של מחשבי Apple Silicon המאחדת את כלל אפשרויות האתחול למקום אחד, ומופעלת באמצעות לחיצה ארוכה על כפתור ההפעלה.
 *   **Fallback Recovery (frOS):** מנגנון הגיבוי (Resiliency) לסביבת ה-Recovery הראשית ב-Apple Silicon. מופעל על ידי לחיצה כפולה (קצרה ואז ארוכה) על כפתור ההפעלה. מספק כלי התאוששות למקרה שסביבת ה-1TR הראשית נפגמת, אך אינו מאפשר שינוי של רמת האבטחה (Startup Security Utility).
@@ -49,6 +55,8 @@
 
 > [!WARNING]
 > פקודת `bputil` פועלת מתוך macOS Recovery בלבד (או כ-root במערכת פעילה להצגת מידע) ומאפשרת שינוי קרביים עמוקים של ה-LocalPolicy מבלי להיעזר בממשק הגרפי. שימוש שגוי עלול להפוך את המק ללא זמין לאתחול (Unbootable).
+
+> *→ Bootstrap Token ו-FileVault שנלמדו בשיעור 04 הם מה שמאפשר ל-MDM לשנות Security Policy מרחוק — בלעדיהם, איש IT צריך להגיע פיזית ל-Recovery כדי לשנות את רמת האבטחה.*
 
 *   **`sudo bputil -d`** או **`bputil --display-policy`**
     *   **פעולה:** מציג את תוכן ה-LocalPolicy (הצפנות, סטטוס Kexts, אישור MDM וכו') של דיסק ההפעלה המקומי.

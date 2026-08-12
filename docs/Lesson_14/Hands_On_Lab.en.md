@@ -5,104 +5,105 @@
 
 ## Exercise 1: Booting into 1TR (Apple Silicon) and Recovery (Intel)
 
-**Objective:** Understand the differences in entering the recovery environment depending on the processor architecture.
+**Objective:** Understand the architectural differences when accessing the Recovery environment based on the processor type.
 
 ### Part A: Entering 1TR on an Apple Silicon Mac
 
-1. Ensure the Mac is completely shut down (Apple menu > Shut Down).
-2. Press and hold the power button (Touch ID) continuously.
-3. Keep holding even when the Apple logo appears, until you see **Loading startup options** on the screen.
-4. On the options screen, notice the new **3D SSD icon** for the Recovery disk (introduced in macOS 26 Tahoe).
-5. Click on the gear icon (Options) and then click **Continue**.
-6. Select an Admin user from the list and enter their password to unlock the Recovery window.
-7. You are now in the 1TR environment for Apple Silicon. Note the main window with the available GUI tools. This environment runs from a completely separate, erasure-proof volume.
+1. Ensure the Mac is completely powered off (Apple Menu > Shut Down).
+2. Press and continuously hold the Power button (Touch ID).
+3. Continue holding even when the Apple logo appears, until the screen displays **Loading startup options**.
+4. On the options screen, observe the new **3D SSD** icon representing the recovery disk (New in macOS 26 Tahoe).
+5. Click on the gear icon (**Options**) and then click **Continue**.
+6. Select an Administrator user from the list and enter their password to unlock the Recovery window.
+7. You are now inside the Apple Silicon 1TR environment. Note the main window displaying the available GUI tools. This environment runs from an entirely separate volume that is highly resilient to accidental erasures.
 
-### Part B: Entering Recovery on an Intel-based Mac (For Comparison/Familiarity)
+### Part B: Entering Recovery on an Intel-based Mac (For Comparison)
 
-1. Ensure the Mac is completely shut down.
-2. Press the power button and immediately press and hold the Command and R keys on the keyboard together.
+1. Ensure the Mac is completely powered off.
+2. Press the Power button and immediately press and hold the **Command (⌘)** and **R** keys together.
 3. Release the keys when the Apple logo or a spinning globe (for Internet Recovery) appears.
-4. Enter an admin password if prompted, until the macOS Utilities window appears, similar to Apple Silicon.
+4. Enter an admin password if prompted, until the macOS Utilities window appears (similar to the Apple Silicon experience).
 
 ---
 
 ## Exercise 2: Navigating Disk Utility in Recovery Mode
 
-**Objective:** Familiarize yourself with the disk management tools in Recovery mode and see how the system is built "under the hood," without actually erasing anything at this stage.
+**Objective:** Explore the disk management tools in Recovery Mode and visualize the underlying filesystem architecture, without performing an actual erasure at this stage.
 
-1. In the main Recovery window, select the **Disk Utility** app and click **Continue**.
-2. In the top menu of the app, click the **View** button and select **Show All Devices**.
-3. Examine the hierarchy in the sidebar: note the physical disk at the top, the Container below it, and the various Volumes inside (focusing on `Macintosh HD` and `Macintosh HD - Data`).
-4. Click on `Macintosh HD`, and then click the **First Aid** button at the top of the window to see the health check wizard, but there is no need to run it now.
-5. *Instructor Note:* On Apple Silicon, you cannot format the entire physical disk at once from this window; you can only erase the System Volume Group. This ensures the 1TR environment itself is preserved.
-6. Quit Disk Utility (via the top menu `Disk Utility > Quit`).
-7. Exit the recovery environment by clicking the Apple menu and selecting **Restart** to boot the Mac back into the standard macOS.
+1. From the main Recovery window, select the **Disk Utility** application and click **Continue**.
+2. In the application's top menu bar, click the **View** button and select **Show All Devices**.
+3. Examine the hierarchy in the sidebar: Observe the top-level physical disk, the Container beneath it, and the various Volumes nested within (focusing on `Macintosh HD` and `Macintosh HD - Data`).
+4. Select `Macintosh HD`, then click the **First Aid** button at the top of the window to view the health check wizard (there is no need to run it right now).
+5. *Instructor Note:* In the Apple Silicon environment, you cannot format the entire physical disk at once from this window; you can only erase the system's Volume Group. This safeguard ensures the 1TR environment itself remains intact.
+6. Close Disk Utility (Top menu bar: Disk Utility > Quit).
+7. Exit the Recovery environment by clicking the Apple menu and selecting **Restart** to boot the Mac back into the standard operating system (macOS).
 
 ---
 
 ## Exercise 3: Secure and Immediate Erasure via EACS (Erase All Content and Settings)
 
-**Objective:** Reset the Mac to an out-of-the-box (OOBE) state quickly and securely via System Settings, using the Crypto-Erase mechanism.
+**Objective:** Reset the Mac to an Out-Of-Box Experience (OOBE) state rapidly and securely through System Settings, utilizing the Crypto-Erase mechanism.
 
-> **Warning for Students:** This exercise will permanently delete all data, users, and settings from your Mac! Ensure all previous exercises are completed and there is no important data left unbacked up. Remember to perform this lab on the external USB drive if instructed by the facilitator.
+> [!WARNING]
+> **Student Warning:** This exercise will permanently wipe all data, users, and settings from your Mac! Ensure all previous exercises are complete and no critical data is left unbacked up. Remember to perform this lab on the external USB drive if instructed by your facilitator.
 
 1. Boot the Mac normally and log in with a Local Admin account.
 2. Open **System Settings**.
 3. Navigate in the sidebar to **General** > **Transfer or Reset**.
 4. Click the **Erase All Content and Settings** button.
-5. The Erase Assistant tool will ask for the Administrator password - enter it and click Unlock.
-6. The system will display a window detailing everything that is about to be deleted (Apple Account, Touch ID fingerprints, paired Bluetooth devices, wallet data, etc.).
-7. Follow the instructions. If you are signed in with an Apple Account, you will be asked to enter a password to sign out (this disables Activation Lock so the Mac won't lock on the next boot).
-8. After signing out, a final red warning screen will appear. Click **Erase All Content and Settings** to confirm.
-9. The Mac will restart, the screen will go black, and after a very short time, you will see the "Hello" screen of the Setup Assistant. The cryptographic key deletion (Crypto-Erase) was successful, and the system is reset without needing to reinstall the files themselves!
+5. The Erase Assistant will prompt for the administrator password—enter it and click **Unlock**.
+6. The system will display a summary detailing everything scheduled for deletion (Apple Account, Touch ID fingerprints, paired Bluetooth devices, Wallet data, etc.).
+7. Follow the on-screen prompts. If logged into an Apple Account, you will be prompted to enter the password to sign out (this disables Activation Lock to prevent the machine from locking upon reboot).
+8. Following the sign-out, a final red warning screen will appear. Click **Erase All Content and Settings** to provide final confirmation.
+9. The Mac will reboot, the screen will go black, and shortly after, you will be greeted by the Setup Assistant's "Hello" screen. The cryptographic key deletion (Crypto-Erase) was successful, and the system is reset without requiring a full OS reinstallation!
 
 ---
 
-## Exercise 4: "Enterprise Seasoning" Simulation - Remote Wipe and Activation Lock
+## Exercise 4: Enterprise Spice Simulation - Remote Wipe and Activation Lock
 
-**Objective:** Understand what happens when an MDM server intervenes and sends a remote wipe command, and how IT professionals handle a device locked by Activation Lock from a previous user.
+**Objective:** Understand the sequence of events when an MDM server dispatches a remote wipe command, and how IT administrators resolve Activation Lock on a device previously provisioned to another user.
 
 ### Part A: Discussion and Scenario - Remote Wipe Command
 
-1. **Scenario:** The Mac is lost or stolen. The IT admin logs into the MDM console (e.g., Jamf Pro) and sends a remote wipe command to the device.
-2. **Discussion (What actually happens):** When the command reaches the Mac, it performs exactly the same EACS process we practiced earlier. The Secure Enclave destroys the encryption key, the data instantly becomes unreadable, and the system resets immediately after.
+1. **Scenario:** A Mac is reported lost or stolen. The IT administrator logs into the MDM console (e.g., Jamf Pro) and dispatches a remote wipe command to the device.
+2. **Discussion (Under the Hood):** Upon receiving the command, the Mac silently executes the exact same EACS process practiced previously. The Secure Enclave shreds the encryption key, rendering the data instantly unreadable, followed by an immediate system reset.
 
-### Part B: Administrative Activation Lock Bypass Code
+### Part B: Administrative Activation Lock Release (Bypass Code)
 
-1. **Scenario:** An employee left the company and left an erased Mac behind. When you first turn on the computer (Setup Assistant), the screen demands the Apple ID and password of the former employee.
-2. The Mac is organization-owned and MDM-managed, so the administrative bypass code is backed up on the server.
-3. As an IT professional, you must access the MDM interface, locate the locked Mac's record (by Serial Number), and navigate to the security and management tab of the device.
-4. Find the **Activation Lock Bypass Code** field and copy the 16-character code.
-5. On the locked Mac displaying the login prompt, do NOT enter an email address! Instead, click on **Recovery Assistant** in the top menu.
-6. Select the option **Activate with MDM key** or "Enter code".
-7. Enter the complex 16-character code you copied from the MDM console.
-8. The Mac will immediately release the lock against Apple's servers, and you can continue to set up the computer from scratch.
+1. **Scenario:** An employee departs the organization and leaves behind a wiped Mac. Upon first boot (Setup Assistant), the screen displays a prompt requiring the previous user's Apple ID and password.
+2. The Mac is corporate-owned and MDM-enrolled, meaning the administrative Bypass Code is safely escrowed on the server.
+3. As an IT administrator, you must access the MDM interface, locate the locked Mac's record (via Serial Number), and navigate to the device's security/management tab.
+4. Locate the **Activation Lock Bypass Code** field and copy the 16-character string.
+5. On the locked Mac displaying the login prompt, do NOT enter an email address! Instead, click on **Recovery Assistant** in the top menu bar.
+6. Select the option to **Activate with MDM key** (or "Enter Code").
+7. Enter the complex 16-character code copied from the MDM console.
+8. The Mac will instantly authenticate against Apple's servers, release the lock, and allow you to proceed with a fresh provisioning workflow.
 
 ---
 
-## Extra Exercise / Technical Tip of the Iceberg
+## Bonus Exercise for IT Admins: The Command Line (Terminal)
 
-As IT professionals, we sometimes need to access advanced tools located under the surface or when the GUI is insufficient. The Recovery mode includes access to the Terminal shell, through which important commands can be run for unique cases.
+As IT professionals, we occasionally need to leverage advanced under-the-hood tools, particularly when the GUI falls short. The Recovery environment includes access to the Terminal shell, allowing us to execute critical commands for unique edge cases.
 
-In Recovery mode (after entering 1TR as detailed in Exercise 1), select **Utilities** > **Terminal** from the top menu bar.
+While in Recovery Mode (after booting into 1TR as detailed in Exercise 1), select **Utilities** > **Terminal** from the top menu bar.
 
-### The Built-in Password Reset Tool
-Sometimes we need to reset a user password (provided we have a Recovery Key or appropriate permissions). Instead of searching for a complicated wizard, we can simply call it from the command line:
+### The Built-In Password Reset Tool
+Occasionally, you may need to reset a user password (provided you hold the Recovery Key or appropriate credentials). Instead of navigating complex GUI paths, you can invoke the tool directly via CLI:
 ```bash
 resetpassword
 ```
-This command will automatically pop up the Reset Password Assistant (a graphical wizard), where we can select the user and set a new password.
+This command instantly launches the graphical Reset Password Assistant, allowing you to select the target user and define a new password.
 
-### macOS 26 Tahoe Diagnostics
-To generate a comprehensive diagnostic archive straight to an external USB drive for offline analysis by IT or Apple Support:
+### Advanced Diagnostics in macOS 26 Tahoe
+To capture logs and hardware data directly to an external USB drive when a Mac refuses to boot:
 ```bash
 recoverydiagnose
 ```
-This tool is new to macOS 26 Tahoe and helps in scenarios where the system is failing to boot and traditional logs are inaccessible.
+This command generates a comprehensive archive for offline analysis—a vital new utility in Tahoe for diagnosing complex system failures.
 
-### Checking System and Recovery Partitions
-To see the physical and logical layout of all drives, including the hidden recovery partitions that do not appear in Disk Utility, run:
+### Inspecting System and Recovery Partitions
+To visualize the physical and logical layout of all drives, including hidden recovery partitions excluded from Disk Utility, run:
 ```bash
 diskutil list
 ```
-In the output, you will notice that the Recovery environment loads a minimal file system from a virtual disk (Ramdisk) and displays a large number of small Volumes necessary for booting the Apple Silicon recovery tools.
+In the output, you will observe that the Recovery environment mounts a minimal filesystem from a virtual Ramdisk and exposes multiple small Volumes essential for launching the Apple Silicon recovery toolset.

@@ -1,56 +1,60 @@
 # Lesson 03: Security
-**Learning Guide**
+**Student Learning Guide**
 
+---
 
-## Lesson Objectives
+## Objective
 
 * Gatekeeper
 * XProtect
 * TCC
 * PPPC
-**[Image Recommendation]:** A minimalist vector icon of a lock or shield on a dark background.
 
+---
 
-## Overview
+## 🎧 Listen to Summary — Before or After Class
 
 <!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/346a4041-217b-46cf-bce2-d08365f74c1f/"></iframe></div>
 
-## Terminology
+---
 
-* **Gatekeeper:** macOS's security mechanism ensuring only software from a trusted source (App Store or identified developers) is allowed to run. It verifies the developer's signature and Notarization.
-* **Notarization:** An automated process by Apple where apps are scanned for known malicious code prior to distribution, even before reaching the user. Gatekeeper requires this approval for all software downloaded from the internet.
-* **XProtect:** The built-in, silent Anti-Virus system of macOS. It works in the background, is signature-based (YARA), and blocks the execution of known malware upon the first run attempt.
-* **XProtect Remediator:** An active scanning mechanism running in the background (via LaunchDaemons) that performs periodic scans to detect and remove malware that has already penetrated the system.
-* **Transparency, Consent, and Control (TCC):** The macOS privacy mechanism, requiring the user to actively approve app access requests to sensitive resources (like camera, microphone, location, documents folder, or full disk).
-* **Privacy Preferences Policy Control - PPPC:** An enterprise Configuration Profile (Payload) distributed by the MDM system, allowing IT admins to pre-grant (or deny) TCC permissions for apps, thus preventing users from getting approval pop-ups.
-* **System Integrity Protection - SIP:** A security mechanism in macOS that prevents even the root user from modifying sensitive system files, including the TCC databases.
-* **Quarantine:** An Extended Attribute attached to files downloaded from the internet by apps like Safari, Mail, or messaging clients. This tag triggers the Gatekeeper check upon opening the file.
+## Core Concepts (Terminology)
 
-### Historical Milestones in macOS Security
-| Year | Technology | Historical Note / Anecdote |
-|---|---|---|
-| **2007** | **Code Signing** | First introduced in Mac OS X 10.5 Leopard, alongside the release of the first iPhone. The lead engineer jokingly claimed responsibility for the "OS fascism." |
-| **2012** | **Gatekeeper** | Fully implemented as a natural extension of code signing, to block malicious code execution without user knowledge. |
-| **2018** | **TCC (Privacy)** | For the Mac's first 15 years, privacy wasn't an issue. Only in Mojave did the system expand to 15 categories, today protecting dozens of personal resources. |
-| **General** | **YARA Rules** | The XProtect engine is based on the YARA language, created about 12 years ago. The name is a joke on acronyms: "YARA: Another Recursive Acronym". |
+* **Gatekeeper:** The macOS security mechanism that ensures only trusted software (from the App Store or identified developers) is allowed to run on the Mac. It verifies the developer signature and Notarization status.
+* **Notarization:** An automated Apple process where apps are scanned for known malicious code prior to distribution, before reaching the user. Gatekeeper requires this approval for any software downloaded from the internet.
+* **XProtect:** The silent, built-in Anti-Virus system of macOS. It operates in the background, is signature-based (YARA), and blocks the execution of known malware upon the first launch attempt.
+* **XProtect Remediator:** An active scanning mechanism that runs in the background (triggered by LaunchDaemons) and performs periodic scans to detect and remediate malware that has already managed to penetrate the system.
+* **Transparency, Consent, and Control (TCC):** The macOS privacy framework, requiring the user to actively approve application access requests to sensitive resources (such as the camera, microphone, location, documents folder, or full disk access).
+* **Privacy Preferences Policy Control - PPPC:** An organizational Configuration Profile (Payload) deployed by the MDM system. It allows IT administrators to pre-grant (or deny) TCC permissions for applications, thereby preventing users from encountering pop-up prompts that require approval.
+* **System Integrity Protection - SIP:** A security feature in macOS that prevents even the root user from modifying sensitive system files, including the TCC databases.
+* **Quarantine:** An Extended Attribute attached to files downloaded from the internet by apps like Safari, Mail, or messaging clients. This tag triggers the Gatekeeper check when the file is first opened.
+
+> [!TIP]
+> **Historical Milestones in macOS Security**
+> - **2007 - Code Signing:** First introduced in Leopard, alongside the release of the iPhone.
+> - **2012 - Gatekeeper:** Stepped into action to block malicious code execution.
+> - **2018 - TCC (Privacy):** Only in Mojave did the system mature, and today it protects dozens of resources (for the first 15 years, privacy was barely managed at the app level).
+> - **YARA Rules:** The XProtect engine is based on the YARA language. The name is an inside joke: "YARA: Another Recursive Acronym".
 
 ---
 
 ## CLI Commands
 
+> [!NOTE]
+> **Using the Terminal (Command Line)**
+> Advanced Terminal commands for managing security and privacy are provided here. There is no need to memorize their syntax right now! You can simply copy-paste them during the lab (e.g., when resetting Zoom permissions). In-depth Terminal training will be covered comprehensively in Lesson 08.
+
 ### Investigating and Managing Gatekeeper (`spctl`)
-The `spctl` (SecAssessment system policy security) tool is used to manage and check the Gatekeeper system.
+The `spctl` (SecAssessment system policy security) tool is used to manage and evaluate the Gatekeeper system.
 
-* **Check an app - Gatekeeper Assessment (is it approved and will it run):**
-
+* **Evaluate an App (Check if Gatekeeper approves it to run):**
   ```bash
   spctl -a -vv /Applications/AppName.app
   ```
-  *(The `-a` flag performs an Assessment, `-vv` shows verbose output including Notarization and developer info).*
+  *(The `-a` flag performs an Assessment; `-vv` provides verbose output including Notarization info and Developer Identity).*
 
-* **Remove the Quarantine tag from an internet-downloaded file (bypassing the initial launch warning):**
-
+* **Remove the Quarantine Tag from a file (bypasses the initial execution warning):**
   ```bash
   xattr -d com.apple.quarantine /path/to/AppName.app
   ```
@@ -59,34 +63,26 @@ The `spctl` (SecAssessment system policy security) tool is used to manage and ch
 The `xprotect` tool allows checking and controlling signature updates.
 
 * **Check the currently installed version of XProtect:**
-
   ```bash
   xprotect version
   ```
-
 * **Force the installation of the latest update from iCloud:**
-
   ```bash
   sudo xprotect update
   ```
 
 ### Managing and Resetting TCC Permissions (`tccutil`)
-The `tccutil` tool allows resetting granted privacy permissions, forcing the system to ask for them again the next time the app opens. (Note: You cannot grant permissions via `tccutil`, only reset them).
+The `tccutil` tool allows you to reset granted privacy permissions, forcing the system to request them again. You cannot grant permissions through it, only reset them.
 
-* **Reset all TCC permissions for all apps (return to "factory" state regarding privacy):**
-
+* **Reset all TCC permissions for all applications:**
   ```bash
   tccutil reset All
   ```
-
-* **Reset Camera permission only (for all apps that requested it so far):**
-
+* **Reset only the Camera permission (for all apps that requested it so far):**
   ```bash
   tccutil reset Camera
   ```
-
-* **Reset Camera permission for a specific app (e.g., Terminal or Zoom), by Bundle ID:**
-
+* **Reset the Camera permission for a specific application (e.g., Terminal or Zoom):**
   ```bash
   tccutil reset Camera com.apple.Terminal
   tccutil reset Camera us.zoom.xos
@@ -94,75 +90,61 @@ The `tccutil` tool allows resetting granted privacy permissions, forcing the sys
 
 ---
 
-## Critical Paths, Logs, and Databases
+## Critical Paths, Logs, and Databases (Paths & Plists)
 
 ### TCC Database Locations
-The TCC system stores permissions inside SQLite databases. These are protected by System Integrity Protection (SIP) and cannot be manually edited or deleted unless SIP is disabled.
-
-* **User-level Database (managing permissions like camera, microphone, contacts, and local folders):**
-
-  ```text
-  ~/Library/Application Support/com.apple.TCC/TCC.db
-  ```
-
-* **System-level Database (managing critical permissions like Full Disk Access):**
-
-  ```text
-  /Library/Application Support/com.apple.TCC/TCC.db
-  ```
+TCC databases are protected by SIP and cannot be edited manually.
+* **User Level (Camera, Microphone, Personal Files):** `~/Library/Application Support/com.apple.TCC/TCC.db`
+* **System Level (Full Disk Access):** `/Library/Application Support/com.apple.TCC/TCC.db`
 
 ### XProtect & Remediator
-Locations of signature files and the silent scanning tool:
+* **Current location for XProtect updates (starting from Tahoe):** `/var/protected/xprotect/XProtect.bundle`
+* **The Application running the Remediator scans:** `/Library/Apple/System/Library/CoreServices/XProtect.app`
 
-* **The recent XProtect updates location (starting in Tahoe):**
+### Unified Logging Queries via Terminal
 
-  ```text
-  /var/protected/xprotect/XProtect.bundle
-  ```
+> [!NOTE]
+> **The Logging System - Lesson 16**
+> The following commands look complex and use the `log show` tool. At this stage, there's no need to understand the Predicates (filtering conditions). Use them strictly for copy-pasting in case of debugging. We will learn how to write advanced log queries in the final lesson of the course!
 
-* **The application running the XProtect Remediator (the periodic scanning and remediation tool):**
-
-  ```text
-  /Library/Apple/System/Library/CoreServices/XProtect.app
-  ```
-
-### Log Queries (Unified Logging) via Terminal
-To monitor the activity of the mechanisms in the Terminal environment:
-
-* **Monitor Gatekeeper activity (investigating app blocks):**
-
+* **Monitor Gatekeeper activity (investigate app blocks in the last 1h):**
   ```bash
   log show --predicate 'subsystem == "com.apple.syspolicy"' --info --last 1h
   ```
-
-* **Monitor TCC system blocks (who tried to access what and when it was blocked):**
-
+* **Monitor TCC system blocks:**
   ```bash
   log show --predicate 'subsystem == "com.apple.TCC"' --info --last 1h
   ```
-
-* **View XProtect Remediator scan results over the last 24 hours (was malware detected):**
-
+* **View XProtect Remediator scan results (was malware detected in the last 24h):**
   ```bash
   log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
   ```
 
 ---
 
-## Recommended Reading and Links
+## Recommended Links and Further Reading
 
-* [Gatekeeper and runtime protection in macOS](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web) - An in-depth article on the Gatekeeper mechanism and app signing.
-* [Protecting against malware in macOS](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web) - Apple's technical overview of internal anti-virus systems in Mac (XProtect).
-* [Control access to your camera on Mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac) - A simple guide on managing TCC privacy permissions for the camera and microphone.
-* [Safely open apps on your Mac](https://support.apple.com/en-us/HT202491) - An end-user explanation of the warning messages when opening new apps.
-* [Privacy Preferences Policy Control payloads for MDM](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - Documentation for system admins on how to manage TCC permissions remotely.
+* [Gatekeeper and runtime protection in macOS](https://support.apple.com/guide/security/gatekeeper-and-runtime-protection-secbd103561c/web) - In-depth guide on Gatekeeper.
+* [Protecting against malware in macOS](https://support.apple.com/guide/security/protecting-against-malware-sec469d47bd8/web) - Apple's overview of XProtect.
+* [Control access to your camera on Mac](https://support.apple.com/guide/mac-help/control-access-to-the-camera-mchlf6d108da/mac) - Managing TCC.
+* [Safely open apps on your Mac](https://support.apple.com/en-us/HT202491) - App opening warning messages.
+* [Privacy Preferences Policy Control payloads](https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payloads-dep38df53c2a/web) - Managing TCC via MDM.
 
-## Summary Video
+---
+
+## 🎬 Summary Video
 
 <!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/D28yJofP3fU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+---
+
+## 💡 Presentation Visuals
+
+> [!NOTE]
+> These images can be projected in class when explaining the topic, or integrated into presentations.
 
 !!! tip "Visual Aid (Student Reference)"
     These images illustrate the interface or mechanism relevant to the lesson topic.

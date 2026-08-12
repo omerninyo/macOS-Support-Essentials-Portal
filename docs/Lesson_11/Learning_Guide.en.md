@@ -1,75 +1,91 @@
 # Lesson 11: Peripherals
-**Student Learning Guide (vEXP)**
+**Student Learning Guide**
 
-## Overview
+## 🎧 Overview (Podcast)
 
 <!-- NotebookLM Podcast from Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/fd31f0d4-5f45-4a2f-acea-e9d8ba503f57/"></iframe></div>
 
-## Core Terms and Concepts
+---
 
-* **Accessory Security:** A security mechanism on Macs with Apple Silicon that requires explicit user approval before USB or Thunderbolt accessories (or SD cards) are allowed to communicate with the system. It can be managed via System Settings -> Privacy & Security or through MDM profiles.
-* **Thunderbolt vs. USB-C:** The physical connection shape (Type-C) is often identical, but the protocol differs. Thunderbolt 3/4 ports and cables support significantly higher data transfer speeds (up to 40Gbps) and device daisy chaining compared to standard USB cables. Thunderbolt 5 increases this up to 80Gbps (Symmetric) and 120Gbps (Asymmetric mode downstream).
-* **DFU Port:** A specific USB-C port on the Mac (especially on Apple Silicon) designed for entering DFU mode for firmware recovery (Revive/Restore) via Apple Configurator. On laptops, this is usually the left port closest to the user.
-* **CUPS - Common Unix Printing System:** The built-in printing engine in macOS. An open-source system (originally developed by Apple) that manages all print queues, drivers, and network protocols for printers.
-* **The Chooser (History):** An early Apple network printer management tool that started as Choose Printer in 1984 and became the legendary Chooser in 1991 (System 7).
-* **AirPrint:** Apple's wireless protocol that allows printing without the need to install dedicated drivers. Supported by most modern printers.
-* **Printing Payload:** An MDM Configuration Payload that allows network administrators to remotely configure printers, printer lists, and default printers.
-* **AirPrint Payload:** An MDM Payload that allows silent distribution of IP addresses and routing of AirPrint-supported printers to enterprise users.
-* **PPD - PostScript Printer Description:** A configuration file used by CUPS to understand the capabilities of the specific printer (paper sizes, trays, color printing).
-* **Declarative Device Management (DDM) Storage Management:** A declarative configuration in macOS 15+ that allows administrators to define explicit mount policies for external and network storage (e.g., Read-only or Disallowed) replacing older script-based methods.
+## Core Terms & Concepts
 
-## Terminal (CLI) Commands List
+| Concept | Background & Meaning |
+| :--- | :--- |
+| **Accessory Security** | A security mechanism in Apple Silicon Macs that requires explicit user approval before USB/Thunderbolt accessories are allowed to communicate with the system (protects against physical attacks). This can be managed via System Settings -> Privacy & Security or through MDM. |
+| **Thunderbolt vs. USB-C** | The physical connector (Type-C) is often identical, but the underlying protocol is entirely different. Thunderbolt 3/4 cables and ports support data transfer rates up to 40Gbps. Thunderbolt 5 increases this throughput up to 80Gbps, and up to 120Gbps in Asymmetric mode. |
+| **DFU Port** | A specific USB-C port on a Mac (primarily on Apple Silicon Macs) designated for putting the machine into a deep firmware recovery state (Revive/Restore) using Apple Configurator. This is typically the left port closest to the user. |
+| **CUPS** | Common Unix Printing System. The built-in printing engine of macOS, responsible for managing all print queues, drivers, and network protocols for printers. |
+| **PPD** | PostScript Printer Description. A "blueprint" file used by CUPS to understand the capabilities of a specific printer (e.g., paper sizes, trays, color profiles). |
+| **AirPrint** | Apple's wireless printing protocol that enables printing without the need to install drivers. It is based on IPP and uses Bonjour (mDNS) for network discovery. |
 
-### Printing Management and Diagnostics (CUPS)
-The printing system in macOS can be fully managed quickly from the command line.
+> [!NOTE]
+> **Technical Note (Frequency Interference):** USB 3.0 devices can emit RF noise in the 2.4 GHz band. This interference directly conflicts with Bluetooth and Wi-Fi connections. If a wireless mouse becomes inexplicably laggy or erratic, check if a USB 3.0 hub or adapter is placed too close to the Mac.
 
-* `lpstat -p` - Shows a list of all installed printers on the Mac and their current status.
-* `lpstat -a` - Checks whether printers are accepting new print jobs.
-* `lpstat -o` - Shows the current print job queue.
-* `lpstat -t` - The ultimate diagnostic command for CUPS: prints all possible information regarding the print system status, printers, queues, and service availability.
-* `cancel -a` - Cancels and deletes all print jobs in all queues (very useful for clearing a "stuck" queue that prevents further printing).
-* `cancel <job_id>` - Cancels a specific print job (the ID can be obtained from the `lpstat -o` command).
-* `cupsctl WebInterface=yes` - Enables the CUPS web administration interface. After running this, you can access an advanced graphical interface via the browser at `http://localhost:631`. (Change to `no` to disable).
-* `lpinfo -m` - Shows all available drivers (PPDs) in the system.
-* `lpinfo -v` - Shows all devices (printers physically connected via USB or available on the network) that the CUPS system currently detects.
+---
 
-### System Profiler Tool for Peripheral Diagnostics
-The `system_profiler` command allows you to retrieve detailed information about hardware components directly in the terminal, just as it appears in the System Information app.
+## Command Line Interface (CLI) Reference
 
-* `system_profiler SPUSBDataType` - Displays a detailed list of all currently connected USB devices (including hubs, keyboards, disks, and adapters).
-* `system_profiler SPThunderboltDataType` - Displays details on the Mac's Thunderbolt ports, Link Status, and connected devices. Useful for diagnosing equipment that isn't utilizing its full speed.
-* `system_profiler SPPrintersDataType` - Retrieves detailed information about every printer configured in the system, including driver version, exact PPD path, and its URI.
-* `system_profiler SPBluetoothDataType` - Displays the status of Bluetooth devices, including battery levels and MAC addresses.
+> [!WARNING]
+> Administrative commands in the CUPS system require elevated privileges (such as using `sudo`), but querying and monitoring do not require high-level access.
 
-### Network and Services
+### Print Management & Diagnostics (CUPS)
+| Command | Description |
+|---|---|
+| `lpstat -t` | The ultimate CUPS diagnostic command: outputs all available information regarding the print system status, printers, and queues. |
+| `cancel -a` | Cancels and clears all print jobs across all queues (useful for flushing a "stuck" print queue). |
+| `cupsctl WebInterface=yes` | Enables the hidden CUPS web management interface. Access it via a web browser at `http://localhost:631` (remember to set it back to 'no' when finished). |
+| `lpinfo -v` | Displays all devices (physically connected or available on the network) that the CUPS system currently detects. |
 
-* `networksetup -listallhardwareports` - Displays all network interfaces on the Mac. Sometimes network printers are configured with their own virtual interface, or it's important to verify an external network adapter (USB to Ethernet) is properly recognized by the system at the hardware level.
+### System Profiler for Peripheral Diagnostics
+The `system_profiler` command allows you to extract hardware information without using the GUI:
+* `system_profiler SPUSBDataType` - Displays detailed USB device information.
+* `system_profiler SPThunderboltDataType` - Displays details about Thunderbolt ports and Link Status (speeds).
+* `system_profiler SPBluetoothDataType` - Displays Bluetooth status and battery levels of paired devices.
 
-## Relevant Paths and Files
+---
 
-* `/etc/cups/` - The directory containing the internal configuration files of the CUPS engine (e.g., `cupsd.conf` and `printers.conf`). Changes to these files require root permissions.
-* `/Library/Printers/` - The directory where drivers, plugins, and third-party PPD files are installed.
-* `/var/spool/cups/` - The temporary spool directory where the CUPS system stores files waiting to be printed.
-* `/Library/Managed Preferences/` - The path where configuration profiles (like Printing Payload or Accessory Security restrictions) pushed by the enterprise MDM system are stored.
+## Enterprise Seasoning: Security and Printers in the Organization
 
-## Recommended Links and Further Reading
+In organizations managed by MDM and DDM (Declarative Device Management), IT administrators utilize invisible profiles to streamline workflows for employees and secure enterprise assets:
+* **Storage Management:** Allows restricting USB flash drive access entirely (Disallowed) or setting it to Read-Only to prevent Data Loss Prevention (DLP) incidents.
+* **Printer Payloads:** Enables silent, automated deployment of office network printers without any employee intervention. The printer will simply appear in the print dialog window.
 
-* [Troubleshoot peripheral connections on Mac](https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web) - The official guide for network administrators for troubleshooting peripheral issues.
-* [Allow accessories to connect to Mac](https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac) - A user explanation of the new accessory security mechanism that blocks unknown USB connections.
-* [Manage printer profiles in Apple devices](https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web) - Enterprise documentation on configuring printers remotely using MDM.
-* [Thunderbolt ports aren’t all the same](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/) - An in-depth technical review of the differences between various Thunderbolt and USB-C ports on Macs.
-* [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/) - A historical article on the evolution of adding printers in the Mac environment from its inception to today.
+---
 
-## Summary Video
+## Relevant Paths & Files
+
+| Path / File | Description |
+|---|---|
+| `/etc/cups/` | The directory containing the internal configuration files for CUPS. |
+| `/Library/Printers/` | The directory where printer drivers and PPD files are installed. |
+| `/var/spool/cups/` | The temporary spool directory where files awaiting print are stored. |
+
+---
+
+## Recommended Links & Further Reading
+
+* [Troubleshoot peripheral connections on Mac](https://support.apple.com/guide/apple-platform-support/troubleshoot-peripheral-connections-aps3b8ff2373/web)
+* [Allow accessories to connect to Mac](https://support.apple.com/guide/mac-help/allow-accessories-to-connect-mchlf779ae93/mac)
+* [Manage printer profiles in Apple devices](https://support.apple.com/guide/apple-platform-deployment/printing-payload-settings-apdeb12df380/web)
+* [Thunderbolt ports aren’t all the same](https://eclecticlight.co/2025/01/14/thunderbolt-ports-arent-all-the-same/) - A technical review of the differences in Thunderbolt.
+* [A brief history of the Chooser and printer support](https://eclecticlight.co/2024/10/12/a-brief-history-of-the-chooser-and-printer-support/)
+
+---
+
+## 🎬 Summary Video
 
 <!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/Dxkv03JlXrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-!!! tip "Visual Aid (Student Reference)"
-    These images illustrate the interface or mechanism relevant to the lesson topic.
+---
+
+## 💡 Presentation Visuals
+
+!!! tip "Visual Aids (Student Reference)"
+    These images illustrate the relevant interface or mechanism for the lesson's topic.
 
 ![How_Thunderbolt_5_can_be_faster_or_not_p1_9](../assets/images/Lesson_11/L11_DeepDive_How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 ![Slide139_image46](../assets/images/Lesson_11/L11_LegacySlide_Slide139_image46.jpg)

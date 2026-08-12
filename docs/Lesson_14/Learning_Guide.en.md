@@ -8,43 +8,52 @@
 
 ## Core Recovery Concepts
 
-- **1TR (One True Recovery):** On Apple Silicon, the RecoveryOS is completely separated from the main macOS and stored in a dedicated container. It is designed to be indestructible - even if you completely erase the disk, 1TR survives to allow reinstalling macOS.
-- **Fallback Recovery (frOS):** A backup plan on Apple Silicon. If 1TR fails, the Mac boots a recovery environment from the previous OS update. Activated by a rapid double-press and hold ("di-dah") of the power button.
-- **Device Recovery Assistant (DRA) [Tahoe Exclusive]:** An automated triage tool marked by a first-aid symbol (⊕) that intercepts boot failures. It automatically unlocks FileVault and attempts file system repairs without human intervention.
-- **DFU Mode (Device Firmware Update):** The lowest-level hardware recovery mode. Used when the Mac is completely unresponsive. Requires another Mac, a USB-C cable, and Apple Configurator to "Revive" or "Restore" the firmware.
-- **EACS (Erase All Content and Settings):** A built-in tool for secure and instant erasure (Crypto-shredding). It destroys the encryption keys protecting the Data Volume, instantly turning data into mathematical noise and formatting the Mac in seconds.
-- **Activation Lock:** A theft-deterrent system. When Find My is enabled, the Mac is tied to an Apple Account on Apple's servers. Even if erased, the Mac cannot be activated without the account password or a bypass code.
-- **Recovery Assistant:** The first GUI you see in Recovery Mode. Its job is to authenticate the user. You must enter an Admin password to unlock the encrypted volume before using Disk Utility or changing security settings.
-- **Share Disk:** Replaces Target Disk Mode on Apple Silicon. Shares the Mac's drive over the network or Thunderbolt via the SMB protocol.
+- **1TR (One True Recovery):** On Apple Silicon Macs, the RecoveryOS environment is completely isolated from the standard operating system and resides in a dedicated container. It is designed to be highly resilient—even if the entire disk is wiped, 1TR survives and facilitates OS reinstallation.
+
+> *→ The boot chain leading to 1TR was covered in-depth in Lesson 13 (Boot Process) — here we focus on the operations available after reaching the menu.*
+- **Fallback Recovery (frOS):** A contingency mechanism on Apple Silicon. Should 1TR fail, the Mac will boot into a more minimal recovery environment. Initiated via a rapid double-press and hold (Di-dah) of the Power button.
+- **Device Recovery Assistant (DRA) [New in Tahoe]:** An automated utility identified by a rescue icon (⊕) that launches independently during boot failures. It executes FileVault unlocking and filesystem repairs completely autonomously.
+- **DFU Mode (Device Firmware Update):** The lowest-level hardware recovery mode reserved for catastrophic failures. Requires an operational secondary Mac, a USB-C cable, and Apple Configurator to execute a Revive or Restore.
+- **EACS (Erase All Content and Settings):** A utility for immediate and secure data sanitization via Crypto-shredding. Destroying the Volume Encryption Key (VEK) inside the Secure Enclave instantly renders all data as unreadable noise, bypassing the need for legacy block-level overwriting.
+
+> *→ VEK and FileVault were explored in Lesson 04 (Encryption) — EACS leverages the same VEK to destroy the encryption itself rather than overwriting data cell by cell.*
+- **Activation Lock:** A powerful anti-theft mechanism tied to the user's Apple Account (Find My). Following an erasure, the Mac cannot be provisioned without authenticating the original account or utilizing an enterprise Bypass Code.
+- **Recovery Assistant:** The initial interface encountered within the Recovery environment. Its primary function is to authenticate your identity against the Secure Enclave (using a user password) to unlock the data volume.
+- **Share Disk:** The modern replacement for Target Disk Mode in the Apple Silicon architecture. Allows sharing the Mac's drive over the network or a physical cable utilizing the SMB protocol.
 
 ---
 
 ## Terminal Commands in Recovery
 
-In Recovery mode, Terminal is a powerful tool for diagnostics and actions that cannot be performed from the GUI.
+Within the Recovery environment, the Terminal serves as a powerful diagnostic tool.
 
-### Disk and File System Management – `diskutil`
-- `diskutil list`: Displays all physical and logical drives, including hidden partitions.
-- `diskutil apfs list`: Shows a deep breakdown of APFS containers, volumes, encryption status, and snapshots.
+### Disk and Filesystem Management – `diskutil`
+- `diskutil list`: Displays all physical and logical drives on the system, including hidden partitions such as 1TR.
+- `diskutil apfs list`: Provides an in-depth breakdown of APFS containers, including volumes and encryption status.
 
-### Password Reset and Diagnostics
-- `resetpassword`: Launches the Reset Password Assistant GUI.
-- `recoverydiagnose`: (macOS 26 Tahoe) Executes a comprehensive diagnostic sweep of hardware sensors, boot logs, and APFS health metrics, compiling an archive to a USB drive for offline analysis.
+### Diagnostics and Passwords
+- `resetpassword`: Launches the graphical Password Reset Assistant.
+- `recoverydiagnose`: (New in macOS 26 Tahoe) Generates a comprehensive diagnostic archive (logs, hardware data, APFS state) directly to an external USB drive for advanced offline analysis.
 
-### Network Status
-- `ping -c 4 8.8.8.8`: Verifies external network connectivity, which is required for Activation Lock verification and OS downloads.
-
----
-
-## Activation Lock and Enterprise Context (MDM)
-
-- **Activation Lock Bypass Code:** For devices enrolled in MDM via Apple Business Manager, the organization stores a bypass code on the MDM server. If a locked Mac needs resetting, IT can enter this code in the Recovery Assistant by selecting "Activate with MDM key".
-- **MDM Remote Wipe (`EraseDevice`):** An IT admin can send a remote wipe command through MDM. This silently triggers the EACS crypto-shredding mechanism, instantly destroying the data.
-- **Recovery Lock:** Replaces the old Intel Firmware Password. It's a 14-character code deployed via MDM that prevents unauthorized access to the 1TR recovery environment.
+### Network Integrity
+- `ping -c 4 8.8.8.8`: Verifies external network connectivity, which is critical for removing Activation Lock and downloading the cryptographically signed OS (SSV).
 
 ---
 
-## Recommended Reading
+## Enterprise & MDM Context (Activation Lock)
+
+- **Activation Lock Bypass Code:** In managed enterprise environments (MDM), a specialized bypass code is escrowed to the server during device enrollment. If an employee departs leaving the Mac locked, an IT administrator can enter this code in the Recovery Assistant under "Activate with MDM Key" to release the device on Apple's servers.
+- **MDM Remote Wipe (`EraseDevice`):** An IT administrator can dispatch a remote wipe command that silently triggers the Crypto-shredding process (EACS) without requiring user interaction.
+
+> [!IMPORTANT]
+> **Operational Warning:** The `EraseDevice` command mandates that the Mac has an active internet connection at the exact moment the command is received. A Mac offline will not execute the command. Additionally, if the Mac triggers Activation Lock post-wipe, AppleCare requires proof of purchase (invoice) to perform a manual override.
+
+- **Recovery Lock:** An MDM profile configuration that defines a 14-character Secure Enclave-level password, effectively blocking unauthorized entry into the Recovery environment entirely (replacing Firmware Passwords on Intel).
+
+---
+
+## Recommended Links and Further Reading
+
 * [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
 * [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
 * [Activation Lock for Mac](https://support.apple.com/en-us/102541)
@@ -56,13 +65,12 @@ In Recovery mode, Terminal is a powerful tool for diagnostics and actions that c
 
 <!-- Summary Video from YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/DDXfEIRgAxs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/MMDlIxlbi10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-!!! tip "Presentation Visuals (Student Aid)"
-    These images illustrate the interface or mechanism relevant to the lesson topic.
-
-![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
-![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
-![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
-![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+!!! tip "Visual Reference (Student Aid)"
+    You may refer to the following images from the course booklet (Asset A) to master this topic:
+    * `L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg`
+    * `L14_DeepDive_Explainer_Recovery_p1_41.jpeg`
+    * `L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png`
+    * `L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg`
