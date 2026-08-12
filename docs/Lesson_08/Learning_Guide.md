@@ -1,6 +1,7 @@
-
 # שיעור 08: טרמינל ושירותי רקע
 **מדריך עזר לתלמיד (גרסת vEXP מורחבת)**
+
+---
 
 ## מטרות השיעור
 
@@ -9,99 +10,146 @@
 * **אבחון עמוק** - קריאת זיכרון ב-Activity Monitor, וקריאה/אבחון של קבצי Plist (XML).
 * **תיבול ארגוני** - איתור ה-Agent של מערכת ה-MDM, הבנת ססטוס הסנכרון שלו ומה עושים כשהוא קורס.
 
+---
 
-
-## סקירה
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d1656076-9c58-4f49-be91-863f210a4214/"></iframe></div>
 
+---
+
 ## מושגי יסוד וטרמינולוגיה
 
-* **CLI (Command Line Interface):** ממשק שורת פקודה. כלי הגישה הישיר למערכת ההפעלה שמעקף את הממשק הגרפי (GUI). ב-macOS הכלי המובנה הוא Terminal (אשר הגיע בירושה ממערכת NeXTSTEP ב-2001).
-* **Zsh (Z Shell):** מעטפת פקודות מודרנית המהווה את ברירת המחדל ב-macOS החל מגרסת Catalina, מחליפה את Bash הישן. מספקת יכולות אוטומציה וסקריפטים מתקדמות יותר.
-* **Process ID (PID):** מזהה תהליך ייחודי (מספר) שמערכת ההפעלה מעניקה לכל תוכנה או שירות שרצים בזיכרון באותו רגע.
-* **launchd:** "מנהל התהליכים" העליון (תמיד מקבל PID 1). אחראי להעלות את המערכת, לנהל שירותי רקע ולהפעיל אפליקציות לפי דרישה. מחליף מנגנוני Unix ישנים כמו `init` ו-`cron` (פותח ב-2005 ומאוחר יותר הורחב עם מערכות DAS ו-CTS לתזמון משימות גמיש).
-* **LaunchDaemon:** שירות מערכת (Daemon) שרץ ברקע תחת הרשאות משתמש העל (`root`), ללא תלות באף משתמש מחובר. סוכני MDM, תוכנות אנטיווירוס ארגוניות ושירותי מערכת קריטיים רצים בצורה זו.
-* **LaunchAgent:** שירות משתמש שרץ ברקע עם ההרשאות של המשתמש שהתחבר למערכת. נטען רק לאחר תהליך ה-Login.
-* **LaunchAngel (מ-Tahoe 26):** סיווג חדש של שירותי מערכת פנימיים המנוהלים ישירות על ידי אפל באמצעות מנגנון ה-`RunningBoard`. קבצים אלו נעולים במחיצת ה-SSV.
-* **Plist (Property List):** פורמט לשמירת קבצי תצורה ב-macOS, מבוסס XML או בינארי. משמש לשמירת העדפות של אפליקציות ולהגדרת הפעולות של Daemons ו-Agents.
-* **מנטר הפעילות (Activity Monitor):** תוכנת הניטור המובנית המציגה עומסי מעבד, שימוש בזיכרון, פעילות כונן ותעבורת רשת. נוצרה בשנת 2003 מאיחוד התוכנות הישנות Process Viewer ו-CPU Monitor.
-* **Memory Pressure:** מדד הזיכרון החשוב ביותר ב-Activity Monitor. מייצג את "מאמץ" המערכת בניהול הזיכרון הפיזי וכולל דחיסת זיכרון (Compression) ושימוש ב-Swap (כתיבה לכונן).
-* **Swap:** מנגנון מערכתי שבו כאשר נגמר הזיכרון הפיזי (RAM), המערכת מעבירה מידע פחות שימושי לכונן ה-SSD. שימוש יתר ב-Swap יגרום לירידה דרסטית בביצועים.
-* **mdmclient:** תהליך מערכת (Daemon) מובנה של אפל, האחראי על קבלת פקודות שרת ה-MDM דרך APNs והחלת הפרופילים במערכת ההפעלה.
-* **TCC (Transparency, Consent, and Control):** מנגנון אבטחה ב-macOS החוסם גישה של תוכנות וסקריפטים לאזורים רגישים ללא אישור מפורש מהמשתמש או מפרופיל ארגוני (PPPC).
-* **BTM (Background Task Management):** מנגנון המאפשר למשתמשים לשלוט באילו שירותי רקע מורשים לרוץ (דרך System Settings). ניתן לנהל באופן מתקדם באמצעות פקודת ה-`sfltool`.
+| מושג | הסבר |
+|---|---|
+| **CLI / Terminal** | ממשק שורת הפקודה במק (הגיע מ-NeXTSTEP ב-2001). כלי עבודה ישיר למערכת עוקף ממשק גרפי. |
+| **Zsh (Z Shell)** | המעטפת (Shell) המודרנית של מק, ברירת המחדל מ-Catalina. |
+| **PID (Process ID)** | מספר זיהוי ייחודי לכל תוכנה או שירות שרצים כרגע. |
+| **launchd** | מנהל התהליכים העליון (PID 1). התוכנה הראשונה שקמה. אחראי להעלות שירותים ואפליקציות. |
+| **LaunchDaemon** | סוכן תשתית שרץ ברקע כ-`root` (אפילו בלי משתמש מחובר). כמו סוכני MDM או אנטיווירוס. |
+| **LaunchAgent** | סוכן של משתמש ספציפי, עולה רק כשהמשתמש עושה Login. |
+| **LaunchAngels (Tahoe)** | שירותי מערכת פנימיים חדשים של אפל תחת המנגנון `RunningBoard`. נעולים לגמרי ב-SSV. |
+| **Plist (Property List)** | קובץ הגדרות של אפל (XML או בינארי). שומר הכל: ממיקום חלונות עד תזמון משימות למערכת. |
+| **Memory Pressure** | הגרף הקריטי ב-Activity Monitor המראה את "מאמץ" הזיכרון (ירוק, צהוב, אדום). |
+| **Swap** | כתיבת נתוני זיכרון מה-RAM אל הכונן הקשיח. כמות גבוהה מעידה על מחנק זיכרון וחוסר יעילות. |
+| **mdmclient** | ה-Daemon המובנה של אפל האחראי על התקשורת מול ה-MDM והחלת הפרופילים. |
+| **TCC & PPPC** | מנגנון שמגן על מידע רגיש. פותחים חסימות אלו עם פרופיל PPPC ארגוני. |
+| **BTM (Background Task Mgt)** | מנגנון ההגנה על פריטי לוגין (Login Items). מנוהל לעומק דרך פקודת `sfltool`. |
 
-## קיצורי מקלדת בטרמינל (Terminal Shortcuts)
+---
 
-* `Ctrl + C`: עצירת ריצה של פקודה או תהליך נוכחי (Interrupt).
-* `Ctrl + L`: ניקוי המסך (שקול לפקודת `clear`).
-* `Ctrl + A`: קפיצה לתחילת השורה.
-* `Ctrl + E`: קפיצה לסוף השורה.
-* `Tab`: השלמה אוטומטית של שם קובץ, נתיב או פקודה.
+## חלק 1 — קיצורי מקלדת בטרמינל (Terminal Shortcuts)
 
-## פקודות מערכת חשובות
+| קיצור | פעולה |
+|---|---|
+| `Ctrl + C` | **ביטול והצלה:** עוצר מיידית ריצה של פקודה שתקעה את המסך. |
+| `Ctrl + L` | **ניקוי מסך** (כמו הפקודה `clear`). מוחק את הבלגן ויורד להתחלה נקייה. |
+| `Ctrl + A` | קפיצה ל**תחילת** השורה. |
+| `Ctrl + E` | קפיצה ל**סוף** השורה. |
+| `Tab` | **השלמה אוטומטית** של נתיבים ופקודות (הקש פעמיים להצגת אפשרויות). |
 
-* `sudo`: הרצת פקודה יחידה עם הרשאות מנהל רשת/Root. דורש הזנת סיסמת אדמין.
-* `kill -9 <PID>`: "חיסול" מיידי ואלים של תהליך שנתקע לפי המזהה שלו.
-* `top -u`: צפייה בזמן אמת בצריכת משאבי המערכת עם מיון לפי שימוש במעבד (CPU). לחץ על `q` ליציאה.
-* `ps -ax`: הדפסת רשימת כל התהליכים שרצים כעת במערכת.
+---
 
-### פקודת העל `launchctl`
+## חלק 2 — נתיבים קריטיים
 
-* `launchctl list`: רשימת התהליכים תחת מנהל התהליכים הנוכחי.
-* `sudo launchctl print system`: הדפסת מצב כל שירותי המערכת (Daemons).
-* `sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist`: טעינת/הפעלת שירות מערכת.
-* `sudo launchctl bootout system /Library/LaunchDaemons/com.example.plist`: פריקת/השעיית שירות מערכת.
+| מה יש שם? | נתיב מלא | מי הבעלים |
+|---|---|---|
+| **העדפות האפליקציות של המשתמש** | `~/Library/Preferences/` | המשתמש |
+| **סוכנים של המשתמש הנוכחי** | `~/Library/LaunchAgents/` | המשתמש |
+| **סוכני מערכת (Daemons) של IT / צד שלישי** | `/Library/LaunchDaemons/` | מנהל (Root) |
+| **ליבה של macOS (SSV - נעול)** | `/System/Library/LaunchDaemons/` | System (קריאה בלבד) |
+| **ליבת Tahoe החדשה (RunningBoard)** | `/System/Library/LaunchAngels/` | System (קריאה בלבד) |
 
-### ניהול BTM (sfltool) - למערכות Tahoe ומעלה
-* `sudo sfltool dumpbtm > ~/Documents/btmdump.txt`: שאיבת בסיס הנתונים של Background Task Management.
-* `sudo sfltool resetbtm`: איפוס בסיס הנתונים של ה-BTM.
+---
 
-### קריאה וניהול של Plists (`plutil`)
+## נספח — פקודות מערכת חשובות
 
-* `plutil -lint /path/to/file.plist`: בדיקת תקינות הקובץ (Syntax Check) בחיפוש אחר שגיאות תחביר או תגיות חסרות.
-* `plutil -p /path/to/file.plist`: הדפסה פשוטה של התוכן, עוקף קבצים בינאריים.
-* `sudo plutil -convert xml1 /path/to/file.plist`: המרת קובץ מבינארי ל-XML כדי לאפשר עריכה.
-* `sudo plutil -convert binary1 /path/to/file.plist`: החזרת הקובץ לפורמט בינארי לאחר עריכה.
+> [!NOTE]
+> מומלץ לשמור פקודות אלו ב-Cheat Sheet או ב-MDM כסניפטים של קוד (Snippets) לשעת צרה.
+
+### שליטה בסיסית ובתהליכים
+```bash
+# הרצת פקודה יחידה עם הרשאות מנהל
+sudo [command]
+
+# אילוץ אלים לסגירת תהליך שנתקע
+kill -9 <PID>
+
+# מד משאבים חי (במעבד) - יציאה עם 'q'
+top -u
+
+# רשימה מלאה של כלל התהליכים במערכת
+ps -ax
+```
+
+### ניהול שירותים (launchctl ו-BTM)
+```bash
+# הצגת מצב כלל השירותים שרצים עכשיו
+sudo launchctl print system
+
+# אתחול (Load / Unload) של שירות קורס:
+sudo launchctl bootout system /Library/LaunchDaemons/com.example.plist
+sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist
+
+# שליפת מאגר ה-BTM (Background Task Management)
+sudo sfltool dumpbtm > ~/Documents/btmdump.txt
+
+# איפוס עמוק ל-BTM (רק במקרי כשל קריטיים)
+sudo sfltool resetbtm
+```
+
+### קריאה וטיפול ב-Plists (`plutil`)
+```bash
+# הדפסת תוכן קובץ גם אם הוא מוצפן/בינארי
+plutil -p /path/to/file.plist
+
+# בדיקת תקינות הקובץ (Syntax Linting) - חובה לפני הטמעה
+plutil -lint /path/to/file.plist
+
+# המרת קובץ סגור לטקסט XML עריך
+sudo plutil -convert xml1 /path/to/file.plist
+
+# החזרת קובץ לפורמט בינארי וסגור
+sudo plutil -convert binary1 /path/to/file.plist
+```
 
 ### אבחון ה-MDM
+```bash
+# מעקב בזמן אמת אחרי פקודות ה-MDM הנכנסות למחשב
+log stream --predicate 'process == "mdmclient"' --info
 
-* `log stream --predicate 'process == "mdmclient"' --info`: פקודה המציגה בזמן אמת כל פעולה וסנכרון שסוכן ה-MDM מתקשר עם השרת.
-* `sudo profiles renew -type enrollment`: כפיית סנכרון מיידי אל מול שרת ה-MDM מצידו של הלקוח.
-
-## נתיבים קריטיים
-
-* `~/Library/Preferences/`: התיקייה בה נשמרים קבצי ה-Plist האישיים של משתמש.
-* `/System/Library/LaunchDaemons/`: ספריית שירותי הליבה של macOS, מוגנת תחת ה-SSV.
-* `/System/Library/LaunchAngels/`: (החל מ-Tahoe) שירותי מערכת ייעודיים של אפל תחת ניהול RunningBoard, נעולים ב-SSV.
-* `/Library/LaunchDaemons/`: ספרייה המיועדת לסוכני מערכת (Daemons) של צד שלישי (אנטי-וירוס, MDM).
-* `~/Library/LaunchAgents/`: ספרייה המיועדת לסוכנים ברמת משתמש הספציפי שנטענים עם ביצוע ה-Login.
+# פקודה כוחנית למשיכת מידע מה-MDM
+sudo profiles renew -type enrollment
+```
 
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - הסבר לעומק למה אחוזי מעבד במק לפעמים מטעים ואיך לקרוא אותם נכון (התייחסות ל-Performance vs Efficiency Cores).
-* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - רקע היסטורי מעניין המסביר מדוע אפל נשענת כל כך חזק על קבצי Plist מבוססי XML ופורמטים בינאריים לכל הגדרות המערכת.
-* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי של אפל לקריאת לחץ זיכרון בכלי ה-Activity Monitor.
+* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - הסבר למה אחוזי מעבד לפעמים מטעים ואיך לקרוא אותם (Performance vs Efficiency).
+* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - מדוע אפל נשענת כל כך חזק על קבצי Plist.
+* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי לקריאת לחץ הזיכרון.
 
-## סרטון סיכום
+---
+
+## 🎬 סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/UPIUNoYIGPo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+---
 
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+## עזרים ויזואליים מההרצאה
+
+!!! tip "עזרים ויזואליים"
+    תמונות אלו ממחישות את הממשק הנלמד בשיעור.
 
 ![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
 ![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-![26-Tahoe-Automator-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
-
+![Automator Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
+![Console Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
+![Script Editor Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
+![Shortcuts Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
