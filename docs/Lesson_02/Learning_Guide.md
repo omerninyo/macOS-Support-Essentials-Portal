@@ -1,5 +1,9 @@
 # שיעור 02: ניהול משתמשים ואבטחת נתונים
-**מדריך עזר לתלמיד**
+**מדריך עזר לתלמיד · גרסת PILOT**
+
+> **📌 פיילוט בלבד** — הקובץ המקורי שמור ללא שינוי: `Lesson_02_Asset_C_LearningGuide_HE.md`
+
+---
 
 ## מטרות השיעור
 
@@ -8,10 +12,14 @@
 * **העידן ללא סיסמה ואבטחה** - Passkeys והרשאות קבצים (POSIX/ACL), מערכת TCC ו-SIP.
 * **תיבול ארגוני** - עבודה עם Managed Apple Accounts (MAID) ושילוב Platform SSO לכניסה שקופה בארגון.
 
-## סקירה
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/4a1fe7a9-1ab4-4499-aada-0e9c8b5d8aec/"></iframe></div>
+
+---
 
 ## מושגי מפתח (Terminology)
 
@@ -26,14 +34,15 @@
 * **Passwords app:** האפליקציה המרכזית (מ-macOS 15 ומשופרת ב-macOS 26 Tahoe) לניהול סיסמאות, Passkeys וקודי 2FA.
 * **Passkey (מפתח גישה):** תקן הזדהות (FIDO2) ללא סיסמה באמצעות צמד מפתחות קריפטוגרפי ב-Secure Enclave.
 
-!!! info "מודל 5 השלבים להטמעת Passkeys בארגון (Enterprise Passkeys Framework)"
-    כאשר ארגון עובר מסיסמאות מסורתיות להזדהות מאובטחת ללא סיסמה (Passkeys), ההטמעה מתבצעת ב-5 שלבים מובנים:
-    
-    1. **Assessment & Planning (הערכה ותכנון):** מיפוי מערכות ה-IT, דרישות האבטחה והתאימות בארגון.
-    2. **Solution Selection (בחירת פתרון):** בחירת מנהל סיסמאות/זהויות (IdP) התומך בתקני FIDO2/WebAuthn.
-    3. **Pilot & Testing (פיילוט בדיקות):** ניסוי מבוקר עם קבוצת משתמשי IT ומשתמשי קצה נבחרים.
-    4. **Full Deployment (הפצה מלאה):** הרחבת השימוש לכלל עובדי הארגון ודחיפת מדיניות דרך ה-MDM.
-    5. **Monitoring & Optimization (ניטור ואופטימיזציה):** סקירת לוגים, ביטול סיסמאות טקסטואליות וצמצום אירועי פישינג.
+> [!TIP]
+> **מודל 5 השלבים להטמעת Passkeys בארגון (Enterprise Passkeys Framework)**
+> כאשר ארגון עובר מסיסמאות מסורתיות להזדהות מאובטחת ללא סיסמה (Passkeys), ההטמעה מתבצעת ב-5 שלבים מובנים:
+> 1. **Assessment & Planning:** מיפוי מערכות ה-IT ודרישות אבטחה בארגון.
+> 2. **Solution Selection:** בחירת מנהל סיסמאות/זהויות (IdP) התומך בתקני FIDO2.
+> 3. **Pilot & Testing:** ניסוי מבוקר עם קבוצת IT.
+> 4. **Full Deployment:** דחיפת מדיניות דרך ה-MDM.
+> 5. **Monitoring & Optimization:** סקירת לוגים וביטול סיסמאות.
+
 * **POSIX:** מודל ההרשאות הסטנדרטי של UNIX (Owner, Group, Everyone).
 * **ACL (Access Control List):** שכבת הרשאות מתקדמת וגרגולרית המתווספת מעל POSIX.
 * **TCC (Transparency, Consent, and Control):** מנגנון פרטיות החוסם גישה של אפליקציות לקבצים אישיים ולחומרה (כמו מצלמה) אלא אם המשתמש נתן אישור מפורש.
@@ -42,7 +51,14 @@
 * **Platform SSO:** תשתית ב-macOS המאפשרת התחברות למחשב ישירות מול שרת זהויות ענן (IdP) כדוגמת Entra ID או Okta.
 * **Federated Authentication:** מצב בו הזנת אימייל ארגוני מעבירה את המשתמש להזדהות מול שרת החברה, מבלי לדרוש סיסמת Apple.
 
+---
+
 ## פקודות שימושיות (CLI Commands)
+
+> [!NOTE]
+> **שימוש בטרמינל (שורת הפקודה)**
+> מופיעות כאן פקודות טרמינל שאנו מדגימים בשיעור. אין צורך לזכור את התחביר שלהן בעל פה כעת! ניתן פשוט לבצע העתק-הדבק במעבדה כדי לקבל את התוצאה. הלימוד המעמיק של הטרמינל יתבצע באופן מסודר בשיעור 08, ולאחר מכן נלמד על מערכת הלוגים בשיעור 16. בינתיים, השתמשו בזה ככלי בדיקה מהיר בלבד.
+
 | פקודה | תיאור |
 |---|---|
 | `dscl . -list /Users` | הצגת רשימת כלל המשתמשים במערכת (לוקאליים) |
@@ -52,18 +68,24 @@
 | `security list-keychains` | הצגת רשימת מחזיקי המפתחות הפעילים כעת |
 | `log show --predicate 'subsystem == "com.apple.PlatformSSO"'` | חיפוש שגיאות התחברות מול שרתי SSO בלוגים |
 
+---
+
 ## קישורים מומלצים ולקריאה נוספת
 
 * [Intro to user account types](https://support.apple.com/guide/platform-support/sup72e8c67c3/web) - מדריך תמיכה רשמי של אפל.
 * [About Managed Apple Accounts](https://support.apple.com/guide/deployment/depdc4ba8d82/web) - ניהול MAID בארגון.
 * [Explainer: Keychain basics](https://eclecticlight.co/2022/10/15/explainer-keychain-basics/) - מאמר עומק על Keychain.
 
-## סרטון סיכום
+---
+
+## 🎬 סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/S1n1JS-mWTM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+---
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
