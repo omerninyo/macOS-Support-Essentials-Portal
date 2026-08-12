@@ -61,9 +61,8 @@
 </div>
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
-![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
-![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
-![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+    ניתן להיעזר בתמונות הבאות מתוך חוברת הקורס (Asset A) ללימוד הנושא:
+    * `L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg`
+    * `L14_DeepDive_Explainer_Recovery_p1_41.jpeg`
+    * `L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png`
+    * `L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg`
