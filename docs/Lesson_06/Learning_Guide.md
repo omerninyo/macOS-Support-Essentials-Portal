@@ -1,6 +1,9 @@
-
 # שיעור 06: מערכת הקבצים (APFS)
-**מדריך עזר לתלמיד**
+**מדריך עזר לתלמיד · גרסת PILOT**
+
+> **📌 פיילוט בלבד** — הקובץ המקורי שמור ללא שינוי: `Lesson_06_Asset_C_LearningGuide_HE.md`
+
+---
 
 ## מטרות השיעור
 
@@ -9,94 +12,201 @@
 * Firmlinks
 * Spotlight Indexing & Live Text
 
-## סקירה
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/9f334406-f88d-4a75-9797-47bfdc6a6767/"></iframe></div>
 
-## מושגי מפתח (Key Concepts)
+---
 
-* **APFS (Apple File System):** מערכת הקבצים המודרנית של Apple. בנויה לביצועים גבוהים, חלוקת מקום דינמית, והגנה על נתונים.
-* **Container (מכולה):** מאגר האחסון הראשי ב-APFS שמנהל את השטח הפנוי עבור כל הכרכים שבתוכו (מחליף מחיצות קשיחות).
-* **Volume (כרך):** יחידת אחסון לוגית. כרכים חולקים מקום פנוי באופן דינמי ללא צורך להגדיר גודל מראש (Dynamic Space Sharing).
-* **Copy-on-Write (CoW):** מנגנון המונע שחיתות נתונים על ידי כתיבת שינויים לבלוקים חדשים לפני עדכון המצביע למידע.
-* **Clones (שכפולים):** יצירת עותקים מדויקים באותו כרך בשבריר שנייה **ללא תפיסת מקום נוסף** (Zero-storage overhead) עד לביצוע שינוי. Finder מבצע זאת אוטומטית.
-* **SVG (System Volume Group):** מעטפת המאחדת את כונן המערכת וכונן המידע לקבוצה אחת שמוצגת ככונן אחיד למשתמש.
-* **SSV (Signed System Volume):** מחיצת ה-System הנעולה והחתומה קריפטוגרפית. המערכת עולה מתוך Snapshot מאומת. שום תוכנה או אדמין לא יכולים לשנות בה קבצים.
-* **Firmlinks:** "חורי תולעת" (קישורים דו-כיווניים) המחברים ספריות מה-System אל ה-Data לחוויית שימוש רציפה.
-* **Orphaned Data Volume:** מקרה קצה בו נוצר נתק בין ה-System ל-Data (לעיתים לאחר שחזור לקוי), ומשאיר כונן `Macintosh HD - Data` שמבזבז מקום.
-* **Spotlight Index & Live Text:** מסד נתונים סמוי (`.Spotlight-V100`) לחיפוש גלובלי. בגרסאות עדכניות, התהליך כולל אנליזת תמונות מורכבת (OCR באמצעות `photoanalysisd`), מה שעשוי לגרום לעיבוד ממושך ברקע (Runaway Indexing).
-* **User, Local, Network, System Domains:** חלוקת המערכת למרחבים שמגדירים מיקום נתונים והרשאות. הבנתם חיונית לפתרון תקלות של הגדרות ומשאבים (כמו פונטים) בסביבה מרובת משתמשים.
-* **אבטחה ארגונית (Enterprise Security):** לאור ה-SSV, אין צורך שתוכנות אנטי-וירוס יסרקו את כונן המערכת (הוא גם כך מוגן). חשוב להחריג נתיבי מערכת כדי למנוע לולאות אינסופיות עקב Firmlinks, מה שעלול לגרום לקריסות במק.
+## מושגי מפתח
 
-## פקודות שימושיות (Cheat Commands)
+| מושג | הסבר |
+|---|---|
+| **APFS** | מערכת הקבצים המודרנית של Apple. בנויה לביצועים גבוהים, חלוקת מקום דינמית, והגנה על נתונים. |
+| **Container (מכולה)** | מאגר האחסון הראשי ב-APFS שמנהל את השטח הפנוי עבור כל הכרכים שבתוכו. מחליף מחיצות קשיחות. |
+| **Volume (כרך)** | יחידת אחסון לוגית. כרכים חולקים מקום פנוי באופן דינמי ללא צורך להגדיר גודל מראש (Dynamic Space Sharing). |
+| **Copy-on-Write (CoW)** | מנגנון המונע שחיתות נתונים על ידי כתיבת שינויים לבלוקים חדשים לפני עדכון המצביע למידע. |
+| **Clones (שכפולים)** | יצירת עותקים מדויקים באותו כרך בשבריר שנייה **ללא תפיסת מקום נוסף** (Zero-storage overhead) עד לביצוע שינוי. Finder מבצע זאת אוטומטית. |
+| **SVG (System Volume Group)** | מעטפת המאחדת את כונן המערכת וכונן המידע לקבוצה אחת שמוצגת ככונן אחיד למשתמש. |
+| **SSV (Signed System Volume)** | מחיצת ה-System הנעולה והחתומה קריפטוגרפית. המערכת עולה מתוך Snapshot מאומת. שום תוכנה או Admin לא יכולים לשנות בה קבצים. |
+| **Firmlinks** | "חורי תולעת" — קישורים דו-כיווניים המחברים ספריות מה-System אל ה-Data לחוויית שימוש רציפה. |
+| **Orphaned Data Volume** | מקרה קצה בו נוצר נתק בין ה-System ל-Data (לעיתים לאחר שחזור לקוי), ומשאיר כונן `Macintosh HD - Data` שמבזבז מקום. |
+| **Spotlight Index & Live Text** | מסד נתונים סמוי (`.Spotlight-V100`) לחיפוש גלובלי. בגרסאות עדכניות, התהליך כולל אנליזת תמונות (OCR), מה שעשוי לגרום לעיבוד ממושך ברקע (Runaway Indexing). |
+| **User / Local / Network / System Domains** | חלוקת המערכת למרחבים שמגדירים מיקום נתונים והרשאות. חיונית לפתרון תקלות הגדרות ומשאבים בסביבה מרובת משתמשים. |
+| **אבטחה ארגונית (Enterprise Security)** | לאור ה-SSV, אין צורך שתוכנות AV יסרקו את כונן המערכת. חשוב להחריג נתיבי מערכת כדי למנוע לולאות Firmlink שעלולות לגרום לקריסות. |
 
-### אבחון APFS ו-Volumes
+---
+
+## חלק 1 — APFS: Container, Volume, Clone
+
+### מבנה APFS בפועל
+
+```
+Physical Disk
+└── Container (disk3) ← הבריכה הגדולה
+    ├── Volume: Macintosh HD (System) ← Read-Only, חתום
+    ├── Volume: Macintosh HD - Data   ← Read-Write, נתוני משתמש
+    ├── Volume: Preboot
+    ├── Volume: Recovery
+    └── Volume: VM (Swap)
+```
+
+> [!IMPORTANT]
+> כל הכרכים ב-Container חולקים את **אותו מקום פנוי**. אין צורך להגדיר גודל מראש לכל כרך — המערכת מנהלת את זה דינמית.
+
+### פקודות אבחון
+
 ```bash
-# הצגת היררכיית APFS במערכת
+# הצגת היררכיית APFS
 diskutil list
 diskutil apfs list
 
-# הוספת כרך חדש עם מכסה (Quota) לתוך Container
+# הוספת כרך עם Quota
 diskutil apfs addVolume diskX APFS "NewVolumeName" -quota 50g
 
-# יצירת Clone ידני ללא תפיסת מקום
+# יצירת Clone ידני (ללא תפיסת מקום)
 cp -c /path/to/original /path/to/clone
 ```
 
-### ניווט ואימות מערכת
-```bash
-# הצגת ה-Firmlinks במערכת
-cat /usr/share/firmlinks
+---
 
-# אימות שה-SSV מוגן וחתום קריפטוגרפית (חשוב ל-IT)
-csrutil authenticated-root status
+## חלק 2 — SSV ו-Firmlinks
 
-# ניווט מהיר ל-User Domain לעומת ה-Local Domain
-cd ~/Library
-cd /Library
+### מבנה ה-System Volume Group
+
+```
+"Macintosh HD" (מה שה-Finder מציג)
+        ↕ Firmlinks (תפרים דו-כיווניים)
+┌─────────────────────┐    ┌─────────────────────┐
+│   System Volume      │    │    Data Volume       │
+│   (Read-Only)        │    │    (Read-Write)      │
+│   חתום קריפטוגרפית  │    │   נתוני משתמש        │
+└─────────────────────┘    └─────────────────────┘
 ```
 
-### פתרון תקלות ב-Spotlight
+> [!NOTE]
+> הפקודה `sudo touch /System/test.txt` תחזיר **"Read-only file system"** — זו לא שגיאה, זו ההגנה של SSV בפעולה.
+
+### פקודות SSV ו-Firmlinks
+
 ```bash
-# בדיקת סטטוס והפעלה של אינדקס
+# אימות שה-SSV חתום וסגור (חשוב לפני פריסת AV ארגוני)
+csrutil authenticated-root status
+
+# הצגת ה-Firmlinks (התפרים בין System ל-Data)
+cat /usr/share/firmlinks
+
+# הצגת נקודות ה-Mount (הראה את read-only)
+mount
+```
+
+---
+
+## חלק 3 — File System Domains
+
+### ארבעת המרחבים
+
+| Domain | נתיב | גישה | שימוש |
+|---|---|---|---|
+| **User** | `~/Library/` | משתמש בלבד | העדפות, Containers, Caches אישיים |
+| **Local** | `/Library/` | כל המשתמשים (Admin לשינוי) | פונטים משותפים, Daemons, Frameworks |
+| **Network** | `/Network/Library/` | רשת ארגונית | משאבים ממשרד ה-IT |
+| **System** | `/System/Library/` | נעול (SSV) | קבצי מערכת — אין כניסה |
+
+> [!TIP]
+> **תרחיש נפוץ בשטח:** משתמש מתקין פונט ורק הוא רואה אותו → הפונט הותקן ב-User Domain (`~/Library/Fonts`). כדי שיהיה זמין לכולם: להעביר ל-`/Library/Fonts` (דורש Admin).
+
+### גישה ל-User Library ב-Finder
+
+1. פתח Finder → תפריט `Go` בשורת התפריטים
+2. החזק מקש `Option (⌥)` → **Library** תופיע ברשימה
+3. לחץ עליה → זוהי ה-`~/Library` שלך
+
+---
+
+## חלק 4 — Spotlight
+
+### איך Spotlight עובד
+
+```
+קובץ חדש נוצר / משתנה
+        ↓
+mdworker (תהליך רקע)
+        ↓
+mdimporter plugin (מותאם לסוג הקובץ)
+        ↓
+.Spotlight-V100 (מסד הנתונים)
+        ↓
+Spotlight Search / Finder / "About This Mac"
+```
+
+### פתרון תקלות Spotlight
+
+```bash
+# בדיקת סטטוס אינדקס
 sudo mdutil -s /
 
-# איפוס ובנייה מחדש של אינדקס למקרה של נתוני שטח פנוי פגומים
+# איפוס ובניה מחדש (לבעיית "System Data" מוגזם)
 sudo mdutil -E /
 
-# בדיקת מטא-דאטה לקובץ ספציפי
+# בדיקת מטא-דאטה של קובץ ספציפי
 mdimport -t -d3 /path/to/file.pdf
 ```
 
-## קישורים מומלצים ולקריאה נוספת
+> [!NOTE]
+> לאחר `mdutil -E /` תראה את תהליכי `mds_stores` ו-`photoanalysisd` קופצים ב-Activity Monitor. זה תקין — המערכת בונה מחדש. עשוי לקחת שעות עד ימים.
 
-* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) - מדריך רשמי לבדיקה ותיקון.
-* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) - מאמר עומק על Firmlinks.
-* [Using and troubleshooting Spotlight in Sequoia: summary](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) - סיכום פתרון תקלות ב-Spotlight.
+---
 
-## סרטון סיכום
+## חלק 5 — אבטחה ארגונית (Enterprise)
+
+### מה אנשי IT צריכים לדעת
+
+> [!IMPORTANT]
+> **לפני פריסת AV/DLP ארגוני על Mac:**
+> 1. הרץ `csrutil authenticated-root status` — אם `enabled`, כונן המערכת **חתום ומוגן**. אין צורך לסרוק אותו.
+> 2. הגדר Exclusions לנתיבי מערכת: `/System/`, `/usr/bin/`, `/usr/lib/`
+> 3. השתמש ב-`/usr/local/` (נגיש לכתיבה) לסקריפטים — לא ב-`/usr/bin/` (נעול)
+
+> [!CAUTION]
+> כלי AV ישן שסורק ללא Exclusions על Mac עם Firmlinks — עלול להיכנס ללולאה אינסופית ולגרום ל-**Kernel Panic**. תמיד לעדכן סוכני אבטחה לגרסה התומכת ב-Tahoe/Sequoia.
+
+---
+
+## קישורים ולקריאה נוספת
+
+* [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) — מדריך רשמי
+* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) — מאמר עומק על Firmlinks
+* [Using and troubleshooting Spotlight in Sequoia](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) — פתרון תקלות Spotlight
+
+---
+
+## 🎬 סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/cBSnmMtt9ho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+---
 
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+## עזרים ויזואליים
 
-![GetInfo_Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
-![How_macOS_depends_on_firmlinks_p1_24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
-![How_macOS_depends_on_firmlinks_p1_25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
-![Slide107_image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
-![Slide115_image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
-![Slide115_image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
-![Slide116_image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
-![Slide116_image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
-![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
-![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
-![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
-![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
+!!! tip "עזרים ויזואליים"
+    תמונות אלו ממחישות את הממשק הנלמד בשיעור.
 
+![Get Info Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
+![Firmlinks p1](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
+![Firmlinks p2](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
+![Slide 107](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
+![Slide 115a](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
+![Slide 115b](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
+![Slide 116a](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
+![Slide 116b](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
+![Disk Utility Tahoe](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
+![Finder Get Info Tahoe](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
+![Spotlight Action](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
+![Spotlight](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
