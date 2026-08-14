@@ -69,8 +69,8 @@
 
 ## נספח — פקודות מערכת חשובות
 
-> [!NOTE]
-> מומלץ לשמור פקודות אלו ב-Cheat Sheet או ב-MDM כסניפטים של קוד (Snippets) לשעת צרה.
+!!! note
+    מומלץ לשמור פקודות אלו ב-Cheat Sheet או ב-MDM כסניפטים של קוד (Snippets) לשעת צרה.
 
 ### שליטה בסיסית ובתהליכים
 ```bash
@@ -103,8 +103,8 @@ sudo sfltool dumpbtm > ~/Documents/btmdump.txt
 sudo sfltool resetbtm
 ```
 
-> [!IMPORTANT]
-> `sfltool resetbtm` מוחק את כל בסיס הנתונים של Background Task Management — כל התוכנות המותקנות שדורשות Login Item (Agents, Helper Tools) צריכות להירשם מחדש. זה כלי אחרון בתור חקירת יסודית לתקלות Login Items סשיות בלבד.
+!!! important
+    `sfltool resetbtm` מוחק את כל בסיס הנתונים של Background Task Management — כל התוכנות המותקנות שדורשות Login Item (Agents, Helper Tools) צריכות להירשם מחדש. זה כלי אחרון בתור חקירת יסודית לתקלות Login Items סשיות בלבד.
 
 ### קריאה וטיפול ב-Plists (`plutil`)
 ```bash

@@ -102,8 +102,8 @@ When the firewall blocks incoming communication, it records it in the system log
 
 As System or IT Support personnel, we often want to perform network operations remotely (via SSH or an MDM script). The macOS system includes dedicated CLI tools that correspond exactly to the graphical interface we've seen.
 
-> [!NOTE]
-> **Note:** CLI operations in a network environment are intended for advanced users and typically require sudo privileges.
+!!! note "Note"
+    CLI operations in a network environment are intended for advanced users and typically require sudo privileges.
 
 **Examples for Advanced Users (in Terminal):**
 

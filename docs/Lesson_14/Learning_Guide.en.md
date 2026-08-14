@@ -45,8 +45,8 @@ Within the Recovery environment, the Terminal serves as a powerful diagnostic to
 - **Activation Lock Bypass Code:** In managed enterprise environments (MDM), a specialized bypass code is escrowed to the server during device enrollment. If an employee departs leaving the Mac locked, an IT administrator can enter this code in the Recovery Assistant under "Activate with MDM Key" to release the device on Apple's servers.
 - **MDM Remote Wipe (`EraseDevice`):** An IT administrator can dispatch a remote wipe command that silently triggers the Crypto-shredding process (EACS) without requiring user interaction.
 
-> [!IMPORTANT]
-> **Operational Warning:** The `EraseDevice` command mandates that the Mac has an active internet connection at the exact moment the command is received. A Mac offline will not execute the command. Additionally, if the Mac triggers Activation Lock post-wipe, AppleCare requires proof of purchase (invoice) to perform a manual override.
+!!! important "Operational Warning"
+    The `EraseDevice` command mandates that the Mac has an active internet connection at the exact moment the command is received. A Mac offline will not execute the command. Additionally, if the Mac triggers Activation Lock post-wipe, AppleCare requires proof of purchase (invoice) to perform a manual override.
 
 - **Recovery Lock:** An MDM profile configuration that defines a 14-character Secure Enclave-level password, effectively blocking unauthorized entry into the Recovery environment entirely (replacing Firmware Passwords on Intel).
 

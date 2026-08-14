@@ -13,8 +13,8 @@ As a systems engineer in the enterprise IT department, you must verify that the 
 * A Local Account with Administrator privileges.
 * It is highly recommended to connect portable Macs to a power source during encryption changes.
 
-> [!CAUTION]
-> As per the course guidelines, destructive labs must be performed on your provisioned external USB drive. However, this specific exercise for enabling FileVault is safe to execute on your internal system drive, as it does not compromise data integrity.
+!!! caution
+    As per the course guidelines, destructive labs must be performed on your provisioned external USB drive. However, this specific exercise for enabling FileVault is safe to execute on your internal system drive, as it does not compromise data integrity.
 
 ---
 
@@ -59,8 +59,8 @@ We will now officially activate the data protection mechanism.
 4. Authenticate with your administrator password when prompted.
 5. A dialog will ask how you wish to unlock your disk if you forget your password. Select the option to generate a local PRK (Create a recovery key and do not use my iCloud account).
 
-   > [!NOTE]
-   > In macOS Tahoe, if you are signed in to an Apple Account with iCloud Keychain enabled, the system might automatically default to iCloud escrow. For the purpose of this enterprise lab, ensure you strictly select the local PRK generation option.
+    !!! note
+        In macOS Tahoe, if you are signed in to an Apple Account with iCloud Keychain enabled, the system might automatically default to iCloud escrow. For the purpose of this enterprise lab, ensure you strictly select the local PRK generation option.
 
 6. The system will display your Personal Recovery Key (PRK). You must carefully transcribe or copy it to a secure, external location. **Never save the recovery key in a plaintext file on the local machine!**
 7. Click **Continue**. The encryption framework will be provisioned and activated almost instantaneously.
@@ -95,9 +95,8 @@ In this phase, we will validate whether our generated PRK successfully allows da
 
 ## IT Pro Bonus Lab: The Command Line (Terminal)
 
-> [!NOTE]
-> **No Need to Memorize!**
-> Behind the scenes of the GUI we just explored, robust command-line binaries operate—the same tools leveraged by automated MDM servers. Feel free to copy and paste these into the Terminal application for hands-on experimentation, but note that we will formally master the CLI in Lesson 08.
+!!! note "No Need to Memorize!"
+    Behind the scenes of the GUI we just explored, robust command-line binaries operate—the same tools leveraged by automated MDM servers. Feel free to copy and paste these into the Terminal application for hands-on experimentation, but note that we will formally master the CLI in Lesson 08.
 
 * **Audit Secure Token Status:**
   Instead of digging through Directory Utility, you can query the system for a direct response regarding System Ownership:

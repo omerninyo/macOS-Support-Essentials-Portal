@@ -49,9 +49,9 @@ App Store:  לחפש, ללחוץ הורד — הכל אוטומטי
 
 ### שינוי חשוב ב-Tahoe
 
-> [!IMPORTANT]
-> אפליקציה שלא מאושרת — **קליק ימני → Open לא עובד יותר ב-Tahoe**.
-> הדרך היחידה: `System Settings → Privacy & Security → גלול מטה → Open Anyway`
+!!! important
+    אפליקציה שלא מאושרת — **קליק ימני → Open לא עובד יותר ב-Tahoe**.
+    הדרך היחידה: `System Settings → Privacy & Security → גלול מטה → Open Anyway`
 
 ---
 
@@ -74,9 +74,9 @@ App Store:  לחפש, ללחוץ הורד — הכל אוטומטי
 4. העבר לאשפה (Trash) ורוקן
 5. פתח מחדש → מסך "ברוכים הבאים" = האיפוס הצליח
 
-> [!NOTE]
-> אפליקציה שנמחקה מ-`/Applications/` **אינה** מוחקת את ה-Container!
-> ה-Container חייב להימחק בנפרד.
+!!! note
+    אפליקציה שנמחקה מ-`/Applications/` **אינה** מוחקת את ה-Container!
+    ה-Container חייב להימחק בנפרד.
 
 ---
 
@@ -120,8 +120,8 @@ Apple Business Manager (ABM)
 
 ## פקודות Terminal — נספח
 
-> [!NOTE]
-> ה-Terminal לא נדרש לתרגילי השיעור. פקודות אלו הן הרחבה למי שמעוניין.
+!!! note
+    ה-Terminal לא נדרש לתרגילי השיעור. פקודות אלו הן הרחבה למי שמעוניין.
 
 ```bash
 # עגינת DMG ידנית

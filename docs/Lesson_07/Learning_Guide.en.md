@@ -1,7 +1,6 @@
 # Lesson 07: Backup and Restore
 **Student Learning Guide**
 
-
 ## Lesson Objectives
 
 * System Snapshots
@@ -28,10 +27,10 @@
 
 ## Part 1 — Snapshots: How APFS Local Backups Work (Rollbacks)
 
-> [!NOTE]
-> The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS automatically purges legacy snapshots to free up storage.
+!!! note
+    The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS automatically purges legacy snapshots to free up storage.
 
-> *→ The inner workings of APFS Snapshots were covered in-depth in Lesson 06 (FileSystem) — here we observe how Time Machine relies on that very same mechanism to maintain local backups.*
+    *→ The inner workings of APFS Snapshots were covered in-depth in Lesson 06 (FileSystem) — here we observe how Time Machine relies on that very same mechanism to maintain local backups.*
 
 ### Managing Local Snapshots via Terminal
 
@@ -59,10 +58,10 @@ diskutil apfs listSnapshots /
 | **Copy Efficiency** | Generates millions of hard links for unmodified files | Relies on block-level delta-copying (rapid and highly space-efficient) |
 | **Long-Term Reliability** | Prone to corruption under extreme hard link loads | Exceptional stability due to native file system snapshots |
 
-> [!IMPORTANT]
-> **Backup Drive Encryption:** Carrying an unencrypted backup drive in a backpack constitutes a critical security breach. Never backup to an external volume without enabling **Encrypt Backup**!
+!!! important "Backup Drive Encryption"
+    Carrying an unencrypted backup drive in a backpack constitutes a critical security breach. Never backup to an external volume without enabling **Encrypt Backup**!
 
-> *→ Drive encryption relies on the same VEK/AES-XTS architecture covered in Lesson 04 (Encryption/FileVault) — the key difference: for external backups, you define a dedicated passphrase to unlock the volume in the future.*
+    *→ Drive encryption relies on the same VEK/AES-XTS architecture covered in Lesson 04 (Encryption/FileVault) — the key difference: for external backups, you define a dedicated passphrase to unlock the volume in the future.*
 
 ### Advanced Time Machine Management (Terminal)
 
@@ -91,15 +90,15 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 
 ## Part 3 — File Recovery: Granular Extraction vs. Full System Restore
 
-> [!CAUTION]
-> **Account Names Collision:** Never create a temporary administrator account (e.g., "john") on a new Mac, and then attempt to migrate the original "john" account from your Time Machine backup (using Migration Assistant). This will trigger a catastrophic system namespace collision.
+!!! caution "Account Names Collision"
+    Never create a temporary administrator account (e.g., "john") on a new Mac, and then attempt to migrate the original "john" account from your Time Machine backup (using Migration Assistant). This will trigger a catastrophic system namespace collision.
 
 ## Part 4 — Enterprise Spice: Do We Even Need Time Machine in a Cloud-Managed Environment?
 
-> [!TIP]
-> **The Ephemeral Device Paradigm:** Modern organizations leveraging a Zero-Trust architecture actively avoid portable backup drives, shifting entirely to cloud synchronization services (OneDrive, Google Drive). The philosophy relies on cloud-native backups and remote provisioning (Zero-Touch) if a Mac is compromised or destroyed.
->
-> **The FileProvider Clash:** Dataless cloud files can cause a severe network and IO bottleneck if Time Machine attempts to back them up, forcing the Mac to download terabytes of data from the cloud. Consequently, IT administrators typically deploy MDM profiles utilizing the `restrictTimeMachine` payload to disable it entirely.
+!!! tip "The Ephemeral Device Paradigm"
+    Modern organizations leveraging a Zero-Trust architecture actively avoid portable backup drives, shifting entirely to cloud synchronization services (OneDrive, Google Drive). The philosophy relies on cloud-native backups and remote provisioning (Zero-Touch) if a Mac is compromised or destroyed.
+
+    **The FileProvider Clash:** Dataless cloud files can cause a severe network and IO bottleneck if Time Machine attempts to back them up, forcing the Mac to download terabytes of data from the cloud. Consequently, IT administrators typically deploy MDM profiles utilizing the `restrictTimeMachine` payload to disable it entirely.
 
 ## Links & Further Reading
 

@@ -1,7 +1,6 @@
 # שיעור 16: ניתוח לוגים
 **מדריך עזר לתלמיד**
 
-
 ## סקירה
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
@@ -23,8 +22,8 @@
 
 הפקודה `log` היא כלי העבודה המרכזי לתחקור היסטורי של ה-Unified Logging System, מכיוון ש-Console.app כברירת מחדל לא מציגה היסטוריה מלאה.
 
-> [!IMPORTANT]
-> הפקודה `log show` ללא מסנן עלולה להציג מיליוני שורות ולתקע את המסוף. תמיד לשלב `--last` או `--predicate` — פקודה גולמית שאינה קראה למשתמש מִנוסין.
+!!! important
+    הפקודה `log show` ללא מסנן עלולה להציג מיליוני שורות ולתקע את המסוף. תמיד לשלב `--last` או `--predicate` — פקודה גולמית שאינה קראה למשתמש מִנוסין.
 
 ### צפייה בסיסית וסינון זמנים
 
@@ -146,7 +145,6 @@
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/SYAGmWsJksQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 

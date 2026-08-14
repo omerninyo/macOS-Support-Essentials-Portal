@@ -36,8 +36,9 @@ Safe Mode is a powerful diagnostic tool that often resolves issues simply by bei
 
 * **Directory Check:** The system runs a logical check and repair of the startup volume using the `fsck` (File System Consistency Check) process.
 
-> [!IMPORTANT]
-> `fsck_apfs` runs automatically during a Safe Boot. If the SSD is corrupted, the Mac might appear to hang during boot for a long time without any visual progress indicator. Wait at least 10 minutes before assuming the Mac is permanently stuck.
+!!! important
+    `fsck_apfs` runs automatically during a Safe Boot. If the SSD is corrupted, the Mac might appear to hang during boot for a long time without any visual progress indicator. Wait at least 10 minutes before assuming the Mac is permanently stuck.
+
 * **Disables Extensions:** Prevents the loading of third-party Kernel Extensions (Kexts).
 * **Blocks Background Processes:** Prevents third-party LaunchDaemons and LaunchAgents from executing. Only built-in system services are loaded.
 * **Blocks Login Items:** Prevents user-configured applications and windows from launching automatically at login.
@@ -111,7 +112,6 @@ In Active Directory-based enterprise environments, Kerberos is utilized for Sing
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/HdTN25vs7Oo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 !!! tip "Visual Aids (Student Reference)"
     You can refer to the following images from the course workbook (Asset A) while studying this topic:

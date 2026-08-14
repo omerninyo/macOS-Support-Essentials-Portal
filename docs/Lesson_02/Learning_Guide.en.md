@@ -32,14 +32,13 @@
 * **Passwords App:** The centralized macOS 15+ (and enhanced in macOS 26 Tahoe) GUI application for managing passwords, Passkeys, and 2FA tokens.
 * **Passkey:** A modern, passwordless authentication standard (FIDO2) utilizing cryptographic key pairs securely stored within the Secure Enclave.
 
-> [!TIP]
-> **Enterprise Passkeys Framework (5-Stage Model)**
-> Transitioning an organization from legacy passwords to secure passwordless authentication (Passkeys) requires a structured approach:
-> 1. **Assessment & Planning:** Audit existing IT infrastructure and security requirements.
-> 2. **Solution Selection:** Choose an Identity Provider (IdP) or password manager with full FIDO2 support.
-> 3. **Testing:** Conduct a controlled deployment with the IT team.
-> 4. **Full Deployment:** Push Passkey policies globally via Mobile Device Management (MDM).
-> 5. **Monitoring & Optimization:** Review authentication logs and systematically deprecate legacy passwords.
+!!! tip "Enterprise Passkeys Framework (5-Stage Model)"
+    Transitioning an organization from legacy passwords to secure passwordless authentication (Passkeys) requires a structured approach:
+    1. **Assessment & Planning:** Audit existing IT infrastructure and security requirements.
+    2. **Solution Selection:** Choose an Identity Provider (IdP) or password manager with full FIDO2 support.
+    3. **Testing:** Conduct a controlled deployment with the IT team.
+    4. **Full Deployment:** Push Passkey policies globally via Mobile Device Management (MDM).
+    5. **Monitoring & Optimization:** Review authentication logs and systematically deprecate legacy passwords.
 
 * **POSIX:** The standard UNIX permission model (Owner, Group, Everyone).
 * **ACL (Access Control List):** An advanced, granular permission layer overlaid on top of POSIX.
@@ -53,9 +52,8 @@
 
 ## CLI Commands
 
-> [!NOTE]
-> **Terminal Usage**
-> The CLI commands listed here are for demonstration purposes. There is no need to memorize their syntax at this stage! You can simply copy-paste them during the lab to observe the output. We will dive deep into Terminal workflows in Lesson 08, and explore the unified logging system in Lesson 16. For now, treat the Terminal purely as a quick diagnostic tool.
+!!! note "Terminal Usage"
+    The CLI commands listed here are for demonstration purposes. There is no need to memorize their syntax at this stage! You can simply copy-paste them during the lab to observe the output. We will dive deep into Terminal workflows in Lesson 08, and explore the unified logging system in Lesson 16. For now, treat the Terminal purely as a quick diagnostic tool.
 
 | Command | Description |
 |---|---|
@@ -87,8 +85,8 @@
 
 ## 💡 Presentation Visuals
 
-> [!NOTE]
-> These images can be projected in the classroom during explanations or integrated into presentations.
+!!! note
+    These images can be projected in the classroom during explanations or integrated into presentations.
 
 !!! tip "Visual Reference (Student Aid)"
     These screenshots illustrate the GUI or mechanisms relevant to the lesson's core concepts.

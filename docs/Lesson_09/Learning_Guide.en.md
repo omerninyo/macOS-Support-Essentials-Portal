@@ -32,20 +32,20 @@
 
 > *→ Certificates required for 802.1X were covered in depth in Lesson 04 (Security & MDM) — here we see how MDM pushes them automatically to the employee's Mac.*
 
-> [!IMPORTANT]
-> **Stealth Mode in Enterprise Environments:** Enabling Stealth Mode can disrupt network monitoring tools that monitor the Mac via Ping. If Ping fails — it does not mean the Mac is offline; first verify that the Mac is reachable via Bonjour / `dns-sd -B`. In enterprise environments, enforce via MDM.
+!!! important "Stealth Mode in Enterprise Environments"
+    Enabling Stealth Mode can disrupt network monitoring tools that monitor the Mac via Ping. If Ping fails — it does not mean the Mac is offline; first verify that the Mac is reachable via Bonjour / `dns-sd -B`. In enterprise environments, enforce via MDM.
 
-> [!NOTE]
-> **Historical Note:** The `ifconfig` command is currently considered deprecated in most Linux distributions (replaced by `ip`), but in macOS, it remains fully supported and highly effective for diagnosing interfaces at the kernel level.
+!!! note "Historical Note"
+    The `ifconfig` command is currently considered deprecated in most Linux distributions (replaced by `ip`), but in macOS, it remains fully supported and highly effective for diagnosing interfaces at the kernel level.
 
 ---
 
 ## Advanced Terminal Commands & Tools
 
-> [!WARNING]
-> The `networksetup` command is the "Swiss Army Knife" for network management. Most commands that alter configuration require administrator privileges (`sudo`).
+!!! warning
+    The `networksetup` command is the "Swiss Army Knife" for network management. Most commands that alter configuration require administrator privileges (`sudo`).
 
-> *→ The Firewall is managed by `socketfilterfw` running as a Daemon under launchd — covered in Lesson 08 (Terminal / System Services). You can monitor it in Console just like any other Daemon.*
+    *→ The Firewall is managed by `socketfilterfw` running as a Daemon under launchd — covered in Lesson 08 (Terminal / System Services). You can monitor it in Console just like any other Daemon.*
 
 ### 1. Displaying Information (No privileges required)
 ```bash

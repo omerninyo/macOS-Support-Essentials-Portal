@@ -24,8 +24,8 @@ This lab serves as an "Equalizer" for technicians and users transitioning to mac
 6. In the top toolbar of Activity Monitor, ensure you are on the **CPU** tab.
 7. Look at the **Kind** column.
    
-> [!TIP]
-> If the column is not visible, right-click on the column headers and check the box next to "Kind".
+!!! tip
+    If the column is not visible, right-click on the column headers and check the box next to "Kind".
 
 8. Sort the list by clicking on the column header. Identify processes running under "Apple" (these are natively compiled for ARM architecture) versus "Intel" processes (which are currently being translated in real-time by Rosetta 2).
 
@@ -48,9 +48,8 @@ This lab serves as an "Equalizer" for technicians and users transitioning to mac
 
 > **Objective:** An initial use of Terminal to check whether our computer was "managed" (became an enterprise device) during the Setup Assistant phase via the Automated Device Enrollment mechanism.
 
-> [!NOTE]
-> **Copy-Paste Only!**
-> In this exercise, we are using the Terminal strictly to verify an organizational setting. There is no need to memorize the command or understand its entire syntax right now. Structured learning of the Terminal will begin in Lesson 08. Simply copy the command, paste it, and review the output.
+!!! note "Copy-Paste Only!"
+    In this exercise, we are using the Terminal strictly to verify an organizational setting. There is no need to memorize the command or understand its entire syntax right now. Structured learning of the Terminal will begin in Lesson 08. Simply copy the command, paste it, and review the output.
 
 1. Open **Terminal** (via Spotlight or at the path `/Applications/Utilities/Terminal.app`).
 2. Type (or paste) the following command and press Enter:

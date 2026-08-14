@@ -88,8 +88,8 @@ On Apple Silicon Macs, Apple introduced an OS-level security mechanism designed 
    * **Automatically When Unlocked:** Accessories will connect without a prompt as long as the Mac is unlocked and not on the Lock Screen.
    * **Always:** The lowest security level, allowing automatic connections at all times, even when the Mac is locked.
 
-> [!WARNING]
-> **Enterprise Seasoning:** In organizations managed by an MDM, this option may be grayed out if a strict policy is enforced. Starting with macOS 15, DDM can entirely block or restrict external storage to Read-Only access.
+!!! warning "Enterprise Seasoning"
+    In organizations managed by an MDM, this option may be grayed out if a strict policy is enforced. Starting with macOS 15, DDM can entirely block or restrict external storage to Read-Only access.
 
 ---
 

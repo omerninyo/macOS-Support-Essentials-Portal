@@ -29,8 +29,9 @@ Instead of using the command line, we will use built-in system tools to understa
 1. Open your browser (Safari) and navigate to the official Zoom website.
 2. Download the installation package (`.pkg` file) for the Zoom app.
 3. Launch the installation package and complete the process.
-   > [!NOTE]
-   > The installation itself might succeed because it is handled by the system's authorized installer process, but depending on the OS version, you might occasionally see a block even at this stage.
+
+    !!! note
+        The installation itself might succeed because it is handled by the system's authorized installer process, but depending on the OS version, you might occasionally see a block even at this stage.
 
 #### Step 3: Execution Blocked by Gatekeeper
 
@@ -68,8 +69,9 @@ The XProtect engine operates transparently to the user. We will use Finder and S
 2. In the top menu bar, click **Go** and then select **Go to Folder...** (or use the shortcut `Cmd+Shift+G`).
 3. Type the following path and hit Enter:
    `/var/protected/xprotect/XProtect.bundle` 
-   > [!TIP]
-   > If the folder is empty after a fresh install, check the legacy path: `/Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/`
+
+    !!! tip
+        If the folder is empty after a fresh install, check the legacy path: `/Library/Apple/System/Library/CoreServices/XProtect.bundle/Contents/Resources/`
 
 4. In the folder that opens, look for info files such as `XProtect.meta.plist` or other configuration files (depending on availability in Tahoe).
 5. Select an available file and press the Spacebar to launch Quick Look and view the internal content of the security engine.
@@ -98,9 +100,8 @@ We will use the Zoom app (downloaded in Part 1) to demonstrate how permission re
 
 #### Step 3: Fully Resetting Permissions via Terminal (Troubleshooting)
 
-> [!NOTE]
-> **No Need to Memorize!**
-> This step uses the Terminal to reset permissions. Copy-paste the command without worrying about its syntax. We will learn how to work in the Terminal in Lesson 08.
+!!! note "No Need to Memorize!"
+    This step uses the Terminal to reset permissions. Copy-paste the command without worrying about its syntax. We will learn how to work in the Terminal in Lesson 08.
 
 Sometimes an app crashes or fails to recognize the permission granted to it (a common occurrence in video conferencing software). In such cases, we want to fully reset the permission from the TCC database to force the system to prompt the user again from scratch:
 
@@ -135,9 +136,8 @@ In this lab, we practiced the fundamentals of macOS protection mechanisms throug
 
 ## Bonus Exercise for IT Pros: The Command Line (Terminal)
 
-> [!NOTE]
-> **"Copy-Paste" Instruction Only!**
-> For advanced support professionals, here are several Terminal commands that execute the actions we saw in the GUI faster and more deeply. Again, there is no obligation to memorize them!
+!!! note "\"Copy-Paste\" Instruction Only!"
+    For advanced support professionals, here are several Terminal commands that execute the actions we saw in the GUI faster and more deeply. Again, there is no obligation to memorize them!
 
 1. **Managing the Latest XProtect Engine:**
    Instead of searching in System Information, you can use the built-in tool to manage XProtect updates:

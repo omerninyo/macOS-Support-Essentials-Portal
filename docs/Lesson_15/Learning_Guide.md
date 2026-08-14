@@ -36,8 +36,9 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 
 * **בדיקת דיסק:** המערכת מריצה בדיקה ותיקון לוגי של כונן האתחול באמצעות התהליך `fsck` (File System Consistency Check).
 
-> [!IMPORTANT]
-> `fsck_apfs` רץ אוטומטית בשלב העלייה ל-Safe Mode. אם ה-SSD פגום, המק עלול להיתקע זמן רב בשלב התחילה ללא כל סימן חיצוני שהתקדמת. המתינו לפחות 10 דקות לפני שמסיקים שהמק תקוע.
+!!! important
+    `fsck_apfs` רץ אוטומטית בשלב העלייה ל-Safe Mode. אם ה-SSD פגום, המק עלול להיתקע זמן רב בשלב התחילה ללא כל סימן חיצוני שהתקדמת. המתינו לפחות 10 דקות לפני שמסיקים שהמק תקוע.
+
 * **נטרול הרחבות:** מונע טעינה של הרחבות קרנל (Kernel Extensions / Kexts) של צד-שלישי.
 * **חסימת תהליכי רקע:** לא מאפשר ל-LaunchDaemons ול-LaunchAgents של אפליקציות צד-שלישי לפעול. רק שירותי מערכת מובנים נטענים.
 * **חסימת פריטי התחברות (Login Items):** מונע פתיחה אוטומטית של חלונות ואפליקציות שהמשתמש הגדיר.
@@ -111,7 +112,6 @@ Safe Mode הוא כלי אבחון עוצמתי שפותר לעיתים קרוב
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/HdTN25vs7Oo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     ניתן להיעזר בתמונות הבאות מתוך חוברת הקורס (Asset A) ללימוד הנושא:

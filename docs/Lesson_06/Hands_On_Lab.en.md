@@ -1,7 +1,6 @@
 # Lesson 06: File System (APFS)
 **Hands-On Lab**
 
-
 ---
 
 ## Lab: Managing APFS, Spotlight Troubleshooting, and Exploring Clones
@@ -48,8 +47,8 @@ You now have a structured Container and Volume. Select the main Container in the
 4. Click **Add**.
 5. Notice how instantaneously it is created! Select the new volume and observe that its available free space is **exactly identical** to that of `StudentDrive`.
 
-> [!NOTE]
-> Both volumes are drawing from the exact same storage pool — this is Dynamic Space Sharing in action. No single partition "owns" the free space.
+!!! note
+    Both volumes are drawing from the exact same storage pool — this is Dynamic Space Sharing in action. No single partition "owns" the free space.
 
 ---
 
@@ -77,8 +76,8 @@ cat /usr/share/firmlinks
 ```
 *(Notice the `/Applications` path, which seamlessly merges read-only system apps with user-installed apps.)*
 
-> [!TIP]
-> When the IT Lead asks, "Do we need to configure our AV to scan the root System partition?" — the output of Step 3.2 is your official, definitive answer.
+!!! tip
+    When the IT Lead asks, "Do we need to configure our AV to scan the root System partition?" — the output of Step 3.2 is your official, definitive answer.
 
 ---
 
@@ -96,8 +95,8 @@ The recommended GUI-first resolution for the end-user's "System Data" issue:
 
 You will see processes like `mds_stores` or `photoanalysisd` spike in utilization. The Mac is actively rebuilding the index!
 
-> [!NOTE]
-> If the indexing process persists for days (Runaway Indexing), it is best practice to let it finish, unless you need to isolate a specific problematic file using Safe Mode.
+!!! note
+    If the indexing process persists for days (Runaway Indexing), it is best practice to let it finish, unless you need to isolate a specific problematic file using Safe Mode.
 
 ---
 
@@ -119,5 +118,6 @@ You will see processes like `mds_stores` or `photoanalysisd` spike in utilizatio
 du -h /Volumes/StudentDrive/*
 ```
 
-> [!IMPORTANT]
-> The original file will report its full physical weight. The duplicated Clone will report **0B**. This is not a bug — this is a defining feature of APFS.
+!!! important
+    The original file will report its full physical weight. The duplicated Clone will report **0B**. This is not a bug — this is a defining feature of APFS.
+

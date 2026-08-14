@@ -19,17 +19,17 @@
 | **PPD** | PostScript Printer Description. A "blueprint" file used by CUPS to understand the capabilities of a specific printer (e.g., paper sizes, trays, color profiles). |
 | **AirPrint** | Apple's driverless wireless printing protocol based on IPP and using Bonjour (mDNS) for network discovery. |
 
-> [!NOTE]
-> **Technical Note (Frequency Interference):** USB 3.0 devices can emit RF noise in the 2.4 GHz band. This interference directly conflicts with Bluetooth and Wi-Fi connections. If a wireless mouse becomes inexplicably laggy or erratic, check if a USB 3.0 adapter or hub is placed too close to the Mac.
+!!! note "Technical Note (Frequency Interference)"
+    USB 3.0 devices can emit RF noise in the 2.4 GHz band. This interference directly conflicts with Bluetooth and Wi-Fi connections. If a wireless mouse becomes inexplicably laggy or erratic, check if a USB 3.0 adapter or hub is placed too close to the Mac.
 
-> *→ 2.4GHz frequencies and the relationship between Wi-Fi and Bluetooth were covered in Lesson 09 (Networking) — that exact same principle explains why a USB 3.0 adapter causes mouse lag.*
+    *→ 2.4GHz frequencies and the relationship between Wi-Fi and Bluetooth were covered in Lesson 09 (Networking) — that exact same principle explains why a USB 3.0 adapter causes mouse lag.*
 
 ---
 
 ## Command Line Interface (CLI) Reference
 
-> [!WARNING]
-> Administrative commands in the CUPS system require elevated privileges (such as using `sudo` for changes), but querying and monitoring do not require high-level access.
+!!! warning
+    Administrative commands in the CUPS system require elevated privileges (such as using `sudo` for changes), but querying and monitoring do not require high-level access.
 
 ### Print Management & Diagnostics (CUPS)
 | Command | Description |
@@ -51,8 +51,8 @@ The `system_profiler` command allows you to extract hardware details without usi
 
 ## Enterprise Seasoning: Security and Printers in the Enterprise
 
-> [!IMPORTANT]
-> **Accessory Security in Enterprise Environments:** Configure the Accessory Security MDM policy to at least "Ask for New Accessories" to protect against BadUSB ("Rubber Ducky") physical attacks. Setting it to "Always" completely disables this layer of protection and is strongly discouraged for fleets with mobile laptops.
+!!! important "Accessory Security in Enterprise Environments"
+    Configure the Accessory Security MDM policy to at least "Ask for New Accessories" to protect against BadUSB ("Rubber Ducky") physical attacks. Setting it to "Always" completely disables this layer of protection and is strongly discouraged for fleets with mobile laptops.
 
 In organizations managed by MDM and DDM (Declarative Device Management), IT administrators utilize management profiles to streamline workflows for employees and secure enterprise hardware:
 * **Storage Management:** Allows restricting USB flash drives entirely (Disallowed) or setting them to Read-Only to prevent Data Loss (DLP).

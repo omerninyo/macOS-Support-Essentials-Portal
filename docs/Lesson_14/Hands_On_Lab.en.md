@@ -44,8 +44,8 @@
 
 **Objective:** Reset the Mac to an Out-Of-Box Experience (OOBE) state rapidly and securely through System Settings, utilizing the Crypto-Erase mechanism.
 
-> [!WARNING]
-> **Student Warning:** This exercise will permanently wipe all data, users, and settings from your Mac! Ensure all previous exercises are complete and no critical data is left unbacked up. Remember to perform this lab on the external USB drive if instructed by your facilitator.
+!!! warning "Student Warning"
+    This exercise will permanently wipe all data, users, and settings from your Mac! Ensure all previous exercises are complete and no critical data is left unbacked up. Remember to perform this lab on the external USB drive if instructed by your facilitator.
 
 1. Boot the Mac normally and log in with a Local Admin account.
 2. Open **System Settings**.

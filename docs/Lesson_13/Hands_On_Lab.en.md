@@ -90,8 +90,9 @@ This lab focuses on understanding the Apple Silicon boot architecture. We will e
 1. In the left sidebar of the System Information tool, click the **Software** category.
 2. In the right pane, locate the **System Integrity Protection** row.
 3. Verify that the status is listed as `Enabled`.
-   > [!NOTE]
-   > Downgrading to Reduced Security does not disable SIP. System Integrity Protection remains active, but we are simply permitting specific "exceptions" for Kexts.
+
+    !!! note
+        Downgrading to Reduced Security does not disable SIP. System Integrity Protection remains active, but we are simply permitting specific "exceptions" for Kexts.
 
 **3. Inspecting Loaded Kernel Extensions (Extensions):**
 
@@ -99,8 +100,8 @@ This lab focuses on understanding the Apple Silicon boot architecture. We will e
 2. Here you can view all system extensions and sort them by columns (such as 'Loaded' to see what is currently running on the system).
 3. If you were required to approve a new Kext, this approval would take place via **System Settings > Privacy & Security**.
 
-> [!TIP]
-> **Best Practice:** At the conclusion of this lab, it is highly recommended to repeat the steps from Exercise 1 and revert the security policy in the Startup Security Utility back to **Full Security** to properly secure the Mac.
+!!! tip "Best Practice"
+    At the conclusion of this lab, it is highly recommended to repeat the steps from Exercise 1 and revert the security policy in the Startup Security Utility back to **Full Security** to properly secure the Mac.
 
 ---
 

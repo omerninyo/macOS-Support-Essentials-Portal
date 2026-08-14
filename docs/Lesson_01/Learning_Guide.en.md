@@ -31,9 +31,8 @@
 * **Continuity:** A suite of technologies enabling seamless workflows across Apple devices (such as Universal Control, Handoff, and Continuity Camera). It primarily relies on Bluetooth proximity detection and Peer-to-Peer Wi-Fi communication.
 * **Apple Intelligence:** An artificial intelligence system built into macOS 26 Tahoe that leverages the Neural Engine in Apple Silicon to process language models locally, emphasizing privacy. It utilizes Private Cloud Compute for complex tasks.
 
-> [!TIP]
-> **Pro Tip: Language, Region, and AI Settings**
-> For Apple Intelligence to function correctly, you must ensure the system language (Primary Language) exactly matches the Siri language (e.g., English US). A mismatch will result in some AI features being disabled. If you choose to use an English interface to access AI features, keep in mind that voice Dictation to Siri in other languages may be problematic due to this conflict. Additionally, if you have multiple keyboard layouts, consider disabling the language switch via the Globe key (🌐) to prevent rare scenarios of typing an incorrect password at the login screen due to an unintended keyboard layout.
+!!! tip "Pro Tip: Language, Region, and AI Settings"
+    For Apple Intelligence to function correctly, you must ensure the system language (Primary Language) exactly matches the Siri language (e.g., English US). A mismatch will result in some AI features being disabled. If you choose to use an English interface to access AI features, keep in mind that voice Dictation to Siri in other languages may be problematic due to this conflict. Additionally, if you have multiple keyboard layouts, consider disabling the language switch via the Globe key (🌐) to prevent rare scenarios of typing an incorrect password at the login screen due to an unintended keyboard layout.
 
 * **Liquid Glass:** The new design language introduced in macOS 26 Tahoe, emphasizing transparency, depth, and a modern, reflective aesthetic that utilizes the graphical power of M-series processors.
 * **Background Process:** A system process that runs in the background without a visible user window, often stored as a LaunchAgent or LaunchDaemon.
@@ -42,9 +41,8 @@
 
 ## Commands & Paths
 
-> [!NOTE]
-> **Using the Terminal (Command Line)**
-> The Terminal commands demonstrated in the first lesson are listed here. There is no need to memorize their syntax right now! You can simply copy-paste them in the lab to see the result. In-depth learning of the Terminal will take place in Lesson 08, and we will cover the logging system in Lesson 16. For now, use this strictly as a quick testing tool.
+!!! note "Using the Terminal (Command Line)"
+    The Terminal commands demonstrated in the first lesson are listed here. There is no need to memorize their syntax right now! You can simply copy-paste them in the lab to see the result. In-depth learning of the Terminal will take place in Lesson 08, and we will cover the logging system in Lesson 16. For now, use this strictly as a quick testing tool.
 
 | Path / Command | Description |
 | :--- | :--- |

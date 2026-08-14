@@ -49,8 +49,8 @@ Occasionally, IT admins need to download the full installer payload to create a 
 
 **Scenario:** A user has received a brand-new Mac. We need to correctly migrate their data without overriding existing Local Accounts or introducing duplicate identities into the system.
 
-> [!WARNING]
-> **Reminder:** In managed environments (MDM), it is highly advised to avoid full data migrations via this tool. It risks migrating deprecated configuration profiles and broken, architecture-incompatible applications.
+!!! warning "Reminder"
+    In managed environments (MDM), it is highly advised to avoid full data migrations via this tool. It risks migrating deprecated configuration profiles and broken, architecture-incompatible applications.
 
 ### Part A: Preparation and Launching the Tool
 

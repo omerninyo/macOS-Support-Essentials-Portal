@@ -27,15 +27,14 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 * **Volume Ownership:** A mechanism on Apple Silicon Macs requiring specialized permissions to execute system-level tasks such as erasing the Mac, modifying startup security settings, or upgrading macOS. This capability is directly derived from users possessing a Secure Token.
 * **Bootstrap Token:** A temporary, enterprise-grade "master key" escrowed to the MDM server during the enrollment process. Held securely in the MDM (escrow process), this token can automatically grant a Secure Token to subsequently logging-in standard users or cloud identities (like Managed Apple Accounts - MAIDs) without requiring the original admin's credentials.
 
-> [!TIP]
-> **Decoding Tokens and Certificates in the Enterprise**
-> The macOS ecosystem and Apple management frameworks utilize various tokens and certificates. Here is a definitive guide to the common terminology:
-> 
-> * **APNs Certificate / Token:** Secures and authenticates the encrypted communication channel between your MDM, Apple's servers, and the devices.
-> * **Service Token:** Authenticates the MDM server against **Apple Business Manager (ABM)**.
-> * **Content Token:** Authenticates the MDM server against the Apps & Books (VPP) library.
-> * **Secure Token:** A local cryptographic token on macOS that permits a user to unlock a FileVault-encrypted disk.
-> * **Bootstrap Token:** An institutional token allowing the MDM to transparently grant a Secure Token to end-users without their direct involvement.
+!!! tip "Decoding Tokens and Certificates in the Enterprise"
+    The macOS ecosystem and Apple management frameworks utilize various tokens and certificates. Here is a definitive guide to the common terminology:
+
+    * **APNs Certificate / Token:** Secures and authenticates the encrypted communication channel between your MDM, Apple's servers, and the devices.
+    * **Service Token:** Authenticates the MDM server against **Apple Business Manager (ABM)**.
+    * **Content Token:** Authenticates the MDM server against the Apps & Books (VPP) library.
+    * **Secure Token:** A local cryptographic token on macOS that permits a user to unlock a FileVault-encrypted disk.
+    * **Bootstrap Token:** An institutional token allowing the MDM to transparently grant a Secure Token to end-users without their direct involvement.
 
 * **Recovery Key (PRK/IRK):** When FileVault encryption is turned on, a fallback key is generated to safeguard data in the event of a lost login password.
   * **PRK - Personal Recovery Key:** An alphanumeric string presented to the user to store safely, or alternatively, escrowed to their iCloud account.
@@ -48,9 +47,8 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 
 ### Massive CLI Reference for Encryption and Token Management
 
-> [!NOTE]
-> **Leveraging the Terminal for Encryption Management**
-> Managing the Secure Token architecture and FileVault is predominantly handled using the `sysadminctl` and `fdesetup` binaries. These are essential tools for macOS system administrators, but memorizing them is not required at this stage of the course. Feel free to copy and paste them during the lab. We will dive deep into the command-line interface in Lesson 08.
+!!! note "Leveraging the Terminal for Encryption Management"
+    Managing the Secure Token architecture and FileVault is predominantly handled using the `sysadminctl` and `fdesetup` binaries. These are essential tools for macOS system administrators, but memorizing them is not required at this stage of the course. Feel free to copy and paste them during the lab. We will dive deep into the command-line interface in Lesson 08.
 
 #### Managing Secure Tokens via `sysadminctl`
 
@@ -164,8 +162,8 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 
 ## 💡 Presentation Visuals
 
-> [!NOTE]
-> These images can be projected in class when explaining the topic, or integrated into slide decks.
+!!! note
+    These images can be projected in class when explaining the topic, or integrated into slide decks.
 
 !!! tip "Visual Demonstration (Student Aid)"
     These screenshots illustrate the GUI or underlying mechanism relevant to the lesson's topic.

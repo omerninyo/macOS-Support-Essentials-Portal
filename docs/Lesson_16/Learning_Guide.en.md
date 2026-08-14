@@ -22,8 +22,8 @@
 
 While the `log` utility is the primary powerhouse for historical querying of the Unified Logging System (since Console.app focuses on live streams by default), we emphasize GUI workflows wherever possible. However, the terminal remains essential for specific log extraction.
 
-> [!IMPORTANT]
-> Running `log show` without a filter can dump millions of lines and freeze your terminal. Always leverage `--last` or `--predicate` — a raw, unfiltered command is a rookie mistake.
+!!! important
+    Running `log show` without a filter can dump millions of lines and freeze your terminal. Always leverage `--last` or `--predicate` — a raw, unfiltered command is a rookie mistake.
 
 ### Basic Viewing & Time Filtering
 
@@ -145,7 +145,6 @@ When your MDM server pushes a configuration profile (e.g., an 802.1x payload for
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/SYAGmWsJksQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 ## 💡 Presentation Visuals
 

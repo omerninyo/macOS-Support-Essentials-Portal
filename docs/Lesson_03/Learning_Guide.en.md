@@ -30,20 +30,18 @@
 * **System Integrity Protection - SIP:** A security feature in macOS that prevents even the root user from modifying sensitive system files, including the TCC databases.
 * **Quarantine:** An Extended Attribute attached to files downloaded from the internet by apps like Safari, Mail, or messaging clients. This tag triggers the Gatekeeper check when the file is first opened.
 
-> [!TIP]
-> **Historical Milestones in macOS Security**
-> - **2007 - Code Signing:** First introduced in Leopard, alongside the release of the iPhone.
-> - **2012 - Gatekeeper:** Stepped into action to block malicious code execution.
-> - **2018 - TCC (Privacy):** Only in Mojave did the system mature, and today it protects dozens of resources (for the first 15 years, privacy was barely managed at the app level).
-> - **YARA Rules:** The XProtect engine is based on the YARA language. The name is an inside joke: "YARA: Another Recursive Acronym".
+!!! tip "Historical Milestones in macOS Security"
+    - **2007 - Code Signing:** First introduced in Leopard, alongside the release of the iPhone.
+    - **2012 - Gatekeeper:** Stepped into action to block malicious code execution.
+    - **2018 - TCC (Privacy):** Only in Mojave did the system mature, and today it protects dozens of resources (for the first 15 years, privacy was barely managed at the app level).
+    - **YARA Rules:** The XProtect engine is based on the YARA language. The name is an inside joke: "YARA: Another Recursive Acronym".
 
 ---
 
 ## CLI Commands
 
-> [!NOTE]
-> **Using the Terminal (Command Line)**
-> Advanced Terminal commands for managing security and privacy are provided here. There is no need to memorize their syntax right now! You can simply copy-paste them during the lab (e.g., when resetting Zoom permissions). In-depth Terminal training will be covered comprehensively in Lesson 08.
+!!! note "Using the Terminal (Command Line)"
+    Advanced Terminal commands for managing security and privacy are provided here. There is no need to memorize their syntax right now! You can simply copy-paste them during the lab (e.g., when resetting Zoom permissions). In-depth Terminal training will be covered comprehensively in Lesson 08.
 
 ### Investigating and Managing Gatekeeper (`spctl`)
 The `spctl` (SecAssessment system policy security) tool is used to manage and evaluate the Gatekeeper system.
@@ -103,9 +101,8 @@ TCC databases are protected by SIP and cannot be edited manually.
 
 ### Unified Logging Queries via Terminal
 
-> [!NOTE]
-> **The Logging System - Lesson 16**
-> The following commands look complex and use the `log show` tool. At this stage, there's no need to understand the Predicates (filtering conditions). Use them strictly for copy-pasting in case of debugging. We will learn how to write advanced log queries in the final lesson of the course!
+!!! note "The Logging System - Lesson 16"
+    The following commands look complex and use the `log show` tool. At this stage, there's no need to understand the Predicates (filtering conditions). Use them strictly for copy-pasting in case of debugging. We will learn how to write advanced log queries in the final lesson of the course!
 
 * **Monitor Gatekeeper activity (investigate app blocks in the last 1h):**
   ```bash
@@ -143,8 +140,8 @@ TCC databases are protected by SIP and cannot be edited manually.
 
 ## 💡 Presentation Visuals
 
-> [!NOTE]
-> These images can be projected in class when explaining the topic, or integrated into presentations.
+!!! note
+    These images can be projected in class when explaining the topic, or integrated into presentations.
 
 !!! tip "Visual Aid (Student Reference)"
     These images illustrate the interface or mechanism relevant to the lesson topic.

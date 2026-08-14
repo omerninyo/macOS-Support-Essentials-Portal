@@ -1,12 +1,11 @@
 # Lesson 05 — Applications and Processes
 ## Hands-On Lab
 
-> [!NOTE]
-> **Lab Objective:**
-> Practical experience in deploying, installing, and diagnosing macOS applications via the graphical user interface.
-> You will experience different installation types (PKG and DMG), navigate Gatekeeper restrictions in Tahoe, reset applications via their Container, and execute Force Quits.
->
-> *Note: In an enterprise environment, App Store deployment is managed via MDM/VPP — see Exercise 5.*
+!!! note "Lab Objective"
+    Practical experience in deploying, installing, and diagnosing macOS applications via the graphical user interface.
+    You will experience different installation types (PKG and DMG), navigate Gatekeeper restrictions in Tahoe, reset applications via their Container, and execute Force Quits.
+
+    *Note: In an enterprise environment, App Store deployment is managed via MDM/VPP — see Exercise 5.*
 
 ---
 
@@ -16,8 +15,8 @@
 - A user account with local Admin privileges
 - `installer.pkg` and `.dmg` files from the Course Assets folder (provided by the instructor)
 
-> [!TIP]
-> **Missing a file?** You can download VLC from [videolan.org](https://www.videolan.org/) as a DMG, and Zoom from [zoom.us/download](https://zoom.us/download) as a PKG.
+!!! tip
+    **Missing a file?** You can download VLC from [videolan.org](https://www.videolan.org/) as a DMG, and Zoom from [zoom.us/download](https://zoom.us/download) as a PKG.
 
 ---
 
@@ -33,8 +32,8 @@
 6. Enter your Admin password when prompted.
 7. Navigate to `/Applications/` and launch the software to verify it works.
 
-> [!NOTE]
-> If the installer prompts for a Restart — you can postpone this until the end of all exercises.
+!!! note
+    If the installer prompts for a Restart — you can postpone this until the end of all exercises.
 
 ---
 
@@ -54,10 +53,10 @@
 
 **The Tahoe Challenge — Unsigned Application:**
 
-> [!IMPORTANT]
-> If you are provided with an unsigned file for testing:
-> - Try this: Right-click → Open → **Notice that this option no longer exists in Tahoe.**
-> - The correct method: `System Settings → Privacy & Security` → Scroll down → Click **"Open Anyway"**
+!!! important
+    If you are provided with an unsigned file for testing:
+    - Try this: Right-click → Open → **Notice that this option no longer exists in Tahoe.**
+    - The correct method: `System Settings → Privacy & Security` → Scroll down → Click **"Open Anyway"**
 
 ---
 
@@ -84,8 +83,8 @@
 9. Empty the Trash (**Finder → Empty Trash**).
 10. Relaunch the application → Seeing the "Welcome" screen indicates **the reset was successful** ✅.
 
-> [!CAUTION]
-> **Do not execute** `killall cfprefsd` while other applications are running — it will affect the preferences of all active processes.
+!!! caution
+    **Do not execute** `killall cfprefsd` while other applications are running — it will affect the preferences of all active processes.
 
 ---
 
@@ -130,15 +129,15 @@ This is a demonstration exercise — the instructor will present from the main c
 3. The instructor will click "Install" → Notice: **No Admin prompt, no Apple ID prompt.**
 4. The application is installed directly to `/Applications/` in the background.
 
-> [!TIP]
-> **A sign of a VPP issue in the field:** If an enterprise application prompts for an Apple ID → This is a sign that the VPP Token has expired in ABM. It must be renewed in the portal.
+!!! tip "A sign of a VPP issue in the field"
+    If an enterprise application prompts for an Apple ID → This is a sign that the VPP Token has expired in ABM. It must be renewed in the portal.
 
 ---
 
 ## Bonus Exercise — Terminal for Advanced Users
 
-> [!CAUTION]
-> For advanced users only. Not required for the core exercise.
+!!! caution
+    For advanced users only. Not required for the core exercise.
 
 ```bash
 # Verify PKG signature

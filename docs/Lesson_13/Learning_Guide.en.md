@@ -1,7 +1,6 @@
 # Lesson 13: The Boot Process
 **Part C: Student Learning Guide**
 
-
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -33,8 +32,9 @@
 *   **Kernel Extensions - Kexts:** Software that runs within the system's kernel space (Ring 0). Apple is gradually deprecating their support, as a Kext crash brings down the entire Mac (Kernel Panic). Loading them requires switching to Reduced Security.
 *   **System Extensions:** The modern replacement for Kexts. These extensions run as User Space Processes (inside a "Sandbox"), making them significantly safer. If they crash, the Mac continues to operate normally. (Common types: Network Extensions for VPN/Firewall, Endpoint Security for Antivirus/EDR).
 
-> [!IMPORTANT]
-> **Enterprise Note:** Modern security agents (AV/EDR) like CrowdStrike and SentinelOne have already migrated to System Extensions. If a security vendor still requires a Kext, it's a red flag indicating outdated software. Demand an updated version from the vendor before deploying it in your enterprise environment.
+!!! important "Enterprise Note"
+    Modern security agents (AV/EDR) like CrowdStrike and SentinelOne have already migrated to System Extensions. If a security vendor still requires a Kext, it's a red flag indicating outdated software. Demand an updated version from the vendor before deploying it in your enterprise environment.
+
 *   **RecoveryOS Password:** In the past (on Intel Macs), we used a Firmware Password. With Apple Silicon, you can use an MDM system (via the `SetRecoveryLock` command) to remotely lock access to the Recovery environment (Startup Options) without a password.
 *   **1TR (One True Recovery):** The unified, dedicated recovery environment for Apple Silicon Macs, consolidating all boot options into one place, accessed by a long-press of the power button.
 *   **Fallback Recovery (frOS):** The backup (resiliency) mechanism for the primary Recovery environment on Apple Silicon. It is triggered by a double-press (short then long) of the power button. It provides recovery tools in case the primary 1TR is corrupted, but it does not allow changes to the security level (Startup Security Utility).
@@ -53,10 +53,10 @@ Commands that display data also available in System Information, formatted for q
 
 ### `bputil` - Advanced Boot Policy Management
 
-> [!WARNING]
-> The `bputil` command is strictly intended for use within macOS Recovery (or as root on a live system to view info) and allows deep modifications to the LocalPolicy without using the GUI. Incorrect usage can render the Mac unbootable.
+!!! warning
+    The `bputil` command is strictly intended for use within macOS Recovery (or as root on a live system to view info) and allows deep modifications to the LocalPolicy without using the GUI. Incorrect usage can render the Mac unbootable.
 
-> *→ The Bootstrap Token and FileVault concepts covered in Lesson 04 are what enable an MDM to change the Security Policy remotely — without them, IT personnel must physically access Recovery to alter the security level.*
+    *→ The Bootstrap Token and FileVault concepts covered in Lesson 04 are what enable an MDM to change the Security Policy remotely — without them, IT personnel must physically access Recovery to alter the security level.*
 
 *   **`sudo bputil -d`** or **`bputil --display-policy`**
     *   **Action:** Displays the contents of the LocalPolicy (encryption, Kext status, MDM authorization, etc.) for the local startup disk.
@@ -113,7 +113,6 @@ Executed from Terminal in Recovery Mode only to apply changes.
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/hZqM__q-E3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
 
 !!! tip "Presentation Visuals"
     You can reference the following images from the course guide (Asset A) for this topic:

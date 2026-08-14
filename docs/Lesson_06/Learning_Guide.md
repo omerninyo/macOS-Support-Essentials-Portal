@@ -1,7 +1,6 @@
 # שיעור 06: מערכת הקבצים (APFS)
 **מדריך עזר לתלמיד**
 
-
 ---
 
 ## מטרות השיעור
@@ -53,8 +52,8 @@ Physical Disk
     └── Volume: VM (Swap)
 ```
 
-> [!IMPORTANT]
-> כל הכרכים ב-Container חולקים את **אותו מקום פנוי**. אין צורך להגדיר גודל מראש לכל כרך — המערכת מנהלת את זה דינמית.
+!!! important
+    כל הכרכים ב-Container חולקים את **אותו מקום פנוי**. אין צורך להגדיר גודל מראש לכל כרך — המערכת מנהלת את זה דינמית.
 
 ### פקודות אבחון
 
@@ -86,8 +85,8 @@ cp -c /path/to/original /path/to/clone
 └─────────────────────┘    └─────────────────────┘
 ```
 
-> [!NOTE]
-> הפקודה `sudo touch /System/test.txt` תחזיר **"Read-only file system"** — זו לא שגיאה, זו ההגנה של SSV בפעולה.
+!!! note
+    הפקודה `sudo touch /System/test.txt` תחזיר **"Read-only file system"** — זו לא שגיאה, זו ההגנה של SSV בפעולה.
 
 ### פקודות SSV ו-Firmlinks
 
@@ -115,8 +114,8 @@ mount
 | **Network** | `/Network/Library/` | רשת ארגונית | משאבים ממשרד ה-IT |
 | **System** | `/System/Library/` | נעול (SSV) | קבצי מערכת — אין כניסה |
 
-> [!TIP]
-> **תרחיש נפוץ בשטח:** משתמש מתקין פונט ורק הוא רואה אותו → הפונט הותקן ב-User Domain (`~/Library/Fonts`). כדי שיהיה זמין לכולם: להעביר ל-`/Library/Fonts` (דורש Admin).
+!!! tip "תרחיש נפוץ בשטח"
+    משתמש מתקין פונט ורק הוא רואה אותו → הפונט הותקן ב-User Domain (`~/Library/Fonts`). כדי שיהיה זמין לכולם: להעביר ל-`/Library/Fonts` (דורש Admin).
 
 ### גישה ל-User Library ב-Finder
 
@@ -155,8 +154,8 @@ sudo mdutil -E /
 mdimport -t -d3 /path/to/file.pdf
 ```
 
-> [!NOTE]
-> לאחר `mdutil -E /` תראה את תהליכי `mds_stores` ו-`photoanalysisd` קופצים ב-Activity Monitor. זה תקין — המערכת בונה מחדש. עשוי לקחת שעות עד ימים.
+!!! note
+    לאחר `mdutil -E /` תראה את תהליכי `mds_stores` ו-`photoanalysisd` קופצים ב-Activity Monitor. זה תקין — המערכת בונה מחדש. עשוי לקחת שעות עד ימים.
 
 ---
 
@@ -164,14 +163,13 @@ mdimport -t -d3 /path/to/file.pdf
 
 ### מה אנשי IT צריכים לדעת
 
-> [!IMPORTANT]
-> **לפני פריסת AV/DLP ארגוני על Mac:**
-> 1. הרץ `csrutil authenticated-root status` — אם `enabled`, כונן המערכת **חתום ומוגן**. אין צורך לסרוק אותו.
-> 2. הגדר Exclusions לנתיבי מערכת: `/System/`, `/usr/bin/`, `/usr/lib/`
-> 3. השתמש ב-`/usr/local/` (נגיש לכתיבה) לסקריפטים — לא ב-`/usr/bin/` (נעול)
+!!! important "לפני פריסת AV/DLP ארגוני על Mac"
+    1. הרץ `csrutil authenticated-root status` — אם `enabled`, כונן המערכת **חתום ומוגן**. אין צורך לסרוק אותו.
+    2. הגדר Exclusions לנתיבי מערכת: `/System/`, `/usr/bin/`, `/usr/lib/`
+    3. השתמש ב-`/usr/local/` (נגיש לכתיבה) לסקריפטים — לא ב-`/usr/bin/` (נעול)
 
-> [!CAUTION]
-> כלי AV ישן שסורק ללא Exclusions על Mac עם Firmlinks — עלול להיכנס ללולאה אינסופית ולגרום ל-**Kernel Panic**. תמיד לעדכן סוכני אבטחה לגרסה התומכת ב-Tahoe/Sequoia.
+!!! caution
+    כלי AV ישן שסורק ללא Exclusions על Mac עם Firmlinks — עלול להיכנס ללולאה אינסופית ולגרום ל-**Kernel Panic**. תמיד לעדכן סוכני אבטחה לגרסה התומכת ב-Tahoe/Sequoia.
 
 ---
 

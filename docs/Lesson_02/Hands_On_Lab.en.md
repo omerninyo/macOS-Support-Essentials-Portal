@@ -38,8 +38,8 @@ As an enterprise IT administrator, you have been tasked with preparing a macOS e
 8. Click the info (i) button next to your newly created `LabUsers` group.
 9. In the user list, check the boxes next to `Student` and `GuestShare` to add them to the group. Click **Done**.
 
-> [!NOTE]
-> A `Sharing Only` account does not receive a Home Folder in `/Users` and cannot log into the macOS desktop. Its sole enterprise purpose is authenticating remote access for services like File Sharing.
+!!! note
+    A `Sharing Only` account does not receive a Home Folder in `/Users` and cannot log into the macOS desktop. Its sole enterprise purpose is authenticating remote access for services like File Sharing.
 
 ---
 
@@ -65,9 +65,8 @@ As an enterprise IT administrator, you have been tasked with preparing a macOS e
 
 > **What you will learn:** Witnessing firsthand how Apple's TCC framework intercepts and blocks basic shell commands, and how to grant explicit administrative authorization via System Settings.
 
-> [!NOTE]
-> **Copy-Paste Only!**
-> In this bonus exercise, we are using the `ls` Terminal command (which lists directory contents) purely to trigger a real-time system block. There is no need to analyze the syntax right now. We will master the command line in Lesson 08.
+!!! note "Copy-Paste Only!"
+    In this bonus exercise, we are using the `ls` Terminal command (which lists directory contents) purely to trigger a real-time system block. There is no need to analyze the syntax right now. We will master the command line in Lesson 08.
 
 1. Launch the **Terminal** app.
 2. Type the command `ls ~/Desktop` and press Enter.

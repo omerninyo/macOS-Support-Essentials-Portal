@@ -48,9 +48,9 @@ App Store:  Search, click Download — Fully automated
 
 ### Critical Change in Tahoe
 
-> [!IMPORTANT]
-> For unapproved applications — **Right-click → Open is no longer supported in Tahoe**.
-> The only method: `System Settings → Privacy & Security → Scroll down → Open Anyway`
+!!! important
+    For unapproved applications — **Right-click → Open is no longer supported in Tahoe**.
+    The only method: `System Settings → Privacy & Security → Scroll down → Open Anyway`
 
 ---
 
@@ -73,9 +73,9 @@ App Store:  Search, click Download — Fully automated
 4. Move to Trash and empty the Trash
 5. Relaunch the application → Seeing the "Welcome" screen indicates a successful reset
 
-> [!NOTE]
-> Deleting an application from `/Applications/` **does not** delete its Container!
-> The Container must be deleted separately.
+!!! note
+    Deleting an application from `/Applications/` **does not** delete its Container!
+    The Container must be deleted separately.
 
 ---
 
@@ -119,8 +119,8 @@ Apple Business Manager (ABM)
 
 ## Terminal Commands — Appendix
 
-> [!NOTE]
-> The Terminal is not required for the lesson's exercises. These commands are provided as an extension for advanced users.
+!!! note
+    The Terminal is not required for the lesson's exercises. These commands are provided as an extension for advanced users.
 
 ```bash
 # Manually mount a DMG

@@ -3,8 +3,8 @@
 
 In this lab, you will gain hands-on experience with the architecture operating behind the graphical interface. We will inspect the directory structure responsible for system background services, investigate macOS configuration files (Property Lists / Plists), and utilize Activity Monitor and Console logs to analyze real memory pressure and monitor the built-in Apple MDM daemon in action.
 
-> [!WARNING]
-> **Important Note:** In some steps within the lab environment, you will be required to enter your administrator password to authorize privileged actions (`sudo`). Note that when typing your password in the Terminal, no visual feedback or asterisks will appear, but the system is actively capturing your keystrokes.
+!!! warning "Important Note"
+    In some steps within the lab environment, you will be required to enter your administrator password to authorize privileged actions (`sudo`). Note that when typing your password in the Terminal, no visual feedback or asterisks will appear, but the system is actively capturing your keystrokes.
 
 ---
 

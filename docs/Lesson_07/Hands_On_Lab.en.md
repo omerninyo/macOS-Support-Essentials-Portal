@@ -1,7 +1,6 @@
 # Lesson 07: Backup and Restore
 **Hands-On Lab**
 
-
 ## macOS Backup and Recovery
 
 ### Lab Objective
@@ -31,8 +30,8 @@ To understand and practice the native macOS backup mechanism, including managing
 7. The system will ask if you want to encrypt the backup. Choose to encrypt it (this is a critical IT security practice!) and enter a memorable backup password (e.g., `1234`).
 8. Click **Done**. The system will now format the drive to APFS (Case-sensitive) and lock it as a dedicated backup volume.
 
-> [!IMPORTANT]
-> For this and all subsequent exercises, ensure you are ONLY utilizing the provided external USB drive for backup configurations and formatting. Never perform destructive formatting actions on your system drive!
+!!! important
+    For this and all subsequent exercises, ensure you are ONLY utilizing the provided external USB drive for backup configurations and formatting. Never perform destructive formatting actions on your system drive!
 
 ---
 
@@ -76,8 +75,8 @@ To understand and practice the native macOS backup mechanism, including managing
 7. Without reconnecting the external drive, click **Browse Time Machine backups** from the Menu Bar once more.
 8. Notice that the system still permits time travel thanks to the local APFS snapshot! Perform the restore procedure exactly as before.
 
-> [!NOTE]
-> The Local Snapshots mechanism is an integral component of the APFS architecture and the Copy-on-Write mechanism we previously covered. This is precisely why instantaneous "time travel" is possible.
+!!! note
+    The Local Snapshots mechanism is an integral component of the APFS architecture and the Copy-on-Write mechanism we previously covered. This is precisely why instantaneous "time travel" is possible.
 
 ---
 
@@ -103,7 +102,7 @@ While we explored snapshot management via the Disk Utility GUI, System Administr
 5. Reconnect the external USB drive.
 6. Open **Disk Utility**, select the external drive, and click **Erase** (choose ExFAT or standard APFS format) to purge the Time Machine volume structure and prepare it for regular usage.
 
-> [!CAUTION]
-> During this final step (formatting via Disk Utility), double-check that you are erasing the external USB drive and NOT any partition belonging to your system drive!
+!!! caution
+    During this final step (formatting via Disk Utility), double-check that you are erasing the external USB drive and NOT any partition belonging to your system drive!
 
 > **End of Lab**

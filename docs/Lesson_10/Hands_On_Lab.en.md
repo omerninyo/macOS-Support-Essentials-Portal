@@ -22,8 +22,8 @@
 7. The network window will display all servers broadcasting their presence via Bonjour. 
 8. Double-clicking on one of the computers will initiate a quick connection (click **Connect As** to enter authentication credentials if required).
 
-> [!NOTE]
-> **Diagnostics Note:** If you do not see other computers in the Network window, it is highly likely that the Wi-Fi network is blocking mDNS traffic (a security feature known as Client Isolation, commonly found on public or guest routers).
+!!! note "Diagnostics Note"
+    If you do not see other computers in the Network window, it is highly likely that the Wi-Fi network is blocking mDNS traffic (a security feature known as Client Isolation, commonly found on public or guest routers).
 
 ---
 
@@ -47,8 +47,8 @@
 
 **What you will learn:** Utilizing the Share Disk tool from the Recovery Mode on Apple Silicon Macs to extract data from a "failing Mac" (acting as an SMB server), while understanding the limitations of Disk Utility over this connection type.
 
-> [!WARNING]
-> **Attention:** Because this lab is conducted in a production environment, avoid shutting down live computers to perform this exercise unless explicitly authorized by the instructor.
+!!! warning "Attention"
+    Because this lab is conducted in a production environment, avoid shutting down live computers to perform this exercise unless explicitly authorized by the instructor.
 
 1. On the Mac you wish to share (the "Target Mac"), boot into **Recovery Mode** (press and hold the power button while the Mac is powered off until the Options screen appears).
 2. After user authentication, click on **Utilities** in the menu bar and select **Share Disk**.

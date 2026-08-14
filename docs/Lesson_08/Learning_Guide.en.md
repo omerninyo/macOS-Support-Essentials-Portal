@@ -69,8 +69,8 @@
 
 ## Appendix — Important System Commands
 
-> [!NOTE]
-> It is highly recommended to keep these commands handy in an administrative Cheat Sheet or MDM script repository for rapid troubleshooting.
+!!! note
+    It is highly recommended to keep these commands handy in an administrative Cheat Sheet or MDM script repository for rapid troubleshooting.
 
 ### Basic Process Control & Monitoring
 ```bash
@@ -103,8 +103,8 @@ sudo sfltool dumpbtm > ~/Documents/btmdump.txt
 sudo sfltool resetbtm
 ```
 
-> [!IMPORTANT]
-> `sfltool resetbtm` resets the Background Task Management database — all installed applications requiring Login Items (Agents, Helper Tools) must re-register. Use this solely as a deep diagnostic step for intractable Login Item issues.
+!!! important
+    `sfltool resetbtm` resets the Background Task Management database — all installed applications requiring Login Items (Agents, Helper Tools) must re-register. Use this solely as a deep diagnostic step for intractable Login Item issues.
 
 ### Reading and Validating Plists (`plutil`)
 ```bash

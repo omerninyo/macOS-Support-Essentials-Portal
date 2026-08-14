@@ -1,7 +1,6 @@
 # Lesson 06: File System (APFS)
 **Student Reference Guide**
 
-
 ---
 
 ## Lesson Objectives
@@ -53,8 +52,8 @@ Physical Disk
     └── Volume: VM (Swap)
 ```
 
-> [!IMPORTANT]
-> All volumes within a Container share the **exact same free space**. There is no need to define sizes in advance for each volume — macOS dynamically manages the allocation.
+!!! important
+    All volumes within a Container share the **exact same free space**. There is no need to define sizes in advance for each volume — macOS dynamically manages the allocation.
 
 ### Diagnostic Commands
 
@@ -86,8 +85,8 @@ cp -c /path/to/original /path/to/clone
 └─────────────────────┘    └─────────────────────┘
 ```
 
-> [!NOTE]
-> Executing `sudo touch /System/test.txt` will return **"Read-only file system"** — this is not an error, it is the SSV security protection in action.
+!!! note
+    Executing `sudo touch /System/test.txt` will return **"Read-only file system"** — this is not an error, it is the SSV security protection in action.
 
 ### SSV and Firmlinks Commands
 
@@ -115,8 +114,8 @@ mount
 | **Network** | `/Network/Library/` | Enterprise Network | IT-provisioned resources |
 | **System** | `/System/Library/` | Locked (SSV) | Core System Files — No Entry |
 
-> [!TIP]
-> **Common Field Scenario:** A user installs a font via the GUI but only they can see it in applications. Why? The font was installed into the User Domain (`~/Library/Fonts`). To make it available to all users across the Mac, an Admin must move it to the Local Domain (`/Library/Fonts`).
+!!! tip "Common Field Scenario"
+    A user installs a font via the GUI but only they can see it in applications. Why? The font was installed into the User Domain (`~/Library/Fonts`). To make it available to all users across the Mac, an Admin must move it to the Local Domain (`/Library/Fonts`).
 
 ### Accessing the User Library in the Finder
 
@@ -155,8 +154,8 @@ sudo mdutil -E /
 mdimport -t -d3 /path/to/file.pdf
 ```
 
-> [!NOTE]
-> Following `sudo mdutil -E /`, you will observe the `mds_stores` and `photoanalysisd` processes spiking in Activity Monitor. This is expected behavior — the system is rebuilding the index, which may take hours or even days depending on the data volume.
+!!! note
+    Following `sudo mdutil -E /`, you will observe the `mds_stores` and `photoanalysisd` processes spiking in Activity Monitor. This is expected behavior — the system is rebuilding the index, which may take hours or even days depending on the data volume.
 
 ---
 
@@ -164,14 +163,13 @@ mdimport -t -d3 /path/to/file.pdf
 
 ### What IT Professionals Need to Know
 
-> [!IMPORTANT]
-> **Before deploying Enterprise AV/DLP on a Mac:**
-> 1. Run `csrutil authenticated-root status` — if `enabled`, the System volume is **cryptographically signed and protected**. There is zero need to scan it.
-> 2. Configure Exclusions for system paths: `/System/`, `/usr/bin/`, `/usr/lib/`.
-> 3. Utilize `/usr/local/` (writable) for custom scripts — avoid `/usr/bin/` (locked).
+!!! important "Before deploying Enterprise AV/DLP on a Mac"
+    1. Run `csrutil authenticated-root status` — if `enabled`, the System volume is **cryptographically signed and protected**. There is zero need to scan it.
+    2. Configure Exclusions for system paths: `/System/`, `/usr/bin/`, `/usr/lib/`.
+    3. Utilize `/usr/local/` (writable) for custom scripts — avoid `/usr/bin/` (locked).
 
-> [!CAUTION]
-> Legacy AV agents scanning without proper exclusions on a Mac with Firmlinks can enter an infinite loop, resulting in a **Kernel Panic**. Always ensure security agents are updated to versions officially supporting macOS Tahoe/Sequoia.
+!!! caution
+    Legacy AV agents scanning without proper exclusions on a Mac with Firmlinks can enter an infinite loop, resulting in a **Kernel Panic**. Always ensure security agents are updated to versions officially supporting macOS Tahoe/Sequoia.
 
 ---
 

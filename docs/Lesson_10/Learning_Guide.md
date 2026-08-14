@@ -18,10 +18,10 @@
 | **Bonjour / mDNS** | הטכנולוגיה של אפל לגילוי שרתים ושירותים ברשת המקומית באופן אוטומטי (Zero-Configuration). |
 | **Kerberos SSO Extension** | תוסף מובנה ב-macOS שמאפשר התחברות שקופה (Passwordless) לכונני רשת ארגוניים המבוססים על Active Directory בעזרת כרטיסי TGT. |
 
-> [!NOTE]
-> **הערה טכנית:** פרוטוקול SMB אינו מודע למבנה הקבצים החסכוני של APFS (כמו קבצי Sparse או Clones), ולכן העתקת קובץ כזה לשרת SMB "תנפח" אותו לגודלו המקורי.
+!!! note "הערה טכנית"
+    פרוטוקול SMB אינו מודע למבנה הקבצים החסכוני של APFS (כמו קבצי Sparse או Clones), ולכן העתקת קובץ כזה לשרת SMB "תנפח" אותו לגודלו המקורי.
 
-> *→ APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
+    *→ APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
 
 ---
 
@@ -33,8 +33,8 @@
 | **Screen Sharing** | שיתוף מסך מובנה. מבוסס על מנגנון VNC. מחייב מתן הרשאת **Screen Recording** ב-TCC (Privacy & Security), אחרת יוצג מסך שחור או שגיאה. |
 | **Universal Control** | עבודה חלקה עם מקלדת/עכבר אחד בין כמה מחשבים/אייפדים סמוכים מאותו Apple ID (פועל דרך שירות Rapportd). |
 
-> [!IMPORTANT]
-> **Screen Sharing + TCC:** אם Screen Sharing מופעל אבל מציג מסך שחור — הסיבה היא כמעט תמיד היעדר הרשאת Screen Recording ב-TCC. בסביבה ארגונית פרוסו הרשאה זו דרך PPPC Profile (מדיניות Privacy) ולא סומכו על המשתמש לאשר את זה בעצמו.
+!!! important "Screen Sharing + TCC"
+    אם Screen Sharing מופעל אבל מציג מסך שחור — הסיבה היא כמעט תמיד היעדר הרשאת Screen Recording ב-TCC. בסביבה ארגונית פרוסו הרשאה זו דרך PPPC Profile (מדיניות Privacy) ולא סומכו על המשתמש לאשר את זה בעצמו.
 
 ---
 
@@ -54,10 +54,10 @@
 - מופעל דרך **Recovery Mode** תחת התפריט Utilities > Share Disk.
 - המחשב המארח יראה את המחשב התקול כתיקיית רשת (SMB) תחת התפריט Network.
 
-> [!WARNING]
-> **אזהרת IT קריטית (First Aid):** בניגוד לעבר ב-Target Disk Mode, אי אפשר להריץ פקודות תיקון דיסק או Disk Utility מהמחשב המארח על המחשב התקול, מכיוון שהדיסק חשוף ברמת קובץ (SMB) ולא ברמת בלוק (Block Device). תיקון תקלות בדיסק חייב להתבצע מה-Recovery של המחשב התקול עצמו!
+!!! warning "אזהרת IT קריטית (First Aid)"
+    בניגוד לעבר ב-Target Disk Mode, אי אפשר להריץ פקודות תיקון דיסק או Disk Utility מהמחשב המארח על המחשב התקול, מכיוון שהדיסק חשוף ברמת קובץ (SMB) ולא ברמת בלוק (Block Device). תיקון תקלות בדיסק חייב להתבצע מה-Recovery של המחשב התקול עצמו!
 
-> *→ FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
+    *→ FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
 
 ---
 

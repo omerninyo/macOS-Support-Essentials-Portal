@@ -19,8 +19,8 @@
 | **DDM (Declarative Device Management)** | A modern infrastructure for device management. For updates, enforcement is handled by applying a local "declaration" with a deadline, empowering the Mac to autonomously manage the enforcement and user notifications. |
 | **Migration Assistant** | A built-in tool for transferring data between Macs or from backups. *Note: In enterprise environments, there is an explicit recommendation to avoid using it to prevent importing outdated configuration profiles and problematic Intel legacy apps.* |
 
-> [!NOTE]
-> **Technical Note (Snapshots):** Why does a 5GB upgrade sometimes demand 40GB of free space? To ensure a safe installation, the OS (via the SSV mechanism) takes a snapshot of the disk before the update. If a network drop or power failure occurs, the system reverts to the starting point with absolutely zero data loss or corruption!
+!!! note "Technical Note (Snapshots)"
+    Why does a 5GB upgrade sometimes demand 40GB of free space? To ensure a safe installation, the OS (via the SSV mechanism) takes a snapshot of the disk before the update. If a network drop or power failure occurs, the system reverts to the starting point with absolutely zero data loss or corruption!
 
 ---
 
@@ -28,8 +28,8 @@
 
 The primary CLI tool for managing, downloading, and installing system updates is `softwareupdate`.
 
-> [!WARNING]
-> Installation and deferral clearing commands (`clear-deferrals`) require `sudo` privileges.
+!!! warning
+    Installation and deferral clearing commands (`clear-deferrals`) require `sudo` privileges.
 
 ### Search, Download, and Install
 
@@ -52,10 +52,9 @@ The primary CLI tool for managing, downloading, and installing system updates is
 
 ## Enterprise Seasoning: IT Recommendations for Migrations (Migration Assistant)
 
-> [!IMPORTANT]
-> **Why Not in the Enterprise?**
-> In a managed organization (MDM), it is highly recommended to adopt a **Clean Slate** approach. This means letting the new Mac be built from scratch, and having the user pull data directly from cloud storage (OneDrive or Google Drive).
-> A full migration of applications and settings from an old Mac often drags along deprecated Kexts, legacy Rosetta-dependent apps, and conflicting MDM identity certificates that can lock IT out of managing the new Mac post-migration.
+!!! important "Why Not in the Enterprise?"
+    In a managed organization (MDM), it is highly recommended to adopt a **Clean Slate** approach. This means letting the new Mac be built from scratch, and having the user pull data directly from cloud storage (OneDrive or Google Drive).
+    A full migration of applications and settings from an old Mac often drags along deprecated Kexts, legacy Rosetta-dependent apps, and conflicting MDM identity certificates that can lock IT out of managing the new Mac post-migration.
 
 If an enterprise Migration Assistant transfer is absolutely necessary:
 * Select **only** the user folder. Uncheck `Applications` and `System & Network`.
