@@ -37,6 +37,10 @@
 | **TCC & PPPC** | מנגנון שמגן על מידע רגיש. פותחים חסימות אלו עם פרופיל PPPC ארגוני. |
 | **BTM (Background Task Mgt)** | מנגנון ההגנה על פריטי לוגין (Login Items). מנוהל לעומק דרך פקודת `sfltool`. |
 
+> *→ LaunchAngels והקשר של launchd ל-Kernel (XNU) נלמדו בשיעור 13 (Boot Process) — כאן launchd הוא PID 1 שקם אחרי הקרנל ומעלה את כל השאר.*
+
+> *→ BTM ו-sfltool נלמדים כשלב דיאגנוסטיקה גם בשיעור 15 (Diagnostics) — הוסף כאן לארגז הכלים.*
+
 ---
 
 ## חלק 1 — קיצורי מקלדת בטרמינל (Terminal Shortcuts)
@@ -95,9 +99,12 @@ sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist
 # שליפת מאגר ה-BTM (Background Task Management)
 sudo sfltool dumpbtm > ~/Documents/btmdump.txt
 
-# איפוס עמוק ל-BTM (רק במקרי כשל קריטיים)
+# אילוץ עמוק ל-BTM (רק במקרי כשל קריטיים)
 sudo sfltool resetbtm
 ```
+
+> [!IMPORTANT]
+> `sfltool resetbtm` מוחק את כל בסיס הנתונים של Background Task Management — כל התוכנות המותקנות שדורשות Login Item (Agents, Helper Tools) צריכות להירשם מחדש. זה כלי אחרון בתור חקירת יסודית לתקלות Login Items סשיות בלבד.
 
 ### קריאה וטיפול ב-Plists (`plutil`)
 ```bash

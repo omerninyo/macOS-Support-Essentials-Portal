@@ -21,6 +21,8 @@
 > [!NOTE]
 > **Technical Note:** The SMB protocol is not inherently aware of the storage-efficient structure of APFS (such as Sparse files or Clones). Therefore, copying an APFS-optimized file to an SMB server will "inflate" it to its full logical size.
 
+> *→ APFS Sparse Files, Clones, and APFS storage efficiency mechanisms were covered in Lesson 06 (FileSystem) — here we see that SMB does not preserve them and inflates the file.*
+
 ---
 
 ## Sharing Services & Connectivity
@@ -30,6 +32,9 @@
 | **AirDrop** | Local file sharing utilizing Bluetooth for proximity discovery and Wi-Fi Direct (AWDL protocol) for high-speed data transfer without a router. If AirDrop fails to discover devices, toggling Wi-Fi off and on resets the `awdl0` interface. |
 | **Screen Sharing** | Built-in screen sharing capabilities based on the VNC framework. It requires granting **Screen Recording** permissions in TCC (Privacy & Security); otherwise, the connection will result in a black screen or an error. |
 | **Universal Control** | Seamless operation across multiple nearby Macs and iPads signed into the same Apple ID using a single keyboard and mouse (powered by the Rapportd service). |
+
+> [!IMPORTANT]
+> **Screen Sharing + TCC:** If Screen Sharing is enabled but displays a black screen, the issue is almost always a missing **Screen Recording** permission in TCC. In an enterprise environment, deploy this permission via a PPPC Profile (Privacy Payload) rather than relying on end users to approve it manually.
 
 ---
 
@@ -46,11 +51,13 @@
 ## Mac Sharing Mode
 
 An advanced sharing mode used for diagnostics and data extraction from an Apple Silicon Mac experiencing an OS failure.
-- Initiated via **Recovery Mode** by navigating to the Utilities menu > Share Disk.
-- The host computer will recognize the failing Mac as an SMB network folder under the Network location.
+- Initiated via **Recovery Mode** by navigating to the **Utilities** menu > **Share Disk**.
+- The host computer will recognize the failing Mac as an SMB network folder under the **Network** location.
 
 > [!WARNING]
 > **Critical IT Alert (First Aid):** Unlike the legacy Target Disk Mode, you cannot run disk repair commands or use Disk Utility from the host computer on the failing Mac. The disk is exposed at the file level (SMB) and not as a block-level device. Disk repairs must be performed directly from the Recovery environment of the failing Mac itself!
+
+> *→ FileVault covered in Lesson 04 (Encryption) is the reason why an Admin password is required to connect in Mac Sharing Mode — the Volume Owner authorizes access via the Secure Enclave.*
 
 ---
 

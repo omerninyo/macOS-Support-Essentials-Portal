@@ -7,7 +7,7 @@
 
 * **Interfaces and Priorities** - Managing Network Locations and Service Order.
 * **Diagnostic Tools** - Ping, Traceroute, and getting to know the omnipotent `networksetup` command.
-* **Firewall** - The built-in macOS Firewall and how it operates.
+* **Firewall** - The built-in macOS Application Layer Firewall and how it operates.
 * **Enterprise Spice** - Troubleshooting 802.1X enterprise Wi-Fi profiles and remotely deployed VPN/Proxy connections.
 
 ---
@@ -30,6 +30,11 @@
 | **802.1X Profile** | An advanced authentication mechanism for enterprises (WPA-Enterprise). Typically provided as a Configuration Profile (Payload from MDM) that automatically configures Certificates. |
 | **Proxy and VPN** | Tools for routing or encrypting traffic. On a managed Mac (MDM), these settings are usually deployed as an unmodifiable Payload by the user. |
 
+> *→ Certificates required for 802.1X were covered in depth in Lesson 04 (Security & MDM) — here we see how MDM pushes them automatically to the employee's Mac.*
+
+> [!IMPORTANT]
+> **Stealth Mode in Enterprise Environments:** Enabling Stealth Mode can disrupt network monitoring tools that monitor the Mac via Ping. If Ping fails — it does not mean the Mac is offline; first verify that the Mac is reachable via Bonjour / `dns-sd -B`. In enterprise environments, enforce via MDM.
+
 > [!NOTE]
 > **Historical Note:** The `ifconfig` command is currently considered deprecated in most Linux distributions (replaced by `ip`), but in macOS, it remains fully supported and highly effective for diagnosing interfaces at the kernel level.
 
@@ -39,6 +44,8 @@
 
 > [!WARNING]
 > The `networksetup` command is the "Swiss Army Knife" for network management. Most commands that alter configuration require administrator privileges (`sudo`).
+
+> *→ The Firewall is managed by `socketfilterfw` running as a Daemon under launchd — covered in Lesson 08 (Terminal / System Services). You can monitor it in Console just like any other Daemon.*
 
 ### 1. Displaying Information (No privileges required)
 ```bash

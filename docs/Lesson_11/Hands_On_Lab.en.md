@@ -2,7 +2,7 @@
 **Hands-On Lab (Student Practice)**
 
 ## Lab Objective
-Mastering advanced control over the macOS printing subsystem, print queue management, and peripheral security. In this lab, we will learn how to configure and maintain printers using the Graphical User Interface (GUI), investigate print system logs using the Console app, and resolve critical issues through the built-in reset mechanism. Additionally, we will explore the Accessory Security mechanism.
+Mastering advanced control over the macOS printing subsystem, print queue management, and peripheral security. In this lab, we will learn how to configure and maintain printers using the Graphical User Interface (GUI), investigate print system logs using the Console app, and resolve critical issues through the built-in reset mechanism. Additionally, we will examine the Accessory Security mechanism.
 
 ---
 
@@ -13,7 +13,7 @@ The printing system in macOS is powered by **CUPS** (Common UNIX Printing System
 
 ### Exercise 1: Manually Adding an IP Printer
 
-**What you will learn:** Hands-on experience with manually adding an IP printer by configuring its IP address, selecting the protocol, and assigning a driver (PPD) directly from System Settings.
+**What you will learn:** Hands-on experience with manually adding an IP printer by configuring its IP address, selecting the protocol, and assigning a driver (PPD) directly in System Settings.
 
 1. Open the **System Settings** application.
 2. In the sidebar, navigate to **Printers & Scanners**.
@@ -39,7 +39,7 @@ The printing system in macOS is powered by **CUPS** (Common UNIX Printing System
 6. Select the print job and click the **X** button to clear it from the queue.
 7. Click the **Pause** button (pause icon) at the top of the window to temporarily halt printer activity, and then click **Resume** to restart it.
 
-### Exercise 3: Investigating Print Activity using the Console
+### Exercise 3: Investigating Print Activity using Console
 
 **What you will learn:** Real-time monitoring of the `cupsd` process to understand why a print job fails or where it gets stuck at the system level.
 

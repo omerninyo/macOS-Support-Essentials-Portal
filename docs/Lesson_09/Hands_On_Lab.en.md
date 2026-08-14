@@ -2,7 +2,7 @@
 **Hands-On Lab (Student Exercise)**
 
 ## Objective
-In this lab, we will practice managing Network Configurations visually and hands-on. We will learn how to configure Network Locations and manage the Service Order of network interfaces from within System Settings. In the second part, we'll utilize built-in graphical tools like Activity Monitor and Wireless Diagnostics for network troubleshooting. In the third part, we will examine the built-in Firewall and monitor its activity using the Console app.
+In this lab, we will practice managing Network Configurations visually and hands-on. We will learn how to configure Network Locations and manage the Service Order of network interfaces from within System Settings. In the second part, we will use built-in graphical tools like Activity Monitor and Wireless Diagnostics for network troubleshooting. In the third part, we will examine the built-in Firewall and monitor its activity using the Console app.
 
 ## Prerequisites
 
@@ -39,26 +39,26 @@ Now, we will configure different DNS servers (for example: Google DNS servers) t
 4. Under the list of DNS servers (IPv4 or IPv6 addresses), click the plus (`+`) button and type `8.8.8.8`. Click the plus again and type `8.8.4.4`.
 5. Click **OK** to save.
 
-### Step 4: Playing with the Service Order
+### Step 4: Configuring Service Order
 
 1. Return to the main **Network** screen in System Settings.
 2. Click the three dots menu `...` at the bottom, and select **Set Service Order**.
 3. In the opened window, drag one of the other interfaces (e.g., Ethernet or your iPhone USB connection, if present) to be above the Wi-Fi connection.
-4. Explain to yourself: This action tells the system that if both connections are available simultaneously, the interface at the top of the list is the one through which all internet traffic will route out. Click **OK**.
+4. Understand the mechanism: This action tells the system that if both connections are available simultaneously, the interface at the top of the list is the one through which all outbound network traffic will route. Click **OK**.
 5. When finished, return to **Locations** and revert the Mac to the **Automatic** location to cancel the DNS changes we made.
 
 ---
 
 ## Exercise 2: Network Diagnostics Using Built-in Graphical Tools
 
-**What you will learn:** Familiarity with system built-in tools for verifying network health, without opening the Terminal (Activity Monitor and Option-Click).
+**What you will learn:** Getting hands-on with built-in system tools for verifying network health without opening the Terminal (Activity Monitor and Option-Click shortcuts).
 
 ### Step 1: Monitoring Network Traffic in Activity Monitor
 
-1. Open the **Activity Monitor** application from the `Applications/Utilities` folder.
+1. Open the **Activity Monitor** application from `Applications/Utilities`.
 2. Switch to the **Network** tab at the top.
 3. Here you can see in real-time which process is consuming your bandwidth (Data Sent / Data Received).
-4. At the bottom of the window, review the graph displaying the overall system network traffic (Packets in/out). This is an excellent tool for identifying applications that are "hogging" the network, such as background cloud synchronization getting stuck.
+4. At the bottom of the window, review the graph displaying the overall system network traffic (Packets in/out). This is an excellent tool for identifying applications that are hogging bandwidth, such as background cloud sync getting stuck.
 
 ### Step 2: Reviewing Connection Data via System Information
 
@@ -69,15 +69,15 @@ Now, we will configure different DNS servers (for example: Google DNS servers) t
 ### Step 3: Wireless Diagnostics
 
 1. Hold down the **Option - ⌥** key on the keyboard, and left-click the **Wi-Fi** icon in the Menu Bar at the top of the screen.
-2. Notice the rich information revealed: the IP address, transmission speed (Tx Rate), and signal and noise strength (RSSI and Noise).
+2. Notice the rich information revealed: IP address, transmission speed (Tx Rate), and signal and noise strength (RSSI and Noise).
 3. Click on **Open Wireless Diagnostics...**.
-4. A network diagnostic wizard will open. You can click **Continue** and let the system analyze the Wi-Fi environment to locate stability issues, background noise from neighbors' routers, and other interferences.
+4. A network diagnostic wizard will open. You can click **Continue** and let the system analyze the Wi-Fi environment to locate stability issues, background noise from neighboring routers, and other interferences.
 
 ---
 
 ## Exercise 3: The Firewall and Monitoring Blocks in Console
 
-**What you will learn:** Activating the enterprise Application Layer Firewall and tracking its operation through logs.
+**What you will learn:** Activating the enterprise Application Layer Firewall and tracking its operation through system logs.
 
 ### Step 1: Enabling and Checking Firewall Settings
 

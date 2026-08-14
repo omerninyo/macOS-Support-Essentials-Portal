@@ -22,6 +22,8 @@
 > [!NOTE]
 > **הערה טכנית (הפרעות תדרים):** התקני USB 3.0 עשויים לפלוט רעשי RF בתדר של 2.4 GHz. רעש זה מתנגש ישירות עם התדר של קישוריות Bluetooth ו-Wi-Fi. במידה והעכבר האלחוטי מקרטע ללא הסבר, בדקו האם קיים מתאם USB 3.0 קרוב מדי למק.
 
+> *→ תדרי 2.4GHz והיחסים בין Wi-Fi ל-Bluetooth נלמדו בשיעור 09 (רשתות) — אותו עקרון בדיוק מסביר מדוע מתאם USB 3.0 גורם לעכבר לקרטע.*
+
 ---
 
 ## רשימת פקודות טרמינל (CLI)
@@ -43,9 +45,14 @@
 * `system_profiler SPThunderboltDataType` - מציג פירוט על יציאות ה-Thunderbolt ומהירויות הקישור (Link Status).
 * `system_profiler SPBluetoothDataType` - מציג סטטוס Bluetooth ורמות סוללה של התקנים מקושרים.
 
+> *→ ה-CUPS רץ כ-Daemon תחת launchd — נלמד בשיעור 08 (Terminal). אפשר לעקוב אחרי `cupsd` בדיוק כמו אחרי כל Daemon אחר: דרך Console או `log stream --predicate 'process == "cupsd"'`.*
+
 ---
 
 ## Enterprise Seasoning: אבטחה ומדפסות בארגון
+
+> [!IMPORTANT]
+> **Accessory Security בסביבה ארגונית:** הגדירו ב-MDM את מדיניות ה-Accessory Security ל-"Ask for New Accessories" לפחות כדי למנוע התקפות BadUSB ("Rubber Ducky"). הגדרה "Always" מכסה תמתי מהאבטחה ולא מומלצת למקים פגישים עם ניידה באוכלוסייה.
 
 בארגונים המנוהלים על ידי MDM ו-DDM (Declarative Device Management), מנהלי ה-IT משתמשים בפרופילים נסתרים כדי להקל על עובדים ולאבטח ציוד:
 * **Storage Management:** מאפשר לחסום חיבור דיסק-און-קי לחלוטין (Disallowed) או להתיר אותו לקריאה-בלבד (Read-Only) למניעת זליגת מידע (DLP).

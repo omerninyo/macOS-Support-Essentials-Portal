@@ -18,10 +18,10 @@
 
 | Concept | Description |
 |---|---|
-| **Time Machine** | The native macOS backup mechanism. It maintains historical copies of files, enabling granular file recovery or complete system restoration. |
+| **Time Machine** | The native macOS backup mechanism. It maintains historical copies of files, enabling granular single-file recovery or complete system restoration. |
 | **APFS Snapshots** | A read-only, point-in-time frozen state of the APFS file system. Facilitates instantaneous rollbacks without lengthy data duplication. |
 | **Local Snapshots** | Snapshots stored directly on the local drive (Data Volume). Automatically generated as interim backups or prior to system updates. They are dynamically purged when disk space runs low. |
-| **Synthetic Snapshots** | Snapshots constructed at the conclusion of a backup process on the external drive, consolidating modified delta blocks. |
+| **Synthetic Snapshots** | Snapshots constructed at the conclusion of a backup cycle on the external drive, consolidating modified delta blocks. |
 | **Migration Assistant** | A built-in utility designed to transfer user accounts, data, and settings from a legacy Mac, a Time Machine backup (via Synthetic Snapshots), or a Windows PC. |
 | **FileProvider Framework** | The macOS API that empowers cloud storage services (e.g., OneDrive, Google Drive) to display "dataless" placeholders and download files strictly on-demand. |
 | **backupd** | The core background daemon powering Time Machine, orchestrating block-level delta copying and backup cycles. |
@@ -29,7 +29,9 @@
 ## Part 1 — Snapshots: How APFS Local Backups Work (Rollbacks)
 
 > [!NOTE]
-> The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS will automatically purge legacy snapshots to free up storage.
+> The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS automatically purges legacy snapshots to free up storage.
+
+> *→ The inner workings of APFS Snapshots were covered in-depth in Lesson 06 (FileSystem) — here we observe how Time Machine relies on that very same mechanism to maintain local backups.*
 
 ### Managing Local Snapshots via Terminal
 
@@ -60,6 +62,8 @@ diskutil apfs listSnapshots /
 > [!IMPORTANT]
 > **Backup Drive Encryption:** Carrying an unencrypted backup drive in a backpack constitutes a critical security breach. Never backup to an external volume without enabling **Encrypt Backup**!
 
+> *→ Drive encryption relies on the same VEK/AES-XTS architecture covered in Lesson 04 (Encryption/FileVault) — the key difference: for external backups, you define a dedicated passphrase to unlock the volume in the future.*
+
 ### Advanced Time Machine Management (Terminal)
 
 ```bash
@@ -88,7 +92,7 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 ## Part 3 — File Recovery: Granular Extraction vs. Full System Restore
 
 > [!CAUTION]
-> **Account Names Collision:** Never create a temporary administrator account (e.g., "john") on a new Mac, and then attempt to migrate the original "john" account from your Time Machine backup (using Migration Assistant). This will trigger a catastrophic system collision.
+> **Account Names Collision:** Never create a temporary administrator account (e.g., "john") on a new Mac, and then attempt to migrate the original "john" account from your Time Machine backup (using Migration Assistant). This will trigger a catastrophic system namespace collision.
 
 ## Part 4 — Enterprise Spice: Do We Even Need Time Machine in a Cloud-Managed Environment?
 

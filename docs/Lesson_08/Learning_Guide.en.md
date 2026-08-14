@@ -5,10 +5,10 @@
 
 ## Lesson Objectives
 
-* **Introduction to the Terminal** - Why the CLI is critical for technicians, keyboard shortcuts, and establishing a baseline before advanced operations.
-* **The Heart of the System** - The `launchd` process (understanding the differences between LaunchDaemons, LaunchAgents, and LaunchAngels).
-* **Deep Diagnostics** - Reading memory metrics in Activity Monitor, and reading/diagnosing Plist (XML) files.
-* **Enterprise Spice** - Locating the MDM Agent, understanding its sync status, and troubleshooting when it crashes.
+* **Introduction to the Terminal (CLI)** - Why the CLI is critical for IT administrators, key keyboard shortcuts, and establishing a solid baseline before advanced troubleshooting.
+* **The Heart of the System** - The `launchd` process architecture (understanding the differences between LaunchDaemons, LaunchAgents, and LaunchAngels).
+* **Deep Diagnostics** - Interpreting memory metrics in Activity Monitor, and reading/diagnosing macOS Property List (`.plist` XML/binary) files.
+* **Enterprise Spice** - Locating the built-in MDM Agent (`mdmclient`), understanding its sync status, and diagnosing communication failures.
 
 ---
 
@@ -23,19 +23,23 @@
 
 | Concept | Explanation |
 |---|---|
-| **CLI / Terminal** | The command-line interface in Mac (originated from NeXTSTEP in 2001). A direct management tool bypassing the graphical interface. |
-| **Zsh (Z Shell)** | The modern shell for Mac, the default since Catalina. |
-| **PID (Process ID)** | A unique identification number for any currently running software or service. |
-| **launchd** | The supreme process manager (PID 1). The first software to start. Responsible for bootstrapping services and applications. |
-| **LaunchDaemon** | An infrastructure agent running in the background as `root` (even without a logged-in user). Common for MDM or antivirus agents. |
-| **LaunchAgent** | A user-specific agent, loaded only when the user logs in. |
-| **LaunchAngels (Tahoe)** | New internal Apple system services under the `RunningBoard` framework. Completely locked within the SSV. |
-| **Plist (Property List)** | Apple's configuration file format (XML or binary). Stores everything from window positions to system task scheduling. |
-| **Memory Pressure** | The critical graph in Activity Monitor indicating memory "strain" (Green, Yellow, Red). |
-| **Swap** | Writing memory data from RAM to the hard drive. High usage indicates memory starvation and inefficiency. |
-| **mdmclient** | Apple's built-in Daemon responsible for communicating with the MDM server and enforcing profiles. |
-| **TCC & PPPC** | The mechanism protecting sensitive data. We manage these restrictions using an enterprise PPPC profile. |
-| **BTM (Background Task Mgt)** | The defense mechanism for Login Items. Deeply managed via the `sfltool` command. |
+| **CLI / Terminal** | The command-line interface in macOS (originated from NeXTSTEP in 2001). A direct management gateway bypassing the graphical user interface. |
+| **Zsh (Z Shell)** | The modern default shell for macOS, standard since macOS Catalina. |
+| **PID (Process ID)** | A unique numeric identifier assigned to every running process or service. |
+| **launchd** | The supreme userland process manager (PID 1). The first process spawned after the Kernel. Responsible for bootstrapping services and applications. |
+| **LaunchDaemon** | An infrastructure background service running as `root` (even without a logged-in user). Common for MDM agents, security daemons, and system daemons. |
+| **LaunchAgent** | A user-scoped background agent, loaded exclusively when a user logs in. |
+| **LaunchAngels (Tahoe)** | Modern internal Apple system services managed under the `RunningBoard` framework, fully protected in the Signed System Volume (SSV). |
+| **Plist (Property List)** | Apple's structured configuration file format (XML or binary). Stores application preferences, launch configs, and scheduling parameters. |
+| **Memory Pressure** | The authoritative metric in Activity Monitor indicating real memory strain (Green, Yellow, Red) based on paging algorithms. |
+| **Swap** | Paging active memory pages from RAM onto disk storage. High swap activity indicates memory starvation and performance degradation. |
+| **mdmclient** | Apple's built-in Daemon responsible for communicating with MDM servers and enforcing management profiles. |
+| **TCC & PPPC** | Transparency, Consent, and Control protecting sensitive privacy domains; pre-approved across the enterprise via PPPC configuration profiles. |
+| **BTM (Background Task Mgt)** | The security subsystem overseeing Login Items and background persistence, inspected via the `sfltool` utility. |
+
+> *→ LaunchAngels and the initialization lifecycle of launchd via the Kernel (XNU) are covered in Lesson 13 (Boot Process) — here launchd acts as PID 1, starting immediately after the Kernel to bootstrap the entire userland.*
+
+> *→ BTM and sfltool are also explored as diagnostic stages in Lesson 15 (Diagnostics) — add them here to your core IT troubleshooting toolkit.*
 
 ---
 
@@ -43,93 +47,96 @@
 
 | Shortcut | Action |
 |---|---|
-| `Ctrl + C` | **Cancel & Rescue:** Immediately stops a running command that has frozen the screen. |
-| `Ctrl + L` | **Clear Screen** (same as the `clear` command). Wipes the clutter and returns to a clean slate. |
-| `Ctrl + A` | Jump to the **beginning** of the line. |
-| `Ctrl + E` | Jump to the **end** of the line. |
-| `Tab` | **Auto-complete** for paths and commands (press twice to display options). |
+| `Ctrl + C` | **Cancel & Interrupt:** Immediately stops an active or hanging foreground process. |
+| `Ctrl + L` | **Clear Screen:** Clears terminal buffer clutter and brings the prompt to the top (equivalent to `clear`). |
+| `Ctrl + A` | Move cursor to the **beginning** of the command line. |
+| `Ctrl + E` | Move cursor to the **end** of the command line. |
+| `Tab` | **Auto-complete:** Automatically completes file paths, directories, and commands (press twice to list suggestions). |
 
 ---
 
 ## Part 2 — Critical Paths
 
-| What's there? | Full Path | Owner |
+| Content Description | Full Path | Ownership / Context |
 |---|---|---|
-| **User Application Preferences** | `~/Library/Preferences/` | User |
-| **Current User Agents** | `~/Library/LaunchAgents/` | User |
-| **IT / Third-Party System Daemons** | `/Library/LaunchDaemons/` | Administrator (Root) |
-| **macOS Core (SSV - Locked)** | `/System/Library/LaunchDaemons/` | System (Read-Only) |
-| **New Tahoe Core (RunningBoard)** | `/System/Library/LaunchAngels/` | System (Read-Only) |
+| **User Application Preferences** | `~/Library/Preferences/` | Current User |
+| **User-Scoped LaunchAgents** | `~/Library/LaunchAgents/` | Current User |
+| **Enterprise / Third-Party LaunchDaemons** | `/Library/LaunchDaemons/` | Administrator (Root) |
+| **macOS Native Daemons (SSV - Sealed)** | `/System/Library/LaunchDaemons/` | System (Read-Only) |
+| **Tahoe Native Angels (RunningBoard)** | `/System/Library/LaunchAngels/` | System (Read-Only) |
 
 ---
 
 ## Appendix — Important System Commands
 
 > [!NOTE]
-> It is highly recommended to save these commands in a Cheat Sheet or within your MDM as code snippets for troubleshooting scenarios.
+> It is highly recommended to keep these commands handy in an administrative Cheat Sheet or MDM script repository for rapid troubleshooting.
 
-### Basic Control and Process Management
+### Basic Process Control & Monitoring
 ```bash
-# Execute a single command with administrator privileges
+# Execute a command with elevated administrator privileges
 sudo [command]
 
-# Forcefully kill a stuck process
+# Forcefully terminate a non-responsive process
 kill -9 <PID>
 
-# Live resource monitor (CPU) - press 'q' to quit
+# Live CPU/Resource monitor sorted by utilization (press 'q' to exit)
 top -u
 
-# Full list of all processes on the system
+# List all active system processes with detailed flags
 ps -ax
 ```
 
-### Service Management (launchctl and BTM)
+### Service Management (`launchctl` and BTM)
 ```bash
-# Print the state of all currently running system services
+# Print status of all system-level background services
 sudo launchctl print system
 
-# Load / Unload a failing service (bootout / bootstrap):
+# Restart (Unload and Reload) a misbehaving LaunchDaemon:
 sudo launchctl bootout system /Library/LaunchDaemons/com.example.plist
 sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.plist
 
-# Dump the BTM (Background Task Management) database
+# Dump Background Task Management (BTM) database to a text file
 sudo sfltool dumpbtm > ~/Documents/btmdump.txt
 
-# Deep reset for BTM (use only in critical failure scenarios)
+# Reset BTM registration database (Last resort for persistent Login Item glitches)
 sudo sfltool resetbtm
 ```
 
-### Reading and Managing Plists (`plutil`)
+> [!IMPORTANT]
+> `sfltool resetbtm` resets the Background Task Management database — all installed applications requiring Login Items (Agents, Helper Tools) must re-register. Use this solely as a deep diagnostic step for intractable Login Item issues.
+
+### Reading and Validating Plists (`plutil`)
 ```bash
-# Print the file content even if encrypted/binary
+# Print plist contents in human-readable form (even if binary format)
 plutil -p /path/to/file.plist
 
-# Syntax linting check - mandatory before deployment
+# Validate plist syntax (Syntax linting - essential before deployment)
 plutil -lint /path/to/file.plist
 
-# Convert a binary file to editable XML text
+# Convert a binary plist to editable XML format
 sudo plutil -convert xml1 /path/to/file.plist
 
-# Revert the file back to the closed binary format
+# Convert an XML plist back into optimized binary format
 sudo plutil -convert binary1 /path/to/file.plist
 ```
 
 ### MDM Diagnostics
 ```bash
-# Real-time stream of incoming MDM commands to the Mac
+# Stream live logs for the MDM client daemon in real time
 log stream --predicate 'process == "mdmclient"' --info
 
-# Forceful command to pull information from the MDM
+# Force an MDM enrollment check-in and profile synchronization
 sudo profiles renew -type enrollment
 ```
 
 ---
 
-## Recommended Reading
+## Recommended Reading & Resources
 
-* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - Understanding why CPU percentages can be misleading and how to interpret Performance vs Efficiency.
+* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - Understanding why CPU percentages can be misleading and how to interpret Performance vs Efficiency cores.
 * [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - Why Apple relies so heavily on Plist files.
-* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - The official guide to reading Memory Pressure.
+* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - The official Apple guide to reading Memory Pressure.
 
 ---
 
@@ -142,7 +149,7 @@ sudo profiles renew -type enrollment
 
 ---
 
-## 💡 Presentation Visuals
+## Presentation Visuals
 
 !!! tip "Presentation Visuals"
     These images illustrate the interfaces covered in this lesson.
