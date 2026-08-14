@@ -37,9 +37,9 @@
 | **TCC & PPPC** | מנגנון שמגן על מידע רגיש. פותחים חסימות אלו עם פרופיל PPPC ארגוני. |
 | **BTM (Background Task Mgt)** | מנגנון ההגנה על פריטי לוגין (Login Items). מנוהל לעומק דרך פקודת `sfltool`. |
 
-> *→ LaunchAngels והקשר של launchd ל-Kernel (XNU) נלמדו בשיעור 13 (Boot Process) — כאן launchd הוא PID 1 שקם אחרי הקרנל ומעלה את כל השאר.*
+> *← LaunchAngels והקשר של launchd ל-Kernel (XNU) נלמדו בשיעור 13 (Boot Process) — כאן launchd הוא PID 1 שקם אחרי הקרנל ומעלה את כל השאר.*
 
-> *→ BTM ו-sfltool נלמדים כשלב דיאגנוסטיקה גם בשיעור 15 (Diagnostics) — הוסף כאן לארגז הכלים.*
+> *← BTM ו-sfltool נלמדים כשלב דיאגנוסטיקה גם בשיעור 15 (Diagnostics) — הוסף כאן לארגז הכלים.*
 
 ---
 

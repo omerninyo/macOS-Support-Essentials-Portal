@@ -22,7 +22,7 @@
 !!! note "הערה טכנית (הפרעות תדרים)"
     התקני USB 3.0 עשויים לפלוט רעשי RF בתדר של 2.4 GHz. רעש זה מתנגש ישירות עם התדר של קישוריות Bluetooth ו-Wi-Fi. במידה והעכבר האלחוטי מקרטע ללא הסבר, בדקו האם קיים מתאם USB 3.0 קרוב מדי למק.
 
-    *→ תדרי 2.4GHz והיחסים בין Wi-Fi ל-Bluetooth נלמדו בשיעור 09 (רשתות) — אותו עקרון בדיוק מסביר מדוע מתאם USB 3.0 גורם לעכבר לקרטע.*
+    *← תדרי 2.4GHz והיחסים בין Wi-Fi ל-Bluetooth נלמדו בשיעור 09 (רשתות) — אותו עקרון בדיוק מסביר מדוע מתאם USB 3.0 גורם לעכבר לקרטע.*
 
 ---
 
@@ -45,7 +45,7 @@
 * `system_profiler SPThunderboltDataType` - מציג פירוט על יציאות ה-Thunderbolt ומהירויות הקישור (Link Status).
 * `system_profiler SPBluetoothDataType` - מציג סטטוס Bluetooth ורמות סוללה של התקנים מקושרים.
 
-> *→ ה-CUPS רץ כ-Daemon תחת launchd — נלמד בשיעור 08 (Terminal). אפשר לעקוב אחרי `cupsd` בדיוק כמו אחרי כל Daemon אחר: דרך Console או `log stream --predicate 'process == "cupsd"'`.*
+> *← ה-CUPS רץ כ-Daemon תחת launchd — נלמד בשיעור 08 (Terminal). אפשר לעקוב אחרי `cupsd` בדיוק כמו אחרי כל Daemon אחר: דרך Console או `log stream --predicate 'process == "cupsd"'`.*
 
 ---
 

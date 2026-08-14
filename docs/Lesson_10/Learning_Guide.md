@@ -21,7 +21,7 @@
 !!! note "הערה טכנית"
     פרוטוקול SMB אינו מודע למבנה הקבצים החסכוני של APFS (כמו קבצי Sparse או Clones), ולכן העתקת קובץ כזה לשרת SMB "תנפח" אותו לגודלו המקורי.
 
-    *→ APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
+    *← APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
 
 ---
 
@@ -57,7 +57,7 @@
 !!! warning "אזהרת IT קריטית (First Aid)"
     בניגוד לעבר ב-Target Disk Mode, אי אפשר להריץ פקודות תיקון דיסק או Disk Utility מהמחשב המארח על המחשב התקול, מכיוון שהדיסק חשוף ברמת קובץ (SMB) ולא ברמת בלוק (Block Device). תיקון תקלות בדיסק חייב להתבצע מה-Recovery של המחשב התקול עצמו!
 
-    *→ FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
+    *← FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
 
 ---
 

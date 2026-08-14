@@ -14,7 +14,7 @@
 *   **Low-Level Bootloader / LLB (Stage 1):** מנהל האתחול ברמה הנמוכה. תפקידו העיקרי הוא לחפש ולהבין מאיזה Volume  המק אמור לבצע Boot, ולאמת את ה-LocalPolicy שלו מול ה-Secure Enclave.
 *   **iBoot - Stage 2:** מנהל האתחול ברמה הגבוהה (מה שבעבר כונה "Firmware"). מאמת את ההאשים של ה-SSV (Signed System Volume) ומעלה את ליבת המערכת (Kernel) בצורה בטוחה.
 
-> *→ SSV נלמד לעומק בשיעור 06 (FileSystem) — כאן iBoot שומר עליו כשומר גדר על החתימה לפני עליית הקרנל.*
+> *← SSV נלמד לעומק בשיעור 06 (FileSystem) — כאן iBoot שומר עליו כשומר גדר על החתימה לפני עליית הקרנל.*
 
 *   **Kernel - XNU:** ליבת מערכת ההפעלה macOS. לוקחת שליטה מ-iBoot, מזהה את החומרה המלאה, מפעילה שירותי מערכת ומערכות קבצים (APFS).
 *   **DFU Mode - Device Firmware Update:** מצב חירום קיצוני (ברמת Boot ROM) המאפשר לחבר מק תקול למק תקין עם כבל USB-C ו-Apple Configurator כדי לשחזר Firmware (Revive / Restore) כשהמק לא מסוגל לאתחל כלל.
@@ -56,7 +56,7 @@
 !!! warning
     פקודת `bputil` פועלת מתוך macOS Recovery בלבד (או כ-root במערכת פעילה להצגת מידע) ומאפשרת שינוי קרביים עמוקים של ה-LocalPolicy מבלי להיעזר בממשק הגרפי. שימוש שגוי עלול להפוך את המק ללא זמין לאתחול (Unbootable).
 
-    *→ Bootstrap Token ו-FileVault שנלמדו בשיעור 04 הם מה שמאפשר ל-MDM לשנות Security Policy מרחוק — בלעדיהם, איש IT צריך להגיע פיזית ל-Recovery כדי לשנות את רמת האבטחה.*
+    *← Bootstrap Token ו-FileVault שנלמדו בשיעור 04 הם מה שמאפשר ל-MDM לשנות Security Policy מרחוק — בלעדיהם, איש IT צריך להגיע פיזית ל-Recovery כדי לשנות את רמת האבטחה.*
 
 *   **`sudo bputil -d`** או **`bputil --display-policy`**
     *   **פעולה:** מציג את תוכן ה-LocalPolicy (הצפנות, סטטוס Kexts, אישור MDM וכו') של דיסק ההפעלה המקומי.
