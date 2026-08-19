@@ -43,15 +43,79 @@
 
 ---
 
-## Part 1 — Terminal Keyboard Shortcuts
+## Part 1 — Terminal Fundamentals & Essentials Cheat Sheet
 
-| Shortcut | Action |
+### ⌨️ Critical Shortcuts & Productivity Pro-Tips
+
+| Shortcut / Action | Description & Practical Usage |
 |---|---|
-| `Ctrl + C` | **Cancel & Interrupt:** Immediately stops an active or hanging foreground process. |
-| `Ctrl + L` | **Clear Screen:** Clears terminal buffer clutter and brings the prompt to the top (equivalent to `clear`). |
-| `Ctrl + A` | Move cursor to the **beginning** of the command line. |
-| `Ctrl + E` | Move cursor to the **end** of the command line. |
-| `Tab` | **Auto-complete:** Automatically completes file paths, directories, and commands (press twice to list suggestions). |
+| `Tab` | **Auto-completion:** Automatically completes commands, directories, and file paths. Press twice to list all available matches. |
+| `Ctrl + C` | **Cancel & Interrupt:** Immediately stops an active or hanging foreground process (SIGINT) and restores your prompt. |
+| `Ctrl + L` | **Clear Screen:** Clears terminal buffer clutter and brings the prompt to a clean top line (equivalent to `clear`). |
+| `Ctrl + A` / `Ctrl + E` | Jump cursor instantly to the **beginning** (`Ctrl+A`) or **end** (`Ctrl+E`) of the current command line. |
+| Up / Down Arrows `↑` / `↓` | **History Scroll:** Cycle backwards and forwards through previously executed commands. |
+| **Drag & Drop Paths** | Dragging any file or folder from a Finder window directly into the Terminal automatically pastes its exact full path, escaping spaces properly. |
+| `open .` | **Reverse Bridge (Terminal to Finder):** Running `open .` (open space dot) instantly opens a Finder window in your current Terminal working directory! You can also launch files with `open filename.pdf`. |
+
+---
+
+### 📂 1. Navigation & Location
+
+| Command | Description & Key Options |
+|---|---|
+| `pwd` | **Print Working Directory** — Prints the absolute path of the directory you are currently in. |
+| `cd <path>` | **Change Directory** — Navigates to the specified directory. |
+| `cd ~` or `cd` | Immediately returns to the current user's home directory (`/Users/username`). |
+| `cd ..` | Navigates one level up in the folder hierarchy. |
+| `cd -` | Returns to the previous working directory (like a browser Back button). |
+| `cd /` | Navigates to the root volume filesystem. |
+| `ls` | **List** — Displays files and folders in the current directory. |
+| `ls -l` | Long listing format showing permissions, owner, file size, and modification date. |
+| `ls -a` | Displays **all** files, including hidden system files starting with a dot (`.zshrc`, `.DS_Store`). |
+| `ls -lh` | Long listing with **Human Readable** file sizes (in KB, MB, GB). |
+| `ls -le` / `ls -l@` | Displays Access Control Lists (ACLs) and Extended Attributes (e.g., Quarantine flags). |
+
+---
+
+### 🛠️ 2. File & Directory Management
+
+| Command | Description & Key Options |
+|---|---|
+| `mkdir <dir>` | **Make Directory** — Creates a new folder. |
+| `mkdir -p a/b/c` | Creates an entire nested folder hierarchy in a single command. |
+| `touch <file>` | Creates a new blank text file, or updates the modification timestamp of an existing file. |
+| `cp <source> <target>` | **Copy** — Copies a file from source to destination. |
+| `cp -R <src> <dst>` | Recursively copies an entire folder and all its contents. |
+| `mv <source> <target>` | **Move / Rename** — Moves a file/folder to a new destination and/or renames it. |
+| `rm <file>` | **Remove** — Permanently deletes a file (**Note:** Bypasses Trash and cannot be undone!). |
+| `rm -r <dir>` | Recursively deletes an entire folder and its contents. |
+| `rm -rf <dir>` | Forcefully removes files/folders without confirmation. *(Caution: Never run `sudo rm -rf` on unverified paths!).* |
+
+---
+
+### 📄 3. Viewing & Editing Files
+
+| Command | Description & Key Options |
+|---|---|
+| `cat <file>` | Dumps the entire file contents directly into the terminal (best for short files). |
+| `less <file>` | Paginated interactive file viewer (navigate with arrows/space, search with `/`, exit with `q`). |
+| `head -n 20 <file>` | Displays only the first 20 lines of a file. |
+| `tail -n 20 <file>` | Displays only the last 20 lines of a file. |
+| `tail -f <logfile>` | **Follow Mode** — Streams live log updates in real-time as they are written (exit with `Ctrl+C`). |
+| `nano <file>` | Simple, beginner-friendly command-line text editor (Save: `Ctrl+O`, Exit: `Ctrl+X`). |
+
+---
+
+### 🔍 4. System Info, Identity & Help
+
+| Command | Description & Key Options |
+|---|---|
+| `man <command>` | **Manual** — Opens the official, complete manual page for any command (scroll with arrows, exit with `q`). |
+| `which <command>` | Locates the exact binary executable path of a command (e.g., `/usr/bin/python3`). |
+| `whoami` | Displays the current logged-in username in the terminal session. |
+| `sw_vers` | Displays the exact macOS version and Build Number. |
+| `uname -m` | Displays hardware processor architecture (`arm64` for Apple Silicon vs `x86_64` for Intel). |
+| `sudo <command>` | **Superuser Do** — Executes a single command with administrative root privileges. |
 
 ---
 
