@@ -167,18 +167,9 @@ softwareupdate --install-rosetta --agree-to-license
 
 ## תמונות מהחוברת ומהמצגת
 
-!!! tip "עזרים ויזואליים"
-    תמונות אלו ממחישות את הממשק הנלמד בשיעור.
-
-![השוואת סוגי התקנה](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
-![דיאגרמת ABM ו-MDM](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
-![ממשק Self Service](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
-![App Store ב-Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
-![Force Quit ב-Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
-
 ---
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+## עזרים ויזואליים
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

@@ -90,7 +90,7 @@ If an enterprise Migration Assistant transfer is absolutely necessary:
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

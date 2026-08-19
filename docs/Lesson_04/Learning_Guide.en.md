@@ -160,7 +160,7 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

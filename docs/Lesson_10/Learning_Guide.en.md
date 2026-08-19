@@ -98,7 +98,7 @@ Because AirDrop is classified as an "Unmanaged Destination," enterprise users ma
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

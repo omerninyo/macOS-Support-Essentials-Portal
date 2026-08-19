@@ -149,21 +149,7 @@ sudo profiles renew -type enrollment
 
 ---
 
-## עזרים ויזואליים מההרצאה
-
-!!! tip "עזרים ויזואליים"
-    תמונות אלו ממחישות את הממשק הנלמד בשיעור.
-
-![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
-![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-![Automator Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-![Console Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-![Script Editor Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-![Shortcuts Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
-
----
-
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+## עזרים ויזואליים
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

@@ -177,7 +177,7 @@ softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

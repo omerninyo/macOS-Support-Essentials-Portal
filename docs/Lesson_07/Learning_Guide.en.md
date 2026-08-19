@@ -116,20 +116,9 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/OXYBpCK91Lg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## Visual Aids
-
-!!! tip "Visual Aids (Student Reference)"
-    These images illustrate the relevant interfaces and mechanisms covered in the lesson.
-
-![Snapshots_aren_t_backups_p1_114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
-![Time_Machine_backing_up_different_file_systems_p4_133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
-![Slide122_image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.jpg)
-![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
-![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)
-
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

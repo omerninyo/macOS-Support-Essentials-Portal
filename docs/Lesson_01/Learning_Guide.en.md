@@ -73,18 +73,7 @@
 
 ---
 
-## Presentation Visuals
-
-!!! tip "Visual Aid (Student Reference)"
-    These images illustrate the interface or mechanism relevant to the lesson's topic.
-
-![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
-![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)
-
----
-
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

@@ -149,21 +149,7 @@ sudo profiles renew -type enrollment
 
 ---
 
-## Presentation Visuals
-
-!!! tip "Presentation Visuals"
-    These images illustrate the interfaces covered in this lesson.
-
-![Slide81_image94](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image94.png)
-![Slide81_image95](../assets/images/Lesson_08/L08_LegacySlide_Slide81_image95.png)
-![Automator Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Automator-scaled.png)
-![Console Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
-![Script Editor Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
-![Shortcuts Tahoe](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
-
----
-
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

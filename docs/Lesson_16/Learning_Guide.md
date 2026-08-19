@@ -146,17 +146,9 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/SYAGmWsJksQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
-
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    ניתן להיעזר בתמונות הבאות מתוך חוברת הקורס (Asset A) ללימוד הנושא:
-    * `L16_DeepDive_Save_and_read_the_panic_log_p1_41.png`
-    * `L16_LegacySlide_Slide69_image82.png`
-    * `L16_LegacySlide_Slide69_image83.png`
-
 ---
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+## עזרים ויזואליים
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

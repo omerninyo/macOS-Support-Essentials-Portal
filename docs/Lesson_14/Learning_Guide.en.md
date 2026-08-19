@@ -77,7 +77,7 @@ Within the Recovery environment, the Terminal serves as a powerful diagnostic to
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

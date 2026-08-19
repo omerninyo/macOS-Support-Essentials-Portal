@@ -132,7 +132,7 @@ Executed from Terminal in Recovery Mode only to apply changes.
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

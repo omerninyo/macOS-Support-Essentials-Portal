@@ -80,17 +80,6 @@
 
 ![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
 ![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
-![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)
-
----
-
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
-
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
-
-![Explainer_Memory_AboutThisMac](../assets/images/Lesson_01/L01_DeepDive_Explainer_Memory_AboutThisMac.jpg)
-![macOS_Versions](../assets/images/Lesson_01/L01_DeepDive_macOS_Versions.jpg)
 ![26-Tahoe-Finder-Control-Center-Edit-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-Edit-scaled.png)
 ![26-Tahoe-Finder-Control-Center-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Control-Center-scaled.png)
 ![26-Tahoe-Finder-Copy-scaled](../assets/images/Lesson_01/L01_TahoeUI_26-Tahoe-Finder-Copy-scaled.png)

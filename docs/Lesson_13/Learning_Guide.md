@@ -114,25 +114,9 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/hZqM__q-E3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-!!! tip "המחשה ויזואלית (עזר לתלמיד)"
-    ניתן להיעזר בתמונות הבאות מתוך חוברת הקורס (Asset A) ללימוד הנושא:
-    * `L13_LegacySlide_Slide138_image169.png`
-    * `L13_LegacySlide_Slide138_image49.jpeg`
-    * `L13_LegacySlide_Slide141_image170.jpg`
-    * `L13_LegacySlide_Slide142_image171.png`
-    * `L13_LegacySlide_Slide142_image172.png`
-    * `L13_LegacySlide_Slide142_image173.png`
-    * `L13_LegacySlide_Slide142_image174.png`
-    * `L13_LegacySlide_Slide142_image175.png`
-    * `L13_LegacySlide_Slide142_image176.png`
-    * `L13_LegacySlide_Slide142_image177.jpg`
-    * `L13_LegacySlide_Slide80_image19.jpg`
-    * `L13_LegacySlide_Slide80_image93.png`
-    * `L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png`
-
 ---
 
-## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+## עזרים ויזואליים
 
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.

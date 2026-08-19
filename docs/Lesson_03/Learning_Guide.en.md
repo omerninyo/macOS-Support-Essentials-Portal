@@ -138,7 +138,7 @@ TCC databases are protected by SIP and cannot be edited manually.
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

@@ -146,17 +146,9 @@ When your MDM server pushes a configuration profile (e.g., an 802.1x payload for
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/SYAGmWsJksQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-## 💡 Presentation Visuals
-
-!!! tip "Visual Aids (Student Reference)"
-    You can refer to the following images from the course deck (Asset A) to support this topic:
-    * `L16_DeepDive_Save_and_read_the_panic_log_p1_41.png`
-    * `L16_LegacySlide_Slide69_image82.png`
-    * `L16_LegacySlide_Slide69_image83.png`
-
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.

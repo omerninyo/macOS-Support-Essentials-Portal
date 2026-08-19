@@ -89,7 +89,7 @@ In organizations managed by MDM and DDM (Declarative Device Management), IT admi
 
 ---
 
-## 💡 Presentation Visuals
+## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
     These images illustrate the relevant interface or mechanism for the lesson topic.
