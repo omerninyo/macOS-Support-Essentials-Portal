@@ -104,7 +104,6 @@
 ![Slide31_image50](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image50.jpg)
 ![Slide31_image51](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image51.jpg)
 ![Slide34_image52](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image52.jpg)
-![Slide34_image53](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image53.jpg)
 ![Slide41_image53](../assets/images/Lesson_11/L11_LegacySlide_Slide41_image53.jpg)
 ![26-Tahoe-Print-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Print-scaled.png)
 ![26-Tahoe-Settings-Bluetooth-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Bluetooth-scaled.png)

@@ -153,3 +153,14 @@ When your MDM server pushes a configuration profile (e.g., an 802.1x payload for
     * `L16_DeepDive_Save_and_read_the_panic_log_p1_41.png`
     * `L16_LegacySlide_Slide69_image82.png`
     * `L16_LegacySlide_Slide69_image83.png`
+
+---
+
+## 💡 Presentation Visuals
+
+!!! tip "Visual Demonstration (Student Aid)"
+    These images illustrate the relevant interface or mechanism for the lesson topic.
+
+![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
+![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
+![Slide69_image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)

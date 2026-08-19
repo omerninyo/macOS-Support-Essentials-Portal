@@ -175,3 +175,22 @@ softwareupdate --install-rosetta --agree-to-license
 ![ממשק Self Service](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
 ![App Store ב-Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
 ![Force Quit ב-Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
+
+---
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Slide103_image33](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
+![Slide121_image134](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
+![Slide12_image13](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image13.png)
+![Slide12_image14](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image14.png)
+![Slide12_image17](../assets/images/Lesson_05/L05_LegacySlide_Slide12_image17.png)
+![Slide32_image51](../assets/images/Lesson_05/L05_LegacySlide_Slide32_image51.png)
+![Slide39_image52](../assets/images/Lesson_05/L05_LegacySlide_Slide39_image52.png)
+![Slide66_image11](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
+![Slide75_image89](../assets/images/Lesson_05/L05_LegacySlide_Slide75_image89.png)
+![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
+![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)

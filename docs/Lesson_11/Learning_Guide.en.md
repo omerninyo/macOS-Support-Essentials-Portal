@@ -91,8 +91,8 @@ In organizations managed by MDM and DDM (Declarative Device Management), IT admi
 
 ## 💡 Presentation Visuals
 
-!!! tip "Visual Aids (Student Reference)"
-    These images illustrate the relevant interface or mechanism for the lesson's topic.
+!!! tip "Visual Demonstration (Student Aid)"
+    These images illustrate the relevant interface or mechanism for the lesson topic.
 
 ![How_Thunderbolt_5_can_be_faster_or_not_p1_9](../assets/images/Lesson_11/L11_DeepDive_How_Thunderbolt_5_can_be_faster_or_not_p1_9.png)
 ![Slide139_image46](../assets/images/Lesson_11/L11_LegacySlide_Slide139_image46.jpg)
@@ -104,7 +104,6 @@ In organizations managed by MDM and DDM (Declarative Device Management), IT admi
 ![Slide31_image50](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image50.jpg)
 ![Slide31_image51](../assets/images/Lesson_11/L11_LegacySlide_Slide31_image51.jpg)
 ![Slide34_image52](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image52.jpg)
-![Slide34_image53](../assets/images/Lesson_11/L11_LegacySlide_Slide34_image53.jpg)
 ![Slide41_image53](../assets/images/Lesson_11/L11_LegacySlide_Slide41_image53.jpg)
 ![26-Tahoe-Print-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Print-scaled.png)
 ![26-Tahoe-Settings-Bluetooth-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Bluetooth-scaled.png)

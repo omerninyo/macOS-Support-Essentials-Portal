@@ -153,3 +153,14 @@
     * `L16_DeepDive_Save_and_read_the_panic_log_p1_41.png`
     * `L16_LegacySlide_Slide69_image82.png`
     * `L16_LegacySlide_Slide69_image83.png`
+
+---
+
+## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
+
+!!! tip "המחשה ויזואלית (עזר לתלמיד)"
+    תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
+
+![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
+![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
+![Slide69_image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)

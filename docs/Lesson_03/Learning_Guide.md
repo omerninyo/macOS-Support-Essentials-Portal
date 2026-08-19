@@ -140,12 +140,12 @@
 
 ## 💡 עזרים ויזואליים להרצאה (Presentation Visuals)
 
-!!! note
-    תמונות אלו ניתנות להקרנה בכיתה בעת הסבר על הנושא, או לשילוב במצגות.
-
 !!! tip "המחשה ויזואלית (עזר לתלמיד)"
     תמונות אלו ממחישות את הממשק או המנגנון הרלוונטי לנושא השיעור.
 
 ![What_is_a_Background_Security_Improvement__and_how_p1_21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p1_21.jpeg)
+![What_is_a_Background_Security_Improvement__and_how_p3_21](../assets/images/Lesson_03/L03_DeepDive_What_is_a_Background_Security_Improvement__and_how_p3_21.jpeg)
 ![26-Tahoe-Passwords-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Passwords-scaled.png)
 ![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
+![Slide99_image30](../assets/images/Lesson_03/L09_LegacySlide_Slide99_image30.jpg)
+![Slide99_image31](../assets/images/Lesson_03/L09_LegacySlide_Slide99_image31.jpg)

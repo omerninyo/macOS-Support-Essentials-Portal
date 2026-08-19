@@ -162,11 +162,8 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 
 ## 💡 Presentation Visuals
 
-!!! note
-    These images can be projected in class when explaining the topic, or integrated into slide decks.
-
 !!! tip "Visual Demonstration (Student Aid)"
-    These screenshots illustrate the GUI or underlying mechanism relevant to the lesson's topic.
+    These images illustrate the relevant interface or mechanism for the lesson topic.
 
 ![Disk_image_performance_the_cost_of_encryption_rise_p2_28](../assets/images/Lesson_04/L04_DeepDive_Disk_image_performance_the_cost_of_encryption_rise_p2_28.png)
 ![Slide100_image109](../assets/images/Lesson_04/L04_LegacySlide_Slide100_image109.png)

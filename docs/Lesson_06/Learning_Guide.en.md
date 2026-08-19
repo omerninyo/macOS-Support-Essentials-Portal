@@ -207,3 +207,24 @@ mdimport -t -d3 /path/to/file.pdf
 ![Finder Get Info Tahoe](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
 ![Spotlight Action](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
 ![Spotlight](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
+
+---
+
+## 💡 Presentation Visuals
+
+!!! tip "Visual Demonstration (Student Aid)"
+    These images illustrate the relevant interface or mechanism for the lesson topic.
+
+![GetInfo_Window](../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg)
+![How_macOS_depends_on_firmlinks_p1_24](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg)
+![How_macOS_depends_on_firmlinks_p1_25](../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg)
+![Slide107_image35](../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg)
+![Slide115_image38](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg)
+![Slide115_image39](../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg)
+![Slide116_image40](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg)
+![Slide116_image41](../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg)
+![Slide3_image4](../assets/images/Lesson_06/L06_LegacySlide_Slide3_image4.jpeg)
+![26-Tahoe-Disk-Utility-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png)
+![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
+![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
+![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
