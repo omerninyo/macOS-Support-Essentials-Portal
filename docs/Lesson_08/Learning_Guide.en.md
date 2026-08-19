@@ -198,9 +198,13 @@ sudo profiles renew -type enrollment
 
 ## Recommended Reading & Resources
 
-* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - Understanding why CPU percentages can be misleading and how to interpret Performance vs Efficiency cores.
-* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - Why Apple relies so heavily on Plist files.
-* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - The official Apple guide to reading Memory Pressure.
+* [Terminal User Guide for Mac (Apple Support)](https://support.apple.com/guide/terminal/welcome/mac) — Apple's official, comprehensive guide to using the Terminal app.
+* [Complete Mac Terminal Commands Cheat Sheet (GeeksforGeeks)](https://www.geeksforgeeks.org/linux-unix/complete-mac-terminal-commands-cheat-sheet/) — Extensive reference cheat sheet for Mac CLI commands and syntax.
+* [Use zsh as the default shell on your Mac (Apple Support)](https://support.apple.com/en-us/102360) — Overview of the default Zsh shell and its profile startup scripts.
+* [Command-line management in macOS (Apple Platform Deployment)](https://support.apple.com/guide/deployment/command-line-management-dep3d526a457/web) — Apple's official IT deployment guide for command-line administrative tools.
+* [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) — Official guide to reading and understanding Memory Pressure.
+* [Explainer: % CPU in Activity Monitor (The Eclectic Light Company)](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) — Understanding why CPU percentages can be misleading and how to interpret Performance vs Efficiency cores.
+* [A brief history of XML and property lists (The Eclectic Light Company)](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) — Why Apple relies so heavily on Plist files and how `cfprefsd` manages them.
 
 ---
 

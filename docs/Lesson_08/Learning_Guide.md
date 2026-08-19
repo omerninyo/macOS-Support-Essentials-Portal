@@ -198,9 +198,13 @@ sudo profiles renew -type enrollment
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Explainer: % CPU in Activity Monitor](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) - הסבר למה אחוזי מעבד לפעמים מטעים ואיך לקרוא אותם (Performance vs Efficiency).
-* [A brief history of XML and property lists](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) - מדוע אפל נשענת כל כך חזק על קבצי Plist.
-* [View Memory Usage in Activity Monitor](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) - המדריך הרשמי לקריאת לחץ הזיכרון.
+* [Terminal User Guide for Mac (Apple Support)](https://support.apple.com/guide/terminal/welcome/mac) — מדריך המשתמש הרשמי של אפל לאפליקציית הטרמינל.
+* [Complete Mac Terminal Commands Cheat Sheet (GeeksforGeeks)](https://www.geeksforgeeks.org/linux-unix/complete-mac-terminal-commands-cheat-sheet/) — לוח עזר מקיף לפקודות טרמינל במק.
+* [Use zsh as the default shell on your Mac (Apple Support)](https://support.apple.com/en-us/102360) — הסבר על מעטפת Zsh וקובצי הפרופיל והאתחול שלה.
+* [Command-line management in macOS (Apple Platform Deployment)](https://support.apple.com/guide/deployment/command-line-management-dep3d526a457/web) — מדריך הניהול הרשמי של אפל לאנשי IT באמצעות שורת הפקודה.
+* [View Memory Usage in Activity Monitor (Apple Support)](https://support.apple.com/guide/activity-monitor/view-memory-usage-actmntr1004/mac) — המדריך הרשמי לקריאת לחץ הזיכרון (Memory Pressure).
+* [Explainer: % CPU in Activity Monitor (The Eclectic Light Company)](https://eclecticlight.co/2026/02/14/explainer-cpu-in-activity-monitor/) — הסבר למה אחוזי מעבד לפעמים מטעים ואיך לקרוא אותם (ליבות P מול E).
+* [A brief history of XML and property lists (The Eclectic Light Company)](https://eclecticlight.co/2025/08/16/a-brief-history-of-xml-and-property-lists/) — מדוע אפל נשענת כל כך חזק על קבצי Plist.
 
 ---
 
