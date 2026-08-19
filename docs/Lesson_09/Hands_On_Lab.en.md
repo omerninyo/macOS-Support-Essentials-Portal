@@ -66,18 +66,21 @@ Now, we will configure different DNS servers (for example: Google DNS servers) t
 2. In the left sidebar, scroll down under the **Network** category and click on **Locations**.
 3. Review the displayed information. This is a centralized place where all IP settings, Subnet Masks, and MAC addresses of all your interfaces across different locations are aggregated.
 
-### Step 3: Wireless Diagnostics
+### Step 3: Advanced Wireless Diagnostics (Window Power Tools)
 
 1. Hold down the **Option - ⌥** key on the keyboard, and left-click the **Wi-Fi** icon in the Menu Bar at the top of the screen.
-2. Notice the rich information revealed: IP address, transmission speed (Tx Rate), and signal and noise strength (RSSI and Noise).
+2. Notice the rich telemetry revealed: IP address, transmission speed (Tx Rate), BSSID, and signal/noise strength (RSSI and Noise).
 3. Click on **Open Wireless Diagnostics...**.
-4. A network diagnostic wizard will open. You can click **Continue** and let the system analyze the Wi-Fi environment to locate stability issues, background noise from neighboring routers, and other interferences.
+4. **Leveraging Power Tools under the Window Menu:** Instead of stepping through the default wizard, head straight to the top Menu Bar and click on **Window**:
+   * **Network Scan:** Press `Cmd + 4`. Inspect the table of all nearby networks (Channels, Width, and RSSI). Pay attention to the left sidebar — what are the recommended **Best Channels** for 2.4GHz and 5GHz?
+   * **Live Performance Graph:** Press `Cmd + 5`. Observe the continuous streaming graph tracking Rate (Mbps), Signal (dBm), and Noise (dBm). A high green signal line and a very low red noise line indicate an optimal connection.
+   * **Info & SNR:** Press `Cmd + 1` to review complete link properties and live Signal-to-Noise Ratio (SNR) calculations.
 
 ---
 
-## Exercise 3: The Firewall and Monitoring Blocks in Console
+## Exercise 3: The Firewall, The EDR Dilemma & Monitoring Blocks in Console
 
-**What you will learn:** Activating the enterprise Application Layer Firewall and tracking its operation through system logs.
+**What you will learn:** Activating the Application Layer Firewall (ALF), understanding why enterprises with EDR disable it, and tracking its operation through system logs.
 
 ### Step 1: Enabling and Checking Firewall Settings
 
@@ -86,6 +89,9 @@ Now, we will configure different DNS servers (for example: Google DNS servers) t
 3. Click the **Options...** button.
 4. Review the list of applications. Here you can add or remove applications, and configure for each whether it is allowed to receive inbound connections (Allow incoming connections) or is blocked (Block).
 5. Verify that the setting "Automatically allow built-in software to receive incoming connections" is checked, click **OK** to save.
+
+!!! tip "Enterprise Insight: Native ALF vs Third-Party EDR"
+    In enterprise fleets running dedicated EDR agents (e.g. Microsoft Defender, CrowdStrike, Zscaler, or Palo Alto GlobalProtect), organizational IT policy will **disable the native macOS ALF** to avoid socket filter contention in the Network Extension framework, which causes double-inspection latency, VPN drops, and packet drops. In unmanaged environments without EDR — the native ALF is the baseline defense and must remain active.
 
 ### Step 2: Monitoring Firewall Warnings in Console
 When the firewall blocks incoming communication, it records it in the system logs.
