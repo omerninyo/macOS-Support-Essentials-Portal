@@ -27,6 +27,8 @@
 
 ## חלק 1 — Snapshots (תמונות מצב): איך פועל הגיבוי המקומי ב-APFS (Rollbacks)
 
+* **צפייה וניהול בממשק הגרפי (Disk Utility):** פותחים את `Disk Utility`, בוחרים בתפריט `View > Show APFS Snapshots`, ולוחצים על ה-`Data Volume`. בתחתית החלון נחשפת טבלה מפורטת של כל תמונות המצב המקומיות (`com.apple.TimeMachine.*`), תאריך יצירתן, והנפח שהן תופסות.
+
 !!! note
     מנגנון ה-Snapshots מנקה את עצמו אוטומטית (Purgeable Space). אם הכונן מגיע ל-80% תפוסה (או מעט מקום פנוי), המערכת תמחק Snapshots ישנים.
 
@@ -126,5 +128,6 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 ![Snapshots_aren_t_backups_p1_114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
 ![Time_Machine_backing_up_different_file_systems_p4_133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
 ![Slide122_image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.jpg)
+![26-Tahoe-DiskUtility-APFS-Snapshots](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-DiskUtility-APFS-Snapshots.png)
 ![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
 ![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)

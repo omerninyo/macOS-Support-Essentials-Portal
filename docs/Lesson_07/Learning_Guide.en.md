@@ -27,6 +27,8 @@
 
 ## Part 1 — Snapshots: How APFS Local Backups Work (Rollbacks)
 
+* **Viewing & Managing via Graphical Interface (Disk Utility):** Open `Disk Utility`, choose `View > Show APFS Snapshots`, and select the `Data Volume`. A full table of local snapshots (`com.apple.TimeMachine.*`), their creation dates, sizes, and purgeable tidemarks is revealed at the bottom of the window.
+
 !!! note
     The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS automatically purges legacy snapshots to free up storage.
 
@@ -93,7 +95,7 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 !!! caution "Account Names Collision"
     Never create a temporary administrator account (e.g., "john") on a new Mac, and then attempt to migrate the original "john" account from your Time Machine backup (using Migration Assistant). This will trigger a catastrophic system namespace collision.
 
-## Part 4 — Enterprise Spice: Do We Even Need Time Machine in a Cloud-Managed Environment?
+## Part 4 — Enterprise Spice: Do We Need Time Machine in a Cloud-Managed Environment?
 
 !!! tip "The Ephemeral Device Paradigm"
     Modern organizations leveraging a Zero-Trust architecture actively avoid portable backup drives, shifting entirely to cloud synchronization services (OneDrive, Google Drive). The philosophy relies on cloud-native backups and remote provisioning (Zero-Touch) if a Mac is compromised or destroyed.
@@ -126,5 +128,6 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 ![Snapshots_aren_t_backups_p1_114](../assets/images/Lesson_07/L07_DeepDive_Snapshots_aren_t_backups_p1_114.jpeg)
 ![Time_Machine_backing_up_different_file_systems_p4_133](../assets/images/Lesson_07/L07_DeepDive_Time_Machine_backing_up_different_file_systems_p4_133.jpeg)
 ![Slide122_image43](../assets/images/Lesson_07/L07_LegacySlide_Slide122_image43.jpg)
+![26-Tahoe-DiskUtility-APFS-Snapshots](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-DiskUtility-APFS-Snapshots.png)
 ![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
 ![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)
