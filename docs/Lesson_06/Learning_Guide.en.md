@@ -55,6 +55,14 @@ Physical Disk
 !!! important
     All volumes within a Container share the **exact same free space**. There is no need to define sizes in advance for each volume — macOS dynamically manages the allocation.
 
+### Storage Accounting & The Purgeable Space Dilemma
+
+In macOS, storage capacity calculation follows the fundamental formula:
+$$\text{Capacity} = \text{Available} + (\text{Used} - \text{Purgeable})$$
+
+* **What is Purgeable Space?** Storage occupied by temporary data (caches, system logs, and local APFS snapshots) that macOS can automatically delete via the background daemon `deleted(8)` when additional free space is needed.
+* **The Finder vs Disk Utility Blindspot:** In macOS 26 Tahoe, the Finder and System Settings -> Storage often fail to disclose purgeable space held by snapshots, reporting it strictly as `Used`. Consequently, copying a large file across volumes in the same container may trigger a false "Not Enough Free Space" warning, even though Disk Utility clearly shows the space is purgeable and reclaimable.
+
 ### Diagnostic Commands
 
 ```bash
@@ -173,11 +181,12 @@ mdimport -t -d3 /path/to/file.pdf
 
 ---
 
-## Links and Further Reading
+## Links & Further Reading
 
 * [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) — Official Apple Guide
-* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) — Deep dive into Firmlinks
-* [Using and troubleshooting Spotlight in Sequoia](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) — Spotlight Troubleshooting
+* [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) — Deep-dive into Firmlinks mechanics
+* [Aren't snapshots purgeable?](https://eclecticlight.co/2026/08/24/arent-snapshots-purgeable/) — Deep-dive into free space accounting & purgeable snapshots in macOS 26 Tahoe
+* [Using and troubleshooting Spotlight in Sequoia](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) — Spotlight Troubleshooting Guide
 
 ---
 

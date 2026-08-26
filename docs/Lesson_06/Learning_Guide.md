@@ -55,6 +55,14 @@ Physical Disk
 !!! important
     כל הכרכים ב-Container חולקים את **אותו מקום פנוי**. אין צורך להגדיר גודל מראש לכל כרך — המערכת מנהלת את זה דינמית.
 
+### חישוב שטח אחסון ודילמת ה-Purgeable Space
+
+ב-macOS, חישוב נפח האחסון הכולל מתבצע לפי הנוסחה:
+$$\text{Capacity} = \text{Available} + (\text{Used} - \text{Purgeable})$$
+
+* **מהו Purgeable Space?** מקום שכרגע שמורים בו קבצים זמניים (מטמונים, קבצי לוגים ו-Local Snapshots) ש-macOS רשאית למחוק אוטומטית באמצעות תהליך הרקע `deleted(8)` כאשר המערכת זקוקה לשטח פנוי נוסף.
+* **המלכוד של Finder מול Disk Utility:** ב-macOS 26 Tahoe, ה-Finder וחלון האחסון בהגדרות המערכת נוטים לעיתים להחסיר את נתוני ה-Purgeable Space שנתפסים ע"י Snapshots ולהציגם כשטח תפוס לחלוטין (`Used`). כתוצאה מכך, המערכת עלולה לחסום העתקת קבצים חדשים עם שגיאת "אין מספיק מקום פנוי", למרות שב-Disk Utility ניתן לראות בבירור שהשטח מוגדר כ-Purgeable וניתן לפינוי מיידי.
+
 ### פקודות אבחון
 
 ```bash
@@ -177,6 +185,7 @@ mdimport -t -d3 /path/to/file.pdf
 
 * [Use Disk Utility to repair a storage device](https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web) — מדריך רשמי
 * [How macOS depends on firmlinks](https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/) — מאמר עומק על Firmlinks
+* [Aren't snapshots purgeable?](https://eclecticlight.co/2026/08/24/arent-snapshots-purgeable/) — תחקיר מעמיק על ניהול שטח פנוי ו-Purgeable Snapshots ב-macOS 26 Tahoe
 * [Using and troubleshooting Spotlight in Sequoia](https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/) — פתרון תקלות Spotlight
 
 ---

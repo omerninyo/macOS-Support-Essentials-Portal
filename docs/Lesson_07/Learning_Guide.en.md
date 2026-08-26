@@ -28,11 +28,10 @@
 ## Part 1 — Snapshots: How APFS Local Backups Work (Rollbacks)
 
 * **Viewing & Managing via Graphical Interface (Disk Utility):** Open `Disk Utility`, choose `View > Show APFS Snapshots`, and select the `Data Volume`. A full table of local snapshots (`com.apple.TimeMachine.*`), their creation dates, sizes, and purgeable tidemarks is revealed at the bottom of the window.
+* **Purgeable Space & the `deleted(8)` Daemon:** Running `tmutil localsnapshot` creates snapshots designated as purgeable. The system daemon `deleted(8)` is tasked with automatically purging them when storage capacity falls below 20% free. However, Finder and Storage settings in macOS 26 Tahoe frequently mask snapshots as unpurgeable `Used` space, sometimes requiring proactive thinning via Terminal or manual deletion in Disk Utility.
 
 !!! note
-    The Snapshot mechanism is self-regulating (Purgeable Space). If the drive reaches approximately 80% capacity (or falls critically low on free space), macOS automatically purges legacy snapshots to free up storage.
-
-    *→ The inner workings of APFS Snapshots were covered in-depth in Lesson 06 (FileSystem) — here we observe how Time Machine relies on that very same mechanism to maintain local backups.*
+    *→ The inner workings of APFS Snapshots and purgeable space accounting are covered in-depth in Lesson 06 (FileSystem) — here we observe how Time Machine relies on that very same mechanism to maintain local backups.*
 
 ### Managing Local Snapshots via Terminal
 
@@ -107,6 +106,7 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 * [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
 * [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981)
 * [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015)
+* [Aren't snapshots purgeable?](https://eclecticlight.co/2026/08/24/arent-snapshots-purgeable/) — Deep-dive into free space accounting & purgeable snapshots in macOS 26 Tahoe
 * [Mac backups (Apple Platform Support)](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web)
 * [Erase Apple devices](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web)
 * [A brief history of Time Machine](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/)

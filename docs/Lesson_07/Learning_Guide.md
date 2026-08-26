@@ -28,11 +28,10 @@
 ## חלק 1 — Snapshots (תמונות מצב): איך פועל הגיבוי המקומי ב-APFS (Rollbacks)
 
 * **צפייה וניהול בממשק הגרפי (Disk Utility):** פותחים את `Disk Utility`, בוחרים בתפריט `View > Show APFS Snapshots`, ולוחצים על ה-`Data Volume`. בתחתית החלון נחשפת טבלה מפורטת של כל תמונות המצב המקומיות (`com.apple.TimeMachine.*`), תאריך יצירתן, והנפח שהן תופסות.
+* **מנגנון ה-Purgeable Space ודמון `deleted(8)`:** פקודת `tmutil localsnapshot` יוצרת תמונות מצב המוגדרות כ-Purgeable. דמון המערכת `deleted(8)` אחראי למחוק אותן אוטומטית כשהמקום בכונן אוזל (מעל 80% תפוסה). עם זאת, ב-macOS 26 Tahoe ה-Finder נוטה להסתיר את היותן Purgeable ולהציגן כתפוסות, ולעיתים נדרש דילול יזום ב-Terminal או מחיקה ידנית ב-Disk Utility.
 
 !!! note
-    מנגנון ה-Snapshots מנקה את עצמו אוטומטית (Purgeable Space). אם הכונן מגיע ל-80% תפוסה (או מעט מקום פנוי), המערכת תמחק Snapshots ישנים.
-
-    *← המנגנון הפנימי של APFS Snapshots נלמד לעומק בשיעור 06 (FileSystem) — כאן רואים איך Time Machine סומך על אותו מנגנון כדי לשמור גיבויים מקומיים.*
+    *← המנגנון הפנימי של APFS Snapshots וחישוב שטח ה-Purgeable נלמד לעומק בשיעור 06 (FileSystem) — כאן רואים איך Time Machine סומך על אותו מנגנון כדי לשמור גיבויים מקומיים.*
 
 ### פקודות לניהול Local Snapshots
 
@@ -107,6 +106,7 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 * [Back up your Mac with Time Machine](https://support.apple.com/en-us/HT201250)
 * [Restore your Mac from a backup](https://support.apple.com/en-us/HT203981)
 * [About Time Machine local snapshots](https://support.apple.com/en-us/HT204015)
+* [Aren't snapshots purgeable?](https://eclecticlight.co/2026/08/24/arent-snapshots-purgeable/) — תחקיר מעמיק על ניהול שטח פנוי ו-Purgeable Snapshots ב-macOS 26 Tahoe
 * [Mac backups (Apple Platform Support)](https://support.apple.com/guide/platform-support/mac-backups-supc05405716/web)
 * [Erase Apple devices](https://support.apple.com/guide/deployment/erase-apple-devices-dep8bb2f3590/web)
 * [A brief history of Time Machine](https://eclecticlight.co/2021/04/19/a-brief-history-of-time-machine/)
