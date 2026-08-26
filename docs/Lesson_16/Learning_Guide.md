@@ -137,7 +137,8 @@
 
 * [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - המדריך הרשמי לשימוש באפליקציית ה-Console לקריאת לוגים במק.
 * [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - סקירה מעניינת על האבולוציה של הדרך בה נשמרו הלוגים במק מ-2016 ועד היום.
-* [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך מקצועי למתקדמים שמסביר איך באמת למצוא את מה שמחפשים בתוך ים הלוגים של מערכת ההפעלה.
+* [Find what you want in the log](https://eclecticlight.co/2026/08/19/find-what-you-want-in-the-log/) - מדריך מקצועי מעודכן לאיתור מידע ממוקד ב-Unified Log, שימוש ב-LogUI ובניית Predicates.
+* [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - מדריך קלאסי למתקדמים לניתוח הלוג המאוחד.
 
 ## סרטון סיכום
 

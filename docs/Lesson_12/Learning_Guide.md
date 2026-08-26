@@ -78,6 +78,7 @@
 * [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac)
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613)
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - צלילת עומק לטרמינל לניהול עדכונים ידני.
+* [What to do when a macOS update goes wrong](https://eclecticlight.co/2026/08/14/what-to-do-when-a-macos-update-goes-wrong-2/) - מדריך פתרון תקלות מקיף לכשלים, Boot Loops ואי-התאמות בעדכוני מערכת.
 
 ---
 

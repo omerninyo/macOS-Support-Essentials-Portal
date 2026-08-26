@@ -59,6 +59,7 @@ Within the Recovery environment, the Terminal serves as a powerful diagnostic to
 * [Activation Lock for Mac](https://support.apple.com/en-us/102541)
 * [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
 * [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
+* [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — Deep-dive into rescuing recoveryOS when standard 1TR and Fallback modes fail
 * [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
 
 ## Summary Video

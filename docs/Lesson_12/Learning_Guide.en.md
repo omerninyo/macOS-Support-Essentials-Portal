@@ -78,6 +78,7 @@ If an enterprise Migration Assistant transfer is absolutely necessary:
 * [Install software updates for Mac](https://support.apple.com/guide/mac-help/get-macos-updates-mchlpx1065/mac)
 * [Transfer to a new Mac with Migration Assistant](https://support.apple.com/en-us/102613)
 * [Taking manual control of macOS updates with softwareupdate](https://eclecticlight.co/2023/09/06/taking-manual-control-of-macos-updates-with-softwareupdate/) - A deep dive into manual updates via the Terminal.
+* [What to do when a macOS update goes wrong](https://eclecticlight.co/2026/08/14/what-to-do-when-a-macos-update-goes-wrong-2/) - Comprehensive troubleshooting guide for update failures, boot loops, and post-update recovery.
 
 ---
 

@@ -137,6 +137,7 @@ When your MDM server pushes a configuration profile (e.g., an 802.1x payload for
 
 * [View log messages and reports in Console on Mac](https://support.apple.com/guide/console/welcome/mac) - Apple's official guide for mastering the Console app.
 * [A brief history of logs and Console](https://eclecticlight.co/2024/12/21/a-brief-history-of-logs-and-console/) - An excellent retrospective on the evolution of macOS logging from 2016 to the present.
+* [Find what you want in the log](https://eclecticlight.co/2026/08/19/find-what-you-want-in-the-log/) - Modern guide to precision hunting in the Unified Log, building predicates, and utilizing LogUI.
 * [How to find what you want in the log](https://eclecticlight.co/2021/11/04/how-to-find-what-you-want-in-the-log/) - A deep-dive professional guide on hunting for the needle in the macOS logging haystack.
 
 ## Summary Video
