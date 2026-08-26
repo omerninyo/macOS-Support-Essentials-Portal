@@ -1,89 +1,95 @@
-# Lesson 12: Updates and Upgrades
-**Hands-On Lab (Student Exercise)**
+# Lesson 12: Software Updates & Upgrades
+**Practical Hands-On Lab**
 
 ## Objective
-Gain practical mastery over system updates (Updates and Upgrades) via the graphical user interface (GUI), understand the Rapid Security Response (RSR) mechanism through System Settings, and practice the correct data transfer workflow using Migration Assistant within an enterprise environment.
+Master software updates and upgrades via GUI, inspect Background Security Improvements (BSI) and Cryptex architecture, verify Bootstrap Token status on Apple Silicon, and explore Migration Assistant workflows in managed enterprise environments.
 
 ---
 
-## Exercise 1: Managing Software Updates in the GUI
+## Exercise 1: Managing Software Updates in GUI
 
-> **What you'll learn:** How to differentiate between an Update (minor patch) and an Upgrade (major release) in the GUI, verify RSR settings, and understand why macOS demands significantly more free space than the update payload itself.
+> **Learning Goal:** Distinguish between minor Updates and major Upgrades in GUI, configure automatic updates and BSI, and understand why macOS requires substantial snapshot overhead space.
 
-**Scenario:** You need to ensure the system is up-to-date, identify where minor updates appear versus full major upgrades, and verify that rapid, silent security patches (Rapid Security Responses / BSI) are configured for automatic installation as dictated by corporate policy.
+**Scenario:** Verify that the system is up to date, identify where point updates vs. major upgrades appear, and ensure Background Security Improvements are enabled.
 
-### Part A: Locating Available Updates
+### Step A: Check for Available Updates
 
-1. Open the **System Settings** app.
-2. Navigate to **General**, then select **Software Update**.
-3. Wait a few seconds while the system checks for updates against Apple's servers.
-4. Notice the division on the screen:
-   * **Minor Updates:** Appear at the top (e.g., a move to version 26.1). These are relatively small patches.
-   * **Major Upgrades:** Appear at the bottom separately (e.g., a recommendation to upgrade to the entirely new macOS Tahoe). This separation is intentionally designed to prevent users from accidentally installing a massive OS overhaul.
+1. Open **System Settings**.
+2. Navigate to **General > Software Update**.
+3. Allow the system to query Apple's servers (Pallas).
+4. Observe the interface separation:
+   * **Minor Updates:** Displayed in the primary update card (e.g., 26.2 to 26.3).
+   * **Major Upgrades:** Displayed in a separate bottom section to prevent accidental upgrades.
 
-### Part B: Configuring Automatic Updates and RSR
+### Step B: Configure Automatic Updates & BSI
 
-1. On the same screen, click the Info button (**i** icon) located next to the **Automatic Updates** row.
-2. You will see several important toggle switches. Ensure the following toggle is enabled:
-   **Install Security Responses and system files**
-3. **Enterprise Impact:** Enabling this switch is critical. It allows macOS to receive urgent, out-of-band security updates delivered as Cryptex capsules and applied to the system (often without a lengthy reboot), as well as silently updating built-in malware signature lists (XProtect).
-4. Once verified, click **Done**.
+1. Click the info icon (s) next to **Automatic Updates**.
+2. Ensure **Install Security Responses and system files** is turned ON.
+3. Click **Done**.
 
-### Part C: Downloading a Full Upgrade via Terminal
+---
 
-Occasionally, IT admins need to download the full installer payload to create a bootable USB drive or deploy it to other Macs in the fleet.
+## Exercise 2: Inspecting Cryptex & BSI Rollback
 
-1. Open the **Terminal** application.
-2. Run the following command to pull down the latest full installer:
+> **Learning Goal:** Identify live Cryptex security overlays and understand the instant rollback mechanism if a security patch introduces enterprise app incompatibilities.
+
+**Scenario:** An internal business application crashes following a silent security patch. Learn how to verify Cryptex state and trigger immediate rollback.
+
+1. Open **System Settings > General > About**.
+2. Click the info icon next to the macOS version string.
+3. View the exact build and active security overlay details.
+4. If an active overlay is present, clicking **Remove & Restart** instructs the bootloader to omit mounting the Cryptex on the next boot, reverting immediately to the clean baseline SSV.
+
+---
+
+## Exercise 3: Simulating Migration Assistant & Enterprise Pitfalls
+
+> **Learning Goal:** Understand Migration Assistant mechanics, high-risk data categories, and why Cloud-Native Ephemeral device workflows are preferred in Zero-Trust environments.
+
+**Scenario:** A user receives a new Mac. Learn how to avoid UID collisions and dirty migrations when transferring user profiles.
+
+### Step A: Launch and Inspect Options
+
+1. Launch **Migration Assistant** from `/Applications/Utilities`.
+2. Authenticate with admin credentials.
+3. Select **From a Mac, Time Machine backup, or startup disk** and click **Continue**.
+4. *(Do not execute full migration during this simulation).*
+
+### Step B: Enterprise Best Practices
+
+1. When sources are detected, 4 categories appear: `Users`, `Applications`, `Other Files & Folders`, `System & Network`.
+2. **Critical Rules:**
+   * Select **only** the designated user account.
+   * Deselect **System & Network** (prevents network and MDM profile conflicts).
+   * Deselect **Applications** (prevents copying obsolete Intel Kexts and incompatible daemons).
+3. **UID Collision:** If an account with the same short name exists on the target Mac, selecting Keep Both appends numbers and breaks paths, while Replace wipes data.
+4. Exit the assistant cleanly (**Quit**).
+
+---
+
+## Exercise 4: Verifying Bootstrap Token & Terminal CLI Tools
+
+> **Learning Goal:** Verify Bootstrap Token escrow status for silent MDM updates on Apple Silicon, scan updates via Terminal, and simulate full installer downloads.
+
+**Scenario:** As an IT administrator, verify that the Mac can accept silent DDM update enforcements without user password prompts.
+
+### Step A: Verify Bootstrap Token Status
+
+1. Open **Terminal**.
+2. Run the following command:
+   ```bash
+   sudo profiles status -type bootstraptoken
+   ```
+3. **Verify Output:** Confirm that `Bootstrap token is escrowed to server: YES` is displayed.
+
+### Step B: Scan and Query Updates in CLI
+
+1. Scan for available updates:
+   ```bash
+   softwareupdate -l
+   ```
+2. Simulate full installer download:
    ```bash
    softwareupdate --fetch-full-installer
    ```
-   *(If you need a specific version, you can append `--full-installer-version 26.0`)*
-3. This action will download the payload into your Applications folder as an app named `Install macOS [Name].app`. (You can abort this heavy download now by pressing `Control + C` if you do not wish to complete it).
-
----
-
-## Exercise 2: Simulating Data Transfer (Migration Assistant)
-
-> **What you'll learn:** How Migration Assistant operates under the hood, which specific data sets should be transferred, and why a Clean Slate approach is vastly superior to full migrations in an enterprise setup.
-
-**Scenario:** A user has received a brand-new Mac. We need to correctly migrate their data without overriding existing Local Accounts or introducing duplicate identities into the system.
-
-!!! warning "Reminder"
-    In managed environments (MDM), it is highly advised to avoid full data migrations via this tool. It risks migrating deprecated configuration profiles and broken, architecture-incompatible applications.
-
-### Part A: Preparation and Launching the Tool
-
-1. Open **Migration Assistant** from the `/Applications/Utilities` folder (or via Spotlight).
-2. The tool will prompt for an Admin password and will safely close all other running applications. Approve this action.
-3. On the first screen, choose **From a Mac, Time Machine backup, or startup disk** and click **Continue**.
-4. *For this simulation:* Do not actually proceed with a real transfer (to avoid rebooting and locking your system), but familiarize yourself with the upcoming options.
-
-### Part B: Selecting Data Payloads (Best Practices)
-
-1. Once the tool detects a source, it calculates the volume and presents a checklist: `Users`, `Applications`, `Other Files & Folders`, `System & Network`.
-2. **Rules of Thumb for Preventing IT Headaches:**
-   * Expand the Accounts list and select **only** the relevant user account.
-   * **Strong Enterprise Recommendation:** Uncheck `System & Network` to prevent importing old network configurations that could conflict with your MDM payloads.
-   * Uncheck `Applications` to completely avoid transferring problematic Kexts or legacy software dependent on Rosetta 2 that hasn't been optimized for Apple Silicon.
-
-### Part C: Managing Account Collisions (UID Conflict)
-
-1. If the target Mac already contains an account with the **exact same** username you are attempting to import, the tool will alert you to an Account Conflict.
-2. The Options:
-   * **Replace:** Completely deletes the existing account on the new Mac, replacing it with the imported data.
-   * **Keep both user accounts:** The system renames the imported account to create separation (e.g., appending a "1" to the username) – which frequently leads to massive end-user confusion.
-3. Exit the wizard gracefully now by choosing `Quit`.
-
----
-
-## Exercise 3: Investigating the Rapid Security Response (RSR) Mechanism
-
-> **What you'll learn:** How to identify an installed RSR version, interpret the letter in parentheses, and understand how to execute a Rollback if the patch breaks compatibility with critical corporate software.
-
-**Scenario:** As an IT administrator, you need to verify which RSR patch is currently active and understand how to roll it back if the update causes unexpected behavior with internal enterprise applications.
-
-1. Open **System Settings** and navigate to **General -> About**.
-2. Check the macOS version row. If a rapid RSR patch is currently installed, you will see a letter in parentheses (e.g., `(a)`) next to the version number (such as `macOS 26.3.1 (a)`).
-3. Click the Info button (**i** icon) next to it.
-4. In the pop-up window, you will find a **Remove** button designed to uninstall the security patch (this action prevents the Cryptex from loading during the next system reboot, effectively rolling you back to the base SSV snapshot).
+   *(Press `Control + C` at any time to cancel the large download).*
