@@ -35,7 +35,7 @@
 !!! important "חשוב לארגון"
     סוכני אבטחה (AV/EDR) כמו CrowdStrike ו-SentinelOne עברו כבר ל-System Extensions. אם יצרן כלי אבטחה עדיין דורש Kext — זהו סימן אדום לכלי ישן. דרשו מהיצרן גרסה מעודכנת לפני פריסה בארגון.
 
-*   **סביבת השחזור (Recovery)OS Password:** בעבר (ב-Intel) השתמשנו ב-Firmware Password. ב-Apple Silicon, ניתן דרך מערכת MDM (פקודת `SetRecoveryLock`) לנעול את היכולת להיכנס למצב השחזור (Recovery / Startup Options) ללא ססמה מרחוק.
+*   **Recovery Lock (`SetRecoveryLock`):** היורש הארגוני של ה-Firmware Password ב-Apple Silicon. **פיצ'ר בלעדי למערכות MDM (אינו זמין ללקוח פרטי!)**. נועל לחלוטין את הגישה לסביבת ה-Recovery (1TR) ומונע שינוי רמות אבטחה, כניסה לטרמינל או איפוס המחשב ללא סיסמת ה-MDM.
 *   **1TR (One True Recovery):** סביבת השחזור הייעודית והאחידה של מחשבי Apple Silicon המאחדת את כלל אפשרויות האתחול למקום אחד, ומופעלת באמצעות לחיצה ארוכה על כפתור ההפעלה.
 *   **Fallback Recovery (frOS):** מנגנון הגיבוי (Resiliency) לסביבת ה-Recovery הראשית ב-Apple Silicon. מופעל על ידי לחיצה כפולה (קצרה ואז ארוכה) על כפתור ההפעלה. מספק כלי התאוששות למקרה שסביבת ה-1TR הראשית נפגמת, אך אינו מאפשר שינוי של רמת האבטחה (Startup Security Utility).
 
@@ -92,7 +92,7 @@
 ## שאלות ותשובות נפוצות מסטודנטים (FAQ)
 
 *   **ש: האם אפשר לשים Firmware Password במחשבי Apple Silicon כדי למנוע אתחול מדיסק חיצוני?**
-    *   **ת:** לא. אפל הסירה את תמיכת סיסמת הקושחה ב-Apple Silicon משום שהאבטחה בנויה בתוך ה-SoC עצמו ויש צורך באימות משתמש (Volume Ownership) לפני כל שינוי אבטחתי. בארגון, הפתרון הוא הגדרת `RecoveryOS Password` דרך ה-MDM כדי לנעול את עצם הגישה לתפריט ה-Startup Options.
+    *   **ת:** לא. אפל הסירה את תמיכת סיסמת הקושחה ב-Apple Silicon משום שהאבטחה בנויה בתוך ה-SoC עצמו ויש צורך באימות משתמש (Volume Ownership) לפני כל שינוי אבטחתי. במחשבי Apple Silicon אין יותר Firmware Password מקומי, ולקוח פרטי אינו יכול להגדיר סיסמה ל-Recovery כלל. בארגונים מנוהלים, הפתרון הוא **Recovery Lock** המופעל בלעדית דרך שרת ה-MDM (פקודת `SetRecoveryLock`) ונועל לחלוטין את הגישה ל-1TR ול-Startup Security Utility.
 *   **ש: אפליקציית סנכרון ארגונית (כמו Google Drive או OneDrive) מבקשת להתקין Kernel Extension. האם לאפשר?**
     *   **ת:** מאז macOS Monterey/Ventura אין בזה צורך! אפליקציות סנכרון קבצים עברו להשתמש ב-File Provider API שהוא System Extension שרץ במרחב המשתמש (User Space) ולא מחייב מעבר ל-Reduced Security. מומלץ לדרוש מהיצרן את הגרסה המעודכנת.
 *   **ש: מה עושים כאשר המחשב כל הזמן קורס מיד באתחול (Boot Loop / Kernel Panic) ולא מצליח לעלות למערכת?**
