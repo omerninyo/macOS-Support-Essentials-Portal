@@ -8,18 +8,17 @@
 
 ## מושגי יסוד באדריכלות שחזור (Core Recovery Concepts)
 
-- **1TR (One True Recovery):** במחשבי Apple Silicon, סביבת ההתאוששות (RecoveryOS) מופרדת לחלוטין ממערכת ההפעלה הרגילה ומאוחסנת בקונטיינר ייעודי. היא תוכננה להיות חסינה – גם אם תמחקו את הדיסק במלואו, ה-1TR שורד ומאפשר התקנה מחדש.
+*   **1TR (One True Recovery):** במחשבי Apple Silicon, סביבת ההתאוששות (RecoveryOS) מופרדת לחלוטין ממערכת ההפעלה הרגילה ומאוחסנת בקונטיינר ייעודי. היא תוכננה להיות חסינה – גם אם תמחקו את הדיסק במלואו, ה-1TR שורד ומאפשר התקנה מחדש.
+*   **Fallback Recovery (frOS):** מנגנון "תוכנית גיבוי" ב-Apple Silicon. אם ה-1TR קורס, המק יעלה סביבת שחזור מינימלית יותר. מופעל על ידי לחיצה כפולה מהירה והחזקה (Di-dah) של כפתור ההפעלה.
+*   **Device Recovery Assistant (DRA) [חידוש ב-Tahoe]:** כלי אוטומטי המזוהה עם סמל חילוץ (⊕) שעולה עצמאית בעת כשלי Boot. הוא מבצע פתיחה של FileVault ותיקוני מערכת קבצים באופן אוטומטי לחלוטין.
+*   **DFU Mode (Device Firmware Update):** Recovery Mode חומרה ברמה הנמוכה ביותר למקרי קריסה מוחלטים. דורש Mac תקין נוסף, כבל USB-C, ו-Apple Configurator כדי לבצע החייאה (Revive) או שחזור (Restore).
+*   **EACS (Erase All Content and Settings):** כלי למחיקה מאובטחת ומיידית באמצעות "השמדה קריפטוגרפית" (Crypto-shredding). השמדת מפתח ה-VEK ב-Secure Enclave הופכת את המידע לרעש בלתי קריא בשניות, ללא דריסת תאים.
+*   **Activation Lock:** מנגנון נעילה נוגד גניבות (Find My). מקשר את ה-Mac ל-Apple Account. לאחר מחיקה, לא ניתן יהיה להפעיל את המק ללא אימות החשבון המקורי או קוד מעקף (Bypass Code).
+*   **Recovery Assistant:** הממשק הראשון שפוגשים ב-Recovery. תפקידו לאמת את זהותכם מול ה-Secure Enclave (סיסמת משתמש) כדי לפתוח את הנעילה של כונן הנתונים.
+*   **שיתוף כונן (Share Disk):** מחליף את Target Disk Mode בארכיטקטורת Apple Silicon. מאפשר לשתף את כונן המק ברשת או בכבל פיזי באמצעות פרוטוקול SMB.
 
 > *← שרשרת האתחול שמובילה ל-1TR נלמדה לעומק בשיעור 13 (Boot Process) — כאן מתמקדים במה שעושים אחרי שהגעתם לתפריט.*
-- **Fallback Recovery (frOS):** מנגנון "תוכנית גיבוי" ב-Apple Silicon. אם ה-1TR קורס, המק יעלה סביבת שחזור מינימלית יותר. מופעל על ידי לחיצה כפולה מהירה והחזקה (Di-dah) של כפתור ההפעלה.
-- **Device Recovery Assistant (DRA) [חידוש ב-Tahoe]:** כלי אוטומטי המזוהה עם סמל חילוץ (⊕) שעולה עצמאית בעת כשלי Boot. הוא מבצע פתיחה של FileVault ותיקוני מערכת קבצים באופן אוטומטי לחלוטין.
-- **DFU Mode (Device Firmware Update):** Recovery Mode חומרה ברמה הנמוכה ביותר למקרי קריסה מוחלטים. דורש Mac תקין נוסף, כבל USB-C, ו-Apple Configurator כדי לבצע החייאה (Revive) או שחזור (Restore).
-- **EACS (Erase All Content and Settings):** כלי למחיקה מאובטחת ומיידית באמצעות "השמדה קריפטוגרפית" (Crypto-shredding). השמדת מפתח ה-VEK ב-Secure Enclave הופכת את המידע לרעש בלתי קריא בשניות, ללא דריסת תאים.
-
-> *← VEK ו-FileVault נלמדו בשיעור 04 (הצפנה) — EACS משתמש באותו VEK כדי להשמיד את הצפנה עצמה במקום לדרוס תא אחר תא.*
-- **Activation Lock:** מנגנון נעילה נוגד גניבות (Find My). מקשר את ה-Mac ל-Apple Account. לאחר מחיקה, לא ניתן יהיה להפעיל את המק ללא אימות החשבון המקורי או קוד מעקף (Bypass Code).
-- **סביבת השחזור (Recovery) Assistant:** הממשק הראשון שפוגשים ב-Recovery. תפקידו לאמת את זהותכם מול the Secure Enclave (סיסמת משתמש) כדי לפתוח את הנעילה של כונן הנתונים.
-- **שיתוף כונן (Share Disk):** מחליף את Target Disk Mode בארכיטקטורת Apple Silicon. מאפשר לשתף את כונן המק ברשת או בכבל פיזי באמצעות פרוטוקול SMB.
+> *← VEK ו-FileVault נלמדו בשיעור 04 (הצפנה) — EACS משתמש באותו VEK כדי להשמיד את ההצפנה עצמה במקום לדרוס תא אחר תא.*
 
 ---
 
@@ -28,39 +27,41 @@
 במצב שחזור, ה-Terminal הוא כלי אבחון עוצמתי.
 
 ### ניהול דיסקים ומערכת הקבצים – `diskutil`
-- `diskutil list`: מציג את כל הכוננים הפיזיים והלוגיים במערכת, כולל מחיצות נסתרות כמו ה-1TR.
-- `diskutil apfs list`: מציג פירוט מעמיק של קונטיינרים מסוג APFS, כולל ווליומים ומצב ההצפנה.
+
+*   `diskutil list`: מציג את כל הכוננים הפיזיים והלוגיים במערכת, כולל מחיצות נסתרות כמו ה-1TR.
+*   `diskutil apfs list`: מציג פירוט מעמיק של קונטיינרים מסוג APFS, כולל ווליומים ומצב ההצפנה.
 
 ### אבחון וסיסמאות
-- `resetpassword`: מזניק את האשף הגרפי לאיפוס סיסמאות.
-- `recoverydiagnose`: (חידוש ב-macOS 26 Tahoe) פקודה המייצרת ארכיון דיאגנוסטיקה מקיף (לוגים, חומרה, APFS) לתוך כונן USB חיצוני להמשך ניתוח.
+
+*   `resetpassword`: מזניק את האשף הגרפי לאיפוס סיסמאות.
+*   `recoverydiagnose`: (חידוש ב-macOS 26 Tahoe) פקודה המייצרת ארכיון דיאגנוסטיקה מקיף (לוגים, חומרה, APFS) לתוך כונן USB חיצוני להמשך ניתוח.
 
 ### תקינות רשת
-- `ping -c 4 8.8.8.8`: וידוא שיש תקשורת חיצונית, הנדרשת להסרת Activation Lock ולהורדת מערכת הפעלה חתומה (SSV).
+
+*   `ping -c 4 8.8.8.8`: וידוא שיש תקשורת חיצונית, הנדרשת להסרת Activation Lock ולהורדת מערכת הפעלה חתומה (SSV).
 
 ---
 
 ## Activation Lock והיבטים ארגוניים (Enterprise & MDM Context)
 
-- **Activation Lock Bypass Code:** בארגונים (MDM), נוצר קוד עוקף מיוחד בשרת במעמד הרישום. במידה ועובד עזב כשהמק נעול, איש IT יכול להקליד את הקוד ב-Recovery Assistant תחת "Activate with MDM Key" כדי לשחרר את המכשיר בשרתי אפל.
-- **MDM Remote Wipe (`EraseDevice`):** מנהל IT יכול לשלוח מרחוק פקודת מחיקה שמפעילה באופן שקט את ה-Crypto-shredding (EACS), ללא התערבות משתמש.
+*   **Activation Lock Bypass Code:** בארגונים (MDM), נוצר קוד עוקף מיוחד בשרת במעמד הרישום. במידה ועובד עזב כשהמק נעול, איש IT יכול להקליד את הקוד ב-Recovery Assistant תחת "Activate with MDM Key" כדי לשחרר את המכשיר בשרתי אפל.
+*   **MDM Remote Wipe (`EraseDevice`):** מנהל IT יכול לשלוח מרחוק פקודת מחיקה שמפעילה באופן שקט את ה-Crypto-shredding (EACS), ללא התערבות משתמש.
+*   **Recovery Lock (`SetRecoveryLock`):** פרופיל MDM המגדיר סיסמה (14 תווים) ברמת ה-Secure Enclave שחוסמת את עצם הכניסה למצב ההתאוששות (המחליף הארגוני הבלעדי של סיסמת הקושחה ב-Intel).
 
 !!! important "אזהרה פעולית"
-    `EraseDevice` דורשת שה-Mac מחובר לאינטרנט ברגע קבלת הפקודה. מק ללא חיבור רשת — הפקודה לא תבצע. בנוסף, אם המק ננעל ב-Activation Lock לאחר המחיקה — AppleCare דורשת הוכחת רכישה (חשבונית) לשחרור ידני.
-
-- **סביבת השחזור (Recovery) Lock:** פרופיל MDM המגדיר סיסמה (14 תווים) ברמת ה-Secure Enclave שחוסמת את עצם הכניסה למצב ההתאוששות (מחליף את סיסמת הקושחה ב-Intel).
+    `EraseDevice` דורשת שה-Mac מחובר לאינטרנט ברגע קבלת הפקודה. מק ללא חיבור רשת — הפקודה לא תתבצע. בנוסף, אם המק ננעל ב-Activation Lock לאחר המחיקה — AppleCare דורשת הוכחת רכישה (חשבונית) לשחרור ידני.
 
 ---
 
 ## קישורים מומלצים ולקריאה נוספת
 
-* [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
-* [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
-* [Activation Lock for Mac](https://support.apple.com/en-us/102541)
-* [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
-* [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
-* [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — תחקיר מעמיק על חילוץ והצלת ה-RecoveryOS במקרי קריסה ואי-עלייה ב-Apple Silicon
-* [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
+*   [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
+*   [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
+*   [Activation Lock for Mac](https://support.apple.com/en-us/102541)
+*   [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
+*   [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
+*   [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — תחקיר מעמיק על חילוץ והצלת ה-RecoveryOS במקרי קריסה ואי-עלייה ב-Apple Silicon
+*   [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
 
 ## סרטון סיכום
 

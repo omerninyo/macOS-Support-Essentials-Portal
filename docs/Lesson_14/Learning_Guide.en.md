@@ -1,5 +1,5 @@
-# Lesson 14: Recovery Environment and Erasure
-**Learning Guide**
+# Lesson 14: System Recovery & Erasure
+**Part C: Learning Guide**
 
 ## Overview
 
@@ -8,80 +8,74 @@
 
 ## Core Recovery Concepts
 
-- **1TR (One True Recovery):** On Apple Silicon Macs, the RecoveryOS environment is completely isolated from the standard operating system and resides in a dedicated container. It is designed to be highly resilient—even if the entire disk is wiped, 1TR survives and facilitates OS reinstallation.
+*   **1TR (One True Recovery):** On Apple Silicon Macs, the recovery environment (RecoveryOS) is completely isolated from the standard operating system and stored in a dedicated container. It is architected to be resilient — even if you completely wipe the disk, 1TR survives to enable reinstallation.
+*   **Fallback Recovery (frOS):** The backup recovery mechanism on Apple Silicon. If 1TR fails, the Mac boots a minimal fallback recovery image. Triggered by a quick double-press and hold ("di-dah") of the Power button.
+*   **Device Recovery Assistant (DRA) [New in Tahoe]:** An automated triage tool marked with a ⊕ symbol that launches automatically during boot failures to unlock FileVault and repair filesystem structures.
+*   **DFU Mode (Device Firmware Update):** Lowest-level hardware recovery mode for catastrophic failures. Requires a secondary Mac, USB-C cable, and Apple Configurator to perform Revive or Restore operations.
+*   **EACS (Erase All Content and Settings):** Fast, secure erasure via Crypto-shredding. Obliterating the Volume Encryption Key (VEK) inside the Secure Enclave renders storage instantly unreadable without zero-filling SSD flash cells.
+*   **Activation Lock:** Anti-theft mechanism tied to Apple Account via Find My. Following an erase, the Mac cannot be activated without the original account credentials or an MDM Bypass Code.
+*   **Recovery Assistant:** The initial interface encountered in Recovery. Authenticates identity against the Secure Enclave (user password) to unlock the encrypted Data volume.
+*   **Share Disk:** Replaces legacy Target Disk Mode on Apple Silicon. Enables sharing the Mac storage over physical Thunderbolt or network connections via SMB protocol.
 
-> *→ The boot chain leading to 1TR was covered in-depth in Lesson 13 (Boot Process) — here we focus on the operations available after reaching the menu.*
-- **Fallback Recovery (frOS):** A contingency mechanism on Apple Silicon. Should 1TR fail, the Mac will boot into a more minimal recovery environment. Initiated via a rapid double-press and hold (Di-dah) of the Power button.
-- **Device Recovery Assistant (DRA) [New in Tahoe]:** An automated utility identified by a rescue icon (⊕) that launches independently during boot failures. It executes FileVault unlocking and filesystem repairs completely autonomously.
-- **DFU Mode (Device Firmware Update):** The lowest-level hardware recovery mode reserved for catastrophic failures. Requires an operational secondary Mac, a USB-C cable, and Apple Configurator to execute a Revive or Restore.
-- **EACS (Erase All Content and Settings):** A utility for immediate and secure data sanitization via Crypto-shredding. Destroying the Volume Encryption Key (VEK) inside the Secure Enclave instantly renders all data as unreadable noise, bypassing the need for legacy block-level overwriting.
-
-> *→ VEK and FileVault were explored in Lesson 04 (Encryption) — EACS leverages the same VEK to destroy the encryption itself rather than overwriting data cell by cell.*
-- **Activation Lock:** A powerful anti-theft mechanism tied to the user's Apple Account (Find My). Following an erasure, the Mac cannot be provisioned without authenticating the original account or utilizing an enterprise Bypass Code.
-- **Recovery Assistant:** The initial interface encountered within the Recovery environment. Its primary function is to authenticate your identity against the Secure Enclave (using a user password) to unlock the data volume.
-- **Share Disk:** The modern replacement for Target Disk Mode in the Apple Silicon architecture. Allows sharing the Mac's drive over the network or a physical cable utilizing the SMB protocol.
+> *← The boot chain leading to 1TR was covered in Lesson 13 (Boot Process) — here we focus on actions taken within the recovery interface.*
+> *← VEK and FileVault were covered in Lesson 04 (Encryption) — EACS leverages that same VEK to destroy encryption keys rather than overwriting sectors.*
 
 ---
 
 ## Terminal Commands in Recovery
 
-Within the Recovery environment, the Terminal serves as a powerful diagnostic tool.
+In Recovery Mode, Terminal provides low-level diagnostic capabilities.
 
-### Disk and Filesystem Management – `diskutil`
-- `diskutil list`: Displays all physical and logical drives on the system, including hidden partitions such as 1TR.
-- `diskutil apfs list`: Provides an in-depth breakdown of APFS containers, including volumes and encryption status.
+### Disk & Filesystem Management – `diskutil`
 
-### Diagnostics and Passwords
-- `resetpassword`: Launches the graphical Password Reset Assistant.
-- `recoverydiagnose`: (New in macOS 26 Tahoe) Generates a comprehensive diagnostic archive (logs, hardware data, APFS state) directly to an external USB drive for advanced offline analysis.
+*   `diskutil list`: Displays all physical and logical disks, including hidden partitions like 1TR.
+*   `diskutil apfs list`: Detailed breakdown of APFS containers, volumes, and encryption states.
 
-### Network Integrity
-- `ping -c 4 8.8.8.8`: Verifies external network connectivity, which is critical for removing Activation Lock and downloading the cryptographically signed OS (SSV).
+### Diagnostics & Passwords
+
+*   `resetpassword`: Launches the graphical password reset assistant.
+*   `recoverydiagnose`: (New in macOS 26 Tahoe) Generates a comprehensive diagnostic bundle (logs, hardware, APFS) to external USB storage for offline analysis.
+
+### Network Verification
+
+*   `ping -c 4 8.8.8.8`: Verifies external network connectivity required for Activation Lock handshakes and SSV OS downloads.
 
 ---
 
-## Enterprise & MDM Context (Activation Lock)
+## Enterprise & MDM Context
 
-- **Activation Lock Bypass Code:** In managed enterprise environments (MDM), a specialized bypass code is escrowed to the server during device enrollment. If an employee departs leaving the Mac locked, an IT administrator can enter this code in the Recovery Assistant under "Activate with MDM Key" to release the device on Apple's servers.
-- **MDM Remote Wipe (`EraseDevice`):** An IT administrator can dispatch a remote wipe command that silently triggers the Crypto-shredding process (EACS) without requiring user interaction.
+*   **Activation Lock Bypass Code:** In MDM environments, a unique bypass code is escrowed in the server during enrollment. If an employee departs with a locked Mac, an IT technician enters the code in Recovery Assistant under "Activate with MDM Key" to release the device.
+*   **MDM Remote Wipe (`EraseDevice`):** IT administrators can deploy a silent remote wipe command that triggers Crypto-shredding (EACS) without user intervention.
+*   **Recovery Lock (`SetRecoveryLock`):** An MDM-exclusive feature that sets a hardware-enforced password in the Secure Enclave blocking physical access to 1TR (the modern enterprise successor to Intel Firmware Password).
 
 !!! important "Operational Warning"
-    The `EraseDevice` command mandates that the Mac has an active internet connection at the exact moment the command is received. A Mac offline will not execute the command. Additionally, if the Mac triggers Activation Lock post-wipe, AppleCare requires proof of purchase (invoice) to perform a manual override.
-
-- **Recovery Lock:** An MDM profile configuration that defines a 14-character Secure Enclave-level password, effectively blocking unauthorized entry into the Recovery environment entirely (replacing Firmware Passwords on Intel).
+    `EraseDevice` requires an active network connection at command receipt. If a Mac is offline, the command will not execute. Additionally, if an unmanaged Mac is locked by Activation Lock without a bypass code, unlocking requires filing an AppleCare enterprise support request with original purchase invoices.
 
 ---
 
-## Recommended Links and Further Reading
+## Recommended Links & Further Reading
 
-* [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
-* [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
-* [Activation Lock for Mac](https://support.apple.com/en-us/102541)
-* [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
-* [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
-* [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — Deep-dive into rescuing recoveryOS when standard 1TR and Fallback modes fail
-* [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
+*   [Use macOS Recovery on a Mac with Apple silicon](https://support.apple.com/guide/mac-help/use-macos-recovery-on-a-mac-with-apple-silicon-mchl82829c17/mac)
+*   [Revive or restore a Mac with Apple silicon using Apple Configurator](https://support.apple.com/guide/apple-configurator-mac/revive-or-restore-a-mac-with-apple-silicon-apdd5f3c75ad/mac)
+*   [Activation Lock for Mac](https://support.apple.com/en-us/102541)
+*   [Manage Activation Lock with a device management service](https://support.apple.com/guide/deployment/manage-activation-lock-depf4aba89d5/web)
+*   [An illustrated guide to Recovery on Apple silicon Macs](https://eclecticlight.co/2026/02/16/an-illustrated-guide-to-recovery-on-apple-silicon-macs-2-0/)
+*   [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — Deep dive on recovering RecoveryOS during boot failures
+*   [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
 
 ## Summary Video
 
-<!-- Summary Video from YouTube -->
+<!-- YouTube Video -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/MMDlIxlbi10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-!!! tip "Visual Reference (Student Aid)"
-    You may refer to the following images from the course booklet (Asset A) to master this topic:
-    * `L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg`
-    * `L14_DeepDive_Explainer_Recovery_p1_41.jpeg`
-    * `L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png`
-    * `L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg`
 
 ---
 
 ## Visual Aids
 
-!!! tip "Visual Demonstration (Student Aid)"
-    These images illustrate the relevant interface or mechanism for the lesson topic.
+!!! tip "Visual Demonstration"
+    Images illustrating recovery and erasure mechanisms.
 
 ![An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61](../assets/images/Lesson_14/L14_DeepDive_An_illustrated_guide_to_Recovery_on_Apple_silicon__p2_61.jpg)
 ![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
