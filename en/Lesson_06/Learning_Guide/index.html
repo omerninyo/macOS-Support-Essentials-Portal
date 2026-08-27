@@ -1,0 +1,2868 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Student Portal for the macOS Course">
+      
+      
+        <meta name="author" content="Wediggit">
+      
+      
+        <link rel="canonical" href="https://omerninyo.github.io/macOS-Support-Essentials-Portal/en/Lesson_06/Learning_Guide/">
+      
+      
+        <link rel="prev" href="../../Lesson_05/Hands_On_Lab/">
+      
+      
+        <link rel="next" href="../Hands_On_Lab/">
+      
+      
+        
+          <link rel="alternate" href="../../../Lesson_06/Learning_Guide/" hreflang="he">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/Wediggit_Logo_Black.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Learning Guide - פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Assistant";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/custom_theme.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lesson-06-file-system-apfs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS" class="md-header__button md-logo" aria-label="פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS" data-md-component="logo">
+      
+  <img src="../../../assets/images/Wediggit_Logo_Black.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Learning Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../Lesson_06/Learning_Guide/" hreflang="he" class="md-select__link">
+              עברית
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS" class="md-nav__button md-logo" aria-label="פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS" data-md-component="logo">
+      
+  <img src="../../../assets/images/Wediggit_Logo_Black.png" alt="logo">
+
+    </a>
+    פורטל הלימודים של Wediggit: קורס תמיכה בארגון macOS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 1: Installation, Orientation and Baseline
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 1: Installation, Orientation and Baseline
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_01/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_01/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 2: User Management and Data Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 2: User Management and Data Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_02/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_02/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 3: Security
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 3: Security
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_03/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_03/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 4: Encryption and Keys
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 4: Encryption and Keys
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_04/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_04/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 5: Applications and Processes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 5: Applications and Processes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_05/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_05/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 6: File System (APFS)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 6: File System (APFS)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lesson-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lesson Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listen-to-the-recap-pre-or-post-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎧 Listen to the Recap — Pre or Post Lesson
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-apfs-container-volume-clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 — APFS: Container, Volume, Clone
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 — APFS: Container, Volume, Clone">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-apfs-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Practical APFS Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-accounting-the-purgeable-space-dilemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Accounting &amp; The Purgeable Space Dilemma
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagnostic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagnostic Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-ssv-and-firmlinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 — SSV and Firmlinks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 — SSV and Firmlinks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-volume-group-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Volume Group Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssv-and-firmlinks-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSV and Firmlinks Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-file-system-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 — File System Domains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3 — File System Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-domains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Four Domains
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-user-library-in-the-finder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the User Library in the Finder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-spotlight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4 — Spotlight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 4 — Spotlight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-spotlight-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Spotlight Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spotlight-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spotlight Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-enterprise-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 5 — Enterprise Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 5 — Enterprise Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-professionals-need-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What IT Professionals Need to Know
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links &amp; Further Reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recap-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Recap Video
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-aids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Aids
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 7: Backup and Restore
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 7: Backup and Restore
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_07/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_07/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 8: Terminal and Background Services
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 8: Terminal and Background Services
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_08/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_08/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 9: Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 9: Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_09/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_09/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 10: Sharing and Remote Access
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 10: Sharing and Remote Access
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_10/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_10/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 11: Peripherals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 11: Peripherals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_11/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_11/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 12: Updates and Upgrades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 12: Updates and Upgrades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_12/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_12/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 13: The Boot Process
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 13: The Boot Process
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_13/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_13/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 14: Recovery Environment and Erase
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 14: Recovery Environment and Erase
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_14/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_14/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 15: Diagnostics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 15: Diagnostics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_15/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_15/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 16: Log Analysis (Escape Room)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lesson 16: Log Analysis (Escape Room)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_16/Learning_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Lesson_16/Hands_On_Lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hands-On Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Lesson 6: File System (APFS)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lesson-06-file-system-apfs">Lesson 06: File System (APFS)<a class="headerlink" href="#lesson-06-file-system-apfs" title="Permanent link">&para;</a></h1>
+<p><strong>Student Reference Guide</strong></p>
+<hr />
+<h2 id="lesson-objectives">Lesson Objectives<a class="headerlink" href="#lesson-objectives" title="Permanent link">&para;</a></h2>
+<ul>
+<li>APFS Architecture &amp; Dynamic Space Sharing</li>
+<li>System Volume Group (SVG) &amp; Orphaned Volumes</li>
+<li>Firmlinks</li>
+<li>Spotlight Indexing &amp; Live Text</li>
+</ul>
+<hr />
+<h2 id="listen-to-the-recap-pre-or-post-lesson">🎧 Listen to the Recap — Pre or Post Lesson<a class="headerlink" href="#listen-to-the-recap-pre-or-post-lesson" title="Permanent link">&para;</a></h2>
+<!-- NotebookLM Podcast from Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/9f334406-f88d-4a75-9797-47bfdc6a6767/"></iframe></div>
+
+<hr />
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>APFS</strong></td>
+<td>Apple's modern File System. Engineered for high performance, dynamic space allocation, and robust data protection.</td>
+</tr>
+<tr>
+<td><strong>Container</strong></td>
+<td>The primary storage pool in APFS that manages the free space for all underlying volumes. Replaces rigid, legacy partitions.</td>
+</tr>
+<tr>
+<td><strong>Volume</strong></td>
+<td>A logical storage unit. Volumes dynamically share free space across the container without requiring pre-allocated sizing (Dynamic Space Sharing).</td>
+</tr>
+<tr>
+<td><strong>Copy-on-Write (CoW)</strong></td>
+<td>A critical data integrity mechanism that prevents data corruption by writing changes to new blocks before updating the reference pointer.</td>
+</tr>
+<tr>
+<td><strong>Clones</strong></td>
+<td>Creating exact copies on the same volume in a fraction of a second with <strong>zero-storage overhead</strong> until a modification occurs. The Finder handles this automatically behind the scenes.</td>
+</tr>
+<tr>
+<td><strong>SVG (System Volume Group)</strong></td>
+<td>The structural envelope that merges the System and Data volumes into what appears to the end-user as a single, unified drive.</td>
+</tr>
+<tr>
+<td><strong>SSV (Signed System Volume)</strong></td>
+<td>The cryptographically signed, read-only System partition. macOS boots from a verified snapshot, ensuring that no software or Admin can tamper with core system files.</td>
+</tr>
+<tr>
+<td><strong>Firmlinks</strong></td>
+<td>"Wormholes" — bi-directional links that seamlessly connect directories from the read-only System volume to the read-write Data volume for a transparent user experience.</td>
+</tr>
+<tr>
+<td><strong>Orphaned Data Volume</strong></td>
+<td>An edge case where the System and Data volumes become decoupled (often following a flawed restoration), leaving a stranded <code>Macintosh HD - Data</code> volume consuming unnecessary space.</td>
+</tr>
+<tr>
+<td><strong>Spotlight Index &amp; Live Text</strong></td>
+<td>A hidden database (<code>.Spotlight-V100</code>) facilitating global search. In modern macOS versions, this process includes optical character recognition (OCR) on images, which can occasionally trigger prolonged background processing (Runaway Indexing).</td>
+</tr>
+<tr>
+<td><strong>User / Local / Network / System Domains</strong></td>
+<td>The architectural segregation defining data placement and permissions. Essential knowledge for troubleshooting configuration and resource access in multi-user enterprise environments.</td>
+</tr>
+<tr>
+<td><strong>Enterprise Security</strong></td>
+<td>Thanks to the SSV, there is no need for traditional AV suites to scan the System volume. It is crucial to exclude system paths to prevent Firmlink loops that can trigger system crashes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-1-apfs-container-volume-clone">Part 1 — APFS: Container, Volume, Clone<a class="headerlink" href="#part-1-apfs-container-volume-clone" title="Permanent link">&para;</a></h2>
+<h3 id="practical-apfs-architecture">Practical APFS Architecture<a class="headerlink" href="#practical-apfs-architecture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Physical Disk
+└── Container (disk3) ← The Shared Storage Pool
+    ├── Volume: Macintosh HD (System) ← Read-Only, Cryptographically Signed
+    ├── Volume: Macintosh HD - Data   ← Read-Write, User Data
+    ├── Volume: Preboot
+    ├── Volume: Recovery
+    └── Volume: VM (Swap)
+</code></pre></div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>All volumes within a Container share the <strong>exact same free space</strong>. There is no need to define sizes in advance for each volume — macOS dynamically manages the allocation.</p>
+</div>
+<h3 id="storage-accounting-the-purgeable-space-dilemma">Storage Accounting &amp; The Purgeable Space Dilemma<a class="headerlink" href="#storage-accounting-the-purgeable-space-dilemma" title="Permanent link">&para;</a></h3>
+<p>In macOS, storage capacity calculation follows the fundamental formula:
+$$\text{Capacity} = \text{Available} + (\text{Used} - \text{Purgeable})$$</p>
+<ul>
+<li><strong>What is Purgeable Space?</strong> Storage occupied by temporary data (caches, system logs, and local APFS snapshots) that macOS can automatically delete via the background daemon <code>deleted(8)</code> when additional free space is needed.</li>
+<li><strong>The Finder vs Disk Utility Blindspot:</strong> In macOS 26 Tahoe, the Finder and System Settings -&gt; Storage often fail to disclose purgeable space held by snapshots, reporting it strictly as <code>Used</code>. Consequently, copying a large file across volumes in the same container may trigger a false "Not Enough Free Space" warning, even though Disk Utility clearly shows the space is purgeable and reclaimable.</li>
+</ul>
+<h3 id="diagnostic-commands">Diagnostic Commands<a class="headerlink" href="#diagnostic-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># View APFS hierarchy</span>
+diskutil<span class="w"> </span>list
+diskutil<span class="w"> </span>apfs<span class="w"> </span>list
+
+<span class="c1"># Add a volume with a specific Quota</span>
+diskutil<span class="w"> </span>apfs<span class="w"> </span>addVolume<span class="w"> </span>diskX<span class="w"> </span>APFS<span class="w"> </span><span class="s2">"NewVolumeName"</span><span class="w"> </span>-quota<span class="w"> </span>50g
+
+<span class="c1"># Manually create a Clone (Zero-storage overhead)</span>
+cp<span class="w"> </span>-c<span class="w"> </span>/path/to/original<span class="w"> </span>/path/to/clone
+</code></pre></div>
+<hr />
+<h2 id="part-2-ssv-and-firmlinks">Part 2 — SSV and Firmlinks<a class="headerlink" href="#part-2-ssv-and-firmlinks" title="Permanent link">&para;</a></h2>
+<h3 id="system-volume-group-structure">System Volume Group Structure<a class="headerlink" href="#system-volume-group-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>"Macintosh HD" (How the Finder presents it)
+        ↕ Firmlinks (Bi-directional seams)
+┌─────────────────────┐    ┌─────────────────────┐
+│   System Volume      │    │    Data Volume       │
+│   (Read-Only)        │    │    (Read-Write)      │
+│   Signed &amp; Secured   │    │   User Data          │
+└─────────────────────┘    └─────────────────────┘
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Executing <code>sudo touch /System/test.txt</code> will return <strong>"Read-only file system"</strong> — this is not an error, it is the SSV security protection in action.</p>
+</div>
+<h3 id="ssv-and-firmlinks-commands">SSV and Firmlinks Commands<a class="headerlink" href="#ssv-and-firmlinks-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Verify the SSV is signed and sealed (Critical before enterprise AV deployment)</span>
+csrutil<span class="w"> </span>authenticated-root<span class="w"> </span>status
+
+<span class="c1"># View Firmlinks (The seams bridging System and Data)</span>
+cat<span class="w"> </span>/usr/share/firmlinks
+
+<span class="c1"># View Mount points (Identify the read-only volume)</span>
+mount
+</code></pre></div>
+<hr />
+<h2 id="part-3-file-system-domains">Part 3 — File System Domains<a class="headerlink" href="#part-3-file-system-domains" title="Permanent link">&para;</a></h2>
+<h3 id="the-four-domains">The Four Domains<a class="headerlink" href="#the-four-domains" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th>Path</th>
+<th>Access</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User</strong></td>
+<td><code>~/Library/</code></td>
+<td>User Only</td>
+<td>Preferences, Containers, Local Caches</td>
+</tr>
+<tr>
+<td><strong>Local</strong></td>
+<td><code>/Library/</code></td>
+<td>All Users (Admin required for changes)</td>
+<td>Shared Fonts, Daemons, Frameworks</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td><code>/Network/Library/</code></td>
+<td>Enterprise Network</td>
+<td>IT-provisioned resources</td>
+</tr>
+<tr>
+<td><strong>System</strong></td>
+<td><code>/System/Library/</code></td>
+<td>Locked (SSV)</td>
+<td>Core System Files — No Entry</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Common Field Scenario</p>
+<p>A user installs a font via the GUI but only they can see it in applications. Why? The font was installed into the User Domain (<code>~/Library/Fonts</code>). To make it available to all users across the Mac, an Admin must move it to the Local Domain (<code>/Library/Fonts</code>).</p>
+</div>
+<h3 id="accessing-the-user-library-in-the-finder">Accessing the User Library in the Finder<a class="headerlink" href="#accessing-the-user-library-in-the-finder" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open <strong>Finder</strong> → navigate to the <strong>Go</strong> menu in the menu bar.</li>
+<li>Hold down the <strong>Option (⌥)</strong> key → the <strong>Library</strong> option will dynamically appear.</li>
+<li>Click it → You are now inside your <code>~/Library</code>.</li>
+</ol>
+<hr />
+<h2 id="part-4-spotlight">Part 4 — Spotlight<a class="headerlink" href="#part-4-spotlight" title="Permanent link">&para;</a></h2>
+<h3 id="how-spotlight-works">How Spotlight Works<a class="headerlink" href="#how-spotlight-works" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>New File Created / Modified
+        ↓
+mdworker (Background Process)
+        ↓
+mdimporter plugin (Tailored to file type)
+        ↓
+.Spotlight-V100 (Database)
+        ↓
+Spotlight Search / Finder / "About This Mac"
+</code></pre></div>
+<h3 id="spotlight-troubleshooting">Spotlight Troubleshooting<a class="headerlink" href="#spotlight-troubleshooting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check indexing status</span>
+sudo<span class="w"> </span>mdutil<span class="w"> </span>-s<span class="w"> </span>/
+
+<span class="c1"># Erase and rebuild index (Fixes inflated "System Data" storage reporting)</span>
+sudo<span class="w"> </span>mdutil<span class="w"> </span>-E<span class="w"> </span>/
+
+<span class="c1"># Check metadata of a specific file</span>
+mdimport<span class="w"> </span>-t<span class="w"> </span>-d3<span class="w"> </span>/path/to/file.pdf
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Following <code>sudo mdutil -E /</code>, you will observe the <code>mds_stores</code> and <code>photoanalysisd</code> processes spiking in Activity Monitor. This is expected behavior — the system is rebuilding the index, which may take hours or even days depending on the data volume.</p>
+</div>
+<hr />
+<h2 id="part-5-enterprise-security">Part 5 — Enterprise Security<a class="headerlink" href="#part-5-enterprise-security" title="Permanent link">&para;</a></h2>
+<h3 id="what-it-professionals-need-to-know">What IT Professionals Need to Know<a class="headerlink" href="#what-it-professionals-need-to-know" title="Permanent link">&para;</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Before deploying Enterprise AV/DLP on a Mac</p>
+<ol>
+<li>Run <code>csrutil authenticated-root status</code> — if <code>enabled</code>, the System volume is <strong>cryptographically signed and protected</strong>. There is zero need to scan it.</li>
+<li>Configure Exclusions for system paths: <code>/System/</code>, <code>/usr/bin/</code>, <code>/usr/lib/</code>.</li>
+<li>Utilize <code>/usr/local/</code> (writable) for custom scripts — avoid <code>/usr/bin/</code> (locked).</li>
+</ol>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Legacy AV agents scanning without proper exclusions on a Mac with Firmlinks can enter an infinite loop, resulting in a <strong>Kernel Panic</strong>. Always ensure security agents are updated to versions officially supporting macOS Tahoe/Sequoia.</p>
+</div>
+<hr />
+<h2 id="links-further-reading">Links &amp; Further Reading<a class="headerlink" href="#links-further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://support.apple.com/en-il/guide/platform-support/sup9e89abfd4/web">Use Disk Utility to repair a storage device</a> — Official Apple Guide</li>
+<li><a href="https://eclecticlight.co/2023/07/22/how-macos-depends-on-firmlinks/">How macOS depends on firmlinks</a> — Deep-dive into Firmlinks mechanics</li>
+<li><a href="https://eclecticlight.co/2026/08/24/arent-snapshots-purgeable/">Aren't snapshots purgeable?</a> — Deep-dive into free space accounting &amp; purgeable snapshots in macOS 26 Tahoe</li>
+<li><a href="https://eclecticlight.co/2024/11/29/using-and-troubleshooting-spotlight-in-sequoia-summary/">Using and troubleshooting Spotlight in Sequoia</a> — Spotlight Troubleshooting Guide</li>
+</ul>
+<hr />
+<h2 id="recap-video">🎬 Recap Video<a class="headerlink" href="#recap-video" title="Permanent link">&para;</a></h2>
+<!-- YouTube Recap Video -->
+<div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/cBSnmMtt9ho" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<hr />
+<h2 id="visual-aids">Visual Aids<a class="headerlink" href="#visual-aids" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Visual Demonstration (Student Aid)</p>
+<p>These images illustrate the relevant interface or mechanism for the lesson topic.</p>
+</div>
+<p><img alt="GetInfo_Window" src="../../../assets/images/Lesson_06/L06_DeepDive_GetInfo_Window.jpg" />
+<img alt="How_macOS_depends_on_firmlinks_p1_24" src="../../../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_24.jpeg" />
+<img alt="How_macOS_depends_on_firmlinks_p1_25" src="../../../assets/images/Lesson_06/L06_DeepDive_How_macOS_depends_on_firmlinks_p1_25.jpeg" />
+<img alt="Slide107_image35" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide107_image35.jpg" />
+<img alt="Slide115_image38" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide115_image38.jpg" />
+<img alt="Slide115_image39" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide115_image39.jpg" />
+<img alt="Slide116_image40" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide116_image40.jpg" />
+<img alt="Slide116_image41" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide116_image41.jpg" />
+<img alt="Slide3_image4" src="../../../assets/images/Lesson_06/L06_LegacySlide_Slide3_image4.jpeg" />
+<img alt="26-Tahoe-Disk-Utility-scaled" src="../../../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Disk-Utility-scaled.png" />
+<img alt="26-Tahoe-Finder-Get-Info-scaled" src="../../../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png" />
+<img alt="26-Tahoe-Spotlight-Action-scaled" src="../../../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png" />
+<img alt="26-Tahoe-Spotlight-scaled" src="../../../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../Lesson_05/Hands_On_Lab/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Hands-On Lab">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Hands-On Lab
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Hands_On_Lab/" class="md-footer__link md-footer__link--next" aria-label="Next: Hands-On Lab">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Hands-On Lab
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.path", "toc.integrate", "search.highlight", "navigation.footer", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
