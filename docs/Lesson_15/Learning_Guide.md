@@ -1,10 +1,23 @@
 # שיעור 15: דיאגנוסטיקה
 **מדריך עזר לתלמיד**
 
-## סקירה
+---
+
+## מטרות השיעור
+
+* **מתודולוגיית הבידוד (`Isolation`)** - חציית מרחב התקלה (משתמש מול מערכת, תוכנה מול חומרה, רשת מול לקוח) לאיתור שורש הבעיה.
+* **כלי ניטור ואבחון חומרה** - שימוש מושכל ב-`Activity Monitor`, איתור דליפות זיכרון (`Memory Leaks`) והרצת `Apple Diagnostics`.
+* **מצב בטוח (`Safe Mode`)** - הבנת פעולות הניקוי והבדיקה האוטומטיות שמתבצעות בעלייה ל-Safe Mode ב-Apple Silicon.
+* **בידוד תקלות בסביבה ארגונית (`MDM Triage`)** - אבחון חסימות מדיניות של פרופילי `MDM`, החרגת קבוצות (`Exclusion Groups`) ובידוד סוכני `EDR`.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/1a3db037-3234-40d2-bcb4-7bb56b307bc4/"></iframe></div>
+
+---
 
 ## מושגי יסוד ומתודולוגיות (Core Concepts)
 

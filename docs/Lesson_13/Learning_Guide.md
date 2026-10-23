@@ -1,10 +1,23 @@
 # שיעור 13: תהליך האתחול
-**חלק ג': מדריך עזר לתלמיד**
+**מדריך עזר לתלמיד**
 
-## סקירה
+---
+
+## מטרות השיעור
+
+* **שרשרת האמון החומרתית ב-Apple Silicon** - הבנת שלבי האתחול מ-`Boot ROM` דרך `LLB` ו-`iBoot` ועד אימות ה-`SSV` ועליית הקרנל (`XNU`).
+* **ניהול מדיניות אבטחת האתחול (`Startup Security Utility`)** - הבנת ההבדל בין `Full Security` ל-`Reduced Security` וקובץ ה-`LocalPolicy` פר-כרך.
+* **הרחבות קרנל (`Kexts`) מול `System Extensions`** - הבנת המעבר ממרחב הקרנל (`Ring 0`) למרחב המשתמש (`User Space`) וארכיטקטורת ה-`AKC`.
+* **אבטחת Firmware ונעילת Recovery בארגון** - שליטה במנגנון ה-`Recovery Lock` הבלעדי ל-MDM ובאישור שקט באמצעות `Bootstrap Token`.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/8a8c1088-1f17-49f9-bb6d-e8b34a2f904f/"></iframe></div>
+
+---
 
 ## מילון מונחים והגדרות יסוד (Terminology & Concepts)
 
@@ -31,6 +44,9 @@
 
 *   **Kernel Extensions - Kexts:** תוכנות שרצות במרחב הליבה של המערכת (Ring 0 / Kernel Space). אפל מסיימת את תמיכתה בהן בהדרגה, מאחר וקריסה של Kext מפילה את כל המחשב (Kernel Panic). טעינתן מחייבת מעבר ל-Reduced Security.
 *   **System Extensions:** המחליף המודרני ל-Kexts. הרחבות אלו רצות כ-User Space Processes (בתוך "Sandbox"), ולכן הן בטוחות בהרבה. אם הן קורסות, המק ממשיך לעבוד. (סוגים נפוצים: Network Extensions ל-VPN/Firewall, Endpoint Security לאנטי וירוס).
+
+> *← זוכרים את `launchd` (PID 1) משיעור 08? מיד לאחר שהקרנל (`XNU`) מסיים לעלות ולאמת את ה-SSV, התהליך הראשון שהוא מזניק במרחב המשתמש הוא `launchd`.*
+> *← בשיעור 14 (סביבת שחזור ומחיקה) נלמד מה עושים מתוך סביבת ה-`1TR`, ה-`frOS` או מצב `DFU` כאשר שרשרת האתחול נקטעת.*
 
 !!! important "חשוב לארגון"
     סוכני אבטחה (AV/EDR) כמו CrowdStrike ו-SentinelOne עברו כבר ל-System Extensions. אם יצרן כלי אבטחה עדיין דורש Kext — זהו סימן אדום לכלי ישן. דרשו מהיצרן גרסה מעודכנת לפני פריסה בארגון.

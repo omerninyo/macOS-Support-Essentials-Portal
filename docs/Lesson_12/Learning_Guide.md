@@ -1,20 +1,21 @@
 # שיעור 12: עדכונים ושדרוגים
 **מדריך עזר לתלמיד**
 
-## 🎧 סקירה (פודקאסט)
+---
 
-<!-- פודקאסט NotebookLM מתוך Captivate -->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d74f76f7-4640-4f79-beb9-48a4b3de0ed3/"></iframe></div>
+## מטרות השיעור
+
+* **ארכיטקטורת העדכונים המודרנית ב-macOS 26** - הבנת מכונת המצבים (`FSM`), שרת הקטלוגים `Pallas`, ותהליך `UpdateBrain` לבניית כרך `SSV` חדש.
+* **אבטחה והרשאות בעדכונים** - הבנת תפקיד ה-`Volume Ownership`, הרשאות משתמשי `Standard`, ומנגנון עדכוני האבטחה המהירים (`BSI` / `Cryptexes`).
+* **כלי שורת הפקודה ופתרון תקלות** - שליטה בכלי `softwareupdate`, שרת המטמון המקומי (`Content Caching`) ומניעת התנגשויות ב-`Migration Assistant`.
+* **ניהול עדכונים ארגוני הצהרתי (`DDM`)** - אכיפת דדליינים אוטונומית, מדיניות השהיות (`Deferrals`) ואישור שקט באמצעות `Bootstrap Token`.
 
 ---
 
-**סיכום שיעור**
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
-## נושאי השיעור
-1. ארכיטקטורת העדכונים המודרנית ב-macOS 26 (FSM, Pallas, Streaming Decompression ו-UpdateBrain).
-2. אבטחה והרשאות ב-Apple Silicon: הרשאות Standard Users, Volume Ownership ו-Cryptexes (BSI).
-3. כלי ה-CLI softwareupdate, המלכודות ב-Migration Assistant וסולם פתרון תקלות.
-4. תיבול ארגוני: Declarative Device Management (DDM), השהיות (Deferrals) ו-Bootstrap Token.
+<!-- פודקאסט NotebookLM מתוך Captivate -->
+<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d74f76f7-4640-4f79-beb9-48a4b3de0ed3/"></iframe></div>
 
 ---
 
@@ -53,6 +54,8 @@
 ### מי רשאי לעדכן?
 * **בממשק הגרפי (GUI):** החל מ-macOS 12.3, כל משתמש **Standard** מקומי יכול לאשר עדכונים ושדרוגים דרך הגדרות המערכת, בתנאי שהוא מחזיק ב-Secure Token (Volume Owner).
 * **בטרמינל (CLI) ומתקינים מלאים (UMA):** נדרשות הרשאות מנהל מקומי (**Local Administrator** / `sudo`).
+
+> *← זוכרים את מנגנון ה-Volume Ownership וה-Bootstrap Token משיעור 04 (הצפנה ומפתחות)? בעדכוני מערכת מנוהלים ב-DDM, ה-Bootstrap Token מאפשר לשרת ה-MDM לאשר את העדכון בשקט ללא מעורבות המשתמש.*
 
 ### טכנולוגיית ה-Cryptex ו-Background Security Improvements
 * **מהו Cryptex?** אימג' דיסק מוצפן המאוחסן ב-Preboot ומורכב בשכבה עליונה מעל ה-SSV הנעול.

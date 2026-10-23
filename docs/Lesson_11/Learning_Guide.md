@@ -1,7 +1,18 @@
 # שיעור 11: ציוד היקפי
 **מדריך עזר לתלמיד**
 
-## 🎧 סקירה (פודקאסט)
+---
+
+## מטרות השיעור
+
+* **פרוטוקולי חיבור מתקדמים (`Thunderbolt` vs `USB-C`)** - הבחנה בין צורת המחבר הפיזית לפרוטוקול התקשורת (`USB 3/4`, `Thunderbolt 3/4/5`) ואבחון מהירויות ב-`System Information`.
+* **אבטחת אביזרים (`Accessory Security`)** - הבנת מנגנון ההגנה ב-Apple Silicon מפני התקני USB עוינים וניהול מדיניות החיבור.
+* **מערכת ההדפסה ב-macOS (`CUPS` & `AirPrint`)** - ניהול מדפסות רשת, קבצי `PPD`, ממשק ה-Web של `CUPS` ואבחון תורי הדפסה בטרמינל.
+* **ניהול חומרה והדפסה בארגון** - אכיפת מדיניות אחסון חיצוני ב-`DDM` והפצת מדפסות שקטה דרך ה-`MDM`.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/fd31f0d4-5f45-4a2f-acea-e9d8ba503f57/"></iframe></div>
@@ -22,7 +33,8 @@
 !!! note "הערה טכנית (הפרעות תדרים)"
     התקני USB 3.0 עשויים לפלוט רעשי RF בתדר של 2.4 GHz. רעש זה מתנגש ישירות עם התדר של קישוריות Bluetooth ו-Wi-Fi. במידה והעכבר האלחוטי מקרטע ללא הסבר, בדקו האם קיים מתאם USB 3.0 קרוב מדי למק.
 
-    *← תדרי 2.4GHz והיחסים בין Wi-Fi ל-Bluetooth נלמדו בשיעור 09 (רשתות) — אותו עקרון בדיוק מסביר מדוע מתאם USB 3.0 גורם לעכבר לקרטע.*
+> *← תדרי 2.4GHz והיחסים בין Wi-Fi ל-Bluetooth נלמדו בשיעור 09 (רשתות) — אותו עקרון בדיוק מסביר מדוע מתאם USB 3.0 גורם לעכבר לקרטע.*
+> *← שירות ההדפסה `cupsd` ושירות ה-Bluetooth (`bluetoothd`) רצים שניהם כ-`LaunchDaemons` תחת `launchd` (שיעור 08).*
 
 ---
 

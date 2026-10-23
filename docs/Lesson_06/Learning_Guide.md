@@ -5,10 +5,10 @@
 
 ## מטרות השיעור
 
-* APFS Architecture & Dynamic Space Sharing
-* System Volume Group (SVG) & Orphaned Volumes
-* Firmlinks
-* Spotlight Indexing & Live Text
+* **ארכיטקטורת APFS וחלוקת מקום דינמית (Dynamic Space Sharing)** - הבנת ההבדל בין Container ל-Volume, מנגנון Copy-on-Write (CoW), שכפולים מהירים (Clones) וחישוב Purgeable Space.
+* **קבוצת כרכי המערכת (System Volume Group) וכרכים יתומים** - הכרת 5 הכרכים הסטנדרטיים ב-macOS ואיתור כרכי `Data` יתומים (Orphaned Volumes) לאחר פירמוט שגוי.
+* **כרך המערכת החתום (SSV) ו-Firmlinks** - הבנת ההפרדה בין כונן ה-System הנעול לכונן ה-Data, וכיצד "חורי התולעת" (Firmlinks) מחברים ביניהם.
+* **מרחבי המערכת (Domains) ואינדוקס Spotlight** - שליטה בארבעת מרחבי הספריות ופתרון תקלות אינדוקס ו-Live Text ב-Spotlight.
 
 ---
 
@@ -63,6 +63,9 @@ $$\text{Capacity} = \text{Available} + (\text{Used} - \text{Purgeable})$$
 * **מהו Purgeable Space?** מקום שכרגע שמורים בו קבצים זמניים (מטמונים, קבצי לוגים ו-Local Snapshots) ש-macOS רשאית למחוק אוטומטית באמצעות תהליך הרקע `deleted(8)` כאשר המערכת זקוקה לשטח פנוי נוסף.
 * **המלכוד של Finder מול Disk Utility:** ב-macOS 26 Tahoe, ה-Finder וחלון האחסון בהגדרות המערכת נוטים לעיתים להחסיר את נתוני ה-Purgeable Space שנתפסים ע"י Snapshots ולהציגם כשטח תפוס לחלוטין (`Used`). כתוצאה מכך, המערכת עלולה לחסום העתקת קבצים חדשים עם שגיאת "אין מספיק מקום פנוי", למרות שב-Disk Utility ניתן לראות בבירור שהשטח מוגדר כ-Purgeable וניתן לפינוי מיידי.
 
+> *← זוכרים את מנגנון ההצפנה FileVault מלימודי שיעור 04? ברמת ה-APFS Container, ההצפנה חלה על כרך ה-Data (`Macintosh HD - Data`), וניתן לבדוק אילו משתמשים קריפטוגרפיים רשאים לפתוח אותו באמצעות `diskutil apfs listcryptousers /`.*
+> *← בשיעור 07 (גיבוי ושחזור) נראה כיצד מנגנון ה-APFS Snapshots משמש את Time Machine ליצירת נקודות שחזור מקומיות מהירות — וגם כיצד Snapshots ישנים עלולים לתפוס שטח Purgeable רב.*
+
 ### פקודות אבחון
 
 ```bash
@@ -95,6 +98,9 @@ cp -c /path/to/original /path/to/clone
 
 !!! note
     הפקודה `sudo touch /System/test.txt` תחזיר **"Read-only file system"** — זו לא שגיאה, זו ההגנה של SSV בפעולה.
+
+> *← בשיעור 12 (עדכוני מערכת) ובשיעור 13 (תהליך האתחול) נלמד כיצד macOS מעדכנת את כרך ה-SSV על ידי יצירת Snapshot חדש וחתימתו הקריפטוגרפית, וכיצד הקושחה מוודאת את חתימתו בכל הדלקה.*
+> *← בשיעור 14 (סביבת שחזור ומחיקה) נלמד כיצד מנגנון EACS מוחק רק את כרך ה-Data ומשאיר את כרך ה-SSV שלם ומוכן להפעלה מיידית.*
 
 ### פקודות SSV ו-Firmlinks
 

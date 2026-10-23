@@ -13,7 +13,7 @@
 
 ---
 
-## 🎧 סקירה (פודקאסט)
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/67a8f7c6-ffba-4387-824a-b30a7eeef5ae/"></iframe></div>
@@ -98,7 +98,8 @@
 !!! warning
     הפקודה `networksetup` היא ה"אולר השוויצרי" לניהול רשת. רוב הפקודות המשנות תצורה דורשות הרשאות מנהל (`sudo`).
 
-    *← ה-Firewall מתנהל על ידי `socketfilterfw` שרץ כ-Daemon תחת launchd — נלמד בשיעור 08 (Terminal). אפשר לעקוב אחריו ב-Console בדיוק כמו אחרי כל Daemon אחר.*
+> *← ה-Firewall מתנהל על ידי `socketfilterfw` שרץ כ-Daemon תחת launchd — נלמד בשיעור 08 (Terminal). אפשר לעקוב אחריו ב-Console בדיוק כמו אחרי כל Daemon אחר.*
+> *← פרופילי 802.1X ותעודות אימות נפרסים דרך שרת ה-MDM ונשמרים ב-System Keychain (שיעור 02 ושיעור 04).*
 
 ### 1. הצגת מידע (ללא צורך בהרשאות)
 ```bash

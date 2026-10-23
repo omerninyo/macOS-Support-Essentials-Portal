@@ -1,10 +1,23 @@
 # שיעור 16: ניתוח לוגים
 **מדריך עזר לתלמיד**
 
-## סקירה
+---
+
+## מטרות השיעור
+
+* **מערכת הלוגים האחודה (`Unified Logging System`)** - הבנת המעבר מקבצי טקסט לקבצי `.tracev3` בינאריים וההפרדה בין לוגים בזיכרון (`Volatile`) לדיסק (`Persist`).
+* **עבודה עם אפליקציית `Console` ודוחות קריסה** - סינון רעשים בזמן אמת (`Process`, `Subsystem`), שמירת חיפושים ופענוח דוחות `.ips` ו-`Kernel Panic`.
+* **שליטה בפקודת `log` ואיסוף `Sysdiagnose`** - תחקור היסטורי באמצעות `Predicates` בטרמינל והפקת ארכיון דיאגנוסטיקה מערכתי מלא.
+* **איתור "האקדח המעשן" בתקלות `MDM` ורשת** - חקירת כשלי תקשורת של `apsd` (פורט `5223`) וזיהוי חסימות `Firewall` או `SSL Inspection`.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/8c719c94-f488-4b97-8408-77cc77048926/"></iframe></div>
+
+---
 
 ## מילון מושגים (Glossary)
 

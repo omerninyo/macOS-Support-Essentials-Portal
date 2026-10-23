@@ -1,14 +1,18 @@
 # שיעור 07: גיבוי ושחזור
 **מדריך עזר לתלמיד**
 
+---
+
 ## מטרות השיעור
 
-* תמונות מצב (Snapshots)
-* גיבוי Time Machine
-* שחזור קבצים והתאוששות
-* גיבוי בסביבה ארגונית
+* **תמונות מצב מקומיות (APFS Local Snapshots)** - הבנת מנגנון ההקפאה המיידית ב-APFS, חישוב Purgeable Space וניהול תמונות מצב דרך Disk Utility ו-`tmutil`.
+* **ארכיטקטורת Time Machine המודרנית** - הבנת המעבר מ-Directory Hard Links ב-HFS+ ל-Synthetic Snapshots ב-APFS והצפנת כונן הגיבוי.
+* **שחזור קבצים והגירת מערכת (Migration Assistant)** - חילוץ קבצים היסטוריים ומניעת התנגשויות UID בעת העברת משתמשים למק חדש.
+* **אסטרטגיית גיבוי בסביבה ארגונית** - עבודה עם סנכרון ענן (`FileProvider`), קבצי Dataless, והגבלת Time Machine ב-MDM.
 
-## 🎧 האזנה לסיכום
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/5ae70462-ee1b-458a-b1f0-967157554d1f/"></iframe></div>
@@ -30,8 +34,7 @@
 * **צפייה וניהול בממשק הגרפי (Disk Utility):** פותחים את `Disk Utility`, בוחרים בתפריט `View > Show APFS Snapshots`, ולוחצים על ה-`Data Volume`. בתחתית החלון נחשפת טבלה מפורטת של כל תמונות המצב המקומיות (`com.apple.TimeMachine.*`), תאריך יצירתן, והנפח שהן תופסות.
 * **מנגנון ה-Purgeable Space ודמון `deleted(8)`:** פקודת `tmutil localsnapshot` יוצרת תמונות מצב המוגדרות כ-Purgeable. דמון המערכת `deleted(8)` אחראי למחוק אותן אוטומטית כשהמקום בכונן אוזל (מעל 80% תפוסה). עם זאת, ב-macOS 26 Tahoe ה-Finder נוטה להסתיר את היותן Purgeable ולהציגן כתפוסות, ולעיתים נדרש דילול יזום ב-Terminal או מחיקה ידנית ב-Disk Utility.
 
-!!! note
-    *← המנגנון הפנימי של APFS Snapshots וחישוב שטח ה-Purgeable נלמד לעומק בשיעור 06 (FileSystem) — כאן רואים איך Time Machine סומך על אותו מנגנון כדי לשמור גיבויים מקומיים.*
+> *← המנגנון הפנימי של APFS Snapshots וחישוב שטח ה-Purgeable נלמד לעומק בשיעור 06 (FileSystem) — כאן רואים איך Time Machine סומך על אותו מנגנון כדי לשמור גיבויים מקומיים.*
 
 ### פקודות לניהול Local Snapshots
 
@@ -62,7 +65,7 @@ diskutil apfs listSnapshots /
 !!! important "הצפנת כונן הגיבוי"
     כונן לא מוצפן שנישא בתיק מהווה פרצת אבטחה אדירה. לעולם אל תגבו לאמצעי חיצוני ללא הפעלת Encrypt Backup!
 
-    *← הצפנת הכונן מבוססת על אותו VEK/AES-XTS שנלמד בשיעור 04 (הצפנה/FileVault) — ההבדל: בגיבוי חיצוני אתם מגדירים סיסמא נפרדת לפתיחת הכונן בעתיד.*
+> *← הצפנת הכונן מבוססת על אותו VEK/AES-XTS שנלמד בשיעור 04 (הצפנה/FileVault) — ההבדל: בגיבוי חיצוני אתם מגדירים סיסמא נפרדת לפתיחת הכונן בעתיד.*
 
 ### ניהול Time Machine דרך הטרמינל (חלק מהפקודות דורשות `sudo`)
 

@@ -1,7 +1,18 @@
 # שיעור 10: שיתוף וגישה מרחוק
 **מדריך עזר לתלמיד**
 
-## 🎧 סקירה (פודקאסט)
+---
+
+## מטרות השיעור
+
+* **חיבור לשרתי קבצים (SMB)** - חיבור מחשבי Mac לשרתי Windows/NAS דרך פרוטוקול `SMB`, אבחון חיבורים פעילים (`smbutil`) ומניעת איטיות `.DS_Store`.
+* **שיתוף מקומי ואקוסיסטם** - שליטה בשירותי `Screen Sharing` (והרשאות TCC), `AirDrop` (`awdl0`) ו-`Universal Control`.
+* **חילוץ נתונים כבל-לכבל (`Mac Sharing Mode`)** - הפעלת שיתוף דיסק מתוך `1TR` ב-Apple Silicon והבנת מגבלות הרצת `First Aid`.
+* **הזדהות ארגונית שקופה (`Kerberos SSO`)** - חיבור אוטומטי לכונני רשת בארגון באמצעות כרטיסי `TGT` ומדיניות `Managed Open In`.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d4c324af-2882-4300-abb9-503dfb0683ee/"></iframe></div>
@@ -21,7 +32,7 @@
 !!! note "הערה טכנית"
     פרוטוקול SMB אינו מודע למבנה הקבצים החסכוני של APFS (כמו קבצי Sparse או Clones), ולכן העתקת קובץ כזה לשרת SMB "תנפח" אותו לגודלו המקורי.
 
-    *← APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
+> *← APFS Sparse Files, Clones ומנגנונות היעילות של APFS נלמדו בשיעור 06 (FileSystem) — כאן רואים ש-SMB לא מכבד אותן ומנפח את הקובץ.*
 
 ---
 
@@ -57,7 +68,7 @@
 !!! warning "אזהרת IT קריטית (First Aid)"
     בניגוד לעבר ב-Target Disk Mode, אי אפשר להריץ פקודות תיקון דיסק או Disk Utility מהמחשב המארח על המחשב התקול, מכיוון שהדיסק חשוף ברמת קובץ (SMB) ולא ברמת בלוק (Block Device). תיקון תקלות בדיסק חייב להתבצע מה-Recovery של המחשב התקול עצמו!
 
-    *← FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
+> *← FileVault שנלמד בשיעור 04 (הצפנה) הוא הסיבה שמשתמשים בסיסמאת Admin כדי להתחבר ב-Mac Sharing Mode — ה-Volume Owner מאשר את הגישה דרך Secure Enclave.*
 
 ---
 

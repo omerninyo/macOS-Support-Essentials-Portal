@@ -1,10 +1,23 @@
 # שיעור 14: סביבת שחזור ומחיקה
 **מדריך עזר לתלמיד**
 
-## סקירה
+---
+
+## מטרות השיעור
+
+* **ארכיטקטורת ההתאוששות ב-Apple Silicon** - הבנת ההבדל בין סביבת `1TR` (One True Recovery), מערכת הגיבוי `Fallback Recovery (frOS)`, וכלי החילוץ האוטומטי החדש ב-Tahoe (`Device Recovery Assistant`).
+* **כלי העבודה ב-RecoveryOS** - שליטה באשף ה-Recovery Assistant, שיתוף כונן ברשת (`Share Disk`), איפוס סיסמאות (`resetpassword`) ואיסוף דיאגנוסטיקה (`recoverydiagnose`).
+* **מחיקה קריפטוגרפית וניהול נעילות** - הבנת מנגנון `EACS` (Erase All Content and Settings), התמודדות עם `Activation Lock` וניהול `Recovery Lock` בארגון.
+* **החייאה ושחזור ברמת החומרה (DFU Mode)** - ביצוע `Revive` ו-`Restore` למחשבים מושבתים באמצעות כבל USB-C ו-Apple Configurator / Finder.
+
+---
+
+## 🎧 האזנה לסיכום — לפני או אחרי השיעור
 
 <!-- פודקאסט NotebookLM מתוך Captivate -->
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/0b72cae7-af65-4c30-bf48-1086a4744e98/"></iframe></div>
+
+---
 
 ## מושגי יסוד באדריכלות שחזור (Core Recovery Concepts)
 
@@ -19,6 +32,27 @@
 
 > *← שרשרת האתחול שמובילה ל-1TR נלמדה לעומק בשיעור 13 (Boot Process) — כאן מתמקדים במה שעושים אחרי שהגעתם לתפריט.*
 > *← VEK ו-FileVault נלמדו בשיעור 04 (הצפנה) — EACS משתמש באותו VEK כדי להשמיד את ההצפנה עצמה במקום לדרוס תא אחר תא.*
+
+---
+
+## השוואת מצבי ההתאוששות ב-Apple Silicon
+
+| סביבת שחזור | אופן כניסה / הפעלה | היכן יושבת? | מתי משתמשים בה? |
+| :--- | :--- | :--- | :--- |
+| **1TR (One True Recovery)** | לחיצה ארוכה על כפתור ההפעלה (`Continue holding for startup options`) | קונטיינר ה-Recovery הראשי בכונן ה-SSD הפנימי | איפוס סיסמה, Disk Utility, התקנה מחדש של macOS, או שינוי מדיניות Startup Security |
+| **Fallback Recovery (frOS)** | לחיצה כפולה מהירה והחזקה בשנייה (`Di-dah`) על כפתור ההפעלה | קונטיינר גיבוי נפרד (`Apple_APFS_Recovery`) | כאשר סביבת ה-`1TR` הראשית נפגמה או אינה עולה (שים לב: ללא כלי `Startup Security Utility`) |
+| **Device Recovery Assistant (DRA)** | עולה אוטומטית (סמל חילוץ `⊕`) כאשר המערכת מזהה כשל Boot חוזר ב-macOS 26 Tahoe | רכיב התאוששות אוטומטי מובנה ב-RecoveryOS | תיקון אוטומטי של שגיאות מערכת קבצים או שחרור נעילת FileVault ללא התערבות טכנאי |
+| **DFU Mode (חומרה)** | שילוב מקשים ייעודי או לחיצה על כפתור ההפעלה תוך חיבור כבל USB-C לפורט ה-DFU הייעודי | BootROM חומרתי בתוך שבב ה-Apple Silicon | כאשר המחשב מושבת לחלוטין (מסך שחור / סימן קריאה כתום) וגם `frOS` אינו מגיב |
+
+---
+
+## החייאה (Revive) מול שחזור מלא (Restore) במצב DFU
+
+| מאפיין | **Revive (החייאה)** — ברירת המחדל הראשונה! | **Restore (שחזור מלא)** — מוצא אחרון! |
+| :--- | :--- | :--- |
+| **מה הפעולה מעדכנת?** | מעדכנת רק את הקושחה (Firmware / iBoot) ואת מחיצת ה-Recovery (`1TR`) | צורבת קושחה חדשה, מפרמטת את כל ה-SSD ומתקינה מערכת נקייה |
+| **מה קורה לנתוני המשתמש?** | **נשמרים במלואם!** אינה מוחקת את כרך ה-Data | **נמחקים לחלוטין!** (השמדה קריפטוגרפית של כל הקונטיינרים) |
+| **מתי מבצעים?** | אחרי הפסקת חשמל באמצע עדכון מערכת, מסך שחור, או הבהוב נורית חיווי | כאשר `Revive` נכשל, או כאשר מכינים מחשב תקול מחדש ללא צורך במידע |
 
 ---
 
@@ -63,7 +97,9 @@
 *   [Recover Recovery](https://eclecticlight.co/2026/08/18/recover-recovery/) — תחקיר מעמיק על חילוץ והצלת ה-RecoveryOS במקרי קריסה ואי-עלייה ב-Apple Silicon
 *   [Erase All Content and Settings does what it says](https://eclecticlight.co/?s=Erase+All+Content+and+Settings)
 
-## סרטון סיכום
+---
+
+## 🎬 סרטון סיכום
 
 <!-- סרטון סיכום מתוך YouTube -->
 <div style="margin-bottom: 20px; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
