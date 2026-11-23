@@ -93,6 +93,10 @@ In this phase, we will validate whether our generated PRK successfully allows da
 
 ---
 
+6. **Classroom Cleanup (Per Instructor Guidance):** On shared training Macs that will not be wiped at the end of class, return to **System Settings -> Privacy & Security -> FileVault** and click **Turn Off** when finished so the machine does not remain locked with a student key.
+
+---
+
 ## IT Pro Bonus Lab: The Command Line (Terminal)
 
 !!! note "No Need to Memorize!"
@@ -109,3 +113,5 @@ In this phase, we will validate whether our generated PRK successfully allows da
 * **Audit Bootstrap Token Status:**
   To verify if the Mac has communicated with an MDM server and escrowed a Bootstrap Token (which enables automated Secure Token grants for newly provisioned employees), execute:
   `sudo profiles status -type bootstraptoken` (This action requires administrator authentication).
+
+<!-- src_hash: 33192d16bdff4dd89eebd291ffec472f8485809aff5cfb79467ad6172dab65ff -->

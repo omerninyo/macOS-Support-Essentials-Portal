@@ -1,24 +1,21 @@
 # Welcome to the Wediggit Student Portal 🎓
 
-This course is designed to train you as support professionals and network administrators in an Apple environment. Throughout the 16 lessons of this course, we will dive deep into the system: from understanding the innovative APFS storage architecture, through complex permission management, advanced network and security configurations, boot process management, to in-depth troubleshooting and operating system log analysis.
-
-Here in the portal, you will find all learning aids, lesson summaries, and practical exercises for each lesson.
+This course is designed to train you as IT support specialists, Helpdesk engineers, and system administrators in modern Apple enterprise environments. Across 16 structured lessons, we dive deep into **macOS 26 (Tahoe)** on Apple Silicon: from system setup, identity, and Passkeys, through macOS security layers (Gatekeeper, XProtect, TCC), FileVault encryption, and APFS storage architecture, all the way to background services, networking, boot security, 1TR Recovery, and unified log diagnostics.
 
 ## What You'll Find Here
 
-*   **Lesson Summaries:** A focused summary of each lesson, including a list of topics, key concepts, a complete terminal command dictionary, and critical system paths.
-*   **Practical Exercises:** Hands-on exercises simulating real-world enterprise scenarios, step-by-step.
+* **Learning Guide:** A concise field reference for every lesson featuring learning objectives, key terminology, comparison tables, essential CLI commands, critical system paths, and visual aids. *(Note: Embedded audio podcasts and video recaps are delivered in Hebrew).*
+* **Hands-On Lab:** Practical, GUI-first step-by-step exercises simulating real-world enterprise support scenarios.
 
 ## How to Get Started
 
-Use the navigation menu on the right to jump between different lessons.
-*(On smaller screens, the menu is hidden behind the "hamburger" button - 3 horizontal lines in the upper corner).*
+Use the navigation menu on the **left** to jump between lessons.
+*(On smaller screens, open the menu using the three-line menu icon in the upper-left corner).*
 
-> [!TIP] "Dark Mode"
-> In the upper corner of the site, you'll find a display mode toggle button (sun/moon) that allows you to switch the entire site to dark mode for more comfortable reading at night or just because it looks cool!
-> [!TIP] "Search Tip"
-> The site is equipped with an advanced search engine! Click on the search bar (or use the keyboard shortcut <kbd>S</kbd>) to instantly search for any command, concept, or path across all 16 course lessons.
+!!! tip "Dark Mode"
+    Use the sun/moon toggle icon in the top navigation bar to switch between Light Mode and Dark Mode at any time.
+
+!!! tip "Instant Course-Wide Search"
+    Click the search bar at the top (or press `S` on your keyboard) to instantly search for any command, concept, error message, or system path across all 16 lessons.
 
 Good luck!
-
-<!-- src_hash: 1b89cf63467a041b3a5f5bc1b6a9167ceb786fde7761317483ff71bcc25b4749 -->

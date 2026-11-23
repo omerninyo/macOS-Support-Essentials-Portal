@@ -1,6 +1,15 @@
 # Lesson 10: Sharing and Remote Access
 **Student Learning Guide (Asset C)**
 
+## Lesson Objectives
+
+* **Enterprise File Servers (SMB)** - Connect Macs to Windows/NAS SMB shares, inspect active sessions (`smbutil`), and optimize `.DS_Store` behavior.
+* **Local Sharing & Continuity** - Configure and support `Screen Sharing` (including TCC consent), `AirDrop` (`awdl0`), and `Universal Control`.
+* **Cable-to-Cable Data Extraction (`Mac Sharing Mode`)** - Understand Apple Silicon `Share Disk` from `1TR` Recovery and its SMB vs. block-device boundaries.
+* **Seamless Enterprise Authentication (`Kerberos SSO`)** - Integrate Single Sign-On tickets (`TGT`) and MDM sharing restrictions.
+
+---
+
 ## 🎧 Podcast Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -104,3 +113,5 @@ Because AirDrop is classified as an "Unmanaged Destination," enterprise users ma
     These images illustrate the relevant interface or mechanism for the lesson topic.
 
 ![Slide136_image168](../assets/images/Lesson_10/L07_LegacySlide_Slide136_image168.png)
+
+<!-- src_hash: 1537cdb3c95cf4d0f87fe220b33fdaa9051a39a4cfb3b7677b5dc5c15f3f009c -->

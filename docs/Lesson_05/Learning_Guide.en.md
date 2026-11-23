@@ -1,5 +1,5 @@
 # Lesson 05 — Applications and Processes
-## Student Learning Guide
+**Student Learning Guide**
 
 ---
 
@@ -164,19 +164,6 @@ softwareupdate --install-rosetta --agree-to-license
 
 ---
 
-## Images from the Guide and Presentation
-
-!!! tip "Visual Aids"
-    These images illustrate the interfaces covered in the lesson.
-
-![Installation Types Comparison](../assets/images/Lesson_05/L05_LegacySlide_Slide103_image33.jpg)
-![ABM and MDM Diagram](../assets/images/Lesson_05/L05_LegacySlide_Slide121_image134.jpg)
-![Self Service Interface](../assets/images/Lesson_05/L05_LegacySlide_Slide66_image11.jpg)
-![App Store in Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
-![Force Quit in Tahoe](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
-
----
-
 ## Visual Aids
 
 !!! tip "Visual Demonstration (Student Aid)"
@@ -193,3 +180,5 @@ softwareupdate --install-rosetta --agree-to-license
 ![Slide75_image89](../assets/images/Lesson_05/L05_LegacySlide_Slide75_image89.png)
 ![26-Tahoe-App-Store-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-App-Store-scaled.png)
 ![26-Tahoe-Force-Quit-scaled](../assets/images/Lesson_05/L05_TahoeUI_26-Tahoe-Force-Quit-scaled.png)
+
+<!-- src_hash: ca5116e06bda7c408f60f2b3f1ed1bc942be3141b4f92ad5eb9b64b80725347b -->

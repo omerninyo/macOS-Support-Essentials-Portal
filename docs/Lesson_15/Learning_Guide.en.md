@@ -1,6 +1,15 @@
 # Lesson 15: Diagnostics
 **Student Learning Guide**
 
+## Lesson Objectives
+
+* **Systematic Fault Isolation** - Bisect issues across user vs. system, software vs. hardware, and local vs. network boundaries.
+* **Hardware & Resource Auditing** - Use `Activity Monitor`, `System Information` (`.spx` reports), and offline `Apple Diagnostics` (`Cmd + D`).
+* **Safe Mode Mechanics** - Leverage Apple Silicon `Safe Mode` cache cleanup, directory verification, and third-party extension blocking.
+* **Enterprise MDM Triage** - Isolate conflicting `Configuration Profiles`, exclusion groups, and endpoint security (`EDR`) agents.
+
+---
+
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -131,3 +140,5 @@ In Active Directory-based enterprise environments, Kerberos is utilized for Sing
 ![What_to_do_when_an_app_uses_too_much_memory_p1_41](../assets/images/Lesson_15/L15_DeepDive_What_to_do_when_an_app_uses_too_much_memory_p1_41.jpeg)
 ![26-Tahoe-Activity-Monitor-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-Activity-Monitor-scaled.png)
 ![26-Tahoe-System-Information-scaled](../assets/images/Lesson_15/L15_TahoeUI_26-Tahoe-System-Information-scaled.png)
+
+<!-- src_hash: 4b4fbcbb471f64c9fba6595dae3da8feb01e6d6c170bfcba60a7f717da91fffe -->

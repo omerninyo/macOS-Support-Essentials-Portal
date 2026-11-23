@@ -217,3 +217,5 @@ mdimport -t -d3 /path/to/file.pdf
 ![26-Tahoe-Finder-Get-Info-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Finder-Get-Info-scaled.png)
 ![26-Tahoe-Spotlight-Action-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-Action-scaled.png)
 ![26-Tahoe-Spotlight-scaled](../assets/images/Lesson_06/L06_TahoeUI_26-Tahoe-Spotlight-scaled.png)
+
+<!-- src_hash: 847f272902efd6f36d3c8f8efc1db59ce41573fe46f2111bfa0f6a9ec5424c97 -->

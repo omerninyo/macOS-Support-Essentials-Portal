@@ -1,6 +1,15 @@
 # Lesson 14: System Recovery & Erasure
 **Part C: Learning Guide**
 
+## Lesson Objectives
+
+* **Apple Silicon Recovery Architecture** - Distinguish primary `1TR` (One True Recovery), `Fallback Recovery (frOS)`, and automated `Device Recovery Assistant (DRA)`.
+* **RecoveryOS Tooling** - Operate `Recovery Assistant`, `Disk Utility`, `Share Disk`, `resetpassword`, and `recoverydiagnose`.
+* **Cryptographic Erasure & Lock Management** - Execute `Erase All Content and Settings (EACS)` safely and resolve `Activation Lock` / `Recovery Lock` in enterprise fleets.
+* **Hardware-Level DFU Servicing** - Perform `Revive` (non-destructive) vs. `Restore` (full wipe) over USB-C.
+
+---
+
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -19,6 +28,27 @@
 
 > *← The boot chain leading to 1TR was covered in Lesson 13 (Boot Process) — here we focus on actions taken within the recovery interface.*
 > *← VEK and FileVault were covered in Lesson 04 (Encryption) — EACS leverages that same VEK to destroy encryption keys rather than overwriting sectors.*
+
+---
+
+## Comparing Apple Silicon Recovery Environments
+
+| Recovery Environment | How to Enter / Trigger | Where Does It Live? | Primary Use Case |
+| :--- | :--- | :--- | :--- |
+| **1TR (One True Recovery)** | Press and hold Power button (`Continue holding for startup options`) | Primary Recovery container on internal SSD | Password reset, Disk Utility, macOS reinstall, or modifying `Startup Security Utility` |
+| **Fallback Recovery (frOS)** | Double-press Power button and hold on second press (`Di-dah`) | Dedicated backup container (`Apple_APFS_Recovery`) | Emergency fallback when primary `1TR` is corrupted (Note: omits `Startup Security Utility`) |
+| **Device Recovery Assistant (DRA)** | Launches automatically (`⊕` symbol) upon repeated boot failure in macOS 26 Tahoe | Automated recovery assistant inside RecoveryOS | Automated filesystem repair or FileVault recovery without technician intervention |
+| **DFU Mode (Hardware)** | Dedicated key chord / Power press while connected via USB-C to the DFU port | Hardware BootROM inside the Apple Silicon SoC | Completely unresponsive Mac (black screen / amber exclamation mark) when `frOS` cannot boot |
+
+---
+
+## DFU Revive vs. Restore
+
+| Attribute | **Revive** — Always Try First! | **Restore** — Last Resort! |
+| :--- | :--- | :--- |
+| **What Does It Update?** | Refreshes system firmware (`iBoot`/SEP) and the `1TR` Recovery partition only | Flashes firmware, formats the entire internal SSD, and installs a clean macOS |
+| **User Data Impact** | **100% Preserved!** Leaves the `Data` volume intact | **100% Erased!** Cryptographically destroys all containers |
+| **When to Use?** | Power loss mid-update, black screen after update, or blinking status LED | When `Revive` fails, or when reprovisioning a Mac that requires a full factory wipe |
 
 ---
 
@@ -81,3 +111,5 @@ In Recovery Mode, Terminal provides low-level diagnostic capabilities.
 ![Explainer_Recovery_p1_41](../assets/images/Lesson_14/L14_DeepDive_Explainer_Recovery_p1_41.jpeg)
 ![Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9](../assets/images/Lesson_14/L14_DeepDive_Getting_more_from_Recovery_on_Apple_silicon_Macs_p0_9.png)
 ![What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65](../assets/images/Lesson_14/L14_DeepDive_What_to_do_when_your_Mac_can_t_get_to_the_login_wi_p2_65.jpeg)
+
+<!-- src_hash: 1ce2d70ba3541ced92f48a100a1a53f57ffbf7845ad09c4ee631a73c76643023 -->

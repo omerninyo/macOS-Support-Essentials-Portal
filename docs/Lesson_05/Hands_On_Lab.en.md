@@ -149,3 +149,5 @@ codesign --test-requirement="=notarized" --verify --verbose /Applications/VLC.ap
 # Flush preferences cache (after a Container reset)
 killall cfprefsd
 ```
+
+<!-- src_hash: df215200412493965f36a6b4fc72dc105864dae1a11333df0741189d178550e8 -->

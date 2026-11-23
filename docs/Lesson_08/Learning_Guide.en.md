@@ -228,3 +228,5 @@ sudo profiles renew -type enrollment
 ![26-Tahoe-Console-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Console-scaled.png)
 ![26-Tahoe-Script-Editor-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Script-Editor-scaled.png)
 ![26-Tahoe-Shortcuts-scaled](../assets/images/Lesson_08/L08_TahoeUI_26-Tahoe-Shortcuts-scaled.png)
+
+<!-- src_hash: ca24035c15d927bfa67983f4a0bf7bb7811944435872e5d6dbcab1bc0dfa65a4 -->

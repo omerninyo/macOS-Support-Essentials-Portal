@@ -137,3 +137,5 @@ If a remote diagnostic capture is required without a GUI, running this command w
 ```bash
 sudo sysdiagnose -f ~/Desktop/
 ```
+
+<!-- src_hash: f654656c196e2c83fbe5c5dba5cbefdb5e5060ec4bf3709fde7f76ec2f998ae4 -->

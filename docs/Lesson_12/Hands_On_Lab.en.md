@@ -93,3 +93,5 @@ Master software updates and upgrades via GUI, inspect Background Security Improv
    softwareupdate --fetch-full-installer
    ```
    *(Press `Control + C` at any time to cancel the large download).*
+
+<!-- src_hash: 79d710666963034e2f8111499835782410ebe928933ca8a8293d1866a371d02d -->

@@ -50,6 +50,35 @@
 
 ---
 
+---
+
+## Comparing macOS User Account Types
+
+| Account Type | Home Folder (`/Users/`) | System Privileges | Primary Enterprise Use Case |
+| :--- | :--- | :--- | :--- |
+| **Administrator** | Yes (`/Users/username`) | Global app installation, system-wide settings, and user management | Local IT admin account or elevated power user |
+| **Standard** | Yes (`/Users/username`) | Personal settings only; blocked from global system modifications | Recommended default employee account (Least Privilege) |
+| **Guest** | Temporary only (wiped on Logout) | Basic browsing/session with zero persistent local storage | Kiosk or loaner stations (disabled into Safari-only mode when FileVault is active) |
+| **Sharing Only** | No local home folder | Remote access to shared folders only (cannot log in locally) | Controlled SMB file-sharing access to specific Shared folders |
+
+!!! warning "Common Field Issue: Login Keychain Password Desync"
+    When a user's login password is reset externally (by an IT admin, an IdP sync, or from Recovery Mode), the macOS account login password updates—but the **Login Keychain** remains encrypted with the old password. Result: endless pop-ups asking to unlock the `login` keychain!
+    * **If the user remembers the old password:** Update the keychain password in `Keychain Access` (`Edit > Change Password for Keychain "login"`).
+    * **If the old password is completely lost:** Reset the keychain in `Keychain Access` settings (`Reset Default Keychains`), creating a fresh Login Keychain encrypted with the new password (archiving the old local keychain).
+
+---
+
+## The Four Permission & Security Layers (POSIX, ACL, TCC, SIP)
+
+| Layer | What Does It Check? | Enforcement Scope | Inspection / Management Tool |
+| :--- | :--- | :--- | :--- |
+| **1. POSIX** | Classic UNIX ownership: `Owner`, `Group`, `Everyone` (Read/Write/Execute) | User & Primary Group | Finder `Get Info` or `ls -la` / `chmod` |
+| **2. ACL** | Granular rules layered above POSIX (including explicit `Deny` & inheritance) | Multiple specific users/groups | `ls -le` / `chmod +a` |
+| **3. TCC** | Did the user explicitly allow this specific app to access sensitive folders or hardware? | Per-Application (blocks Admins too!) | `System Settings > Privacy & Security` / `tccutil` / PPPC |
+| **4. SIP** | Does the file belong to protected macOS system paths? | Kernel-level (blocks `root` too!) | `csrutil status` (modifiable only from Recovery) |
+
+---
+
 ## CLI Commands
 
 !!! note "Terminal Usage"
@@ -104,3 +133,5 @@
 ![26-Tahoe-Settings-Lock-Screen-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Lock-Screen-scaled.png)
 ![26-Tahoe-Settings-Touch-ID-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Touch-ID-scaled.png)
 ![26-Tahoe-Settings-Users-Groups-scaled](../assets/images/Lesson_02/L02_TahoeUI_26-Tahoe-Settings-Users-Groups-scaled.png)
+
+<!-- src_hash: 3c6a261ba8b2451fc2ee9a3975e8dfbdc1a7c0b5f712af76a6e0053fd66a9ac4 -->

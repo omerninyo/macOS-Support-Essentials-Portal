@@ -93,3 +93,5 @@
 ![Slide48_image8](../assets/images/Lesson_01/L02_LegacySlide_Slide48_image8.jpg)
 ![Slide67_image80](../assets/images/Lesson_01/L07_LegacySlide_Slide67_image80.png)
 ![Slide74_image14](../assets/images/Lesson_01/L09_LegacySlide_Slide74_image14.jpg)
+
+<!-- src_hash: 0bf08d4eaf7d7f0813a459232ac796bfa14fd4b335af3460faccd37371efcbd4 -->

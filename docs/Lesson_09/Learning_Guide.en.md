@@ -190,3 +190,5 @@ sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 ![26-Tahoe-Finder-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Finder-Network-scaled.png)
 ![26-Tahoe-Settings-Network-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Network-scaled.png)
 ![26-Tahoe-Settings-Wi-Fi-scaled](../assets/images/Lesson_09/L09_TahoeUI_26-Tahoe-Settings-Wi-Fi-scaled.png)
+
+<!-- src_hash: 16dbcf3b9e1ec202ab4b731cdafe4a0ebcd5f024f6d13ea3e97a55508a96de3a -->

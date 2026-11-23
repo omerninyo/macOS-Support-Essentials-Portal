@@ -126,3 +126,5 @@ As System or IT Support personnel, we often want to perform network operations r
    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
    ```
    *The CLI tool that manages the Application Firewall. The command prints back to the screen whether the firewall is enabled or disabled, without needing to open System Settings.*
+
+<!-- src_hash: 61842f5fa0916c7603782c9651a13dffd3242ab883722bc52cc923ae072ad8b3 -->

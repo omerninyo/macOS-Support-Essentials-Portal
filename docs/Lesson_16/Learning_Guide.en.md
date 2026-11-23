@@ -1,6 +1,15 @@
 # Lesson 16: Log Analysis
 **Student Learning Guide**
 
+## Lesson Objectives
+
+* **Unified Logging Architecture** - Understand binary `.tracev3` storage and memory-only (`Volatile`) vs. disk-persisted (`Persist`) log levels.
+* **Real-Time `Console.app` & Crash Triage** - Filter live streams by `Process` and `Subsystem`, save queries, and read `.ips` / `Kernel Panic` reports.
+* **CLI `log` Queries & `Sysdiagnose`** - Run historical predicate queries in Terminal and generate full `sysdiagnose` archives.
+* **Enterprise MDM Network Forensics** - Pinpoint `apsd` (port `5223`) and `mdmclient` firewall/SSL inspection blocks in live logs.
+
+---
+
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -157,3 +166,5 @@ When your MDM server pushes a configuration profile (e.g., an 802.1x payload for
 ![Save_and_read_the_panic_log_p1_41](../assets/images/Lesson_16/L16_DeepDive_Save_and_read_the_panic_log_p1_41.png)
 ![Slide69_image82](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image82.png)
 ![Slide69_image83](../assets/images/Lesson_16/L16_LegacySlide_Slide69_image83.png)
+
+<!-- src_hash: c2bf9b98f303073f0c7b196909e74f1ce3977b2e3fbb34e82cfa2d20a7be4068 -->

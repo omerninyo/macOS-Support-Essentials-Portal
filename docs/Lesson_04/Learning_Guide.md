@@ -42,7 +42,7 @@
   * **PRK - Personal Recovery Key:** מפתח אלפאנומרי שמוצג למשתמש כדי לשמור בבטחה, או לחלופין, נשמר בחשבון ה-iCloud.
   * **IRK - Institutional Recovery Key:** מפתח המשמש ארגונים באמצעות MDM, כך שרק מנהלי הארגון יוכלו לשחרר כוננים נעולים באמצעות Payload מיוחד. (כיום הסטנדרט הוא PRK אישי המגובה ב-MDM).
 * **VEK (Volume Encryption Key) & KEK (Key Encryption Key):** VEK הוא מפתח הצפנת החומרה השמור ב-Secure Enclave. KEK הוא המפתח הנגזר מסיסמת המשתמש שלך, המשמש כדי "לעטוף" את ה-VEK ולשחרר את הנעילה שלו באתחול.
-* **וירטואליזציה (Exclaves):** ב-macOS 26 Tahoe, הצפנת FileVault נתמכת גם במכונות וירטואליות בזכות טכנולוגיית Exclave המדמה Secure Enclave.
+* **מגבלת וירטואליזציה (Virtual Machines):** במכונות וירטואליות של macOS על גבי Apple Silicon אין רכיב Secure Enclave פיזי נפרד לאורח, ולכן להצפנת סביבות בדיקה וירטואליות מסתמכים על הצפנת FileVault של המחשב המארח (Host) או על תמונות דיסק מוצפנות.
 * **SSH Pre-boot:** ב-macOS 26 Tahoe נוספה היכולת להתחבר מרחוק ב-SSH לשרתים נטולי-מסך בשלב ה-Pre-boot כדי לשחרר את FileVault.
 
 > *← זוכרים את ה-Secure Enclave ואשף ה-Setup Assistant מלימודי שיעור 01? כאן אנו רואים מדוע המשתמש הראשון שנוצר ב-Setup Assistant מקבל אוטומטית את ה-Secure Token הראשון במערכת.*

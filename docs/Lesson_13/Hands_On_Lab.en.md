@@ -128,3 +128,5 @@ If you'd like to verify the status of extension policies and system protections 
    csrutil status
    ```
    > The output should confirm that SIP is `enabled`, demonstrating that Reduced Security does not fully disable it.
+
+<!-- src_hash: 74a69ce0b0517e0ced5996560884f1bf8c4b3ff12328fc099f8a7916e077bbd9 -->

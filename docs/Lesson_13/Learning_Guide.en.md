@@ -1,6 +1,15 @@
 # Lesson 13: The Boot Process
 **Part C: Student Learning Guide**
 
+## Lesson Objectives
+
+* **Apple Silicon Hardware Chain of Trust** - Trace the boot sequence from `Boot ROM` through `LLB` and `iBoot` to `SSV` verification and `XNU` kernel launch.
+* **Startup Security Policy Management** - Differentiate `Full Security` vs. `Reduced Security` and per-volume `LocalPolicy` signing.
+* **Kernel Extensions (`Kexts`) vs. `System Extensions`** - Understand Apple's move from kernel space (`Ring 0`) to user space and `Auxiliary Kernel Collection` (`AKC`).
+* **Enterprise Firmware & Recovery Protection** - Manage MDM-exclusive `Recovery Lock` and `Bootstrap Token` workflows.
+
+---
+
 ## Overview
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -150,3 +159,5 @@ Executed from Terminal in Recovery Mode only to apply changes.
 ![Slide80_image19](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image19.jpg)
 ![Slide80_image93](../assets/images/Lesson_13/L13_LegacySlide_Slide80_image93.png)
 ![26-Tahoe-Boot-Camp-scaled](../assets/images/Lesson_13/L13_TahoeUI_26-Tahoe-Boot-Camp-scaled.png)
+
+<!-- src_hash: 3f954ad70e310e1578365fe4b18f4a2bda8e994cb282754bec68262dc379d4c9 -->

@@ -5,40 +5,28 @@ This document contains the practical exercises for Lesson 15. The lab focuses on
 
 ---
 
-## Lab 1: Network Diagnostics utilizing Wireless Diagnostics
+## Lab 1: Built-In Hardware Isolation at Boot (Apple Diagnostics)
 
-**Objective:** Discover the hidden Wireless Diagnostics utility built into macOS to monitor network performance and identify channel interference.
+> **What You Will Learn:** Launch Apple's offline hardware test suite (`Apple Diagnostics`) on Apple Silicon to isolate physical hardware faults (memory, battery, sensors, wireless module) from macOS software issues, and interpret official AppleCare reference codes.
+
+*(Note: Live Wi-Fi analysis with Wireless Diagnostics was practiced in Lesson 09; here we focus on bare-metal hardware isolation outside macOS).*
 
 ### Execution Steps:
 
-1. **Accessing the Hidden Utility:**
+1. **Shut Down and Enter Startup Options:**
+   - Open the Apple menu (``) and click **Shut Down**. Wait until the Mac powers off completely.
+   - Press and hold the **Power / Touch ID** button continuously until **Loading startup options...** appears, then release.
 
-   - In the top Menu Bar, hold down the `Option` (⌥) key and click the Wi-Fi icon.
-   - Observe the rich telemetry displayed instantly (IP address, MAC address, signal quality, and Tx rate).
-   - From the expanded menu, select `Open Wireless Diagnostics`.
+2. **Launch Apple Diagnostics from Startup Options:**
+   - Once the internal disk and **Options** gear icons appear, press and hold **`Command (⌘) + D`** on the keyboard for several seconds until the display switches into the diagnostics loader.
+   - Select **English** (and connect to Wi-Fi if prompted; offline testing is also supported).
 
-2. **Bypassing the Setup Assistant:**
-
-   - Upon launch, a "Diagnostics Assistant" window will appear, intended to generate a lengthy report. **Ignore it**.
-   - Leave the Assistant window open, but navigate to the `Window` menu in the top Menu Bar of the application.
-
-3. **Performance Monitoring:**
-
-   - From the `Window` menu, select `Performance`.
-   - Review the generated graphs: Rate, Quality, and Signal.
-   - Wait about a minute and observe real-time changes in the graphs. This tool is excellent for spotting transient network dropouts.
-   - Close the Performance window.
-
-4. **Network and Channel Scanning (Scan):**
-
-   - Return to the `Window` menu and select `Scan`.
-   - Click `Scan Now` (or wait for the automatic scan to populate).
-   - This window reveals all wireless networks in the vicinity (including hidden SSIDs that might not appear in the standard menu), which Channels they utilize, and the Noise level on each channel. This is an ideal tool for IT support to pinpoint interference caused by channel overlap.
-   - Close the Scan window.
-
-5. **Packet Capture (Sniffer) – *Demonstration Only*:**
-   - From the `Window` menu, select `Sniffer`.
-   - Notice the capability to select a specific Channel and Channel Width. Clicking `Start` will disconnect your Mac from the internet and begin capturing airborne Packets on that frequency, saving them as a `.pcap` file for deep analysis. (For this lab, do not initiate the capture).
+3. **Run the Hardware Sweep & Read Reference Codes:**
+   - Apple Diagnostics automatically tests internal components for 2-3 minutes.
+   - Review the resulting **Reference Code**:
+     - **`ADP000`** = **No issues found** (hardware is healthy—focus troubleshooting on software/profiles!).
+     - Hardware fault codes (such as `PPT004` for battery or `CNW001` for wireless hardware) provide direct escalation evidence for AppleCare or an Authorized Service Provider.
+   - Click **Shut Down** at the bottom of the screen to proceed directly into Lab 2 (`Safe Mode`).
 
 ---
 
@@ -149,3 +137,5 @@ While macOS GUI tools provide most of the telemetry required for standard diagno
    sudo profiles show -type configuration
    ```
    This CLI tool will also expose payloads that might be hidden from the end-user GUI, allowing IT staff to rapidly pinpoint and isolate conflicting configurations.
+
+<!-- src_hash: 600bc9766e983032ca83fc6dbe4c5311ec6d2594d57d6afb2a2d7187881bbfc3 -->

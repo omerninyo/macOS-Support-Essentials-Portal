@@ -42,20 +42,18 @@
 
 ## Exercise 3: Secure and Immediate Erasure via EACS (Erase All Content and Settings)
 
-**Objective:** Reset the Mac to an Out-Of-Box Experience (OOBE) state rapidly and securely through System Settings, utilizing the Crypto-Erase mechanism.
+> **What You Will Learn:** Walk through Apple Silicon's instant OOBE reset wizard (`Erase Assistant`), powered by cryptographic key destruction (`Crypto-shredding`) in the Secure Enclave without reformatting or reinstalling macOS.
 
-!!! warning "Student Warning"
-    This exercise will permanently wipe all data, users, and settings from your Mac! Ensure all previous exercises are complete and no critical data is left unbacked up. Remember to perform this lab on the external USB drive if instructed by your facilitator.
+!!! danger "STOP Before Final Confirmation in Class!"
+    `Erase All Content and Settings` operates exclusively on the internal Mac SSD (never on an external USB drive), and clicking the final red erase button will immediately wipe all classroom accounts and settings before Lessons 15 and 16! **Stop at Step 7 and click Cancel** (an actual final classroom reset can be performed at the end of Lesson 16 with instructor approval).
 
-1. Boot the Mac normally and log in with a Local Admin account.
-2. Open **System Settings**.
-3. Navigate in the sidebar to **General** > **Transfer or Reset**.
-4. Click the **Erase All Content and Settings** button.
-5. The Erase Assistant will prompt for the administrator password—enter it and click **Unlock**.
-6. The system will display a summary detailing everything scheduled for deletion (Apple Account, Touch ID fingerprints, paired Bluetooth devices, Wallet data, etc.).
-7. Follow the on-screen prompts. If logged into an Apple Account, you will be prompted to enter the password to sign out (this disables Activation Lock to prevent the machine from locking upon reboot).
-8. Following the sign-out, a final red warning screen will appear. Click **Erase All Content and Settings** to provide final confirmation.
-9. The Mac will reboot, the screen will go black, and shortly after, you will be greeted by the Setup Assistant's "Hello" screen. The cryptographic key deletion (Crypto-Erase) was successful, and the system is reset without requiring a full OS reinstallation!
+1. Boot into standard macOS and log in with your local Admin account.
+2. Open **System Settings** and navigate to **General > Transfer or Reset**.
+3. Click **Erase All Content and Settings...**.
+4. Authenticate in **Erase Assistant** using your Admin password (requires `Volume Ownership` / `Secure Token`) and click **Unlock**.
+5. Review the summary screen listing every item slated for removal (local accounts, Apple Account & Activation Lock sign-out, Touch ID fingerprints, paired Bluetooth accessories, and Wallet items).
+6. Inspect the pre-wipe summary screen.
+7. **STOP HERE and click Cancel** to return safely to the desktop without wiping your classroom Mac! *(In production—or at the end of Lesson 16—confirming the final red prompt destroys the hardware `VEK` in one second and reboots straight to the `Hello` Setup Assistant).*
 
 ---
 
@@ -107,3 +105,5 @@ To visualize the physical and logical layout of all drives, including hidden rec
 diskutil list
 ```
 In the output, you will observe that the Recovery environment mounts a minimal filesystem from a virtual Ramdisk and exposes multiple small Volumes essential for launching the Apple Silicon recovery toolset.
+
+<!-- src_hash: af10555f3b371a16ba284974e7079ff2602491cf569491d35d30591b321b1707 -->

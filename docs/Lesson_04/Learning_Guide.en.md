@@ -40,7 +40,7 @@ This document consolidates all core concepts, workflows, and tools relevant to L
   * **PRK - Personal Recovery Key:** An alphanumeric string presented to the user to store safely, or alternatively, escrowed to their iCloud account.
   * **IRK - Institutional Recovery Key:** An enterprise key leveraged via MDM, ensuring that only IT administrators can unlock restricted drives using a specialized payload (the modern standard heavily favors MDM-escrowed PRKs).
 * **VEK (Volume Encryption Key) & KEK (Key Encryption Key):** The VEK is the hardware encryption key secured within the Secure Enclave. The KEK is the key derived from your user password, used to "wrap" the VEK and unlock it during the boot process.
-* **Virtualization (Exclaves):** In macOS 26 Tahoe, FileVault encryption is now fully supported in virtual machines thanks to the Exclave technology, which simulates a Secure Enclave.
+* **Virtualization Constraint (Virtual Machines):** Apple Silicon macOS virtual machines do not expose a dedicated hardware Secure Enclave to the guest OS; rely on the physical host's FileVault encryption or encrypted disk images rather than enabling full guest FileVault.
 * **SSH Pre-boot:** macOS 26 Tahoe introduced the capability to connect remotely via SSH to headless servers during the Pre-boot phase to unlock FileVault.
 
 ---
@@ -174,3 +174,5 @@ This document consolidates all core concepts, workflows, and tools relevant to L
 ![Slide70_image85](../assets/images/Lesson_04/L04_LegacySlide_Slide70_image85.png)
 ![Slide94_image102](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image102.png)
 ![Slide94_image103](../assets/images/Lesson_04/L04_LegacySlide_Slide94_image103.png)
+
+<!-- src_hash: fe7f259b8b678c05eded8e9bef1fc578ecf2e2f441d63ae199d4f3451a28f6e9 -->

@@ -37,12 +37,12 @@ To understand and practice the native macOS backup mechanism, including managing
 
 ## Step 2 — Initial Backup Execution and Data Loss Simulation
 
-> **Learning Outcome:** How to monitor the initial backup progress and prepare the environment for a recovery simulation by intentionally deleting data.
+> **What You Will Learn:** Configure exclusions for a rapid classroom backup, monitor initial backup completion, and simulate accidental data loss.
 
-1. While still in the Time Machine settings window, wait for the initial backup to commence.
-2. To accelerate the process, click **Options** and add the `Applications` folder (and any other large directories) to the Exclude list, ensuring only your user directory is backed up.
-3. Wait for the backup to finish (the progress bar will complete, and the status will update to "Oldest backup").
-4. **Disaster Simulation:** Open **Finder**, navigate to the Desktop, delete the `TMLab` folder (move it to the Trash), and then empty the Trash. The data is now effectively "lost".
+1. In the **Time Machine** settings pane, immediately click **Options...** (essential to keep classroom backup times under 60 seconds!).
+2. Under **Exclude from Backups**, click `+` and exclude `Applications`, `Downloads`, and any other large directories so only lightweight user folders (including `~/Desktop/TMLab`) are backed up. Click **Done**.
+3. Trigger an immediate backup from the Time Machine menu bar icon (**Back Up Now**) and wait for completion.
+4. **Simulate Disaster:** Open Finder, navigate to Desktop, move the `TMLab` folder to the Trash, and empty the Trash.
 
 ---
 
@@ -106,3 +106,5 @@ While we explored snapshot management via the Disk Utility GUI, System Administr
     During this final step (formatting via Disk Utility), double-check that you are erasing the external USB drive and NOT any partition belonging to your system drive!
 
 > **End of Lab**
+
+<!-- src_hash: 288ba64a155cea99c2e277c3aa7781807064182cdae62201f21bc5304480a2da -->

@@ -149,3 +149,5 @@ TCC databases are protected by SIP and cannot be edited manually.
 ![26-Tahoe-Settings-Privacy-scaled](../assets/images/Lesson_03/L03_TahoeUI_26-Tahoe-Settings-Privacy-scaled.png)
 ![Slide99_image30](../assets/images/Lesson_03/L09_LegacySlide_Slide99_image30.jpg)
 ![Slide99_image31](../assets/images/Lesson_03/L09_LegacySlide_Slide99_image31.jpg)
+
+<!-- src_hash: 9302a57523f663464ed596a4a6fbd8d785545b83a8e35eb0b2c695f78fa21971 -->

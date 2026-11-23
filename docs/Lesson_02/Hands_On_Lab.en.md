@@ -45,19 +45,19 @@ As an enterprise IT administrator, you have been tasked with preparing a macOS e
 
 ## Exercise 2: Passwordless Security (Passkeys) & The Passwords App
 
-> **What you will learn:** Experiencing the future of enterprise authentication—generating a Passkey and securely storing it in iCloud Keychain with zero friction and no hardcoded passwords.
+> **What You Will Learn:** Create and test a cryptographic Passkey (WebAuthn) using cross-device QR authentication with your smartphone (and observe native Passwords app storage).
 
-1. Open **Safari** on your Mac.
-2. Navigate to the demo site: [https://webauthn.io/](https://webauthn.io/).
-3. In the **Username** field, enter a unique identifier (e.g., `OmerAppleClass123`).
-4. Ensure the Attestation type is set to `None` and click **Register**.
-5. macOS will intercept the registration request and present a native system prompt.
-6. Authenticate using **Touch ID** (or your Mac's password).
-7. Upon authentication, the Secure Enclave generates a cryptographic key pair and securely stores the private key.
-8. Now, on the same page, click **Authenticate**. 
-9. When Safari prompts "Do you want to use your Passkey?", tap Touch ID again. You have successfully authenticated without typing a password!
-10. Open the native **Passwords** app (via Spotlight).
-11. In the sidebar, select **Passkeys** and locate the entry for `webauthn.io`. Notice that there is no textual password exposed to the user.
+!!! note "Classroom Macs Without a Signed-In Apple Account"
+    Saving a synced Passkey directly inside the macOS **Passwords** app requires an active iCloud Keychain session. Since classroom Macs use local accounts only (no personal Apple Account), macOS will prompt you to register and authenticate your Passkey by **scanning a QR code with your personal iPhone or Android phone**—a common real-world enterprise workstation workflow—while the instructor demonstrates local **Passwords** app storage.
+
+1. Open **Safari** and navigate to [https://webauthn.io/](https://webauthn.io/).
+2. In the **Username** field, enter a unique name (e.g., `MacAdminLab01`).
+3. Ensure Attestation is set to `None` and click **Register**.
+4. In the macOS passkey prompt:
+   * **On a classroom Mac without an Apple Account:** Select the option to use a phone or tablet, scan the on-screen QR code with your personal phone camera, and approve with Face ID / biometrics.
+   * **On a Mac with iCloud Keychain active (Instructor Demo):** Approve directly with **Touch ID** to store the Passkey in the **Passwords** app.
+5. On the same web page, click **Authenticate** and verify again—you are signed in with zero passwords typed!
+6. Open the **Passwords** app (via Spotlight `Cmd + Space` and your local password) and explore its categories (**All**, **Passkeys**, **Codes**, **Wi-Fi**, and **Security** advisories).
 
 ---
 
@@ -73,3 +73,5 @@ As an enterprise IT administrator, you have been tasked with preparing a macOS e
 3. You will likely encounter a native macOS prompt requesting permission for Terminal to access files in your Desktop folder.
 4. If you click **Don't Allow**, Terminal will output an `Operation not permitted` error—even though POSIX permissions dictate that you are the owner of the directory!
 5. To resolve this, open **System Settings** -> **Privacy & Security** -> **Files and Folders**, grant Terminal the necessary toggle, and attempt the command again.
+
+<!-- src_hash: 431b86a8344a1d6baf7c9b91b6e03db787d7eadce1a2382f41795d921c8ed4b1 -->

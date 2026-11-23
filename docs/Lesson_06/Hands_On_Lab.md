@@ -86,7 +86,7 @@ cat /usr/share/firmlinks
 
 הפתרון המומלץ לבעיית ה-"System Data" של המשתמשת:
 
-1. פתחו **System Settings → Siri & Spotlight → Spotlight Privacy...**
+1. פתחו **System Settings → Spotlight** וגללו לתחתית המסך אל כפתור **Search Privacy...**
 2. גררו את **Macintosh HD** פנימה ← לחצו **Done**
    *(פעולה זו מוחקת את מסד הנתונים הישן)*
 3. היכנסו שוב לאותו מסך — הסירו את הכונן

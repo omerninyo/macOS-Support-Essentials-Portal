@@ -1,6 +1,15 @@
 # Lesson 12: Software Updates & Upgrades
 **Student Learning Guide**
 
+## Lesson Objectives
+
+* **Modern macOS Update Architecture** - Understand the `Pallas` catalog service, `UpdateBrain`, and sealed `SSV` snapshot construction during updates vs. upgrades.
+* **Apple Silicon Update Security** - Master `Volume Ownership`, Standard-user update authorization, and `Background Security Improvements` (`BSI` / `Cryptexes`).
+* **CLI Tools & Migration Pitfalls** - Use `softwareupdate`, `Content Caching`, and prevent UID/profile collisions in `Migration Assistant`.
+* **Declarative Update Management (`DDM`)** - Enforce update deadlines, deferrals, and silent authorization via `Bootstrap Token`.
+
+---
+
 ## 🎧 Audio Overview (Podcast)
 
 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d74f76f7-4640-4f79-beb9-48a4b3de0ed3/"></iframe></div>
@@ -132,7 +141,18 @@ sudo softwareupdate --clear-deferrals
 
 ---
 
-## Presentation Visuals
+## Visual Aids
+
+!!! tip "Visual Demonstration (Student Aid)"
+    These diagrams and screenshots illustrate the macOS update architecture and enterprise controls covered in this lesson.
 
 ![How_Software_Update_works_in_Ventura_p5_37](../assets/images/Lesson_12/L12_DeepDive_How_Software_Update_works_in_Ventura_p5_37.jpeg)
 ![What_should_you_do_when_an_update_goes_wrong_p1_41](../assets/images/Lesson_12/L12_DeepDive_What_should_you_do_when_an_update_goes_wrong_p1_41.jpeg)
+![Slide76_image16](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image16.jpg)
+![Slide76_image44](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image44.jpeg)
+![Slide76_image90](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image90.png)
+![Slide76_image91](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image91.png)
+![Slide76_image92](../assets/images/Lesson_12/L12_LegacySlide_Slide76_image92.png)
+![Slide77_image17](../assets/images/Lesson_12/L12_LegacySlide_Slide77_image17.jpg)
+
+<!-- src_hash: ac5fff3675956b7fc88b1622206bfe9a8eeb079f66bfc5f60a39a636464369d6 -->

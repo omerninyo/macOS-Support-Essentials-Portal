@@ -1,6 +1,15 @@
 # Lesson 11: Peripherals
 **Student Learning Guide**
 
+## Lesson Objectives
+
+* **Modern Bus Protocols (`Thunderbolt` vs. `USB-C`)** - Distinguish physical USB-C connectors from underlying `USB 3/4` and `Thunderbolt 3/4/5` speeds in `System Information`.
+* **Apple Silicon Accessory Security** - Manage USB/Thunderbolt connection approval policies (`Allow accessories to connect`) against DMA/hardware threats.
+* **macOS Printing Architecture (`CUPS` & `AirPrint`)** - Add network printers, inspect `PPD` drivers, use the `CUPS` web interface, and reset the printing system.
+* **Enterprise Peripheral & Print Management** - Enforce external storage controls and silent printer deployment via MDM/DDM.
+
+---
+
 ## 🎧 Overview (Podcast)
 
 <!-- NotebookLM Podcast from Captivate -->
@@ -108,3 +117,5 @@ In organizations managed by MDM and DDM (Declarative Device Management), IT admi
 ![26-Tahoe-Print-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Print-scaled.png)
 ![26-Tahoe-Settings-Bluetooth-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Bluetooth-scaled.png)
 ![26-Tahoe-Settings-Printers-and-Scanners-scaled](../assets/images/Lesson_11/L11_TahoeUI_26-Tahoe-Settings-Printers-and-Scanners-scaled.png)
+
+<!-- src_hash: 3d3667b6b9d9a8a8f7af42da3633cefb2be4d4002a3f2ab0fbcdbc922e18cf98 -->

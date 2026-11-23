@@ -106,3 +106,5 @@ On Apple Silicon Macs, Apple introduced an OS-level security mechanism designed 
    ```bash
    cupsctl WebInterface=no
    ```
+
+<!-- src_hash: 4113bbbe41b7f6e03a2cf28a358a910ba064586001a3f196974eeab267d1f180 -->

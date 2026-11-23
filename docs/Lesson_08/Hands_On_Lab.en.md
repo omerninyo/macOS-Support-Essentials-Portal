@@ -81,3 +81,5 @@ In this lab, you will gain hands-on experience with the architecture operating b
    * *(If an MDM profile is installed on the Mac, accessing this pane triggers the system to interrogate the `mdmclient` daemon).*
 6. Watch the Console window. Observe new real-time log entries streaming as the system queries profile states. In enterprise troubleshooting scenarios, this is where you identify network handshakes, APNs check-ins, or SSL certificate trust failures.
 7. Close all applications. The lab exercise is complete!
+
+<!-- src_hash: f8c527e9c696ee5d325c27e52bd8909a8392f93d35f6a9deb10d86d71e82e543 -->

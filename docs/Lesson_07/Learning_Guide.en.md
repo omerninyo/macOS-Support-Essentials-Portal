@@ -131,3 +131,5 @@ log show --predicate 'subsystem == "com.apple.TimeMachine"' --info --last 4h
 ![26-Tahoe-DiskUtility-APFS-Snapshots](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-DiskUtility-APFS-Snapshots.png)
 ![26-Tahoe-Time-Machine-Menu-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-Menu-scaled.png)
 ![26-Tahoe-Time-Machine-scaled](../assets/images/Lesson_07/L07_TahoeUI_26-Tahoe-Time-Machine-scaled.png)
+
+<!-- src_hash: 0783b75f8674f5e036f90a2a14a9055447c3f9a894642cd0b3aab727e53202b2 -->

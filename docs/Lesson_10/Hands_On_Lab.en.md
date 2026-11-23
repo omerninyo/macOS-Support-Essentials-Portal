@@ -43,21 +43,25 @@
 
 ---
 
-## Exercise 3: Rapid Sharing (Mac Sharing Mode)
+## Exercise 3: Graphical Remote Support (Screen Sharing)
 
-**What you will learn:** Utilizing the Share Disk tool from the Recovery Mode on Apple Silicon Macs to extract data from a "failing Mac" (acting as an SMB server), while understanding the limitations of Disk Utility over this connection type.
+> **What You Will Learn:** Enable, scope permissions, and connect to a remote Mac's desktop using built-in macOS Screen Sharing—the daily workhorse of enterprise Helpdesk teams.
 
-!!! warning "Attention"
-    Because this lab is conducted in a production environment, avoid shutting down live computers to perform this exercise unless explicitly authorized by the instructor.
+*(Perform this exercise in pairs with a classmate on the local classroom network).*
 
-1. On the Mac you wish to share (the "Target Mac"), boot into **Recovery Mode** (press and hold the power button while the Mac is powered off until the Options screen appears).
-2. After user authentication, click on **Utilities** in the menu bar and select **Share Disk**.
-3. Select the desired volume (e.g., `Macintosh HD`) and click **Start Sharing**.
-4. Connect a Thunderbolt data cable between the two Macs.
-5. On the "Host Mac," open **Finder** and navigate to **Network**. The Target Mac will appear there as a file server (SMB).
-6. Click on it, select **Connect As**, and enter the Target Mac's Admin password to decrypt the volume.
-7. **Critical IT Emphasis:** If you open Disk Utility on the Host Mac right now, **you will not see the physical disk of the Target Mac**. This setup essentially functions as an SMB share. You cannot run First Aid from the Host Mac on the shared volume. 
-8. Once your data copy is complete, eject the drive from the Host Mac. Then, on the Target Mac, click **Stop Sharing** and proceed to Restart.
+1. **On the Target Mac (receiving support):**
+   * Open **System Settings** and navigate to **General > Sharing**.
+   * Enable the **Screen Sharing** toggle.
+   * Click the info button (**i**) next to Screen Sharing: note the `vnc://...` address and verify **Allow access for** permissions. Click **Done**.
+2. **On the Support Mac (your Mac):**
+   * Launch the built-in **Screen Sharing** app via Spotlight (`Cmd + Space`), or select your partner's Mac under `Finder > Network` and click **Share Screen...**.
+   * Enter the target Mac's hostname or IP address and click **Connect**.
+3. **Authenticate & Test Observe vs. Control Modes:**
+   * Authenticate with the target account credentials (or select **Ask for permission** to observe the live end-user consent prompt!).
+   * Use the Screen Sharing toolbar to toggle between **Observe Mode** (view-only) and **Control Mode**, and test shared Clipboard copy/paste.
+4. Disconnect the session and turn **Screen Sharing** back off under `System Settings > General > Sharing`.
+
+> *← Physical cable data extraction from an unbootable Mac (`Share Disk` / `Mac Sharing Mode` inside Recovery) is practiced hands-on in Lesson 13.*
 
 ---
 
@@ -90,3 +94,5 @@
    ```bash
    umount ~/Desktop/MyServer
    ```
+
+<!-- src_hash: 42c31d13d7d229748a51dc495a24e6a0823aa520e6867df8100c2e659f9291f0 -->

@@ -87,7 +87,7 @@ cat /usr/share/firmlinks
 
 The recommended GUI-first resolution for the end-user's "System Data" issue:
 
-1. Open **System Settings → Siri & Spotlight → Spotlight Privacy...**
+1. Open **System Settings → Spotlight** and scroll to the bottom to click **Search Privacy...**
 2. Drag and drop **Macintosh HD** into the privacy list ← Click **Done**.
    *(This action forcefully deletes the existing, potentially corrupted database.)*
 3. Re-enter the same privacy menu — select the drive and remove it by clicking the **(-)** button.
@@ -121,3 +121,4 @@ du -h /Volumes/StudentDrive/*
 !!! important
     The original file will report its full physical weight. The duplicated Clone will report **0B**. This is not a bug — this is a defining feature of APFS.
 
+<!-- src_hash: 10935a0e5a996c2ba399dc31cee221073263fb05da8ba46fe9da69aec50f3a21 -->

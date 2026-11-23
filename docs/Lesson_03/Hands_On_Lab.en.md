@@ -17,28 +17,20 @@
 
 Instead of using the command line, we will use built-in system tools to understand where each app came from and whether it's approved by Gatekeeper. We will demonstrate this by downloading the Zoom app.
 
-#### Step 1: Elevating the Security Level (App Store Only)
+#### Step 1: Download and Install Under Default Policy (App Store and Known Developers)
 
-1. Open **System Settings**.
-2. Navigate to **Privacy & Security**.
-3. Scroll down to the **Security** section.
-4. Change the setting under "Allow applications downloaded from:" to the most restrictive mode: **App Store** (instead of "App Store and known developers"). This action instructs Gatekeeper to block the execution of any app that wasn't downloaded directly from Apple's App Store.
+1. Open **System Settings**, navigate to **Privacy & Security**, and scroll down to **Security**.
+2. Confirm `Allow applications from` is set to Apple's default: **App Store and known developers**.
+3. Open **Safari**, visit the official Zoom download page (`zoom.us/download`), and download the **Zoom** installer package for Mac.
+4. Launch the installer and complete installation—it succeeds cleanly because the package is signed and notarized by Apple.
 
-#### Step 2: Downloading and Installing Zoom
+#### Step 2: Tighten Gatekeeper (App Store Only) and Test Live Blocking
 
-1. Open your browser (Safari) and navigate to the official Zoom website.
-2. Download the installation package (`.pkg` file) for the Zoom app.
-3. Launch the installation package and complete the process.
-
-    !!! note
-        The installation itself might succeed because it is handled by the system's authorized installer process, but depending on the OS version, you might occasionally see a block even at this stage.
-
-#### Step 3: Execution Blocked by Gatekeeper
-
-1. Go to the **Applications** folder and attempt to launch the **Zoom** app.
-2. A Gatekeeper error message will pop up, stating that the app cannot be opened because it was not downloaded from the App Store.
-3. Return to **System Settings -> Privacy & Security** and revert the Security setting back to the standard mode: **App Store and known developers**.
-4. Try to launch Zoom again - the app will now open successfully because it has been notarized and signed by an Identified Developer.
+1. Return to **System Settings -> Privacy & Security -> Security** and change the policy to **App Store** (requires Admin authentication).
+2. Attempt to re-open the downloaded Zoom installer from **Downloads** (or download another `.dmg` utility from the web and open it).
+3. **Gatekeeper** blocks execution because the item did not originate from the Mac App Store.
+4. Check **System Settings -> Privacy & Security -> Security**: notice the blocked-app banner with the **Open Anyway** button (the sole manual override path in macOS 26 after Apple removed Finder's legacy Control-Click bypass).
+5. Restore **Security** back to **App Store and known developers**.
 
 #### Step 4: Identifying the App's Signature Source (System Information)
 
@@ -122,7 +114,7 @@ Sometimes an app crashes or fails to recognize the permission granted to it (a c
 
 In a managed enterprise environment, IT deploys profiles that automatically grant TCC permissions (PPPC).
 
-1. In **System Settings**, go back and then scroll down to select **Profiles** or **Device Management** (if available - if the Mac is unmanaged, this menu might be missing).
+1. In **System Settings**, navigate in the sidebar to **General -> Device Management** (on a standalone unmanaged Mac with no profiles installed, this list will be empty and the instructor will demonstrate a live profile).
 2. If profiles are installed, look for a profile containing the name **Privacy Preferences Policy Control** or **System Policy All Files**.
 3. Going into the profile details will reveal which apps have been granted automatic approval.
 4. If you return to Privacy & Security -> Full Disk Access, you will see that apps managed by the profile display a gray toggle switch that cannot be changed, sometimes accompanied by the text "Managed by your organization".
@@ -163,3 +155,5 @@ In this lab, we practiced the fundamentals of macOS protection mechanisms throug
    ```bash
    log show --predicate 'subsystem == "com.apple.XProtectFramework.PluginAPI"' --info --last 24h
    ```
+
+<!-- src_hash: fea711bd328635b6b637ea4d264930271ad6d870bae4b01ef887d6d9adb75239 -->
