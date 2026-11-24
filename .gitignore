@@ -10,3 +10,6 @@ site/
 # Python Cache
 __pycache__/
 *.pyc
+
+* 2.*
+* 3.*
